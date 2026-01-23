@@ -36,38 +36,38 @@ const UseCaseItem: React.FC<{ data: typeof USE_CASES[0] }> = ({ data }) => {
   const [expanded, setExpanded] = useState(false);
 
   return (
-    <Card className="border-l-4 border-l-gov-blue">
-      <div className="flex justify-between items-start cursor-pointer" onClick={() => setExpanded(!expanded)}>
-        <h3 className="text-xl font-bold text-gov-text">{data.title}</h3>
-        <button className="text-gov-blue focus:outline-none">
+    <Card className="border-l-4 border-l-gov-blue hover:border-l-gov-blue-dark transition-colors">
+      <div className="flex justify-between items-start cursor-pointer group" onClick={() => setExpanded(!expanded)}>
+        <h3 className="text-xl font-bold text-gov-text font-serif group-hover:text-gov-blue transition-colors">{data.title}</h3>
+        <button className="text-gov-blue focus:outline-none hover:scale-110 transition-transform">
           {expanded ? <ChevronUp /> : <ChevronDown />}
         </button>
       </div>
-      
-      <div className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-6">
+
+      <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
-           <h4 className="text-sm font-bold uppercase text-gov-secondary mb-1">The Challenge</h4>
-           <p className="text-gov-text mb-4">{data.challenge}</p>
+           <h4 className="text-xs font-bold uppercase tracking-wider text-gov-blue mb-2">The Challenge</h4>
+           <p className="text-gov-text leading-relaxed">{data.challenge}</p>
         </div>
         <div>
-           <h4 className="text-sm font-bold uppercase text-gov-secondary mb-1">The Outcome</h4>
-           <p className="text-gov-text font-medium">{data.outcome}</p>
+           <h4 className="text-xs font-bold uppercase tracking-wider text-gov-blue mb-2">The Outcome</h4>
+           <p className="text-gov-text font-medium leading-relaxed">{data.outcome}</p>
         </div>
       </div>
 
       {expanded && (
-        <div className="mt-6 pt-6 border-t border-gov-border grid grid-cols-1 md:grid-cols-3 gap-6 animate-fadeIn">
+        <div className="mt-6 pt-6 border-t border-gov-border-light grid grid-cols-1 md:grid-cols-3 gap-6 animate-fadeIn">
           <div>
-            <h4 className="text-sm font-bold uppercase text-gov-secondary mb-1">Intervention</h4>
-            <p className="text-sm text-gov-text">{data.intervention}</p>
+            <h4 className="text-xs font-bold uppercase tracking-wider text-gov-secondary mb-2">Intervention</h4>
+            <p className="text-sm text-gov-text leading-relaxed">{data.intervention}</p>
           </div>
           <div>
-            <h4 className="text-sm font-bold uppercase text-gov-secondary mb-1">Assurance & Ethics</h4>
-            <p className="text-sm text-gov-text">{data.assurance}</p>
+            <h4 className="text-xs font-bold uppercase tracking-wider text-gov-secondary mb-2">Assurance & Ethics</h4>
+            <p className="text-sm text-gov-text leading-relaxed">{data.assurance}</p>
           </div>
           <div>
-            <h4 className="text-sm font-bold uppercase text-gov-secondary mb-1">Reusable Assets</h4>
-            <p className="text-sm text-gov-text">{data.reusable}</p>
+            <h4 className="text-xs font-bold uppercase tracking-wider text-gov-secondary mb-2">Reusable Assets</h4>
+            <p className="text-sm text-gov-text leading-relaxed">{data.reusable}</p>
           </div>
         </div>
       )}
@@ -77,14 +77,14 @@ const UseCaseItem: React.FC<{ data: typeof USE_CASES[0] }> = ({ data }) => {
 
 export const UseCases: React.FC = () => {
   return (
-    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-8">
+    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-8">
       <div>
-        <h1 className="text-3xl font-bold text-gov-text mb-4">Use Cases</h1>
-        <p className="text-xl text-gov-secondary">
+        <h1 className="text-4xl sm:text-5xl font-bold text-gov-text mb-6 font-serif">Use Cases</h1>
+        <p className="text-xl text-gov-secondary leading-relaxed">
           Evidence of delivery. Anonymized where required to protect client confidentiality.
         </p>
       </div>
-      
+
       <div className="space-y-6">
         {USE_CASES.map(uc => (
           <UseCaseItem key={uc.id} data={uc} />
