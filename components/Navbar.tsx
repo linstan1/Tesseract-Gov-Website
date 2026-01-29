@@ -16,31 +16,31 @@ export const Navbar: React.FC = () => {
   const navigate = useNavigate();
 
   return (
-    <header className="glass-effect border-b border-gov-border-light sticky top-0 z-50 shadow-soft">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <header className="glass-effect border-b border-gov-border/30 sticky top-0 z-50">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex justify-between h-20">
-          <div className="flex items-center cursor-pointer group" onClick={() => navigate('/')}>
-            <div className="flex-shrink-0 flex items-center gap-3">
-              <div className="bg-gradient-to-br from-gov-blue to-gov-blue-dark p-2.5 rounded-lg transition-all duration-300 group-hover:shadow-glow group-hover:scale-105">
+          <div className="flex items-center cursor-pointer" onClick={() => navigate('/')}>
+            <div className="flex items-center gap-3">
+              <div className="bg-gov-blue p-2.5 rounded-lg">
                 <Shield className="h-5 w-5 text-white" />
               </div>
               <div className="flex flex-col">
-                <span className="font-bold text-lg leading-none text-gov-text tracking-tight font-serif">TESSERACT ACADEMY</span>
-                <span className="text-xs text-gov-secondary font-medium uppercase tracking-widest mt-0.5">Government Gateway</span>
+                <span className="font-bold text-base leading-none text-gov-dark">TESSERACT ACADEMY</span>
+                <span className="text-[10px] text-gov-secondary font-medium uppercase tracking-widest mt-1">Government Gateway</span>
               </div>
             </div>
           </div>
 
-          <nav className="hidden md:flex items-center space-x-1">
+          <nav className="hidden md:flex items-center gap-1">
             {NAV_ITEMS.map((item) => (
               <NavLink
                 key={item.path}
                 to={item.path}
                 className={({ isActive }) =>
-                  `px-4 py-2 text-sm font-medium border-b-3 transition-all duration-200 rounded-t-md ${
+                  `px-4 py-2 text-sm font-medium transition-colors duration-150 rounded-lg ${
                     isActive
-                      ? 'border-gov-blue text-gov-blue bg-gov-blue/5'
-                      : 'border-transparent text-gov-text hover:bg-gov-blue/5 hover:text-gov-blue-dark'
+                      ? 'text-gov-dark bg-gov-bg'
+                      : 'text-gov-secondary hover:text-gov-dark hover:bg-gov-bg/50'
                   }`
                 }
               >
@@ -52,7 +52,7 @@ export const Navbar: React.FC = () => {
           <div className="flex items-center md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="inline-flex items-center justify-center p-2 rounded-lg text-gov-text hover:bg-gov-blue/10 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-gov-blue transition-colors duration-200"
+              className="inline-flex items-center justify-center p-2 rounded-lg text-gov-text hover:bg-gov-bg"
               aria-expanded="false"
             >
               <span className="sr-only">Open main menu</span>
@@ -64,18 +64,18 @@ export const Navbar: React.FC = () => {
 
       {/* Mobile menu */}
       {isOpen && (
-        <div className="md:hidden bg-white border-b border-gov-border-light animate-fadeIn shadow-soft">
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+        <div className="md:hidden bg-white border-t border-gov-border/30">
+          <div className="px-4 py-4 space-y-1">
             {NAV_ITEMS.map((item) => (
               <NavLink
                 key={item.path}
                 to={item.path}
                 onClick={() => setIsOpen(false)}
                 className={({ isActive }) =>
-                  `block px-4 py-4 text-base font-medium border-l-4 rounded-r-md transition-all duration-200 ${
+                  `block px-4 py-3 text-base font-medium rounded-lg ${
                     isActive
-                      ? 'border-gov-blue bg-gov-blue/5 text-gov-blue'
-                      : 'border-transparent text-gov-text hover:bg-gov-bg hover:border-gov-blue/30'
+                      ? 'bg-gov-bg text-gov-dark'
+                      : 'text-gov-secondary hover:bg-gov-bg/50 hover:text-gov-dark'
                   }`
                 }
               >

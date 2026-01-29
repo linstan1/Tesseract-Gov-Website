@@ -12,13 +12,13 @@ export const Button: React.FC<ButtonProps> = ({
   className = '',
   ...props
 }) => {
-  const baseStyles = "inline-flex items-center justify-center px-6 py-3 border text-base font-medium rounded-lg focus:outline-none focus:ring-4 focus:ring-gov-focus transition-all duration-300 transform hover:scale-105 active:scale-100";
+  const baseStyles = "inline-flex items-center justify-center px-6 py-3 text-base font-semibold rounded-lg focus:outline-none focus:ring-2 focus:ring-gov-focus focus:ring-offset-2 transition-all duration-150";
 
   const variants = {
-    primary: "border-transparent text-white bg-gradient-to-r from-gov-blue to-gov-blue-dark hover:shadow-glow shadow-soft",
-    secondary: "border-transparent text-gov-text bg-gov-bg hover:bg-gray-200 shadow-soft hover:shadow-md",
-    outline: "border-2 border-gov-border text-gov-text bg-transparent hover:bg-gov-blue hover:text-white hover:border-gov-blue shadow-sm",
-    start: "border-transparent text-white bg-gradient-to-r from-[#00703c] to-[#005a30] hover:shadow-glow font-bold text-lg shadow-md", // UK Gov "Start now" green
+    primary: "text-white bg-gov-blue hover:bg-gov-blue-dark",
+    secondary: "text-gov-dark bg-gov-bg border border-gov-border/50 hover:bg-white hover:border-gov-border",
+    outline: "text-gov-dark bg-transparent border border-gov-border hover:bg-gov-bg",
+    start: "text-white bg-[#00703c] hover:bg-[#005a30] font-bold",
   };
 
   const widthStyle = fullWidth ? "w-full" : "";
