@@ -8,7 +8,15 @@ export const Partnerships: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Simulate API call
+    const form = e.target as HTMLFormElement;
+    const formData = new FormData(form);
+    const orgName = formData.get('orgName') || '';
+    const type = formData.get('type') || '';
+    const region = formData.get('region') || '';
+    const expertise = formData.get('expertise') || '';
+    const subject = encodeURIComponent(`Partnership Interest: ${orgName}`);
+    const body = encodeURIComponent(`Organisation: ${orgName}\nType: ${type}\nRegion: ${region}\nExpertise: ${expertise}`);
+    window.location.href = `mailto:fabio@thetesseractacademy.com?subject=${subject}&body=${body}`;
     setTimeout(() => setSubmitted(true), 800);
   };
 
@@ -92,12 +100,12 @@ export const Partnerships: React.FC = () => {
           <form onSubmit={handleSubmit} className="space-y-5">
             <div>
               <label htmlFor="orgName" className="block text-sm font-semibold text-gov-dark mb-2">Organisation Name</label>
-              <input type="text" id="orgName" required className="w-full border border-gov-border rounded-md p-3 focus:ring-2 focus:ring-gov-blue/20 focus:border-gov-blue transition-all" />
+              <input type="text" id="orgName" name="orgName" required className="w-full border border-gov-border rounded-md p-3 focus:ring-2 focus:ring-gov-blue/20 focus:border-gov-blue transition-all" />
             </div>
 
             <div>
               <label htmlFor="type" className="block text-sm font-semibold text-gov-dark mb-2">Organisation Type</label>
-              <select id="type" className="w-full border border-gov-border rounded-md p-3 focus:ring-2 focus:ring-gov-blue/20 focus:border-gov-blue transition-all">
+              <select id="type" name="type" className="w-full border border-gov-border rounded-md p-3 focus:ring-2 focus:ring-gov-blue/20 focus:border-gov-blue transition-all">
                 <option>University / Research Institute</option>
                 <option>SME / Startup</option>
                 <option>Large Enterprise</option>
@@ -108,7 +116,7 @@ export const Partnerships: React.FC = () => {
 
             <div>
               <label htmlFor="region" className="block text-sm font-semibold text-gov-dark mb-2">Region</label>
-              <select id="region" className="w-full border border-gov-border rounded-md p-3 focus:ring-2 focus:ring-gov-blue/20 focus:border-gov-blue transition-all">
+              <select id="region" name="region" className="w-full border border-gov-border rounded-md p-3 focus:ring-2 focus:ring-gov-blue/20 focus:border-gov-blue transition-all">
                 <option>UK - London</option>
                 <option>UK - Rest of England</option>
                 <option>UK - Scotland/Wales/NI</option>
@@ -119,16 +127,11 @@ export const Partnerships: React.FC = () => {
 
             <div>
                <label htmlFor="expertise" className="block text-sm font-semibold text-gov-dark mb-2">Core Expertise</label>
-               <textarea id="expertise" rows={3} required className="w-full border border-gov-border rounded-md p-3 focus:ring-2 focus:ring-gov-blue/20 focus:border-gov-blue transition-all resize-none" placeholder="e.g. Behavioral Science, Quantum Computing..."></textarea>
-            </div>
-
-            <div>
-              <label htmlFor="upload" className="block text-sm font-semibold text-gov-dark mb-2">Capability Statement (Optional)</label>
-              <input type="file" id="upload" className="w-full text-sm text-gov-secondary file:mr-4 file:py-2.5 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-medium file:bg-gov-bg file:text-gov-text hover:file:bg-gray-200 file:transition-colors" />
+               <textarea id="expertise" name="expertise" rows={3} required className="w-full border border-gov-border rounded-md p-3 focus:ring-2 focus:ring-gov-blue/20 focus:border-gov-blue transition-all resize-none" placeholder="e.g. Behavioral Science, Quantum Computing..."></textarea>
             </div>
 
             <div className="pt-2">
-              <Button type="submit" fullWidth>Submit Interest</Button>
+              <Button type="submit" fullWidth>Send Partnership Enquiry</Button>
             </div>
             <p className="text-xs text-gov-secondary text-center leading-relaxed">
               By submitting, you agree to our Privacy Notice. We only use this data for partnership matching.

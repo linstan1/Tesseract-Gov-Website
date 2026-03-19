@@ -15,18 +15,19 @@ export const Footer: React.FC = () => {
           <div>
             <h4 className="text-xs font-bold uppercase tracking-widest text-gov-dark mb-4">Compliance</h4>
             <ul className="space-y-2.5 text-sm text-gov-secondary/80">
-              <li><Link to="/compliance" className="hover:text-gov-dark transition-colors">Accessibility Statement</Link></li>
-              <li><Link to="/compliance" className="hover:text-gov-dark transition-colors">Privacy Notice</Link></li>
-              <li><Link to="/compliance" className="hover:text-gov-dark transition-colors">Cookie Policy</Link></li>
-              <li><Link to="/compliance" className="hover:text-gov-dark transition-colors">Modern Slavery Statement</Link></li>
+              <li><a href="/policies/accessibility-statement.pdf" className="hover:text-gov-dark transition-colors">Accessibility Statement</a></li>
+              <li><a href="/policies/data-protection-policy.pdf" className="hover:text-gov-dark transition-colors">Privacy Notice</a></li>
+              <li><a href="/policies/modern-slavery-statement.pdf" className="hover:text-gov-dark transition-colors">Modern Slavery Statement</a></li>
+              <li><Link to="/compliance" className="hover:text-gov-dark transition-colors">All Policies</Link></li>
             </ul>
           </div>
           <div>
             <h4 className="text-xs font-bold uppercase tracking-widest text-gov-dark mb-4">Contact</h4>
             <ul className="space-y-2.5 text-sm text-gov-secondary/80">
               <li>
-                <a href="mailto:procurement@tesseract.academy" className="hover:text-gov-dark transition-colors font-medium">
-                  procurement@tesseract.academy
+                <span className="block text-xs text-gov-secondary/80 mb-0.5">Head of Procurement & Delivery</span>
+                <a href="mailto:fabio@thetesseractacademy.com" className="hover:text-gov-dark transition-colors font-medium">
+                  fabio@thetesseractacademy.com
                 </a>
               </li>
               <li>
@@ -36,7 +37,7 @@ export const Footer: React.FC = () => {
               </li>
               <li className="pt-2 text-xs">
                 London, UK<br/>
-                Company Reg: 12345678
+                Kampakis and Co Ltd — Reg: 10459791
               </li>
             </ul>
           </div>

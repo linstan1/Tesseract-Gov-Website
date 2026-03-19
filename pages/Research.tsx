@@ -21,14 +21,19 @@ export const Research: React.FC = () => {
         <h2 className="text-2xl font-bold text-gov-dark mb-8">Selected Publications & Talks</h2>
         <ul className="space-y-8">
            <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
-             <h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark transition-colors">"The Ethics of Algorithmic Decision Making in Public Services"</h3>
-             <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Published: Journal of Digital Government, 2023</p>
-             <p className="text-base text-gov-dark/90 leading-relaxed">A peer-reviewed framework for assessing bias in local authority allocation algorithms. Used as the basis for our internal audit tools.</p>
+             <h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark transition-colors">Welsh Government Land Valuation Research Report</h3>
+             <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Commissioned by Welsh Government, 2024</p>
+             <p className="text-base text-gov-dark/90 leading-relaxed">Independent research into the feasibility of land value tax models for Wales. Combined statistical analysis of land registry data with international comparator evidence and stakeholder interviews across Welsh local authorities. Findings presented to Welsh Government officials and cited in Senedd committee proceedings.</p>
            </li>
            <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
-             <h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark transition-colors">"Fail Fast, Fix Faster: Agile in Bureaucracy"</h3>
-             <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Keynote: Public Sector Innovation Summit, London 2024</p>
-             <p className="text-base text-gov-dark/90 leading-relaxed">Exploring how rigorous Alpha testing phases significantly reduce the Total Cost of Ownership (TCO) for large-scale IT projects.</p>
+             <h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark transition-colors">The Alan Turing Institute — Ontology & Digital Twin Research</h3>
+             <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Collaboration with The Alan Turing Institute & NDTP, 2023–2024</p>
+             <p className="text-base text-gov-dark/90 leading-relaxed">Contributed to semantic interoperability research for the National Digital Twin Programme. Developed ontology frameworks enabling cross-domain data sharing across UK infrastructure digital twins, published through the Centre for Digital Built Britain.</p>
+           </li>
+           <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
+             <h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark transition-colors">BridgeAI Skills Hub Launch & PwC Sector Workshop</h3>
+             <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Innovate UK / BridgeAI Programme, 2024</p>
+             <p className="text-base text-gov-dark/90 leading-relaxed">Designed and delivered AI adoption workshops for underserved UK sectors as part of the Innovate UK-funded BridgeAI programme. Led the Skills Hub launch event at Ona Studios, London, and co-delivered sector-specific AI readiness sessions with PwC targeting construction, creative industries, and transport.</p>
            </li>
         </ul>
       </section>

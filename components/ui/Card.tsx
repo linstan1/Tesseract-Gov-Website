@@ -12,6 +12,14 @@ export const Card: React.FC<CardProps> = ({ children, title, className = '', onC
     <div
       className={`bg-white border border-gov-border/50 rounded-2xl p-8 hover:border-gov-border transition-all duration-200 ${onClick ? 'cursor-pointer' : ''} ${className}`}
       onClick={onClick}
+      role={onClick ? 'button' : undefined}
+      tabIndex={onClick ? 0 : undefined}
+      onKeyDown={onClick ? (e: React.KeyboardEvent) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          onClick();
+        }
+      } : undefined}
     >
       {title && <h3 className="text-lg font-bold text-gov-dark mb-4">{title}</h3>}
       {children}

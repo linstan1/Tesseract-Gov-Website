@@ -5,30 +5,39 @@ import { ChevronDown, ChevronUp } from 'lucide-react';
 const USE_CASES = [
   {
     id: 'uc1',
-    title: 'AI Governance Framework for Local Authority',
-    challenge: 'A large metropolitan council needed to adopt AI tools for planning optimization but lacked a governance framework to ensure ethical compliance and data safety.',
-    intervention: 'Conducted a 6-week Discovery phase auditing current data practices. Developed a bespoke "Ethics-First" adoption roadmap aligned with national guidance.',
-    assurance: 'Aligned with GDS Service Standards and GDPR.',
-    outcome: 'Council successfully procured AI planning software with full stakeholder buy-in and zero compliance flags during audit.',
-    reusable: 'Ethical auditing rubric available for reuse.',
+    title: 'Welsh Government — Land Valuation Research',
+    challenge: 'The Welsh Government needed independent research to assess the feasibility of a new land value tax model, requiring statistical analysis of land registry data across Wales and evidence synthesis from international comparators.',
+    intervention: 'Delivered a mixed-methods research programme combining quantitative land registry analysis with qualitative stakeholder interviews across Welsh local authorities. Produced an evidence report with policy recommendations presented to Welsh Government officials in Swansea.',
+    assurance: 'Aligned with HM Treasury Green Book appraisal methodology. Peer-reviewed by Welsh Government economists.',
+    outcome: 'Research findings directly informed Welsh Government tax policy deliberations. Evidence report cited in Senedd committee proceedings.',
+    reusable: 'Land valuation statistical framework and international comparator methodology.',
   },
   {
     id: 'uc2',
-    title: 'Data Literacy Training for Central Dept',
-    challenge: 'A central government department faced a skills gap in managing data-driven policy decisions, leading to reliance on external consultants.',
-    intervention: 'Designed and delivered a "Train the Trainer" upskilling program. Focused on practical SQL, dashboard interpretation, and statistical bias recognition.',
-    assurance: 'Curriculum vetted by departmental Heads of Profession.',
-    outcome: 'Trained 150+ civil servants. Reduced external contractor spend by 20% in the following quarter.',
-    reusable: 'Modular training curriculum (Open Standard compatible).',
+    title: 'National Digital Twin Programme — Ontology Development',
+    challenge: 'The National Digital Twin Programme (NDTP), part of the Centre for Digital Built Britain, needed a robust ontology framework to enable interoperability across digital twin systems in the built environment sector.',
+    intervention: 'Led ontology architecture and development workstreams, designing semantic data models that enable cross-domain data sharing between infrastructure digital twins. Collaborated with academic and industry partners to ensure alignment with existing standards.',
+    assurance: 'Developed in line with ISO 23247 and IEC 63278 digital twin standards. Validated through cross-sector interoperability testing.',
+    outcome: 'Ontology framework adopted as foundational layer for NDTP Information Management Framework, enabling consistent data exchange across UK infrastructure digital twins.',
+    reusable: 'Open ontology patterns and semantic interoperability toolkit.',
   },
   {
     id: 'uc3',
-    title: 'Health Data Platform Discovery',
-    challenge: 'An NHS Trust needed to unify patient data from three legacy systems to improve triage times but faced severe interoperability issues.',
-    intervention: 'Technical architecture review and user journey mapping for clinicians. Prototyped a middleware solution in Alpha.',
-    assurance: 'Clinical safety risk assessment (DCB0129) drafted.',
-    outcome: 'Alpha successfully demonstrated 40% reduction in data retrieval time. Project moved to Beta.',
-    reusable: 'Interoperability standard definitions.',
+    title: 'BridgeAI — Skills Hub & Sector Adoption',
+    challenge: 'BridgeAI (Innovate UK-funded programme) needed to accelerate AI adoption across underserved UK sectors including construction, creative industries, and transport, with a focus on practical skills development and knowledge transfer.',
+    intervention: 'Designed and delivered the BridgeAI Skills Hub, providing AI literacy and implementation training. Organised sector-specific workshops and the Skills Hub launch event at Ona Studios, London. Created reusable training materials tailored to non-technical sector professionals.',
+    assurance: 'Programme aligned with Innovate UK reporting requirements and UKRI impact framework.',
+    outcome: 'Successfully launched Skills Hub serving multiple UK sectors. Training materials adopted by sector bodies for ongoing AI upskilling across their networks.',
+    reusable: 'Modular AI skills curriculum adaptable across sectors.',
+  },
+  {
+    id: 'uc4',
+    title: 'Kalgera & Fintech Scotland — Financial Vulnerability Research',
+    challenge: 'Kalgera (AI-powered financial vulnerability detection fintech) and Fintech Scotland needed rigorous research into how AI can better identify and protect financially vulnerable customers, particularly elderly and cognitively impaired individuals.',
+    intervention: 'Conducted applied research combining behavioural data analysis with ethical AI assessment frameworks. Evaluated Kalgera\'s vulnerability detection algorithms against real-world outcomes and regulatory expectations (FCA Consumer Duty).',
+    assurance: 'Research aligned with FCA Consumer Duty requirements and ICO AI auditing guidance. Ethical review conducted against UK AI regulatory framework.',
+    outcome: 'Research findings contributed to Kalgera\'s product refinement and informed Fintech Scotland\'s policy recommendations on AI-driven consumer protection in financial services.',
+    reusable: 'Financial vulnerability AI assessment framework and ethical evaluation methodology.',
   },
 ];
 
@@ -81,7 +90,7 @@ export const UseCases: React.FC = () => {
       <div>
         <h1 className="text-5xl font-extrabold text-gov-dark mb-6 tracking-tight leading-tight">Use Cases</h1>
         <p className="text-xl text-gov-secondary/90 leading-relaxed max-w-4xl">
-          Evidence of delivery. Anonymized where required to protect client confidentiality.
+          Evidence of delivery. Real projects across UK public sector and government-funded programmes.
         </p>
       </div>
 

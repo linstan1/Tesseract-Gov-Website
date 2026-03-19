@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
-import { Menu, X, Shield } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 const NAV_ITEMS = [
   { label: 'How to Buy', path: '/how-to-buy' },
@@ -21,9 +21,7 @@ export const Navbar: React.FC = () => {
         <div className="flex justify-between h-20">
           <div className="flex items-center cursor-pointer" onClick={() => navigate('/')}>
             <div className="flex items-center gap-3">
-              <div className="bg-gov-blue p-2.5 rounded-lg">
-                <Shield className="h-5 w-5 text-white" />
-              </div>
+              <img src="https://consulting.tesseract.academy/wp-content/uploads/2024/04/logo-centered.png" alt="Tesseract Academy" className="h-14" />
               <div className="flex flex-col">
                 <span className="font-bold text-base leading-none text-gov-dark">TESSERACT ACADEMY</span>
                 <span className="text-[10px] text-gov-secondary font-medium uppercase tracking-widest mt-1">Government Gateway</span>

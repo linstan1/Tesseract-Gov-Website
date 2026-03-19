@@ -4,9 +4,9 @@ import { Button } from '../components/ui/Button';
 import { Card } from '../components/ui/Card';
 
 const FRAMEWORKS = [
-  { name: 'G-Cloud 13', ref: 'RM1557.13', lots: ['Lot 3: Cloud Support'], status: 'Live' },
-  { name: 'Digital Outcomes 6', ref: 'RM1043.8', lots: ['Digital Outcomes', 'User Research Participants'], status: 'Live' },
-  { name: 'Analysis for Policy (AfP)', ref: 'Pending', lots: ['Economic Analysis'], status: 'Pending' },
+  { name: 'Artificial Intelligence DPS', ref: 'RM6200', lots: ['AI Discovery & Consultancy', 'AI Licensing & Customisation', 'AI End-to-End Partnerships'], status: 'Live', url: 'https://www.crowncommercial.gov.uk/agreements/RM6200' },
+  { name: 'Spark DPS', ref: 'RM6094', lots: ['AI & Automation', 'Data', 'Internet of Things (IoT)'], status: 'Live', url: 'https://www.crowncommercial.gov.uk/agreements/RM6094' },
+  { name: 'Research & Insights DPS', ref: 'RM6126', lots: ['Research Services', 'Insight & Evidence'], status: 'Live', url: 'https://www.crowncommercial.gov.uk/agreements/RM6126' },
 ];
 
 export const HowToBuy: React.FC = () => {
@@ -50,8 +50,8 @@ export const HowToBuy: React.FC = () => {
                     </span>
                   </td>
                   <td className="px-6 py-4">
-                    {fw.status === 'Live' ? (
-                      <a href="#" className="text-gov-blue hover:text-gov-blue-dark flex items-center gap-1 font-medium transition-colors">
+                    {fw.url ? (
+                      <a href={fw.url} target="_blank" rel="noopener noreferrer" className="text-gov-blue hover:text-gov-blue-dark flex items-center gap-1 font-medium transition-colors">
                         View Listing <ExternalLink className="w-3 h-3" />
                       </a>
                     ) : (
@@ -71,12 +71,18 @@ export const HowToBuy: React.FC = () => {
       <section className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <Card title="Supplier Details" className="bg-gov-bg/50">
           <div className="space-y-3 font-mono text-sm bg-white p-6 border border-gov-border rounded-md select-all">
-            <p><span className="font-semibold text-gov-text">Legal Name:</span> Tesseract Academy Ltd</p>
-            <p><span className="font-semibold text-gov-text">Company Number:</span> 12345678</p>
-            <p><span className="font-semibold text-gov-text">DUNS:</span> 12-345-6789</p>
-            <p><span className="font-semibold text-gov-text">VAT Reg:</span> GB 123 456 789</p>
-            <p><span className="font-semibold text-gov-text">HQ:</span> 123 Innovation Way, London, UK</p>
-            <p><span className="font-semibold text-gov-text">Size:</span> SME</p>
+            <p><span className="font-semibold text-gov-text">Company Name:</span> KAMPAKIS AND CO. LTD</p>
+            <p><span className="font-semibold text-gov-text">Trading As:</span> The Tesseract Academy</p>
+            <p><span className="font-semibold text-gov-text">Company Number:</span> 10459791</p>
+            <p><span className="font-semibold text-gov-text">Legal Structure:</span> LTD</p>
+            <p><span className="font-semibold text-gov-text">UTR:</span> 9291720006</p>
+            <p><span className="font-semibold text-gov-text">VAT Reg:</span> GB 371 4744 89</p>
+            <p><span className="font-semibold text-gov-text">Address:</span> 5 Brunswick Park Gardens, London, England, N11 1EJ, Barnet</p>
+            <p><span className="font-semibold text-gov-text">DUNS:</span> 222180245</p>
+            <p><span className="font-semibold text-gov-text">PPON:</span> PWJP-6874-MXDJ</p>
+            <p><span className="font-semibold text-gov-text">ICO:</span> ZB715782</p>
+            <p><span className="font-semibold text-gov-text">PIC:</span> 880269472</p>
+            <p><span className="font-semibold text-gov-text">Size:</span> SME / Micro</p>
           </div>
           <p className="text-xs text-gov-secondary mt-4 leading-relaxed">
             Click text box to highlight for copy-paste.
@@ -92,7 +98,7 @@ export const HowToBuy: React.FC = () => {
             Download Consolidated Pack (PDF)
           </Button>
           <div className="mt-6 text-center">
-             <a href="mailto:procurement@tesseract.academy" className="text-sm text-gov-blue hover:text-gov-blue-dark font-medium inline-flex items-center gap-1 transition-colors">
+             <a href="mailto:fabio@thetesseractacademy.com" className="text-sm text-gov-blue hover:text-gov-blue-dark font-medium inline-flex items-center gap-1 transition-colors">
                <Mail className="w-3 h-3" /> Email for specific clarifications
              </a>
           </div>

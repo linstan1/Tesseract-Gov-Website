@@ -3,11 +3,11 @@ import { FileText, ShieldAlert } from 'lucide-react';
 import { Button } from '../components/ui/Button';
 
 const POLICIES = [
-  { title: 'Data Protection Policy', version: 'v2.1', date: 'Jan 2024', size: '140KB' },
-  { title: 'Information Security Policy (Summary)', version: 'v1.4', date: 'Dec 2023', size: '120KB' },
-  { title: 'Modern Slavery Statement', version: 'v1.0', date: 'Jan 2024', size: '80KB' },
-  { title: 'Carbon Reduction Plan', version: 'v1.2', date: 'Feb 2024', size: '200KB' },
-  { title: 'Accessibility Statement', version: 'Live', date: 'Mar 2024', size: 'HTML' },
+  { title: 'Data Protection Policy', version: 'v2.1', date: 'Jan 2024', size: '140KB', href: '/policies/data-protection-policy.pdf' },
+  { title: 'Information Security Policy (Summary)', version: 'v1.4', date: 'Dec 2023', size: '120KB', href: '/policies/information-security-policy.pdf' },
+  { title: 'Modern Slavery Statement', version: 'v1.0', date: 'Jan 2024', size: '80KB', href: '/policies/modern-slavery-statement.pdf' },
+  { title: 'Carbon Reduction Plan', version: 'v1.2', date: 'Feb 2024', size: '200KB', href: '/policies/carbon-reduction-plan.pdf' },
+  { title: 'Accessibility Statement', version: 'Live', date: 'Mar 2024', size: 'PDF', href: '/policies/accessibility-statement.pdf' },
 ];
 
 export const Compliance: React.FC = () => {
@@ -34,7 +34,9 @@ export const Compliance: React.FC = () => {
                    <p className="text-xs text-gov-secondary">Updated: {p.date} • {p.version} • {p.size}</p>
                  </div>
               </div>
-              <Button variant="outline" className="text-sm py-2 px-4 hover:scale-100">Download</Button>
+              <a href={p.href} target="_blank" rel="noopener noreferrer">
+                <Button variant="outline" className="text-sm py-2 px-4 hover:scale-100">Download</Button>
+              </a>
             </div>
           ))}
         </div>
@@ -79,6 +81,17 @@ export const Compliance: React.FC = () => {
             </li>
           </ul>
         </div>
+      </section>
+
+      {/* Vision Ability CIC */}
+      <section className="bg-gov-bg border border-gov-border/50 p-10 rounded-xl">
+        <h2 className="text-2xl font-bold text-gov-dark mb-6">Accessibility Partner — Vision Ability CIC</h2>
+        <p className="text-base text-gov-dark/90 leading-relaxed mb-4">
+          We work with <span className="font-semibold">Vision Ability CIC</span>, a community interest company specialising in digital accessibility auditing and assistive technology consulting. Vision Ability supports our commitment to WCAG 2.1 AA compliance by providing independent accessibility reviews of our digital outputs.
+        </p>
+        <p className="text-base text-gov-dark/90 leading-relaxed">
+          This partnership ensures that all deliverables — from websites to data dashboards — meet the accessibility standards required by the Public Sector Bodies (Websites and Mobile Applications) Accessibility Regulations 2018.
+        </p>
       </section>
     </div>
   );

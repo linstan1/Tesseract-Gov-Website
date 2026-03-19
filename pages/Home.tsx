@@ -2,7 +2,6 @@ import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { ArrowRight, CheckCircle, Shield } from 'lucide-react';
 import { Button } from '../components/ui/Button';
-import { ProcurementShortcuts } from '../components/ProcurementShortcuts';
 
 export const Home: React.FC = () => {
   const navigate = useNavigate();
@@ -33,8 +32,6 @@ export const Home: React.FC = () => {
       </section>
 
       <div className="max-w-7xl mx-auto px-6 lg:px-8 py-20">
-        <ProcurementShortcuts />
-
         {/* Trust Signals */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 py-20">
            <div className="flex flex-col items-start p-8 bg-white border border-gov-border/50 rounded-xl hover:border-gov-blue/30 transition-all duration-200 group">
@@ -43,7 +40,7 @@ export const Home: React.FC = () => {
              </div>
              <h3 className="font-semibold text-lg mb-3 text-gov-dark">Compliance First</h3>
              <p className="text-base text-gov-secondary/90 leading-relaxed">
-               Cyber Essentials (In Progress) and ISO27001-aligned controls. Accessibility built-in by default.
+               Proudly Cyber Essentials certified and ISO27001-aligned. Accessibility built-in by default.
              </p>
            </div>
            <div className="flex flex-col items-start p-8 bg-white border border-gov-border/50 rounded-xl hover:border-gov-blue/30 transition-all duration-200 group">
@@ -64,6 +61,45 @@ export const Home: React.FC = () => {
                Eligible for direct award and framework participation. Supporting local authorities and central gov.
              </p>
            </div>
+        </div>
+
+        {/* Activities */}
+        <div className="py-12 border-t border-gov-border/30">
+          <h3 className="text-center text-sm font-semibold text-gov-secondary uppercase tracking-wider mb-8">Our Work in Action</h3>
+          <img src="/collage-activities.jpg" alt="Tesseract Academy delivering workshops, presentations and research across UK public sector contracts" className="w-full rounded-xl shadow-sm" />
+          <p className="text-center text-xs text-gov-secondary mt-4">BridgeAI Skills Hub launch at Ona Studios, London &bull; Welsh Government Land Valuation Research presentation, Swansea</p>
+        </div>
+
+        {/* Partner Logos */}
+        <div className="py-12 border-t border-gov-border/30">
+          <h3 className="text-center text-sm font-semibold text-gov-secondary uppercase tracking-wider mb-8">Trusted by public sector organisations</h3>
+          <div className="flex flex-wrap items-center justify-center gap-8">
+            <img src="/logos/wag.png" alt="Welsh Government" className="h-16 object-contain grayscale hover:grayscale-0 transition-all" />
+            <img src="/logos/logo2.jpg" alt="BridgeAI" className="h-16 object-contain grayscale hover:grayscale-0 transition-all" />
+            <img src="/logos/logo3.jpg" alt="Innovate UK" className="h-16 object-contain grayscale hover:grayscale-0 transition-all" />
+            <img src="/logos/qualifications-wales.png" alt="Qualifications Wales" className="h-16 object-contain grayscale hover:grayscale-0 transition-all" />
+            <img src="/logos/logo5.jpg" alt="National Digital Twin Programme" className="h-16 object-contain grayscale hover:grayscale-0 transition-all" />
+            <img src="/logos/logo6.jpg" alt="UK Export Academy" className="h-16 object-contain grayscale hover:grayscale-0 transition-all" />
+            <img src="/logos/dbt.svg" alt="Department for Business and Trade" className="h-16 object-contain grayscale hover:grayscale-0 transition-all" />
+            <img src="/logos/business-gateway.jpg" alt="Business Gateway" className="h-24 object-contain grayscale hover:grayscale-0 transition-all" />
+            <img src="/logos/logo9.jpg" alt="The Alan Turing Institute" className="h-16 object-contain grayscale hover:grayscale-0 transition-all" />
+            <img src="/logos/logo10.png" alt="The Growth Company" className="h-16 object-contain grayscale hover:grayscale-0 transition-all" />
+            <img src="/logos/fintech-scotland.png" alt="Fintech Scotland" className="h-16 object-contain grayscale hover:grayscale-0 transition-all" />
+            <img src="/logos/kalgera.png" alt="Kalgera" className="h-16 object-contain grayscale hover:grayscale-0 transition-all" />
+          </div>
+        </div>
+
+        {/* Accreditations & Frameworks */}
+        <div className="py-12 border-t border-gov-border/30">
+          <h3 className="text-center text-sm font-semibold text-gov-secondary uppercase tracking-wider mb-8">Accreditations & Procurement Frameworks</h3>
+          <div className="flex flex-wrap items-center justify-center gap-12">
+            <div className="flex flex-col items-center gap-2">
+              <img src="/logos/cyber-essentials.png" alt="Cyber Essentials Certified" className="h-20 object-contain" />
+            </div>
+            <div className="flex flex-col items-center gap-2">
+              <img src="/logos/ccs.svg" alt="Crown Commercial Service Appointed Supplier" className="h-20 object-contain" />
+            </div>
+          </div>
         </div>
       </div>
     </div>
