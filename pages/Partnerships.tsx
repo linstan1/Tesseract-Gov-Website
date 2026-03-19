@@ -5,20 +5,39 @@ import { CheckCircle } from 'lucide-react';
 
 export const Partnerships: React.FC = () => {
   const [submitted, setSubmitted] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [error, setError] = useState('');
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setSending(true);
+    setError('');
     const form = e.target as HTMLFormElement;
     const formData = new FormData(form);
-    const orgName = formData.get('orgName') || '';
-    const type = formData.get('type') || '';
-    const region = formData.get('region') || '';
-    const expertise = formData.get('expertise') || '';
-    const subject = encodeURIComponent(`Partnership Interest: ${orgName}`);
-    const body = encodeURIComponent(`Organisation: ${orgName}\nType: ${type}\nRegion: ${region}\nExpertise: ${expertise}`);
-    const mailtoUrl = `mailto:fabio@thetesseractacademy.com?subject=${subject}&body=${body}`;
-    window.open(mailtoUrl, '_self');
-    setSubmitted(true);
+
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          orgName: formData.get('orgName'),
+          type: formData.get('type'),
+          region: formData.get('region'),
+          expertise: formData.get('expertise'),
+        }),
+      });
+
+      if (!res.ok) {
+        const data = await res.json();
+        throw new Error(data.error || 'Something went wrong.');
+      }
+
+      setSubmitted(true);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Failed to send. Please try again.');
+    } finally {
+      setSending(false);
+    }
   };
 
   if (submitted) {
@@ -29,12 +48,9 @@ export const Partnerships: React.FC = () => {
             <CheckCircle className="w-12 h-12 text-green-600" />
           </div>
         </div>
-        <h1 className="text-4xl font-extrabold text-gov-dark mb-6">Interest Registered</h1>
-        <p className="text-lg text-gov-secondary/90 mb-4 leading-relaxed">
-          Your email client should have opened with your details pre-filled.
-        </p>
-        <p className="text-base text-gov-secondary/90 mb-10 leading-relaxed">
-          If it didn't open, please email <a href="mailto:fabio@thetesseractacademy.com" className="text-gov-blue hover:text-gov-blue-dark font-medium">fabio@thetesseractacademy.com</a> with your details.
+        <h1 className="text-4xl font-extrabold text-gov-dark mb-6">Enquiry Sent</h1>
+        <p className="text-lg text-gov-secondary/90 mb-10 leading-relaxed">
+          Thank you for your interest. We'll be in touch shortly.
         </p>
         <Button onClick={() => setSubmitted(false)} variant="outline">Submit another</Button>
       </div>
@@ -134,8 +150,15 @@ export const Partnerships: React.FC = () => {
                <textarea id="expertise" name="expertise" rows={3} required className="w-full border border-gov-border rounded-md p-3 focus:ring-2 focus:ring-gov-blue/20 focus:border-gov-blue transition-all resize-none" placeholder="e.g. Behavioral Science, Quantum Computing..."></textarea>
             </div>
 
+            {error && (
+              <div className="bg-red-50 border border-red-200 text-red-700 text-sm p-3 rounded-md" role="alert">
+                {error}
+              </div>
+            )}
             <div className="pt-2">
-              <Button type="submit" fullWidth>Send Partnership Enquiry</Button>
+              <Button type="submit" fullWidth disabled={sending}>
+                {sending ? 'Sending...' : 'Send Partnership Enquiry'}
+              </Button>
             </div>
             <p className="text-xs text-gov-secondary text-center leading-relaxed">
               By submitting, you agree to our Privacy Notice. We only use this data for partnership matching.
