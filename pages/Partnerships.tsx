@@ -1,66 +1,8 @@
-import React, { useState } from 'react';
-import { Button } from '../components/ui/Button';
+import React from 'react';
 import { Card } from '../components/ui/Card';
-import { CheckCircle } from 'lucide-react';
+import { Mail } from 'lucide-react';
 
 export const Partnerships: React.FC = () => {
-  const [submitted, setSubmitted] = useState(false);
-  const [sending, setSending] = useState(false);
-  const [error, setError] = useState('');
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setSending(true);
-    setError('');
-    const form = e.target as HTMLFormElement;
-    const formData = new FormData(form);
-
-    try {
-      const res = await fetch('/api/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          orgName: formData.get('orgName'),
-          type: formData.get('type'),
-          region: formData.get('region'),
-          expertise: formData.get('expertise'),
-        }),
-      });
-
-      if (!res.ok) {
-        let message = 'Something went wrong.';
-        try {
-          const data = await res.json();
-          message = data.error || message;
-        } catch {}
-        throw new Error(message);
-      }
-
-      setSubmitted(true);
-    } catch (err) {
-      setError(err instanceof Error ? err.message : 'Failed to send. Please try again.');
-    } finally {
-      setSending(false);
-    }
-  };
-
-  if (submitted) {
-    return (
-      <div className="max-w-3xl mx-auto px-6 py-24 text-center">
-        <div className="flex justify-center mb-8">
-          <div className="w-20 h-20 rounded-xl bg-green-50 flex items-center justify-center">
-            <CheckCircle className="w-12 h-12 text-green-600" />
-          </div>
-        </div>
-        <h1 className="text-4xl font-extrabold text-gov-dark mb-6">Enquiry Sent</h1>
-        <p className="text-lg text-gov-secondary/90 mb-10 leading-relaxed">
-          Thank you for your interest. We'll be in touch shortly.
-        </p>
-        <Button onClick={() => setSubmitted(false)} variant="outline">Submit another</Button>
-      </div>
-    );
-  }
-
   return (
     <div className="max-w-6xl mx-auto px-6 lg:px-8 py-20 space-y-16">
       <div>
@@ -119,55 +61,18 @@ export const Partnerships: React.FC = () => {
           </div>
         </section>
 
-        <Card className="bg-white">
-          <h2 className="text-xl font-bold text-gov-dark mb-6">Register Interest</h2>
-          <form onSubmit={handleSubmit} className="space-y-5">
-            <div>
-              <label htmlFor="orgName" className="block text-sm font-semibold text-gov-dark mb-2">Organisation Name</label>
-              <input type="text" id="orgName" name="orgName" required className="w-full border border-gov-border rounded-md p-3 focus:ring-2 focus:ring-gov-blue/20 focus:border-gov-blue transition-all" />
-            </div>
-
-            <div>
-              <label htmlFor="type" className="block text-sm font-semibold text-gov-dark mb-2">Organisation Type</label>
-              <select id="type" name="type" className="w-full border border-gov-border rounded-md p-3 focus:ring-2 focus:ring-gov-blue/20 focus:border-gov-blue transition-all">
-                <option>University / Research Institute</option>
-                <option>SME / Startup</option>
-                <option>Large Enterprise</option>
-                <option>NGO / Charity</option>
-                <option>Public Body</option>
-              </select>
-            </div>
-
-            <div>
-              <label htmlFor="region" className="block text-sm font-semibold text-gov-dark mb-2">Region</label>
-              <select id="region" name="region" className="w-full border border-gov-border rounded-md p-3 focus:ring-2 focus:ring-gov-blue/20 focus:border-gov-blue transition-all">
-                <option>UK - London</option>
-                <option>UK - Rest of England</option>
-                <option>UK - Scotland/Wales/NI</option>
-                <option>EU / EEA</option>
-                <option>International</option>
-              </select>
-            </div>
-
-            <div>
-               <label htmlFor="expertise" className="block text-sm font-semibold text-gov-dark mb-2">Core Expertise</label>
-               <textarea id="expertise" name="expertise" rows={3} required className="w-full border border-gov-border rounded-md p-3 focus:ring-2 focus:ring-gov-blue/20 focus:border-gov-blue transition-all resize-none" placeholder="e.g. Behavioral Science, Quantum Computing..."></textarea>
-            </div>
-
-            {error && (
-              <div className="bg-red-50 border border-red-200 text-red-700 text-sm p-3 rounded-md" role="alert">
-                {error}
-              </div>
-            )}
-            <div className="pt-2">
-              <Button type="submit" fullWidth disabled={sending}>
-                {sending ? 'Sending...' : 'Send Partnership Enquiry'}
-              </Button>
-            </div>
-            <p className="text-xs text-gov-secondary text-center leading-relaxed">
-              By submitting, you agree to our Privacy Notice. We only use this data for partnership matching.
-            </p>
-          </form>
+        <Card className="bg-white flex flex-col items-center justify-center text-center p-10">
+          <div className="w-16 h-16 rounded-xl bg-gov-blue/8 flex items-center justify-center mb-6">
+            <Mail className="w-8 h-8 text-gov-blue" />
+          </div>
+          <h2 className="text-xl font-bold text-gov-dark mb-3">Get in Touch</h2>
+          <p className="text-gov-secondary mb-6 leading-relaxed max-w-sm">
+            Interested in partnering with us? Contact our Head of Procurement & Delivery directly.
+          </p>
+          <a href="mailto:fabio@thetesseractacademy.com" className="text-lg font-semibold text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">
+            fabio@thetesseractacademy.com
+          </a>
+          <p className="text-sm text-gov-secondary mt-2">Fabio Rovai, Head of Procurement & Delivery</p>
         </Card>
       </div>
     </div>
