@@ -1,5 +1,5 @@
 import React from 'react';
-import { FileText, ShieldAlert } from 'lucide-react';
+import { FileText } from 'lucide-react';
 import { Button } from '../components/ui/Button';
 
 const POLICIES = [
@@ -42,21 +42,7 @@ export const Compliance: React.FC = () => {
         </div>
       </section>
 
-      <section className="grid grid-cols-1 md:grid-cols-2 gap-10">
-        <div>
-          <h2 className="text-2xl font-bold text-gov-dark mb-6">Security & Vulnerability Disclosure</h2>
-          <div className="bg-gov-bg p-8 border-l-2 border-gov-text rounded-lg shadow-subtle">
-            <p className="text-sm text-gov-text mb-6 leading-relaxed">
-              We take the security of our systems seriously. If you identify a vulnerability, please report it responsibly.
-            </p>
-            <p className="text-sm font-semibold mb-3">Contact:</p>
-            <a href="mailto:security@tesseract.academy" className="text-gov-blue hover:text-gov-blue-dark transition-colors font-medium block mb-6">security@tesseract.academy</a>
-            <p className="text-xs text-gov-secondary leading-relaxed">
-              We aim to acknowledge reports within 48 hours and will provide a timeline for remediation.
-            </p>
-          </div>
-        </div>
-
+      <section>
         <div>
           <h2 className="text-2xl font-bold text-gov-dark mb-6">Accessibility Commitment</h2>
           <p className="text-base text-gov-dark/90 mb-6 leading-relaxed">
@@ -89,7 +75,7 @@ export const Compliance: React.FC = () => {
         <div className="flex items-center gap-6 mb-6">
           <img src="/logos/visiona-ability.jpg" alt="Vision Ability CIC" className="h-16 object-contain rounded-lg" />
           <p className="text-base text-gov-dark/90 leading-relaxed">
-            We work with <span className="font-semibold">Vision Ability CIC</span> to audit and maintain the accessibility of our digital services, ensuring ongoing WCAG 2.1 AA compliance.
+            We work with <a href="https://www.visionability.org.uk/" target="_blank" rel="noopener noreferrer" className="font-semibold text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">Vision Ability CIC</a> to audit and maintain the accessibility of our digital services, ensuring ongoing WCAG 2.1 AA compliance.
           </p>
         </div>
         <p className="text-base text-gov-dark/90 leading-relaxed">
