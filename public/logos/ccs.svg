@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120">
+  <rect width="400" height="120" fill="none"/>
+  <text x="200" y="45" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="bold" fill="#0b0c0c">Crown Commercial Service</text>
+  <text x="200" y="72" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#505a5f">Appointed Supplier</text>
+  <line x1="140" y1="52" x2="260" y2="52" stroke="#1d70b8" stroke-width="2"/>
+  <text x="200" y="100" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#1d70b8">RM6200 | RM6094 | RM6126</text>
+</svg>
