@@ -32,28 +32,32 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       VALUES (${orgName}, ${type}, ${region}, ${expertise})
     `;
 
-    // Send email notification
+    // Send email notification (fire and forget - don't block form submission)
     if (process.env.RESEND_API_KEY) {
-      const resend = new Resend(process.env.RESEND_API_KEY);
-      await resend.emails.send({
-        from: 'Tesseract Gov <onboarding@resend.dev>',
-        to: 'fabio@thetesseractacademy.com',
-        subject: `Partnership Interest: ${orgName}`,
-        html: `
-          <h2>New Partnership Enquiry</h2>
-          <table style="border-collapse:collapse;width:100%;max-width:500px;">
-            <tr><td style="padding:8px;font-weight:bold;border-bottom:1px solid #ddd;">Organisation</td><td style="padding:8px;border-bottom:1px solid #ddd;">${escapeHtml(orgName)}</td></tr>
-            <tr><td style="padding:8px;font-weight:bold;border-bottom:1px solid #ddd;">Type</td><td style="padding:8px;border-bottom:1px solid #ddd;">${escapeHtml(type || '')}</td></tr>
-            <tr><td style="padding:8px;font-weight:bold;border-bottom:1px solid #ddd;">Region</td><td style="padding:8px;border-bottom:1px solid #ddd;">${escapeHtml(region || '')}</td></tr>
-            <tr><td style="padding:8px;font-weight:bold;border-bottom:1px solid #ddd;">Expertise</td><td style="padding:8px;border-bottom:1px solid #ddd;">${escapeHtml(expertise)}</td></tr>
-          </table>
-        `,
-      });
+      try {
+        const resend = new Resend(process.env.RESEND_API_KEY);
+        await resend.emails.send({
+          from: 'Tesseract Gov <onboarding@resend.dev>',
+          to: 'fabio@thetesseractacademy.com',
+          subject: `Partnership Interest: ${orgName}`,
+          html: `
+            <h2>New Partnership Enquiry</h2>
+            <table style="border-collapse:collapse;width:100%;max-width:500px;">
+              <tr><td style="padding:8px;font-weight:bold;border-bottom:1px solid #ddd;">Organisation</td><td style="padding:8px;border-bottom:1px solid #ddd;">${escapeHtml(orgName)}</td></tr>
+              <tr><td style="padding:8px;font-weight:bold;border-bottom:1px solid #ddd;">Type</td><td style="padding:8px;border-bottom:1px solid #ddd;">${escapeHtml(type || '')}</td></tr>
+              <tr><td style="padding:8px;font-weight:bold;border-bottom:1px solid #ddd;">Region</td><td style="padding:8px;border-bottom:1px solid #ddd;">${escapeHtml(region || '')}</td></tr>
+              <tr><td style="padding:8px;font-weight:bold;border-bottom:1px solid #ddd;">Expertise</td><td style="padding:8px;border-bottom:1px solid #ddd;">${escapeHtml(expertise)}</td></tr>
+            </table>
+          `,
+        });
+      } catch (emailError) {
+        console.error('Email notification failed (submission still saved):', emailError);
+      }
     }
 
     return res.status(200).json({ success: true });
   } catch (error) {
-    console.error('Error:', error);
+    console.error('Database error:', error);
     return res.status(500).json({ error: 'Failed to submit enquiry. Please try again later.' });
   }
 }
