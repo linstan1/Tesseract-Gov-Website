@@ -51,7 +51,7 @@ export const Navbar: React.FC = () => {
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="inline-flex items-center justify-center p-2 rounded-lg text-gov-text hover:bg-gov-bg"
-              aria-expanded="false"
+              aria-expanded={isOpen}
             >
               <span className="sr-only">Open main menu</span>
               {isOpen ? <X className="block h-6 w-6" /> : <Menu className="block h-6 w-6" />}

@@ -52,7 +52,7 @@ export const HowToBuy: React.FC = () => {
                   <td className="px-6 py-4">
                     {fw.url ? (
                       <a href={fw.url} target="_blank" rel="noopener noreferrer" className="text-gov-blue hover:text-gov-blue-dark flex items-center gap-1 font-medium transition-colors">
-                        View Listing <ExternalLink className="w-3 h-3" />
+                        View Listing<span className="sr-only"> (opens in new tab)</span> <ExternalLink className="w-3 h-3" aria-hidden="true" />
                       </a>
                     ) : (
                       <span className="text-gray-400">N/A</span>
@@ -84,9 +84,6 @@ export const HowToBuy: React.FC = () => {
             <p><span className="font-semibold text-gov-text">PIC:</span> 880269472</p>
             <p><span className="font-semibold text-gov-text">Size:</span> SME / Micro</p>
           </div>
-          <p className="text-xs text-gov-secondary mt-4 leading-relaxed">
-            Click text box to highlight for copy-paste.
-          </p>
         </Card>
 
       </section>

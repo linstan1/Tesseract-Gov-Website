@@ -10,7 +10,7 @@ interface CardProps {
 export const Card: React.FC<CardProps> = ({ children, title, className = '', onClick }) => {
   return (
     <div
-      className={`bg-white border border-gov-border/50 rounded-2xl p-8 hover:border-gov-border transition-all duration-200 ${onClick ? 'cursor-pointer' : ''} ${className}`}
+      className={`bg-white border border-gov-border/50 rounded-2xl p-8 hover:border-gov-border transition-all duration-200 ${onClick ? 'cursor-pointer focus:outline-none focus:ring-2 focus:ring-gov-focus focus:ring-offset-2' : ''} ${className}`}
       onClick={onClick}
       role={onClick ? 'button' : undefined}
       tabIndex={onClick ? 0 : undefined}

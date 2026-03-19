@@ -35,7 +35,7 @@ export const Compliance: React.FC = () => {
                  </div>
               </div>
               <a href={p.href} target="_blank" rel="noopener noreferrer">
-                <Button variant="outline" className="text-sm py-2 px-4 hover:scale-100">Download</Button>
+                <Button variant="outline" className="text-sm py-2 px-4 hover:scale-100">Download<span className="sr-only"> (opens in new tab)</span></Button>
               </a>
             </div>
           ))}
@@ -69,18 +69,18 @@ export const Compliance: React.FC = () => {
         </div>
       </section>
 
-      {/* Vision Ability CIC */}
-      <section className="bg-gov-bg border border-gov-border/50 p-10 rounded-xl">
-        <h2 className="text-2xl font-bold text-gov-dark mb-6">Accessibility Partner — Vision Ability CIC</h2>
-        <div className="flex items-center gap-6 mb-6">
-          <img src="/logos/visiona-ability.jpg" alt="Vision Ability CIC" className="h-16 object-contain rounded-lg" />
-          <p className="text-base text-gov-dark/90 leading-relaxed">
-            We work with <a href="https://www.visionability.org.uk/" target="_blank" rel="noopener noreferrer" className="font-semibold text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">Vision Ability CIC</a> to audit and maintain the accessibility of our digital services, ensuring ongoing WCAG 2.1 AA compliance.
+      <section className="grid grid-cols-1 md:grid-cols-3 gap-10">
+        <div className="md:col-span-2"></div>
+        {/* Vision Ability CIC */}
+        <aside className="bg-gov-bg border border-gov-border/50 p-6 rounded-lg">
+          <div className="flex items-center gap-3 mb-3">
+            <img src="/logos/visiona-ability.jpg" alt="Vision Ability CIC" className="h-10 object-contain rounded" />
+            <h3 className="text-sm font-bold text-gov-dark">Accessibility Partner</h3>
+          </div>
+          <p className="text-xs text-gov-dark/80 leading-relaxed">
+            We work with <a href="https://www.visionability.org.uk/" target="_blank" rel="noopener noreferrer" className="font-semibold text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">Vision Ability CIC<span className="sr-only"> (opens in new tab)</span></a> to audit our digital services for WCAG 2.1 AA compliance.
           </p>
-        </div>
-        <p className="text-base text-gov-dark/90 leading-relaxed">
-          This partnership ensures that all deliverables — from websites to data dashboards — meet the accessibility standards required by the Public Sector Bodies (Websites and Mobile Applications) Accessibility Regulations 2018.
-        </p>
+        </aside>
       </section>
     </div>
   );
