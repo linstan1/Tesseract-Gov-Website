@@ -74,7 +74,7 @@ export const Compliance: React.FC = () => {
         {/* Vision Ability CIC */}
         <aside className="bg-gov-bg border border-gov-border/50 p-6 rounded-lg">
           <div className="flex items-center gap-3 mb-3">
-            <img src="/logos/visiona-ability.jpg" alt="Vision Ability CIC" className="h-10 object-contain rounded" />
+            <img src="/logos/visiona-ability.png" alt="Vision Ability CIC" className="h-10 object-contain rounded" />
             <h3 className="text-sm font-bold text-gov-dark">Accessibility Partner</h3>
           </div>
           <p className="text-xs text-gov-dark/80 leading-relaxed">

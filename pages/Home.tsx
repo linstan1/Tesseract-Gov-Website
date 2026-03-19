@@ -75,14 +75,14 @@ export const Home: React.FC = () => {
           <h3 className="text-center text-sm font-semibold text-gov-secondary uppercase tracking-wider mb-8">Trusted by public sector organisations</h3>
           <div className="flex flex-wrap items-center justify-center gap-8">
             <img src="/logos/wag.png" alt="Welsh Government" className="h-16 object-contain grayscale hover:grayscale-0 transition-all" />
-            <img src="/logos/logo2.jpg" alt="BridgeAI" className="h-16 object-contain grayscale hover:grayscale-0 transition-all" />
-            <img src="/logos/logo3.jpg" alt="Innovate UK" className="h-16 object-contain grayscale hover:grayscale-0 transition-all" />
+            <img src="/logos/logo2.png" alt="BridgeAI" className="h-16 object-contain grayscale hover:grayscale-0 transition-all" />
+            <img src="/logos/logo3.png" alt="Innovate UK" className="h-16 object-contain grayscale hover:grayscale-0 transition-all" />
             <img src="/logos/qualifications-wales.png" alt="Qualifications Wales" className="h-16 object-contain grayscale hover:grayscale-0 transition-all" />
-            <img src="/logos/logo5.jpg" alt="National Digital Twin Programme" className="h-16 object-contain grayscale hover:grayscale-0 transition-all" />
-            <img src="/logos/logo6.jpg" alt="UK Export Academy" className="h-16 object-contain grayscale hover:grayscale-0 transition-all" />
+            <img src="/logos/logo5.png" alt="National Digital Twin Programme" className="h-16 object-contain grayscale hover:grayscale-0 transition-all" />
+            <img src="/logos/logo6.png" alt="UK Export Academy" className="h-16 object-contain grayscale hover:grayscale-0 transition-all" />
             <img src="/logos/dbt.svg" alt="Department for Business and Trade" className="h-16 object-contain grayscale hover:grayscale-0 transition-all" />
-            <img src="/logos/business-gateway.jpg" alt="Business Gateway" className="h-24 object-contain grayscale hover:grayscale-0 transition-all" />
-            <img src="/logos/logo9.jpg" alt="The Alan Turing Institute" className="h-16 object-contain grayscale hover:grayscale-0 transition-all" />
+            <img src="/logos/business-gateway.png" alt="Business Gateway" className="h-24 object-contain grayscale hover:grayscale-0 transition-all" />
+            <img src="/logos/logo9.png" alt="The Alan Turing Institute" className="h-16 object-contain grayscale hover:grayscale-0 transition-all" />
             <img src="/logos/logo10.png" alt="The Growth Company" className="h-16 object-contain grayscale hover:grayscale-0 transition-all" />
             <img src="/logos/fintech-scotland.png" alt="Fintech Scotland" className="h-16 object-contain grayscale hover:grayscale-0 transition-all" />
             <img src="/logos/kalgera.png" alt="Kalgera" className="h-16 object-contain grayscale hover:grayscale-0 transition-all" />
