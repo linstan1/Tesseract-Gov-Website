@@ -3,19 +3,43 @@ import { neon } from '@neondatabase/serverless';
 import { Resend } from 'resend';
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
+  // CORS headers
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+
+  if (req.method === 'OPTIONS') {
+    return res.status(200).end();
+  }
+
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
-  const { orgName, type, region, expertise } = req.body;
+  let body = req.body;
+
+  // Handle case where body might be a string
+  if (typeof body === 'string') {
+    try {
+      body = JSON.parse(body);
+    } catch {
+      return res.status(400).json({ error: 'Invalid JSON body' });
+    }
+  }
+
+  if (!body) {
+    return res.status(400).json({ error: 'Request body is empty' });
+  }
+
+  const { orgName, type, region, expertise } = body;
 
   if (!orgName || !expertise) {
     return res.status(400).json({ error: 'Organisation name and expertise are required.' });
   }
 
-  const sql = neon(process.env.DATABASE_URL!);
-
   try {
+    const sql = neon(process.env.DATABASE_URL!);
+
     await sql`
       CREATE TABLE IF NOT EXISTS submissions (
         id SERIAL PRIMARY KEY,
@@ -32,7 +56,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       VALUES (${orgName}, ${type}, ${region}, ${expertise})
     `;
 
-    // Send email notification (fire and forget - don't block form submission)
+    // Send email notification (non-blocking)
     if (process.env.RESEND_API_KEY) {
       try {
         const resend = new Resend(process.env.RESEND_API_KEY);
@@ -51,7 +75,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
           `,
         });
       } catch (emailError) {
-        console.error('Email notification failed (submission still saved):', emailError);
+        console.error('Email failed:', emailError);
       }
     }
 
