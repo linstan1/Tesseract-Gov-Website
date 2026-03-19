@@ -18,7 +18,7 @@ export const Capabilities: React.FC = () => {
           <div className="p-3.5 bg-gov-blue/8 w-fit rounded-md mb-5 group-hover:bg-gov-blue/12 transition-colors duration-300">
             <BookOpen className="w-6 h-6 text-gov-blue" />
           </div>
-          <h2 className="text-lg font-semibold text-gov-dark mb-3">Policy-Aligned Advisory</h3>
+          <h2 className="text-lg font-semibold text-gov-dark mb-3">Policy-Aligned Advisory</h2>
           <p className="text-gov-secondary mb-6 flex-grow leading-relaxed">
             Ensuring technical initiatives align with broader policy goals. We provide feasibility studies, ethics frameworks, and technical assurance for high-stakes programs.
           </p>
@@ -31,7 +31,7 @@ export const Capabilities: React.FC = () => {
           <div className="p-3.5 bg-gov-blue/8 w-fit rounded-md mb-6 group-hover:bg-gov-blue/12 transition-colors duration-300">
             <Zap className="w-7 h-7 text-gov-blue" />
           </div>
-          <h2 className="text-lg font-semibold text-gov-dark mb-3">Rapid Delivery</h3>
+          <h2 className="text-lg font-semibold text-gov-dark mb-3">Rapid Delivery</h2>
           <p className="text-gov-secondary/90 mb-5 flex-grow leading-relaxed">
             From Discovery to Live. We deploy multidisciplinary teams to build Alpha prototypes and scale Beta services using GDS-aligned agile standards.
           </p>
@@ -44,7 +44,7 @@ export const Capabilities: React.FC = () => {
           <div className="p-3.5 bg-gov-blue/8 w-fit rounded-md mb-5 group-hover:bg-gov-blue/12 transition-colors duration-300">
             <LineChart className="w-6 h-6 text-gov-blue" />
           </div>
-          <h2 className="text-lg font-semibold text-gov-dark mb-3">Data & AI Upskilling</h3>
+          <h2 className="text-lg font-semibold text-gov-dark mb-3">Data & AI Upskilling</h2>
           <p className="text-gov-secondary/90 mb-5 flex-grow leading-relaxed">
              Building internal capability. We train civil servants and public sector leaders on data literacy, AI ethics, and strategic implementation of emerging tech.
           </p>
