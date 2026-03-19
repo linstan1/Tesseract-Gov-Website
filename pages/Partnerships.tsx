@@ -16,8 +16,9 @@ export const Partnerships: React.FC = () => {
     const expertise = formData.get('expertise') || '';
     const subject = encodeURIComponent(`Partnership Interest: ${orgName}`);
     const body = encodeURIComponent(`Organisation: ${orgName}\nType: ${type}\nRegion: ${region}\nExpertise: ${expertise}`);
-    window.location.href = `mailto:fabio@thetesseractacademy.com?subject=${subject}&body=${body}`;
-    setTimeout(() => setSubmitted(true), 800);
+    const mailtoUrl = `mailto:fabio@thetesseractacademy.com?subject=${subject}&body=${body}`;
+    window.open(mailtoUrl, '_self');
+    setSubmitted(true);
   };
 
   if (submitted) {
@@ -29,8 +30,11 @@ export const Partnerships: React.FC = () => {
           </div>
         </div>
         <h1 className="text-4xl font-extrabold text-gov-dark mb-6">Interest Registered</h1>
-        <p className="text-lg text-gov-secondary/90 mb-10 leading-relaxed">
-          Thank you. Your details have been added to our consortium database. We will contact you if a relevant funding call matches your expertise.
+        <p className="text-lg text-gov-secondary/90 mb-4 leading-relaxed">
+          Your email client should have opened with your details pre-filled.
+        </p>
+        <p className="text-base text-gov-secondary/90 mb-10 leading-relaxed">
+          If it didn't open, please email <a href="mailto:fabio@thetesseractacademy.com" className="text-gov-blue hover:text-gov-blue-dark font-medium">fabio@thetesseractacademy.com</a> with your details.
         </p>
         <Button onClick={() => setSubmitted(false)} variant="outline">Submit another</Button>
       </div>

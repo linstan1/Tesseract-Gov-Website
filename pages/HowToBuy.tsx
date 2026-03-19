@@ -89,20 +89,6 @@ export const HowToBuy: React.FC = () => {
           </p>
         </Card>
 
-        <Card title="Procurement Pack">
-          <p className="text-gov-secondary mb-8 leading-relaxed">
-            Everything you need for due diligence in one place. Includes insurance certificates, policy summaries, and capability statement.
-          </p>
-          <Button fullWidth onClick={() => alert("Downloading Procurement Pack...")}>
-            <Download className="w-5 h-5 mr-2" />
-            Download Consolidated Pack (PDF)
-          </Button>
-          <div className="mt-6 text-center">
-             <a href="mailto:fabio@thetesseractacademy.com" className="text-sm text-gov-blue hover:text-gov-blue-dark font-medium inline-flex items-center gap-1 transition-colors">
-               <Mail className="w-3 h-3" /> Email for specific clarifications
-             </a>
-          </div>
-        </Card>
       </section>
     </div>
   );
