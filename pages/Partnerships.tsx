@@ -28,8 +28,12 @@ export const Partnerships: React.FC = () => {
       });
 
       if (!res.ok) {
-        const data = await res.json();
-        throw new Error(data.error || 'Something went wrong.');
+        let message = 'Something went wrong.';
+        try {
+          const data = await res.json();
+          message = data.error || message;
+        } catch {}
+        throw new Error(message);
       }
 
       setSubmitted(true);

@@ -57,14 +57,14 @@ export const Capabilities: React.FC = () => {
       <section className="bg-gov-bg p-10 rounded-xl border border-gov-border/50">
         <h2 className="text-2xl font-bold text-gov-dark mb-10">How We Deliver</h2>
         <div className="grid grid-cols-1 sm:grid-cols-4 gap-8">
-          <div className="relative pl-6 sm:pl-0 sm:pt-8 border-l-2 sm:border-l-0 sm:border-t-2 border-gov-border">
-            <div className="absolute left-[-5px] top-0 sm:top-[-5px] sm:left-0 w-2.5 h-2.5 bg-gov-secondary rounded-full ring-4 ring-gov-bg"></div>
-            <h4 className="font-semibold text-base mb-2 text-gov-dark">Discovery</h4>
+          <div className="relative pl-6 sm:pl-0 sm:pt-8 border-l-2 sm:border-l-0 sm:border-t-2 border-gov-blue">
+            <div className="absolute left-[-5px] top-0 sm:top-[-5px] sm:left-0 w-2.5 h-2.5 bg-gov-blue rounded-full ring-4 ring-gov-bg"></div>
+            <h4 className="font-semibold text-base text-gov-blue mb-2">Discovery</h4>
             <p className="text-sm text-gov-secondary/90 leading-relaxed">Understanding user needs and technical feasibility.</p>
           </div>
-          <div className="relative pl-6 sm:pl-0 sm:pt-8 border-l-2 sm:border-l-0 sm:border-t-2 border-gov-border">
-             <div className="absolute left-[-5px] top-0 sm:top-[-5px] sm:left-0 w-2.5 h-2.5 bg-gov-secondary rounded-full ring-4 ring-gov-bg"></div>
-            <h4 className="font-semibold text-base mb-2 text-gov-dark">Alpha</h4>
+          <div className="relative pl-6 sm:pl-0 sm:pt-8 border-l-2 sm:border-l-0 sm:border-t-2 border-gov-blue">
+             <div className="absolute left-[-5px] top-0 sm:top-[-5px] sm:left-0 w-2.5 h-2.5 bg-gov-blue rounded-full ring-4 ring-gov-bg"></div>
+            <h4 className="font-semibold text-base text-gov-blue mb-2">Alpha</h4>
             <p className="text-sm text-gov-secondary/90 leading-relaxed">Prototyping solutions and testing hypotheses.</p>
           </div>
           <div className="relative pl-6 sm:pl-0 sm:pt-8 border-l-2 sm:border-l-0 sm:border-t-2 border-gov-blue">
@@ -72,9 +72,9 @@ export const Capabilities: React.FC = () => {
             <h4 className="font-semibold text-base text-gov-blue mb-2">Beta</h4>
             <p className="text-sm text-gov-secondary/90 leading-relaxed">Building working services for public trial.</p>
           </div>
-          <div className="relative pl-6 sm:pl-0 sm:pt-8 border-l-2 sm:border-l-0 sm:border-t-2 border-gov-border">
-             <div className="absolute left-[-5px] top-0 sm:top-[-5px] sm:left-0 w-2.5 h-2.5 bg-gov-secondary rounded-full ring-4 ring-gov-bg"></div>
-            <h4 className="font-semibold text-base mb-2 text-gov-dark">Live</h4>
+          <div className="relative pl-6 sm:pl-0 sm:pt-8 border-l-2 sm:border-l-0 sm:border-t-2 border-gov-blue">
+             <div className="absolute left-[-5px] top-0 sm:top-[-5px] sm:left-0 w-2.5 h-2.5 bg-gov-blue rounded-full ring-4 ring-gov-bg"></div>
+            <h4 className="font-semibold text-base text-gov-blue mb-2">Live</h4>
             <p className="text-sm text-gov-secondary/90 leading-relaxed">Continuous improvement and ongoing assurance.</p>
           </div>
         </div>
