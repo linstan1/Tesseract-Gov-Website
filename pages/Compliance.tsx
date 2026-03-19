@@ -42,35 +42,35 @@ export const Compliance: React.FC = () => {
         </div>
       </section>
 
-      <section>
-        <div>
-          <h2 className="text-2xl font-bold text-gov-dark mb-6">Accessibility Commitment</h2>
-          <p className="text-base text-gov-dark/90 mb-6 leading-relaxed">
-            We are committed to making this website accessible to everyone, regardless of ability or technology. We aim for WCAG 2.1 AA compliance.
+      <section className="grid grid-cols-1 md:grid-cols-3 gap-10">
+        {/* Accessibility Commitment */}
+        <aside className="bg-gov-bg border border-gov-border/50 p-6 rounded-lg">
+          <h3 className="text-sm font-bold text-gov-dark mb-3">Accessibility Commitment</h3>
+          <p className="text-xs text-gov-dark/80 leading-relaxed mb-3">
+            We aim for WCAG 2.1 AA compliance across all digital services.
           </p>
-          <ul className="space-y-3 text-base text-gov-dark/90">
-            <li className="flex items-start gap-3">
-              <span className="w-1.5 h-1.5 bg-gov-blue rounded-full mt-1.5 flex-shrink-0"></span>
+          <ul className="space-y-2 text-xs text-gov-dark/80">
+            <li className="flex items-start gap-2">
+              <span className="w-1 h-1 bg-gov-blue rounded-full mt-1.5 flex-shrink-0"></span>
               <span>Semantic HTML for screen readers</span>
             </li>
-            <li className="flex items-start gap-3">
-              <span className="w-1.5 h-1.5 bg-gov-blue rounded-full mt-1.5 flex-shrink-0"></span>
+            <li className="flex items-start gap-2">
+              <span className="w-1 h-1 bg-gov-blue rounded-full mt-1.5 flex-shrink-0"></span>
               <span>Keyboard navigation support</span>
             </li>
-            <li className="flex items-start gap-3">
-              <span className="w-1.5 h-1.5 bg-gov-blue rounded-full mt-1.5 flex-shrink-0"></span>
+            <li className="flex items-start gap-2">
+              <span className="w-1 h-1 bg-gov-blue rounded-full mt-1.5 flex-shrink-0"></span>
               <span>High contrast ratios</span>
             </li>
-            <li className="flex items-start gap-3">
-              <span className="w-1.5 h-1.5 bg-gov-blue rounded-full mt-1.5 flex-shrink-0"></span>
+            <li className="flex items-start gap-2">
+              <span className="w-1 h-1 bg-gov-blue rounded-full mt-1.5 flex-shrink-0"></span>
               <span>No flashing content</span>
             </li>
           </ul>
-        </div>
-      </section>
+        </aside>
 
-      <section className="grid grid-cols-1 md:grid-cols-3 gap-10">
-        <div className="md:col-span-2"></div>
+        <div className="md:col-span-1"></div>
+
         {/* Vision Ability CIC */}
         <aside className="bg-gov-bg border border-gov-border/50 p-6 rounded-lg">
           <div className="flex items-center gap-3 mb-3">
