@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://tesseract-gov-website.vercel.app/sitemap.xml

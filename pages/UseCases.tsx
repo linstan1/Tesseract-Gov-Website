@@ -55,11 +55,11 @@ const UseCaseItem: React.FC<{ data: typeof USE_CASES[0] }> = ({ data }) => {
 
       <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
-           <h4 className="text-xs font-semibold uppercase tracking-wider text-gov-blue mb-2">The Challenge</h4>
+           <h3 className="text-xs font-semibold uppercase tracking-wider text-gov-blue mb-2">The Challenge</h3>
            <p className="text-gov-text leading-relaxed text-sm">{data.challenge}</p>
         </div>
         <div>
-           <h4 className="text-xs font-semibold uppercase tracking-wider text-gov-blue mb-2">The Outcome</h4>
+           <h3 className="text-xs font-semibold uppercase tracking-wider text-gov-blue mb-2">The Outcome</h3>
            <p className="text-gov-text font-medium leading-relaxed text-sm">{data.outcome}</p>
         </div>
       </div>
@@ -67,15 +67,15 @@ const UseCaseItem: React.FC<{ data: typeof USE_CASES[0] }> = ({ data }) => {
       {expanded && (
         <div className="mt-6 pt-6 border-t border-gov-border grid grid-cols-1 md:grid-cols-3 gap-6 animate-fadeIn">
           <div>
-            <h4 className="text-xs font-semibold uppercase tracking-wider text-gov-secondary mb-2">Intervention</h4>
+            <h3 className="text-xs font-semibold uppercase tracking-wider text-gov-secondary mb-2">Intervention</h3>
             <p className="text-sm text-gov-text leading-relaxed">{data.intervention}</p>
           </div>
           <div>
-            <h4 className="text-xs font-semibold uppercase tracking-wider text-gov-secondary mb-2">Assurance & Ethics</h4>
+            <h3 className="text-xs font-semibold uppercase tracking-wider text-gov-secondary mb-2">Assurance & Ethics</h3>
             <p className="text-sm text-gov-text leading-relaxed">{data.assurance}</p>
           </div>
           <div>
-            <h4 className="text-xs font-semibold uppercase tracking-wider text-gov-secondary mb-2">Reusable Assets</h4>
+            <h3 className="text-xs font-semibold uppercase tracking-wider text-gov-secondary mb-2">Reusable Assets</h3>
             <p className="text-sm text-gov-text leading-relaxed">{data.reusable}</p>
           </div>
         </div>

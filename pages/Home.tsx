@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { ArrowRight, CheckCircle, Shield } from 'lucide-react';
+import { ArrowRight, CheckCircle, Shield, Download, Star, Quote, Brain, FlaskConical, GraduationCap, ClipboardList, Scale, BarChart3, Users, MessageCircle, Award } from 'lucide-react';
 import { Button } from '../components/ui/Button';
 
 export const Home: React.FC = () => {
@@ -30,6 +30,24 @@ export const Home: React.FC = () => {
           </div>
         </div>
       </section>
+
+      {/* Latest News */}
+      <div className="bg-gov-blue/5 border-y border-gov-blue/20 px-6 py-4">
+        <div className="max-w-7xl mx-auto space-y-2">
+          <div className="flex items-center gap-3">
+            <Award className="w-5 h-5 text-gov-blue flex-shrink-0" />
+            <p className="text-sm text-gov-dark">
+              <strong className="text-gov-blue">New Contract Award</strong>  - Appointed to the Expert Help for Business framework (Lot 1  - Financial Management) by Aberdeenshire Council, Scotland. March 2026.
+            </p>
+          </div>
+          <div className="flex items-center gap-3">
+            <Award className="w-5 h-5 text-gov-blue flex-shrink-0" />
+            <p className="text-sm text-gov-dark">
+              <strong className="text-gov-blue">New Contract Award</strong>  - Subject Expert Services for Monitoring National Qualifications, appointed by Qualifications Wales. 3-year contract (2026–2029).
+            </p>
+          </div>
+        </div>
+      </div>
 
       <div className="max-w-7xl mx-auto px-6 lg:px-8 py-20">
         {/* Trust Signals */}
@@ -63,11 +81,108 @@ export const Home: React.FC = () => {
            </div>
         </div>
 
+        {/* What We Deliver */}
+        <div className="py-16 border-t border-gov-border/30">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-extrabold text-gov-dark mb-3">What We Deliver</h2>
+            <p className="text-gov-secondary text-lg max-w-2xl mx-auto">End-to-end capabilities across research, technology, education, and governance for public sector organisations.</p>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              { icon: Brain, title: "Artificial Intelligence & Data Science", desc: "Custom AI models, NLP, machine learning pipelines, and predictive analytics tailored to public sector needs." },
+              { icon: FlaskConical, title: "Research & Policy Advisory", desc: "Evidence-based research, policy analysis, regulatory consultations, and academic publications for government bodies." },
+              { icon: Users, title: "Public Engagement & Participation", desc: "Deliberative workshops, citizen panels, inclusive co-design with diverse communities, and participatory research methods." },
+              { icon: GraduationCap, title: "Education & Upskilling", desc: "AI literacy programmes, data science workshops, and leadership training for decision-makers at all levels." },
+              { icon: ClipboardList, title: "Survey Design & Delivery", desc: "End-to-end survey methodology, questionnaire design, data collection, and statistical analysis for public consultations." },
+              { icon: Scale, title: "AI Ethics & Governance", desc: "Responsible AI frameworks, bias auditing, algorithmic impact assessments, and compliance with UK and EU AI regulation." },
+              { icon: MessageCircle, title: "Stakeholder & Community Research", desc: "Qualitative research, focus groups, interviews with seldom-heard groups, and insight synthesis for policy-makers." },
+              { icon: BarChart3, title: "Digital Delivery & Prototyping", desc: "Rapid prototyping, technical assurance, GDS-aligned service design, and discovery-to-live implementation support." },
+            ].map((item, i) => (
+              <div key={i} className="flex items-start gap-4 p-6 bg-white border border-gov-border/50 rounded-xl hover:border-gov-blue/30 transition-all">
+                <div className="w-10 h-10 rounded-lg bg-gov-blue/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <item.icon className="w-5 h-5 text-gov-blue" />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-gov-dark mb-1">{item.title}</h3>
+                  <p className="text-sm text-gov-secondary/90 leading-relaxed">{item.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
         {/* Activities */}
         <div className="py-12 border-t border-gov-border/30">
           <h3 className="text-center text-sm font-semibold text-gov-secondary uppercase tracking-wider mb-8">Our Work in Action</h3>
           <img src="/collage-activities.jpg" alt="Tesseract Academy delivering workshops, presentations and research across UK public sector contracts" className="w-full rounded-xl shadow-sm" />
           <p className="text-center text-xs text-gov-secondary mt-4">BridgeAI Skills Hub launch at Ona Studios, London &bull; Welsh Government Land Valuation Research presentation, Swansea</p>
+        </div>
+
+        {/* Public Engagement Narrative */}
+        <div className="py-16 border-t border-gov-border/30">
+          <div className="text-center mb-12">
+            <p className="text-sm font-semibold text-gov-blue uppercase tracking-wider mb-3">Public Engagement & Participatory Research</p>
+            <h2 className="text-3xl font-extrabold text-gov-dark mb-3">Working With Communities, Not Just About Them</h2>
+            <p className="text-gov-secondary text-lg max-w-3xl mx-auto">We combine technical rigour with people-centred methods  - designing inclusive processes that bring diverse voices into public decision-making.</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="bg-white border border-gov-border/50 rounded-xl p-8">
+              <h3 className="text-lg font-bold text-gov-dark mb-4">Our Approach to Inclusive Research</h3>
+              <p className="text-gov-secondary leading-relaxed mb-4">
+                Our work goes beyond data and dashboards. We design and facilitate deliberative workshops, citizen panels, and participatory research processes that centre the experiences of underrepresented and minoritised communities. Whether co-designing a public consultation framework or running focus groups with seldom-heard populations, we bring qualitative depth alongside quantitative analysis.
+              </p>
+              <p className="text-gov-secondary leading-relaxed">
+                We believe the best public policy is shaped by the people it affects. That's why inclusive design isn't an add-on  - it's embedded in our methodology from discovery through to delivery.
+              </p>
+            </div>
+            <div className="bg-white border border-gov-border/50 rounded-xl p-8">
+              <h3 className="text-lg font-bold text-gov-dark mb-4">What This Looks Like in Practice</h3>
+              <ul className="space-y-4 text-gov-secondary leading-relaxed">
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-gov-blue flex-shrink-0 mt-0.5" />
+                  <span><strong>Welsh Government  - Land Valuation Methods</strong>  - Commissioned to test five distinct valuation approaches including market-based, machine learning, formula-based, and experimental methods to inform potential land value tax policy across Wales. Report published March 2026.</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-gov-blue flex-shrink-0 mt-0.5" />
+                  <span><strong>BridgeAI / Innovate UK  - Creative Industries AI Training</strong>  - Awarded contract GSS24646 to deliver AI training and support for creative industries professionals, funded by Innovate UK BridgeAI. Bridging the gap between AI technology and creative applications across the sector.</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-gov-blue flex-shrink-0 mt-0.5" />
+                  <span><strong>FCA Cryptoasset Regulation</strong>  - Represented the British Blockchain Association at an FCA roundtable on stablecoin regulation, providing expert input on the UK's cryptoasset regulatory framework.</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-gov-blue flex-shrink-0 mt-0.5" />
+                  <span><strong>Qualifications Wales  - National Qualifications Monitoring</strong>  - Appointed as subject expert to monitor reformed GCSE National Qualifications, ensuring assessments are produced, marked, and awarded fairly. Contract 2026–2029.</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-gov-blue flex-shrink-0 mt-0.5" />
+                  <span><strong>London Data Week  - AI Tools for the Visually Impaired</strong>  - Co-organised with <a href="https://www.visionability.org.uk/" target="_blank" rel="noopener noreferrer" className="text-gov-blue hover:underline">Vision Ability CIC</a> a public workshop and demonstration on making AI tools accessible to people with visual impairments, as part of <a href="https://londondataweek.org/ldw25-events/" target="_blank" rel="noopener noreferrer" className="text-gov-blue hover:underline">London Data Week 2025</a>.</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-gov-blue flex-shrink-0 mt-0.5" />
+                  <span><strong>Xenet.ai  - AI Startup Mentorship</strong>  - Mentored <a href="https://xenet.ai/" target="_blank" rel="noopener noreferrer" className="text-gov-blue hover:underline">Xenet.ai</a> from early-stage AI startup through to becoming a Google for Startups mentor, demonstrating our ability to grow ecosystem capacity and develop the next generation of AI leaders.</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* Book */}
+        <div className="py-12 border-t border-gov-border/30">
+          <div className="flex flex-col md:flex-row items-center gap-8 bg-white border border-gov-border/50 rounded-xl p-8">
+            <div className="flex-shrink-0">
+              <img src="/book-cover.png" alt="The Decision Maker's Handbook to Data Science book cover" className="w-40 rounded-lg shadow-md" />
+            </div>
+            <div className="flex-1 text-center md:text-left">
+              <h3 className="text-lg font-bold text-gov-dark mb-2">Get Your Free Copy</h3>
+              <p className="text-gov-secondary leading-relaxed mb-4">
+                <em>The Decision Maker's Handbook to Data Science</em>  - a practical guide for non-technical executives, managers, and founders navigating AI and data strategy. Written by our MD, Dr Stylianos Kampakis, and published by Apress. Dr Kampakis also serves as Governor at <a href="https://www.nhc.ac.uk/" target="_blank" rel="noopener noreferrer" className="text-gov-blue hover:underline">North Hertfordshire College</a>, bringing governance experience across further and higher education.
+              </p>
+              <a href="/papers/decision-makers-handbook-data-science.pdf" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-5 py-2.5 bg-gov-blue text-white font-semibold rounded-lg hover:bg-gov-blue-dark transition-colors text-sm">
+                <Download className="w-4 h-4" /> Download PDF
+              </a>
+            </div>
+          </div>
         </div>
 
         {/* Partner Logos */}

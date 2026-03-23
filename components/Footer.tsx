@@ -32,7 +32,7 @@ export const Footer: React.FC = () => {
               </li>
               <li className="pt-2 text-xs">
                 London, UK<br/>
-                Kampakis and Co Ltd - Reg: 10459791
+                Kampakis and Co Ltd t/a The Tesseract Academy - Reg: 10459791
               </li>
             </ul>
           </div>

@@ -5,19 +5,19 @@
   --font-sans: "Inter", system-ui, -apple-system, sans-serif;
   --font-serif: "Inter", system-ui, -apple-system, sans-serif;
 
-  --color-gov-blue: #0f766e;
-  --color-gov-blue-dark: #115e59;
-  --color-gov-blue-light: #14b8a6;
-  --color-gov-dark: #0b0c0c;
-  --color-gov-text: #1a1a1a;
-  --color-gov-secondary: #505a5f;
-  --color-gov-secondary-light: #707579;
-  --color-gov-bg: #fafafa;
+  --color-gov-blue: #3a9e99;
+  --color-gov-blue-dark: #2d8884;
+  --color-gov-blue-light: #5ac3be;
+  --color-gov-dark: #313b45;
+  --color-gov-text: #444e57;
+  --color-gov-secondary: #5c6670;
+  --color-gov-secondary-light: #78828c;
+  --color-gov-bg: #f8fafa;
   --color-gov-bg-alt: #ffffff;
-  --color-gov-border: #e5e7eb;
-  --color-gov-border-light: #f3f4f6;
+  --color-gov-border: #e2e6e9;
+  --color-gov-border-light: #f0f3f4;
   --color-gov-focus: #ffdd00;
-  --color-gov-accent: #0891b2;
+  --color-gov-accent: #3a9e99;
 
   --shadow-subtle: 0 1px 2px 0 rgba(0, 0, 0, 0.02);
   --shadow-soft: 0 1px 3px 0 rgba(0, 0, 0, 0.05), 0 1px 2px -1px rgba(0, 0, 0, 0.03);
@@ -98,7 +98,7 @@
     position: relative;
     border: 1px solid transparent;
     background: linear-gradient(white, white) padding-box,
-                linear-gradient(135deg, rgba(15, 118, 110, 0.1), rgba(15, 118, 110, 0.05)) border-box;
+                linear-gradient(135deg, rgba(90, 195, 190, 0.1), rgba(90, 195, 190, 0.05)) border-box;
   }
 }
 

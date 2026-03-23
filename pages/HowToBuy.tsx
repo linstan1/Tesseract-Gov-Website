@@ -71,8 +71,7 @@ export const HowToBuy: React.FC = () => {
       <section className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <Card title="Supplier Details" className="bg-gov-bg/50">
           <div className="space-y-3 font-mono text-sm bg-white p-6 border border-gov-border rounded-md select-all">
-            <p><span className="font-semibold text-gov-text">Company Name:</span> KAMPAKIS AND CO. LTD</p>
-            <p><span className="font-semibold text-gov-text">Trading As:</span> The Tesseract Academy</p>
+            <p><span className="font-semibold text-gov-text">Company Name:</span> KAMPAKIS AND CO. LTD t/a The Tesseract Academy</p>
             <p><span className="font-semibold text-gov-text">Company Number:</span> 10459791</p>
             <p><span className="font-semibold text-gov-text">Legal Structure:</span> LTD</p>
             <p><span className="font-semibold text-gov-text">UTR:</span> 9291720006</p>

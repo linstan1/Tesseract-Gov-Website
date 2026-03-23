@@ -18,7 +18,7 @@ export const Button: React.FC<ButtonProps> = ({
     primary: "text-white bg-gov-blue hover:bg-gov-blue-dark",
     secondary: "text-gov-dark bg-gov-bg border border-gov-border/50 hover:bg-white hover:border-gov-border",
     outline: "text-gov-dark bg-transparent border border-gov-border hover:bg-gov-bg",
-    start: "text-white bg-[#00703c] hover:bg-[#005a30] font-bold",
+    start: "text-white bg-gov-blue hover:bg-gov-blue-dark font-bold",
   };
 
   const widthStyle = fullWidth ? "w-full" : "";
