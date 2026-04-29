@@ -218,7 +218,7 @@ export const ResearchPolicy: React.FC = () => {
               <p className="font-semibold text-gov-dark">CCS RM6200 — Management Consultancy Three</p>
               <p className="text-gov-secondary text-sm mt-1">
                 The recommended route for research and policy analysis engagements. Covers systematic
-                reviews, feasibility studies, policy evaluation, and regulatory consultation input. Recommended for commissioners in Department for Science Innovation and Technology (DSIT), Cabinet Office, NHS England, and Office for National Statistics (ONS). The UK AI Safety Institute uses this route for independent research procurement where AI policy evidence is required.
+                reviews, feasibility studies, policy evaluation, and regulatory consultation input.
               </p>
             </div>
           </li>

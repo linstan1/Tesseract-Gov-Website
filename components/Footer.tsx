@@ -5,7 +5,7 @@ export const Footer: React.FC = () => {
   return (
     <footer className="bg-white border-t border-gov-border/30 mt-auto">
       <div className="max-w-7xl mx-auto py-16 px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-10 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
           <div className="col-span-1 md:col-span-2">
             <h3 className="text-base font-bold text-gov-dark mb-4">Tesseract Academy | Government</h3>
             <p className="text-sm text-gov-secondary max-w-md leading-relaxed">
@@ -13,29 +13,12 @@ export const Footer: React.FC = () => {
             </p>
           </div>
           <div>
-            <h4 className="text-xs font-bold uppercase tracking-widest text-gov-dark mb-4">Sectors</h4>
+            <h4 className="text-xs font-bold uppercase tracking-widest text-gov-dark mb-4">Compliance</h4>
             <ul className="space-y-2.5 text-sm text-gov-secondary">
-              <li><Link to="/sectors/health-nhs" className="hover:text-gov-dark transition-colors">NHS &amp; Health</Link></li>
-              <li><Link to="/sectors/local-government" className="hover:text-gov-dark transition-colors">Local Government</Link></li>
-              <li><Link to="/sectors/education-skills" className="hover:text-gov-dark transition-colors">Education &amp; Skills</Link></li>
-              <li><Link to="/sectors/defence-security" className="hover:text-gov-dark transition-colors">Defence &amp; Security</Link></li>
-              <li><Link to="/sectors/justice-policing" className="hover:text-gov-dark transition-colors">Justice &amp; Policing</Link></li>
-              <li><Link to="/sectors/transport-infrastructure" className="hover:text-gov-dark transition-colors">Transport &amp; Infrastructure</Link></li>
-              <li><Link to="/sectors/welfare-revenue" className="hover:text-gov-dark transition-colors">DWP &amp; HMRC</Link></li>
-              <li><Link to="/sectors/devolved-nations" className="hover:text-gov-dark transition-colors">Devolved Nations</Link></li>
-            </ul>
-          </div>
-          <div>
-            <h4 className="text-xs font-bold uppercase tracking-widest text-gov-dark mb-4">Resources</h4>
-            <ul className="space-y-2.5 text-sm text-gov-secondary">
-              <li><Link to="/resources/ai-procurement-guide" className="hover:text-gov-dark transition-colors">AI Procurement Guide</Link></li>
-              <li><Link to="/resources/ai-readiness-checklist" className="hover:text-gov-dark transition-colors">AI Readiness Checklist</Link></li>
-              <li><Link to="/glossary" className="hover:text-gov-dark transition-colors">Glossary</Link></li>
-              <li><Link to="/insights" className="hover:text-gov-dark transition-colors">Insights</Link></li>
-              <li><Link to="/compliance" className="hover:text-gov-dark transition-colors">Compliance</Link></li>
               <li><a href="/policies/accessibility-statement.pdf" className="hover:text-gov-dark transition-colors">Accessibility Statement</a></li>
               <li><a href="/policies/data-protection-policy.pdf" className="hover:text-gov-dark transition-colors">Privacy Notice</a></li>
-              <li><a href="/policies/modern-slavery-statement.pdf" className="hover:text-gov-dark transition-colors">Modern Slavery</a></li>
+              <li><a href="/policies/modern-slavery-statement.pdf" className="hover:text-gov-dark transition-colors">Modern Slavery Statement</a></li>
+              <li><Link to="/compliance" className="hover:text-gov-dark transition-colors">All Policies</Link></li>
             </ul>
           </div>
           <div>
