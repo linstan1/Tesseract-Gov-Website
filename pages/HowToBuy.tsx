@@ -12,12 +12,12 @@ const FRAMEWORKS = [
 export const HowToBuy: React.FC = () => {
   return (
     <div className="max-w-6xl mx-auto px-6 lg:px-8 py-20 space-y-16">
-      <div className="border-b border-gov-border/30 pb-10">
+      <header className="border-b border-gov-border/30 pb-10">
         <h1 className="text-5xl font-extrabold text-gov-dark mb-6 tracking-tight leading-tight">How to Buy</h1>
         <p className="text-xl text-gov-secondary/90 leading-relaxed max-w-4xl">
           Streamlined routes to market for UK and EU public bodies. We are committed to transparent, compliant procurement.
         </p>
-      </div>
+      </header>
 
       <section>
         <h2 className="text-3xl font-bold text-gov-dark mb-8">Routes to Market</h2>

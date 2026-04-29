@@ -5,19 +5,14 @@ import { ArrowLeft, ExternalLink } from 'lucide-react';
 const SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'Article',
+  '@id': 'https://gov.tesseract.academy/case-studies/national-digital-twin-programme#article',
+  mainEntityOfPage: 'https://gov.tesseract.academy/case-studies/national-digital-twin-programme',
   headline:
     'AI Ontology Extension Generator — National Digital Twin Programme | Tesseract Academy',
   description:
     'Tesseract Academy contributed to the open-source AI Ontology Extension Generator for the National Digital Twin Programme (NDTP), automating ontology development for UK infrastructure digital twins.',
-  author: {
-    '@type': 'Organization',
-    name: 'Tesseract Academy',
-    url: 'https://gov.tesseract.academy',
-  },
-  publisher: {
-    '@type': 'Organization',
-    name: 'Tesseract Academy',
-  },
+  author: { '@id': 'https://gov.tesseract.academy/#organization' },
+  publisher: { '@id': 'https://gov.tesseract.academy/#organization' },
   datePublished: '2025-01-01',
   dateModified: '2026-04-29',
   about: {
@@ -75,8 +70,8 @@ export const NationalDigitalTwin: React.FC = () => {
   }, []);
 
   return (
-    <div className="max-w-4xl mx-auto px-6 lg:px-8 py-20 space-y-12">
-      <div>
+    <article className="max-w-4xl mx-auto px-6 lg:px-8 py-20 space-y-12">
+      <header>
         <Link
           to="/use-cases"
           className="inline-flex items-center gap-2 text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors mb-8"
@@ -94,7 +89,7 @@ export const NationalDigitalTwin: React.FC = () => {
         <p className="text-xl text-gov-secondary/90 leading-relaxed">
           Production-ready open-source tool published under the National-Digital-Twin GitHub organisation. Apache License 2.0. Automates ontology generation for UK infrastructure digital twins.
         </p>
-      </div>
+      </header>
 
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
         <div className="bg-gov-bg border border-gov-border/50 rounded-xl p-6">
@@ -233,6 +228,6 @@ export const NationalDigitalTwin: React.FC = () => {
           Back to Use Cases
         </Link>
       </div>
-    </div>
+    </article>
   );
 };

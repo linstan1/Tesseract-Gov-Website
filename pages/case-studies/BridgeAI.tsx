@@ -5,18 +5,13 @@ import { ArrowLeft, ExternalLink } from 'lucide-react';
 const SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'Article',
+  '@id': 'https://gov.tesseract.academy/case-studies/bridgeai-creative-industries#article',
+  mainEntityOfPage: 'https://gov.tesseract.academy/case-studies/bridgeai-creative-industries',
   headline: 'BridgeAI: AI Adoption for UK Creative Industries | Tesseract Academy',
   description:
     'Tesseract Academy delivered the BridgeAI Skills Hub launch and AI readiness sessions for UK creative industries under Innovate UK contract GSS24646. 1,100 registrations against a target of 200. Satisfaction: 4.6/5.',
-  author: {
-    '@type': 'Organization',
-    name: 'Tesseract Academy',
-    url: 'https://gov.tesseract.academy',
-  },
-  publisher: {
-    '@type': 'Organization',
-    name: 'Tesseract Academy',
-  },
+  author: { '@id': 'https://gov.tesseract.academy/#organization' },
+  publisher: { '@id': 'https://gov.tesseract.academy/#organization' },
   datePublished: '2026-01-01',
   dateModified: '2026-04-29',
   funder: {
@@ -76,8 +71,8 @@ export const BridgeAI: React.FC = () => {
   }, []);
 
   return (
-    <div className="max-w-4xl mx-auto px-6 lg:px-8 py-20 space-y-12">
-      <div>
+    <article className="max-w-4xl mx-auto px-6 lg:px-8 py-20 space-y-12">
+      <header>
         <Link
           to="/use-cases"
           className="inline-flex items-center gap-2 text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors mb-8"
@@ -95,7 +90,7 @@ export const BridgeAI: React.FC = () => {
         <p className="text-xl text-gov-secondary/90 leading-relaxed">
           1,100 registrations against a capacity target of 200. Satisfaction rating 4.6 out of 5. Delivered under Innovate UK contract GSS24646.
         </p>
-      </div>
+      </header>
 
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
         {METRICS.map((m) => (
@@ -206,6 +201,6 @@ export const BridgeAI: React.FC = () => {
           Back to Use Cases
         </Link>
       </div>
-    </div>
+    </article>
   );
 };

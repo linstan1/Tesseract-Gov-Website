@@ -5,18 +5,13 @@ import { ArrowLeft, ExternalLink } from 'lucide-react';
 const SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'Article',
+  '@id': 'https://gov.tesseract.academy/case-studies/welsh-government-land-valuation#article',
+  mainEntityOfPage: 'https://gov.tesseract.academy/case-studies/welsh-government-land-valuation',
   headline: 'Welsh Government Land Valuation Research — Tesseract Academy',
   description:
     'Tesseract Academy tested five land valuation methodologies across 1,916 Welsh LSOAs for Welsh Government, informing local government finance policy. Published on GOV.WALES, March 2026.',
-  author: {
-    '@type': 'Organization',
-    name: 'Tesseract Academy',
-    url: 'https://gov.tesseract.academy',
-  },
-  publisher: {
-    '@type': 'Organization',
-    name: 'Tesseract Academy',
-  },
+  author: { '@id': 'https://gov.tesseract.academy/#organization' },
+  publisher: { '@id': 'https://gov.tesseract.academy/#organization' },
   datePublished: '2026-03-01',
   dateModified: '2026-04-29',
   about: {
@@ -79,8 +74,8 @@ export const WelshGovernment: React.FC = () => {
   }, []);
 
   return (
-    <div className="max-w-4xl mx-auto px-6 lg:px-8 py-20 space-y-12">
-      <div>
+    <article className="max-w-4xl mx-auto px-6 lg:px-8 py-20 space-y-12">
+      <header>
         <Link
           to="/use-cases"
           className="inline-flex items-center gap-2 text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors mb-8"
@@ -96,9 +91,9 @@ export const WelshGovernment: React.FC = () => {
           Welsh Government Land Valuation Research
         </h1>
         <p className="text-xl text-gov-secondary/90 leading-relaxed">
-          Published March 2026. Findings directly inform Welsh Government local government finance policy and are cited in Senedd committee proceedings.
+          Published <time dateTime="2026-03">March 2026</time>. Findings directly inform Welsh Government local government finance policy and are cited in Senedd committee proceedings.
         </p>
-      </div>
+      </header>
 
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
         <div className="bg-gov-bg border border-gov-border/50 rounded-xl p-6">
@@ -233,6 +228,6 @@ export const WelshGovernment: React.FC = () => {
           Back to Use Cases
         </Link>
       </div>
-    </div>
+    </article>
   );
 };

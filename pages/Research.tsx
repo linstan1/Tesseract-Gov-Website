@@ -4,12 +4,12 @@ import { Link } from 'react-router-dom';
 export const Research: React.FC = () => {
   return (
     <div className="max-w-6xl mx-auto px-6 lg:px-8 py-20 space-y-16">
-      <div className="border-b border-gov-border/30 pb-10">
+      <header className="border-b border-gov-border/30 pb-10">
         <h1 className="text-5xl font-extrabold text-gov-dark mb-6 tracking-tight leading-tight">Research-Backed Implementation</h1>
         <p className="text-xl text-gov-secondary/90 leading-relaxed max-w-4xl">
           We do not just "build". We validate. Our delivery models are rooted in rigorous academic and industrial research methods to ensure efficacy and reduce waste.
         </p>
-      </div>
+      </header>
 
       <section className="space-y-6">
         <h2 className="text-3xl font-bold text-gov-dark">Our Approach</h2>
@@ -89,7 +89,7 @@ export const Research: React.FC = () => {
         </ul>
       </section>
 
-      <section className="space-y-6">
+      <aside className="space-y-6" aria-label="Detailed case studies">
         <h2 className="text-2xl font-bold text-gov-dark">Detailed Case Studies</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <Link to="/case-studies/welsh-government-land-valuation" className="block p-5 bg-white border border-gov-border/50 rounded-lg hover:border-gov-blue transition-colors">
@@ -112,7 +112,7 @@ export const Research: React.FC = () => {
         <p className="text-sm text-gov-secondary">
           See also: <Link to="/insights" className="text-gov-blue hover:underline">Insights</Link> · <Link to="/use-cases" className="text-gov-blue hover:underline">Use cases</Link> · <Link to="/services/research-policy" className="text-gov-blue hover:underline">Research &amp; policy advisory</Link>
         </p>
-      </section>
+      </aside>
     </div>
   );
 };

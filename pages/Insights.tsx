@@ -6,15 +6,13 @@ export const Insights: React.FC = () => {
     const schema = {
       '@context': 'https://schema.org',
       '@type': 'Article',
+      '@id': 'https://gov.tesseract.academy/insights#article',
+      mainEntityOfPage: 'https://gov.tesseract.academy/insights',
       headline: 'UK Public Sector AI: What We Have Learned Delivering Government Contracts',
       description:
         'Original research synthesis from Tesseract Academy\'s UK public sector AI delivery experience, 2022-2026.',
-      author: { '@type': 'Person', name: 'Dr Stylianos Kampakis' },
-      publisher: {
-        '@type': 'Organization',
-        name: 'Tesseract Academy',
-        url: 'https://gov.tesseract.academy',
-      },
+      author: { '@id': 'https://gov.tesseract.academy/#kampakis' },
+      publisher: { '@id': 'https://gov.tesseract.academy/#organization' },
       datePublished: '2026-04-29',
       dateModified: '2026-04-29',
       url: 'https://gov.tesseract.academy/insights',
@@ -39,12 +37,12 @@ export const Insights: React.FC = () => {
   }, []);
 
   return (
-    <div className="max-w-6xl mx-auto px-6 lg:px-8 py-20 space-y-16">
+    <article className="max-w-6xl mx-auto px-6 lg:px-8 py-20 space-y-16">
 
       {/* Hero */}
-      <div className="border-b border-gov-border/30 pb-10">
+      <header className="border-b border-gov-border/30 pb-10">
         <p className="text-sm font-semibold text-gov-blue uppercase tracking-widest mb-4">
-          Tesseract Academy Research, 2026
+          Tesseract Academy Research, <time dateTime="2026">2026</time>
         </p>
         <h1 className="text-5xl font-extrabold text-gov-dark mb-6 tracking-tight leading-tight">
           UK Public Sector AI: What We Have Learned Delivering Government Contracts
@@ -71,7 +69,7 @@ export const Insights: React.FC = () => {
             indicating significantly unmet demand across UK SMEs.
           </p>
         </div>
-      </div>
+      </header>
 
       {/* Key Findings */}
       <section className="space-y-6">
@@ -84,7 +82,7 @@ export const Insights: React.FC = () => {
         <div className="space-y-6">
 
           {/* Finding 1 */}
-          <div className="bg-gov-bg border border-gov-border/50 rounded-xl p-8">
+          <article className="bg-gov-bg border border-gov-border/50 rounded-xl p-8">
             <div className="flex items-start gap-4 mb-4">
               <span className="flex-shrink-0 w-9 h-9 rounded-full bg-gov-blue text-white text-sm font-bold flex items-center justify-center">1</span>
               <div>
@@ -136,10 +134,10 @@ export const Insights: React.FC = () => {
               </a>{' '}
               standards informed the statistical validation approach.
             </p>
-          </div>
+          </article>
 
           {/* Finding 2 */}
-          <div className="bg-gov-bg border border-gov-border/50 rounded-xl p-8">
+          <article className="bg-gov-bg border border-gov-border/50 rounded-xl p-8">
             <div className="flex items-start gap-4 mb-4">
               <span className="flex-shrink-0 w-9 h-9 rounded-full bg-gov-blue text-white text-sm font-bold flex items-center justify-center">2</span>
               <div>
@@ -175,10 +173,10 @@ export const Insights: React.FC = () => {
               </a>{' '}
               research on AI-augmented knowledge engineering for public infrastructure.
             </p>
-          </div>
+          </article>
 
           {/* Finding 3 */}
-          <div className="bg-gov-bg border border-gov-border/50 rounded-xl p-8">
+          <article className="bg-gov-bg border border-gov-border/50 rounded-xl p-8">
             <div className="flex items-start gap-4 mb-4">
               <span className="flex-shrink-0 w-9 h-9 rounded-full bg-gov-blue text-white text-sm font-bold flex items-center justify-center">3</span>
               <div>
@@ -221,10 +219,10 @@ export const Insights: React.FC = () => {
               </a>{' '}
               analysis of AI adoption barriers for small and medium enterprises outside technology sectors.
             </p>
-          </div>
+          </article>
 
           {/* Finding 4 */}
-          <div className="bg-gov-bg border border-gov-border/50 rounded-xl p-8">
+          <article className="bg-gov-bg border border-gov-border/50 rounded-xl p-8">
             <div className="flex items-start gap-4 mb-4">
               <span className="flex-shrink-0 w-9 h-9 rounded-full bg-gov-blue text-white text-sm font-bold flex items-center justify-center">4</span>
               <div>
@@ -262,10 +260,10 @@ export const Insights: React.FC = () => {
               </a>{' '}
               principles for responsible AI in financial services.
             </p>
-          </div>
+          </article>
 
           {/* Finding 5 */}
-          <div className="bg-gov-bg border border-gov-border/50 rounded-xl p-8">
+          <article className="bg-gov-bg border border-gov-border/50 rounded-xl p-8">
             <div className="flex items-start gap-4 mb-4">
               <span className="flex-shrink-0 w-9 h-9 rounded-full bg-gov-blue text-white text-sm font-bold flex items-center justify-center">5</span>
               <div>
@@ -343,10 +341,10 @@ export const Insights: React.FC = () => {
               </a>{' '}
               principles on proportionate procurement for digital and AI services.
             </p>
-          </div>
+          </article>
 
           {/* Finding 6 */}
-          <div className="bg-gov-bg border border-gov-border/50 rounded-xl p-8">
+          <article className="bg-gov-bg border border-gov-border/50 rounded-xl p-8">
             <div className="flex items-start gap-4 mb-4">
               <span className="flex-shrink-0 w-9 h-9 rounded-full bg-gov-blue text-white text-sm font-bold flex items-center justify-center">6</span>
               <div>
@@ -427,7 +425,7 @@ export const Insights: React.FC = () => {
               </a>{' '}
               and central government departments.
             </p>
-          </div>
+          </article>
 
         </div>
       </section>
@@ -515,7 +513,7 @@ export const Insights: React.FC = () => {
       </section>
 
       {/* Related case studies */}
-      <section className="space-y-6 border-t border-gov-border/30 pt-10">
+      <aside className="space-y-6 border-t border-gov-border/30 pt-10" aria-label="Underlying case studies">
         <h2 className="text-2xl font-bold text-gov-dark">Underlying Case Studies</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <Link to="/case-studies/welsh-government-land-valuation" className="block p-5 bg-white border border-gov-border/50 rounded-lg hover:border-gov-blue transition-colors">
@@ -535,7 +533,7 @@ export const Insights: React.FC = () => {
             <p className="text-sm font-semibold text-gov-dark">Financial vulnerability qualitative research</p>
           </Link>
         </div>
-      </section>
+      </aside>
 
       {/* CTA */}
       <section className="border-t border-gov-border/30 pt-10 flex flex-col sm:flex-row gap-4 items-start">
@@ -553,6 +551,6 @@ export const Insights: React.FC = () => {
         </Link>
       </section>
 
-    </div>
+    </article>
   );
 };

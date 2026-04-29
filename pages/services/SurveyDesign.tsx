@@ -5,11 +5,11 @@ export const SurveyDesign: React.FC = () => {
     const schema = {
       '@context': 'https://schema.org',
       '@type': 'Service',
+      '@id': 'https://gov.tesseract.academy/services/survey-design#service',
       name: 'Survey Design and Delivery for UK Public Sector',
       provider: {
         '@type': 'Organization',
-        name: 'Tesseract Academy',
-        url: 'https://gov.tesseract.academy',
+        '@id': 'https://gov.tesseract.academy/#organization',
       },
       serviceType: 'Survey Design and Statistical Analysis',
       description:
@@ -34,7 +34,7 @@ export const SurveyDesign: React.FC = () => {
 
   return (
     <div className="max-w-6xl mx-auto px-6 lg:px-8 py-20 space-y-16">
-      <div className="border-b border-gov-border/30 pb-10">
+      <header className="border-b border-gov-border/30 pb-10">
         <p className="text-sm font-semibold text-gov-blue uppercase tracking-wider mb-4">
           Service — Survey Design and Delivery
         </p>
@@ -47,7 +47,7 @@ export const SurveyDesign: React.FC = () => {
           policy-ready reporting. Our current live contracts include a three-year monitoring survey
           for Qualifications Wales (2026-2029).
         </p>
-      </div>
+      </header>
 
       <section className="space-y-6 max-w-4xl">
         <h2 className="text-3xl font-bold text-gov-dark">What We Deliver</h2>

@@ -5,11 +5,11 @@ export const EducationUpskilling: React.FC = () => {
     const schema = {
       '@context': 'https://schema.org',
       '@type': 'Service',
+      '@id': 'https://gov.tesseract.academy/services/education-upskilling#service',
       name: 'AI Literacy and Data Science Training for Public Sector',
       provider: {
         '@type': 'Organization',
-        name: 'Tesseract Academy',
-        url: 'https://gov.tesseract.academy',
+        '@id': 'https://gov.tesseract.academy/#organization',
       },
       serviceType: 'Education and Professional Development',
       description:
@@ -34,7 +34,7 @@ export const EducationUpskilling: React.FC = () => {
 
   return (
     <div className="max-w-6xl mx-auto px-6 lg:px-8 py-20 space-y-16">
-      <div className="border-b border-gov-border/30 pb-10">
+      <header className="border-b border-gov-border/30 pb-10">
         <p className="text-sm font-semibold text-gov-blue uppercase tracking-wider mb-4">
           Service — Education and Upskilling
         </p>
@@ -48,7 +48,7 @@ export const EducationUpskilling: React.FC = () => {
           delivered in 2025 in partnership with the Department for Business and Trade, and BridgeAI
           / Innovate UK programme delivery for creative industries.
         </p>
-      </div>
+      </header>
 
       <section className="space-y-6 max-w-4xl">
         <h2 className="text-3xl font-bold text-gov-dark">What We Deliver</h2>

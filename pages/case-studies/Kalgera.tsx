@@ -5,18 +5,13 @@ import { ArrowLeft } from 'lucide-react';
 const SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'Article',
+  '@id': 'https://gov.tesseract.academy/case-studies/kalgera-financial-vulnerability#article',
+  mainEntityOfPage: 'https://gov.tesseract.academy/case-studies/kalgera-financial-vulnerability',
   headline: 'Financial Vulnerability Research — Kalgera / Fintech Scotland | Tesseract Academy',
   description:
     'Tesseract Academy designed and delivered end-to-end qualitative user research for Kalgera and Fintech Scotland, validating AI-driven financial vulnerability signals for adults in Scotland.',
-  author: {
-    '@type': 'Organization',
-    name: 'Tesseract Academy',
-    url: 'https://gov.tesseract.academy',
-  },
-  publisher: {
-    '@type': 'Organization',
-    name: 'Tesseract Academy',
-  },
+  author: { '@id': 'https://gov.tesseract.academy/#organization' },
+  publisher: { '@id': 'https://gov.tesseract.academy/#organization' },
   datePublished: '2025-01-01',
   dateModified: '2026-04-29',
   about: {
@@ -93,8 +88,8 @@ export const Kalgera: React.FC = () => {
   }, []);
 
   return (
-    <div className="max-w-4xl mx-auto px-6 lg:px-8 py-20 space-y-12">
-      <div>
+    <article className="max-w-4xl mx-auto px-6 lg:px-8 py-20 space-y-12">
+      <header>
         <Link
           to="/use-cases"
           className="inline-flex items-center gap-2 text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors mb-8"
@@ -112,7 +107,7 @@ export const Kalgera: React.FC = () => {
         <p className="text-xl text-gov-secondary/90 leading-relaxed">
           End-to-end qualitative user research validating AI-driven early warning signals for financially vulnerable adults in Scotland. Three structured outputs delivered: signal validation, acceptability framework, and Finance and Health Lab summary.
         </p>
-      </div>
+      </header>
 
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
         <div className="bg-gov-bg border border-gov-border/50 rounded-xl p-6">
@@ -255,6 +250,6 @@ export const Kalgera: React.FC = () => {
           Back to Use Cases
         </Link>
       </div>
-    </div>
+    </article>
   );
 };

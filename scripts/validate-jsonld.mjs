@@ -59,7 +59,7 @@ function walk(dir, files = []) {
 
 const tsxFiles = walk(resolve(ROOT, 'pages'));
 
-const schemaRe = /const\s+schema\s*=\s*(\{[\s\S]*?\n\s{4}\};)/g;
+const schemaRe = /const\s+(?:schema|SCHEMA)\s*=\s*(\{[\s\S]*?\n\}?\s*\};)/g;
 
 for (const file of tsxFiles) {
   const src = readFileSync(file, 'utf-8');

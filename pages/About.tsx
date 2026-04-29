@@ -10,13 +10,10 @@ export const About: React.FC = () => {
       {
         '@context': 'https://schema.org',
         '@type': 'Person',
+        '@id': 'https://gov.tesseract.academy/#kampakis',
         name: 'Dr Stylianos Kampakis',
         jobTitle: 'Managing Director',
-        worksFor: {
-          '@type': 'Organization',
-          name: 'Kampakis and Co Ltd',
-          alternateName: 'Tesseract Academy',
-        },
+        worksFor: { '@id': 'https://gov.tesseract.academy/#organization' },
         alumniOf: {
           '@type': 'CollegeOrUniversity',
           name: 'University College London',
@@ -35,14 +32,11 @@ export const About: React.FC = () => {
       {
         '@context': 'https://schema.org',
         '@type': 'Person',
+        '@id': 'https://gov.tesseract.academy/#rovai',
         name: 'Fabio Rovai',
         honorificSuffix: 'MSc',
         jobTitle: 'Associate Lecturer and Delivery Lead',
-        worksFor: {
-          '@type': 'Organization',
-          name: 'Kampakis and Co Ltd',
-          alternateName: 'Tesseract Academy',
-        },
+        worksFor: { '@id': 'https://gov.tesseract.academy/#organization' },
         alumniOf: {
           '@type': 'CollegeOrUniversity',
           name: 'University of the Arts London',
@@ -65,12 +59,12 @@ export const About: React.FC = () => {
 
   return (
     <div className="max-w-6xl mx-auto px-6 lg:px-8 py-20 space-y-16">
-      <div className="border-b border-gov-border/30 pb-10">
+      <header className="border-b border-gov-border/30 pb-10">
         <h1 className="text-5xl font-extrabold text-gov-dark mb-6 tracking-tight leading-tight">About Tesseract Academy</h1>
         <p className="text-xl text-gov-secondary/90 leading-relaxed max-w-4xl">
-          Kampakis and Co Ltd (trading as Tesseract Academy) is a research-backed AI and data science consultancy incorporated in November 2016. We deliver evidence-based AI governance, public sector analytics, and procurement-ready advisory services to UK central government, devolved administrations, and Horizon Europe consortia. Our team holds active Crown Commercial Service (CCS) framework appointments across three lots and is published in peer-reviewed journals cited by UK government policy.
+          Kampakis and Co Ltd (trading as Tesseract Academy) is a research-backed AI and data science consultancy incorporated in <time dateTime="2016-11">November 2016</time>. We deliver evidence-based AI governance, public sector analytics, and procurement-ready advisory services to UK central government, devolved administrations, and Horizon Europe consortia. Our team holds active Crown Commercial Service (CCS) framework appointments across three lots and is published in peer-reviewed journals cited by UK government policy.
         </p>
-      </div>
+      </header>
 
       <section className="space-y-6">
         <h2 className="text-3xl font-bold text-gov-dark">Mission</h2>

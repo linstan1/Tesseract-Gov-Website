@@ -5,11 +5,11 @@ export const ResearchPolicy: React.FC = () => {
     const schema = {
       '@context': 'https://schema.org',
       '@type': 'Service',
+      '@id': 'https://gov.tesseract.academy/services/research-policy#service',
       name: 'Research and Policy Analysis for UK Public Sector',
       provider: {
         '@type': 'Organization',
-        name: 'Tesseract Academy',
-        url: 'https://gov.tesseract.academy',
+        '@id': 'https://gov.tesseract.academy/#organization',
       },
       serviceType: 'Research and Policy Analysis',
       description:
@@ -34,7 +34,7 @@ export const ResearchPolicy: React.FC = () => {
 
   return (
     <div className="max-w-6xl mx-auto px-6 lg:px-8 py-20 space-y-16">
-      <div className="border-b border-gov-border/30 pb-10">
+      <header className="border-b border-gov-border/30 pb-10">
         <p className="text-sm font-semibold text-gov-blue uppercase tracking-wider mb-4">
           Service — Research and Policy
         </p>
@@ -46,7 +46,7 @@ export const ResearchPolicy: React.FC = () => {
           Our outputs have been published on GOV.WALES, cited in Senedd committee proceedings, and
           referenced alongside The Alan Turing Institute and <a href="https://www.gov.uk/government/organisations/skills-england" target="_blank" rel="noopener noreferrer" className="text-gov-blue hover:underline">Skills England</a> in official UK Government publications.
         </p>
-      </div>
+      </header>
 
       <section className="space-y-6 max-w-4xl">
         <h2 className="text-3xl font-bold text-gov-dark">What We Deliver</h2>

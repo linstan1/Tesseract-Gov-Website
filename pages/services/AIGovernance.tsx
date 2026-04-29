@@ -5,11 +5,11 @@ export const AIGovernance: React.FC = () => {
     const schema = {
       '@context': 'https://schema.org',
       '@type': 'Service',
+      '@id': 'https://gov.tesseract.academy/services/ai-governance#service',
       name: 'AI Governance and Compliance for UK Public Sector',
       provider: {
         '@type': 'Organization',
-        name: 'Tesseract Academy',
-        url: 'https://gov.tesseract.academy',
+        '@id': 'https://gov.tesseract.academy/#organization',
       },
       serviceType: 'AI Governance and Regulatory Compliance',
       description:
@@ -34,7 +34,7 @@ export const AIGovernance: React.FC = () => {
 
   return (
     <div className="max-w-6xl mx-auto px-6 lg:px-8 py-20 space-y-16">
-      <div className="border-b border-gov-border/30 pb-10">
+      <header className="border-b border-gov-border/30 pb-10">
         <p className="text-sm font-semibold text-gov-blue uppercase tracking-wider mb-4">
           Service — AI Governance and Compliance
         </p>
@@ -48,7 +48,7 @@ export const AIGovernance: React.FC = () => {
           reporting. We are Cyber Essentials certified and hold ISO 27001-aligned information
           security controls.
         </p>
-      </div>
+      </header>
 
       <section className="space-y-6 max-w-4xl">
         <h2 className="text-3xl font-bold text-gov-dark">What We Deliver</h2>

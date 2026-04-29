@@ -330,10 +330,13 @@ export const Glossary: React.FC = () => {
     const schema = {
       '@context': 'https://schema.org',
       '@type': 'DefinedTermSet',
+      '@id': 'https://gov.tesseract.academy/glossary#termset',
       name: 'Tesseract Academy Public Sector AI and Procurement Glossary',
       url: 'https://gov.tesseract.academy/glossary',
       description:
         'Authoritative definitions of AI, procurement, governance, research, and FinTech terms relevant to UK public sector commissioning.',
+      creator: { '@id': 'https://gov.tesseract.academy/#organization' },
+      publisher: { '@id': 'https://gov.tesseract.academy/#organization' },
       hasDefinedTerm: definitions,
     };
 
@@ -351,7 +354,7 @@ export const Glossary: React.FC = () => {
 
   return (
     <div className="max-w-6xl mx-auto px-6 lg:px-8 py-20 space-y-14">
-      <div className="border-b border-gov-border/30 pb-10">
+      <header className="border-b border-gov-border/30 pb-10">
         <h1 className="text-5xl font-extrabold text-gov-dark mb-6 tracking-tight leading-tight">
           Public Sector AI and Procurement Glossary
         </h1>
@@ -362,7 +365,7 @@ export const Glossary: React.FC = () => {
           AI and data projects. Definitions reflect current UK government guidance, applicable
           legislation, and established academic usage as of 2025.
         </p>
-      </div>
+      </header>
 
       <nav aria-label="Jump to letter section">
         <div className="flex flex-wrap gap-2">
