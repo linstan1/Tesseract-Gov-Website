@@ -15,10 +15,13 @@ export const Home: React.FC = () => {
             Public Sector Delivery Partner
           </div>
           <h1 className="text-5xl sm:text-6xl font-extrabold text-gov-dark tracking-tight mb-6 leading-tight max-w-4xl">
-            Research-backed implementation for <span className="text-gov-blue">public value</span>
+            Research-backed AI and data services for <span className="text-gov-blue">UK public sector</span>
           </h1>
-          <p className="text-xl text-gov-secondary/90 mb-10 max-w-3xl leading-relaxed">
-            We help public bodies reduce delivery risk through rigorous methods, evidence-based policy alignment, and rapid technical assurance.
+          <p className="text-xl text-gov-secondary/90 mb-6 max-w-3xl leading-relaxed">
+            Tesseract Academy delivers AI consulting, research, public engagement, and survey design for UK government bodies. Crown Commercial Service appointed supplier on RM6200 (AI DPS), RM6094 (Spark DPS), and RM6126 (Research &amp; Insights DPS).
+          </p>
+          <p className="text-base text-gov-secondary/80 mb-10 max-w-3xl leading-relaxed">
+            Delivered for Welsh Government, Innovate UK, National Digital Twin Programme, Qualifications Wales, and Fintech Scotland. In 2024, our civil service AI upskilling programmes achieved a 91% completion rate — up from 68% — across 2,300 participants.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Button variant="start" onClick={() => navigate('/how-to-buy')}>
@@ -30,6 +33,24 @@ export const Home: React.FC = () => {
           </div>
         </div>
       </section>
+
+      {/* Key Metrics */}
+      <div className="bg-gov-dark px-6 py-10">
+        <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+          {[
+            { value: "2,300", label: "Civil servants upskilled (2024)", sub: "91% completion rate" },
+            { value: "1,916", label: "Welsh LSOAs analysed", sub: "99% of Welsh geography" },
+            { value: "1,100", label: "BridgeAI registrations", sub: "vs 200 capacity target" },
+            { value: "3", label: "CCS frameworks", sub: "RM6200 · RM6094 · RM6126" },
+          ].map((m, i) => (
+            <div key={i}>
+              <div className="text-3xl font-extrabold text-white mb-1">{m.value}</div>
+              <div className="text-sm text-gov-blue font-semibold mb-0.5">{m.label}</div>
+              <div className="text-xs text-white/60">{m.sub}</div>
+            </div>
+          ))}
+        </div>
+      </div>
 
       {/* Latest News */}
       <div className="bg-gov-blue/5 border-y border-gov-blue/20 px-6 py-4">
@@ -58,7 +79,7 @@ export const Home: React.FC = () => {
              </div>
              <h3 className="font-semibold text-lg mb-3 text-gov-dark">Compliance First</h3>
              <p className="text-base text-gov-secondary/90 leading-relaxed">
-               Proudly Cyber Essentials certified and ISO27001-aligned. Accessibility built-in by default.
+               Cyber Essentials certified and ISO 27001 aligned. PL £2M, EL £10M, PI £5M insurance. ICO registered (ZB715782). WCAG 2.1 AA accessibility standard.
              </p>
            </div>
            <div className="flex flex-col items-start p-8 bg-white border border-gov-border/50 rounded-xl hover:border-gov-blue/30 transition-all duration-200 group">
@@ -67,16 +88,16 @@ export const Home: React.FC = () => {
              </div>
              <h3 className="font-semibold text-lg mb-3 text-gov-dark">Delivery Track Record</h3>
              <p className="text-base text-gov-secondary/90 leading-relaxed">
-               Evidence-based outcomes across UK & EU public sectors. Discovery to Live implementation support.
+               Delivered for Welsh Government, Innovate UK, NDTP, Qualifications Wales, and Fintech Scotland. Published on GOV.WALES. Cited by Skills England alongside The Alan Turing Institute.
              </p>
            </div>
            <div className="flex flex-col items-start p-8 bg-white border border-gov-border/50 rounded-xl hover:border-gov-blue/30 transition-all duration-200 group">
              <div className="w-12 h-12 rounded-lg bg-gov-blue/10 flex items-center justify-center mb-5">
                <div className="w-8 h-8 flex items-center justify-center font-bold text-gov-blue text-sm border-2 border-gov-blue rounded-md">UK</div>
              </div>
-             <h3 className="font-semibold text-lg mb-3 text-gov-dark">UK & EU Ready</h3>
+             <h3 className="font-semibold text-lg mb-3 text-gov-dark">UK &amp; EU Ready</h3>
              <p className="text-base text-gov-secondary/90 leading-relaxed">
-               Eligible for direct award and framework participation. Supporting local authorities and central gov.
+               3 CCS frameworks. Horizon Europe PIC: 880269472. DV-cleared consultant available for classified programmes. DUNS: 222180245. PPON: PWJP-6874-MXDJ.
              </p>
            </div>
         </div>

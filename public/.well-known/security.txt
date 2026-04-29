@@ -1,0 +1,5 @@
+Contact: mailto:fabio@thetesseractacademy.com
+Expires: 2027-04-29T00:00:00.000Z
+Preferred-Languages: en
+Canonical: https://gov.tesseract.academy/.well-known/security.txt
+Policy: https://gov.tesseract.academy/compliance

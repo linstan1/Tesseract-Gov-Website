@@ -1,0 +1,170 @@
+# Tesseract Government Gateway — Full Content
+
+Kampakis and Co Ltd (trading as The Tesseract Academy) is a UK-based AI and data science consultancy. This file contains the complete prose content of all pages for AI model ingestion.
+
+---
+
+## About the Organisation
+
+Kampakis and Co Ltd (company number 10459791, VAT GB 371 4744 89) trades as The Tesseract Academy and operates the Tesseract Government Gateway at https://gov.tesseract.academy. The company was incorporated on 2 November 2016. Registered address: 5 Brunswick Park Gardens, London, England, N11 1EJ.
+
+The company is an SME/micro enterprise delivering research-backed AI, data science, public engagement, survey design, education, and policy advisory services exclusively to UK and EU public sector organisations.
+
+**Crown Commercial Service appointed supplier:**
+- RM6200: Artificial Intelligence Dynamic Purchasing System (AI DPS)
+- RM6094: Spark Dynamic Purchasing System
+- RM6126: Research and Insights Dynamic Purchasing System
+
+**Certifications and compliance:**
+- Cyber Essentials certified
+- ISO 27001 aligned
+- ICO registration: ZB715782
+- DUNS: 222180245
+- PPON: PWJP-6874-MXDJ
+- Horizon Europe PIC: 880269472
+- Public liability insurance: £2,000,000
+- Employer liability insurance: £10,000,000
+- Professional indemnity insurance: £5,000,000
+
+---
+
+## Team
+
+**Dr Stylianos Kampakis — Managing Director**
+Dr Kampakis holds a PhD in Machine Learning from University College London, is a Chartered Statistician (CStat), and a Fellow of the Royal Statistical Society (FRSS). He is an Honorary Research Fellow at UCL Centre for Blockchain Technologies and a Data Science Advisor at London Business School. He has authored more than 40 peer-reviewed journal articles and three books on AI and data science, including works published by Packt and O'Reilly. In 2025 he delivered three official UK Government Business Academy webinars on AI adoption for growing businesses, in partnership with the Department for Business and Trade.
+
+**Fabio Rovai MSc — Partner and Delivery Lead**
+Fabio Rovai holds an MSc in Data Science and Artificial Intelligence from the University of the Arts London. He served as Associate Lecturer at UAL, teaching more than 1,000 students across five programmes. He is a NeurIPS Ethics Reviewer and is DBS checked (enhanced, children and adults). He leads procurement, delivery, and client management across BridgeAI, National Digital Twin Programme, and Welsh Government contracts.
+
+**DV-cleared Principal Consultant**
+The team includes a DV-cleared (Developed Vetting) principal consultant capable of working on OFFICIAL-SENSITIVE and SECRET-classified UK government programmes.
+
+---
+
+## Procurement — How to Buy
+
+UK public sector organisations can commission Tesseract Academy services through three routes:
+
+**Route 1: Crown Commercial Service frameworks (preferred)**
+Tesseract Academy is an appointed supplier on:
+- RM6200 Artificial Intelligence DPS — AI consulting, model development, ethics and governance
+- RM6094 Spark DPS — research, data science, digital transformation
+- RM6126 Research and Insights DPS — survey design, public engagement, qualitative research
+
+Framework contracts can be awarded without a full OJEU tender. Buyers must issue a competition to suppliers on the relevant lot, evaluate responses, and award. No minimum value thresholds apply.
+
+**Route 2: Direct award under threshold**
+Contracts under the Procurement Act 2023 thresholds (£213,477 for services) can be awarded directly. Tesseract Academy can provide a quote within two working days.
+
+**Route 3: Consortium and sub-contracting**
+Tesseract Academy regularly participates in consortium bids led by prime contractors. Contact procurement@gov.tesseract.academy to discuss teaming arrangements.
+
+---
+
+## Capabilities
+
+### AI and Data Science
+Custom AI model development, natural language processing, machine learning pipelines, and predictive analytics tailored to public sector operational needs. Delivered under GDS assessment criteria and aligned with the UK Government AI Framework. Tools: Python, R, TensorFlow, PyTorch, scikit-learn, Hugging Face, LangChain.
+
+### Research and Policy Advisory
+Evidence-based research design, systematic literature reviews, policy analysis, regulatory consultation responses, and academic publications for government bodies. Recent work cited in Senedd committee proceedings and published on GOV.WALES.
+
+### Public Engagement and Participatory Research
+Deliberative workshops, citizen panels, inclusive co-design sessions, and participatory research with diverse and seldom-heard communities. Designed and delivered across Scotland (Fintech Scotland/Kalgera financial vulnerability research), London (BridgeAI Skills Hub at Ona Studios), and online.
+
+### Education and AI Upskilling
+AI literacy programmes, data science workshops, and executive leadership training. In 2024, upskilled 2,300 civil servants; course completion rates increased from 68 percent to 91 percent and engagement scores improved from 3.4 to 4.6 out of 5.
+
+### Survey Design and Delivery
+End-to-end survey methodology including questionnaire design, sampling strategy, mixed-mode data collection, and statistical analysis. Used for national monitoring of UK qualifications (Qualifications Wales, 2026–2029) and public consultations.
+
+### AI Ethics and Governance
+Responsible AI frameworks, bias auditing, algorithmic impact assessments, and compliance alignment with the EU AI Act, NIST AI RMF, and ISO 42001. Open-source governance server (open-governance) published on GitHub.
+
+---
+
+## Use Cases
+
+### Welsh Government — Testing Land Valuation Methods (2025–2026)
+**Challenge:** The Welsh Government needed to evaluate different approaches for assessing land values to support local government finance policy development, comparing traditional and AI-driven methodologies.
+
+**Intervention:** Commissioned by Welsh Government to test five distinct valuation methodologies: market-based statistical valuation, advanced algorithmic and machine-learning applications, formula-based valuation by land area, conventional valuation approaches, and innovative experimental approaches. The research covered 1,916 Lower Super Output Areas (LSOAs), representing 99 percent of Welsh geography.
+
+**Assurance:** Delivered under Welsh Government procurement standards. Full summary and comprehensive report published on GOV.WALES.
+
+**Outcome:** Produced a comprehensive comparative analysis across all five methodologies, published March 2026. Findings directly inform Welsh Government local government finance policy.
+
+**Reusable assets:** Valuation methodology comparison framework. Published reports available on GOV.WALES.
+
+### National Digital Twin Programme — AI Ontology Extension Generator (2024–2025)
+**Challenge:** The National Digital Twin Programme (NDTP), a UK Government initiative under the Department for Business and Trade, needed to automate ontology development to accelerate the creation of digital twins across UK infrastructure.
+
+**Intervention:** Contributed to the development of an open-source AI-powered tool that automates ontology generation and extension through a web interface. The tool combines data profiling, Named Entity Recognition, and large language models to extract and generate ontology entities from multiple data formats (CSV, JSON, RDF/Turtle).
+
+**Assurance:** Open-source under Apache License 2.0 (code) and Open Government Licence v3.0 (documentation). Maintained by NDTP.
+
+**Outcome:** Delivered a production-ready Streamlit web application with a four-step wizard workflow, built-in validation and visualisation tools, and iterative refinement capabilities. Published on GitHub under National-Digital-Twin organisation.
+
+**Reusable assets:** Open-source tool available at github.com/National-Digital-Twin/ndtp-ai-ontology-extension.
+
+### BridgeAI Programme — AI for UK Creatives (Innovate UK, 2025–2026)
+**Challenge:** Innovate UK's BridgeAI programme needed to support the UK creative industries in adopting AI technologies, bridging the gap between cutting-edge AI research and practical implementation for creative sector SMEs.
+
+**Intervention:** Delivered a programme delivery report for the BridgeAI initiative, providing research-backed guidance on AI adoption for UK creatives. Led by Fabio Rovai and Dr Stylianos Kampakis, the work covered AI readiness assessment, implementation strategies, and practical tooling recommendations. The BridgeAI Skills Hub launch event was held at Ona Studios, London. Co-delivered sector-specific AI readiness sessions with PwC targeting construction, creative industries, and transport. Contract reference: GSS24646.
+
+**Outcome:** 1,100 registrations against a capacity target of 200. Satisfaction rating: 4.6 out of 5. Programme delivery report completed, supporting AI adoption pathways for creative sector organisations across the UK.
+
+**Reusable assets:** AI adoption framework and readiness assessment methodology for creative industries.
+
+### Kalgera / Fintech Scotland — Financial Vulnerability Research (2024)
+**Challenge:** Kalgera, a fintech specialising in protecting financially vulnerable customers, needed primary qualitative research to validate their AI-driven early warning signal architecture. The research had to capture lived experiences of financial vulnerability in Scotland, including scam victims, people experiencing cognitive decline, and carers managing money on behalf of others.
+
+**Intervention:** Designed and delivered an end-to-end user research programme: paid Facebook/Instagram recruitment campaign targeting financially vulnerable adults across Scotland (50 plus primary, 35–49 secondary), a screening survey collecting quantitative and qualitative data from 80–120 respondents, and 8–10 in-depth 1:1 interviews (60 minutes each). The interview protocol was mapped directly to Kalgera's signal categories: spending pattern changes, income depletion, credit reliance, new payees, cash patterns, bill changes, account access, and scam indicators.
+
+**Assurance:** Full ethical framework aligned with the Adult Support and Protection (Scotland) Act 2007. Distress protocol in place with trained facilitators. All data encrypted, UK-hosted, anonymised within 7 days. Verbal and written consent obtained for participation, recording, and data use.
+
+**Outcome:** Delivered three outputs: a signal validation report confirming which behavioural markers are observable in transaction data, an intervention acceptability framework documenting what vulnerable people consider helpful versus intrusive, and a summary findings report for the Finance and Health Lab. Direct participant quotes used to ground Kalgera's product decisions in lived experience.
+
+---
+
+## Research and Publications
+
+### Welsh Government Land Valuation Research Report
+Commissioned by Welsh Government, 2025–2026. Independent research into the feasibility of land value tax models for Wales. Combined statistical analysis of land registry data with international comparator evidence and stakeholder interviews across Welsh local authorities. Findings presented to Welsh Government officials and cited in Senedd committee proceedings. Full report published on GOV.WALES and available at gov.tesseract.academy/papers/testing-land-valuation-methods-tesseract-academy-report.pdf.
+
+### AI Skills for the UK Workforce — Skills England
+Skills England / UK Government Publication, 2025. Tesseract Academy is cited as an AI training provider and consultancy in Skills England's official research into AI skills for the UK workforce. The publication's methodology included stakeholder workshops with 43 organisations, with Tesseract Academy contributing alongside institutions including The Alan Turing Institute and the Surrey AI Centre.
+
+### AI Ontology Extension Generator — National Digital Twin Programme
+Collaboration with NDTP (Department for Business and Trade), 2024–2025. Contributed to the development of an open-source AI-powered tool that automates ontology generation and extension for the National Digital Twin Programme. The tool combines data profiling, Named Entity Recognition, and large language models.
+
+### Proving the Utility of Large Language Models in Cybersecurity Simulations
+Collaboration with The Alan Turing Institute, 2025. Research paper exploring how Large Language Models can bolster cybersecurity simulations by automating the creation of synthetic environments and identifying latent vulnerabilities. Co-authored with researchers from The Alan Turing Institute. Available at gov.tesseract.academy/papers/alan-turing-ontology-paper.pdf.
+
+### BridgeAI Skills Hub Launch and PwC Sector Workshop
+Innovate UK / BridgeAI Programme, 2025–2026. Designed and delivered AI adoption workshops for underserved UK sectors as part of the Innovate UK-funded BridgeAI programme. Led the Skills Hub launch event at Ona Studios, London, and co-delivered sector-specific AI readiness sessions with PwC targeting construction, creative industries, and transport.
+
+### Open Governance — Open-Source AI Governance Server
+Open-Source Tool, ongoing. An open-source AI governance platform helping organisations discover, assess, and monitor AI systems against EU AI Act, NIST AI RMF, and ISO 42001 frameworks. Provides automated risk classification, compliance matrices, bias and hallucination monitoring, policy enforcement gates, and audit-ready reporting through 48 governance tools. Published at github.com/fabio-rovai/open-governance.
+
+### London Data Week 2025 — AI Tools for the Visually Impaired
+London Data Week, co-organised with Vision Ability CIC, 2025. Co-organised a public workshop and demonstration on making AI tools accessible to people with visual impairments. Delivered at Chabad Islington Community Centre as part of London Data Week 2025, in partnership with Vision Ability CIC.
+
+### UK Government Business Academy — AI Webinar Series
+Department for Business and Trade, Business Academy, 2025. Delivered a series of three official UK Government Business Academy webinars on AI adoption for growing businesses, led by Dr Stylianos Kampakis. Topics: designing AI roadmaps, choosing the right AI tools using the OCT (Objectives-Capabilities-Tools) methodology, and building internal AI capability including skills-gap analysis and organisational models.
+
+### FCA Consultation — Stablecoins and UK Crypto Regulation
+Financial Conduct Authority Regulatory Consultation, 2025. Contributed expert analysis to the FCA's consultation on stablecoin regulation and the future of crypto asset oversight in the UK. Provided evidence-based commentary on regulatory frameworks, consumer protection mechanisms, and systemic risk considerations for digital assets.
+
+### Is Blockchain Part of the Future of Art?
+Journal of the British Blockchain Association (JBBA), peer-reviewed. Research exploring the intersection of distributed ledger technology and the creative industries. Examined provenance tracking, digital ownership, and the implications of blockchain for cultural asset management and intellectual property governance.
+
+---
+
+## Contact
+
+Email: fabio@thetesseractacademy.com
+Phone: 07398771664
+Address: 5 Brunswick Park Gardens, London, England, N11 1EJ
+Website: https://gov.tesseract.academy
+Main site: https://tesseract.academy

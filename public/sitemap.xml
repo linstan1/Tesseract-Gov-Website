@@ -1,51 +1,148 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Core pages -->
   <url>
-    <loc>https://tesseract-gov-website.vercel.app/</loc>
-    <lastmod>2026-03-20</lastmod>
+    <loc>https://gov.tesseract.academy/</loc>
+    <lastmod>2026-04-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://tesseract-gov-website.vercel.app/how-to-buy</loc>
-    <lastmod>2026-03-20</lastmod>
+    <loc>https://gov.tesseract.academy/how-to-buy</loc>
+    <lastmod>2026-04-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://tesseract-gov-website.vercel.app/capabilities</loc>
-    <lastmod>2026-03-20</lastmod>
+    <loc>https://gov.tesseract.academy/capabilities</loc>
+    <lastmod>2026-04-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://tesseract-gov-website.vercel.app/use-cases</loc>
-    <lastmod>2026-03-20</lastmod>
+    <loc>https://gov.tesseract.academy/use-cases</loc>
+    <lastmod>2026-04-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://tesseract-gov-website.vercel.app/research</loc>
-    <lastmod>2026-03-20</lastmod>
+    <loc>https://gov.tesseract.academy/research</loc>
+    <lastmod>2026-04-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://tesseract-gov-website.vercel.app/partnerships</loc>
-    <lastmod>2026-03-20</lastmod>
+    <loc>https://gov.tesseract.academy/partnerships</loc>
+    <lastmod>2026-04-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://tesseract-gov-website.vercel.app/testimonials</loc>
-    <lastmod>2026-03-20</lastmod>
+    <loc>https://gov.tesseract.academy/testimonials</loc>
+    <lastmod>2026-04-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://tesseract-gov-website.vercel.app/compliance</loc>
-    <lastmod>2026-03-20</lastmod>
+    <loc>https://gov.tesseract.academy/compliance</loc>
+    <lastmod>2026-04-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://gov.tesseract.academy/about</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gov.tesseract.academy/glossary</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Case study pages -->
+  <url>
+    <loc>https://gov.tesseract.academy/case-studies/welsh-government-land-valuation</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gov.tesseract.academy/case-studies/national-digital-twin-programme</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gov.tesseract.academy/case-studies/bridgeai-creative-industries</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gov.tesseract.academy/case-studies/kalgera-financial-vulnerability</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Service pages -->
+  <url>
+    <loc>https://gov.tesseract.academy/services/ai-consulting</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gov.tesseract.academy/services/research-policy</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://gov.tesseract.academy/services/public-engagement</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://gov.tesseract.academy/services/survey-design</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://gov.tesseract.academy/services/education-upskilling</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://gov.tesseract.academy/services/ai-governance</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Static documents -->
+  <url>
+    <loc>https://gov.tesseract.academy/papers/testing-land-valuation-methods-tesseract-academy-report.pdf</loc>
+    <lastmod>2026-03-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://gov.tesseract.academy/papers/alan-turing-ontology-paper.pdf</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://gov.tesseract.academy/papers/decision-makers-handbook.pdf</loc>
+    <lastmod>2024-01-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
   </url>
 </urlset>

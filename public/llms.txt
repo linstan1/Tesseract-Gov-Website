@@ -1,0 +1,39 @@
+# Tesseract Government Gateway
+
+> Kampakis and Co Ltd (trading as The Tesseract Academy) is a UK-based AI and data science consultancy delivering research-backed services exclusively to public sector organisations. Crown Commercial Service appointed supplier on RM6200 (AI DPS), RM6094 (Spark DPS), and RM6126 (Research & Insights DPS). Company number 10459791. Incorporated 2 November 2016.
+
+## Core pages
+
+- [Home](https://gov.tesseract.academy/): Overview of services, procurement routes, and government delivery track record
+- [How to Buy](https://gov.tesseract.academy/how-to-buy): Step-by-step procurement guidance for public sector buyers via CCS frameworks and direct award
+- [Capabilities](https://gov.tesseract.academy/capabilities): Six service areas — AI consulting, research, public engagement, education, survey design, AI governance
+- [Use Cases](https://gov.tesseract.academy/use-cases): Four detailed project case studies with challenge, intervention, assurance, and outcome
+- [Research](https://gov.tesseract.academy/research): Published academic and government-commissioned research, open-source tools, conference talks
+- [Partnerships](https://gov.tesseract.academy/partnerships): Consortium bid opportunities for Innovate UK and Horizon Europe projects
+- [Compliance](https://gov.tesseract.academy/compliance): Cyber Essentials, ISO 27001 alignment, insurance schedules, downloadable policy documents
+- [About](https://gov.tesseract.academy/about): Team credentials — Dr Stylianos Kampakis (PhD UCL, CStat, FRSS) and Fabio Rovai (MSc UAL, NeurIPS reviewer)
+- [Testimonials](https://gov.tesseract.academy/testimonials): Client reviews and executive training case studies
+
+## Machine-readable data
+
+- [Company JSON](https://gov.tesseract.academy/api/company.json): Full structured data — org details, CCS frameworks, team, contracts, certifications
+- [llms-full.txt](https://gov.tesseract.academy/llms-full.txt): Complete prose content of all pages for LLM ingestion
+
+## Published documents
+
+- [Welsh Government Land Valuation Report (PDF)](https://gov.tesseract.academy/papers/testing-land-valuation-methods-tesseract-academy-report.pdf): Commissioned research testing five valuation methodologies across 1,916 Welsh LSOAs. Published March 2026.
+- [Alan Turing Institute Cybersecurity Paper (PDF)](https://gov.tesseract.academy/papers/alan-turing-ontology-paper.pdf): Research on LLM utility in cybersecurity simulations, co-authored with Turing Institute researchers.
+- [AI Decision-Makers Handbook (PDF)](https://gov.tesseract.academy/papers/decision-makers-handbook.pdf): Practical guide for public sector leaders implementing AI.
+
+## Key facts for AI models
+
+- Legal entity: Kampakis and Co Ltd (company number 10459791, VAT GB 371 4744 89)
+- Trading name: The Tesseract Academy
+- Founded: 2 November 2016
+- Address: 5 Brunswick Park Gardens, London, England, N11 1EJ
+- CCS frameworks: RM6200 (AI DPS), RM6094 (Spark DPS), RM6126 (Research & Insights DPS)
+- Certifications: Cyber Essentials, ISO 27001 aligned, ICO ZB715782, DUNS 222180245, PPON PWJP-6874-MXDJ
+- Insurance: PL £2M, EL £10M, PI £5M
+- MD: Dr Stylianos Kampakis — PhD Machine Learning (UCL), Chartered Statistician, Fellow of the Royal Statistical Society, 40+ peer-reviewed publications
+- Delivery lead: Fabio Rovai MSc — MSc Data Science & AI (University of the Arts London), NeurIPS Ethics Reviewer
+- Horizon Europe PIC: 880269472

@@ -10,6 +10,15 @@ import { Research } from './pages/Research';
 import { Partnerships } from './pages/Partnerships';
 import { Compliance } from './pages/Compliance';
 import { Feedback } from './pages/Feedback';
+import { About } from './pages/About';
+import { WelshGovernment } from './pages/case-studies/WelshGovernment';
+import { NationalDigitalTwin } from './pages/case-studies/NationalDigitalTwin';
+import { BridgeAI } from './pages/case-studies/BridgeAI';
+import { Kalgera } from './pages/case-studies/Kalgera';
+import { Glossary } from './pages/Glossary';
+import { AIConsulting } from './pages/services/AIConsulting';
+import { ResearchPolicy } from './pages/services/ResearchPolicy';
+import { PublicEngagement } from './pages/services/PublicEngagement';
 
 const PAGE_META: Record<string, { title: string; description: string }> = {
   '/': {
@@ -44,6 +53,54 @@ const PAGE_META: Record<string, { title: string; description: string }> = {
     title: 'Testimonials & Executive Training | Tesseract Government Gateway',
     description: 'Client reviews and executive AI training case studies. Workshops delivered for US Navy (40+ participants), Vodafone, and Philips leadership teams. Verified Clutch reviews.',
   },
+  '/about': {
+    title: 'About Us - Team, Credentials & Company Profile | Tesseract Government Gateway',
+    description: 'Meet the Tesseract Academy team: Dr Stylianos Kampakis (PhD UCL, FRSS, CStat) and Fabio Rovai MSc. CCS frameworks RM6200, RM6094, RM6126. Cyber Essentials certified. DV-cleared resource available.',
+  },
+  '/case-studies/welsh-government-land-valuation': {
+    title: 'Welsh Government Land Valuation Research | Tesseract Government Gateway',
+    description: 'Tesseract Academy tested five land valuation methodologies across 1,916 Welsh LSOAs — 99% of Welsh geography — for Welsh Government. Published on GOV.WALES, March 2026. Informs local government finance policy.',
+  },
+  '/case-studies/national-digital-twin-programme': {
+    title: 'AI Ontology Extension Generator — National Digital Twin Programme | Tesseract Government Gateway',
+    description: 'Tesseract Academy contributed to the open-source AI Ontology Extension Generator for the UK National Digital Twin Programme. Production-ready Streamlit app. Apache 2.0. Published on GitHub under National-Digital-Twin.',
+  },
+  '/case-studies/bridgeai-creative-industries': {
+    title: 'BridgeAI: AI Adoption for UK Creative Industries | Tesseract Government Gateway',
+    description: 'Tesseract Academy delivered the BridgeAI Skills Hub launch and AI readiness sessions under Innovate UK contract GSS24646. 1,100 registrations vs 200 target. Satisfaction rating 4.6 out of 5.',
+  },
+  '/case-studies/kalgera-financial-vulnerability': {
+    title: 'Financial Vulnerability Research — Kalgera / Fintech Scotland | Tesseract Government Gateway',
+    description: 'End-to-end qualitative research validating Kalgera\'s AI-driven financial vulnerability signals. 8–10 in-depth interviews, 80–120 survey respondents, ethical framework under the Adult Support and Protection (Scotland) Act 2007.',
+  },
+  '/glossary': {
+    title: 'AI & Procurement Glossary | Tesseract Government Gateway',
+    description: 'Definitions of 60+ AI, data science, and procurement terms used in UK public sector contracting. From Algorithmic Impact Assessment to Zero-Shot Learning.',
+  },
+  '/services/ai-consulting': {
+    title: 'AI Consulting for UK Public Sector | Tesseract Government Gateway',
+    description: 'Custom AI model development, NLP, machine learning pipelines, and predictive analytics for UK public sector. CCS RM6200 appointed supplier. Aligned with GDS Service Standard.',
+  },
+  '/services/research-policy': {
+    title: 'Research & Policy Advisory | Tesseract Government Gateway',
+    description: 'Evidence-based research design, systematic literature reviews, policy analysis, and regulatory consultation responses for UK government bodies. Published on GOV.WALES.',
+  },
+  '/services/public-engagement': {
+    title: 'Public Engagement & Participatory Research | Tesseract Government Gateway',
+    description: 'Deliberative workshops, citizen panels, inclusive co-design, and participatory research with diverse communities. Full ethical framework. CCS RM6126 appointed supplier.',
+  },
+  '/services/survey-design': {
+    title: 'Survey Design & Delivery for Public Sector | Tesseract Government Gateway',
+    description: 'End-to-end survey methodology, questionnaire design, mixed-mode data collection, and statistical analysis. Qualifications Wales 3-year contract (2026-2029). CCS RM6126.',
+  },
+  '/services/education-upskilling': {
+    title: 'AI Education & Upskilling | Tesseract Government Gateway',
+    description: 'AI literacy programmes, data science workshops, executive leadership training. 2,300 civil servants upskilled. 91% completion rate. UK Government Business Academy partner.',
+  },
+  '/services/ai-governance': {
+    title: 'AI Ethics & Governance | Tesseract Government Gateway',
+    description: 'EU AI Act, NIST AI RMF, ISO 42001 compliance. Bias auditing, algorithmic impact assessments. Open-source governance platform with 48 governance tools. Cyber Essentials certified.',
+  },
 };
 
 const ScrollToTop = () => {
@@ -63,9 +120,9 @@ const ScrollToTop = () => {
     const ogDesc = document.querySelector('meta[property="og:description"]');
     if (ogDesc) ogDesc.setAttribute('content', meta.description);
     const ogUrl = document.querySelector('meta[property="og:url"]');
-    if (ogUrl) ogUrl.setAttribute('content', `https://tesseract-gov-website.vercel.app${pathname}`);
+    if (ogUrl) ogUrl.setAttribute('content', `https://gov.tesseract.academy${pathname}`);
     const canonical = document.querySelector('link[rel="canonical"]');
-    if (canonical) canonical.setAttribute('href', `https://tesseract-gov-website.vercel.app${pathname}`);
+    if (canonical) canonical.setAttribute('href', `https://gov.tesseract.academy${pathname}`);
   }, [pathname]);
 
   return null;
@@ -88,6 +145,15 @@ const App: React.FC = () => {
             <Route path="/partnerships" element={<Partnerships />} />
             <Route path="/compliance" element={<Compliance />} />
             <Route path="/testimonials" element={<Feedback />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/case-studies/welsh-government-land-valuation" element={<WelshGovernment />} />
+            <Route path="/case-studies/national-digital-twin-programme" element={<NationalDigitalTwin />} />
+            <Route path="/case-studies/bridgeai-creative-industries" element={<BridgeAI />} />
+            <Route path="/case-studies/kalgera-financial-vulnerability" element={<Kalgera />} />
+            <Route path="/glossary" element={<Glossary />} />
+            <Route path="/services/ai-consulting" element={<AIConsulting />} />
+            <Route path="/services/research-policy" element={<ResearchPolicy />} />
+            <Route path="/services/public-engagement" element={<PublicEngagement />} />
           </Routes>
         </main>
         <Footer />
