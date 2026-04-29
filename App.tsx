@@ -1,28 +1,29 @@
-import React from 'react';
+import React, { lazy, Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
 import { Home } from './pages/Home';
-import { HowToBuy } from './pages/HowToBuy';
-import { Capabilities } from './pages/Capabilities';
-import { UseCases } from './pages/UseCases';
-import { Research } from './pages/Research';
-import { Partnerships } from './pages/Partnerships';
-import { Compliance } from './pages/Compliance';
-import { Feedback } from './pages/Feedback';
-import { About } from './pages/About';
-import { WelshGovernment } from './pages/case-studies/WelshGovernment';
-import { NationalDigitalTwin } from './pages/case-studies/NationalDigitalTwin';
-import { BridgeAI } from './pages/case-studies/BridgeAI';
-import { Kalgera } from './pages/case-studies/Kalgera';
-import { Glossary } from './pages/Glossary';
-import { AIConsulting } from './pages/services/AIConsulting';
-import { ResearchPolicy } from './pages/services/ResearchPolicy';
-import { PublicEngagement } from './pages/services/PublicEngagement';
-import { SurveyDesign } from './pages/services/SurveyDesign';
-import { EducationUpskilling } from './pages/services/EducationUpskilling';
-import { AIGovernance } from './pages/services/AIGovernance';
-import { Insights } from './pages/Insights';
+
+const HowToBuy = lazy(() => import('./pages/HowToBuy').then(m => ({ default: m.HowToBuy })));
+const Capabilities = lazy(() => import('./pages/Capabilities').then(m => ({ default: m.Capabilities })));
+const UseCases = lazy(() => import('./pages/UseCases').then(m => ({ default: m.UseCases })));
+const Research = lazy(() => import('./pages/Research').then(m => ({ default: m.Research })));
+const Partnerships = lazy(() => import('./pages/Partnerships').then(m => ({ default: m.Partnerships })));
+const Compliance = lazy(() => import('./pages/Compliance').then(m => ({ default: m.Compliance })));
+const Feedback = lazy(() => import('./pages/Feedback').then(m => ({ default: m.Feedback })));
+const About = lazy(() => import('./pages/About').then(m => ({ default: m.About })));
+const WelshGovernment = lazy(() => import('./pages/case-studies/WelshGovernment').then(m => ({ default: m.WelshGovernment })));
+const NationalDigitalTwin = lazy(() => import('./pages/case-studies/NationalDigitalTwin').then(m => ({ default: m.NationalDigitalTwin })));
+const BridgeAI = lazy(() => import('./pages/case-studies/BridgeAI').then(m => ({ default: m.BridgeAI })));
+const Kalgera = lazy(() => import('./pages/case-studies/Kalgera').then(m => ({ default: m.Kalgera })));
+const Glossary = lazy(() => import('./pages/Glossary').then(m => ({ default: m.Glossary })));
+const AIConsulting = lazy(() => import('./pages/services/AIConsulting').then(m => ({ default: m.AIConsulting })));
+const ResearchPolicy = lazy(() => import('./pages/services/ResearchPolicy').then(m => ({ default: m.ResearchPolicy })));
+const PublicEngagement = lazy(() => import('./pages/services/PublicEngagement').then(m => ({ default: m.PublicEngagement })));
+const SurveyDesign = lazy(() => import('./pages/services/SurveyDesign').then(m => ({ default: m.SurveyDesign })));
+const EducationUpskilling = lazy(() => import('./pages/services/EducationUpskilling').then(m => ({ default: m.EducationUpskilling })));
+const AIGovernance = lazy(() => import('./pages/services/AIGovernance').then(m => ({ default: m.AIGovernance })));
+const Insights = lazy(() => import('./pages/Insights').then(m => ({ default: m.Insights })));
 
 const PAGE_META: Record<string, { title: string; description: string }> = {
   '/': {
@@ -144,29 +145,31 @@ const App: React.FC = () => {
         <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:z-[100] focus:bg-gov-blue focus:text-white focus:px-4 focus:py-2">Skip to main content</a>
         <Navbar />
         <main id="main-content" className="flex-grow">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/how-to-buy" element={<HowToBuy />} />
-            <Route path="/capabilities" element={<Capabilities />} />
-            <Route path="/use-cases" element={<UseCases />} />
-            <Route path="/research" element={<Research />} />
-            <Route path="/partnerships" element={<Partnerships />} />
-            <Route path="/compliance" element={<Compliance />} />
-            <Route path="/testimonials" element={<Feedback />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/case-studies/welsh-government-land-valuation" element={<WelshGovernment />} />
-            <Route path="/case-studies/national-digital-twin-programme" element={<NationalDigitalTwin />} />
-            <Route path="/case-studies/bridgeai-creative-industries" element={<BridgeAI />} />
-            <Route path="/case-studies/kalgera-financial-vulnerability" element={<Kalgera />} />
-            <Route path="/glossary" element={<Glossary />} />
-            <Route path="/services/ai-consulting" element={<AIConsulting />} />
-            <Route path="/services/research-policy" element={<ResearchPolicy />} />
-            <Route path="/services/public-engagement" element={<PublicEngagement />} />
-            <Route path="/services/survey-design" element={<SurveyDesign />} />
-            <Route path="/services/education-upskilling" element={<EducationUpskilling />} />
-            <Route path="/services/ai-governance" element={<AIGovernance />} />
-            <Route path="/insights" element={<Insights />} />
-          </Routes>
+          <Suspense fallback={<div className="max-w-6xl mx-auto px-6 lg:px-8 py-20" aria-busy="true" aria-live="polite"><div className="h-8 w-48 bg-gov-bg rounded animate-pulse mb-6" /><div className="h-4 w-full max-w-2xl bg-gov-bg rounded animate-pulse mb-3" /><div className="h-4 w-full max-w-xl bg-gov-bg rounded animate-pulse" /></div>}>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/how-to-buy" element={<HowToBuy />} />
+              <Route path="/capabilities" element={<Capabilities />} />
+              <Route path="/use-cases" element={<UseCases />} />
+              <Route path="/research" element={<Research />} />
+              <Route path="/partnerships" element={<Partnerships />} />
+              <Route path="/compliance" element={<Compliance />} />
+              <Route path="/testimonials" element={<Feedback />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/case-studies/welsh-government-land-valuation" element={<WelshGovernment />} />
+              <Route path="/case-studies/national-digital-twin-programme" element={<NationalDigitalTwin />} />
+              <Route path="/case-studies/bridgeai-creative-industries" element={<BridgeAI />} />
+              <Route path="/case-studies/kalgera-financial-vulnerability" element={<Kalgera />} />
+              <Route path="/glossary" element={<Glossary />} />
+              <Route path="/services/ai-consulting" element={<AIConsulting />} />
+              <Route path="/services/research-policy" element={<ResearchPolicy />} />
+              <Route path="/services/public-engagement" element={<PublicEngagement />} />
+              <Route path="/services/survey-design" element={<SurveyDesign />} />
+              <Route path="/services/education-upskilling" element={<EducationUpskilling />} />
+              <Route path="/services/ai-governance" element={<AIGovernance />} />
+              <Route path="/insights" element={<Insights />} />
+            </Routes>
+          </Suspense>
         </main>
         <Footer />
       </div>

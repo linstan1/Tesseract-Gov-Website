@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export const Research: React.FC = () => {
   return (
@@ -24,7 +25,11 @@ export const Research: React.FC = () => {
              <a href="https://www.gov.wales/testing-land-valuation-methods" target="_blank" rel="noopener noreferrer"><h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark hover:underline transition-colors">Welsh Government Land Valuation Research Report<span className="sr-only"> (opens in new tab)</span></h3></a>
              <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Commissioned by Welsh Government, 2025–2026</p>
              <p className="text-base text-gov-dark/90 leading-relaxed">Independent research into the feasibility of land value tax models for Wales. Combined statistical analysis of land registry data with international comparator evidence and stakeholder interviews across Welsh local authorities. Findings presented to Welsh Government officials and cited in Senedd committee proceedings.</p>
-             <a href="/papers/testing-land-valuation-methods-tesseract-academy-report.pdf" target="_blank" rel="noopener noreferrer" className="inline-block mt-3 text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">Read the full report (PDF)<span className="sr-only"> (opens in new tab)</span></a>
+             <div className="mt-3 flex flex-wrap gap-3 items-center">
+               <a href="/papers/testing-land-valuation-methods-tesseract-academy-report.pdf" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">Read the full report (PDF)<span className="sr-only"> (opens in new tab)</span></a>
+               <span className="text-gov-border">|</span>
+               <Link to="/case-studies/welsh-government-land-valuation" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">Case study</Link>
+             </div>
            </li>
            <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
              <a href="https://www.gov.uk/government/publications/ai-skills-for-the-uk-workforce/annex-a-methodology" target="_blank" rel="noopener noreferrer"><h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark hover:underline transition-colors">AI Skills for the UK Workforce - Skills England<span className="sr-only"> (opens in new tab)</span></h3></a>
@@ -35,6 +40,7 @@ export const Research: React.FC = () => {
              <a href="https://github.com/National-Digital-Twin/ndtp-ai-ontology-extension" target="_blank" rel="noopener noreferrer"><h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark hover:underline transition-colors">AI Ontology Extension Generator: National Digital Twin Programme<span className="sr-only"> (opens in new tab)</span></h3></a>
              <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Collaboration with NDTP (Department for Business and Trade), 2024–2025</p>
              <p className="text-base text-gov-dark/90 leading-relaxed">Contributed to the development of an open-source AI-powered tool that automates ontology generation and extension for the National Digital Twin Programme. The tool combines data profiling, Named Entity Recognition, and large language models to extract and generate ontology entities from multiple data formats.</p>
+             <Link to="/case-studies/national-digital-twin-programme" className="inline-block mt-3 text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">Read the case study</Link>
            </li>
            <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
              <h3 className="font-semibold text-lg text-gov-dark mb-2">Proving the Utility of Large Language Models in Cybersecurity Simulations</h3>
@@ -46,6 +52,7 @@ export const Research: React.FC = () => {
              <a href="https://tesseract.academy/tesseract-academy-partners-with-bridgeai-to-advance-ai-training-in-creative-industries/" target="_blank" rel="noopener noreferrer"><h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark hover:underline transition-colors">BridgeAI Skills Hub Launch & PwC Sector Workshop<span className="sr-only"> (opens in new tab)</span></h3></a>
              <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Innovate UK / BridgeAI Programme, 2025–2026</p>
              <p className="text-base text-gov-dark/90 leading-relaxed">Designed and delivered AI adoption workshops for underserved UK sectors as part of the Innovate UK-funded BridgeAI programme. Led the Skills Hub launch event at Ona Studios, London, and co-delivered sector-specific AI readiness sessions with PwC targeting construction, creative industries, and transport.</p>
+             <Link to="/case-studies/bridgeai-creative-industries" className="inline-block mt-3 text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">Read the case study</Link>
            </li>
            <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
              <a href="https://github.com/fabio-rovai/open-governance" target="_blank" rel="noopener noreferrer"><h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark hover:underline transition-colors">Open Governance: Open-Source AI Governance Server<span className="sr-only"> (opens in new tab)</span></h3></a>
@@ -80,6 +87,31 @@ export const Research: React.FC = () => {
              <p className="text-base text-gov-dark/90 leading-relaxed">Peer-reviewed research exploring the intersection of distributed ledger technology and the creative industries. Examined provenance tracking, digital ownership, and the implications of blockchain for cultural asset management and intellectual property governance.</p>
            </li>
         </ul>
+      </section>
+
+      <section className="space-y-6">
+        <h2 className="text-2xl font-bold text-gov-dark">Detailed Case Studies</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <Link to="/case-studies/welsh-government-land-valuation" className="block p-5 bg-white border border-gov-border/50 rounded-lg hover:border-gov-blue transition-colors">
+            <p className="text-xs font-semibold text-gov-blue uppercase tracking-wider mb-1">Welsh Government</p>
+            <p className="text-sm font-semibold text-gov-dark">Land valuation methodologies — five approaches tested</p>
+          </Link>
+          <Link to="/case-studies/national-digital-twin-programme" className="block p-5 bg-white border border-gov-border/50 rounded-lg hover:border-gov-blue transition-colors">
+            <p className="text-xs font-semibold text-gov-blue uppercase tracking-wider mb-1">National Digital Twin Programme</p>
+            <p className="text-sm font-semibold text-gov-dark">AI Ontology Extension Generator — open source on GitHub</p>
+          </Link>
+          <Link to="/case-studies/bridgeai-creative-industries" className="block p-5 bg-white border border-gov-border/50 rounded-lg hover:border-gov-blue transition-colors">
+            <p className="text-xs font-semibold text-gov-blue uppercase tracking-wider mb-1">BridgeAI / Innovate UK</p>
+            <p className="text-sm font-semibold text-gov-dark">AI adoption for UK creative industries</p>
+          </Link>
+          <Link to="/case-studies/kalgera-financial-vulnerability" className="block p-5 bg-white border border-gov-border/50 rounded-lg hover:border-gov-blue transition-colors">
+            <p className="text-xs font-semibold text-gov-blue uppercase tracking-wider mb-1">Kalgera / Fintech Scotland</p>
+            <p className="text-sm font-semibold text-gov-dark">Financial vulnerability qualitative research</p>
+          </Link>
+        </div>
+        <p className="text-sm text-gov-secondary">
+          See also: <Link to="/insights" className="text-gov-blue hover:underline">Insights</Link> · <Link to="/use-cases" className="text-gov-blue hover:underline">Use cases</Link> · <Link to="/services/research-policy" className="text-gov-blue hover:underline">Research &amp; policy advisory</Link>
+        </p>
       </section>
     </div>
   );

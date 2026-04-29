@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Card } from '../components/ui/Card';
-import { ChevronDown, ChevronUp } from 'lucide-react';
+import { ChevronDown, ChevronUp, ArrowRight } from 'lucide-react';
 
 const USE_CASES = [
   {
     id: 'uc1',
+    slug: '/case-studies/welsh-government-land-valuation',
     title: 'Testing Land Valuation Methods: Welsh Government',
     challenge: 'The Welsh Government needed to evaluate different approaches for assessing land values to support local government finance policy development, comparing traditional and AI-driven methodologies.',
     intervention: 'Commissioned by Welsh Government to test five distinct valuation methodologies: market-based statistical valuation, advanced algorithmic and machine-learning applications, formula-based valuation by land area, conventional valuation approaches, and innovative experimental approaches.',
@@ -14,6 +16,7 @@ const USE_CASES = [
   },
   {
     id: 'uc2',
+    slug: '/case-studies/national-digital-twin-programme',
     title: 'AI Ontology Extension Generator: National Digital Twin Programme',
     challenge: 'The National Digital Twin Programme (NDTP), a UK Government initiative under the Department for Business and Trade, needed to automate ontology development to accelerate the creation of digital twins across UK infrastructure.',
     intervention: 'Contributed to the development of an open-source AI-powered tool that automates ontology generation and extension through a web interface. The tool combines data profiling, Named Entity Recognition, and large language models to extract and generate ontology entities from multiple data formats (CSV, JSON, RDF/Turtle).',
@@ -23,6 +26,7 @@ const USE_CASES = [
   },
   {
     id: 'uc3',
+    slug: '/case-studies/bridgeai-creative-industries',
     title: 'BridgeAI Programme: AI for UK Creatives',
     challenge: 'Innovate UK\'s BridgeAI programme needed to support the UK creative industries in adopting AI technologies, bridging the gap between cutting-edge AI research and practical implementation for creative sector SMEs.',
     intervention: 'Delivered a programme delivery report for the BridgeAI initiative, providing research-backed guidance on AI adoption for UK creatives. Led by Fabio Rovai and Dr Stylianos Kampakis, the work covered AI readiness assessment, implementation strategies, and practical tooling recommendations.',
@@ -32,6 +36,7 @@ const USE_CASES = [
   },
   {
     id: 'uc4',
+    slug: '/case-studies/kalgera-financial-vulnerability',
     title: 'Financial Vulnerability Research: Kalgera / Fintech Scotland',
     challenge: 'Kalgera, a fintech specialising in protecting financially vulnerable customers, needed primary qualitative research to validate their AI-driven early warning signal architecture. The research had to capture lived experiences of financial vulnerability in Scotland, including scam victims, people experiencing cognitive decline, and carers managing money on behalf of others.',
     intervention: 'Designed and delivered an end-to-end user research programme: paid Facebook/Instagram recruitment campaign targeting financially vulnerable adults across Scotland (50+ primary, 35–49 secondary), a screening survey collecting quantitative and qualitative data from 80–120 respondents, and 8–10 in-depth 1:1 interviews (60 minutes each). The interview protocol was mapped directly to Kalgera\'s signal categories: spending pattern changes, income depletion, credit reliance, new payees, cash patterns, bill changes, account access, and scam indicators.',
@@ -80,6 +85,12 @@ const UseCaseItem: React.FC<{ data: typeof USE_CASES[0] }> = ({ data }) => {
           </div>
         </div>
       )}
+
+      <div className="mt-6 pt-4 border-t border-gov-border">
+        <Link to={data.slug} className="inline-flex items-center gap-1.5 text-sm font-semibold text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">
+          Read the full case study <ArrowRight className="w-4 h-4" />
+        </Link>
+      </div>
     </Card>
   );
 };

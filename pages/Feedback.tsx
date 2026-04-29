@@ -98,7 +98,7 @@ export const Feedback: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {EXECUTIVE_TRAINING.map((item) => (
             <Card key={item.client} className="flex flex-col overflow-hidden p-0">
-              <img src={item.image} alt={item.imageAlt} className="w-full h-48 object-cover" />
+              <img src={item.image} alt={item.imageAlt} width="800" height="384" loading="lazy" decoding="async" className="w-full h-48 object-cover" />
               <div className="p-6 flex flex-col flex-1">
                 <p className="text-xs font-semibold text-gov-blue uppercase tracking-wider mb-1">{item.client}</p>
                 <h3 className="text-lg font-semibold text-gov-dark mb-1">{item.title}</h3>

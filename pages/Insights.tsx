@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 export const Insights: React.FC = () => {
   useEffect(() => {
@@ -562,20 +563,43 @@ export const Insights: React.FC = () => {
         </div>
       </section>
 
+      {/* Related case studies */}
+      <section className="space-y-6 border-t border-gov-border/30 pt-10">
+        <h2 className="text-2xl font-bold text-gov-dark">Underlying Case Studies</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <Link to="/case-studies/welsh-government-land-valuation" className="block p-5 bg-white border border-gov-border/50 rounded-lg hover:border-gov-blue transition-colors">
+            <p className="text-xs font-semibold text-gov-blue uppercase tracking-wider mb-1">Welsh Government</p>
+            <p className="text-sm font-semibold text-gov-dark">Land valuation methodologies — five approaches tested</p>
+          </Link>
+          <Link to="/case-studies/national-digital-twin-programme" className="block p-5 bg-white border border-gov-border/50 rounded-lg hover:border-gov-blue transition-colors">
+            <p className="text-xs font-semibold text-gov-blue uppercase tracking-wider mb-1">National Digital Twin Programme</p>
+            <p className="text-sm font-semibold text-gov-dark">AI Ontology Extension Generator — open source on GitHub</p>
+          </Link>
+          <Link to="/case-studies/bridgeai-creative-industries" className="block p-5 bg-white border border-gov-border/50 rounded-lg hover:border-gov-blue transition-colors">
+            <p className="text-xs font-semibold text-gov-blue uppercase tracking-wider mb-1">BridgeAI / Innovate UK</p>
+            <p className="text-sm font-semibold text-gov-dark">AI adoption for UK creative industries</p>
+          </Link>
+          <Link to="/case-studies/kalgera-financial-vulnerability" className="block p-5 bg-white border border-gov-border/50 rounded-lg hover:border-gov-blue transition-colors">
+            <p className="text-xs font-semibold text-gov-blue uppercase tracking-wider mb-1">Kalgera / Fintech Scotland</p>
+            <p className="text-sm font-semibold text-gov-dark">Financial vulnerability qualitative research</p>
+          </Link>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="border-t border-gov-border/30 pt-10 flex flex-col sm:flex-row gap-4 items-start">
-        <a
-          href="/how-to-buy"
+        <Link
+          to="/how-to-buy"
           className="inline-block bg-gov-blue text-white font-semibold px-6 py-3 rounded-lg hover:bg-gov-blue-dark transition-colors"
         >
           Commission this expertise
-        </a>
-        <a
-          href="/research"
+        </Link>
+        <Link
+          to="/research"
           className="inline-block border border-gov-blue text-gov-blue font-semibold px-6 py-3 rounded-lg hover:bg-gov-blue/5 transition-colors"
         >
           View published research
-        </a>
+        </Link>
       </section>
 
     </div>
