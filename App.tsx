@@ -19,6 +19,9 @@ import { Glossary } from './pages/Glossary';
 import { AIConsulting } from './pages/services/AIConsulting';
 import { ResearchPolicy } from './pages/services/ResearchPolicy';
 import { PublicEngagement } from './pages/services/PublicEngagement';
+import { SurveyDesign } from './pages/services/SurveyDesign';
+import { EducationUpskilling } from './pages/services/EducationUpskilling';
+import { AIGovernance } from './pages/services/AIGovernance';
 
 const PAGE_META: Record<string, { title: string; description: string }> = {
   '/': {
@@ -154,6 +157,9 @@ const App: React.FC = () => {
             <Route path="/services/ai-consulting" element={<AIConsulting />} />
             <Route path="/services/research-policy" element={<ResearchPolicy />} />
             <Route path="/services/public-engagement" element={<PublicEngagement />} />
+            <Route path="/services/survey-design" element={<SurveyDesign />} />
+            <Route path="/services/education-upskilling" element={<EducationUpskilling />} />
+            <Route path="/services/ai-governance" element={<AIGovernance />} />
           </Routes>
         </main>
         <Footer />
