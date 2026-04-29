@@ -16,6 +16,8 @@ export const EducationUpskilling: React.FC = () => {
         'AI literacy programmes, data science workshops, and executive leadership training for UK public sector. 2,300 civil servants upskilled. Completion rate improved from 68% to 91%. UK Government Business Academy webinars, BridgeAI 1,100 registrations.',
       url: 'https://gov.tesseract.academy/services/education-upskilling',
       areaServed: 'GB',
+      datePublished: '2026-04-29',
+      dateModified: '2026-04-29',
     };
 
     const script = document.createElement('script');
@@ -49,6 +51,12 @@ export const EducationUpskilling: React.FC = () => {
 
       <section className="space-y-6 max-w-4xl">
         <h2 className="text-3xl font-bold text-gov-dark">What We Deliver</h2>
+
+        <blockquote className="border-l-4 border-l-gov-blue pl-6 py-2 my-6 bg-gov-bg rounded-r-lg">
+          <p className="text-gov-dark italic leading-relaxed">"AI literacy in government is not about teaching civil servants to code — it's about building the critical judgement to commission, evaluate, and challenge AI systems effectively."</p>
+          <cite className="text-sm text-gov-secondary font-semibold not-italic mt-2 block">— Dr Stylianos Kampakis, Managing Director, Tesseract Academy</cite>
+        </blockquote>
+
         <p className="text-gov-dark leading-relaxed text-base">
           Tesseract Academy designs and delivers AI literacy and data science training programmes
           tailored to the needs of public sector organisations at every level — from frontline
@@ -56,29 +64,29 @@ export const EducationUpskilling: React.FC = () => {
           curriculum design methodology begins with a skills-gap analysis and competency mapping,
           ensuring training is targeted at genuine capability deficits rather than generic content.
           We apply the OCT (Objectives-Capabilities-Tools) framework to help organisations identify
-          what AI capabilities they actually need before selecting training interventions.
+          what AI capabilities they actually need before selecting training interventions. Our programmes are designed to complement the <a href="https://www.gov.uk/government/organisations/skills-england" target="_blank" rel="noopener noreferrer" className="text-gov-blue hover:underline">Skills England</a> AI skills strategy and the Department for Science Innovation and Technology (DSIT) digital skills agenda, with outcomes mapped to Government Digital Service (GDS) capability frameworks.
         </p>
         <p className="text-gov-dark leading-relaxed text-base">
           Executive leadership programmes focus on strategic AI literacy: understanding AI risk and
           governance frameworks, making informed commissioning decisions, and evaluating AI supplier
-          claims. These programmes have been delivered for the US Navy (40+ senior participants),
+          claims in line with the <a href="https://www.gov.uk/government/publications/ai-regulation-a-pro-innovation-approach" target="_blank" rel="noopener noreferrer" className="text-gov-blue hover:underline">UK AI Framework</a>. These programmes have been delivered for the US Navy (40+ senior participants),
           Vodafone Egypt, Philips, and through the UK Government Business Academy, where Dr Stylianos
           Kampakis delivered three official webinars in 2025 on AI roadmap design, AI tool selection,
-          and building internal AI capability.
+          and building internal AI capability. The Alan Turing Institute and the UK AI Safety Institute have both identified these capability gaps as priorities for the public sector.
         </p>
         <p className="text-gov-dark leading-relaxed text-base">
           Technical training programmes cover the full data science stack — statistical foundations,
           machine learning concepts, NLP, large language models, and AI governance obligations under
-          the EU AI Act and NIST AI RMF. All technical programmes include hands-on exercises with
+          the <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689" target="_blank" rel="noopener noreferrer" className="text-gov-blue hover:underline">EU AI Act</a> and <a href="https://www.nist.gov/system/files/documents/2023/01/26/AI%20RMF%201.0.pdf" target="_blank" rel="noopener noreferrer" className="text-gov-blue hover:underline">NIST AI RMF</a>. All technical programmes include hands-on exercises with
           real or synthetic datasets, and participants receive documented competency outcomes suitable
           for CPD records and organisational capability reporting.
         </p>
         <p className="text-gov-dark leading-relaxed text-base">
-          Our BridgeAI partnership with Innovate UK achieved 1,100 registrations across sector-specific
+          Our BridgeAI partnership with <a href="https://www.gov.uk/government/organisations/innovate-uk" target="_blank" rel="noopener noreferrer" className="text-gov-blue hover:underline">Innovate UK</a> achieved 1,100 registrations across sector-specific
           AI adoption workshops targeting creative industries, construction, and transport sectors.
           Through this programme, we demonstrated that completion rates and engagement scores improve
           significantly when training is contextualised to sector-specific use cases rather than
-          delivered as generic AI literacy content.
+          delivered as generic AI literacy content. The National Audit Office has identified AI upskilling as a critical value-for-money factor in public sector digital transformation — our measurable outcomes directly address this concern.
         </p>
       </section>
 

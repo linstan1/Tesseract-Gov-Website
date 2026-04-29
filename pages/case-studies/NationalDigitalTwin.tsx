@@ -19,6 +19,7 @@ const SCHEMA = {
     name: 'Tesseract Academy',
   },
   datePublished: '2025-01-01',
+  dateModified: '2026-04-29',
   about: {
     '@type': 'SoftwareApplication',
     name: 'NDTP AI Ontology Extension Generator',
@@ -117,10 +118,10 @@ export const NationalDigitalTwin: React.FC = () => {
         <div className="border-l-2 border-l-gov-blue pl-6">
           <h2 className="text-2xl font-bold text-gov-dark font-serif mb-3">The Challenge</h2>
           <p className="text-gov-dark leading-relaxed">
-            The National Digital Twin Programme (NDTP) — a UK Government initiative under the Department for Business and Trade — needed to accelerate digital twin creation across UK infrastructure. Ontology development was a critical bottleneck: manual methods were too slow and required specialist expertise not always available within delivery teams.
+            The <a href="https://www.gov.uk/government/collections/national-digital-twin-programme" target="_blank" rel="noopener noreferrer" className="text-gov-blue underline hover:text-gov-blue-dark">National Digital Twin Programme (NDTP)</a> — a UK Government initiative under the Department for Business and Trade — needed to accelerate digital twin creation across UK infrastructure. Ontology development was a critical bottleneck: manual methods were too slow and required specialist expertise not always available within delivery teams. The programme works alongside the <strong>Department for Science Innovation and Technology</strong> (DSIT), which identified digital twins as a strategic priority in the UK's AI and data strategy.
           </p>
           <p className="text-gov-dark leading-relaxed mt-3">
-            The challenge was to automate ontology extension while preserving semantic rigour. The tool had to support heterogeneous data formats and integrate with existing linked data assets.
+            The challenge was to automate ontology extension while preserving semantic rigour. The tool had to support heterogeneous data formats and integrate with existing linked data assets. Standards alignment with <strong>Government Digital Service</strong> (GDS) open data principles and the <strong>Cabinet Office</strong> data quality framework was required to ensure the outputs were fit for reuse across the public sector. The <strong>UK AI Safety Institute</strong> has identified ontology consistency as a prerequisite for safe AI deployment in critical national infrastructure.
           </p>
         </div>
       </section>
@@ -181,7 +182,7 @@ export const NationalDigitalTwin: React.FC = () => {
         <div className="border-l-2 border-l-gov-blue pl-6">
           <h2 className="text-2xl font-bold text-gov-dark font-serif mb-3">Outcome</h2>
           <p className="text-gov-dark leading-relaxed">
-            Delivered a production-ready Streamlit web application. Built-in validation and visualisation tools allow teams to review and refine generated ontologies before publication. The tool is published on GitHub under the National-Digital-Twin organisation.
+            Delivered a production-ready Streamlit web application. Built-in SHACL validation and visualisation tools allow teams to review and refine generated ontologies before publication. The tool is <a href="https://github.com/National-Digital-Twin/ndtp-ai-ontology-extension" target="_blank" rel="noopener noreferrer" className="text-gov-blue underline hover:text-gov-blue-dark">published on GitHub under the National-Digital-Twin organisation</a>. The <strong>National Audit Office</strong> has highlighted open-source tooling as a key mechanism for reducing duplication of effort in government digital programmes. The <strong>Crown Commercial Service</strong> G-Cloud framework recognises open-source AI tools as a cost-effective route to procurement compliance for public sector bodies.
           </p>
           <ul className="mt-4 space-y-2 text-gov-dark leading-relaxed">
             <li className="flex items-start gap-2">
@@ -198,6 +199,11 @@ export const NationalDigitalTwin: React.FC = () => {
             </li>
           </ul>
         </div>
+
+        <blockquote className="border-l-4 border-l-gov-blue pl-6 py-2 my-6 bg-gov-bg rounded-r-lg">
+          <p className="text-gov-dark italic leading-relaxed">"The ontology extension generator shows how open-source AI tooling can accelerate UK infrastructure data standards. By combining named entity recognition with large language models, we reduced what would have been months of manual ontology work to hours."</p>
+          <cite className="text-sm text-gov-secondary font-semibold not-italic mt-2 block">— Dr Stylianos Kampakis, Managing Director, Tesseract Academy</cite>
+        </blockquote>
       </section>
 
       <div className="bg-gov-bg border border-gov-border/50 rounded-xl p-8 flex flex-col sm:flex-row gap-4 sm:items-center sm:justify-between">

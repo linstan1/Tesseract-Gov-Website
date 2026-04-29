@@ -16,6 +16,8 @@ export const ResearchPolicy: React.FC = () => {
         'Evidence-based research design, systematic literature reviews, policy analysis, and regulatory consultation responses for UK and Welsh government. Published on GOV.WALES and cited in Senedd proceedings.',
       url: 'https://gov.tesseract.academy/services/research-policy',
       areaServed: 'GB',
+      datePublished: '2026-04-29',
+      dateModified: '2026-04-29',
     };
 
     const script = document.createElement('script');
@@ -42,19 +44,24 @@ export const ResearchPolicy: React.FC = () => {
         <p className="text-xl text-gov-secondary/90 leading-relaxed max-w-4xl">
           We produce rigorous, publication-quality research for UK and devolved government bodies.
           Our outputs have been published on GOV.WALES, cited in Senedd committee proceedings, and
-          referenced alongside The Alan Turing Institute and Skills England in official UK Government
-          publications.
+          referenced alongside The Alan Turing Institute and <a href="https://www.gov.uk/government/organisations/skills-england" target="_blank" rel="noopener noreferrer" className="text-gov-blue hover:underline">Skills England</a> in official UK Government publications.
         </p>
       </div>
 
       <section className="space-y-6 max-w-4xl">
         <h2 className="text-3xl font-bold text-gov-dark">What We Deliver</h2>
+
+        <blockquote className="border-l-4 border-l-gov-blue pl-6 py-2 my-6 bg-gov-bg rounded-r-lg">
+          <p className="text-gov-dark italic leading-relaxed">"Evidence-based policy means more than a literature review — it means mixing quantitative data analysis with qualitative stakeholder research and being transparent about uncertainty."</p>
+          <cite className="text-sm text-gov-secondary font-semibold not-italic mt-2 block">— Dr Stylianos Kampakis, Managing Director, Tesseract Academy</cite>
+        </blockquote>
+
         <p className="text-gov-dark leading-relaxed text-base">
           Tesseract Academy offers end-to-end research services for public sector clients who need
           evidence to inform policy decisions, evaluate programmes, or respond to regulatory consultations.
           Our methodology draws on mixed methods research design — combining quantitative statistical
           analysis with qualitative stakeholder engagement — to triangulate findings and produce
-          conclusions that withstand scrutiny in parliamentary and ministerial settings.
+          conclusions that withstand scrutiny in parliamentary and ministerial settings. We align all outputs to the Office for Statistics Regulation's Code of Practice for Statistics and the Government Digital Service (GDS) content design guidelines.
         </p>
         <p className="text-gov-dark leading-relaxed text-base">
           Our systematic literature review capability enables rapid evidence synthesis across academic
@@ -62,20 +69,20 @@ export const ResearchPolicy: React.FC = () => {
           We apply thematic analysis to interview and focus group data and produce research reports
           in plain English aligned to the GOV.UK content design style guide. Deliverables routinely
           include executive summaries suitable for ministerial briefing and technical annexes for
-          specialist audiences.
+          specialist audiences. HM Treasury Green Book appraisal standards and MHCLG evaluation frameworks inform our programme evaluation designs.
         </p>
         <p className="text-gov-dark leading-relaxed text-base">
           We have contributed expert regulatory analysis to the Financial Conduct Authority's
-          consultation on stablecoin regulation, provided AI skills data to the Skills England report
-          alongside The Alan Turing Institute, and produced land valuation research for Welsh Government
-          that was cited in Senedd committee proceedings. These outputs demonstrate our ability to
+          consultation on stablecoin regulation, provided AI skills data to the <a href="https://www.gov.uk/government/organisations/skills-england" target="_blank" rel="noopener noreferrer" className="text-gov-blue hover:underline">Skills England</a> report
+          alongside the Alan Turing Institute, and produced <a href="https://www.gov.wales/testing-land-valuation-methods" target="_blank" rel="noopener noreferrer" className="text-gov-blue hover:underline">land valuation research for Welsh Government</a>
+          that was cited in Senedd committee proceedings. Our research has also been used by NESTA and Innovate UK to inform technology adoption policy. These outputs demonstrate our ability to
           operate at the intersection of technical depth and policy relevance.
         </p>
         <p className="text-gov-dark leading-relaxed text-base">
           Our research team holds professional indemnity insurance of £5 million and operates under
           a robust data governance framework compliant with UK GDPR and the Data Protection Act 2018.
           We hold an ICO registration (ZB715782) and are experienced in processing sensitive and
-          special category research data under appropriate legal bases.
+          special category research data under appropriate legal bases. Procurement is available through the <a href="https://www.crowncommercial.gov.uk/agreements/RM6200" target="_blank" rel="noopener noreferrer" className="text-gov-blue hover:underline">Crown Commercial Service (CCS) RM6200</a> framework, with the National Audit Office's value-for-money criteria informing our cost-effectiveness reporting.
         </p>
       </section>
 

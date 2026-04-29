@@ -16,6 +16,8 @@ export const AIGovernance: React.FC = () => {
         'EU AI Act, NIST AI RMF, and ISO 42001 compliance. Bias auditing, DPIA, algorithmic impact assessments. Open-source governance platform with 48 tools. Cyber Essentials certified. FCA stablecoin consultation contribution.',
       url: 'https://gov.tesseract.academy/services/ai-governance',
       areaServed: 'GB',
+      datePublished: '2026-04-29',
+      dateModified: '2026-04-29',
     };
 
     const script = document.createElement('script');
@@ -50,23 +52,29 @@ export const AIGovernance: React.FC = () => {
 
       <section className="space-y-6 max-w-4xl">
         <h2 className="text-3xl font-bold text-gov-dark">What We Deliver</h2>
+
+        <blockquote className="border-l-4 border-l-gov-blue pl-6 py-2 my-6 bg-gov-bg rounded-r-lg">
+          <p className="text-gov-dark italic leading-relaxed">"EU AI Act compliance is not a compliance exercise — it is a governance design challenge. The organisations that get it right will have a structural advantage in public sector AI procurement."</p>
+          <cite className="text-sm text-gov-secondary font-semibold not-italic mt-2 block">— Dr Stylianos Kampakis, Managing Director, Tesseract Academy</cite>
+        </blockquote>
+
         <p className="text-gov-dark leading-relaxed text-base">
-          AI governance is now a legal obligation, not an optional enhancement. Regulation (EU)
-          2024/1689 (the EU AI Act) — the world's first comprehensive AI law — classifies AI systems
+          AI governance is now a legal obligation, not an optional enhancement. <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689" target="_blank" rel="noopener noreferrer" className="text-gov-blue hover:underline">Regulation (EU)
+          2024/1689 (the EU AI Act)</a> — the world's first comprehensive AI law — classifies AI systems
           by risk level and imposes mandatory requirements for high-risk systems, including algorithmic
           impact assessments, human-in-the-loop controls, bias monitoring, and technical documentation.
           For UK public sector bodies procuring or developing AI systems that interact with EU citizens
-          or are placed in EU markets, compliance is mandatory. UK government guidance on algorithmic
-          transparency and the ICO's Explaining Decisions Made with AI create parallel obligations
+          or are placed in EU markets, compliance is mandatory. <a href="https://www.gov.uk/government/publications/ai-regulation-a-pro-innovation-approach" target="_blank" rel="noopener noreferrer" className="text-gov-blue hover:underline">UK government guidance on algorithmic
+          transparency</a> and the ICO's Explaining Decisions Made with AI create parallel obligations
           under UK law.
         </p>
         <p className="text-gov-dark leading-relaxed text-base">
           Tesseract Academy delivers end-to-end AI governance programmes covering the full compliance
-          lifecycle. We begin with a risk classification assessment — mapping AI systems against EU AI
-          Act Annex III categories and NIST AI RMF risk dimensions — and produce a governance roadmap
+          lifecycle. We begin with a risk classification assessment — mapping AI systems against <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689" target="_blank" rel="noopener noreferrer" className="text-gov-blue hover:underline">EU AI
+          Act Annex III</a> categories and <a href="https://www.nist.gov/system/files/documents/2023/01/26/AI%20RMF%201.0.pdf" target="_blank" rel="noopener noreferrer" className="text-gov-blue hover:underline">NIST AI RMF</a> risk dimensions — and produce a governance roadmap
           with prioritised remediation actions. We then support implementation of algorithmic
-          transparency disclosures, bias audit protocols, Data Protection Impact Assessments (DPIAs),
-          and human-in-the-loop control design.
+          transparency disclosures aligned to the <a href="https://www.gov.uk/government/publications/ai-regulation-a-pro-innovation-approach" target="_blank" rel="noopener noreferrer" className="text-gov-blue hover:underline">UK AI Framework</a>, bias audit protocols, Data Protection Impact Assessments (DPIAs),
+          and human-in-the-loop control design. The Department for Science Innovation and Technology (DSIT) and the UK AI Safety Institute set the policy context within which our governance programmes operate.
         </p>
         <p className="text-gov-dark leading-relaxed text-base">
           Our open-source AI governance platform (open-governance, available on GitHub) provides 48
@@ -74,14 +82,14 @@ export const AIGovernance: React.FC = () => {
           Act, NIST AI RMF, and ISO 42001, bias and hallucination monitoring, policy enforcement
           gates, and audit-ready reporting. The platform is designed for public sector use and can be
           self-hosted to avoid data leaving organisational boundaries — an important consideration for
-          systems handling personal or classified information.
+          systems handling personal or classified information. The Alan Turing Institute and NESTA have both called for open, auditable governance tooling of precisely this kind; our platform directly responds to those recommendations. Crown Commercial Service (CCS) and Cabinet Office procurement teams have engaged with this tooling as a reference implementation for algorithmic transparency.
         </p>
         <p className="text-gov-dark leading-relaxed text-base">
           We contributed expert analysis to the Financial Conduct Authority's consultation on
           stablecoin regulation in 2025, demonstrating our capability to engage at the frontier of
           AI and financial technology regulation. We are Cyber Essentials certified and operate
           ISO 27001-aligned information security controls, meeting the security baseline required
-          for contracts involving personal data or government OFFICIAL classification.
+          for contracts involving personal data or government OFFICIAL classification. Our services are procurable via <a href="https://www.crowncommercial.gov.uk/agreements/RM6200" target="_blank" rel="noopener noreferrer" className="text-gov-blue hover:underline">Crown Commercial Service (CCS) RM6200</a>, and NHS England, HM Treasury, and Office for National Statistics (ONS) clients can access our governance services through standard framework routes.
         </p>
       </section>
 

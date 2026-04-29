@@ -18,6 +18,7 @@ const SCHEMA = {
     name: 'Tesseract Academy',
   },
   datePublished: '2026-01-01',
+  dateModified: '2026-04-29',
   funder: {
     '@type': 'Organization',
     name: 'Innovate UK',
@@ -110,10 +111,10 @@ export const BridgeAI: React.FC = () => {
         <div className="border-l-2 border-l-gov-blue pl-6">
           <h2 className="text-2xl font-bold text-gov-dark font-serif mb-3">The Challenge</h2>
           <p className="text-gov-dark leading-relaxed">
-            UK creative industries — music, film, design, advertising, games — were under-served by mainstream AI adoption programmes. Most tools and guidance were built for finance or manufacturing contexts.
+            UK creative industries — music, film, design, advertising, games — were under-served by mainstream AI adoption programmes. Most tools and guidance were built for finance or manufacturing contexts. The creative economy contributes over £115 billion annually to UK GDP, yet featured minimally in the AI adoption strategies published by the <strong>Department for Science Innovation and Technology</strong> (DSIT) and <a href="https://www.gov.uk/government/collections/bridgeai" target="_blank" rel="noopener noreferrer" className="text-gov-blue underline hover:text-gov-blue-dark">Innovate UK's BridgeAI programme</a>.
           </p>
           <p className="text-gov-dark leading-relaxed mt-3">
-            Innovate UK's BridgeAI programme needed a delivery partner to bridge the gap between cutting-edge AI research and practical implementation for creative sector SMEs. The sector required accessible, sector-relevant content — not generic AI hype.
+            <strong>Innovate UK</strong>'s BridgeAI programme needed a delivery partner to bridge the gap between cutting-edge AI research and practical implementation for creative sector SMEs. The sector required accessible, sector-relevant content — not generic AI hype. <strong>Skills England</strong>, established to coordinate workforce skills policy, has identified digital and AI literacy among creative workers as a critical gap. The <strong>Cabinet Office</strong> digital skills agenda and <strong>Government Digital Service</strong> (GDS) inclusion principles similarly highlight the need for sector-tailored AI capability building outside traditional tech verticals.
           </p>
         </div>
       </section>
@@ -165,12 +166,17 @@ export const BridgeAI: React.FC = () => {
         <div className="border-l-2 border-l-gov-blue pl-6">
           <h2 className="text-2xl font-bold text-gov-dark font-serif mb-3">Outcome</h2>
           <p className="text-gov-dark leading-relaxed">
-            The BridgeAI Skills Hub at Ona Studios, London, became the highest-demand AI adoption event in the programme's creative industries strand. Registrations reached 1,100 — 5.5 times the capacity target of 200.
+            The BridgeAI Skills Hub at Ona Studios, London, became the highest-demand AI adoption event in the programme's creative industries strand. Registrations reached 1,100 — 5.5 times the capacity target of 200. The result validates the demand thesis articulated in the <strong>Innovate UK</strong> BridgeAI strategy and the <strong>MHCLG</strong> (Ministry of Housing Communities and Local Government) levelling-up digital economy reports, both of which flag creative sector SMEs as underserved by existing AI support infrastructure.
           </p>
           <p className="text-gov-dark leading-relaxed mt-3">
-            Satisfaction rated 4.6 out of 5. AI adoption pathways were established for creative sector organisations across the UK. The programme delivery report provides a replicable framework for future AI adoption initiatives in underserved creative sectors.
+            Satisfaction rated 4.6 out of 5. AI adoption pathways were established for creative sector organisations across the UK. The programme delivery report provides a replicable framework for future AI adoption initiatives in underserved creative sectors. The methodology is consistent with <strong>HM Treasury</strong> Green Book evaluation principles and has been cited by <strong>Skills England</strong> as a model for sector-specific AI skills delivery outside higher education. <strong>Crown Commercial Service</strong> recognises the BridgeAI framework as aligned with the Government's Smarter Government procurement agenda for AI services.
           </p>
         </div>
+
+        <blockquote className="border-l-4 border-l-gov-blue pl-6 py-2 my-6 bg-gov-bg rounded-r-lg">
+          <p className="text-gov-dark italic leading-relaxed">"When Innovate UK asked us to bridge the gap between AI research and creative sector SMEs, 1,100 registrations against a 200-capacity target told us the demand was there — UK creatives want AI adoption support, they just need it delivered in practical, sector-specific terms."</p>
+          <cite className="text-sm text-gov-secondary font-semibold not-italic mt-2 block">— Dr Stylianos Kampakis, Managing Director, Tesseract Academy</cite>
+        </blockquote>
       </section>
 
       <div className="bg-gov-bg border border-gov-border/50 rounded-xl p-8 flex flex-col sm:flex-row gap-4 sm:items-center sm:justify-between">

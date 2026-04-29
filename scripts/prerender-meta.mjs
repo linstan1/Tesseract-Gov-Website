@@ -94,6 +94,10 @@ const PAGE_META = {
     title: 'AI Ethics & Governance | Tesseract Government Gateway',
     description: 'EU AI Act, NIST AI RMF, ISO 42001 compliance. Bias auditing, algorithmic impact assessments. Open-source governance platform (48 tools). Cyber Essentials certified. FCA stablecoin consultation.',
   },
+  '/insights': {
+    title: 'UK Public Sector AI Insights — Research Findings | Tesseract Government Gateway',
+    description: 'Original research from Tesseract Academy: civil service AI upskilling achieves 91% completion, land valuation ML analysis across 1,916 Welsh LSOAs, BridgeAI 450% oversubscription. Evidence from UK government AI delivery 2022-2026.',
+  },
 };
 
 function escapeHtmlAttr(str) {

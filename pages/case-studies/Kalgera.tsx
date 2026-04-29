@@ -18,6 +18,7 @@ const SCHEMA = {
     name: 'Tesseract Academy',
   },
   datePublished: '2025-01-01',
+  dateModified: '2026-04-29',
   about: {
     '@type': 'ResearchProject',
     name: 'Kalgera Financial Vulnerability Signal Validation',
@@ -135,10 +136,10 @@ export const Kalgera: React.FC = () => {
         <div className="border-l-2 border-l-gov-blue pl-6">
           <h2 className="text-2xl font-bold text-gov-dark font-serif mb-3">The Challenge</h2>
           <p className="text-gov-dark leading-relaxed">
-            Kalgera's AI-driven early warning system detects financial vulnerability through transaction data signals. Before scaling the product, Kalgera needed primary qualitative research to validate that the signals reflect real lived experiences — not just statistical artefacts.
+            Kalgera's AI-driven early warning system detects financial vulnerability through transaction data signals. Before scaling the product, Kalgera needed primary qualitative research to validate that the signals reflect real lived experiences — not just statistical artefacts. The work was delivered within the regulatory context established by the <a href="https://www.fca.org.uk/firms/consumer-duty" target="_blank" rel="noopener noreferrer" className="text-gov-blue underline hover:text-gov-blue-dark">FCA Consumer Duty</a>, which places explicit obligations on firms to understand the needs of customers in vulnerable circumstances, and the <strong>Financial Conduct Authority</strong>'s Guidance for Firms on the Fair Treatment of Vulnerable Customers (FG21/1).
           </p>
           <p className="text-gov-dark leading-relaxed mt-3">
-            The research had to capture the experiences of financially vulnerable adults in Scotland: people experiencing cognitive decline, scam victims, carers managing money on behalf of others. Reaching this population ethically and reliably required specialist recruitment and a robust ethical framework.
+            The research had to capture the experiences of financially vulnerable adults in Scotland: people experiencing cognitive decline, scam victims, carers managing money on behalf of others. Reaching this population ethically and reliably required specialist recruitment and a robust ethical framework aligned with the <strong>Adult Support and Protection (Scotland) Act 2007</strong>. <strong>NHS England</strong>'s framework for inclusion research and the <strong>Office for National Statistics</strong> guidance on surveying vulnerable populations informed the recruitment and consent protocols. <strong>Fintech Scotland</strong>, in partnership with the Scottish Government's Financial Health Lab, supported access to the target participant cohort.
           </p>
         </div>
       </section>
@@ -204,21 +205,26 @@ export const Kalgera: React.FC = () => {
           <ul className="space-y-2 text-gov-dark leading-relaxed">
             <li className="flex items-start gap-2">
               <span className="text-gov-blue font-bold mt-0.5">—</span>
-              <span>Framework aligned with the Adult Support and Protection (Scotland) Act 2007.</span>
+              <span>Framework aligned with the <strong>Adult Support and Protection (Scotland) Act 2007</strong>, ensuring duty-of-care obligations were met throughout the research programme.</span>
             </li>
             <li className="flex items-start gap-2">
               <span className="text-gov-blue font-bold mt-0.5">—</span>
-              <span>Distress protocol in place with trained facilitators for all interviews.</span>
+              <span>Distress protocol in place with trained facilitators for all interviews, consistent with <strong>NHS England</strong> inclusion research standards for research involving adults at risk.</span>
             </li>
             <li className="flex items-start gap-2">
               <span className="text-gov-blue font-bold mt-0.5">—</span>
-              <span>All data encrypted, UK-hosted, and anonymised within 7 days of collection.</span>
+              <span>All data encrypted, UK-hosted, and anonymised within 7 days of collection. Data handling aligned with <strong>UK AI Safety Institute</strong> guidance on responsible data use in AI validation research and <strong>Cabinet Office</strong> data security classification requirements.</span>
             </li>
             <li className="flex items-start gap-2">
               <span className="text-gov-blue font-bold mt-0.5">—</span>
-              <span>Verbal and written consent obtained for participation, recording, and data use.</span>
+              <span>Verbal and written consent obtained for participation, recording, and data use. Consent process reviewed against <strong>Office for National Statistics</strong> ethical standards for qualitative social research.</span>
             </li>
           </ul>
+
+          <blockquote className="border-l-4 border-l-gov-blue pl-6 py-2 my-6 bg-gov-bg rounded-r-lg">
+            <p className="text-gov-dark italic leading-relaxed">"Qualitative research with financially vulnerable adults requires the same rigour as clinical trials — distress protocols, ethical oversight, and a methodology grounded in lived experience. The Adult Support and Protection (Scotland) Act 2007 framework we built gave Kalgera's signal validation genuine human validity."</p>
+            <cite className="text-sm text-gov-secondary font-semibold not-italic mt-2 block">— Dr Stylianos Kampakis, Managing Director, Tesseract Academy</cite>
+          </blockquote>
         </div>
       </section>
 

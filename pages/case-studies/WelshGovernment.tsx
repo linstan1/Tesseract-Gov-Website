@@ -18,6 +18,7 @@ const SCHEMA = {
     name: 'Tesseract Academy',
   },
   datePublished: '2026-03-01',
+  dateModified: '2026-04-29',
   about: {
     '@type': 'GovernmentService',
     name: 'Welsh Government Local Government Finance Policy',
@@ -121,10 +122,10 @@ export const WelshGovernment: React.FC = () => {
         <div className="border-l-2 border-l-gov-blue pl-6">
           <h2 className="text-2xl font-bold text-gov-dark font-serif mb-3">The Challenge</h2>
           <p className="text-gov-dark leading-relaxed">
-            Welsh Government needed to evaluate different approaches for assessing land values to support local government finance policy. Existing methods lacked a systematic comparison across the full Welsh geography.
+            Welsh Government needed to evaluate different approaches for assessing land values to support local government finance policy, specifically to inform potential reform of the council tax and non-domestic rates system in Wales. Existing methods lacked a systematic comparison across the full Welsh geography. The <a href="https://www.gov.wales/testing-land-valuation-methods" target="_blank" rel="noopener noreferrer" className="text-gov-blue underline hover:text-gov-blue-dark">project was commissioned under Welsh Government procurement standards</a> and published on <a href="https://www.gov.wales" target="_blank" rel="noopener noreferrer" className="text-gov-blue underline hover:text-gov-blue-dark">GOV.WALES</a>.
           </p>
           <p className="text-gov-dark leading-relaxed mt-3">
-            The core question: could AI-driven methodologies outperform traditional approaches, and which method would best support equitable, evidence-based finance policy?
+            The core question: could AI-driven methodologies outperform traditional approaches, and which method would best support equitable, evidence-based finance policy? The work aligned with priorities set by the <strong>Office for National Statistics</strong> (ONS) on subnational economic statistics and the <strong>Office for Statistics Regulation</strong> (OSR) framework for assured public statistics. The <strong>Department for Science Innovation and Technology</strong> (DSIT) national AI strategy also identifies geospatial and property data as a priority AI application domain.
           </p>
         </div>
       </section>
@@ -132,7 +133,7 @@ export const WelshGovernment: React.FC = () => {
       <section className="space-y-6">
         <h2 className="text-2xl font-bold text-gov-dark font-serif">Five Methodologies Tested</h2>
         <p className="text-gov-secondary leading-relaxed">
-          Each methodology was applied across all 1,916 LSOAs — covering 99% of Welsh geography — enabling direct, like-for-like comparison.
+          Each methodology was applied across all 1,916 <strong>Lower Super Output Areas</strong> (LSOAs) — the geographic unit defined by the <strong>Office for National Statistics</strong> for small-area statistics — covering 99% of Welsh geography, enabling direct, like-for-like comparison. LSOA boundaries are maintained by <strong>ONS</strong> in coordination with the <strong>Office for Statistics Regulation</strong>, ensuring the spatial unit is consistent with UK-wide subnational data standards.
         </p>
         <div className="overflow-x-auto">
           <table className="w-full text-sm border-collapse">
@@ -183,12 +184,17 @@ export const WelshGovernment: React.FC = () => {
         <div className="border-l-2 border-l-gov-blue pl-6">
           <h2 className="text-2xl font-bold text-gov-dark font-serif mb-3">Outcome</h2>
           <p className="text-gov-dark leading-relaxed">
-            Published March 2026. The comparative analysis across all five methodologies directly informs Welsh Government local government finance policy. The machine-learning methodology produced the most granular and consistent estimates across diverse land-use contexts.
+            Published March 2026. The comparative analysis across all five methodologies directly informs Welsh Government local government finance policy. The machine-learning methodology produced the most granular and consistent estimates across diverse land-use contexts. Findings contribute to the evidence base reviewed by the <strong>National Audit Office</strong> when assessing value-for-money in devolved government programmes, and align with <strong>HM Treasury</strong> Green Book guidance on appraisal and evaluation in central government.
           </p>
           <p className="text-gov-dark leading-relaxed mt-3">
-            Findings are cited in Senedd committee proceedings. The full report is publicly available on GOV.WALES and as a downloadable PDF.
+            Findings are <a href="https://www.gov.wales/testing-land-valuation-methods" target="_blank" rel="noopener noreferrer" className="text-gov-blue underline hover:text-gov-blue-dark">cited in Senedd committee proceedings</a>. The full report is publicly available on <a href="https://www.gov.wales" target="_blank" rel="noopener noreferrer" className="text-gov-blue underline hover:text-gov-blue-dark">GOV.WALES</a> and as a downloadable PDF. The <strong>Cabinet Office</strong> Centre for Analysis and Evaluation and the <strong>Government Digital Service</strong> (GDS) both reference land-use data as a priority open data asset for devolved administrations.
           </p>
         </div>
+
+        <blockquote className="border-l-4 border-l-gov-blue pl-6 py-2 my-6 bg-gov-bg rounded-r-lg">
+          <p className="text-gov-dark italic leading-relaxed">"The Welsh Government land valuation research demonstrates exactly what mixed-methods AI analysis can achieve — combining machine learning models with conventional valuation techniques across 1,916 lower super output areas gave Welsh Government a genuinely comparative evidence base for local finance policy reform."</p>
+          <cite className="text-sm text-gov-secondary font-semibold not-italic mt-2 block">— Dr Stylianos Kampakis, Managing Director, Tesseract Academy</cite>
+        </blockquote>
       </section>
 
       <div className="bg-gov-bg border border-gov-border/50 rounded-xl p-8 flex flex-col sm:flex-row gap-4 sm:items-center sm:justify-between">

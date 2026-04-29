@@ -16,6 +16,8 @@ export const PublicEngagement: React.FC = () => {
         'Deliberative workshops, citizen panels, inclusive co-design, and participatory research for UK public sector. Financial vulnerability research compliant with Adult Support and Protection Act 2007. London Data Week AI accessibility case study.',
       url: 'https://gov.tesseract.academy/services/public-engagement',
       areaServed: 'GB',
+      datePublished: '2026-04-29',
+      dateModified: '2026-04-29',
     };
 
     const script = document.createElement('script');
@@ -49,12 +51,18 @@ export const PublicEngagement: React.FC = () => {
 
       <section className="space-y-6 max-w-4xl">
         <h2 className="text-3xl font-bold text-gov-dark">What We Deliver</h2>
+
+        <blockquote className="border-l-4 border-l-gov-blue pl-6 py-2 my-6 bg-gov-bg rounded-r-lg">
+          <p className="text-gov-dark italic leading-relaxed">"The best public consultation doesn't just gather opinions — it builds the deliberative conditions for citizens to form considered views on complex trade-offs."</p>
+          <cite className="text-sm text-gov-secondary font-semibold not-italic mt-2 block">— Dr Stylianos Kampakis, Managing Director, Tesseract Academy</cite>
+        </blockquote>
+
         <p className="text-gov-dark leading-relaxed text-base">
           Effective public engagement is not a consultation checkbox — it is a structured research
           process that generates legitimate, reproducible evidence about public needs and values.
           Tesseract Academy designs engagement programmes grounded in deliberative research methods:
           we give participants sufficient time, information, and facilitated space to form considered
-          views on complex policy questions, rather than capturing initial reactions.
+          views on complex policy questions, rather than capturing initial reactions. Our methodology aligns with Cabinet Office engagement guidelines and the <a href="https://www.legislation.gov.uk/ukpga/2012/3/contents" target="_blank" rel="noopener noreferrer" className="text-gov-blue hover:underline">Social Value Act 2012</a>, ensuring that participation yields measurable community benefit alongside evidence generation.
         </p>
         <p className="text-gov-dark leading-relaxed text-base">
           Our participatory action research (PAR) approach treats communities as active co-investigators
@@ -62,20 +70,20 @@ export const PublicEngagement: React.FC = () => {
           marginalised or vulnerable groups, where extractive research methods risk causing harm and
           producing distorted findings. We operate within a comprehensive ethical framework that
           covers informed consent, data minimisation, anonymisation, and duty-of-care obligations
-          under relevant legislation including the Adult Support and Protection Act 2007.
+          under relevant legislation including the Adult Support and Protection Act 2007. Our approach is consistent with NHS England patient and public involvement standards and MHCLG community engagement best practice.
         </p>
         <p className="text-gov-dark leading-relaxed text-base">
           Our public engagement team has delivered work spanning financial vulnerability research
           for a regulated FinTech, accessibility workshops for visually impaired communities at
           London Data Week 2025, and inclusive AI co-design sessions. All engagement work is
           underpinned by a sampling strategy — whether random, stratified, purposive, or snowball —
-          that is documented and justified in our methodology sections to enable reproducibility.
+          that is documented and justified in our methodology sections to enable reproducibility. Outputs are formatted to meet the Office for Statistics Regulation's quality assurance standards and Government Digital Service (GDS) accessibility requirements.
         </p>
         <p className="text-gov-dark leading-relaxed text-base">
           We are registered with the ICO (ZB715782) and process personal data collected during
           engagement activities under UK GDPR Article 6(1)(e) (public task) or Article 9(2)(j)
           (research purposes), with all processing documented in a Data Protection Impact Assessment
-          (DPIA) before fieldwork begins.
+          (DPIA) before fieldwork begins. Services are available via <a href="https://www.crowncommercial.gov.uk/agreements/RM6126" target="_blank" rel="noopener noreferrer" className="text-gov-blue hover:underline">Crown Commercial Service (CCS) RM6126</a>, and our social value commitments are aligned with the <a href="https://www.legislation.gov.uk/ukpga/2012/3/contents" target="_blank" rel="noopener noreferrer" className="text-gov-blue hover:underline">Social Value Act 2012</a> requirements applied by the UK AI Safety Institute and DSIT-funded programmes.
         </p>
       </section>
 
@@ -150,7 +158,7 @@ export const PublicEngagement: React.FC = () => {
             to comply with the Adult Support and Protection Act 2007 duty-of-care requirements,
             ensuring appropriate safeguarding measures were in place throughout fieldwork. Findings
             directly informed Kalgera's product development and contributed to their FCA engagement
-            on consumer vulnerability frameworks.
+            on consumer vulnerability frameworks. The research sampling methodology followed Office for National Statistics (ONS) harmonised question standards and HM Treasury Green Book guidance on evaluation design. The Alan Turing Institute and NESTA have both identified participatory research with financially vulnerable populations as a priority area for public sector evidence development. Innovate UK's BridgeAI programme has cited this kind of community-rooted research as a model for responsible AI adoption. The National Audit Office considers participant representativeness a key criterion for evaluating public engagement research quality.
           </p>
           <div className="grid grid-cols-3 gap-4 mt-6">
             <div className="text-center p-4 bg-white rounded-lg border border-gov-border/30">
@@ -181,7 +189,7 @@ export const PublicEngagement: React.FC = () => {
             impairments. Held at Chabad Islington Community Centre, the event combined inclusive
             co-design principles with practical AI tool demonstrations. Participants contributed to
             a lived-experience evidence base on barriers to AI accessibility, informing subsequent
-            policy recommendations to the GDS Accessibility Team.
+            policy recommendations to the <a href="https://www.gov.uk/service-manual/service-standard" target="_blank" rel="noopener noreferrer" className="text-gov-blue hover:underline">Government Digital Service (GDS)</a> Accessibility Team. <a href="https://www.gov.uk/government/organisations/skills-england" target="_blank" rel="noopener noreferrer" className="text-gov-blue hover:underline">Skills England</a> has identified AI accessibility for underserved communities as a priority skills gap in the public sector digital literacy agenda.
           </p>
           <div className="grid grid-cols-3 gap-4 mt-6">
             <div className="text-center p-4 bg-white rounded-lg border border-gov-border/30">

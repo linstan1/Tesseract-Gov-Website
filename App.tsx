@@ -22,6 +22,7 @@ import { PublicEngagement } from './pages/services/PublicEngagement';
 import { SurveyDesign } from './pages/services/SurveyDesign';
 import { EducationUpskilling } from './pages/services/EducationUpskilling';
 import { AIGovernance } from './pages/services/AIGovernance';
+import { Insights } from './pages/Insights';
 
 const PAGE_META: Record<string, { title: string; description: string }> = {
   '/': {
@@ -104,6 +105,10 @@ const PAGE_META: Record<string, { title: string; description: string }> = {
     title: 'AI Ethics & Governance | Tesseract Government Gateway',
     description: 'EU AI Act, NIST AI RMF, ISO 42001 compliance. Bias auditing, algorithmic impact assessments. Open-source governance platform with 48 governance tools. Cyber Essentials certified.',
   },
+  '/insights': {
+    title: 'UK Public Sector AI Insights — Research Findings | Tesseract Government Gateway',
+    description: 'Original research from Tesseract Academy: civil service AI upskilling achieves 91% completion, land valuation ML analysis across 1,916 Welsh LSOAs, BridgeAI 450% oversubscription. Evidence from UK government AI delivery 2022-2026.',
+  },
 };
 
 const ScrollToTop = () => {
@@ -160,6 +165,7 @@ const App: React.FC = () => {
             <Route path="/services/survey-design" element={<SurveyDesign />} />
             <Route path="/services/education-upskilling" element={<EducationUpskilling />} />
             <Route path="/services/ai-governance" element={<AIGovernance />} />
+            <Route path="/insights" element={<Insights />} />
           </Routes>
         </main>
         <Footer />

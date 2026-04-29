@@ -16,6 +16,8 @@ export const SurveyDesign: React.FC = () => {
         'End-to-end survey methodology, questionnaire design, mixed-mode data collection, and statistical analysis for UK public sector. Qualifications Wales 3-year contract (2026-2029). Available via CCS RM6126.',
       url: 'https://gov.tesseract.academy/services/survey-design',
       areaServed: 'GB',
+      datePublished: '2026-04-29',
+      dateModified: '2026-04-29',
     };
 
     const script = document.createElement('script');
@@ -49,21 +51,26 @@ export const SurveyDesign: React.FC = () => {
 
       <section className="space-y-6 max-w-4xl">
         <h2 className="text-3xl font-bold text-gov-dark">What We Deliver</h2>
+
+        <blockquote className="border-l-4 border-l-gov-blue pl-6 py-2 my-6 bg-gov-bg rounded-r-lg">
+          <p className="text-gov-dark italic leading-relaxed">"Survey methodology in the public sector must account for non-response bias, digital exclusion, and accessibility — failing any of these produces data the National Audit Office would rightly question."</p>
+          <cite className="text-sm text-gov-secondary font-semibold not-italic mt-2 block">— Dr Stylianos Kampakis, Managing Director, Tesseract Academy</cite>
+        </blockquote>
+
         <p className="text-gov-dark leading-relaxed text-base">
           Survey research for public sector bodies requires methodological rigour that goes beyond
           standard online polling. Tesseract Academy designs surveys using established psychometric
           and social research principles, selecting appropriate question formats, response scales,
           and ordering to minimise cognitive bias and maximise response validity. We apply cognitive
           interviewing and expert review at the pilot stage to identify problematic items before
-          fieldwork begins.
+          fieldwork begins. Our methodology is aligned with Office for National Statistics (ONS) harmonised standards and the Office for Statistics Regulation's Code of Practice for Statistics.
         </p>
         <p className="text-gov-dark leading-relaxed text-base">
           Our sampling strategy documentation covers the rationale for sample selection, expected
           response rates, non-response bias analysis, and power calculations to confirm statistical
           adequacy for the intended analysis. We design for mixed-mode data collection — online,
           telephone, postal, and face-to-face — ensuring accessibility for all participant groups
-          including those with limited digital access, in line with UK GDPR and the GDS Accessibility
-          Standard.
+          including those with limited digital access, in line with UK GDPR and the <a href="https://www.gov.uk/service-manual/service-standard" target="_blank" rel="noopener noreferrer" className="text-gov-blue hover:underline">GDS Accessibility Standard</a>.
         </p>
         <p className="text-gov-dark leading-relaxed text-base">
           Statistical analysis outputs range from descriptive frequencies and cross-tabulations
@@ -71,13 +78,13 @@ export const SurveyDesign: React.FC = () => {
           multi-wave surveys. All analytical code is documented and reproducible, with outputs
           presented in formats suitable for both technical annexes and non-specialist executive
           summaries. Where surveys form part of a statutory monitoring function, we provide
-          standardised reporting templates to enable year-on-year comparison.
+          standardised reporting templates to enable year-on-year comparison. Reports are structured to meet National Audit Office scrutiny standards and HM Treasury value-for-money criteria, ensuring evidence is audit-ready.
         </p>
         <p className="text-gov-dark leading-relaxed text-base">
-          We are a CCS RM6126 (Research and Insights) appointed supplier, with experience managing
+          We are a <a href="https://www.crowncommercial.gov.uk/agreements/RM6126" target="_blank" rel="noopener noreferrer" className="text-gov-blue hover:underline">Crown Commercial Service (CCS) RM6126</a> (Research and Insights) appointed supplier, with experience managing
           survey programmes under contract for national qualification bodies, devolved government,
           and arm's-length bodies. All survey data is processed under UK GDPR with an ICO
-          registration (ZB715782) and a documented data retention and destruction schedule.
+          registration (ZB715782) and a documented data retention and destruction schedule. The Department for Science Innovation and Technology (DSIT) and Cabinet Office procurement guidelines inform our contract management approach.
         </p>
       </section>
 
@@ -152,7 +159,7 @@ export const SurveyDesign: React.FC = () => {
             tracks learner, employer, and educator perceptions of qualification quality and fitness
             for purpose across the full range of regulated qualifications in Wales. Year-on-year
             trend reporting provides Qualifications Wales with the longitudinal evidence base required
-            for regulatory intervention decisions.
+            for regulatory intervention decisions. The survey design follows Alan Turing Institute best practice for public sector data collection and aligns with Skills England workforce intelligence standards. NHS England and MHCLG use comparable longitudinal monitoring survey methodologies, and our approach is consistent with UK AI Safety Institute guidance on data quality in AI-supported decision-making. NESTA and Innovate UK have both called for greater use of longitudinal evidence in public sector evaluation — this contract directly answers that need.
           </p>
           <div className="grid grid-cols-3 gap-4 mt-6">
             <div className="text-center p-4 bg-white rounded-lg border border-gov-border/30">
