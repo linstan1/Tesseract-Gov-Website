@@ -100,7 +100,7 @@ const PAGE_META: Record<string, { title: string; description: string }> = {
   },
   '/services/education-upskilling': {
     title: 'AI Education & Upskilling | Tesseract Government Gateway',
-    description: 'AI literacy programmes, data science workshops, executive leadership training. 2,300 civil servants upskilled. 91% completion rate. UK Government Business Academy partner.',
+    description: 'AI literacy programmes, data science workshops, and executive leadership training for UK public sector. UK Government Business Academy partner. BridgeAI / Innovate UK programme delivery.',
   },
   '/services/ai-governance': {
     title: 'AI Ethics & Governance | Tesseract Government Gateway',
@@ -108,7 +108,7 @@ const PAGE_META: Record<string, { title: string; description: string }> = {
   },
   '/insights': {
     title: 'UK Public Sector AI Insights — Research Findings | Tesseract Government Gateway',
-    description: 'Original research from Tesseract Academy: civil service AI upskilling achieves 91% completion, land valuation ML analysis across 1,916 Welsh LSOAs, BridgeAI 450% oversubscription. Evidence from UK government AI delivery 2022-2026.',
+    description: 'Original research from Tesseract Academy: land valuation ML analysis across 1,916 Welsh LSOAs, BridgeAI 450% oversubscription, NDTP open-source ontology tooling. Evidence from UK government AI delivery 2022-2026.',
   },
 };
 

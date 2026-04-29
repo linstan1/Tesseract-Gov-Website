@@ -129,14 +129,6 @@ const COMPANY_DATA = {
       "year": "2026-2029",
       "duration": "3 years"
     },
-    {
-      "client": "UK Government Agency",
-      "title": "AI Literacy Civil Service Upskilling",
-      "year": "2024",
-      "civilServantsUpskilled": 2300,
-      "completionRateImprovement": "68% to 91%",
-      "engagementImprovement": "3.4 to 4.6 out of 5"
-    }
   ],
   "publications": [
     {

@@ -44,7 +44,7 @@ const PAGE_META = {
   },
   '/testimonials': {
     title: 'Testimonials & Executive Training | Tesseract Government Gateway',
-    description: 'Client reviews and executive AI training case studies. Workshops for US Navy (40+ participants), Vodafone, Philips leadership. 2,300 civil servants upskilled in 2024. Verified Clutch reviews.',
+    description: 'Client reviews and executive AI training case studies. Workshops for US Navy (40+ participants), Vodafone, Philips leadership. UK Government Business Academy webinars (2025). Verified Clutch reviews.',
   },
   '/about': {
     title: 'About Tesseract Academy - Team & Credentials | Tesseract Government Gateway',
@@ -88,7 +88,7 @@ const PAGE_META = {
   },
   '/services/education-upskilling': {
     title: 'AI Education & Upskilling | Tesseract Government Gateway',
-    description: '2,300 civil servants upskilled in 2024. Completion rate 68% → 91%. Engagement 3.4 → 4.6/5. US Navy executive workshop (40+ participants). UK Government Business Academy partner.',
+    description: 'AI literacy programmes, data science workshops, and executive leadership training. US Navy executive workshop (40+ participants). UK Government Business Academy webinars (2025). BridgeAI / Innovate UK delivery.',
   },
   '/services/ai-governance': {
     title: 'AI Ethics & Governance | Tesseract Government Gateway',
@@ -96,7 +96,7 @@ const PAGE_META = {
   },
   '/insights': {
     title: 'UK Public Sector AI Insights — Research Findings | Tesseract Government Gateway',
-    description: 'Original research from Tesseract Academy: civil service AI upskilling achieves 91% completion, land valuation ML analysis across 1,916 Welsh LSOAs, BridgeAI 450% oversubscription. Evidence from UK government AI delivery 2022-2026.',
+    description: 'Original research from Tesseract Academy: land valuation ML analysis across 1,916 Welsh LSOAs, BridgeAI 450% oversubscription, NDTP open-source ontology tooling. Evidence from UK government AI delivery 2022-2026.',
   },
 };
 

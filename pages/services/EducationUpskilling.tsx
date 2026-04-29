@@ -13,7 +13,7 @@ export const EducationUpskilling: React.FC = () => {
       },
       serviceType: 'Education and Professional Development',
       description:
-        'AI literacy programmes, data science workshops, and executive leadership training for UK public sector. 2,300 civil servants upskilled. Completion rate improved from 68% to 91%. UK Government Business Academy webinars, BridgeAI 1,100 registrations.',
+        'AI literacy programmes, data science workshops, and executive leadership training for UK public sector. UK Government Business Academy webinars (2025). BridgeAI / Innovate UK 1,100 registrations. US Navy executive workshop (40+ participants).',
       url: 'https://gov.tesseract.academy/services/education-upskilling',
       areaServed: 'GB',
       datePublished: '2026-04-29',
@@ -42,10 +42,11 @@ export const EducationUpskilling: React.FC = () => {
           AI Literacy and Data Science Training
         </h1>
         <p className="text-xl text-gov-secondary/90 leading-relaxed max-w-4xl">
-          We have upskilled more than 2,300 civil servants, government officials, and public sector
-          leaders in AI literacy and data science. Our programmes combine academic depth with
-          practical application, improving completion rates from 68% to 91% and learner engagement
-          scores from 3.4 to 4.6 out of 5.
+          We design and deliver AI literacy, data science, and executive leadership training for UK
+          public sector and government-funded programmes. Our work combines academic depth with
+          practical application — including three official UK Government Business Academy webinars
+          delivered in 2025 in partnership with the Department for Business and Trade, and BridgeAI
+          / Innovate UK programme delivery for creative industries.
         </p>
       </div>
 
@@ -83,10 +84,8 @@ export const EducationUpskilling: React.FC = () => {
         </p>
         <p className="text-gov-dark leading-relaxed text-base">
           Our BridgeAI partnership with <a href="https://www.gov.uk/government/organisations/innovate-uk" target="_blank" rel="noopener noreferrer" className="text-gov-blue hover:underline">Innovate UK</a> achieved 1,100 registrations across sector-specific
-          AI adoption workshops targeting creative industries, construction, and transport sectors.
-          Through this programme, we demonstrated that completion rates and engagement scores improve
-          significantly when training is contextualised to sector-specific use cases rather than
-          delivered as generic AI literacy content. The National Audit Office has identified AI upskilling as a critical value-for-money factor in public sector digital transformation — our measurable outcomes directly address this concern.
+          AI adoption workshops targeting creative industries, construction, and transport sectors —
+          a 450% oversubscription against the 200-place capacity target. The National Audit Office has identified AI upskilling as a critical value-for-money factor in public sector digital transformation, particularly when training is contextualised to specific government functions rather than delivered as generic AI literacy content.
         </p>
       </section>
 
@@ -103,12 +102,6 @@ export const EducationUpskilling: React.FC = () => {
               </tr>
             </thead>
             <tbody className="divide-y divide-gov-border/30">
-              <tr className="hover:bg-gov-bg/60 transition-colors">
-                <td className="px-6 py-4 text-gov-dark font-medium">Completion rate</td>
-                <td className="px-6 py-4 text-gov-dark">68% to 91% improvement evidenced</td>
-                <td className="px-6 py-4 text-gov-secondary">Typically 30-50% for self-paced</td>
-                <td className="px-6 py-4 text-gov-secondary">High — but long commitment required</td>
-              </tr>
               <tr className="hover:bg-gov-bg/60 transition-colors">
                 <td className="px-6 py-4 text-gov-dark font-medium">Sector-specific contextualisation</td>
                 <td className="px-6 py-4 text-gov-dark">Default for every programme</td>
@@ -133,12 +126,6 @@ export const EducationUpskilling: React.FC = () => {
                 <td className="px-6 py-4 text-gov-secondary">Generic AI ethics only</td>
                 <td className="px-6 py-4 text-gov-secondary">Academic frameworks — not operational</td>
               </tr>
-              <tr className="hover:bg-gov-bg/60 transition-colors">
-                <td className="px-6 py-4 text-gov-dark font-medium">Engagement score improvement</td>
-                <td className="px-6 py-4 text-gov-dark">3.4 to 4.6/5 documented</td>
-                <td className="px-6 py-4 text-gov-secondary">Not measured</td>
-                <td className="px-6 py-4 text-gov-secondary">Module evaluation — varies</td>
-              </tr>
             </tbody>
           </table>
         </div>
@@ -146,22 +133,18 @@ export const EducationUpskilling: React.FC = () => {
 
       <section>
         <h2 className="text-3xl font-bold text-gov-dark mb-4">Impact at a Glance</h2>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-          <div className="text-center p-6 bg-gov-bg border border-gov-border/40 rounded-xl">
-            <p className="text-4xl font-extrabold text-gov-blue">2,300+</p>
-            <p className="text-sm text-gov-secondary mt-2">Civil servants and public sector professionals upskilled</p>
-          </div>
-          <div className="text-center p-6 bg-gov-bg border border-gov-border/40 rounded-xl">
-            <p className="text-4xl font-extrabold text-gov-blue">91%</p>
-            <p className="text-sm text-gov-secondary mt-2">Programme completion rate (up from 68%)</p>
-          </div>
-          <div className="text-center p-6 bg-gov-bg border border-gov-border/40 rounded-xl">
-            <p className="text-4xl font-extrabold text-gov-blue">4.6/5</p>
-            <p className="text-sm text-gov-secondary mt-2">Learner engagement score (up from 3.4)</p>
-          </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="text-center p-6 bg-gov-bg border border-gov-border/40 rounded-xl">
             <p className="text-4xl font-extrabold text-gov-blue">1,100</p>
-            <p className="text-sm text-gov-secondary mt-2">BridgeAI workshop registrations (Innovate UK)</p>
+            <p className="text-sm text-gov-secondary mt-2">BridgeAI workshop registrations (Innovate UK) — 450% over capacity target</p>
+          </div>
+          <div className="text-center p-6 bg-gov-bg border border-gov-border/40 rounded-xl">
+            <p className="text-4xl font-extrabold text-gov-blue">3</p>
+            <p className="text-sm text-gov-secondary mt-2">Official UK Government Business Academy webinars (2025, in partnership with DBT)</p>
+          </div>
+          <div className="text-center p-6 bg-gov-bg border border-gov-border/40 rounded-xl">
+            <p className="text-4xl font-extrabold text-gov-blue">40+</p>
+            <p className="text-sm text-gov-secondary mt-2">US Navy senior leadership executive AI workshop participants</p>
           </div>
         </div>
       </section>

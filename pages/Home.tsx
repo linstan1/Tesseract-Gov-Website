@@ -21,7 +21,7 @@ export const Home: React.FC = () => {
             Tesseract Academy delivers AI consulting, research, public engagement, and survey design for UK government bodies. Crown Commercial Service appointed supplier on RM6200 (AI DPS), RM6094 (Spark DPS), and RM6126 (Research &amp; Insights DPS).
           </p>
           <p className="text-base text-gov-secondary/80 mb-10 max-w-3xl leading-relaxed">
-            Delivered for Welsh Government, Innovate UK, National Digital Twin Programme, Qualifications Wales, and Fintech Scotland. In 2024, our civil service AI upskilling programmes achieved a 91% completion rate — up from 68% — across 2,300 participants.
+            Delivered for Welsh Government, Innovate UK, National Digital Twin Programme, Qualifications Wales, and Fintech Scotland.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Button variant="start" onClick={() => navigate('/how-to-buy')}>
@@ -36,9 +36,8 @@ export const Home: React.FC = () => {
 
       {/* Key Metrics */}
       <div className="bg-gov-dark px-6 py-10">
-        <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
           {[
-            { value: "2,300", label: "Civil servants upskilled (2024)", sub: "91% completion rate" },
             { value: "1,916", label: "Welsh LSOAs analysed", sub: "99% of Welsh geography" },
             { value: "1,100", label: "BridgeAI registrations", sub: "vs 200 capacity target" },
             { value: "3", label: "CCS frameworks", sub: "RM6200 · RM6094 · RM6126" },
@@ -210,18 +209,18 @@ export const Home: React.FC = () => {
         <div className="py-12 border-t border-gov-border/30">
           <h3 className="text-center text-sm font-semibold text-gov-secondary uppercase tracking-wider mb-8">Trusted by public sector organisations</h3>
           <div className="flex flex-wrap items-center justify-center gap-8">
-            <img src="/logos/wag.png" alt="Welsh Government" width="400" height="420" loading="lazy" decoding="async" className="h-16 object-contain grayscale hover:grayscale-0 transition-all" />
-            <img src="/logos/logo2.png" alt="BridgeAI" width="432" height="117" loading="lazy" decoding="async" className="h-16 object-contain grayscale hover:grayscale-0 transition-all" />
-            <img src="/logos/logo3.png" alt="Innovate UK" width="396" height="127" loading="lazy" decoding="async" className="h-16 object-contain grayscale hover:grayscale-0 transition-all" />
-            <img src="/logos/qualifications-wales.png" alt="Qualifications Wales" width="1181" height="1181" loading="lazy" decoding="async" className="h-16 object-contain grayscale hover:grayscale-0 transition-all" />
-            <img src="/logos/logo5.png" alt="National Digital Twin Programme" width="400" height="126" loading="lazy" decoding="async" className="h-16 object-contain grayscale hover:grayscale-0 transition-all" />
-            <img src="/logos/logo6.png" alt="UK Export Academy" width="400" height="249" loading="lazy" decoding="async" className="h-16 object-contain grayscale hover:grayscale-0 transition-all" />
-            <img src="/logos/dbt.svg" alt="Department for Business and Trade" width="450" height="206" loading="lazy" decoding="async" className="h-16 object-contain grayscale hover:grayscale-0 transition-all" />
-            <img src="/logos/business-gateway.png" alt="Business Gateway" width="600" height="600" loading="lazy" decoding="async" className="h-24 object-contain grayscale hover:grayscale-0 transition-all" />
-            <img src="/logos/logo9.png" alt="The Alan Turing Institute" width="346" height="146" loading="lazy" decoding="async" className="h-16 object-contain grayscale hover:grayscale-0 transition-all" />
-            <img src="/logos/logo10.png" alt="The Growth Company" width="400" height="170" loading="lazy" decoding="async" className="h-16 object-contain grayscale hover:grayscale-0 transition-all" />
-            <img src="/logos/fintech-scotland.png" alt="Fintech Scotland" width="827" height="222" loading="lazy" decoding="async" className="h-16 object-contain grayscale hover:grayscale-0 transition-all" />
-            <img src="/logos/kalgera.png" alt="Kalgera" width="400" height="169" loading="lazy" decoding="async" className="h-16 object-contain grayscale hover:grayscale-0 transition-all" />
+            <img src="/logos/wag.png" alt="Welsh Government" className="h-16 object-contain grayscale hover:grayscale-0 transition-all" />
+            <img src="/logos/logo2.png" alt="BridgeAI" className="h-16 object-contain grayscale hover:grayscale-0 transition-all" />
+            <img src="/logos/logo3.png" alt="Innovate UK" className="h-16 object-contain grayscale hover:grayscale-0 transition-all" />
+            <img src="/logos/qualifications-wales.png" alt="Qualifications Wales" className="h-16 object-contain grayscale hover:grayscale-0 transition-all" />
+            <img src="/logos/logo5.png" alt="National Digital Twin Programme" className="h-16 object-contain grayscale hover:grayscale-0 transition-all" />
+            <img src="/logos/logo6.png" alt="UK Export Academy" className="h-16 object-contain grayscale hover:grayscale-0 transition-all" />
+            <img src="/logos/dbt.svg" alt="Department for Business and Trade" className="h-16 object-contain grayscale hover:grayscale-0 transition-all" />
+            <img src="/logos/business-gateway.png" alt="Business Gateway" className="h-24 object-contain grayscale hover:grayscale-0 transition-all" />
+            <img src="/logos/logo9.png" alt="The Alan Turing Institute" className="h-16 object-contain grayscale hover:grayscale-0 transition-all" />
+            <img src="/logos/logo10.png" alt="The Growth Company" className="h-16 object-contain grayscale hover:grayscale-0 transition-all" />
+            <img src="/logos/fintech-scotland.png" alt="Fintech Scotland" className="h-16 object-contain grayscale hover:grayscale-0 transition-all" />
+            <img src="/logos/kalgera.png" alt="Kalgera" className="h-16 object-contain grayscale hover:grayscale-0 transition-all" />
           </div>
         </div>
 
@@ -230,10 +229,10 @@ export const Home: React.FC = () => {
           <h3 className="text-center text-sm font-semibold text-gov-secondary uppercase tracking-wider mb-8">Accreditations & Procurement Frameworks</h3>
           <div className="flex flex-wrap items-center justify-center gap-12">
             <div className="flex flex-col items-center gap-2">
-              <img src="/logos/cyber-essentials.png" alt="Cyber Essentials Certified" width="400" height="188" loading="lazy" decoding="async" className="h-20 object-contain" />
+              <img src="/logos/cyber-essentials.png" alt="Cyber Essentials Certified" className="h-20 object-contain" />
             </div>
             <div className="flex flex-col items-center gap-2">
-              <img src="/logos/ccs.svg" alt="Crown Commercial Service Appointed Supplier" width="400" height="120" loading="lazy" decoding="async" className="h-20 object-contain" />
+              <img src="/logos/ccs.svg" alt="Crown Commercial Service Appointed Supplier" className="h-20 object-contain" />
             </div>
           </div>
         </div>

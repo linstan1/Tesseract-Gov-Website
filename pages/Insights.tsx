@@ -57,10 +57,8 @@ export const Insights: React.FC = () => {
         </p>
         <div className="bg-gov-bg border border-gov-border/50 rounded-xl p-6 max-w-4xl">
           <p className="text-base text-gov-dark/90 leading-relaxed">
-            Across <strong>2,300 civil servant participants</strong> upskilled in 2024, structured AI learning programmes
-            achieved a <strong>91% completion rate</strong> versus 68% for self-directed alternatives. Land valuation
-            analysis covering <strong>1,916 Lower Super Output Areas</strong> — 99% of Welsh geography — provided the
-            first comparative empirical basis for land value tax design in Wales. AI adoption programmes under the{' '}
+            Land valuation analysis covering <strong>1,916 Lower Super Output Areas</strong> — 99% of Welsh geography —
+            provided the first comparative empirical basis for land value tax design in Wales. AI adoption programmes under the{' '}
             <a
               href="https://iuk.ktn-uk.org/programme/bridgeai/"
               target="_blank"
@@ -89,53 +87,6 @@ export const Insights: React.FC = () => {
           <div className="bg-gov-bg border border-gov-border/50 rounded-xl p-8">
             <div className="flex items-start gap-4 mb-4">
               <span className="flex-shrink-0 w-9 h-9 rounded-full bg-gov-blue text-white text-sm font-bold flex items-center justify-center">1</span>
-              <div>
-                <h3 className="text-xl font-bold text-gov-dark">Civil Service AI Upskilling Completion Rates</h3>
-                <p className="text-sm text-gov-secondary/70 mt-1">
-                  Source: Tesseract Academy delivery data, 2024. Aligned with{' '}
-                  <a
-                    href="https://www.gov.uk/government/organisations/skills-england"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-gov-blue hover:underline"
-                  >
-                    Skills England
-                  </a>{' '}
-                  workforce research.
-                </p>
-              </div>
-            </div>
-            <p className="text-base text-gov-dark/90 leading-relaxed">
-              Civil service AI upskilling programmes that combine structured learning paths with peer accountability
-              achieve <strong>91% completion rates</strong> — compared to 68% for self-directed programmes. Across
-              2,300 civil servant participants in 2024, engagement scores improved from <strong>3.4 to 4.6 out of 5</strong>{' '}
-              when content was contextualised to specific government functions rather than delivered as generic AI
-              literacy. This finding aligns with{' '}
-              <a
-                href="https://www.gov.uk/government/organisations/skills-england"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors"
-              >
-                Skills England
-              </a>{' '}
-              research on workforce AI readiness and the{' '}
-              <a
-                href="https://www.gov.uk/service-manual/agile-delivery"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors"
-              >
-                GDS Service Manual
-              </a>{' '}
-              emphasis on user-centred design in government digital services.
-            </p>
-          </div>
-
-          {/* Finding 2 */}
-          <div className="bg-gov-bg border border-gov-border/50 rounded-xl p-8">
-            <div className="flex items-start gap-4 mb-4">
-              <span className="flex-shrink-0 w-9 h-9 rounded-full bg-gov-blue text-white text-sm font-bold flex items-center justify-center">2</span>
               <div>
                 <h3 className="text-xl font-bold text-gov-dark">Land Valuation Methodology Comparison — Welsh Government</h3>
                 <p className="text-sm text-gov-secondary/70 mt-1">
@@ -187,10 +138,10 @@ export const Insights: React.FC = () => {
             </p>
           </div>
 
-          {/* Finding 3 */}
+          {/* Finding 2 */}
           <div className="bg-gov-bg border border-gov-border/50 rounded-xl p-8">
             <div className="flex items-start gap-4 mb-4">
-              <span className="flex-shrink-0 w-9 h-9 rounded-full bg-gov-blue text-white text-sm font-bold flex items-center justify-center">3</span>
+              <span className="flex-shrink-0 w-9 h-9 rounded-full bg-gov-blue text-white text-sm font-bold flex items-center justify-center">2</span>
               <div>
                 <h3 className="text-xl font-bold text-gov-dark">Ontology Automation — National Digital Twin Programme</h3>
                 <p className="text-sm text-gov-secondary/70 mt-1">
@@ -226,10 +177,10 @@ export const Insights: React.FC = () => {
             </p>
           </div>
 
-          {/* Finding 4 */}
+          {/* Finding 3 */}
           <div className="bg-gov-bg border border-gov-border/50 rounded-xl p-8">
             <div className="flex items-start gap-4 mb-4">
-              <span className="flex-shrink-0 w-9 h-9 rounded-full bg-gov-blue text-white text-sm font-bold flex items-center justify-center">4</span>
+              <span className="flex-shrink-0 w-9 h-9 rounded-full bg-gov-blue text-white text-sm font-bold flex items-center justify-center">3</span>
               <div>
                 <h3 className="text-xl font-bold text-gov-dark">Public Engagement Registration Demand — BridgeAI Creative Industries</h3>
                 <p className="text-sm text-gov-secondary/70 mt-1">
@@ -272,10 +223,10 @@ export const Insights: React.FC = () => {
             </p>
           </div>
 
-          {/* Finding 5 */}
+          {/* Finding 4 */}
           <div className="bg-gov-bg border border-gov-border/50 rounded-xl p-8">
             <div className="flex items-start gap-4 mb-4">
-              <span className="flex-shrink-0 w-9 h-9 rounded-full bg-gov-blue text-white text-sm font-bold flex items-center justify-center">5</span>
+              <span className="flex-shrink-0 w-9 h-9 rounded-full bg-gov-blue text-white text-sm font-bold flex items-center justify-center">4</span>
               <div>
                 <h3 className="text-xl font-bold text-gov-dark">Financial Vulnerability Signal Accuracy — Kalgera / Fintech Scotland</h3>
                 <p className="text-sm text-gov-secondary/70 mt-1">
@@ -313,10 +264,10 @@ export const Insights: React.FC = () => {
             </p>
           </div>
 
-          {/* Finding 6 */}
+          {/* Finding 5 */}
           <div className="bg-gov-bg border border-gov-border/50 rounded-xl p-8">
             <div className="flex items-start gap-4 mb-4">
-              <span className="flex-shrink-0 w-9 h-9 rounded-full bg-gov-blue text-white text-sm font-bold flex items-center justify-center">6</span>
+              <span className="flex-shrink-0 w-9 h-9 rounded-full bg-gov-blue text-white text-sm font-bold flex items-center justify-center">5</span>
               <div>
                 <h3 className="text-xl font-bold text-gov-dark">Procurement Route Effectiveness — Crown Commercial Service Frameworks</h3>
                 <p className="text-sm text-gov-secondary/70 mt-1">
@@ -394,10 +345,10 @@ export const Insights: React.FC = () => {
             </p>
           </div>
 
-          {/* Finding 7 */}
+          {/* Finding 6 */}
           <div className="bg-gov-bg border border-gov-border/50 rounded-xl p-8">
             <div className="flex items-start gap-4 mb-4">
-              <span className="flex-shrink-0 w-9 h-9 rounded-full bg-gov-blue text-white text-sm font-bold flex items-center justify-center">7</span>
+              <span className="flex-shrink-0 w-9 h-9 rounded-full bg-gov-blue text-white text-sm font-bold flex items-center justify-center">6</span>
               <div>
                 <h3 className="text-xl font-bold text-gov-dark">AI Governance Adoption Barriers in UK Public Sector</h3>
                 <p className="text-sm text-gov-secondary/70 mt-1">
