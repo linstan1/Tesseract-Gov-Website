@@ -4,11 +4,12 @@ import { Menu, X } from 'lucide-react';
 
 const NAV_ITEMS = [
   { label: 'How to Buy', path: '/how-to-buy' },
+  { label: 'Sectors', path: '/sectors' },
   { label: 'Capabilities', path: '/capabilities' },
   { label: 'Use Cases', path: '/use-cases' },
   { label: 'Research', path: '/research' },
+  { label: 'Resources', path: '/resources' },
   { label: 'Partnerships', path: '/partnerships' },
-  { label: 'Testimonials', path: '/testimonials' },
   { label: 'Compliance', path: '/compliance' },
 ];
 
