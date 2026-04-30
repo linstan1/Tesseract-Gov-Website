@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
 
@@ -75,20 +75,9 @@ const OUTPUTS = [
 ];
 
 export const Kalgera: React.FC = () => {
-  useEffect(() => {
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.id = 'cs-kalgera-jsonld';
-    script.textContent = JSON.stringify(SCHEMA);
-    document.head.appendChild(script);
-    return () => {
-      const el = document.getElementById('cs-kalgera-jsonld');
-      if (el) el.remove();
-    };
-  }, []);
-
   return (
     <article className="max-w-4xl mx-auto px-6 lg:px-8 py-20 space-y-12">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SCHEMA) }} />
       <header>
         <Link
           to="/use-cases"

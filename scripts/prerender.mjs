@@ -1,13 +1,15 @@
 /**
- * Post-build pre-rendering script.
- * For each known route, creates dist/{route}/index.html with injected per-route
- * meta tags (title, description, OG, canonical). React still hydrates client-side.
- * Vercel serves the static HTML before the SPA fallback rewrite fires.
+ * Static Site Generation: per-route HTML.
+ * - Imports compiled SSR bundle (dist-ssr/entry-server.js).
+ * - For each route: calls render(url) → React tree as HTML string.
+ * - Injects into <div id="root">{html}</div> of dist/index.html template.
+ * - Also injects per-route <title>, meta description, og:*, canonical.
+ * - Writes dist/{route}/index.html.
  */
 
 import { readFileSync, writeFileSync, mkdirSync } from 'fs';
 import { resolve, dirname } from 'path';
-import { fileURLToPath } from 'url';
+import { fileURLToPath, pathToFileURL } from 'url';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = resolve(__dirname, '..');
@@ -115,7 +117,7 @@ function injectMeta(html, route) {
   const desc = escapeHtmlAttr(meta.description);
 
   return html
-    .replace(/(<title>)[^<]*(< \/title>|<\/title>)/, `<title>${title}</title>`)
+    .replace(/(<title>)[^<]*(<\/title>)/, `<title>${title}</title>`)
     .replace(/(<meta name="description" content=")[^"]*"/, `$1${desc}"`)
     .replace(/(<meta property="og:title" content=")[^"]*"/, `$1${title}"`)
     .replace(/(<meta property="og:description" content=")[^"]*"/, `$1${desc}"`)
@@ -123,13 +125,26 @@ function injectMeta(html, route) {
     .replace(/(<link rel="canonical" href=")[^"]*"/, `$1${canonical}"`);
 }
 
+function injectBody(html, appHtml) {
+  return html.replace(
+    /<div id="root"><\/div>/,
+    `<div id="root">${appHtml}</div>`,
+  );
+}
+
 async function run() {
+  // Import the compiled SSR bundle.
+  const ssrEntryUrl = pathToFileURL(resolve(ROOT, 'dist-ssr/entry-server.js')).href;
+  const { render } = await import(ssrEntryUrl);
+
   const template = readFileSync(resolve(ROOT, 'dist/index.html'), 'utf-8');
   const routes = Object.keys(PAGE_META);
   let count = 0;
 
   for (const route of routes) {
-    const html = injectMeta(template, route);
+    const appHtml = render(route);
+    let html = injectMeta(template, route);
+    html = injectBody(html, appHtml);
 
     if (route === '/') {
       writeFileSync(resolve(ROOT, 'dist/index.html'), html);
@@ -139,13 +154,13 @@ async function run() {
       writeFileSync(resolve(dir, 'index.html'), html);
     }
     count++;
-    console.log(`  ✓ ${route}`);
+    console.log(`  ✓ ${route} (${appHtml.length} bytes rendered)`);
   }
 
-  console.log(`\nPre-rendered ${count} routes.`);
+  console.log(`\nPre-rendered ${count} routes with full SSG body content.`);
 }
 
-run().catch(err => {
-  console.error('Pre-render failed:', err);
+run().catch((err) => {
+  console.error('SSG failed:', err);
   process.exit(1);
 });

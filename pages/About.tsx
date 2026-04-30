@@ -1,64 +1,55 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Card } from '../components/ui/Card';
 
-export const About: React.FC = () => {
-  useEffect(() => {
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.id = 'about-person-jsonld';
-    script.text = JSON.stringify([
-      {
-        '@context': 'https://schema.org',
-        '@type': 'Person',
-        '@id': 'https://gov.tesseract.academy/#kampakis',
-        name: 'Dr Stylianos Kampakis',
-        jobTitle: 'Managing Director',
-        worksFor: { '@id': 'https://gov.tesseract.academy/#organization' },
-        alumniOf: {
-          '@type': 'CollegeOrUniversity',
-          name: 'University College London',
-        },
-        hasCredential: [
-          { '@type': 'EducationalOccupationalCredential', credentialCategory: 'degree', name: 'PhD Machine Learning, UCL' },
-          { '@type': 'EducationalOccupationalCredential', credentialCategory: 'certification', name: 'Chartered Statistician (CStat), Royal Statistical Society' },
-          { '@type': 'EducationalOccupationalCredential', credentialCategory: 'membership', name: 'Fellow, Royal Statistical Society (FRSS)' },
-        ],
-        affiliation: [
-          { '@type': 'Organization', name: 'UCL Centre for Blockchain Technologies', roleName: 'Honorary Research Fellow' },
-          { '@type': 'Organization', name: 'London Business School', roleName: 'Data Science Advisor' },
-          { '@type': 'Organization', name: 'Department for Business and Trade', roleName: 'Partner' },
-        ],
-      },
-      {
-        '@context': 'https://schema.org',
-        '@type': 'Person',
-        '@id': 'https://gov.tesseract.academy/#rovai',
-        name: 'Fabio Rovai',
-        honorificSuffix: 'MSc',
-        jobTitle: 'Associate Lecturer and Delivery Lead',
-        worksFor: { '@id': 'https://gov.tesseract.academy/#organization' },
-        alumniOf: {
-          '@type': 'CollegeOrUniversity',
-          name: 'University of the Arts London',
-        },
-        hasCredential: [
-          { '@type': 'EducationalOccupationalCredential', credentialCategory: 'degree', name: 'MSc Data Science and AI, University of the Arts London' },
-          { '@type': 'EducationalOccupationalCredential', credentialCategory: 'certification', name: 'DBS Enhanced Check (Children and Adults)' },
-        ],
-        affiliation: [
-          { '@type': 'Organization', name: 'NeurIPS', roleName: 'Ethics Reviewer' },
-        ],
-      },
-    ]);
-    document.head.appendChild(script);
-    return () => {
-      const existing = document.getElementById('about-person-jsonld');
-      if (existing) existing.remove();
-    };
-  }, []);
+const SCHEMAS = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    '@id': 'https://gov.tesseract.academy/#kampakis',
+    name: 'Dr Stylianos Kampakis',
+    jobTitle: 'Managing Director',
+    worksFor: { '@id': 'https://gov.tesseract.academy/#organization' },
+    alumniOf: {
+      '@type': 'CollegeOrUniversity',
+      name: 'University College London',
+    },
+    hasCredential: [
+      { '@type': 'EducationalOccupationalCredential', credentialCategory: 'degree', name: 'PhD Machine Learning, UCL' },
+      { '@type': 'EducationalOccupationalCredential', credentialCategory: 'certification', name: 'Chartered Statistician (CStat), Royal Statistical Society' },
+      { '@type': 'EducationalOccupationalCredential', credentialCategory: 'membership', name: 'Fellow, Royal Statistical Society (FRSS)' },
+    ],
+    affiliation: [
+      { '@type': 'Organization', name: 'UCL Centre for Blockchain Technologies', roleName: 'Honorary Research Fellow' },
+      { '@type': 'Organization', name: 'London Business School', roleName: 'Data Science Advisor' },
+      { '@type': 'Organization', name: 'Department for Business and Trade', roleName: 'Partner' },
+    ],
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    '@id': 'https://gov.tesseract.academy/#rovai',
+    name: 'Fabio Rovai',
+    honorificSuffix: 'MSc',
+    jobTitle: 'Associate Lecturer and Delivery Lead',
+    worksFor: { '@id': 'https://gov.tesseract.academy/#organization' },
+    alumniOf: {
+      '@type': 'CollegeOrUniversity',
+      name: 'University of the Arts London',
+    },
+    hasCredential: [
+      { '@type': 'EducationalOccupationalCredential', credentialCategory: 'degree', name: 'MSc Data Science and AI, University of the Arts London' },
+      { '@type': 'EducationalOccupationalCredential', credentialCategory: 'certification', name: 'DBS Enhanced Check (Children and Adults)' },
+    ],
+    affiliation: [
+      { '@type': 'Organization', name: 'NeurIPS', roleName: 'Ethics Reviewer' },
+    ],
+  },
+];
 
+export const About: React.FC = () => {
   return (
     <div className="max-w-6xl mx-auto px-6 lg:px-8 py-20 space-y-16">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SCHEMAS) }} />
       <header className="border-b border-gov-border/30 pb-10">
         <h1 className="text-5xl font-extrabold text-gov-dark mb-6 tracking-tight leading-tight">About Tesseract Academy</h1>
         <p className="text-xl text-gov-secondary/90 leading-relaxed max-w-4xl">

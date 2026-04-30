@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo } from 'react';
+import React, { useMemo } from 'react';
 
 type GlossaryTerm = {
   term: string;
@@ -319,41 +319,27 @@ export const Glossary: React.FC = () => {
     return map;
   }, []);
 
-  useEffect(() => {
-    const definitions = SORTED_TERMS.map((t) => ({
+  const SCHEMA = useMemo(() => ({
+    '@context': 'https://schema.org',
+    '@type': 'DefinedTermSet',
+    '@id': 'https://gov.tesseract.academy/glossary#termset',
+    name: 'Tesseract Academy Public Sector AI and Procurement Glossary',
+    url: 'https://gov.tesseract.academy/glossary',
+    description:
+      'Authoritative definitions of AI, procurement, governance, research, and FinTech terms relevant to UK public sector commissioning.',
+    creator: { '@id': 'https://gov.tesseract.academy/#organization' },
+    publisher: { '@id': 'https://gov.tesseract.academy/#organization' },
+    hasDefinedTerm: SORTED_TERMS.map((t) => ({
       '@type': 'DefinedTerm',
       name: t.term,
       description: t.definition,
       inDefinedTermSet: 'https://gov.tesseract.academy/glossary',
-    }));
-
-    const schema = {
-      '@context': 'https://schema.org',
-      '@type': 'DefinedTermSet',
-      '@id': 'https://gov.tesseract.academy/glossary#termset',
-      name: 'Tesseract Academy Public Sector AI and Procurement Glossary',
-      url: 'https://gov.tesseract.academy/glossary',
-      description:
-        'Authoritative definitions of AI, procurement, governance, research, and FinTech terms relevant to UK public sector commissioning.',
-      creator: { '@id': 'https://gov.tesseract.academy/#organization' },
-      publisher: { '@id': 'https://gov.tesseract.academy/#organization' },
-      hasDefinedTerm: definitions,
-    };
-
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.id = 'glossary-schema';
-    script.textContent = JSON.stringify(schema);
-    document.head.appendChild(script);
-
-    return () => {
-      const existing = document.getElementById('glossary-schema');
-      if (existing) existing.remove();
-    };
-  }, []);
+    })),
+  }), []);
 
   return (
     <div className="max-w-6xl mx-auto px-6 lg:px-8 py-20 space-y-14">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SCHEMA) }} />
       <header className="border-b border-gov-border/30 pb-10">
         <h1 className="text-5xl font-extrabold text-gov-dark mb-6 tracking-tight leading-tight">
           Public Sector AI and Procurement Glossary

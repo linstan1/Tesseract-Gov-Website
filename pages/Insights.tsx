@@ -1,43 +1,31 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 
-export const Insights: React.FC = () => {
-  useEffect(() => {
-    const schema = {
-      '@context': 'https://schema.org',
-      '@type': 'Article',
-      '@id': 'https://gov.tesseract.academy/insights#article',
-      mainEntityOfPage: 'https://gov.tesseract.academy/insights',
-      headline: 'UK Public Sector AI: What We Have Learned Delivering Government Contracts',
-      description:
-        'Original research synthesis from Tesseract Academy\'s UK public sector AI delivery experience, 2022-2026.',
-      author: { '@id': 'https://gov.tesseract.academy/#kampakis' },
-      publisher: { '@id': 'https://gov.tesseract.academy/#organization' },
-      datePublished: '2026-04-29',
-      dateModified: '2026-04-29',
-      url: 'https://gov.tesseract.academy/insights',
-      about: [
-        'UK Public Sector AI',
-        'Government Digital Transformation',
-        'AI Governance',
-        'Crown Commercial Service',
-      ],
-    };
-    const existing = document.getElementById('insights-jsonld');
-    if (existing) existing.remove();
-    const script = document.createElement('script');
-    script.id = 'insights-jsonld';
-    script.type = 'application/ld+json';
-    script.textContent = JSON.stringify(schema);
-    document.head.appendChild(script);
-    return () => {
-      const el = document.getElementById('insights-jsonld');
-      if (el) el.remove();
-    };
-  }, []);
+const SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  '@id': 'https://gov.tesseract.academy/insights#article',
+  mainEntityOfPage: 'https://gov.tesseract.academy/insights',
+  headline: 'UK Public Sector AI: What We Have Learned Delivering Government Contracts',
+  description:
+    'Original research synthesis from Tesseract Academy\'s UK public sector AI delivery experience, 2022-2026.',
+  author: { '@id': 'https://gov.tesseract.academy/#kampakis' },
+  publisher: { '@id': 'https://gov.tesseract.academy/#organization' },
+  datePublished: '2026-04-29',
+  dateModified: '2026-04-29',
+  url: 'https://gov.tesseract.academy/insights',
+  about: [
+    'UK Public Sector AI',
+    'Government Digital Transformation',
+    'AI Governance',
+    'Crown Commercial Service',
+  ],
+};
 
+export const Insights: React.FC = () => {
   return (
     <article className="max-w-6xl mx-auto px-6 lg:px-8 py-20 space-y-16">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SCHEMA) }} />
 
       {/* Hero */}
       <header className="border-b border-gov-border/30 pb-10">

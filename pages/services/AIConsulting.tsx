@@ -1,85 +1,48 @@
-import React, { useEffect } from 'react';
+import React from 'react';
+
+const SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  '@id': 'https://gov.tesseract.academy/services/ai-consulting#service',
+  name: 'AI Consulting for UK Public Sector',
+  provider: {
+    '@type': 'Organization',
+    '@id': 'https://gov.tesseract.academy/#organization',
+  },
+  serviceType: 'AI Consulting',
+  description:
+    'Custom machine learning models, NLP pipelines, and AI strategy for UK central government, devolved administrations, and arm\'s-length bodies. Available via CCS RM6200.',
+  url: 'https://gov.tesseract.academy/services/ai-consulting',
+  areaServed: 'GB',
+  datePublished: '2026-04-29',
+  dateModified: '2026-04-29',
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: 'AI Consulting Services',
+    itemListElement: [
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Machine Learning Model Development' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Natural Language Processing Pipelines' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'AI Strategy and Roadmap Design' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Ontology Generation with LLMs' } },
+    ],
+  },
+  howTo: {
+    '@type': 'HowTo',
+    name: 'How to Commission AI Consulting Services from Tesseract Academy',
+    step: [
+      { '@type': 'HowToStep', position: 1, name: 'Identify the correct CCS framework', text: 'AI consulting can be commissioned through CCS RM6200 (Management Consultancy Three) or directly for contracts below £10,000.' },
+      { '@type': 'HowToStep', position: 2, name: 'Issue a Statement of Requirements', text: 'Prepare a Statement of Requirements or Invitation to Tender detailing the problem, data environment, and expected outputs.' },
+      { '@type': 'HowToStep', position: 3, name: 'Run a further competition or direct award', text: 'For contracts above £10,000, run a further competition among framework suppliers. For contracts below threshold, a direct award is permitted.' },
+      { '@type': 'HowToStep', position: 4, name: 'Evaluate quality and price', text: 'Evaluate submissions on a quality-price ratio, typically 60/40 or 70/30 in favour of quality for AI services.' },
+      { '@type': 'HowToStep', position: 5, name: 'Issue call-off contract', text: 'Issue a call-off contract under the framework agreement confirming scope, deliverables, milestones, and pricing.' },
+    ],
+  },
+};
 
 export const AIConsulting: React.FC = () => {
-  useEffect(() => {
-    const schema = {
-      '@context': 'https://schema.org',
-      '@type': 'Service',
-      '@id': 'https://gov.tesseract.academy/services/ai-consulting#service',
-      name: 'AI Consulting for UK Public Sector',
-      provider: {
-        '@type': 'Organization',
-        '@id': 'https://gov.tesseract.academy/#organization',
-      },
-      serviceType: 'AI Consulting',
-      description:
-        'Custom machine learning models, NLP pipelines, and AI strategy for UK central government, devolved administrations, and arm\'s-length bodies. Available via CCS RM6200.',
-      url: 'https://gov.tesseract.academy/services/ai-consulting',
-      areaServed: 'GB',
-      datePublished: '2026-04-29',
-      dateModified: '2026-04-29',
-      hasOfferCatalog: {
-        '@type': 'OfferCatalog',
-        name: 'AI Consulting Services',
-        itemListElement: [
-          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Machine Learning Model Development' } },
-          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Natural Language Processing Pipelines' } },
-          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'AI Strategy and Roadmap Design' } },
-          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Ontology Generation with LLMs' } },
-        ],
-      },
-      howTo: {
-        '@type': 'HowTo',
-        name: 'How to Commission AI Consulting Services from Tesseract Academy',
-        step: [
-          {
-            '@type': 'HowToStep',
-            position: 1,
-            name: 'Identify the correct CCS framework',
-            text: 'AI consulting can be commissioned through CCS RM6200 (Management Consultancy Three) or directly for contracts below £10,000.',
-          },
-          {
-            '@type': 'HowToStep',
-            position: 2,
-            name: 'Issue a Statement of Requirements',
-            text: 'Prepare a Statement of Requirements or Invitation to Tender detailing the problem, data environment, and expected outputs.',
-          },
-          {
-            '@type': 'HowToStep',
-            position: 3,
-            name: 'Run a further competition or direct award',
-            text: 'For contracts above £10,000, run a further competition among framework suppliers. For contracts below threshold, a direct award is permitted.',
-          },
-          {
-            '@type': 'HowToStep',
-            position: 4,
-            name: 'Evaluate quality and price',
-            text: 'Evaluate submissions on a quality-price ratio, typically 60/40 or 70/30 in favour of quality for AI services.',
-          },
-          {
-            '@type': 'HowToStep',
-            position: 5,
-            name: 'Issue call-off contract',
-            text: 'Issue a call-off contract under the framework agreement confirming scope, deliverables, milestones, and pricing.',
-          },
-        ],
-      },
-    };
-
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.id = 'ai-consulting-schema';
-    script.textContent = JSON.stringify(schema);
-    document.head.appendChild(script);
-
-    return () => {
-      const existing = document.getElementById('ai-consulting-schema');
-      if (existing) existing.remove();
-    };
-  }, []);
-
   return (
     <div className="max-w-6xl mx-auto px-6 lg:px-8 py-20 space-y-16">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SCHEMA) }} />
       <header className="border-b border-gov-border/30 pb-10">
         <p className="text-sm font-semibold text-gov-blue uppercase tracking-wider mb-4">
           Service — AI and Machine Learning

@@ -1,39 +1,27 @@
-import React, { useEffect } from 'react';
+import React from 'react';
+
+const SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  '@id': 'https://gov.tesseract.academy/services/research-policy#service',
+  name: 'Research and Policy Analysis for UK Public Sector',
+  provider: {
+    '@type': 'Organization',
+    '@id': 'https://gov.tesseract.academy/#organization',
+  },
+  serviceType: 'Research and Policy Analysis',
+  description:
+    'Evidence-based research design, systematic literature reviews, policy analysis, and regulatory consultation responses for UK and Welsh government. Published on GOV.WALES and cited in Senedd proceedings.',
+  url: 'https://gov.tesseract.academy/services/research-policy',
+  areaServed: 'GB',
+  datePublished: '2026-04-29',
+  dateModified: '2026-04-29',
+};
 
 export const ResearchPolicy: React.FC = () => {
-  useEffect(() => {
-    const schema = {
-      '@context': 'https://schema.org',
-      '@type': 'Service',
-      '@id': 'https://gov.tesseract.academy/services/research-policy#service',
-      name: 'Research and Policy Analysis for UK Public Sector',
-      provider: {
-        '@type': 'Organization',
-        '@id': 'https://gov.tesseract.academy/#organization',
-      },
-      serviceType: 'Research and Policy Analysis',
-      description:
-        'Evidence-based research design, systematic literature reviews, policy analysis, and regulatory consultation responses for UK and Welsh government. Published on GOV.WALES and cited in Senedd proceedings.',
-      url: 'https://gov.tesseract.academy/services/research-policy',
-      areaServed: 'GB',
-      datePublished: '2026-04-29',
-      dateModified: '2026-04-29',
-    };
-
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.id = 'research-policy-schema';
-    script.textContent = JSON.stringify(schema);
-    document.head.appendChild(script);
-
-    return () => {
-      const existing = document.getElementById('research-policy-schema');
-      if (existing) existing.remove();
-    };
-  }, []);
-
   return (
     <div className="max-w-6xl mx-auto px-6 lg:px-8 py-20 space-y-16">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SCHEMA) }} />
       <header className="border-b border-gov-border/30 pb-10">
         <p className="text-sm font-semibold text-gov-blue uppercase tracking-wider mb-4">
           Service — Research and Policy

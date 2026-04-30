@@ -1,39 +1,27 @@
-import React, { useEffect } from 'react';
+import React from 'react';
+
+const SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  '@id': 'https://gov.tesseract.academy/services/public-engagement#service',
+  name: 'Public Engagement and Participatory Research for UK Public Sector',
+  provider: {
+    '@type': 'Organization',
+    '@id': 'https://gov.tesseract.academy/#organization',
+  },
+  serviceType: 'Public Engagement and Participatory Research',
+  description:
+    'Deliberative workshops, citizen panels, inclusive co-design, and participatory research for UK public sector. Financial vulnerability research compliant with Adult Support and Protection Act 2007. London Data Week AI accessibility case study.',
+  url: 'https://gov.tesseract.academy/services/public-engagement',
+  areaServed: 'GB',
+  datePublished: '2026-04-29',
+  dateModified: '2026-04-29',
+};
 
 export const PublicEngagement: React.FC = () => {
-  useEffect(() => {
-    const schema = {
-      '@context': 'https://schema.org',
-      '@type': 'Service',
-      '@id': 'https://gov.tesseract.academy/services/public-engagement#service',
-      name: 'Public Engagement and Participatory Research for UK Public Sector',
-      provider: {
-        '@type': 'Organization',
-        '@id': 'https://gov.tesseract.academy/#organization',
-      },
-      serviceType: 'Public Engagement and Participatory Research',
-      description:
-        'Deliberative workshops, citizen panels, inclusive co-design, and participatory research for UK public sector. Financial vulnerability research compliant with Adult Support and Protection Act 2007. London Data Week AI accessibility case study.',
-      url: 'https://gov.tesseract.academy/services/public-engagement',
-      areaServed: 'GB',
-      datePublished: '2026-04-29',
-      dateModified: '2026-04-29',
-    };
-
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.id = 'public-engagement-schema';
-    script.textContent = JSON.stringify(schema);
-    document.head.appendChild(script);
-
-    return () => {
-      const existing = document.getElementById('public-engagement-schema');
-      if (existing) existing.remove();
-    };
-  }, []);
-
   return (
     <div className="max-w-6xl mx-auto px-6 lg:px-8 py-20 space-y-16">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SCHEMA) }} />
       <header className="border-b border-gov-border/30 pb-10">
         <p className="text-sm font-semibold text-gov-blue uppercase tracking-wider mb-4">
           Service — Public Engagement

@@ -1,39 +1,27 @@
-import React, { useEffect } from 'react';
+import React from 'react';
+
+const SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  '@id': 'https://gov.tesseract.academy/services/ai-governance#service',
+  name: 'AI Governance and Compliance for UK Public Sector',
+  provider: {
+    '@type': 'Organization',
+    '@id': 'https://gov.tesseract.academy/#organization',
+  },
+  serviceType: 'AI Governance and Regulatory Compliance',
+  description:
+    'EU AI Act, NIST AI RMF, and ISO 42001 compliance. Bias auditing, DPIA, algorithmic impact assessments. Open-source governance platform with 48 tools. Cyber Essentials certified. FCA stablecoin consultation contribution.',
+  url: 'https://gov.tesseract.academy/services/ai-governance',
+  areaServed: 'GB',
+  datePublished: '2026-04-29',
+  dateModified: '2026-04-29',
+};
 
 export const AIGovernance: React.FC = () => {
-  useEffect(() => {
-    const schema = {
-      '@context': 'https://schema.org',
-      '@type': 'Service',
-      '@id': 'https://gov.tesseract.academy/services/ai-governance#service',
-      name: 'AI Governance and Compliance for UK Public Sector',
-      provider: {
-        '@type': 'Organization',
-        '@id': 'https://gov.tesseract.academy/#organization',
-      },
-      serviceType: 'AI Governance and Regulatory Compliance',
-      description:
-        'EU AI Act, NIST AI RMF, and ISO 42001 compliance. Bias auditing, DPIA, algorithmic impact assessments. Open-source governance platform with 48 tools. Cyber Essentials certified. FCA stablecoin consultation contribution.',
-      url: 'https://gov.tesseract.academy/services/ai-governance',
-      areaServed: 'GB',
-      datePublished: '2026-04-29',
-      dateModified: '2026-04-29',
-    };
-
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.id = 'ai-governance-schema';
-    script.textContent = JSON.stringify(schema);
-    document.head.appendChild(script);
-
-    return () => {
-      const existing = document.getElementById('ai-governance-schema');
-      if (existing) existing.remove();
-    };
-  }, []);
-
   return (
     <div className="max-w-6xl mx-auto px-6 lg:px-8 py-20 space-y-16">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SCHEMA) }} />
       <header className="border-b border-gov-border/30 pb-10">
         <p className="text-sm font-semibold text-gov-blue uppercase tracking-wider mb-4">
           Service — AI Governance and Compliance

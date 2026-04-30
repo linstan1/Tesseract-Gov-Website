@@ -1,0 +1,74 @@
+/**
+ * SSR / SSG entry point.
+ * Imports every route synchronously (no lazy) so renderToString resolves
+ * the full tree without Suspense fallback. The client entry (index.tsx)
+ * keeps lazy + Suspense for runtime code splitting.
+ */
+import React from 'react';
+import { renderToString } from 'react-dom/server';
+import { StaticRouter, Routes, Route } from 'react-router';
+
+import { Navbar } from './components/Navbar';
+import { Footer } from './components/Footer';
+import { Home } from './pages/Home';
+import { HowToBuy } from './pages/HowToBuy';
+import { Capabilities } from './pages/Capabilities';
+import { UseCases } from './pages/UseCases';
+import { Research } from './pages/Research';
+import { Partnerships } from './pages/Partnerships';
+import { Compliance } from './pages/Compliance';
+import { Feedback } from './pages/Feedback';
+import { About } from './pages/About';
+import { WelshGovernment } from './pages/case-studies/WelshGovernment';
+import { NationalDigitalTwin } from './pages/case-studies/NationalDigitalTwin';
+import { BridgeAI } from './pages/case-studies/BridgeAI';
+import { Kalgera } from './pages/case-studies/Kalgera';
+import { Glossary } from './pages/Glossary';
+import { AIConsulting } from './pages/services/AIConsulting';
+import { ResearchPolicy } from './pages/services/ResearchPolicy';
+import { PublicEngagement } from './pages/services/PublicEngagement';
+import { SurveyDesign } from './pages/services/SurveyDesign';
+import { EducationUpskilling } from './pages/services/EducationUpskilling';
+import { AIGovernance } from './pages/services/AIGovernance';
+import { Insights } from './pages/Insights';
+
+const SSRApp: React.FC = () => (
+  <div className="flex flex-col min-h-screen">
+    <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:z-[100] focus:bg-gov-blue focus:text-white focus:px-4 focus:py-2">Skip to main content</a>
+    <Navbar />
+    <main id="main-content" className="flex-grow">
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/how-to-buy" element={<HowToBuy />} />
+        <Route path="/capabilities" element={<Capabilities />} />
+        <Route path="/use-cases" element={<UseCases />} />
+        <Route path="/research" element={<Research />} />
+        <Route path="/partnerships" element={<Partnerships />} />
+        <Route path="/compliance" element={<Compliance />} />
+        <Route path="/testimonials" element={<Feedback />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/case-studies/welsh-government-land-valuation" element={<WelshGovernment />} />
+        <Route path="/case-studies/national-digital-twin-programme" element={<NationalDigitalTwin />} />
+        <Route path="/case-studies/bridgeai-creative-industries" element={<BridgeAI />} />
+        <Route path="/case-studies/kalgera-financial-vulnerability" element={<Kalgera />} />
+        <Route path="/glossary" element={<Glossary />} />
+        <Route path="/services/ai-consulting" element={<AIConsulting />} />
+        <Route path="/services/research-policy" element={<ResearchPolicy />} />
+        <Route path="/services/public-engagement" element={<PublicEngagement />} />
+        <Route path="/services/survey-design" element={<SurveyDesign />} />
+        <Route path="/services/education-upskilling" element={<EducationUpskilling />} />
+        <Route path="/services/ai-governance" element={<AIGovernance />} />
+        <Route path="/insights" element={<Insights />} />
+      </Routes>
+    </main>
+    <Footer />
+  </div>
+);
+
+export function render(url: string): string {
+  return renderToString(
+    <StaticRouter location={url}>
+      <SSRApp />
+    </StaticRouter>,
+  );
+}
