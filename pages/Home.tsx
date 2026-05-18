@@ -66,6 +66,12 @@ export const Home: React.FC = () => {
               <strong className="text-gov-blue">New Contract Award</strong>  - Subject Expert Services for Monitoring National Qualifications, appointed by Qualifications Wales. 3-year contract (2026–2029).
             </p>
           </div>
+          <div className="flex items-center gap-3">
+            <Award className="w-5 h-5 text-gov-blue flex-shrink-0" />
+            <p className="text-sm text-gov-dark">
+              <strong className="text-gov-blue">Innovation Challenge Finalist</strong>  - Selected finalist with the Edinburgh Protocol in the 2nd Scottish Centre of Excellence in Digital Trust &amp; DLT Future Payments Innovation Challenge, supported by FinTech Scotland and Scottish Enterprise. May 2026.
+            </p>
+          </div>
         </div>
       </div>
 
