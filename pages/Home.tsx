@@ -57,6 +57,12 @@ export const Home: React.FC = () => {
           <div className="flex items-center gap-3">
             <Award className="w-5 h-5 text-gov-blue flex-shrink-0" />
             <p className="text-sm text-gov-dark">
+              <strong className="text-gov-blue">New Contract Award</strong>  - Appointed to the Business Durham Select List of business support specialists by Durham County Council, supporting pre-start, start-up and existing businesses (UKSPF grant funded). 2026–2028, with options to 2030.
+            </p>
+          </div>
+          <div className="flex items-center gap-3">
+            <Award className="w-5 h-5 text-gov-blue flex-shrink-0" />
+            <p className="text-sm text-gov-dark">
               <strong className="text-gov-blue">New Contract Award</strong>  - Appointed to the Expert Help for Business framework (Lot 1  - Financial Management) by Aberdeenshire Council, Scotland. March 2026.
             </p>
           </div>
@@ -219,6 +225,7 @@ export const Home: React.FC = () => {
             <img src="/logos/logo2.png" alt="BridgeAI" className="h-16 object-contain grayscale hover:grayscale-0 transition-all" />
             <img src="/logos/logo3.png" alt="Innovate UK" className="h-16 object-contain grayscale hover:grayscale-0 transition-all" />
             <img src="/logos/qualifications-wales.png" alt="Qualifications Wales" className="h-16 object-contain grayscale hover:grayscale-0 transition-all" />
+            <img src="/logos/durham-county-council.png" alt="Durham County Council" className="h-16 object-contain grayscale hover:grayscale-0 transition-all" />
             <img src="/logos/logo5.png" alt="National Digital Twin Programme" className="h-16 object-contain grayscale hover:grayscale-0 transition-all" />
             <img src="/logos/logo6.png" alt="UK Export Academy" className="h-16 object-contain grayscale hover:grayscale-0 transition-all" />
             <img src="/logos/dbt.svg" alt="Department for Business and Trade" className="h-16 object-contain grayscale hover:grayscale-0 transition-all" />
