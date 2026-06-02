@@ -59,6 +59,40 @@ export const Insights: React.FC = () => {
         </div>
       </header>
 
+      {/* Recent Announcements */}
+      <section className="space-y-6">
+        <h2 className="text-3xl font-bold text-gov-dark">Recent Announcements</h2>
+        <article className="bg-white border border-gov-border/50 rounded-xl p-8 flex gap-6 items-start">
+          <img src="/logos/iwm.png" alt="Imperial War Museums" className="h-14 object-contain flex-shrink-0" />
+          <div>
+            <div className="flex items-center gap-3 mb-2">
+              <span className="text-xs font-semibold uppercase tracking-widest text-gov-blue bg-gov-blue/10 px-2.5 py-1 rounded-full">Contract Award</span>
+              <time className="text-xs text-gov-secondary/70" dateTime="2026-06-10">June 2026</time>
+            </div>
+            <h3 className="text-lg font-bold text-gov-dark mb-2">
+              Imperial War Museums — Digital Transformation Support Framework (Lot 1: Data Consultancy)
+            </h3>
+            <p className="text-base text-gov-dark/80 leading-relaxed mb-3">
+              Tesseract Academy has been appointed to the{' '}
+              <a
+                href="https://www.sell2wales.gov.wales/search/show/search_view.aspx?ID=MAY620325"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gov-blue hover:underline"
+              >
+                IWM Digital Transformation Support Framework
+              </a>{' '}
+              (reference DE3480) as one of three suppliers on Lot 1 (Data Consultancy). The framework runs from
+              June 2026 to June 2028, with an option to extend to February 2029. IWM is seeking to deliver
+              data consultancy, AI, software engineering, and business analysis services across its digital estate.
+            </p>
+            <p className="text-sm text-gov-secondary/70">
+              Contracting authority: Imperial War Museums · Procurement reference: DE3480 · Lot value: £90,000 excl. VAT
+            </p>
+          </div>
+        </article>
+      </section>
+
       {/* Key Findings */}
       <section className="space-y-6">
         <h2 className="text-3xl font-bold text-gov-dark">Key Findings</h2>

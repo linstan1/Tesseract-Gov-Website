@@ -228,6 +228,7 @@ export const Home: React.FC = () => {
             <img src="/logos/logo10.png" alt="The Growth Company" className="h-16 object-contain grayscale hover:grayscale-0 transition-all" />
             <img src="/logos/fintech-scotland.png" alt="Fintech Scotland" className="h-16 object-contain grayscale hover:grayscale-0 transition-all" />
             <img src="/logos/kalgera.png" alt="Kalgera" className="h-16 object-contain grayscale hover:grayscale-0 transition-all" />
+            <img src="/logos/iwm.png" alt="Imperial War Museums" className="h-16 object-contain grayscale hover:grayscale-0 transition-all" />
           </div>
         </div>
 
