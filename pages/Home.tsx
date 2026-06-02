@@ -239,6 +239,9 @@ export const Home: React.FC = () => {
               <img src="/logos/cyber-essentials.png" alt="Cyber Essentials Certified" className="h-20 object-contain" />
             </div>
             <div className="flex flex-col items-center gap-2">
+              <img src="/logos/r-cloud.png" alt="R-Cloud" className="h-12 object-contain rounded" />
+            </div>
+            <div className="flex flex-col items-center gap-2">
               <img src="/logos/ccs.svg" alt="Crown Commercial Service Appointed Supplier" className="h-20 object-contain" />
             </div>
           </div>

@@ -26,7 +26,7 @@ export const Navbar: React.FC = () => {
             <span className="font-bold text-base text-gov-dark uppercase tracking-wide ml-1.5">Government Gateway</span>
           </a>
 
-          <nav className="hidden md:flex items-center gap-1" aria-label="Main navigation">
+          <nav className="hidden lg:flex items-center gap-1" aria-label="Main navigation">
             {NAV_ITEMS.map((item) => (
               <NavLink
                 key={item.path}
@@ -45,7 +45,7 @@ export const Navbar: React.FC = () => {
             ))}
           </nav>
 
-          <div className="flex items-center md:hidden ml-auto">
+          <div className="flex items-center lg:hidden ml-auto">
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="inline-flex items-center justify-center p-2 rounded-lg text-gov-text hover:bg-gov-bg focus:outline-none focus:ring-2 focus:ring-gov-focus focus:ring-offset-2"
@@ -61,7 +61,7 @@ export const Navbar: React.FC = () => {
       </div>
 
       {isOpen && (
-        <nav id="mobile-menu" className="md:hidden bg-white border-t border-gov-border/30" aria-label="Mobile navigation">
+        <nav id="mobile-menu" className="lg:hidden bg-white border-t border-gov-border/30" aria-label="Mobile navigation">
           <div className="px-4 py-4 space-y-1">
             {NAV_ITEMS.map((item) => (
               <NavLink
