@@ -32,7 +32,7 @@ const PAGE_META: Record<string, { title: string; description: string }> = {
   },
   '/how-to-buy': {
     title: 'How to Buy - Procurement Routes | Tesseract Government Gateway',
-    description: 'Commission Tesseract Academy through Crown Commercial Service frameworks (RM6200, RM6094, RM6126) or direct award. SME supplier for AI, research, and digital services.',
+    description: 'Commission Tesseract Academy through Crown Commercial Service frameworks (RM6200, RM6094, RM6126, RM6219) or direct award. SME supplier for AI, research, training, and digital services.',
   },
   '/capabilities': {
     title: 'Capabilities - AI, Research, Education & Survey Services | Tesseract Government Gateway',
@@ -60,7 +60,7 @@ const PAGE_META: Record<string, { title: string; description: string }> = {
   },
   '/about': {
     title: 'About Us - Team, Credentials & Company Profile | Tesseract Government Gateway',
-    description: 'Meet the Tesseract Academy team: Dr Stylianos Kampakis (PhD UCL, FRSS, CStat) and Fabio Rovai MSc. CCS frameworks RM6200, RM6094, RM6126. Cyber Essentials certified. DV-cleared resource available.',
+    description: 'Meet the Tesseract Academy team: Dr Stylianos Kampakis (PhD UCL, FRSS, CStat) and Fabio Rovai MSc. CCS frameworks RM6200, RM6094, RM6126, RM6219. Cyber Essentials certified. DV-cleared resource available.',
   },
   '/case-studies/welsh-government-land-valuation': {
     title: 'Welsh Government Land Valuation Research | Tesseract Government Gateway',

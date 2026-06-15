@@ -18,7 +18,7 @@ export const Home: React.FC = () => {
             Research-backed AI and data services for <span className="text-gov-blue">UK public sector</span>
           </h1>
           <p className="text-xl text-gov-secondary/90 mb-6 max-w-3xl leading-relaxed">
-            Tesseract Academy delivers AI consulting, research, public engagement, and survey design for UK government bodies. Crown Commercial Service appointed supplier on RM6200 (AI DPS), RM6094 (Spark DPS), and RM6126 (Research &amp; Insights DPS).
+            Tesseract Academy delivers AI consulting, research, public engagement, and survey design for UK government bodies. Crown Commercial Service appointed supplier on RM6200 (AI DPS), RM6094 (Spark DPS), RM6126 (Research &amp; Insights DPS), and RM6219 (Learning &amp; Training Services DPS).
           </p>
           <p className="text-base text-gov-secondary/80 mb-10 max-w-3xl leading-relaxed">
             Delivered for Welsh Government, Innovate UK, National Digital Twin Programme, Qualifications Wales, and Fintech Scotland.
@@ -40,7 +40,7 @@ export const Home: React.FC = () => {
           {[
             { value: "1,916", label: "Welsh LSOAs analysed", sub: "99% of Welsh geography" },
             { value: "1,100", label: "BridgeAI registrations", sub: "vs 200 capacity target" },
-            { value: "3", label: "CCS frameworks", sub: "RM6200 · RM6094 · RM6126" },
+            { value: "4", label: "CCS frameworks", sub: "RM6200 · RM6094 · RM6126 · RM6219" },
           ].map((m, i) => (
             <div key={i}>
               <div className="text-3xl font-extrabold text-white mb-1">{m.value}</div>
@@ -229,6 +229,7 @@ export const Home: React.FC = () => {
             <img src="/logos/fintech-scotland.png" alt="Fintech Scotland" className="h-16 object-contain grayscale hover:grayscale-0 transition-all" />
             <img src="/logos/kalgera.png" alt="Kalgera" className="h-16 object-contain grayscale hover:grayscale-0 transition-all" />
             <img src="/logos/iwm.png" alt="Imperial War Museums" className="h-16 object-contain grayscale hover:grayscale-0 transition-all" />
+            <img src="/logos/wrap.svg" alt="WRAP (Waste & Resources Action Programme)" className="h-16 object-contain grayscale hover:grayscale-0 transition-all" />
           </div>
         </div>
 

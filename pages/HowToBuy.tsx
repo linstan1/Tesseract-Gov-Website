@@ -7,6 +7,7 @@ const FRAMEWORKS = [
   { name: 'Artificial Intelligence DPS', ref: 'RM6200', lots: ['AI Discovery & Consultancy', 'AI Licensing & Customisation', 'AI End-to-End Partnerships'], status: 'Live', url: 'https://www.crowncommercial.gov.uk/agreements/RM6200' },
   { name: 'Spark DPS', ref: 'RM6094', lots: ['AI & Automation', 'Data', 'Internet of Things (IoT)'], status: 'Live', url: 'https://www.crowncommercial.gov.uk/agreements/RM6094' },
   { name: 'Research & Insights DPS', ref: 'RM6126', lots: ['Research Services', 'Insight & Evidence'], status: 'Live', url: 'https://www.crowncommercial.gov.uk/agreements/RM6126' },
+  { name: 'Learning & Training Services DPS', ref: 'RM6219', lots: ['Standard Off-the-Shelf Training', 'Bespoke Training', 'Learning Technologies', 'Education Services'], status: 'Live', url: 'https://www.crowncommercial.gov.uk/agreements/RM6219' },
 ];
 
 export const HowToBuy: React.FC = () => {
