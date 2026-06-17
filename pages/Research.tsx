@@ -32,6 +32,16 @@ export const Research: React.FC = () => {
              </div>
            </li>
            <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
+             <a href="https://github.com/fabio-rovai/open-ontologies/blob/main/case-studies/skills-mobility/case-study.md" target="_blank" rel="noopener noreferrer"><h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark hover:underline transition-colors">What Adult Skills Reveal About Social Mobility That Qualifications Hide<span className="sr-only"> (opens in new tab)</span></h3></a>
+             <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Open research, OECD Survey of Adult Skills (PIAAC) public-use data, 2026</p>
+             <p className="text-base text-gov-dark/90 leading-relaxed">A reproducible analysis of educational and skills mobility in England using open OECD PIAAC data. Among adults with the same qualification, those from a higher-educated background score about 37 points higher in numeracy, so qualifications understate the advantage of social origin. The data harmonisation is published as an open, machine-readable scheme.</p>
+             <div className="mt-3 flex flex-wrap gap-3 items-center">
+               <a href="https://github.com/fabio-rovai/open-ontologies/blob/main/case-studies/skills-mobility/case-study.md" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">Read the case study<span className="sr-only"> (opens in new tab)</span></a>
+               <span className="text-gov-border">|</span>
+               <a href="https://github.com/fabio-rovai/open-ontologies/tree/main/case-studies/skills-mobility" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">Reproducible code and data scheme<span className="sr-only"> (opens in new tab)</span></a>
+             </div>
+           </li>
+           <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
              <a href="https://www.gov.uk/government/publications/ai-skills-for-the-uk-workforce/annex-a-methodology" target="_blank" rel="noopener noreferrer"><h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark hover:underline transition-colors">AI Skills for the UK Workforce - Skills England<span className="sr-only"> (opens in new tab)</span></h3></a>
              <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Skills England / UK Government Publication, 2025</p>
              <p className="text-base text-gov-dark/90 leading-relaxed">Tesseract Academy is cited as an AI training provider and consultancy in Skills England's official research into AI skills for the UK workforce. The publication's methodology included stakeholder workshops with 43 organisations, with Tesseract Academy contributing alongside institutions including The Alan Turing Institute and the Surrey AI Centre.</p>
