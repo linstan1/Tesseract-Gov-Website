@@ -7,6 +7,7 @@ const POLICIES = [
   { title: 'Information Security Policy (Summary)', version: 'v1.4', date: 'Dec 2024', size: '11KB', href: '/policies/information-security-policy.pdf' },
   { title: 'Modern Slavery Statement', version: 'v1.0', date: 'Jan 2025', size: '8KB', href: '/policies/modern-slavery-statement.pdf' },
   { title: 'Carbon Reduction Plan', version: 'v1.2', date: 'Feb 2025', size: '10KB', href: '/policies/carbon-reduction-plan.pdf' },
+  { title: 'Business Continuity Plan', version: 'v1.0', date: 'Jun 2026', size: '58KB', href: '/policies/business-continuity-plan.pdf' },
   { title: 'Accessibility Statement', version: 'v1.0', date: 'Mar 2025', size: '9KB', href: '/policies/accessibility-statement.pdf' },
 ];
 
