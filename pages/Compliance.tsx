@@ -8,6 +8,7 @@ const POLICIES = [
   { title: 'Modern Slavery Statement', version: 'v1.0', date: 'Jan 2025', size: '8KB', href: '/policies/modern-slavery-statement.pdf' },
   { title: 'Carbon Reduction Plan', version: 'v1.2', date: 'Feb 2025', size: '10KB', href: '/policies/carbon-reduction-plan.pdf' },
   { title: 'Business Continuity Plan', version: 'v1.0', date: 'Jun 2026', size: '58KB', href: '/policies/business-continuity-plan.pdf' },
+  { title: 'Equal Opportunities and Diversity Policy', version: 'v1.0', date: 'Jun 2026', size: '57KB', href: '/policies/equal-opportunities-policy.pdf' },
   { title: 'Accessibility Statement', version: 'v1.0', date: 'Mar 2025', size: '9KB', href: '/policies/accessibility-statement.pdf' },
 ];
 
