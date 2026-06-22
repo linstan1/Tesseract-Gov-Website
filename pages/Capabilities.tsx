@@ -9,7 +9,7 @@ export const Capabilities: React.FC = () => {
       <div className="max-w-4xl">
         <h1 className="text-5xl font-extrabold text-gov-dark mb-6 tracking-tight leading-tight">Capabilities</h1>
         <p className="text-xl text-gov-secondary/90 leading-relaxed">
-          We deliver value through rigorous research and agile execution. Our services are designed to de-risk complex public sector projects.
+          We deliver value through rigorous research and agile execution, designed to de-risk complex public-sector projects. Every capability below is backed by a delivered contract: the numbers, and a link to the full case study.
         </p>
       </div>
 
@@ -20,13 +20,16 @@ export const Capabilities: React.FC = () => {
           </div>
           <h2 className="text-lg font-semibold text-gov-dark mb-3">Policy-Aligned Advisory</h2>
           <p className="text-gov-secondary mb-5 leading-relaxed">
-            Ensuring technical initiatives align with broader policy goals. We provide feasibility studies, ethics frameworks, and technical assurance for high-stakes programs.
+            Ensuring technical initiatives align with broader policy goals. We provide feasibility studies, ethics frameworks, and technical assurance for high-stakes programmes.
           </p>
           <div className="bg-gov-bg rounded-lg p-4 mt-auto border border-gov-border/30">
-            <p className="text-xs font-semibold text-gov-blue uppercase tracking-wider mb-2">Case Study</p>
-            <p className="text-sm text-gov-secondary leading-relaxed">
-              <strong>FCA Cryptoasset Regulation</strong>  - Represented the British Blockchain Association at an FCA roundtable on stablecoin regulation, providing expert input on the regulatory framework for cryptoassets in the UK.
+            <p className="text-xs font-semibold text-gov-blue uppercase tracking-wider mb-2">Proof</p>
+            <p className="text-sm text-gov-secondary leading-relaxed mb-3">
+              <strong>Welsh Government</strong>  - tested <strong>5</strong> land-valuation methodologies across <strong>1,916</strong> LSOAs (<strong>99%</strong> of Welsh geography); published on GOV.WALES to inform local-government finance policy.
             </p>
+            <Link to="/case-studies/welsh-government-land-valuation" className="inline-flex items-center gap-1.5 text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline">
+              Read the case study <ArrowRight className="w-4 h-4" />
+            </Link>
           </div>
         </Card>
 
@@ -39,10 +42,13 @@ export const Capabilities: React.FC = () => {
             From Discovery to Live. We deploy multidisciplinary teams to build Alpha prototypes and scale Beta services using GDS-aligned agile standards.
           </p>
           <div className="bg-gov-bg rounded-lg p-4 mt-auto border border-gov-border/30">
-            <p className="text-xs font-semibold text-gov-blue uppercase tracking-wider mb-2">Case Study</p>
-            <p className="text-sm text-gov-secondary leading-relaxed">
-              <strong>BridgeAI / Innovate UK (GSS24646)</strong>  - Awarded contract to deliver AI training and support for creative industries professionals, bridging the gap between AI technology and creative applications. Fully funded by Innovate UK BridgeAI.
+            <p className="text-xs font-semibold text-gov-blue uppercase tracking-wider mb-2">Proof</p>
+            <p className="text-sm text-gov-secondary leading-relaxed mb-3">
+              <strong>National Digital Twin Programme</strong>  - delivered a production-ready AI ontology tool (a <strong>4</strong>-step wizard ingesting <strong>3</strong> data formats) on time and on budget, open-sourced under Apache 2.0 for the UK National Digital Twin Programme.
             </p>
+            <Link to="/case-studies/national-digital-twin-programme" className="inline-flex items-center gap-1.5 text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline">
+              Read the case study <ArrowRight className="w-4 h-4" />
+            </Link>
           </div>
         </Card>
 
@@ -55,10 +61,13 @@ export const Capabilities: React.FC = () => {
              Building internal capability. We train civil servants and public sector leaders on data literacy, AI ethics, and strategic implementation of emerging tech.
           </p>
           <div className="bg-gov-bg rounded-lg p-4 mt-auto border border-gov-border/30">
-            <p className="text-xs font-semibold text-gov-blue uppercase tracking-wider mb-2">Case Study</p>
-            <p className="text-sm text-gov-secondary leading-relaxed">
-              <strong>US Navy & Vodafone Executive Training</strong>  - Delivered executive AI and data science workshops to senior leadership teams, covering strategic decision-making, AI readiness, and practical frameworks for operational integration.
+            <p className="text-xs font-semibold text-gov-blue uppercase tracking-wider mb-2">Proof</p>
+            <p className="text-sm text-gov-secondary leading-relaxed mb-3">
+              <strong>Innovate UK BridgeAI</strong>  - <strong>1,100</strong> registrations against a <strong>200</strong>-place target, <strong>5.5x</strong> oversubscribed, delivering AI training to UK creative-industries professionals.
             </p>
+            <Link to="/case-studies/bridgeai-creative-industries" className="inline-flex items-center gap-1.5 text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline">
+              Read the case study <ArrowRight className="w-4 h-4" />
+            </Link>
           </div>
         </Card>
 
@@ -71,10 +80,32 @@ export const Capabilities: React.FC = () => {
             End-to-end survey services: questionnaire design, stakeholder consultation, data collection, and statistical analysis. Supporting needs assessments, user research, and policy evaluation.
           </p>
           <div className="bg-gov-bg rounded-lg p-4 mt-auto border border-gov-border/30">
-            <p className="text-xs font-semibold text-gov-blue uppercase tracking-wider mb-2">Case Study</p>
-            <p className="text-sm text-gov-secondary leading-relaxed">
-              <strong>Welsh Government  - Land Valuation Survey</strong>  - Tested five distinct valuation methodologies  - market-based statistical, machine learning, formula-based, conventional, and experimental approaches  - to inform national land value tax policy in Wales.
+            <p className="text-xs font-semibold text-gov-blue uppercase tracking-wider mb-2">Proof</p>
+            <p className="text-sm text-gov-secondary leading-relaxed mb-3">
+              <strong>Kalgera / Fintech Scotland</strong>  - a screening survey of <strong>80&ndash;120</strong> participants plus <strong>8&ndash;10</strong> in-depth interviews mapped to <strong>8</strong> financial-vulnerability signals, under an Adult Support and Protection (Scotland) Act 2007 ethical framework.
             </p>
+            <Link to="/case-studies/kalgera-financial-vulnerability" className="inline-flex items-center gap-1.5 text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline">
+              Read the case study <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+        </Card>
+
+        <Card className="h-full flex flex-col group md:col-span-2">
+          <div className="p-3.5 bg-gov-blue/8 w-fit rounded-md mb-5 group-hover:bg-gov-blue/12 transition-colors duration-300">
+            <LineChart className="w-6 h-6 text-gov-blue" />
+          </div>
+          <h2 className="text-lg font-semibold text-gov-dark mb-3">Data Quality & Assurance</h2>
+          <p className="text-gov-secondary/90 mb-5 leading-relaxed">
+            Making data trustworthy enough for regulators to act on. We combine statistical quality analysis with declarative, machine-checkable validation rules that encode domain physics.
+          </p>
+          <div className="bg-gov-bg rounded-lg p-4 mt-auto border border-gov-border/30">
+            <p className="text-xs font-semibold text-gov-blue uppercase tracking-wider mb-2">Proof</p>
+            <p className="text-sm text-gov-secondary leading-relaxed mb-3">
+              <strong>Wastewater Effluent Data Quality</strong>  - analysed <strong>1,382</strong> days of full-scale treatment-works data and built <strong>8</strong> machine-checkable SHACL rules, including the COD &ge; BOD physical invariant. Published open source via Open Ontologies.
+            </p>
+            <Link to="/case-studies/wastewater-effluent-data-quality" className="inline-flex items-center gap-1.5 text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline">
+              Read the case study <ArrowRight className="w-4 h-4" />
+            </Link>
           </div>
         </Card>
       </div>
