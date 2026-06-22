@@ -62,6 +62,32 @@ export const Insights: React.FC = () => {
       {/* Recent Announcements */}
       <section className="space-y-6">
         <h2 className="text-3xl font-bold text-gov-dark">Recent Announcements</h2>
+        <article className="bg-white border border-gov-border/50 rounded-xl p-8">
+          <div className="flex items-center gap-3 mb-2">
+            <span className="text-xs font-semibold uppercase tracking-widest text-gov-blue bg-gov-blue/10 px-2.5 py-1 rounded-full">Event: London Data Week 2026</span>
+            <time className="text-xs text-gov-secondary/70" dateTime="2026-07-08">8 July 2026</time>
+          </div>
+          <h3 className="text-lg font-bold text-gov-dark mb-2">
+            AI Tools for Everyone: Advancing Disability Inclusion (LSE)
+          </h3>
+          <p className="text-base text-gov-dark/80 leading-relaxed mb-3">
+            Tesseract Academy is hosting{' '}
+            <a
+              href="https://www.eventbrite.co.uk/e/ai-tools-for-everyone-advancing-disability-inclusion-tickets-1991274539752"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gov-blue hover:underline"
+            >
+              AI Tools for Everyone: Advancing Disability Inclusion
+            </a>{' '}
+            as part of London Data Week 2026, returning bigger this year at the London School of Economics. The
+            session brings together speakers from technology, disability, research and policy to explore how AI can
+            enhance accessibility and support for people with diverse disabilities.
+          </p>
+          <p className="text-sm text-gov-secondary/70">
+            Wednesday 8 July 2026, 4&ndash;6pm · Shaw Lecture Theatre, LSE, Houghton Street, London WC2A 2AE · Free, registration via Eventbrite
+          </p>
+        </article>
         <article className="bg-white border border-gov-border/50 rounded-xl p-8 flex gap-6 items-start">
           <img src="/logos/iwm.png" alt="Imperial War Museums" className="h-14 object-contain flex-shrink-0" />
           <div>
