@@ -142,6 +142,16 @@ export const Home: React.FC = () => {
           <h3 className="text-center text-sm font-semibold text-gov-secondary uppercase tracking-wider mb-8">Our Work in Action</h3>
           <img src="/collage-activities.jpg" alt="Tesseract Academy delivering workshops, presentations and research across UK public sector contracts" width="1615" height="400" loading="eager" fetchPriority="high" decoding="async" className="w-full rounded-xl shadow-sm" />
           <p className="text-center text-xs text-gov-secondary mt-4">BridgeAI Skills Hub launch at Ona Studios, London &bull; Welsh Government Land Valuation Research presentation, Swansea</p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
+            <figure>
+              <img src="/events/bridgeai-cohort2-pwc.jpg" alt="Tesseract Academy team at the Innovate UK BridgeAI Cohort 2 launch with PwC, Ona Studios, London" loading="lazy" decoding="async" className="w-full h-60 object-cover rounded-xl shadow-sm" />
+              <figcaption className="text-center text-xs text-gov-secondary mt-2">Innovate UK BridgeAI Cohort 2 launch, in partnership with PwC, Ona Studios, London</figcaption>
+            </figure>
+            <figure>
+              <img src="/events/edinburgh-protocol-future-payments.jpg" alt="Tesseract Academy presenting the Edinburgh Protocol at the Scottish Centre of Excellence in Digital Trust Future Payments Innovation Challenge" loading="lazy" decoding="async" className="w-full h-60 object-cover rounded-xl shadow-sm" />
+              <figcaption className="text-center text-xs text-gov-secondary mt-2">Edinburgh Protocol pitch, Scottish Centre of Excellence in Digital Trust, Future Payments Innovation Challenge</figcaption>
+            </figure>
+          </div>
         </div>
 
         {/* Public Engagement Narrative */}
