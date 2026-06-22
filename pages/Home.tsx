@@ -239,7 +239,7 @@ export const Home: React.FC = () => {
 
         {/* Academic Collaborators */}
         <div className="py-12 border-t border-gov-border/30">
-          <h3 className="text-center text-sm font-semibold text-gov-secondary uppercase tracking-wider mb-8">Event partners and host venues</h3>
+          <h3 className="text-center text-sm font-semibold text-gov-secondary uppercase tracking-wider mb-8">Our event partners</h3>
           <div className="flex flex-wrap items-center justify-center gap-12">
             <img src="/logos/lse.svg" alt="London School of Economics" className="h-14 object-contain grayscale hover:grayscale-0 transition-all" />
             <img src="/logos/kings.svg" alt="King's College London" className="h-14 object-contain grayscale hover:grayscale-0 transition-all" />
