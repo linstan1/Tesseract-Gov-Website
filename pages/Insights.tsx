@@ -117,6 +117,36 @@ export const Insights: React.FC = () => {
             </p>
           </div>
         </article>
+        <article className="bg-white border border-gov-border/50 rounded-xl p-8 flex gap-6 items-start">
+          <img src="/logos/wrap.svg" alt="WRAP (Waste and Resources Action Programme)" className="h-14 object-contain flex-shrink-0" />
+          <div>
+            <div className="flex items-center gap-3 mb-2">
+              <span className="text-xs font-semibold uppercase tracking-widest text-gov-blue bg-gov-blue/10 px-2.5 py-1 rounded-full">Contract Award</span>
+              <time className="text-xs text-gov-secondary/70" dateTime="2026-05-01">May 2026</time>
+            </div>
+            <h3 className="text-lg font-bold text-gov-dark mb-2">
+              WRAP: Food Loss and Waste Data Taxonomy (PRC228)
+            </h3>
+            <p className="text-base text-gov-dark/80 leading-relaxed mb-3">
+              Tesseract Academy was commissioned by{' '}
+              <a
+                href="https://www.wrap.ngo"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gov-blue hover:underline"
+              >
+                WRAP
+              </a>{' '}
+              to develop a digital Food Loss and Waste (FLW) data taxonomy for its Food Programme and global Food
+              Pact Network, translating the international FLW Standard into a structured, machine-readable schema with
+              documented validation rules. The taxonomy supports consistent measurement across the 400+ organisations
+              in the Courtauld Commitment 2030 and feeds emerging international data standardisation (ISO/TC 34/SC 20).
+            </p>
+            <p className="text-sm text-gov-secondary/70">
+              Contracting authority: WRAP (Waste and Resources Action Programme) · Procurement reference: PRC228
+            </p>
+          </div>
+        </article>
       </section>
 
       {/* Key Findings */}
