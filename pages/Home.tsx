@@ -239,7 +239,7 @@ export const Home: React.FC = () => {
 
         {/* Academic Collaborators */}
         <div className="py-12 border-t border-gov-border/30">
-          <h3 className="text-center text-sm font-semibold text-gov-secondary uppercase tracking-wider mb-8">Collaborators and event partners</h3>
+          <h3 className="text-center text-sm font-semibold text-gov-secondary uppercase tracking-wider mb-8">Event partners and host venues</h3>
           <div className="flex flex-wrap items-center justify-center gap-12">
             <img src="/logos/lse.svg" alt="London School of Economics" className="h-14 object-contain grayscale hover:grayscale-0 transition-all" />
             <img src="/logos/kings.svg" alt="King's College London" className="h-14 object-contain grayscale hover:grayscale-0 transition-all" />
@@ -247,7 +247,7 @@ export const Home: React.FC = () => {
             <img src="/logos/london-data-week.png" alt="London Data Week" className="h-12 object-contain grayscale hover:grayscale-0 transition-all" />
             <img src="/logos/pwc.svg" alt="PwC" className="h-14 object-contain grayscale hover:grayscale-0 transition-all" />
           </div>
-          <p className="text-center text-xs text-gov-secondary/70 mt-6 max-w-2xl mx-auto">Tesseract Academy convenes public events with UK universities, including the London School of Economics, where we host the London Data Week 2026 disability-inclusion session.</p>
+          <p className="text-center text-xs text-gov-secondary/70 mt-6 max-w-2xl mx-auto">We co-host and co-deliver public events with leading universities and industry, including London Data Week at the LSE and the Innovate UK BridgeAI creative-industries launch with PwC.</p>
         </div>
 
         {/* Accreditations & Frameworks */}
