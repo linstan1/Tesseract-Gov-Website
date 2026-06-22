@@ -72,6 +72,10 @@ const PAGE_META = {
     title: 'Financial Vulnerability Research — Kalgera | Tesseract Government Gateway',
     description: 'Qualitative research validating AI-driven financial vulnerability signals for Kalgera/Fintech Scotland. Ethical framework under Adult Support and Protection (Scotland) Act 2007. Signal validation and intervention acceptability reports delivered.',
   },
+  '/case-studies/wastewater-effluent-data-quality': {
+    title: 'Wastewater Effluent Data Quality | Tesseract Government Gateway',
+    description: 'Open-data demonstration of statistical and rule-based quality assurance for continuous wastewater effluent monitoring: 1,382 days of full-scale works data, SHACL rules including the COD >= BOD physical invariant. Open source via Open Ontologies.',
+  },
   '/services/ai-consulting': {
     title: 'AI Consulting for UK Public Sector | Tesseract Government Gateway',
     description: 'Custom AI model development, NLP pipelines, and predictive analytics for UK government. CCS RM6200 appointed supplier. GDS aligned. Welsh Government ML land valuation and NDTP ontology case studies.',

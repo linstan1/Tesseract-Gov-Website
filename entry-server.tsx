@@ -23,6 +23,7 @@ import { WelshGovernment } from './pages/case-studies/WelshGovernment';
 import { NationalDigitalTwin } from './pages/case-studies/NationalDigitalTwin';
 import { BridgeAI } from './pages/case-studies/BridgeAI';
 import { Kalgera } from './pages/case-studies/Kalgera';
+import { WastewaterDataQuality } from './pages/case-studies/WastewaterDataQuality';
 import { Glossary } from './pages/Glossary';
 import { AIConsulting } from './pages/services/AIConsulting';
 import { ResearchPolicy } from './pages/services/ResearchPolicy';
@@ -51,6 +52,7 @@ const SSRApp: React.FC = () => (
         <Route path="/case-studies/national-digital-twin-programme" element={<NationalDigitalTwin />} />
         <Route path="/case-studies/bridgeai-creative-industries" element={<BridgeAI />} />
         <Route path="/case-studies/kalgera-financial-vulnerability" element={<Kalgera />} />
+        <Route path="/case-studies/wastewater-effluent-data-quality" element={<WastewaterDataQuality />} />
         <Route path="/glossary" element={<Glossary />} />
         <Route path="/services/ai-consulting" element={<AIConsulting />} />
         <Route path="/services/research-policy" element={<ResearchPolicy />} />

@@ -16,6 +16,7 @@ const WelshGovernment = lazy(() => import('./pages/case-studies/WelshGovernment'
 const NationalDigitalTwin = lazy(() => import('./pages/case-studies/NationalDigitalTwin').then(m => ({ default: m.NationalDigitalTwin })));
 const BridgeAI = lazy(() => import('./pages/case-studies/BridgeAI').then(m => ({ default: m.BridgeAI })));
 const Kalgera = lazy(() => import('./pages/case-studies/Kalgera').then(m => ({ default: m.Kalgera })));
+const WastewaterDataQuality = lazy(() => import('./pages/case-studies/WastewaterDataQuality').then(m => ({ default: m.WastewaterDataQuality })));
 const Glossary = lazy(() => import('./pages/Glossary').then(m => ({ default: m.Glossary })));
 const AIConsulting = lazy(() => import('./pages/services/AIConsulting').then(m => ({ default: m.AIConsulting })));
 const ResearchPolicy = lazy(() => import('./pages/services/ResearchPolicy').then(m => ({ default: m.ResearchPolicy })));
@@ -77,6 +78,10 @@ const PAGE_META: Record<string, { title: string; description: string }> = {
   '/case-studies/kalgera-financial-vulnerability': {
     title: 'Financial Vulnerability Research — Kalgera / Fintech Scotland | Tesseract Government Gateway',
     description: 'End-to-end qualitative research validating Kalgera\'s AI-driven financial vulnerability signals. 8–10 in-depth interviews, 80–120 survey respondents, ethical framework under the Adult Support and Protection (Scotland) Act 2007.',
+  },
+  '/case-studies/wastewater-effluent-data-quality': {
+    title: 'Wastewater Effluent Data Quality | Tesseract Government Gateway',
+    description: 'Open-data demonstration of statistical and rule-based quality assurance for continuous wastewater effluent monitoring: 1,382 days of full-scale works data, SHACL rules including the COD >= BOD physical invariant. Open source via Open Ontologies.',
   },
   '/glossary': {
     title: 'AI & Procurement Glossary | Tesseract Government Gateway',
@@ -160,6 +165,7 @@ const App: React.FC = () => {
               <Route path="/case-studies/national-digital-twin-programme" element={<NationalDigitalTwin />} />
               <Route path="/case-studies/bridgeai-creative-industries" element={<BridgeAI />} />
               <Route path="/case-studies/kalgera-financial-vulnerability" element={<Kalgera />} />
+              <Route path="/case-studies/wastewater-effluent-data-quality" element={<WastewaterDataQuality />} />
               <Route path="/glossary" element={<Glossary />} />
               <Route path="/services/ai-consulting" element={<AIConsulting />} />
               <Route path="/services/research-policy" element={<ResearchPolicy />} />

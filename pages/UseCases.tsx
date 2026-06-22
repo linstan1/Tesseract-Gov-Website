@@ -44,6 +44,16 @@ const USE_CASES = [
     outcome: 'Delivered three outputs: a signal validation report confirming which behavioural markers are observable in transaction data, an intervention acceptability framework documenting what vulnerable people consider helpful versus intrusive, and a summary findings report for the Finance & Health Lab. Direct participant quotes used to ground Kalgera\'s product decisions in lived experience.',
     reusable: 'Recruitment pipeline (Facebook ad → screening survey → qualification → interview). Thematic analysis framework mapped to financial signal categories. Intervention acceptability spectrum methodology.',
   },
+  {
+    id: 'uc5',
+    slug: '/case-studies/wastewater-effluent-data-quality',
+    title: 'Wastewater Effluent Data Quality (Open-Data Demonstration)',
+    challenge: 'The UK is rolling out continuous water-quality monitoring on wastewater assets under the Environment Act 2021, and the Environment Agency is exploring whether that data can serve as a regulatory tool. The binding question is data quality: calibration drift, fouled probes, telemetry gaps and transcription errors all masquerade as real signals.',
+    intervention: 'Analysed a full-scale wastewater treatment works dataset of 1,382 daily records carrying the regulated effluent suite (ammonia, BOD, COD, total nitrogen, inflow, outflow). Applied a two-layer method: a statistical QA battery (completeness, flatline, robust MAD outliers, drift) and a declarative ISO 19156 / SOSA effluent ontology with SHACL data-quality rules, including the domain-aware COD ≥ BOD physical invariant.',
+    assurance: 'Fully reproducible and published open source as a case study in Open Ontologies. Source data under CC BY-SA 4.0. No model training: every quality rule is a declarative constraint with a named failure reason.',
+    outcome: 'The data is complete and internally consistent (COD ≥ BOD holds on every one of 1,382 rows), yet the battery still surfaces multi-year baseline drift and dozens of statistical outliers per determinand. The SHACL rules reject every physically impossible record and pass every clean one, making the trust verdict auditable.',
+    reusable: 'The QA battery, effluent observation ontology, and SHACL data-quality shapes are open source and re-pointable to any continuous-monitoring stream.',
+  },
 ];
 
 const UseCaseItem: React.FC<{ data: typeof USE_CASES[0] }> = ({ data }) => {
