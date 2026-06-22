@@ -182,6 +182,10 @@ export const Home: React.FC = () => {
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-gov-blue flex-shrink-0 mt-0.5" />
+                  <span><strong>London Data Week 2026  - AI Tools for Everyone: Advancing Disability Inclusion</strong>  - Returning bigger in 2026 at the <strong>London School of Economics</strong>. Tesseract Academy is hosting a public session with speakers from technology, disability, research and policy on advancing accessibility and disability inclusion through AI. Wednesday 8 July 2026, Shaw Lecture Theatre, LSE. <a href="https://www.eventbrite.co.uk/e/ai-tools-for-everyone-advancing-disability-inclusion-tickets-1991274539752" target="_blank" rel="noopener noreferrer" className="text-gov-blue hover:underline">Register on Eventbrite</a>.</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-gov-blue flex-shrink-0 mt-0.5" />
                   <span><strong>London Data Week  - AI Tools for the Visually Impaired</strong>  - Co-organised with <a href="https://www.visionability.org.uk/" target="_blank" rel="noopener noreferrer" className="text-gov-blue hover:underline">Vision Ability CIC</a> a public workshop and demonstration on making AI tools accessible to people with visual impairments, as part of <a href="https://londondataweek.org/ldw25-events/" target="_blank" rel="noopener noreferrer" className="text-gov-blue hover:underline">London Data Week 2025</a>.</span>
                 </li>
                 <li className="flex items-start gap-3">
@@ -231,6 +235,17 @@ export const Home: React.FC = () => {
             <img src="/logos/iwm.png" alt="Imperial War Museums" className="h-16 object-contain grayscale hover:grayscale-0 transition-all" />
             <img src="/logos/wrap.svg" alt="WRAP (Waste & Resources Action Programme)" className="h-16 object-contain grayscale hover:grayscale-0 transition-all" />
           </div>
+        </div>
+
+        {/* Academic Collaborators */}
+        <div className="py-12 border-t border-gov-border/30">
+          <h3 className="text-center text-sm font-semibold text-gov-secondary uppercase tracking-wider mb-8">Academic collaborators and event venues</h3>
+          <div className="flex flex-wrap items-center justify-center gap-12">
+            <img src="/logos/lse.svg" alt="London School of Economics" className="h-14 object-contain grayscale hover:grayscale-0 transition-all" />
+            <img src="/logos/kings.svg" alt="King's College London" className="h-14 object-contain grayscale hover:grayscale-0 transition-all" />
+            <img src="/logos/ucl.svg" alt="University College London" className="h-14 object-contain grayscale hover:grayscale-0 transition-all" />
+          </div>
+          <p className="text-center text-xs text-gov-secondary/70 mt-6 max-w-2xl mx-auto">Tesseract Academy convenes public events with UK universities, including the London School of Economics, where we host the London Data Week 2026 disability-inclusion session.</p>
         </div>
 
         {/* Accreditations & Frameworks */}
