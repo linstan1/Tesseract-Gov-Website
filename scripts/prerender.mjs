@@ -76,6 +76,10 @@ const PAGE_META = {
     title: 'Wastewater Effluent Data Quality | Tesseract Government Gateway',
     description: 'Open-data demonstration of statistical and rule-based quality assurance for continuous wastewater effluent monitoring: 1,382 days of full-scale works data, SHACL rules including the COD >= BOD physical invariant. Open source via Open Ontologies.',
   },
+  '/case-studies/wrap-food-loss-waste-taxonomy': {
+    title: 'WRAP Food Loss and Waste Data Taxonomy | Tesseract Government Gateway',
+    description: 'Commissioned by WRAP (PRC228) to build a structured, machine-readable Food Loss and Waste data taxonomy: 5 entity groups, a JSON-LD schema and 8 validation rules supporting 400+ Courtauld Commitment 2030 organisations and feeding ISO/TC 34/SC 20.',
+  },
   '/services/ai-consulting': {
     title: 'AI Consulting for UK Public Sector | Tesseract Government Gateway',
     description: 'Custom AI model development, NLP pipelines, and predictive analytics for UK government. CCS RM6200 appointed supplier. GDS aligned. Welsh Government ML land valuation and NDTP ontology case studies.',

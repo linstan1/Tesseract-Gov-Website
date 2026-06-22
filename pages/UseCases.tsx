@@ -54,6 +54,16 @@ const USE_CASES = [
     outcome: 'The data is complete and internally consistent (COD ≥ BOD holds on every one of 1,382 rows), yet the battery still surfaces multi-year baseline drift and dozens of statistical outliers per determinand. The SHACL rules reject every physically impossible record and pass every clean one, making the trust verdict auditable.',
     reusable: 'The QA battery, effluent observation ontology, and SHACL data-quality shapes are open source and re-pointable to any continuous-monitoring stream.',
   },
+  {
+    id: 'uc6',
+    slug: '/case-studies/wrap-food-loss-waste-taxonomy',
+    title: 'Food Loss and Waste Data Taxonomy: WRAP',
+    challenge: 'WRAP\'s Courtauld Commitment 2030 asks the UK food industry to halve food waste by 2030 (UN SDG 12.3). More than 400 organisations across an international Food Pact Network report their data using locally divergent definitions, so it cannot be reliably aggregated or compared, undermining measurement of collective progress.',
+    intervention: 'Commissioned by WRAP (PRC228) to translate the international Food Loss and Waste Standard into structured, machine-readable data infrastructure: five entity groups (product category, supply chain stage, waste destination, intervention type, food waste hierarchy) with controlled vocabularies and unique codes, a JSON-LD schema, eight machine-checkable validation rules, and interoperability mappings to the FoodOn and EFSA FoodEx2 reference ontologies. Delivered through iterative co-design with WRAP subject-matter experts.',
+    assurance: 'Built as working data infrastructure with version-controlled change governance. WRAP have confirmed the work will inform their contribution to emerging international data standardisation under ISO/TC 34/SC 20 (food loss and waste).',
+    outcome: 'A publishable, machine-readable taxonomy that lets the Food Pact Network classify and compare food waste data on a like-for-like basis for the first time, and feeds the developing international data standard.',
+    reusable: 'The taxonomy-plus-schema-plus-validation-rules pattern transfers to any multi-organisation reporting domain requiring consistent, comparable data.',
+  },
 ];
 
 const UseCaseItem: React.FC<{ data: typeof USE_CASES[0] }> = ({ data }) => {
