@@ -57,6 +57,18 @@ export const Home: React.FC = () => {
           <div className="flex items-center gap-3">
             <Award className="w-5 h-5 text-gov-blue flex-shrink-0" />
             <p className="text-sm text-gov-dark">
+              <strong className="text-gov-blue">New Contract Award</strong>  - Appointed to the Imperial War Museums Digital Transformation Support Framework (Lot 1  - Data Consultancy) as one of three suppliers. June 2026, running to 2028 with an option to 2029.
+            </p>
+          </div>
+          <div className="flex items-center gap-3">
+            <Award className="w-5 h-5 text-gov-blue flex-shrink-0" />
+            <p className="text-sm text-gov-dark">
+              <strong className="text-gov-blue">New Contract Award</strong>  - Commissioned by WRAP to develop a digital Food Loss and Waste data taxonomy (PRC228) for its Food Programme and global Food Pact Network. 2026.
+            </p>
+          </div>
+          <div className="flex items-center gap-3">
+            <Award className="w-5 h-5 text-gov-blue flex-shrink-0" />
+            <p className="text-sm text-gov-dark">
               <strong className="text-gov-blue">New Contract Award</strong>  - Appointed to the Business Durham Select List of business support specialists by Durham County Council, supporting pre-start, start-up and existing businesses (UKSPF grant funded). 2026–2028, with options to 2030.
             </p>
           </div>
@@ -141,7 +153,7 @@ export const Home: React.FC = () => {
         <div className="py-12 border-t border-gov-border/30">
           <h3 className="text-center text-sm font-semibold text-gov-secondary uppercase tracking-wider mb-8">Our Work in Action</h3>
           <img src="/collage-activities.jpg" alt="Tesseract Academy delivering workshops, presentations and research across UK public sector contracts" width="1615" height="400" loading="eager" fetchPriority="high" decoding="async" className="w-full rounded-xl shadow-sm" />
-          <p className="text-center text-xs text-gov-secondary mt-4">BridgeAI Skills Hub launch at Ona Studios, London &bull; Welsh Government Land Valuation Research presentation, Swansea</p>
+          <p className="text-center text-xs text-gov-secondary mt-4">Innovate UK BridgeAI Cohort 2 launch at Ona Studios, London &bull; Welsh Government Land Valuation Research presentation, Swansea</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
             <figure>
               <img src="/events/bridgeai-cohort2-pwc.jpg" alt="Tesseract Academy team at the Innovate UK BridgeAI Cohort 2 launch with PwC, Ona Studios, London" loading="lazy" decoding="async" className="w-full h-72 object-cover object-center rounded-xl shadow-sm" />
