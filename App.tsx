@@ -86,7 +86,7 @@ const PAGE_META: Record<string, { title: string; description: string }> = {
   },
   '/case-studies/wrap-food-loss-waste-taxonomy': {
     title: 'WRAP Food Loss and Waste Data Taxonomy | Tesseract Government Gateway',
-    description: 'Commissioned by WRAP (PRC228) to build a structured, machine-readable Food Loss and Waste data taxonomy: 5 entity groups, a JSON-LD schema and 8 validation rules supporting 400+ Courtauld Commitment 2030 organisations and feeding ISO/TC 34/SC 20.',
+    description: 'Commissioned by WRAP (PRC228) to build a structured, machine-readable Food Loss and Waste data taxonomy: 5 coded dimensions and 84 entities in SKOS and JSON-LD, grounded in the FLW Standard, the WRAP Data Capture Sheet and Codex GSFA, supporting 400+ Courtauld Commitment 2030 organisations.',
   },
   '/glossary': {
     title: 'AI & Procurement Glossary | Tesseract Government Gateway',
