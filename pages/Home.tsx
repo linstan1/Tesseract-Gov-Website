@@ -179,9 +179,39 @@ export const Home: React.FC = () => {
               <p className="text-gov-secondary leading-relaxed mb-4">
                 Our work goes beyond data and dashboards. We design and facilitate deliberative workshops, citizen panels, and participatory research processes that centre the experiences of underrepresented and minoritised communities. Whether co-designing a public consultation framework or running focus groups with seldom-heard populations, we bring qualitative depth alongside quantitative analysis.
               </p>
-              <p className="text-gov-secondary leading-relaxed">
+              <p className="text-gov-secondary leading-relaxed mb-4">
                 We believe the best public policy is shaped by the people it affects. That's why inclusive design isn't an add-on  - it's embedded in our methodology from discovery through to delivery.
               </p>
+              <p className="text-gov-secondary leading-relaxed mb-6">
+                Accessibility and ethics are built into every instrument we use. We produce plain-language materials in multiple formats, make reasonable adjustments so that participation is never gated by disability, language, or digital confidence, and handle personal and sensitive data to GDPR and research-ethics standards. We report findings transparently, including dissenting and minority views, so commissioners see the full picture rather than a sanitised consensus.
+              </p>
+              <h4 className="text-sm font-bold text-gov-dark uppercase tracking-wider mb-4">Methods We Use</h4>
+              <ul className="space-y-3 text-gov-secondary leading-relaxed">
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-gov-blue flex-shrink-0 mt-0.5" />
+                  <span>Deliberative workshops, citizen panels, and assemblies for complex policy trade-offs</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-gov-blue flex-shrink-0 mt-0.5" />
+                  <span>Focus groups and one-to-one interviews with seldom-heard and minoritised groups</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-gov-blue flex-shrink-0 mt-0.5" />
+                  <span>Co-design and participatory consultation frameworks built with affected communities</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-gov-blue flex-shrink-0 mt-0.5" />
+                  <span>Accessible research instruments: plain language, multiple formats, and reasonable adjustments</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-gov-blue flex-shrink-0 mt-0.5" />
+                  <span>Mixed-methods analysis pairing qualitative depth with quantitative rigour</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-gov-blue flex-shrink-0 mt-0.5" />
+                  <span>Independent, ethics-led handling of personal and sensitive data, with transparent reporting</span>
+                </li>
+              </ul>
             </div>
             <div className="bg-white border border-gov-border/50 rounded-xl p-8">
               <h3 className="text-lg font-bold text-gov-dark mb-4">What This Looks Like in Practice</h3>
