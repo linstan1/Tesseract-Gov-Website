@@ -68,6 +68,15 @@ export const AesHeritage: React.FC = () => {
         </div>
       </div>
 
+      <div className="bg-gov-bg border border-gov-border/60 rounded-xl p-7">
+        <p className="text-xs font-semibold uppercase tracking-wider text-gov-blue mb-4">In brief</p>
+        <ul className="space-y-3 text-gov-dark leading-relaxed">
+          <li className="flex gap-3"><span className="text-gov-blue font-bold">1.</span><span><strong>The risk is rural and buried.</strong> 85 per cent of Scheduled Monuments at risk are buried archaeology, and 84 per cent are on farmland, exactly what agri-environment actions manage.</span></li>
+          <li className="flex gap-3"><span className="text-gov-blue font-bold">2.</span><span><strong>The co-benefit evidence is real but uneven.</strong> It is strong for grassland, cultivation and water actions on carbon, biodiversity and water; it is genuinely thin for buildings and walls.</span></li>
+          <li className="flex gap-3"><span className="text-gov-blue font-bold">3.</span><span><strong>The value for people is the biggest gap.</strong> Across every action, evidence on access and wellbeing is the weakest, the single most important gap to close for a programme that is for nature <em>and</em> for people.</span></li>
+        </ul>
+      </div>
+
       <section className="space-y-4">
         <div className="border-l-2 border-l-gov-blue pl-6">
           <h2 className="text-2xl font-bold text-gov-dark font-serif mb-3">The Challenge</h2>
