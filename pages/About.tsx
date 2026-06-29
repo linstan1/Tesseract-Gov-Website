@@ -202,6 +202,11 @@ export const About: React.FC = () => {
                 <td className="px-6 py-4 text-gov-dark">Crown Commercial Service</td>
               </tr>
               <tr className="bg-white hover:bg-gov-bg/50 transition-colors">
+                <td className="px-6 py-4 font-medium text-gov-dark">CCS Framework: Space &amp; Geospatial</td>
+                <td className="px-6 py-4 text-gov-dark">RM6235 — Space-Enabled and Geospatial Services Dynamic Purchasing System</td>
+                <td className="px-6 py-4 text-gov-dark">Crown Commercial Service</td>
+              </tr>
+              <tr className="bg-white hover:bg-gov-bg/50 transition-colors">
                 <td className="px-6 py-4 font-medium text-gov-dark">Cyber Security</td>
                 <td className="px-6 py-4 text-gov-dark">Cyber Essentials certified; ISO 27001 aligned</td>
                 <td className="px-6 py-4 text-gov-dark">NCSC scheme</td>

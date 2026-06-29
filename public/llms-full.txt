@@ -14,6 +14,8 @@ The company is an SME/micro enterprise delivering research-backed AI, data scien
 - RM6200: Artificial Intelligence Dynamic Purchasing System (AI DPS)
 - RM6094: Spark Dynamic Purchasing System
 - RM6126: Research and Insights Dynamic Purchasing System
+- RM6219: Learning and Training Services Dynamic Purchasing System
+- RM6235: Space-Enabled and Geospatial Services Dynamic Purchasing System
 
 **Certifications and compliance:**
 - Cyber Essentials certified
@@ -45,11 +47,14 @@ The team includes a DV-cleared (Developed Vetting) principal consultant capable 
 
 UK public sector organisations can commission Tesseract Academy services through three routes:
 
+
 **Route 1: Crown Commercial Service frameworks (preferred)**
 Tesseract Academy is an appointed supplier on:
 - RM6200 Artificial Intelligence DPS — AI consulting, model development, ethics and governance
 - RM6094 Spark DPS — research, data science, digital transformation
 - RM6126 Research and Insights DPS — survey design, public engagement, qualitative research
+- RM6219 Learning and Training Services DPS — off-the-shelf and bespoke training, learning technologies, education services
+- RM6235 Space-Enabled and Geospatial Services DPS — geospatial, remote sensing and PNT, satellite communication, unmanned autonomous vehicles, upstream professional services
 
 Framework contracts can be awarded without a full OJEU tender. Buyers must issue a competition to suppliers on the relevant lot, evaluate responses, and award. No minimum value thresholds apply.
 

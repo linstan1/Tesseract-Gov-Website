@@ -396,7 +396,7 @@ export const Insights: React.FC = () => {
               >
                 Crown Commercial Service
               </a>{' '}
-              Dynamic Purchasing System frameworks (RM6200, RM6094, RM6126, RM6219) reduce procurement lead times by{' '}
+              Dynamic Purchasing System frameworks (RM6200, RM6094, RM6126, RM6219, RM6235) reduce procurement lead times by{' '}
               <strong>60–75% compared to full OJEU-equivalent tender processes</strong> for SME-scale AI and research
               contracts. For contracts under the £213,477{' '}
               <a

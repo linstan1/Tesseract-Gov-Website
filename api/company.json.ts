@@ -74,6 +74,18 @@ const COMPANY_DATA = {
       "name": "Research and Insights Dynamic Purchasing System",
       "shortName": "Research & Insights DPS",
       "scope": "Survey design, public engagement, qualitative research"
+    },
+    {
+      "id": "RM6219",
+      "name": "Learning and Training Services Dynamic Purchasing System",
+      "shortName": "Learning & Training Services DPS",
+      "scope": "Off-the-shelf and bespoke training, learning technologies, education services"
+    },
+    {
+      "id": "RM6235",
+      "name": "Space-Enabled and Geospatial Services Dynamic Purchasing System",
+      "shortName": "Space-Enabled & Geospatial Services DPS",
+      "scope": "Geospatial, remote sensing and PNT, satellite communication, unmanned autonomous vehicles, upstream professional services"
     }
   ],
   "certifications": [

@@ -18,7 +18,7 @@ export const Home: React.FC = () => {
             Research-backed AI and data services for <span className="text-gov-blue">UK public sector</span>
           </h1>
           <p className="text-xl text-gov-secondary/90 mb-6 max-w-3xl leading-relaxed">
-            Tesseract Academy delivers AI consulting, research, public engagement, and survey design for UK government bodies. Crown Commercial Service appointed supplier on RM6200 (AI DPS), RM6094 (Spark DPS), RM6126 (Research &amp; Insights DPS), and RM6219 (Learning &amp; Training Services DPS).
+            Tesseract Academy delivers AI consulting, research, public engagement, and survey design for UK government bodies. Crown Commercial Service appointed supplier on RM6200 (AI DPS), RM6094 (Spark DPS), RM6126 (Research &amp; Insights DPS), RM6219 (Learning &amp; Training Services DPS), and RM6235 (Space-Enabled &amp; Geospatial Services DPS).
           </p>
           <p className="text-base text-gov-secondary/80 mb-10 max-w-3xl leading-relaxed">
             Delivered for Welsh Government, Innovate UK, National Digital Twin Programme, Qualifications Wales, and Fintech Scotland.
@@ -40,7 +40,7 @@ export const Home: React.FC = () => {
           {[
             { value: "1,916", label: "Welsh LSOAs analysed", sub: "99% of Welsh geography" },
             { value: "1,100", label: "BridgeAI registrations", sub: "vs 200 capacity target" },
-            { value: "4", label: "CCS frameworks", sub: "RM6200 · RM6094 · RM6126 · RM6219" },
+            { value: "5", label: "CCS frameworks", sub: "RM6200 · RM6094 · RM6126 · RM6219 · RM6235" },
           ].map((m, i) => (
             <div key={i}>
               <div className="text-3xl font-extrabold text-white mb-1">{m.value}</div>
@@ -114,7 +114,7 @@ export const Home: React.FC = () => {
              </div>
              <h3 className="font-semibold text-lg mb-3 text-gov-dark">UK &amp; EU Ready</h3>
              <p className="text-base text-gov-secondary/90 leading-relaxed">
-               3 CCS frameworks. Horizon Europe PIC: 880269472. DV-cleared consultant available for classified programmes. DUNS: 222180245. PPON: PWJP-6874-MXDJ.
+               5 CCS frameworks. Horizon Europe PIC: 880269472. DV-cleared consultant available for classified programmes. DUNS: 222180245. PPON: PWJP-6874-MXDJ.
              </p>
            </div>
         </div>
