@@ -80,6 +80,10 @@ const PAGE_META = {
     title: 'WRAP Food Loss and Waste Data Taxonomy | Tesseract Government Gateway',
     description: 'Commissioned by WRAP (PRC228) to build a structured, machine-readable Food Loss and Waste data taxonomy: 5 coded dimensions and 84 entities in SKOS and JSON-LD, grounded in the FLW Standard, the WRAP Data Capture Sheet and Codex GSFA, supporting 400+ Courtauld Commitment 2030 organisations.',
   },
+  '/case-studies/agri-environment-heritage-value': {
+    title: 'The Value of Agri-Environment Heritage Actions | Tesseract Government Gateway',
+    description: 'A self-initiated, open-data demonstration of how we evidence the wider value of agri-environment scheme heritage actions for nature and for people: a scoping-review framework on Natural England\'s NEER001 method, with a real spatial analysis of the 2,206 Scheduled Monuments on the Historic England Heritage at Risk Register 2024.',
+  },
   '/services/ai-consulting': {
     title: 'AI Consulting for UK Public Sector | Tesseract Government Gateway',
     description: 'Custom AI model development, NLP pipelines, and predictive analytics for UK government. CCS RM6200 appointed supplier. GDS aligned. Welsh Government ML land valuation and NDTP ontology case studies.',

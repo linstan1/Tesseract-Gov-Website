@@ -25,6 +25,7 @@ import { BridgeAI } from './pages/case-studies/BridgeAI';
 import { Kalgera } from './pages/case-studies/Kalgera';
 import { WastewaterDataQuality } from './pages/case-studies/WastewaterDataQuality';
 import { WrapFoodWaste } from './pages/case-studies/WrapFoodWaste';
+import { AesHeritage } from './pages/case-studies/AesHeritage';
 import { Glossary } from './pages/Glossary';
 import { AIConsulting } from './pages/services/AIConsulting';
 import { ResearchPolicy } from './pages/services/ResearchPolicy';
@@ -55,6 +56,7 @@ const SSRApp: React.FC = () => (
         <Route path="/case-studies/kalgera-financial-vulnerability" element={<Kalgera />} />
         <Route path="/case-studies/wastewater-effluent-data-quality" element={<WastewaterDataQuality />} />
         <Route path="/case-studies/wrap-food-loss-waste-taxonomy" element={<WrapFoodWaste />} />
+        <Route path="/case-studies/agri-environment-heritage-value" element={<AesHeritage />} />
         <Route path="/glossary" element={<Glossary />} />
         <Route path="/services/ai-consulting" element={<AIConsulting />} />
         <Route path="/services/research-policy" element={<ResearchPolicy />} />

@@ -64,6 +64,16 @@ const USE_CASES = [
     outcome: 'A publishable, machine-readable taxonomy that lets the Food Pact Network classify and compare food waste data on a like-for-like basis for the first time, and feeds the developing international data standard.',
     reusable: 'The taxonomy-plus-schema-plus-validation-rules pattern transfers to any multi-organisation reporting domain requiring consistent, comparable data.',
   },
+  {
+    id: 'uc7',
+    slug: '/case-studies/agri-environment-heritage-value',
+    title: 'The Value of Agri-Environment Heritage Actions (Open-Data Demonstration)',
+    challenge: 'Agri-environment schemes are the largest source of government funding for the rural historic environment, yet the wider co-benefits of heritage actions, for nature and for people, are real but evidentially fragmented. As nature recovery is delivered faster and under tighter budgets, heritage actions risk being overlooked unless that value can be evidenced.',
+    intervention: 'A self-initiated, open demonstration built entirely on public data: a pre-registered scoping-review protocol on Natural England\'s own evidence-review method (NEER001), PRISMA-ScR and the Collaboration for Environmental Evidence guidelines; a charting framework linking each heritage action to its co-benefits, EIP targets and indicative value for money (Green Book, ENCA); and our own spatial analysis of the Historic England Heritage at Risk Register 2024.',
+    assurance: 'Fully reproducible and open. The spatial join locates 2,181 of 2,206 Scheduled Monuments at Risk by region; the South West share of 45% matches Historic England\'s published figure, a check the analysis is sound. Not a commissioned contract: a worked demonstration of method.',
+    outcome: 'A published, replicable protocol, an evidence-map and gap framework, and a real spatial analysis showing 84% of monuments at risk are on farmland, where heritage actions act. Together they make the case that heritage actions deliver multi-objective value, for nature and for people, in a form that withstands scrutiny.',
+    reusable: 'The scoping-review protocol, charting framework and value-for-money method transfer to any evidence-baseline question on the wider benefits of land-management or environmental actions.',
+  },
 ];
 
 const UseCaseItem: React.FC<{ data: typeof USE_CASES[0] }> = ({ data }) => {
