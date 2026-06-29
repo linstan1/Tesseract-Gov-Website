@@ -138,9 +138,9 @@ export const Insights: React.FC = () => {
                 WRAP
               </a>{' '}
               to develop a digital Food Loss and Waste (FLW) data taxonomy for its Food Programme and global Food
-              Pact Network, translating the international FLW Standard into a structured, machine-readable schema with
-              documented validation rules. The taxonomy supports consistent measurement across the 400+ organisations
-              in the Courtauld Commitment 2030 and feeds emerging international data standardisation (ISO/TC 34/SC 20).
+              Pact Network, translating the international FLW Standard into a structured, machine-readable SKOS and
+              JSON-LD schema (84 coded entities) with structural coverage validation. The taxonomy supports consistent
+              measurement across the 400+ organisations in the Courtauld Commitment 2030.
             </p>
             <p className="text-sm text-gov-secondary/70">
               Contracting authority: WRAP (Waste and Resources Action Programme) · Procurement reference: PRC228

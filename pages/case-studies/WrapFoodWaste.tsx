@@ -9,7 +9,7 @@ const SCHEMA = {
   mainEntityOfPage: 'https://gov.tesseract.academy/case-studies/wrap-food-loss-waste-taxonomy',
   headline: 'WRAP Food Loss and Waste Data Taxonomy | Tesseract Academy',
   description:
-    'Tesseract Academy was commissioned by WRAP to build a structured, machine-readable Food Loss and Waste data taxonomy (PRC228): five entity groups, a JSON-LD schema and validation rules supporting consistent measurement across the Courtauld Commitment 2030 and feeding ISO/TC 34/SC 20.',
+    'Tesseract Academy was commissioned by WRAP to build a structured, machine-readable Food Loss and Waste data taxonomy (PRC228): five coded dimensions and 84 entities expressed in SKOS and JSON-LD, grounded in the Food Loss and Waste Standard, the WRAP Data Capture Sheet and Codex GSFA, supporting consistent measurement across the Courtauld Commitment 2030.',
   author: { '@id': 'https://gov.tesseract.academy/#organization' },
   publisher: { '@id': 'https://gov.tesseract.academy/#organization' },
   datePublished: '2026-05-01',
@@ -19,7 +19,7 @@ const SCHEMA = {
     name: 'Food loss and waste data standardisation',
   },
   keywords:
-    'WRAP, food loss and waste, data taxonomy, Courtauld Commitment 2030, JSON-LD, SHACL, data standards, ISO, FoodOn, FoodEx2',
+    'WRAP, food loss and waste, data taxonomy, Courtauld Commitment 2030, SKOS, JSON-LD, Codex GSFA, data standards, FoodOn, FoodEx2',
 };
 
 const ENTITY_GROUPS = [
@@ -61,9 +61,9 @@ export const WrapFoodWaste: React.FC = () => {
           <p className="text-sm text-gov-secondary mt-1">coded classification dimensions</p>
         </div>
         <div className="bg-gov-bg border border-gov-border/50 rounded-xl p-6">
-          <p className="text-xs font-semibold uppercase tracking-wider text-gov-blue mb-1">Validation rules</p>
-          <p className="text-3xl font-extrabold text-gov-dark">8</p>
-          <p className="text-sm text-gov-secondary mt-1">machine-checkable SHACL shapes</p>
+          <p className="text-xs font-semibold uppercase tracking-wider text-gov-blue mb-1">Coded entities</p>
+          <p className="text-3xl font-extrabold text-gov-dark">84</p>
+          <p className="text-sm text-gov-secondary mt-1">SKOS concepts across five dimensions</p>
         </div>
         <div className="bg-gov-bg border border-gov-border/50 rounded-xl p-6">
           <p className="text-xs font-semibold uppercase tracking-wider text-gov-blue mb-1">Reach</p>
@@ -87,7 +87,7 @@ export const WrapFoodWaste: React.FC = () => {
       <section className="space-y-6">
         <h2 className="text-2xl font-bold text-gov-dark font-serif">What We Delivered</h2>
         <p className="text-gov-secondary leading-relaxed">
-          We built the taxonomy as working data infrastructure, not a static reference document: five entity groups with hierarchical classifications, controlled vocabularies and unique codes, expressed as a machine-readable JSON-LD schema with documented validation rules and version-controlled change governance.
+          We built the taxonomy as working data infrastructure, not a static reference document: five entity groups with hierarchical classifications, controlled vocabularies and unique codes (84 coded entities, 680 RDF triples), expressed as a machine-readable SKOS and JSON-LD schema with structural coverage validation and version-controlled change governance. Machine-checkable SHACL validation shapes and FoodEx2 mappings are scaffolded for Phase 2.
         </p>
         <div className="overflow-x-auto">
           <table className="w-full text-sm border-collapse">
@@ -118,7 +118,7 @@ export const WrapFoodWaste: React.FC = () => {
         <div className="border-l-2 border-l-gov-blue pl-6">
           <h2 className="text-2xl font-bold text-gov-dark font-serif mb-3">Outcome</h2>
           <p className="text-gov-dark leading-relaxed">
-            A publishable, machine-readable taxonomy that lets the Food Pact Network classify and compare food waste data on a like-for-like basis for the first time. WRAP have confirmed the work will inform their contribution to emerging international data standardisation under <strong>ISO/TC 34/SC 20</strong> (food loss and waste), positioning Tesseract Academy not just as users of data standards but as contributors to one.
+            A publishable, machine-readable taxonomy that lets the Food Pact Network classify and compare food waste data on a like-for-like basis. It is grounded in the international Food Loss and Waste Accounting and Reporting Standard, the WRAP Data Capture Sheet and Codex GSFA, positioning Tesseract Academy not just as users of data standards but as builders of the infrastructure that implements them.
           </p>
         </div>
 
