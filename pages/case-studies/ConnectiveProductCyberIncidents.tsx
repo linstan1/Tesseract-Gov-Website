@@ -16,7 +16,7 @@ const SCHEMA = {
   dateModified: '2026-07-01',
   about: { '@type': 'Thing', name: 'Cyber incidents affecting connective products' },
   keywords:
-    'connective products, IoT security, operational technology, edge devices, VPN exploitation, software supply chain, PSTI Act 2022, Verizon DBIR, Mandiant M-Trends, NCSC, CISA, SKOS taxonomy, Government Data Quality Framework, open dataset',
+    'connective products, IoT security, operational technology, edge devices, VPN exploitation, software supply chain, firmware security, PSTI Act 2022, Cyber Security and Resilience Bill, Verizon DBIR, Mandiant M-Trends, NCSC Cyber Assessment Framework, CISA KEV, EPSS exploit prediction, Mirai botnet, PLC ICS security, CIC-IoT-2023, UNSW-NB15, Edge-IIoTset, SKOS taxonomy, Government Data Quality Framework, NAO PAC cyber resilience, open dataset',
 };
 
 const REPO = 'https://github.com/fabio-rovai/connective-product-cyber-incidents';
@@ -29,6 +29,12 @@ const REFERENCES = [
   { t: 'UK Government. The Government Data Quality Framework.', u: 'https://www.gov.uk/government/publications/the-government-data-quality-framework/the-government-data-quality-framework' },
   { t: 'techUK. PSTI regulations come into force (Product Security and Telecommunications Infrastructure Act 2022).', u: 'https://www.techuk.org/resource/psti-regulations-come-into-force.html' },
   { t: 'CISA (2024) Advisory AA24-038A: PRC State-Sponsored Actors Compromise US Critical Infrastructure (Volt Typhoon).', u: 'https://www.cisa.gov/news-events/cybersecurity-advisories/aa24-038a' },
+  { t: 'Ladisa, Plate, Martinez, Barais (2023) SoK: Taxonomy of Attacks on Open-Source Software Supply Chains. IEEE Symposium on Security and Privacy.', u: 'https://ieeexplore.ieee.org/document/10179304/' },
+  { t: 'Lopez-Morales, Planta, Rubio-Medrano, Abbasi, Cardenas (2024) SoK: Security of Programmable Logic Controllers. 33rd USENIX Security Symposium.', u: 'https://arxiv.org/abs/2403.00280' },
+  { t: 'Boeck, Sundermann, Fusari, Karuppayah, Muehlhaeuser, Levin (2023) The End of the Canonical IoT Botnet: A Measurement Study of Mirai Descendants.', u: 'https://arxiv.org/abs/2309.01130' },
+  { t: 'Neto, Dadkhah, Ferreira, Zohourian, Lu, Ghorbani (2023) CICIoT2023: A Real-Time Dataset and Benchmark for Large-Scale Attacks in IoT Environment. Sensors 23(13):5941.', u: 'https://www.mdpi.com/1424-8220/23/13/5941' },
+  { t: 'National Audit Office (2025) Government cyber resilience.', u: 'https://www.nao.org.uk/reports/government-cyber-resilience/' },
+  { t: 'National Cyber Security Centre. Cyber Assessment Framework (CAF).', u: 'https://www.ncsc.gov.uk/collection/cyber-assessment-framework' },
 ];
 
 export const ConnectiveProductCyberIncidents: React.FC = () => {
@@ -51,7 +57,7 @@ export const ConnectiveProductCyberIncidents: React.FC = () => {
         </p>
       </header>
 
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         <div className="bg-gov-bg border border-gov-border/50 rounded-xl p-6">
           <p className="text-xs font-semibold uppercase tracking-wider text-gov-blue mb-1">Incidents documented</p>
           <p className="text-3xl font-extrabold text-gov-dark">16</p>
@@ -66,6 +72,11 @@ export const ConnectiveProductCyberIncidents: React.FC = () => {
           <p className="text-xs font-semibold uppercase tracking-wider text-gov-blue mb-1">Published</p>
           <p className="text-3xl font-extrabold text-gov-dark">Open</p>
           <p className="text-sm text-gov-secondary mt-1">dataset, taxonomy and grading rubric, published on GitHub under CC-BY-4.0</p>
+        </div>
+        <div className="bg-gov-bg border border-gov-border/50 rounded-xl p-6">
+          <p className="text-xs font-semibold uppercase tracking-wider text-gov-blue mb-1">Literature reviewed</p>
+          <p className="text-3xl font-extrabold text-gov-dark">40+</p>
+          <p className="text-sm text-gov-secondary mt-1">peer-reviewed and recognised technical sources across 6 research strands, plus the public policy record from 2018 to 2026</p>
         </div>
       </div>
 
@@ -103,6 +114,54 @@ export const ConnectiveProductCyberIncidents: React.FC = () => {
             </a>
           </p>
         </div>
+      </section>
+
+      <section className="space-y-6">
+        <h2 className="text-2xl font-bold text-gov-dark font-serif">What the research literature shows</h2>
+        <p className="text-gov-secondary leading-relaxed">
+          We reviewed the peer-reviewed and recognised technical literature on cyber incidents affecting connective products across five research strands, and the pattern is consistent: each sub-domain is studied rigorously but in isolation, in different venues, with different metrics and datasets, and no paper synthesises them into a single cross-product-class threat model. IoT-botnet measurement work shows the once-canonical Mirai lineage has fragmented (Boeck et al. 2023 track Hajime and Mozi to near-zero IP overlap), while telescope and honeypot studies confirm Telnet-targeting and credential brute-forcing still dominate live traffic. The most numerically grounded work on edge and appliance exploitation comes from vendor threat intelligence, not peer review: the Google Threat Intelligence Group found 44 per cent of 2024 zero-days hit enterprise technologies, and its 2025 review put enterprise targeting at an all-time high with 14 zero-days affecting edge devices whose lack of endpoint detection likely undercounts the true figure. Software supply-chain research is mature (Ladisa et al., IEEE S&P 2023, build an attack-tree taxonomy of 107 vectors across 94 real incidents; package-confusion work defines 13 confusion categories beyond typosquatting), but firmware-specific measurement lags well behind. OT and ICS work is the deepest and the most siloed: Lopez-Morales et al. (USENIX Security 2024) systematise 17 years and 133 papers of PLC-attack research, Pickren et al. (NDSS 2024) demonstrate web-based PLC malware abusing legitimate admin interfaces across roughly 80 per cent of the vendor market, and Salazar et al. (IEEE S&P 2024) forensically compare Industroyer and Industroyer2. Exploitation-prediction work (the EPSS foundation paper by Jacobs et al., and Expected Exploitability by Suciu et al., USENIX Security 2022) closes the loop from "possible in a testbed" to "likely to be exploited in the field," yet even here the scoring systems disagree with one another.
+        </p>
+        <ul className="space-y-3 text-gov-dark leading-relaxed list-disc pl-6">
+          <li><strong>IoT botnet measurement.</strong> Mirai has no single successor: its descendants have diverged so far that there is no longer one canonical IoT botnet (Boeck et al. 2023).</li>
+          <li><strong>Edge and appliance exploitation.</strong> Enterprise networking and security products are now the dominant enterprise zero-day surface, and the absence of on-device detection likely means the real edge figure is undercounted (Google Threat Intelligence Group, 2024 and 2025 reviews).</li>
+          <li><strong>Software and firmware supply chain.</strong> A taxonomy of 107 attack vectors mapped to 94 real incidents (Ladisa et al. 2023); firmware-binary and embedded-device coverage remains thin relative to npm and PyPI package research.</li>
+          <li><strong>OT and ICS.</strong> Web-based PLC malware can falsify sensors and disable safety alarms across around 80 per cent of the market (Pickren et al. 2024); Industroyer2 hard-coded substation parameters for a targeted grid strike (Salazar et al. 2024).</li>
+          <li><strong>Exploitation prediction.</strong> EPSS and Expected Exploitability let prioritisation weight vulnerabilities by real exploitation probability rather than raw severity (Jacobs et al.; Suciu et al. 2022), though scoring systems rank the same CVEs inconsistently.</li>
+        </ul>
+        <p className="text-gov-secondary leading-relaxed">
+          The clearest finding from the review is structural, not technical: these strands are documented separately and never joined up. Convergence trends (edge appliances as the top enterprise zero-day surface, ICS malware weaponising standard IT protocols such as Modbus, AI-component supply chains) are each well evidenced in their own venue and nowhere synthesised across product classes. That absence is precisely what a product-class-indexed evidence base is for.
+        </p>
+      </section>
+
+      <section className="space-y-6">
+        <h2 className="text-2xl font-bold text-gov-dark font-serif">The public datasets, and what they cannot show</h2>
+        <p className="text-gov-secondary leading-relaxed">
+          A reproducible study needs open data, and the public corpus is genuinely strong for detector benchmarking per product class. The mainstream benchmarks are real and citable: CIC-IoT-2023 (traffic from 105 real IoT devices under 33 attacks), UNSW-NB15 and NSL-KDD (general network-flow intrusion detection), Edge-IIoTset and N-BaIoT (IoT and industrial-IoT, the latter capturing nine commercial devices infected by Mirai and BASHLITE), HAI and a community SWaT mirror for operational technology, and CIC-IDS2017 and CIC-IDS2018 for enterprise network traffic. BETH provides rare real host telemetry (over eight million kernel-level events from honeypot hosts, not synthetic), and an exposure layer of CVE, CISA Known Exploited Vulnerabilities and EPSS scores lets exposure be weighted by exploitation probability rather than raw count. The honest caveat is that almost all of these are lab or testbed captures with scripted attacks, or exposure indices, not real-world incident records: they measure the detectability of known attack patterns, not the frequency, cost or root cause of incidents in deployed products.
+        </p>
+        <ul className="space-y-3 text-gov-dark leading-relaxed list-disc pl-6">
+          <li><strong>Testbed, not incidents.</strong> CIC-IoT-2023, UNSW-NB15, Edge-IIoTset, CIC-IDS2017/2018, SWaT and HAI are generated on controlled testbeds with scripted attacks; base-rate or incident-frequency claims cannot be drawn from them.</li>
+          <li><strong>OT and firmware coverage is thin.</strong> Only HAI (and a repackaged SWaT mirror) give real OT process data on the open platforms; most ICS and SCADA benchmarks, and true firmware-binary datasets, are scarce or gated behind originating-lab request forms.</li>
+          <li><strong>The real-world anchors are proxies.</strong> BETH, honeypot captures, CISA KEV and Project Zero are the closest to observed adversary behaviour, but KEV and Project Zero are curated exposure indices, not a primary incident register.</li>
+          <li><strong>No open real-incident register exists.</strong> No single public dataset records real-world cyber incidents against connective products with dates, product class, vector, impact and cost. This is the gap this work sets out to address, using the public datasets for controlled benchmarking and the exposure indices for external validity, while building the product-class-indexed incident set separately.</li>
+        </ul>
+      </section>
+
+      <section className="space-y-6">
+        <h2 className="text-2xl font-bold text-gov-dark font-serif">The cross-government policy picture</h2>
+        <p className="text-gov-secondary leading-relaxed">
+          The public policy record over eight years shows a clear and, in one respect, uncomfortable through-line. Government legislates confidently where it has measured data (consumer IoT) and legislates on operational technology and enterprise products where it largely does not. The consumer track ran from a voluntary code to a mandatory regime; the operational-technology and enterprise track is expanding through the services route (NIS and the Cyber Security and Resilience Bill) rather than a product law, and the government's own estate is flagged as under-resilient by its own auditors.
+        </p>
+        <ul className="space-y-3 text-gov-dark leading-relaxed list-disc pl-6">
+          <li><strong>2018.</strong> DCMS (with NCSC) publishes Secure by Design and the Code of Practice for Consumer IoT Security: 13 outcome-focused guidelines led by no default passwords, a vulnerability disclosure policy, and keeping software updated.</li>
+          <li><strong>2022.</strong> The Product Security and Telecommunications Infrastructure (PSTI) Act 2022 receives Royal Assent (6 December 2022), empowering ministers to set security requirements for connectable consumer products. The same year, BEIS (now DESNZ) consults on the interoperability and cyber security of energy smart appliances (heat pumps, batteries, EV chargers) under the smart-and-secure electricity system programme.</li>
+          <li><strong>2023.</strong> The PSTI Security Requirements Regulations 2023 are made (14 September 2023). The Joint Committee on the National Security Strategy publishes "A hostage to fortune" (13 December 2023), warning the UK is unprepared for a catastrophic ransomware attack on largely privately-operated, legacy-IT critical national infrastructure.</li>
+          <li><strong>April 2024.</strong> The PSTI Regulations come into force (29 April 2024): three mandatory baseline requirements (no universal default passwords, a published vulnerability disclosure policy, transparency on the minimum security-update period) plus a statement of compliance.</li>
+          <li><strong>2025.</strong> The National Audit Office (29 January 2025) and the Committee of Public Accounts (9 May 2025) both report that government will miss its end-2025 cyber-resilience target, with hundreds of significant legacy systems, many without funded remediation, and a severe skills shortage. NCSC releases Cyber Assessment Framework v4.0 (6 August 2025), the assessment tool for the cyber resilience of essential functions.</li>
+          <li><strong>2025 to 2026.</strong> The Cyber Security and Resilience Bill progresses through Parliament (Commons first reading 12 November 2025, completing the Commons on 10 June 2026 and moving to the Lords), expanding the NIS regime to managed service providers and designated critical suppliers rather than the PSTI product regime.</li>
+        </ul>
+        <p className="text-gov-secondary leading-relaxed">
+          Two facts sharpen the point. PSTI has no post-implementation review yet: the statutory review duty sits in the 2023 Regulations, with the first report not due until around 2029, so there is not yet measured evidence that the mandatory regime has reduced insecure devices in market. And the rich, repeatable evidence base exists only at the consumer and enterprise-IT ends (the Cyber Security Breaches Survey, the NAO and PAC work), not for operational technology or enterprise connective products, where CAF returns are not published as an aggregate. That asymmetry, confident legislation where there is data and thinner ground where there is not, is exactly the space an open, quantified, product-class-indexed evidence base is built to inform.
+        </p>
       </section>
 
       <section className="space-y-4">
