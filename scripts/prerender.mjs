@@ -80,6 +80,10 @@ const PAGE_META = {
     title: 'WRAP Food Loss and Waste Data Taxonomy | Tesseract Government Gateway',
     description: 'Commissioned by WRAP (PRC228) to build a structured, machine-readable Food Loss and Waste data taxonomy: 5 coded dimensions and 84 entities in SKOS and JSON-LD, grounded in the FLW Standard, the WRAP Data Capture Sheet and Codex GSFA, supporting 400+ Courtauld Commitment 2030 organisations.',
   },
+  '/case-studies/fair-scientific-data': {
+    title: 'FAIR Dataset Contracts for Scientific Data | Tesseract Government Gateway',
+    description: 'A self-initiated, open-data demonstration: an open SHACL dataset-contract toolkit for scientific research data, tested against 30 real public immune and multi-omics datasets. All 30 were catalogued; none met a strict, machine-readable FAIR contract (100% lacked a structured schema and a machine-readable distribution). Open source with a reproducible analysis.',
+  },
   '/case-studies/agri-environment-heritage-value': {
     title: 'The Value of Agri-Environment Heritage Actions | Tesseract Government Gateway',
     description: 'A self-initiated, open-data demonstration of how we evidence the wider value of agri-environment scheme heritage actions for nature and for people: a scoping-review framework on Natural England\'s NEER001 method, with a real spatial analysis of the 2,206 Scheduled Monuments on the Historic England Heritage at Risk Register 2024.',

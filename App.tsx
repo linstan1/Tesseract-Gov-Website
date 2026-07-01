@@ -20,6 +20,7 @@ const WastewaterDataQuality = lazy(() => import('./pages/case-studies/Wastewater
 const WrapFoodWaste = lazy(() => import('./pages/case-studies/WrapFoodWaste').then(m => ({ default: m.WrapFoodWaste })));
 const AesHeritage = lazy(() => import('./pages/case-studies/AesHeritage').then(m => ({ default: m.AesHeritage })));
 const ConnectiveProductCyberIncidents = lazy(() => import('./pages/case-studies/ConnectiveProductCyberIncidents').then(m => ({ default: m.ConnectiveProductCyberIncidents })));
+const FairScientificData = lazy(() => import('./pages/case-studies/FairScientificData').then(m => ({ default: m.FairScientificData })));
 const Glossary = lazy(() => import('./pages/Glossary').then(m => ({ default: m.Glossary })));
 const AIConsulting = lazy(() => import('./pages/services/AIConsulting').then(m => ({ default: m.AIConsulting })));
 const ResearchPolicy = lazy(() => import('./pages/services/ResearchPolicy').then(m => ({ default: m.ResearchPolicy })));
@@ -89,6 +90,10 @@ const PAGE_META: Record<string, { title: string; description: string }> = {
   '/case-studies/wrap-food-loss-waste-taxonomy': {
     title: 'WRAP Food Loss and Waste Data Taxonomy | Tesseract Government Gateway',
     description: 'Commissioned by WRAP (PRC228) to build a structured, machine-readable Food Loss and Waste data taxonomy: 5 coded dimensions and 84 entities in SKOS and JSON-LD, grounded in the FLW Standard, the WRAP Data Capture Sheet and Codex GSFA, supporting 400+ Courtauld Commitment 2030 organisations.',
+  },
+  '/case-studies/fair-scientific-data': {
+    title: 'FAIR Dataset Contracts for Scientific Data | Tesseract Government Gateway',
+    description: 'A self-initiated, open-data demonstration: an open SHACL dataset-contract toolkit for scientific research data, tested against 30 real public immune and multi-omics datasets. All 30 were catalogued; none met a strict, machine-readable FAIR contract (100% lacked a structured schema and a machine-readable distribution). Open source with a reproducible analysis.',
   },
   '/case-studies/agri-environment-heritage-value': {
     title: 'The Value of Agri-Environment Heritage Actions | Tesseract Government Gateway',
@@ -184,6 +189,7 @@ const App: React.FC = () => {
               <Route path="/case-studies/wrap-food-loss-waste-taxonomy" element={<WrapFoodWaste />} />
               <Route path="/case-studies/agri-environment-heritage-value" element={<AesHeritage />} />
               <Route path="/case-studies/connective-product-cyber-incidents" element={<ConnectiveProductCyberIncidents />} />
+              <Route path="/case-studies/fair-scientific-data" element={<FairScientificData />} />
               <Route path="/glossary" element={<Glossary />} />
               <Route path="/services/ai-consulting" element={<AIConsulting />} />
               <Route path="/services/research-policy" element={<ResearchPolicy />} />

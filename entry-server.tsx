@@ -27,6 +27,7 @@ import { WastewaterDataQuality } from './pages/case-studies/WastewaterDataQualit
 import { WrapFoodWaste } from './pages/case-studies/WrapFoodWaste';
 import { AesHeritage } from './pages/case-studies/AesHeritage';
 import { ConnectiveProductCyberIncidents } from './pages/case-studies/ConnectiveProductCyberIncidents';
+import { FairScientificData } from './pages/case-studies/FairScientificData';
 import { Glossary } from './pages/Glossary';
 import { AIConsulting } from './pages/services/AIConsulting';
 import { ResearchPolicy } from './pages/services/ResearchPolicy';
@@ -59,6 +60,7 @@ const SSRApp: React.FC = () => (
         <Route path="/case-studies/wrap-food-loss-waste-taxonomy" element={<WrapFoodWaste />} />
         <Route path="/case-studies/agri-environment-heritage-value" element={<AesHeritage />} />
         <Route path="/case-studies/connective-product-cyber-incidents" element={<ConnectiveProductCyberIncidents />} />
+        <Route path="/case-studies/fair-scientific-data" element={<FairScientificData />} />
         <Route path="/glossary" element={<Glossary />} />
         <Route path="/services/ai-consulting" element={<AIConsulting />} />
         <Route path="/services/research-policy" element={<ResearchPolicy />} />
