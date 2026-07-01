@@ -22,6 +22,16 @@ export const Research: React.FC = () => {
         <h2 className="text-2xl font-bold text-gov-dark mb-8">Selected Publications & Talks</h2>
         <ul className="space-y-8">
            <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
+             <Link to="/case-studies/fair-scientific-data"><h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark hover:underline transition-colors">FAIR Dataset Contracts for Scientific Data</h3></Link>
+             <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Open-source toolkit and reproducible analysis, 2026</p>
+             <p className="text-base text-gov-dark/90 leading-relaxed">A self-initiated, open toolkit that expresses a FAIR "dataset contract" as machine-readable SHACL constraints and validates any dataset's metadata against it, alongside a FAIR / AI-readiness self-assessment operationalising the FAIRSCAPE and Bridge2AI criteria. Tested against 30 real public immune and multi-omics datasets: all were catalogued, none met a strict, machine-readable contract (100% lacked a structured schema and a machine-readable distribution). Fully reproducible, grounded in schema.org, DCAT, Bioschemas and RO-Crate.</p>
+             <div className="mt-3 flex flex-wrap gap-3 items-center">
+               <Link to="/case-studies/fair-scientific-data" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">Read the case study</Link>
+               <span className="text-gov-border">|</span>
+               <a href="https://github.com/fabio-rovai/fair-scientific-data" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">Open toolkit and analysis (GitHub)<span className="sr-only"> (opens in new tab)</span></a>
+             </div>
+           </li>
+           <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
              <Link to="/case-studies/agri-environment-heritage-value"><h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark hover:underline transition-colors">The Value of Agri-Environment Heritage Actions</h3></Link>
              <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Open-data demonstration and methods note, 2026</p>
              <p className="text-base text-gov-dark/90 leading-relaxed">A self-initiated, open demonstration of how we establish a baseline of evidence on the wider value of agri-environment scheme heritage actions, for the natural environment and for people. Built on recognised standards (PRISMA-ScR, the Collaboration for Environmental Evidence guidelines, and Natural England's own evidence-review approach), with a charting framework linking each heritage action to its co-benefits, Environmental Improvement Plan targets, and indicative value for money via the HM Treasury Green Book and a natural-capital approach. Includes our own spatial analysis of the 2,206 Scheduled Monuments on the Historic England Heritage at Risk Register 2024.</p>
