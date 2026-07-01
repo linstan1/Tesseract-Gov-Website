@@ -147,7 +147,7 @@ export const ConnectiveProductCyberIncidents: React.FC = () => {
             </li>
           ))}
         </ol>
-        <p className="text-xs text-gov-secondary/80">Method note: figures are drawn from the primary sources above; every incident record in the dataset carries its own source and confidence grade. As a UK public-sector research and insights delivery partner, we publish the working, not just the conclusion.</p>
+        <p className="text-xs text-gov-secondary/80">Method note: figures are drawn from the primary sources above; every incident record in the dataset carries its own source and confidence grade. We publish the working, not just the conclusion.</p>
       </section>
 
       <div className="bg-gov-bg border border-gov-border/50 rounded-xl p-8 flex flex-col sm:flex-row gap-4 sm:items-center sm:justify-between">
