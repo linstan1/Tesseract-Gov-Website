@@ -105,19 +105,6 @@ export const AerialPhotographyHeritage: React.FC = () => {
       </section>
 
       <section className="space-y-6">
-        <h2 className="text-2xl font-bold text-gov-dark font-serif">One real frame, made computable</h2>
-        <p className="text-gov-secondary leading-relaxed">
-          The transformation below is a single real catalogue record going from raw metadata to computation-ready linked data: a stable URI, a WGS84 footprint, a machine-readable date and rights, and IIIF and STAC exports for free. Queryable by space and time, with no lock-in.
-        </p>
-        <figure className="rounded-xl overflow-hidden border border-gov-border/50">
-          <img src="/case-studies/aerial-before-after.png" alt="One real aerial frame transformed from a raw catalogue API record into computation-ready NAPH linked data: stable URI, WGS84 GeoSPARQL footprint, ISO date, machine-readable rights." className="w-full" />
-          <figcaption className="text-sm text-gov-secondary px-4 py-3 bg-gov-bg">
-            Raw catalogue payload on the left, NAPH computation-ready RDF on the right. Validated against the standard at zero errors.
-          </figcaption>
-        </figure>
-      </section>
-
-      <section className="space-y-6">
         <h2 className="text-2xl font-bold text-gov-dark font-serif">We measured a real collection, not a hypothetical one</h2>
         <p className="text-gov-secondary leading-relaxed">
           We took the <strong>National Collection of Aerial Photography (NCAP)</strong>, one of the world's largest aerial archives at over thirty million images and part of Historic Environment Scotland, and measured a sample of 300 real records from its public catalogue. Metadata only, read-only, rate-limited, and in good faith. The result is a compliment to the collection: the hard part is already done.
@@ -180,12 +167,6 @@ export const AerialPhotographyHeritage: React.FC = () => {
         <p className="text-gov-secondary leading-relaxed">
           The archival community describes these collections with Records in Contexts and PROV-O, capturing custody and provenance but not spatial computability. The geospatial community indexes imagery with STAC and GeoSPARQL, delivering search by space and time but no archival provenance. Nobody had crosswalked the two for historic aerial photography. NAPH publishes that bridge, wrapped in FAIR and CARE, and every term mapped to Records in Contexts was verified against the published RiC-O 1.1 ontology rather than assumed.
         </p>
-        <figure className="rounded-xl overflow-hidden border border-gov-border/50">
-          <img src="/case-studies/aerial-stack.png" alt="NAPH as the bridge between the archival stack (RiC-O, PROV-O) and the geospatial stack (STAC, GeoSPARQL, IIIF), wrapped in FAIR and CARE across three tiers." className="w-full" />
-          <figcaption className="text-sm text-gov-secondary px-4 py-3 bg-gov-bg">
-            The unoccupied whitespace: archival provenance bound to spatiotemporal computability, for historic aerial photography.
-          </figcaption>
-        </figure>
       </section>
 
       <section className="space-y-4">
