@@ -154,6 +154,19 @@ export const AerialPhotographyHeritage: React.FC = () => {
       </section>
 
       <section className="space-y-6">
+        <h2 className="text-2xl font-bold text-gov-dark font-serif">292 real frames, on one map</h2>
+        <p className="text-gov-secondary leading-relaxed">
+          Once the footprints are reprojected and the records are linked data, the collection becomes something you can see and query. Every frame below is a real record, positioned by its own footprint and coloured by decade, from a 1924 Royal Navy sortie over Hong Kong to post-war surveys across the Caribbean. Click any footprint in the live demo and its full NAPH metadata appears.
+        </p>
+        <figure className="rounded-xl overflow-hidden border border-gov-border/50">
+          <img src="/case-studies/aerial-real-demo-world.png" alt="Interactive map of 292 real aerial photography frames from the NCAP collection, positioned by reprojected WGS84 footprint and coloured by decade, spanning 1924 to 1956 across the globe." className="w-full" />
+          <figcaption className="text-sm text-gov-secondary px-4 py-3 bg-gov-bg">
+            292 real frames, harvested live and auto-lifted to the Baseline tier, queryable by space and time. Markers coloured by decade; the panel shows one frame's full linked-data record.
+          </figcaption>
+        </figure>
+      </section>
+
+      <section className="space-y-6">
         <h2 className="text-2xl font-bold text-gov-dark font-serif">The expert ground: binding two worlds that never met</h2>
         <p className="text-gov-secondary leading-relaxed">
           The archival community describes these collections with Records in Contexts and PROV-O, capturing custody and provenance but not spatial computability. The geospatial community indexes imagery with STAC and GeoSPARQL, delivering search by space and time but no archival provenance. Nobody had crosswalked the two for historic aerial photography. NAPH publishes that bridge, wrapped in FAIR and CARE, and every term mapped to Records in Contexts was verified against the published RiC-O 1.1 ontology rather than assumed.
