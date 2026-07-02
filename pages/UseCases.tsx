@@ -84,6 +84,16 @@ const USE_CASES = [
     outcome: 'A shared, honest baseline the field lacks: 16 incidents across all five technology groups, including the Ivanti Connect Secure mass exploitation, the MOVEit and Cl0p supply-chain compromise, the XZ Utils backdoor, and Unitronics PLC attacks on water utilities. Corroborates the shift to the network edge: edge devices and VPNs rose to 22% of vulnerability-exploitation targeting in 2025, up from 3% (Verizon DBIR 2025).',
     reusable: 'The open incident dataset, SKOS taxonomy and source-quality grading rubric transfer to any evidence-baseline question on connected-device and supply-chain cyber risk.',
   },
+  {
+    id: 'uc9',
+    slug: '/case-studies/ies-hqdm-defence-interoperability',
+    title: 'IES to HQDM: an Open 4D Ontology Crosswalk for Defence Data',
+    challenge: 'The UK Defence Investment Plan (June 2026) commits over £5bn to autonomous systems and £7.5bn to a Digital Backbone and Digital Targeting Web, all of which depend on heterogeneous systems and allies sharing data a machine can reason over. On the UK side that vocabulary is the Information Exchange Standard (IES); the built environment runs on HQDM and the National Digital Twin. Both are 4D and share a common heritage, yet no machine-readable crosswalk between them had ever been published.',
+    intervention: 'A self-initiated, open artifact built on Tesseract\'s open-ontologies engine: the first public crosswalk between IES and HQDM. Seventeen backbone correspondences in SSSOM and RDF (with PROV-O provenance), a curated record of six divergences (the pairs that look like they map and do not), SHACL validation shapes, a reference alignment pipeline, and a worked SAPIENT (BSI Flex 335) safety case grounding one autonomous sensor node in IES-typed world states via our CIVeX agent-verification research.',
+    assurance: 'Open and reproducible: data and documentation under CC-BY-4.0, upstream ontologies referenced by IRI (IES under the Open Government Licence, HQDM under Apache-2.0). Validated against the live published ontologies: all 17 correspondences resolve and the SHACL shapes conform. Candidate-for-review and open to correction.',
+    outcome: 'A shared starting point the field lacked, released so suppliers building across defence and built-environment data can start from something concrete. The divergences record names the traps, including the ies:Event to hqdm:event false friend, that a naive label-based mapping would fall into.',
+    reusable: 'The crosswalk, divergences record, SHACL shapes and reference pipeline transfer to any 4D upper-ontology alignment; the safety-case pattern transfers to any autonomous node that must be assured against a shared world model.',
+  },
 ];
 
 const UseCaseItem: React.FC<{ data: typeof USE_CASES[0] }> = ({ data }) => {

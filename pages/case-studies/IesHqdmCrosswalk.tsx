@@ -1,0 +1,184 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { ArrowLeft, ExternalLink } from 'lucide-react';
+
+const REPO = 'https://github.com/fabio-rovai/ies-hqdm-crosswalk';
+
+const SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  '@id': 'https://gov.tesseract.academy/case-studies/ies-hqdm-defence-interoperability#article',
+  mainEntityOfPage: 'https://gov.tesseract.academy/case-studies/ies-hqdm-defence-interoperability',
+  headline:
+    'IES to HQDM: an open 4D ontology crosswalk for defence data | Tesseract Academy',
+  description:
+    'The first public crosswalk between the UK Information Exchange Standard (IES) and the Higher Quality Data Model (HQDM), two 4D upper ontologies. Open dataset, curated divergences, SHACL validation, and a worked SAPIENT-node safety case grounded in IES.',
+  author: { '@id': 'https://gov.tesseract.academy/#organization' },
+  publisher: { '@id': 'https://gov.tesseract.academy/#organization' },
+  datePublished: '2026-07-01',
+  dateModified: '2026-07-01',
+  about: {
+    '@type': 'Dataset',
+    name: 'IES to HQDM crosswalk',
+    url: REPO,
+    license: 'https://creativecommons.org/licenses/by/4.0/',
+  },
+  keywords:
+    'IES, HQDM, ontology alignment, crosswalk, 4D ontology, BORO, defence data, interoperability, autonomy assurance, SAPIENT, SHACL, SSSOM',
+};
+
+const DELIVERABLES = [
+  { item: 'Crosswalk (SSSOM)', detail: '17 backbone correspondences with predicate, confidence and justification.' },
+  { item: 'Crosswalk (RDF)', detail: 'SKOS mapping triples with PROV-O provenance and reified correspondences.' },
+  { item: 'Divergences record', detail: 'The curated pairs that look like they map and do not: the original scholarship.' },
+  { item: 'SHACL shapes', detail: 'Validate every correspondence has a subject, object, SKOS predicate, confidence and provenance.' },
+  { item: 'SAPIENT safety case', detail: 'A worked example grounding one autonomous sensor node in IES-typed world states.' },
+  { item: 'Reference pipeline', detail: 'Candidate generation and validation you can run against the live ontologies.' },
+];
+
+export const IesHqdmCrosswalk: React.FC = () => {
+  return (
+    <article className="max-w-4xl mx-auto px-6 lg:px-8 py-20 space-y-12">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SCHEMA) }} />
+      <header>
+        <Link
+          to="/use-cases"
+          className="inline-flex items-center gap-2 text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors mb-8"
+        >
+          <ArrowLeft className="w-4 h-4" />
+          Back to Use Cases
+        </Link>
+
+        <p className="text-sm font-semibold uppercase tracking-wider text-gov-blue mb-3">
+          Case Study: Defence Data Interoperability
+        </p>
+        <h1 className="text-4xl font-extrabold text-gov-dark mb-6 tracking-tight leading-tight font-serif">
+          IES to HQDM: an open 4D ontology crosswalk for defence data
+        </h1>
+        <p className="text-xl text-gov-secondary/90 leading-relaxed">
+          The first public crosswalk between the UK Information Exchange Standard (IES), the 4D ontology behind UK defence and security data, and HQDM, the model underpinning the National Digital Twin. Open, validated, and released so that suppliers building across the two can start from something concrete.
+        </p>
+      </header>
+
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        <div className="bg-gov-bg border border-gov-border/50 rounded-xl p-6">
+          <p className="text-xs font-semibold uppercase tracking-wider text-gov-blue mb-1">Focus</p>
+          <p className="text-base font-bold text-gov-dark">Interoperability</p>
+          <p className="text-sm text-gov-secondary mt-1">and autonomy assurance</p>
+        </div>
+        <div className="bg-gov-bg border border-gov-border/50 rounded-xl p-6">
+          <p className="text-xs font-semibold uppercase tracking-wider text-gov-blue mb-1">Standards bridged</p>
+          <p className="text-3xl font-extrabold text-gov-dark">2</p>
+          <p className="text-sm text-gov-secondary mt-1">IES and HQDM, both 4D</p>
+        </div>
+        <div className="bg-gov-bg border border-gov-border/50 rounded-xl p-6">
+          <p className="text-xs font-semibold uppercase tracking-wider text-gov-blue mb-1">Verification</p>
+          <p className="text-3xl font-extrabold text-gov-dark">17 / 0</p>
+          <p className="text-sm text-gov-secondary mt-1">correspondences resolve; SHACL conforms</p>
+        </div>
+      </div>
+
+      <section className="space-y-4">
+        <div className="border-l-2 border-l-gov-blue pl-6">
+          <h2 className="text-2xl font-bold text-gov-dark font-serif mb-3">The Challenge</h2>
+          <p className="text-gov-dark leading-relaxed">
+            The <a href="https://www.gov.uk/government/publications/the-defence-investment-plan" target="_blank" rel="noopener noreferrer" className="text-gov-blue underline hover:text-gov-blue-dark">UK Defence Investment Plan</a> (June 2026) commits over £5bn to autonomous systems and £7.5bn to a Digital Backbone and Digital Targeting Web. All of it depends on heterogeneous systems, and coalition partners, sharing data a machine can reason over. On the UK side that shared vocabulary is the <strong>Information Exchange Standard (IES)</strong>, an open 4D ontology in the BORO tradition, stewarded through the cross-government IES Working Group. Alongside it, the built and physical environment runs on <strong>HQDM</strong> and the National Digital Twin Foundation Data Model.
+          </p>
+          <p className="text-gov-dark leading-relaxed mt-3">
+            An autonomous system reasoning about a mission in a real place has to connect what IES says about the operational picture to what HQDM says about the terrain and infrastructure. Both are 4D and share a common heritage, yet no machine-readable crosswalk between them had ever been published. For a smaller supplier, the cost of working out that alignment by hand is the real gate between a promising prototype and a trusted, fielded capability.
+          </p>
+        </div>
+      </section>
+
+      <section className="space-y-6">
+        <h2 className="text-2xl font-bold text-gov-dark font-serif">What we built</h2>
+        <div className="overflow-x-auto">
+          <table className="w-full text-sm border-collapse">
+            <thead>
+              <tr className="bg-gov-bg border-b border-gov-border">
+                <th className="text-left px-4 py-3 font-semibold text-gov-dark">Deliverable</th>
+                <th className="text-left px-4 py-3 font-semibold text-gov-dark">What it is</th>
+              </tr>
+            </thead>
+            <tbody>
+              {DELIVERABLES.map((d, i) => (
+                <tr
+                  key={d.item}
+                  className={`border-b border-gov-border/50 ${i % 2 === 0 ? 'bg-white' : 'bg-gov-bg/40'}`}
+                >
+                  <td className="px-4 py-3 font-medium text-gov-dark">{d.item}</td>
+                  <td className="px-4 py-3 text-gov-secondary">{d.detail}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section className="space-y-4">
+        <div className="border-l-2 border-l-gov-blue pl-6">
+          <h2 className="text-2xl font-bold text-gov-dark font-serif mb-3">A finding, not just a mapping</h2>
+          <p className="text-gov-dark leading-relaxed">
+            A clean crosswalk is not one with no disagreements; it is one where the disagreements are named. The headline example: a name matcher aligns <code className="text-sm bg-gov-bg px-1.5 py-0.5 rounded">ies:Event</code> to <code className="text-sm bg-gov-bg px-1.5 py-0.5 rounded">hqdm:event</code> and gets it exactly backwards. In IES an Event is a happening with participants, so its true HQDM counterpart is <code className="text-sm bg-gov-bg px-1.5 py-0.5 rounded">hqdm:activity</code>; <code className="text-sm bg-gov-bg px-1.5 py-0.5 rounded">hqdm:event</code> is an instantaneous boundary point with no participants. A tool that maps them on the shared label corrupts the shared picture. The repository records this and five further divergences with evidence from both ontologies, which is where an implementer would otherwise silently get it wrong.
+          </p>
+        </div>
+      </section>
+
+      <section className="space-y-4">
+        <div className="border-l-2 border-l-gov-blue pl-6">
+          <h2 className="text-2xl font-bold text-gov-dark font-serif mb-3">Outcome</h2>
+          <p className="text-gov-dark leading-relaxed">
+            An open, machine-readable crosswalk released under CC-BY-4.0, built on Tesseract's <a href="https://github.com/fabio-rovai/open-ontologies" target="_blank" rel="noopener noreferrer" className="text-gov-blue underline hover:text-gov-blue-dark">open-ontologies</a> alignment engine and validated against the live published ontologies: every one of the 17 correspondences resolves, and the SHACL shapes conform. It ships with a worked safety case showing how one SAPIENT (BSI Flex 335) autonomous sensor node can have its behaviour grounded in IES-typed world states, connecting our <a href="https://arxiv.org/abs/2605.09168" target="_blank" rel="noopener noreferrer" className="text-gov-blue underline hover:text-gov-blue-dark">CIVeX</a> agent-verification research to the defence data standard.
+          </p>
+          <ul className="mt-4 space-y-2 text-gov-dark leading-relaxed">
+            <li className="flex items-start gap-2">
+              <span className="text-gov-blue font-bold mt-0.5">›</span>
+              <span>Data and documentation: CC-BY-4.0, free for public and commercial reuse.</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-gov-blue font-bold mt-0.5">›</span>
+              <span>Upstream ontologies referenced by IRI: IES (Open Government Licence), HQDM (Apache-2.0).</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-gov-blue font-bold mt-0.5">›</span>
+              <span>Candidate-for-review, and open to correction: the most welcome contribution is a new divergence.</span>
+            </li>
+          </ul>
+        </div>
+
+        <blockquote className="border-l-4 border-l-gov-blue pl-6 py-2 my-6 bg-gov-bg rounded-r-lg">
+          <p className="text-gov-dark italic leading-relaxed">"The autonomy money assumes suppliers can already speak the standard. The alignment layer is what lets them. Publishing an open crosswalk, with the traps named honestly, turns that from bespoke consulting into shared infrastructure a smaller supplier can build on."</p>
+          <cite className="text-sm text-gov-secondary font-semibold not-italic mt-2 block">Fabio Rovai, Tesseract Academy</cite>
+        </blockquote>
+      </section>
+
+      <div className="bg-gov-bg border border-gov-border/50 rounded-xl p-8 flex flex-col sm:flex-row gap-4 sm:items-center sm:justify-between">
+        <div>
+          <p className="font-semibold text-gov-dark">View the open crosswalk</p>
+          <p className="text-sm text-gov-secondary mt-1">
+            SSSOM and RDF correspondences, the divergences record, SHACL shapes, and the SAPIENT safety case.
+          </p>
+        </div>
+        <a
+          href={REPO}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 px-5 py-2.5 bg-gov-blue text-white text-sm font-semibold rounded-lg hover:bg-gov-blue-dark transition-colors"
+        >
+          View on GitHub
+          <ExternalLink className="w-4 h-4" />
+        </a>
+      </div>
+
+      <div className="pt-4 border-t border-gov-border/30">
+        <Link
+          to="/use-cases"
+          className="inline-flex items-center gap-2 text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors"
+        >
+          <ArrowLeft className="w-4 h-4" />
+          Back to Use Cases
+        </Link>
+      </div>
+    </article>
+  );
+};
