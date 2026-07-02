@@ -44,12 +44,12 @@ const RESEARCH_STAGES = [
   {
     stage: '2',
     label: 'Screening Survey',
-    detail: '80–120 respondents. Quantitative and qualitative data. Qualification criteria mapped to Kalgera signal categories.',
+    detail: 'Quantitative and qualitative data. Qualification criteria mapped to Kalgera signal categories.',
   },
   {
     stage: '3',
     label: 'In-Depth 1:1 Interviews',
-    detail: '8–10 interviews, 60 minutes each. Semi-structured protocol mapped directly to all eight signal categories.',
+    detail: '60 minutes each, 1:1. Semi-structured protocol mapped directly to all eight signal categories.',
   },
 ];
 
@@ -100,14 +100,14 @@ export const Kalgera: React.FC = () => {
 
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
         <div className="bg-gov-bg border border-gov-border/50 rounded-xl p-6">
-          <p className="text-xs font-semibold uppercase tracking-wider text-gov-blue mb-1">Survey Respondents</p>
-          <p className="text-3xl font-extrabold text-gov-dark">80–120</p>
-          <p className="text-sm text-gov-secondary mt-1">screening survey participants</p>
+          <p className="text-xs font-semibold uppercase tracking-wider text-gov-blue mb-1">Screening Survey</p>
+          <p className="text-3xl font-extrabold text-gov-dark">Quant + qual</p>
+          <p className="text-sm text-gov-secondary mt-1">qualification mapped to signals</p>
         </div>
         <div className="bg-gov-bg border border-gov-border/50 rounded-xl p-6">
           <p className="text-xs font-semibold uppercase tracking-wider text-gov-blue mb-1">In-Depth Interviews</p>
-          <p className="text-3xl font-extrabold text-gov-dark">8–10</p>
-          <p className="text-sm text-gov-secondary mt-1">60 minutes each, 1:1</p>
+          <p className="text-3xl font-extrabold text-gov-dark">1:1</p>
+          <p className="text-sm text-gov-secondary mt-1">60 minutes each, semi-structured</p>
         </div>
         <div className="bg-gov-bg border border-gov-border/50 rounded-xl p-6">
           <p className="text-xs font-semibold uppercase tracking-wider text-gov-blue mb-1">Signal Categories</p>

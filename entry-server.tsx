@@ -31,6 +31,7 @@ import { ConnectiveProductCyberIncidents } from './pages/research/ConnectiveProd
 import { FairScientificData } from './pages/research/FairScientificData';
 import { IesHqdmCrosswalk } from './pages/research/IesHqdmCrosswalk';
 import { PyramidBridge } from './pages/research/PyramidBridge';
+import { NatureSecurityRisk } from './pages/research/NatureSecurityRisk';
 import { Glossary } from './pages/Glossary';
 import { AIConsulting } from './pages/services/AIConsulting';
 import { ResearchPolicy } from './pages/services/ResearchPolicy';
@@ -67,6 +68,7 @@ const SSRApp: React.FC = () => (
         <Route path="/research/fair-scientific-data" element={<FairScientificData />} />
         <Route path="/research/ies-hqdm-defence-interoperability" element={<IesHqdmCrosswalk />} />
         <Route path="/research/pyramid-ies-hqdm-semantic-bridge" element={<PyramidBridge />} />
+        <Route path="/research/nature-related-security-risk" element={<NatureSecurityRisk />} />
         <Route path="/glossary" element={<Glossary />} />
         <Route path="/services/ai-consulting" element={<AIConsulting />} />
         <Route path="/services/research-policy" element={<ResearchPolicy />} />

@@ -82,7 +82,7 @@ export const Capabilities: React.FC = () => {
           <div className="bg-gov-bg rounded-lg p-4 mt-auto border border-gov-border/30">
             <p className="text-xs font-semibold text-gov-blue uppercase tracking-wider mb-2">Proof</p>
             <p className="text-sm text-gov-secondary leading-relaxed mb-3">
-              <strong>Kalgera / Fintech Scotland</strong>  - a screening survey of <strong>80&ndash;120</strong> participants plus <strong>8&ndash;10</strong> in-depth interviews mapped to <strong>8</strong> financial-vulnerability signals, under an Adult Support and Protection (Scotland) Act 2007 ethical framework.
+              <strong>Kalgera / Fintech Scotland</strong>  - a screening survey plus in-depth interviews mapped to <strong>8</strong> financial-vulnerability signals, under an Adult Support and Protection (Scotland) Act 2007 ethical framework.
             </p>
             <Link to="/research/kalgera-financial-vulnerability" className="inline-flex items-center gap-1.5 text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline">
               Read the case study <ArrowRight className="w-4 h-4" />

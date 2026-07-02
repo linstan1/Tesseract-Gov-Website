@@ -104,6 +104,10 @@ const PAGE_META = {
     title: 'Cyber Incidents affecting Connective Products: an open evidence base | Tesseract Government Gateway',
     description: 'A self-initiated, open, machine-readable evidence base of cyber incidents affecting connective products (IoT, operational technology, computing devices, networking equipment and software/firmware): 16 documented incidents (2022 to 2025), a SKOS taxonomy and a source-quality rubric aligned to the six Government Data Quality Framework dimensions, published on GitHub under CC-BY-4.0.',
   },
+  '/research/nature-related-security-risk': {
+    title: 'Nature-Related Security Risk: an open evidence base and systems ontology | Tesseract Government Gateway',
+    description: 'A self-initiated, open, machine-readable evidence base and systems ontology that operationalises the UK National Security Assessment on biodiversity loss and ecosystem collapse (2026): 14 documented nature-to-security cascades graded with the assessment\'s own confidence ratings, an OWL ontology (NSRO), a SKOS taxonomy cross-walked to IPBES and SHACL shapes, published on GitHub under CC-BY-4.0.',
+  },
   '/services/ai-consulting': {
     title: 'AI Consulting for UK Public Sector | Tesseract Government Gateway',
     description: 'Custom AI model development, NLP pipelines, and predictive analytics for UK government. CCS RM6200 appointed supplier. GDS aligned. Welsh Government ML land valuation and NDTP ontology case studies.',

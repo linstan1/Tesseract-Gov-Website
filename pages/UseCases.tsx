@@ -2,117 +2,22 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Card } from '../components/ui/Card';
 import { ChevronDown, ChevronUp, ArrowRight } from 'lucide-react';
+import { CASE_STUDIES, CATEGORY_LABELS, type CaseStudy, type CaseStudyCategory } from '../data/caseStudies';
 
-const USE_CASES = [
-  {
-    id: 'uc1',
-    slug: '/research/welsh-government-land-valuation',
-    title: 'Testing Land Valuation Methods: Welsh Government',
-    challenge: 'The Welsh Government needed to evaluate different approaches for assessing land values to support local government finance policy development, comparing traditional and AI-driven methodologies.',
-    intervention: 'Commissioned by Welsh Government to test five distinct valuation methodologies: market-based statistical valuation, advanced algorithmic and machine-learning applications, formula-based valuation by land area, conventional valuation approaches, and innovative experimental approaches.',
-    assurance: 'Delivered under Welsh Government procurement standards. Full summary and comprehensive report published on GOV.WALES.',
-    outcome: 'Produced a comprehensive comparative analysis across all five methodologies, published March 2026. Findings directly inform Welsh Government local government finance policy.',
-    reusable: 'Valuation methodology comparison framework. Published reports available on GOV.WALES.',
-  },
-  {
-    id: 'uc2',
-    slug: '/research/national-digital-twin-programme',
-    title: 'AI Ontology Extension Generator: National Digital Twin Programme',
-    challenge: 'The National Digital Twin Programme (NDTP), a UK Government initiative under the Department for Business and Trade, needed to automate ontology development to accelerate the creation of digital twins across UK infrastructure.',
-    intervention: 'Contributed to the development of an open-source AI-powered tool that automates ontology generation and extension through a web interface. The tool combines data profiling, Named Entity Recognition, and large language models to extract and generate ontology entities from multiple data formats (CSV, JSON, RDF/Turtle).',
-    assurance: 'Open-source under Apache License 2.0 (code) and Open Government Licence v3.0 (documentation). Maintained by NDTP.',
-    outcome: 'Delivered a production-ready Streamlit web application with a four-step wizard workflow, built-in validation and visualisation tools, and iterative refinement capabilities. Published on GitHub under National-Digital-Twin organisation.',
-    reusable: 'Open-source tool available on GitHub (National-Digital-Twin/ndtp-ai-ontology-extension).',
-  },
-  {
-    id: 'uc3',
-    slug: '/research/bridgeai-creative-industries',
-    title: 'BridgeAI Programme: AI for UK Creatives',
-    challenge: 'Innovate UK\'s BridgeAI programme needed to support the UK creative industries in adopting AI technologies, bridging the gap between cutting-edge AI research and practical implementation for creative sector SMEs.',
-    intervention: 'Delivered a programme delivery report for the BridgeAI initiative, providing research-backed guidance on AI adoption for UK creatives. Led by Fabio Rovai and Dr Stylianos Kampakis, the work covered AI readiness assessment, implementation strategies, and practical tooling recommendations.',
-    assurance: 'Funded by Innovate UK BridgeAI Programme. Aligned with UK industrial strategy for creative industries.',
-    outcome: 'Programme delivery report completed, supporting AI adoption pathways for creative sector organisations across the UK.',
-    reusable: 'AI adoption framework and readiness assessment methodology for creative industries.',
-  },
-  {
-    id: 'uc4',
-    slug: '/research/kalgera-financial-vulnerability',
-    title: 'Financial Vulnerability Research: Kalgera / Fintech Scotland',
-    challenge: 'Kalgera, a fintech specialising in protecting financially vulnerable customers, needed primary qualitative research to validate their AI-driven early warning signal architecture. The research had to capture lived experiences of financial vulnerability in Scotland, including scam victims, people experiencing cognitive decline, and carers managing money on behalf of others.',
-    intervention: 'Designed and delivered an end-to-end user research programme: paid Facebook/Instagram recruitment campaign targeting financially vulnerable adults across Scotland (50+ primary, 35–49 secondary), a screening survey collecting quantitative and qualitative data from 80–120 respondents, and 8–10 in-depth 1:1 interviews (60 minutes each). The interview protocol was mapped directly to Kalgera\'s signal categories: spending pattern changes, income depletion, credit reliance, new payees, cash patterns, bill changes, account access, and scam indicators.',
-    assurance: 'Full ethical framework aligned with the Adult Support and Protection (Scotland) Act 2007. Distress protocol in place with trained facilitators. All data encrypted, UK-hosted, anonymised within 7 days. Verbal and written consent obtained for participation, recording, and data use.',
-    outcome: 'Delivered three outputs: a signal validation report confirming which behavioural markers are observable in transaction data, an intervention acceptability framework documenting what vulnerable people consider helpful versus intrusive, and a summary findings report for the Finance & Health Lab. Direct participant quotes used to ground Kalgera\'s product decisions in lived experience.',
-    reusable: 'Recruitment pipeline (Facebook ad → screening survey → qualification → interview). Thematic analysis framework mapped to financial signal categories. Intervention acceptability spectrum methodology.',
-  },
-  {
-    id: 'uc5',
-    slug: '/research/wastewater-effluent-data-quality',
-    title: 'Wastewater Effluent Data Quality (Open-Data Demonstration)',
-    challenge: 'The UK is rolling out continuous water-quality monitoring on wastewater assets under the Environment Act 2021, and the Environment Agency is exploring whether that data can serve as a regulatory tool. The binding question is data quality: calibration drift, fouled probes, telemetry gaps and transcription errors all masquerade as real signals.',
-    intervention: 'Analysed a full-scale wastewater treatment works dataset of 1,382 daily records carrying the regulated effluent suite (ammonia, BOD, COD, total nitrogen, inflow, outflow). Applied a two-layer method: a statistical QA battery (completeness, flatline, robust MAD outliers, drift) and a declarative ISO 19156 / SOSA effluent ontology with SHACL data-quality rules, including the domain-aware COD ≥ BOD physical invariant.',
-    assurance: 'Fully reproducible and published open source as a case study in Open Ontologies. Source data under CC BY-SA 4.0. No model training: every quality rule is a declarative constraint with a named failure reason.',
-    outcome: 'The data is complete and internally consistent (COD ≥ BOD holds on every one of 1,382 rows), yet the battery still surfaces multi-year baseline drift and dozens of statistical outliers per determinand. The SHACL rules reject every physically impossible record and pass every clean one, making the trust verdict auditable.',
-    reusable: 'The QA battery, effluent observation ontology, and SHACL data-quality shapes are open source and re-pointable to any continuous-monitoring stream.',
-  },
-  {
-    id: 'uc-aerial',
-    slug: '/research/computation-ready-aerial-heritage',
-    title: 'Computation-Ready Aerial Photography Heritage (Open-Data Demonstration)',
-    challenge: 'Most of the UK\'s heritage is digitised but not computable. Aerial photography collections holding tens of millions of frames are scanned, catalogued and mapped, yet a researcher cannot query them at scale by space and time or cross-reference them to other archives. This is the gap the Towards a National Collection programme (AHRC / UKRI) and its N-RICH work set out to close.',
-    intervention: 'Built NAPH, an open computation-ready digitisation standard for aerial photography, assembled from existing standards (GeoSPARQL, PROV-O, Dublin Core, IIIF, Records in Contexts) across three incrementally-adoptable tiers. Tested it against a real national archive: harvested 292 real frames from the public NCAP Air Photo Finder catalogue (metadata only, read-only, rate-limited), reprojected footprints from EPSG:3857 to WGS84, and lifted them to the Baseline tier automatically.',
-    assurance: 'Fully reproducible and published open source in Open Ontologies (MIT and CC BY 4.0). The real data validated at zero SHACL violations, and testing against real holdings surfaced and fixed a defect in the standard\'s own date-precision shape. Every Records in Contexts term in the crosswalk was verified against the published RiC-O 1.1 ontology, not assumed.',
-    outcome: 'Measured finding: the collection is far closer to computation-ready than assumed. 100 percent of records already carry a machine-readable footprint and an ISO-8601 date; the one genuine gap is machine-readable rights. The same records export cleanly to STAC 1.0, GeoJSON and IIIF, and NAPH publishes the previously unoccupied RiC-O to STAC crosswalk that binds archival provenance to spatiotemporal computability.',
-    reusable: 'The ontology, SHACL shapes, live API harvester, STAC and GeoJSON exports, RiC-O crosswalk and an interactive map are open source and adaptable to any aerial or photographic collection.',
-  },
-  {
-    id: 'uc6',
-    slug: '/research/wrap-food-loss-waste-taxonomy',
-    title: 'Food Loss and Waste Data Taxonomy: WRAP',
-    challenge: 'WRAP\'s Courtauld Commitment 2030 asks the UK food industry to halve food waste by 2030 (UN SDG 12.3). More than 400 organisations across an international Food Pact Network report their data using locally divergent definitions, so it cannot be reliably aggregated or compared, undermining measurement of collective progress.',
-    intervention: 'Commissioned by WRAP (PRC228) to translate the international Food Loss and Waste Standard into structured, machine-readable data infrastructure: five coded dimensions (product category, supply chain stage, waste destination, intervention type, food and drink material hierarchy) with controlled vocabularies and unique codes, 84 coded entities expressed in SKOS and JSON-LD, grounded in the WRAP Data Capture Sheet and Codex GSFA, with FoodOn product-category alignment. SHACL validation shapes and FoodEx2 mappings are scaffolded for Phase 2. Delivered through iterative co-design with WRAP subject-matter experts.',
-    assurance: 'Built as working data infrastructure with version-controlled change governance and 100% structural coverage of the WRAP Data Capture Sheet controlled vocabularies at Level 1 (680 validated RDF triples).',
-    outcome: 'A publishable, machine-readable taxonomy that lets the Food Pact Network classify and compare food waste data on a like-for-like basis for the first time, and feeds the developing international data standard.',
-    reusable: 'The taxonomy-plus-schema-plus-validation-rules pattern transfers to any multi-organisation reporting domain requiring consistent, comparable data.',
-  },
-  {
-    id: 'uc7',
-    slug: '/research/agri-environment-heritage-value',
-    title: 'The Value of Agri-Environment Heritage Actions (Open-Data Demonstration)',
-    challenge: 'Agri-environment schemes are the largest source of government funding for the rural historic environment, yet the wider co-benefits of heritage actions, for nature and for people, are real but evidentially fragmented. As nature recovery is delivered faster and under tighter budgets, heritage actions risk being overlooked unless that value can be evidenced.',
-    intervention: 'A self-initiated, open demonstration built entirely on public data: a pre-registered scoping-review protocol on Natural England\'s own evidence-review method (NEER001), PRISMA-ScR and the Collaboration for Environmental Evidence guidelines; a charting framework linking each heritage action to its co-benefits, EIP targets and indicative value for money (Green Book, ENCA); and our own spatial analysis of the Historic England Heritage at Risk Register 2024.',
-    assurance: 'Fully reproducible and open. The spatial join locates 2,181 of 2,206 Scheduled Monuments at Risk by region; the South West share of 45% matches Historic England\'s published figure, a check the analysis is sound. Not a commissioned contract: a worked demonstration of method.',
-    outcome: 'A published, replicable protocol, an evidence-map and gap framework, and a real spatial analysis showing 84% of monuments at risk are on farmland, where heritage actions act. Together they make the case that heritage actions deliver multi-objective value, for nature and for people, in a form that withstands scrutiny.',
-    reusable: 'The scoping-review protocol, charting framework and value-for-money method transfer to any evidence-baseline question on the wider benefits of land-management or environmental actions.',
-  },
-  {
-    id: 'uc8',
-    slug: '/research/ies-hqdm-defence-interoperability',
-    title: 'IES to HQDM: an Open 4D Ontology Crosswalk for Defence Data',
-    challenge: 'The UK Defence Investment Plan (June 2026) commits over £5bn to autonomous systems and £7.5bn to a Digital Backbone and Digital Targeting Web, all of which depend on heterogeneous systems and allies sharing data a machine can reason over. On the UK side that vocabulary is the Information Exchange Standard (IES); the built environment runs on HQDM and the National Digital Twin. Both are 4D and share a common heritage, yet no machine-readable crosswalk between them had ever been published.',
-    intervention: 'A self-initiated, open artifact built on Tesseract\'s open-ontologies engine: the first public crosswalk between IES and HQDM. Seventeen backbone correspondences in SSSOM and RDF (with PROV-O provenance), a curated record of six divergences (the pairs that look like they map and do not), SHACL validation shapes, a reference alignment pipeline, and a worked SAPIENT (BSI Flex 335) safety case grounding one autonomous sensor node in IES-typed world states via our CIVeX agent-verification research.',
-    assurance: 'Open and reproducible: data and documentation under CC-BY-4.0, upstream ontologies referenced by IRI (IES under the Open Government Licence, HQDM under Apache-2.0). Validated against the live published ontologies: all 17 correspondences resolve and the SHACL shapes conform. Candidate-for-review and open to correction.',
-    outcome: 'A shared starting point the field lacked, released so suppliers building across defence and built-environment data can start from something concrete. The divergences record names the traps, including the ies:Event to hqdm:event false friend, that a naive label-based mapping would fall into.',
-    reusable: 'The crosswalk, divergences record, SHACL shapes and reference pipeline transfer to any 4D upper-ontology alignment; the safety-case pattern transfers to any autonomous node that must be assured against a shared world model.',
-  },
-  {
-    id: 'uc9',
-    slug: '/research/pyramid-ies-hqdm-semantic-bridge',
-    title: 'Grounding a PYRAMID Avionics Bridge in IES and HQDM',
-    challenge: 'PYRAMID (UK Defence Standard 00-134) is the MOD open reference architecture for avionics and mission systems. By design it has no shared data model: its Technical Standard states that components "do not share interface definitions", so a deployment "will use bridges to close the semantic gap", and the accompanying MOD assessment confirms "the PRA does not define a data architecture". The meaning of data across components is left to bridges that are, today, hand-built per deployment.',
-    intervention: 'A self-initiated, open worked example that supplies the reference semantics for one such bridge, built entirely on the Open Government Licence Technical Standard. Entities from three PRA components (Geography, Tactical Objects, Data Fusion) are grounded in IES and HQDM terms using our IES-to-HQDM crosswalk, so the same object, e.g. a building that is both a Geographical_Feature and a Tactical_Object, resolves to one referent (ies:Entity, and hqdm:physical_object through the crosswalk). An executable proof, SHACL enforcement shapes and a negative fixture are included.',
-    assurance: 'Open and reproducible under CC-BY-4.0. The bridge conforms to the crosswalk\'s own SHACL shapes; a co-reference is valid only when both sides denote the same referent, which makes the "Capability" false friend (a distinct entity in all three components) fail validation rather than ship silently. Not affiliated with or endorsed by the MOD PYRAMID programme.',
-    outcome: 'A shared meaning layer beneath an open avionics architecture, demonstrated on the public standard. No published work grounds PYRAMID, or the related FACE Shared Data Model, in any upper ontology; this occupies that gap with ontologies the UK government already owns.',
-    reusable: 'The grounding pattern transfers to any PYRAMID or FACE inter-component bridge, and to any MOSA reference architecture that leaves cross-component data meaning to a bridge layer.',
-  },
-];
+const CATEGORY_ORDER: CaseStudyCategory[] = ['delivery', 'open-demo'];
 
-const UseCaseItem: React.FC<{ data: typeof USE_CASES[0] }> = ({ data }) => {
+const CATEGORY_BLURB: Record<CaseStudyCategory, string> = {
+  'delivery': 'Contracts commissioned by government and government-funded programmes.',
+  'open-demo': 'Self-initiated, fully reproducible open demonstrations and standards, built on public data.',
+};
+
+const UseCaseItem: React.FC<{ data: CaseStudy }> = ({ data }) => {
   const [expanded, setExpanded] = useState(false);
 
   return (
     <Card className="border-l-2 border-l-gov-blue hover:border-l-gov-blue-dark transition-colors">
       <button className="flex justify-between items-start w-full text-left group" onClick={() => setExpanded(!expanded)} aria-expanded={expanded} aria-label={`${expanded ? 'Collapse' : 'Expand'} ${data.title}`}>
-        <h2 className="text-lg font-semibold text-gov-text font-serif group-hover:text-gov-blue transition-colors">{data.title}</h2>
+        <h3 className="text-lg font-semibold text-gov-text font-serif group-hover:text-gov-blue transition-colors">{data.title}</h3>
         <span className="text-gov-blue hover:scale-105 transition-transform flex-shrink-0 ml-2">
           {expanded ? <ChevronUp className="w-5 h-5" /> : <ChevronDown className="w-5 h-5" />}
         </span>
@@ -120,11 +25,11 @@ const UseCaseItem: React.FC<{ data: typeof USE_CASES[0] }> = ({ data }) => {
 
       <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
-           <h3 className="text-xs font-semibold uppercase tracking-wider text-gov-blue mb-2">The Challenge</h3>
+           <h4 className="text-xs font-semibold uppercase tracking-wider text-gov-blue mb-2">The Challenge</h4>
            <p className="text-gov-text leading-relaxed text-sm">{data.challenge}</p>
         </div>
         <div>
-           <h3 className="text-xs font-semibold uppercase tracking-wider text-gov-blue mb-2">The Outcome</h3>
+           <h4 className="text-xs font-semibold uppercase tracking-wider text-gov-blue mb-2">The Outcome</h4>
            <p className="text-gov-text font-medium leading-relaxed text-sm">{data.outcome}</p>
         </div>
       </div>
@@ -132,15 +37,15 @@ const UseCaseItem: React.FC<{ data: typeof USE_CASES[0] }> = ({ data }) => {
       {expanded && (
         <div className="mt-6 pt-6 border-t border-gov-border grid grid-cols-1 md:grid-cols-3 gap-6 animate-fadeIn">
           <div>
-            <h3 className="text-xs font-semibold uppercase tracking-wider text-gov-secondary mb-2">Intervention</h3>
+            <h4 className="text-xs font-semibold uppercase tracking-wider text-gov-secondary mb-2">Intervention</h4>
             <p className="text-sm text-gov-text leading-relaxed">{data.intervention}</p>
           </div>
           <div>
-            <h3 className="text-xs font-semibold uppercase tracking-wider text-gov-secondary mb-2">Assurance & Ethics</h3>
+            <h4 className="text-xs font-semibold uppercase tracking-wider text-gov-secondary mb-2">Assurance & Ethics</h4>
             <p className="text-sm text-gov-text leading-relaxed">{data.assurance}</p>
           </div>
           <div>
-            <h3 className="text-xs font-semibold uppercase tracking-wider text-gov-secondary mb-2">Reusable Assets</h3>
+            <h4 className="text-xs font-semibold uppercase tracking-wider text-gov-secondary mb-2">Reusable Assets</h4>
             <p className="text-sm text-gov-text leading-relaxed">{data.reusable}</p>
           </div>
         </div>
@@ -157,19 +62,37 @@ const UseCaseItem: React.FC<{ data: typeof USE_CASES[0] }> = ({ data }) => {
 
 export const UseCases: React.FC = () => {
   return (
-    <div className="max-w-6xl mx-auto px-6 lg:px-8 py-20 space-y-12">
+    <div className="max-w-6xl mx-auto px-6 lg:px-8 py-20 space-y-16">
       <div>
         <h1 className="text-5xl font-extrabold text-gov-dark mb-6 tracking-tight leading-tight">Use Cases</h1>
         <p className="text-xl text-gov-secondary/90 leading-relaxed max-w-4xl">
-          Evidence of delivery. Real projects across UK public sector and government-funded programmes.
+          Evidence of delivery. Real projects across UK public sector and government-funded programmes, plus self-initiated open demonstrations built on public data.
         </p>
       </div>
 
-      <div className="space-y-6">
-        {USE_CASES.map(uc => (
-          <UseCaseItem key={uc.id} data={uc} />
-        ))}
-      </div>
+      {CATEGORY_ORDER.map(category => {
+        const items = CASE_STUDIES.filter(cs => cs.category === category);
+        if (items.length === 0) return null;
+        return (
+          <section key={category} className="space-y-6">
+            <div className="border-b border-gov-border/30 pb-4">
+              <h2 className="text-2xl font-bold text-gov-dark">{CATEGORY_LABELS[category]}</h2>
+              <p className="text-sm text-gov-secondary mt-1">{CATEGORY_BLURB[category]}</p>
+            </div>
+            <div className="space-y-6">
+              {items.map(uc => (
+                <UseCaseItem key={uc.id} data={uc} />
+              ))}
+            </div>
+          </section>
+        );
+      })}
+
+      <aside className="pt-4">
+        <p className="text-sm text-gov-secondary">
+          See also: <Link to="/research" className="text-gov-blue hover:underline">Research &amp; publications</Link> · <Link to="/insights" className="text-gov-blue hover:underline">Insights</Link> · <Link to="/services/research-policy" className="text-gov-blue hover:underline">Research &amp; policy advisory</Link>
+        </p>
+      </aside>
     </div>
   );
 };

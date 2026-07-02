@@ -24,6 +24,7 @@ const ConnectiveProductCyberIncidents = lazy(() => import('./pages/research/Conn
 const FairScientificData = lazy(() => import('./pages/research/FairScientificData').then(m => ({ default: m.FairScientificData })));
 const IesHqdmCrosswalk = lazy(() => import('./pages/research/IesHqdmCrosswalk').then(m => ({ default: m.IesHqdmCrosswalk })));
 const PyramidBridge = lazy(() => import('./pages/research/PyramidBridge').then(m => ({ default: m.PyramidBridge })));
+const NatureSecurityRisk = lazy(() => import('./pages/research/NatureSecurityRisk').then(m => ({ default: m.NatureSecurityRisk })));
 const Glossary = lazy(() => import('./pages/Glossary').then(m => ({ default: m.Glossary })));
 const AIConsulting = lazy(() => import('./pages/services/AIConsulting').then(m => ({ default: m.AIConsulting })));
 const ResearchPolicy = lazy(() => import('./pages/services/ResearchPolicy').then(m => ({ default: m.ResearchPolicy })));
@@ -84,7 +85,7 @@ const PAGE_META: Record<string, { title: string; description: string }> = {
   },
   '/research/kalgera-financial-vulnerability': {
     title: 'Financial Vulnerability Research — Kalgera / Fintech Scotland | Tesseract Government Gateway',
-    description: 'End-to-end qualitative research validating Kalgera\'s AI-driven financial vulnerability signals. 8–10 in-depth interviews, 80–120 survey respondents, ethical framework under the Adult Support and Protection (Scotland) Act 2007.',
+    description: 'End-to-end qualitative research validating Kalgera\'s AI-driven financial vulnerability signals. A screening survey plus in-depth interviews mapped to 8 financial-vulnerability signals, under an ethical framework aligned with the Adult Support and Protection (Scotland) Act 2007.',
   },
   '/research/wastewater-effluent-data-quality': {
     title: 'Wastewater Effluent Data Quality | Tesseract Government Gateway',
@@ -117,6 +118,10 @@ const PAGE_META: Record<string, { title: string; description: string }> = {
   '/research/connective-product-cyber-incidents': {
     title: 'Cyber Incidents affecting Connective Products: an open evidence base | Tesseract Government Gateway',
     description: 'A self-initiated, open, machine-readable evidence base of cyber incidents affecting connective products (IoT, operational technology, computing devices, networking equipment and software/firmware): 16 documented incidents (2022 to 2025), a SKOS taxonomy and a source-quality rubric aligned to the six Government Data Quality Framework dimensions, published on GitHub under CC-BY-4.0.',
+  },
+  '/research/nature-related-security-risk': {
+    title: 'Nature-Related Security Risk: an open evidence base and systems ontology | Tesseract Government Gateway',
+    description: 'A self-initiated, open, machine-readable evidence base and systems ontology that operationalises the UK National Security Assessment on biodiversity loss and ecosystem collapse (2026): 14 documented nature-to-security cascades graded with the assessment\'s own confidence ratings, an OWL ontology (NSRO), a SKOS taxonomy cross-walked to IPBES and SHACL shapes, published on GitHub under CC-BY-4.0.',
   },
   '/glossary': {
     title: 'AI & Procurement Glossary | Tesseract Government Gateway',
@@ -208,6 +213,7 @@ const App: React.FC = () => {
               <Route path="/research/fair-scientific-data" element={<FairScientificData />} />
               <Route path="/research/ies-hqdm-defence-interoperability" element={<IesHqdmCrosswalk />} />
               <Route path="/research/pyramid-ies-hqdm-semantic-bridge" element={<PyramidBridge />} />
+              <Route path="/research/nature-related-security-risk" element={<NatureSecurityRisk />} />
               <Route path="/glossary" element={<Glossary />} />
               <Route path="/services/ai-consulting" element={<AIConsulting />} />
               <Route path="/services/research-policy" element={<ResearchPolicy />} />
