@@ -86,7 +86,7 @@ const PAGE_META = {
   },
   '/research/fair-scientific-data': {
     title: 'FAIR Dataset Contracts for Scientific Data | Tesseract Government Gateway',
-    description: 'A self-initiated, open-data demonstration: an open SHACL dataset-contract toolkit for scientific research data, tested against 30 real public immune and multi-omics datasets. All 30 were catalogued; none met a strict, machine-readable FAIR contract (100% lacked a structured schema and a machine-readable distribution). Open source with a reproducible analysis.',
+    description: 'An open study of 1,738 real public biomedical datasets across three repositories (EMBL-EBI BioStudies, Dryad, PRIDE): overwhelmingly findable and accessible, but 0% interoperable or AI-ready (100% lack a machine-readable schema, checksums and provenance). Paired with an open, tool-certified OWL ontology that models the AI-ready dataset layer. Open source and reproducible.',
   },
   '/research/ies-hqdm-defence-interoperability': {
     title: 'IES to HQDM: an open 4D ontology crosswalk for defence data | Tesseract Government Gateway',

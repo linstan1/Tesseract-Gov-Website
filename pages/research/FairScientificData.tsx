@@ -9,27 +9,27 @@ const SCHEMA = {
   mainEntityOfPage: 'https://gov.tesseract.academy/research/fair-scientific-data',
   headline: 'FAIR Dataset Contracts for Scientific Data | Tesseract Academy',
   description:
-    'A self-initiated, open-data demonstration: an open SHACL dataset-contract toolkit for scientific research data, tested against 30 real public immune and multi-omics datasets. Every dataset was catalogued; none met a hard-FAIR, machine-readable contract.',
+    'An open, reproducible study of 1,738 real public biomedical datasets across three major repositories, plus an open, tool-certified ontology that models what an AI-ready dataset needs. Datasets are overwhelmingly findable and accessible, but none is interoperable or AI-ready.',
   author: { '@id': 'https://gov.tesseract.academy/#organization' },
   publisher: { '@id': 'https://gov.tesseract.academy/#organization' },
   datePublished: '2026-07-01',
-  dateModified: '2026-07-01',
-  about: { '@type': 'Thing', name: 'FAIR data, dataset contracts, scientific data reuse' },
+  dateModified: '2026-07-02',
+  about: { '@type': 'Thing', name: 'FAIR data, dataset contracts, AI-ready scientific data, ontology' },
   keywords:
-    'FAIR data, dataset contract, SHACL, scientific data, biomedical data, multi-omics, provenance, RO-Crate, FAIRSCAPE, AI-ready data, knowledge graph',
+    'FAIR data, dataset contract, SHACL, OWL ontology, scientific data, biomedical data, multi-omics, provenance, RO-Crate, FAIRSCAPE, Bridge2AI, Croissant, AI-ready data, knowledge graph',
 };
 
 const STATS = [
-  { label: 'Real datasets tested', value: '30' },
-  { label: 'Meet a hard-FAIR contract', value: '0%' },
+  { label: 'Real datasets analysed (3 repositories)', value: '1,738' },
+  { label: 'Interoperable or AI-ready', value: '0%' },
   { label: 'Lack a machine-readable schema', value: '100%' },
 ];
 
-const FINDINGS = [
-  { req: 'Structured schema (variableMeasured)', missing: '100% (30/30)' },
-  { req: 'Machine-readable distribution / access', missing: '100% (30/30)' },
-  { req: 'Dataset version', missing: '73% (22/30)' },
-  { req: 'Keywords / subjects', missing: '50% (15/30)' },
+const TIERS = [
+  { tier: 'Findable (PID, title, description)', rate: '99.9%' },
+  { tier: 'Accessible (machine-readable distribution)', rate: '91.3%' },
+  { tier: 'Interoperable (machine-readable schema, version)', rate: '0.0%' },
+  { tier: 'AI-ready (checksums, provenance, data dictionary)', rate: '0.0%' },
 ];
 
 export const FairScientificData: React.FC = () => {
@@ -38,21 +38,21 @@ export const FairScientificData: React.FC = () => {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SCHEMA) }} />
       <header>
         <Link
-          to="/use-cases"
+          to="/research"
           className="inline-flex items-center gap-2 text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors mb-8"
         >
           <ArrowLeft className="w-4 h-4" />
-          Back to Use Cases
+          Back to Research
         </Link>
 
         <p className="text-sm font-semibold uppercase tracking-wider text-gov-blue mb-3">
-          Self-initiated demonstration
+          Self-initiated study and open ontology
         </p>
         <h1 className="text-4xl font-extrabold text-gov-dark mb-6 tracking-tight leading-tight font-serif">
           FAIR Dataset Contracts for Scientific Data
         </h1>
         <p className="text-xl text-gov-secondary/90 leading-relaxed">
-          We built an open toolkit that turns "is this dataset actually reusable?" into a machine-checkable question, then ran it against thirty real, published biomedical datasets. The result is a measured gap between data that is deposited and data that is contract-ready.
+          We turned "is this dataset actually reusable?" into a machine-checkable question, ran it across 1,738 real published biomedical datasets from three major repositories, and then built the open ontology that models the layer they are missing. The result is a measured gap between data that is deposited and data that is AI-ready, and a validated model for closing it.
         </p>
       </header>
 
@@ -68,61 +68,59 @@ export const FairScientificData: React.FC = () => {
       <section className="space-y-4">
         <h2 className="text-2xl font-bold text-gov-dark font-serif">The gap: findable is not the same as reusable</h2>
         <p className="text-gov-secondary/90 leading-relaxed">
-          As research organisations move data closer to AI systems, the constraint is rarely the science and often the plumbing: whether a computational output can be reliably found, assembled, trusted and reused without bespoke manual wrangling for every project. A dataset can carry a DOI, a title and a landing page, and still be impossible for a machine to reuse, because the metadata that automation depends on is absent. FAIR (Wilkinson et al., 2016) named the principles; frameworks such as FAIRSCAPE (Al Manir, Clark et al.) and the Bridge2AI metadata work (Caufield, Munoz-Torres et al.) have since defined what AI-ready biomedical data should look like. What has been missing is a simple, open way to <em>check</em> a dataset against those expectations.
+          As research organisations move data closer to AI systems, the constraint is rarely the science and often the plumbing: whether a computational output can be reliably found, assembled, trusted and reused without bespoke manual wrangling for every project. A dataset can carry a DOI, a title and a landing page, and still be impossible for a machine to reuse, because the metadata that automation depends on is absent. FAIR (Wilkinson et al., 2016) named the principles; frameworks such as FAIRSCAPE (Al Manir, Clark et al.) and the Bridge2AI metadata work (Caufield, Munoz-Torres et al.) have since defined what AI-ready biomedical data should look like. What has been missing is a simple, open way to <em>check</em> a dataset against those expectations, and a shared model of what "AI-ready" concretely requires.
         </p>
       </section>
 
       <section className="space-y-4">
-        <h2 className="text-2xl font-bold text-gov-dark font-serif">What we built</h2>
+        <h2 className="text-2xl font-bold text-gov-dark font-serif">The study: 1,738 real datasets, four FAIR tiers</h2>
         <p className="text-gov-secondary/90 leading-relaxed">
-          An open, reproducible toolkit that expresses a FAIR "dataset contract" as machine-readable constraints and validates any dataset's metadata against it:
-        </p>
-        <ul className="list-disc pl-6 space-y-2 text-gov-secondary/90 leading-relaxed">
-          <li>A library of <strong>SHACL shapes</strong> for a scientific dataset contract, grounded in real vocabularies (schema.org, DCAT, Bioschemas, RO-Crate) and expressed at two tiers: a minimal catalogue level and a strict, hard-FAIR level.</li>
-          <li>A <strong>validator</strong> (built on pyshacl and rdflib) that takes a dataset's metadata as JSON-LD or Turtle and returns a conformance report with precise, machine-readable messages.</li>
-          <li>A <strong>FAIR / AI-readiness self-assessment</strong> that operationalises the FAIRSCAPE and Bridge2AI criteria as a runnable checklist and score, rather than a static PDF.</li>
-        </ul>
-      </section>
-
-      <section className="space-y-4">
-        <h2 className="text-2xl font-bold text-gov-dark font-serif">The finding</h2>
-        <p className="text-gov-secondary/90 leading-relaxed">
-          We discovered thirty real public datasets (single-cell, CyTOF, spatial and multi-omics immunology) through the Zenodo API, fetched their schema.org metadata by DOI content negotiation, and validated each with the toolkit. Every dataset passed a permissive, catalogue-level contract. None passed the strict, machine-readable one.
+          We assembled 1,738 real public datasets (single-cell, proteomics, spatial and multi-omics) from three major repositories, EMBL-EBI BioStudies (798), Dryad (340) and PRIDE / ProteomeXchange (600), normalised their metadata across profiles, and validated each against a tiered contract that operationalises the 28 FAIRSCAPE criteria. Findability is anchored on a persistent identifier, title and description; keywords and licence are reported as sub-metrics.
         </p>
         <div className="overflow-x-auto">
           <table className="w-full text-left border-collapse">
             <thead>
               <tr className="border-b border-gov-border">
-                <th className="py-3 pr-4 text-sm font-semibold uppercase tracking-wider text-gov-blue">Requirement most often absent</th>
-                <th className="py-3 text-sm font-semibold uppercase tracking-wider text-gov-blue">Datasets missing it</th>
+                <th className="py-3 pr-4 text-sm font-semibold uppercase tracking-wider text-gov-blue">FAIR tier</th>
+                <th className="py-3 text-sm font-semibold uppercase tracking-wider text-gov-blue">Datasets conforming</th>
               </tr>
             </thead>
             <tbody>
-              {FINDINGS.map((f) => (
-                <tr key={f.req} className="border-b border-gov-border/40">
-                  <td className="py-3 pr-4 text-gov-secondary/90">{f.req}</td>
-                  <td className="py-3 font-semibold text-gov-dark">{f.missing}</td>
+              {TIERS.map((t) => (
+                <tr key={t.tier} className="border-b border-gov-border/40">
+                  <td className="py-3 pr-4 text-gov-secondary/90">{t.tier}</td>
+                  <td className="py-3 font-semibold text-gov-dark">{t.rate}</td>
                 </tr>
               ))}
             </tbody>
           </table>
         </div>
         <p className="text-gov-secondary/90 leading-relaxed">
-          The headline (zero of thirty meet the strict contract) holds on the unambiguous fields alone: a structured schema and a machine-readable distribution are absent from every record. The measurement is of published catalogue metadata, which is exactly what reuse automation acts on. Every DOI, HTTP status and per-dataset result is recorded in the repository, so the analysis is fully reproducible.
+          Datasets are overwhelmingly findable and mostly accessible, but not one of the 1,738 is interoperable or AI-ready. Across the whole corpus, 100% lack a machine-readable schema, 100% lack checksums and machine-readable provenance, and about 80% lack a version. FAIR breaks precisely at the machine-readable structural and provenance layer that automated assembly, trust and AI reuse depend on. Every DOI, HTTP status and per-dataset result is recorded in the repository, so the analysis is fully reproducible.
+        </p>
+      </section>
+
+      <section className="space-y-4">
+        <h2 className="text-2xl font-bold text-gov-dark font-serif">The remedy: an open, certified ontology</h2>
+        <p className="text-gov-secondary/90 leading-relaxed">
+          Measuring the gap is not enough, so we built the model that fills it: an OWL 2 ontology (<code>far:</code>, the FAIR AI-Ready Dataset ontology) that defines what a dataset needs to be a reusable, AI-ready data product, a machine-readable schema, provenance, integrity checks, a data dictionary, an ethics basis and access specification. Rather than reinvent vocabulary, it composes and aligns to existing standards, with 44 mappings to schema.org, W3C DCAT and PROV-O, SPDX, Bioschemas and MLCommons Croissant. The SHACL tiers are its validation layer, so the diagnostic and the remedy are one coherent artifact.
+        </p>
+        <p className="text-gov-secondary/90 leading-relaxed">
+          The ontology is certified through our open-source Open Ontologies engine: it validates cleanly, passes governance linting with zero issues, and is logically consistent under OWL reasoning.
         </p>
       </section>
 
       <section className="space-y-4">
         <h2 className="text-2xl font-bold text-gov-dark font-serif">Why it matters for research data platforms</h2>
         <p className="text-gov-secondary/90 leading-relaxed">
-          For any organisation building an AI-ready data platform, whether a biotech scaling multi-omics or a public research programme, the distance between "we deposited it" and "a machine can find, assemble and trust it" is precisely this contract layer. Making that layer explicit and testable is what turns scattered pipeline outputs into governed, reusable data products, with structure, provenance, versioning and access that hold up to reuse and, later, to regulated use.
+          For any organisation building an AI-ready data platform, whether a biotech scaling multi-omics or a public research programme, the distance between "we deposited it" and "a machine can find, assemble and trust it" is precisely this contract layer. Making that layer explicit, modelled and testable is what turns scattered pipeline outputs into governed, reusable data products, with structure, provenance, versioning and access that hold up to reuse and, later, to regulated use.
         </p>
       </section>
 
       <section className="bg-gov-bg border border-gov-border/50 rounded-xl p-8 space-y-4">
         <h2 className="text-2xl font-bold text-gov-dark font-serif">Open toolkit and how we work</h2>
         <p className="text-gov-secondary/90 leading-relaxed">
-          The shapes, validator, readiness rubric and the full strictness analysis are open source under an MIT licence. You can run the contract against your own datasets in minutes.
+          The ontology, the tiered SHACL contract, the validator, the readiness rubric and the full 1,738-dataset analysis are open source under an MIT licence. You can run the contract against your own datasets in minutes.
         </p>
         <a
           href="https://github.com/fabio-rovai/fair-scientific-data"
@@ -142,7 +140,7 @@ export const FairScientificData: React.FC = () => {
       </section>
 
       <p className="text-xs text-gov-secondary/60 leading-relaxed">
-        Sources and grounding: Wilkinson et al., The FAIR Guiding Principles (Scientific Data, 2016); Al Manir, Clark et al., FAIRSCAPE AI-readiness framework; Caufield, Munoz-Torres et al., Bridge2AI metadata standards (arXiv:2509.10432); Leo, Soiland-Reyes et al., Workflow Run RO-Crate provenance (PLoS One, 2024). Analysis run 1 July 2026 on 30 public datasets retrieved via the Zenodo API.
+        Sources and grounding: Wilkinson et al., The FAIR Guiding Principles (Scientific Data, 2016); Al Manir, Clark et al., FAIRSCAPE AI-readiness framework; Caufield, Munoz-Torres et al., Bridge2AI metadata standards (arXiv:2509.10432); Leo, Soiland-Reyes et al., Workflow Run RO-Crate provenance (PLoS One, 2024); W3C DCAT and PROV-O; MLCommons Croissant. Analysis run 2 July 2026 on 1,738 public datasets from EMBL-EBI BioStudies, Dryad and PRIDE / ProteomeXchange.
       </p>
     </article>
   );
