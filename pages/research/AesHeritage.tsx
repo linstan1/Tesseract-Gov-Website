@@ -5,8 +5,8 @@ import { ArrowLeft, ExternalLink } from 'lucide-react';
 const SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'Article',
-  '@id': 'https://gov.tesseract.academy/case-studies/agri-environment-heritage-value#article',
-  mainEntityOfPage: 'https://gov.tesseract.academy/case-studies/agri-environment-heritage-value',
+  '@id': 'https://gov.tesseract.academy/research/agri-environment-heritage-value#article',
+  mainEntityOfPage: 'https://gov.tesseract.academy/research/agri-environment-heritage-value',
   headline: 'The Value of Agri-Environment Heritage Actions — Tesseract Academy',
   description:
     'An open evidence review of the wider co-benefits of agri-environment scheme heritage actions for nature and for people: a real spatial analysis of the 2,206 Scheduled Monuments on the Historic England Heritage at Risk Register 2024, and an evidence map built from published sources, with honest gaps.',

@@ -6,7 +6,7 @@ import { ChevronDown, ChevronUp, ArrowRight } from 'lucide-react';
 const USE_CASES = [
   {
     id: 'uc1',
-    slug: '/case-studies/welsh-government-land-valuation',
+    slug: '/research/welsh-government-land-valuation',
     title: 'Testing Land Valuation Methods: Welsh Government',
     challenge: 'The Welsh Government needed to evaluate different approaches for assessing land values to support local government finance policy development, comparing traditional and AI-driven methodologies.',
     intervention: 'Commissioned by Welsh Government to test five distinct valuation methodologies: market-based statistical valuation, advanced algorithmic and machine-learning applications, formula-based valuation by land area, conventional valuation approaches, and innovative experimental approaches.',
@@ -16,7 +16,7 @@ const USE_CASES = [
   },
   {
     id: 'uc2',
-    slug: '/case-studies/national-digital-twin-programme',
+    slug: '/research/national-digital-twin-programme',
     title: 'AI Ontology Extension Generator: National Digital Twin Programme',
     challenge: 'The National Digital Twin Programme (NDTP), a UK Government initiative under the Department for Business and Trade, needed to automate ontology development to accelerate the creation of digital twins across UK infrastructure.',
     intervention: 'Contributed to the development of an open-source AI-powered tool that automates ontology generation and extension through a web interface. The tool combines data profiling, Named Entity Recognition, and large language models to extract and generate ontology entities from multiple data formats (CSV, JSON, RDF/Turtle).',
@@ -26,7 +26,7 @@ const USE_CASES = [
   },
   {
     id: 'uc3',
-    slug: '/case-studies/bridgeai-creative-industries',
+    slug: '/research/bridgeai-creative-industries',
     title: 'BridgeAI Programme: AI for UK Creatives',
     challenge: 'Innovate UK\'s BridgeAI programme needed to support the UK creative industries in adopting AI technologies, bridging the gap between cutting-edge AI research and practical implementation for creative sector SMEs.',
     intervention: 'Delivered a programme delivery report for the BridgeAI initiative, providing research-backed guidance on AI adoption for UK creatives. Led by Fabio Rovai and Dr Stylianos Kampakis, the work covered AI readiness assessment, implementation strategies, and practical tooling recommendations.',
@@ -36,7 +36,7 @@ const USE_CASES = [
   },
   {
     id: 'uc4',
-    slug: '/case-studies/kalgera-financial-vulnerability',
+    slug: '/research/kalgera-financial-vulnerability',
     title: 'Financial Vulnerability Research: Kalgera / Fintech Scotland',
     challenge: 'Kalgera, a fintech specialising in protecting financially vulnerable customers, needed primary qualitative research to validate their AI-driven early warning signal architecture. The research had to capture lived experiences of financial vulnerability in Scotland, including scam victims, people experiencing cognitive decline, and carers managing money on behalf of others.',
     intervention: 'Designed and delivered an end-to-end user research programme: paid Facebook/Instagram recruitment campaign targeting financially vulnerable adults across Scotland (50+ primary, 35–49 secondary), a screening survey collecting quantitative and qualitative data from 80–120 respondents, and 8–10 in-depth 1:1 interviews (60 minutes each). The interview protocol was mapped directly to Kalgera\'s signal categories: spending pattern changes, income depletion, credit reliance, new payees, cash patterns, bill changes, account access, and scam indicators.',
@@ -46,7 +46,7 @@ const USE_CASES = [
   },
   {
     id: 'uc5',
-    slug: '/case-studies/wastewater-effluent-data-quality',
+    slug: '/research/wastewater-effluent-data-quality',
     title: 'Wastewater Effluent Data Quality (Open-Data Demonstration)',
     challenge: 'The UK is rolling out continuous water-quality monitoring on wastewater assets under the Environment Act 2021, and the Environment Agency is exploring whether that data can serve as a regulatory tool. The binding question is data quality: calibration drift, fouled probes, telemetry gaps and transcription errors all masquerade as real signals.',
     intervention: 'Analysed a full-scale wastewater treatment works dataset of 1,382 daily records carrying the regulated effluent suite (ammonia, BOD, COD, total nitrogen, inflow, outflow). Applied a two-layer method: a statistical QA battery (completeness, flatline, robust MAD outliers, drift) and a declarative ISO 19156 / SOSA effluent ontology with SHACL data-quality rules, including the domain-aware COD ≥ BOD physical invariant.',
@@ -56,7 +56,7 @@ const USE_CASES = [
   },
   {
     id: 'uc6',
-    slug: '/case-studies/wrap-food-loss-waste-taxonomy',
+    slug: '/research/wrap-food-loss-waste-taxonomy',
     title: 'Food Loss and Waste Data Taxonomy: WRAP',
     challenge: 'WRAP\'s Courtauld Commitment 2030 asks the UK food industry to halve food waste by 2030 (UN SDG 12.3). More than 400 organisations across an international Food Pact Network report their data using locally divergent definitions, so it cannot be reliably aggregated or compared, undermining measurement of collective progress.',
     intervention: 'Commissioned by WRAP (PRC228) to translate the international Food Loss and Waste Standard into structured, machine-readable data infrastructure: five coded dimensions (product category, supply chain stage, waste destination, intervention type, food and drink material hierarchy) with controlled vocabularies and unique codes, 84 coded entities expressed in SKOS and JSON-LD, grounded in the WRAP Data Capture Sheet and Codex GSFA, with FoodOn product-category alignment. SHACL validation shapes and FoodEx2 mappings are scaffolded for Phase 2. Delivered through iterative co-design with WRAP subject-matter experts.',
@@ -66,7 +66,7 @@ const USE_CASES = [
   },
   {
     id: 'uc7',
-    slug: '/case-studies/agri-environment-heritage-value',
+    slug: '/research/agri-environment-heritage-value',
     title: 'The Value of Agri-Environment Heritage Actions (Open-Data Demonstration)',
     challenge: 'Agri-environment schemes are the largest source of government funding for the rural historic environment, yet the wider co-benefits of heritage actions, for nature and for people, are real but evidentially fragmented. As nature recovery is delivered faster and under tighter budgets, heritage actions risk being overlooked unless that value can be evidenced.',
     intervention: 'A self-initiated, open demonstration built entirely on public data: a pre-registered scoping-review protocol on Natural England\'s own evidence-review method (NEER001), PRISMA-ScR and the Collaboration for Environmental Evidence guidelines; a charting framework linking each heritage action to its co-benefits, EIP targets and indicative value for money (Green Book, ENCA); and our own spatial analysis of the Historic England Heritage at Risk Register 2024.',
@@ -76,7 +76,7 @@ const USE_CASES = [
   },
   {
     id: 'uc8',
-    slug: '/case-studies/ies-hqdm-defence-interoperability',
+    slug: '/research/ies-hqdm-defence-interoperability',
     title: 'IES to HQDM: an Open 4D Ontology Crosswalk for Defence Data',
     challenge: 'The UK Defence Investment Plan (June 2026) commits over £5bn to autonomous systems and £7.5bn to a Digital Backbone and Digital Targeting Web, all of which depend on heterogeneous systems and allies sharing data a machine can reason over. On the UK side that vocabulary is the Information Exchange Standard (IES); the built environment runs on HQDM and the National Digital Twin. Both are 4D and share a common heritage, yet no machine-readable crosswalk between them had ever been published.',
     intervention: 'A self-initiated, open artifact built on Tesseract\'s open-ontologies engine: the first public crosswalk between IES and HQDM. Seventeen backbone correspondences in SSSOM and RDF (with PROV-O provenance), a curated record of six divergences (the pairs that look like they map and do not), SHACL validation shapes, a reference alignment pipeline, and a worked SAPIENT (BSI Flex 335) safety case grounding one autonomous sensor node in IES-typed world states via our CIVeX agent-verification research.',

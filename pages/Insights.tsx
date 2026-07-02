@@ -603,19 +603,19 @@ export const Insights: React.FC = () => {
       <aside className="space-y-6 border-t border-gov-border/30 pt-10" aria-label="Underlying case studies">
         <h2 className="text-2xl font-bold text-gov-dark">Underlying Case Studies</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <Link to="/case-studies/welsh-government-land-valuation" className="block p-5 bg-white border border-gov-border/50 rounded-lg hover:border-gov-blue transition-colors">
+          <Link to="/research/welsh-government-land-valuation" className="block p-5 bg-white border border-gov-border/50 rounded-lg hover:border-gov-blue transition-colors">
             <p className="text-xs font-semibold text-gov-blue uppercase tracking-wider mb-1">Welsh Government</p>
             <p className="text-sm font-semibold text-gov-dark">Land valuation methodologies — five approaches tested</p>
           </Link>
-          <Link to="/case-studies/national-digital-twin-programme" className="block p-5 bg-white border border-gov-border/50 rounded-lg hover:border-gov-blue transition-colors">
+          <Link to="/research/national-digital-twin-programme" className="block p-5 bg-white border border-gov-border/50 rounded-lg hover:border-gov-blue transition-colors">
             <p className="text-xs font-semibold text-gov-blue uppercase tracking-wider mb-1">National Digital Twin Programme</p>
             <p className="text-sm font-semibold text-gov-dark">AI Ontology Extension Generator — open source on GitHub</p>
           </Link>
-          <Link to="/case-studies/bridgeai-creative-industries" className="block p-5 bg-white border border-gov-border/50 rounded-lg hover:border-gov-blue transition-colors">
+          <Link to="/research/bridgeai-creative-industries" className="block p-5 bg-white border border-gov-border/50 rounded-lg hover:border-gov-blue transition-colors">
             <p className="text-xs font-semibold text-gov-blue uppercase tracking-wider mb-1">BridgeAI / Innovate UK</p>
             <p className="text-sm font-semibold text-gov-dark">AI adoption for UK creative industries</p>
           </Link>
-          <Link to="/case-studies/kalgera-financial-vulnerability" className="block p-5 bg-white border border-gov-border/50 rounded-lg hover:border-gov-blue transition-colors">
+          <Link to="/research/kalgera-financial-vulnerability" className="block p-5 bg-white border border-gov-border/50 rounded-lg hover:border-gov-blue transition-colors">
             <p className="text-xs font-semibold text-gov-blue uppercase tracking-wider mb-1">Kalgera / Fintech Scotland</p>
             <p className="text-sm font-semibold text-gov-dark">Financial vulnerability qualitative research</p>
           </Link>

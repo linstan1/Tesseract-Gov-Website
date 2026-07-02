@@ -19,16 +19,16 @@ import { Partnerships } from './pages/Partnerships';
 import { Compliance } from './pages/Compliance';
 import { Feedback } from './pages/Feedback';
 import { About } from './pages/About';
-import { WelshGovernment } from './pages/case-studies/WelshGovernment';
-import { NationalDigitalTwin } from './pages/case-studies/NationalDigitalTwin';
-import { BridgeAI } from './pages/case-studies/BridgeAI';
-import { Kalgera } from './pages/case-studies/Kalgera';
-import { WastewaterDataQuality } from './pages/case-studies/WastewaterDataQuality';
-import { WrapFoodWaste } from './pages/case-studies/WrapFoodWaste';
-import { AesHeritage } from './pages/case-studies/AesHeritage';
+import { WelshGovernment } from './pages/research/WelshGovernment';
+import { NationalDigitalTwin } from './pages/research/NationalDigitalTwin';
+import { BridgeAI } from './pages/research/BridgeAI';
+import { Kalgera } from './pages/research/Kalgera';
+import { WastewaterDataQuality } from './pages/research/WastewaterDataQuality';
+import { WrapFoodWaste } from './pages/research/WrapFoodWaste';
+import { AesHeritage } from './pages/research/AesHeritage';
 import { ConnectiveProductCyberIncidents } from './pages/research/ConnectiveProductCyberIncidents';
-import { FairScientificData } from './pages/case-studies/FairScientificData';
-import { IesHqdmCrosswalk } from './pages/case-studies/IesHqdmCrosswalk';
+import { FairScientificData } from './pages/research/FairScientificData';
+import { IesHqdmCrosswalk } from './pages/research/IesHqdmCrosswalk';
 import { Glossary } from './pages/Glossary';
 import { AIConsulting } from './pages/services/AIConsulting';
 import { ResearchPolicy } from './pages/services/ResearchPolicy';
@@ -53,16 +53,16 @@ const SSRApp: React.FC = () => (
         <Route path="/compliance" element={<Compliance />} />
         <Route path="/testimonials" element={<Feedback />} />
         <Route path="/about" element={<About />} />
-        <Route path="/case-studies/welsh-government-land-valuation" element={<WelshGovernment />} />
-        <Route path="/case-studies/national-digital-twin-programme" element={<NationalDigitalTwin />} />
-        <Route path="/case-studies/bridgeai-creative-industries" element={<BridgeAI />} />
-        <Route path="/case-studies/kalgera-financial-vulnerability" element={<Kalgera />} />
-        <Route path="/case-studies/wastewater-effluent-data-quality" element={<WastewaterDataQuality />} />
-        <Route path="/case-studies/wrap-food-loss-waste-taxonomy" element={<WrapFoodWaste />} />
-        <Route path="/case-studies/agri-environment-heritage-value" element={<AesHeritage />} />
+        <Route path="/research/welsh-government-land-valuation" element={<WelshGovernment />} />
+        <Route path="/research/national-digital-twin-programme" element={<NationalDigitalTwin />} />
+        <Route path="/research/bridgeai-creative-industries" element={<BridgeAI />} />
+        <Route path="/research/kalgera-financial-vulnerability" element={<Kalgera />} />
+        <Route path="/research/wastewater-effluent-data-quality" element={<WastewaterDataQuality />} />
+        <Route path="/research/wrap-food-loss-waste-taxonomy" element={<WrapFoodWaste />} />
+        <Route path="/research/agri-environment-heritage-value" element={<AesHeritage />} />
         <Route path="/research/connective-product-cyber-incidents" element={<ConnectiveProductCyberIncidents />} />
-        <Route path="/case-studies/fair-scientific-data" element={<FairScientificData />} />
-        <Route path="/case-studies/ies-hqdm-defence-interoperability" element={<IesHqdmCrosswalk />} />
+        <Route path="/research/fair-scientific-data" element={<FairScientificData />} />
+        <Route path="/research/ies-hqdm-defence-interoperability" element={<IesHqdmCrosswalk />} />
         <Route path="/glossary" element={<Glossary />} />
         <Route path="/services/ai-consulting" element={<AIConsulting />} />
         <Route path="/services/research-policy" element={<ResearchPolicy />} />

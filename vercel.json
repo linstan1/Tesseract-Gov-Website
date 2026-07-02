@@ -10,7 +10,16 @@
       "source": "/case-studies/connective-product-cyber-incidents",
       "destination": "/research/connective-product-cyber-incidents",
       "permanent": true
-    }
+    },
+    { "source": "/case-studies/welsh-government-land-valuation", "destination": "/research/welsh-government-land-valuation", "permanent": true },
+    { "source": "/case-studies/national-digital-twin-programme", "destination": "/research/national-digital-twin-programme", "permanent": true },
+    { "source": "/case-studies/bridgeai-creative-industries", "destination": "/research/bridgeai-creative-industries", "permanent": true },
+    { "source": "/case-studies/kalgera-financial-vulnerability", "destination": "/research/kalgera-financial-vulnerability", "permanent": true },
+    { "source": "/case-studies/wastewater-effluent-data-quality", "destination": "/research/wastewater-effluent-data-quality", "permanent": true },
+    { "source": "/case-studies/wrap-food-loss-waste-taxonomy", "destination": "/research/wrap-food-loss-waste-taxonomy", "permanent": true },
+    { "source": "/case-studies/agri-environment-heritage-value", "destination": "/research/agri-environment-heritage-value", "permanent": true },
+    { "source": "/case-studies/fair-scientific-data", "destination": "/research/fair-scientific-data", "permanent": true },
+    { "source": "/case-studies/ies-hqdm-defence-interoperability", "destination": "/research/ies-hqdm-defence-interoperability", "permanent": true }
   ],
   "rewrites": [
     { "source": "/((?!api/|llms\\.txt|llms-full\\.txt|robots\\.txt|sitemap\\.xml|\\.well-known|\\.json).*)", "destination": "/index.html" }

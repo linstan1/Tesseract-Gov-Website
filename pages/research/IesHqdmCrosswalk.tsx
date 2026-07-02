@@ -7,8 +7,8 @@ const REPO = 'https://github.com/fabio-rovai/ies-hqdm-crosswalk';
 const SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'Article',
-  '@id': 'https://gov.tesseract.academy/case-studies/ies-hqdm-defence-interoperability#article',
-  mainEntityOfPage: 'https://gov.tesseract.academy/case-studies/ies-hqdm-defence-interoperability',
+  '@id': 'https://gov.tesseract.academy/research/ies-hqdm-defence-interoperability#article',
+  mainEntityOfPage: 'https://gov.tesseract.academy/research/ies-hqdm-defence-interoperability',
   headline:
     'IES to HQDM: an open 4D ontology crosswalk for defence data | Tesseract Academy',
   description:

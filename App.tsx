@@ -12,16 +12,16 @@ const Partnerships = lazy(() => import('./pages/Partnerships').then(m => ({ defa
 const Compliance = lazy(() => import('./pages/Compliance').then(m => ({ default: m.Compliance })));
 const Feedback = lazy(() => import('./pages/Feedback').then(m => ({ default: m.Feedback })));
 const About = lazy(() => import('./pages/About').then(m => ({ default: m.About })));
-const WelshGovernment = lazy(() => import('./pages/case-studies/WelshGovernment').then(m => ({ default: m.WelshGovernment })));
-const NationalDigitalTwin = lazy(() => import('./pages/case-studies/NationalDigitalTwin').then(m => ({ default: m.NationalDigitalTwin })));
-const BridgeAI = lazy(() => import('./pages/case-studies/BridgeAI').then(m => ({ default: m.BridgeAI })));
-const Kalgera = lazy(() => import('./pages/case-studies/Kalgera').then(m => ({ default: m.Kalgera })));
-const WastewaterDataQuality = lazy(() => import('./pages/case-studies/WastewaterDataQuality').then(m => ({ default: m.WastewaterDataQuality })));
-const WrapFoodWaste = lazy(() => import('./pages/case-studies/WrapFoodWaste').then(m => ({ default: m.WrapFoodWaste })));
-const AesHeritage = lazy(() => import('./pages/case-studies/AesHeritage').then(m => ({ default: m.AesHeritage })));
+const WelshGovernment = lazy(() => import('./pages/research/WelshGovernment').then(m => ({ default: m.WelshGovernment })));
+const NationalDigitalTwin = lazy(() => import('./pages/research/NationalDigitalTwin').then(m => ({ default: m.NationalDigitalTwin })));
+const BridgeAI = lazy(() => import('./pages/research/BridgeAI').then(m => ({ default: m.BridgeAI })));
+const Kalgera = lazy(() => import('./pages/research/Kalgera').then(m => ({ default: m.Kalgera })));
+const WastewaterDataQuality = lazy(() => import('./pages/research/WastewaterDataQuality').then(m => ({ default: m.WastewaterDataQuality })));
+const WrapFoodWaste = lazy(() => import('./pages/research/WrapFoodWaste').then(m => ({ default: m.WrapFoodWaste })));
+const AesHeritage = lazy(() => import('./pages/research/AesHeritage').then(m => ({ default: m.AesHeritage })));
 const ConnectiveProductCyberIncidents = lazy(() => import('./pages/research/ConnectiveProductCyberIncidents').then(m => ({ default: m.ConnectiveProductCyberIncidents })));
-const FairScientificData = lazy(() => import('./pages/case-studies/FairScientificData').then(m => ({ default: m.FairScientificData })));
-const IesHqdmCrosswalk = lazy(() => import('./pages/case-studies/IesHqdmCrosswalk').then(m => ({ default: m.IesHqdmCrosswalk })));
+const FairScientificData = lazy(() => import('./pages/research/FairScientificData').then(m => ({ default: m.FairScientificData })));
+const IesHqdmCrosswalk = lazy(() => import('./pages/research/IesHqdmCrosswalk').then(m => ({ default: m.IesHqdmCrosswalk })));
 const Glossary = lazy(() => import('./pages/Glossary').then(m => ({ default: m.Glossary })));
 const AIConsulting = lazy(() => import('./pages/services/AIConsulting').then(m => ({ default: m.AIConsulting })));
 const ResearchPolicy = lazy(() => import('./pages/services/ResearchPolicy').then(m => ({ default: m.ResearchPolicy })));
@@ -68,39 +68,39 @@ const PAGE_META: Record<string, { title: string; description: string }> = {
     title: 'About Us - Team, Credentials & Company Profile | Tesseract Government Gateway',
     description: 'Meet the Tesseract Academy team: Dr Stylianos Kampakis (PhD UCL, FRSS, CStat) and Fabio Rovai MSc. CCS frameworks RM6200, RM6094, RM6126, RM6219. Cyber Essentials certified. DV-cleared resource available.',
   },
-  '/case-studies/welsh-government-land-valuation': {
+  '/research/welsh-government-land-valuation': {
     title: 'Welsh Government Land Valuation Research | Tesseract Government Gateway',
     description: 'Tesseract Academy tested five land valuation methodologies across 1,916 Welsh LSOAs — 99% of Welsh geography — for Welsh Government. Published on GOV.WALES, March 2026. Informs local government finance policy.',
   },
-  '/case-studies/national-digital-twin-programme': {
+  '/research/national-digital-twin-programme': {
     title: 'AI Ontology Extension Generator — National Digital Twin Programme | Tesseract Government Gateway',
     description: 'Tesseract Academy contributed to the open-source AI Ontology Extension Generator for the UK National Digital Twin Programme. Production-ready Streamlit app. Apache 2.0. Published on GitHub under National-Digital-Twin.',
   },
-  '/case-studies/bridgeai-creative-industries': {
+  '/research/bridgeai-creative-industries': {
     title: 'BridgeAI: AI Adoption for UK Creative Industries | Tesseract Government Gateway',
     description: 'Tesseract Academy delivered the BridgeAI Skills Hub launch and AI readiness sessions under Innovate UK contract GSS24646. 1,100 registrations vs 200 target. Satisfaction rating 4.6 out of 5.',
   },
-  '/case-studies/kalgera-financial-vulnerability': {
+  '/research/kalgera-financial-vulnerability': {
     title: 'Financial Vulnerability Research — Kalgera / Fintech Scotland | Tesseract Government Gateway',
     description: 'End-to-end qualitative research validating Kalgera\'s AI-driven financial vulnerability signals. 8–10 in-depth interviews, 80–120 survey respondents, ethical framework under the Adult Support and Protection (Scotland) Act 2007.',
   },
-  '/case-studies/wastewater-effluent-data-quality': {
+  '/research/wastewater-effluent-data-quality': {
     title: 'Wastewater Effluent Data Quality | Tesseract Government Gateway',
     description: 'Open-data demonstration of statistical and rule-based quality assurance for continuous wastewater effluent monitoring: 1,382 days of full-scale works data, SHACL rules including the COD >= BOD physical invariant. Open source via Open Ontologies.',
   },
-  '/case-studies/wrap-food-loss-waste-taxonomy': {
+  '/research/wrap-food-loss-waste-taxonomy': {
     title: 'WRAP Food Loss and Waste Data Taxonomy | Tesseract Government Gateway',
     description: 'Commissioned by WRAP (PRC228) to build a structured, machine-readable Food Loss and Waste data taxonomy: 5 coded dimensions and 84 entities in SKOS and JSON-LD, grounded in the FLW Standard, the WRAP Data Capture Sheet and Codex GSFA, supporting 400+ Courtauld Commitment 2030 organisations.',
   },
-  '/case-studies/fair-scientific-data': {
+  '/research/fair-scientific-data': {
     title: 'FAIR Dataset Contracts for Scientific Data | Tesseract Government Gateway',
     description: 'A self-initiated, open-data demonstration: an open SHACL dataset-contract toolkit for scientific research data, tested against 30 real public immune and multi-omics datasets. All 30 were catalogued; none met a strict, machine-readable FAIR contract (100% lacked a structured schema and a machine-readable distribution). Open source with a reproducible analysis.',
   },
-  '/case-studies/ies-hqdm-defence-interoperability': {
+  '/research/ies-hqdm-defence-interoperability': {
     title: 'IES to HQDM: an open 4D ontology crosswalk for defence data | Tesseract Government Gateway',
     description: 'The first public crosswalk between the UK Information Exchange Standard (IES) and HQDM, two 4D upper ontologies. Open SSSOM and RDF correspondences, a curated divergences record, SHACL validation, and a worked SAPIENT-node safety case grounding autonomy in IES-typed world states. Supports the Defence Investment Plan interoperability and autonomy-assurance agenda.',
   },
-  '/case-studies/agri-environment-heritage-value': {
+  '/research/agri-environment-heritage-value': {
     title: 'The Value of Agri-Environment Heritage Actions | Tesseract Government Gateway',
     description: 'A self-initiated, open-data demonstration of how we evidence the wider value of agri-environment scheme heritage actions for nature and for people: a scoping-review framework on Natural England\'s NEER001 method, with a real spatial analysis of the 2,206 Scheduled Monuments on the Historic England Heritage at Risk Register 2024.',
   },
@@ -186,16 +186,16 @@ const App: React.FC = () => {
               <Route path="/compliance" element={<Compliance />} />
               <Route path="/testimonials" element={<Feedback />} />
               <Route path="/about" element={<About />} />
-              <Route path="/case-studies/welsh-government-land-valuation" element={<WelshGovernment />} />
-              <Route path="/case-studies/national-digital-twin-programme" element={<NationalDigitalTwin />} />
-              <Route path="/case-studies/bridgeai-creative-industries" element={<BridgeAI />} />
-              <Route path="/case-studies/kalgera-financial-vulnerability" element={<Kalgera />} />
-              <Route path="/case-studies/wastewater-effluent-data-quality" element={<WastewaterDataQuality />} />
-              <Route path="/case-studies/wrap-food-loss-waste-taxonomy" element={<WrapFoodWaste />} />
-              <Route path="/case-studies/agri-environment-heritage-value" element={<AesHeritage />} />
+              <Route path="/research/welsh-government-land-valuation" element={<WelshGovernment />} />
+              <Route path="/research/national-digital-twin-programme" element={<NationalDigitalTwin />} />
+              <Route path="/research/bridgeai-creative-industries" element={<BridgeAI />} />
+              <Route path="/research/kalgera-financial-vulnerability" element={<Kalgera />} />
+              <Route path="/research/wastewater-effluent-data-quality" element={<WastewaterDataQuality />} />
+              <Route path="/research/wrap-food-loss-waste-taxonomy" element={<WrapFoodWaste />} />
+              <Route path="/research/agri-environment-heritage-value" element={<AesHeritage />} />
               <Route path="/research/connective-product-cyber-incidents" element={<ConnectiveProductCyberIncidents />} />
-              <Route path="/case-studies/fair-scientific-data" element={<FairScientificData />} />
-              <Route path="/case-studies/ies-hqdm-defence-interoperability" element={<IesHqdmCrosswalk />} />
+              <Route path="/research/fair-scientific-data" element={<FairScientificData />} />
+              <Route path="/research/ies-hqdm-defence-interoperability" element={<IesHqdmCrosswalk />} />
               <Route path="/glossary" element={<Glossary />} />
               <Route path="/services/ai-consulting" element={<AIConsulting />} />
               <Route path="/services/research-policy" element={<ResearchPolicy />} />

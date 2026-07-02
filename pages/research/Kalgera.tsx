@@ -5,8 +5,8 @@ import { ArrowLeft } from 'lucide-react';
 const SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'Article',
-  '@id': 'https://gov.tesseract.academy/case-studies/kalgera-financial-vulnerability#article',
-  mainEntityOfPage: 'https://gov.tesseract.academy/case-studies/kalgera-financial-vulnerability',
+  '@id': 'https://gov.tesseract.academy/research/kalgera-financial-vulnerability#article',
+  mainEntityOfPage: 'https://gov.tesseract.academy/research/kalgera-financial-vulnerability',
   headline: 'Financial Vulnerability Research — Kalgera / Fintech Scotland | Tesseract Academy',
   description:
     'Tesseract Academy designed and delivered end-to-end qualitative user research for Kalgera and Fintech Scotland, validating AI-driven financial vulnerability signals for adults in Scotland.',

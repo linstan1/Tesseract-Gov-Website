@@ -5,8 +5,8 @@ import { ArrowLeft, ExternalLink } from 'lucide-react';
 const SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'Article',
-  '@id': 'https://gov.tesseract.academy/case-studies/welsh-government-land-valuation#article',
-  mainEntityOfPage: 'https://gov.tesseract.academy/case-studies/welsh-government-land-valuation',
+  '@id': 'https://gov.tesseract.academy/research/welsh-government-land-valuation#article',
+  mainEntityOfPage: 'https://gov.tesseract.academy/research/welsh-government-land-valuation',
   headline: 'Welsh Government Land Valuation Research — Tesseract Academy',
   description:
     'Tesseract Academy tested five land valuation methodologies across 1,916 Welsh LSOAs for Welsh Government, informing local government finance policy. Published on GOV.WALES, March 2026.',

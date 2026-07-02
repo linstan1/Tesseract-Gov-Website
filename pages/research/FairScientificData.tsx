@@ -5,8 +5,8 @@ import { ArrowLeft, ExternalLink } from 'lucide-react';
 const SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'Article',
-  '@id': 'https://gov.tesseract.academy/case-studies/fair-scientific-data#article',
-  mainEntityOfPage: 'https://gov.tesseract.academy/case-studies/fair-scientific-data',
+  '@id': 'https://gov.tesseract.academy/research/fair-scientific-data#article',
+  mainEntityOfPage: 'https://gov.tesseract.academy/research/fair-scientific-data',
   headline: 'FAIR Dataset Contracts for Scientific Data | Tesseract Academy',
   description:
     'A self-initiated, open-data demonstration: an open SHACL dataset-contract toolkit for scientific research data, tested against 30 real public immune and multi-omics datasets. Every dataset was catalogued; none met a hard-FAIR, machine-readable contract.',

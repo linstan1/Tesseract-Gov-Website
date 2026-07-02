@@ -5,8 +5,8 @@ import { ArrowLeft, ExternalLink } from 'lucide-react';
 const SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'Article',
-  '@id': 'https://gov.tesseract.academy/case-studies/wrap-food-loss-waste-taxonomy#article',
-  mainEntityOfPage: 'https://gov.tesseract.academy/case-studies/wrap-food-loss-waste-taxonomy',
+  '@id': 'https://gov.tesseract.academy/research/wrap-food-loss-waste-taxonomy#article',
+  mainEntityOfPage: 'https://gov.tesseract.academy/research/wrap-food-loss-waste-taxonomy',
   headline: 'WRAP Food Loss and Waste Data Taxonomy | Tesseract Academy',
   description:
     'Tesseract Academy was commissioned by WRAP to build a structured, machine-readable Food Loss and Waste data taxonomy (PRC228): five coded dimensions and 84 entities expressed in SKOS and JSON-LD, grounded in the Food Loss and Waste Standard, the WRAP Data Capture Sheet and Codex GSFA, supporting consistent measurement across the Courtauld Commitment 2030.',
@@ -144,7 +144,7 @@ export const WrapFoodWaste: React.FC = () => {
             <ExternalLink className="w-4 h-4" />
           </a>
           <Link
-            to="/case-studies/wastewater-effluent-data-quality"
+            to="/research/wastewater-effluent-data-quality"
             className="inline-flex items-center gap-2 px-5 py-2.5 border border-gov-blue text-gov-blue text-sm font-semibold rounded-lg hover:bg-gov-blue/5 transition-colors"
           >
             Data-quality demonstration

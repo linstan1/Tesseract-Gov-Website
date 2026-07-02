@@ -27,7 +27,7 @@ export const Capabilities: React.FC = () => {
             <p className="text-sm text-gov-secondary leading-relaxed mb-3">
               <strong>Welsh Government</strong>  - tested <strong>5</strong> land-valuation methodologies across <strong>1,916</strong> LSOAs (<strong>99%</strong> of Welsh geography); published on GOV.WALES to inform local-government finance policy.
             </p>
-            <Link to="/case-studies/welsh-government-land-valuation" className="inline-flex items-center gap-1.5 text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline">
+            <Link to="/research/welsh-government-land-valuation" className="inline-flex items-center gap-1.5 text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline">
               Read the case study <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
@@ -46,7 +46,7 @@ export const Capabilities: React.FC = () => {
             <p className="text-sm text-gov-secondary leading-relaxed mb-3">
               <strong>National Digital Twin Programme</strong>  - delivered a production-ready AI ontology tool (a <strong>4</strong>-step wizard ingesting <strong>3</strong> data formats) on time and on budget, open-sourced under Apache 2.0 for the UK National Digital Twin Programme.
             </p>
-            <Link to="/case-studies/national-digital-twin-programme" className="inline-flex items-center gap-1.5 text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline">
+            <Link to="/research/national-digital-twin-programme" className="inline-flex items-center gap-1.5 text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline">
               Read the case study <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
@@ -65,7 +65,7 @@ export const Capabilities: React.FC = () => {
             <p className="text-sm text-gov-secondary leading-relaxed mb-3">
               <strong>Innovate UK BridgeAI</strong>  - <strong>1,100</strong> registrations against a <strong>200</strong>-place target, <strong>5.5x</strong> oversubscribed, delivering AI training to UK creative-industries professionals.
             </p>
-            <Link to="/case-studies/bridgeai-creative-industries" className="inline-flex items-center gap-1.5 text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline">
+            <Link to="/research/bridgeai-creative-industries" className="inline-flex items-center gap-1.5 text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline">
               Read the case study <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
@@ -84,7 +84,7 @@ export const Capabilities: React.FC = () => {
             <p className="text-sm text-gov-secondary leading-relaxed mb-3">
               <strong>Kalgera / Fintech Scotland</strong>  - a screening survey of <strong>80&ndash;120</strong> participants plus <strong>8&ndash;10</strong> in-depth interviews mapped to <strong>8</strong> financial-vulnerability signals, under an Adult Support and Protection (Scotland) Act 2007 ethical framework.
             </p>
-            <Link to="/case-studies/kalgera-financial-vulnerability" className="inline-flex items-center gap-1.5 text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline">
+            <Link to="/research/kalgera-financial-vulnerability" className="inline-flex items-center gap-1.5 text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline">
               Read the case study <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
@@ -103,7 +103,7 @@ export const Capabilities: React.FC = () => {
             <p className="text-sm text-gov-secondary leading-relaxed mb-3">
               <strong>WRAP</strong>  - translated the Food Loss and Waste Standard into a <strong>5</strong>-dimension, machine-readable taxonomy (<strong>84</strong> coded entities in SKOS and JSON-LD), supporting consistent measurement across <strong>400+</strong> Courtauld Commitment 2030 organisations.
             </p>
-            <Link to="/case-studies/wrap-food-loss-waste-taxonomy" className="inline-flex items-center gap-1.5 text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline">
+            <Link to="/research/wrap-food-loss-waste-taxonomy" className="inline-flex items-center gap-1.5 text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline">
               Read the case study <ArrowRight className="w-4 h-4" />
             </Link>
           </div>

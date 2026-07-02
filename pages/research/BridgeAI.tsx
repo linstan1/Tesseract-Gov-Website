@@ -5,8 +5,8 @@ import { ArrowLeft, ExternalLink } from 'lucide-react';
 const SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'Article',
-  '@id': 'https://gov.tesseract.academy/case-studies/bridgeai-creative-industries#article',
-  mainEntityOfPage: 'https://gov.tesseract.academy/case-studies/bridgeai-creative-industries',
+  '@id': 'https://gov.tesseract.academy/research/bridgeai-creative-industries#article',
+  mainEntityOfPage: 'https://gov.tesseract.academy/research/bridgeai-creative-industries',
   headline: 'BridgeAI: AI Adoption for UK Creative Industries | Tesseract Academy',
   description:
     'Tesseract Academy delivered the BridgeAI Skills Hub launch and AI readiness sessions for UK creative industries under Innovate UK contract GSS24646. 1,100 registrations against a target of 200. Satisfaction: 4.6/5.',

@@ -22,21 +22,21 @@ export const Research: React.FC = () => {
         <h2 className="text-2xl font-bold text-gov-dark mb-8">Selected Publications & Talks</h2>
         <ul className="space-y-8">
            <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
-             <Link to="/case-studies/fair-scientific-data"><h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark hover:underline transition-colors">FAIR Dataset Contracts for Scientific Data</h3></Link>
+             <Link to="/research/fair-scientific-data"><h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark hover:underline transition-colors">FAIR Dataset Contracts for Scientific Data</h3></Link>
              <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Open-source toolkit and reproducible analysis, 2026</p>
              <p className="text-base text-gov-dark/90 leading-relaxed">A self-initiated, open toolkit that expresses a FAIR "dataset contract" as machine-readable SHACL constraints and validates any dataset's metadata against it, alongside a FAIR / AI-readiness self-assessment operationalising the FAIRSCAPE and Bridge2AI criteria. Tested against 30 real public immune and multi-omics datasets: all were catalogued, none met a strict, machine-readable contract (100% lacked a structured schema and a machine-readable distribution). Fully reproducible, grounded in schema.org, DCAT, Bioschemas and RO-Crate.</p>
              <div className="mt-3 flex flex-wrap gap-3 items-center">
-               <Link to="/case-studies/fair-scientific-data" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">Read the case study</Link>
+               <Link to="/research/fair-scientific-data" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">Read the case study</Link>
                <span className="text-gov-border">|</span>
                <a href="https://github.com/fabio-rovai/fair-scientific-data" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">Open toolkit and analysis (GitHub)<span className="sr-only"> (opens in new tab)</span></a>
              </div>
            </li>
            <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
-             <Link to="/case-studies/agri-environment-heritage-value"><h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark hover:underline transition-colors">The Value of Agri-Environment Heritage Actions</h3></Link>
+             <Link to="/research/agri-environment-heritage-value"><h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark hover:underline transition-colors">The Value of Agri-Environment Heritage Actions</h3></Link>
              <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Open-data demonstration and methods note, 2026</p>
              <p className="text-base text-gov-dark/90 leading-relaxed">A self-initiated, open demonstration of how we establish a baseline of evidence on the wider value of agri-environment scheme heritage actions, for the natural environment and for people. Built on recognised standards (PRISMA-ScR, the Collaboration for Environmental Evidence guidelines, and Natural England's own evidence-review approach), with a charting framework linking each heritage action to its co-benefits, Environmental Improvement Plan targets, and indicative value for money via the HM Treasury Green Book and a natural-capital approach. Includes our own spatial analysis of the 2,206 Scheduled Monuments on the Historic England Heritage at Risk Register 2024.</p>
              <div className="mt-3 flex flex-wrap gap-3 items-center">
-               <Link to="/case-studies/agri-environment-heritage-value" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">Read the case study</Link>
+               <Link to="/research/agri-environment-heritage-value" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">Read the case study</Link>
                <span className="text-gov-border">|</span>
                <a href="/papers/aes-heritage-cobenefits-scoping-protocol.pdf" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">Read the protocol (PDF)<span className="sr-only"> (opens in new tab)</span></a>
              </div>
@@ -48,7 +48,7 @@ export const Research: React.FC = () => {
              <div className="mt-3 flex flex-wrap gap-3 items-center">
                <a href="/papers/testing-land-valuation-methods-tesseract-academy-report.pdf" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">Read the full report (PDF)<span className="sr-only"> (opens in new tab)</span></a>
                <span className="text-gov-border">|</span>
-               <Link to="/case-studies/welsh-government-land-valuation" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">Case study</Link>
+               <Link to="/research/welsh-government-land-valuation" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">Case study</Link>
              </div>
            </li>
            <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
@@ -70,7 +70,7 @@ export const Research: React.FC = () => {
              <a href="https://github.com/National-Digital-Twin/ndtp-ai-ontology-extension" target="_blank" rel="noopener noreferrer"><h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark hover:underline transition-colors">AI Ontology Extension Generator: National Digital Twin Programme<span className="sr-only"> (opens in new tab)</span></h3></a>
              <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Collaboration with NDTP (Department for Business and Trade), 2024–2025</p>
              <p className="text-base text-gov-dark/90 leading-relaxed">Contributed to the development of an open-source AI-powered tool that automates ontology generation and extension for the National Digital Twin Programme. The tool combines data profiling, Named Entity Recognition, and large language models to extract and generate ontology entities from multiple data formats.</p>
-             <Link to="/case-studies/national-digital-twin-programme" className="inline-block mt-3 text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">Read the case study</Link>
+             <Link to="/research/national-digital-twin-programme" className="inline-block mt-3 text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">Read the case study</Link>
            </li>
            <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
              <h3 className="font-semibold text-lg text-gov-dark mb-2">Proving the Utility of Large Language Models in Cybersecurity Simulations</h3>
@@ -82,7 +82,7 @@ export const Research: React.FC = () => {
              <a href="https://tesseract.academy/tesseract-academy-partners-with-bridgeai-to-advance-ai-training-in-creative-industries/" target="_blank" rel="noopener noreferrer"><h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark hover:underline transition-colors">BridgeAI Skills Hub Launch & PwC Sector Workshop<span className="sr-only"> (opens in new tab)</span></h3></a>
              <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Innovate UK / BridgeAI Programme, 2025–2026</p>
              <p className="text-base text-gov-dark/90 leading-relaxed">Designed and delivered AI adoption workshops for underserved UK sectors as part of the Innovate UK-funded BridgeAI programme. Led the Skills Hub launch event at Ona Studios, London, and co-delivered sector-specific AI readiness sessions with PwC targeting construction, creative industries, and transport.</p>
-             <Link to="/case-studies/bridgeai-creative-industries" className="inline-block mt-3 text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">Read the case study</Link>
+             <Link to="/research/bridgeai-creative-industries" className="inline-block mt-3 text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">Read the case study</Link>
            </li>
            <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
              <a href="https://github.com/fabio-rovai/open-governance" target="_blank" rel="noopener noreferrer"><h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark hover:underline transition-colors">Open Governance: Open-Source AI Governance Server<span className="sr-only"> (opens in new tab)</span></h3></a>
@@ -137,19 +137,19 @@ export const Research: React.FC = () => {
       <aside className="space-y-6" aria-label="Detailed case studies">
         <h2 className="text-2xl font-bold text-gov-dark">Detailed Case Studies</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <Link to="/case-studies/welsh-government-land-valuation" className="block p-5 bg-white border border-gov-border/50 rounded-lg hover:border-gov-blue transition-colors">
+          <Link to="/research/welsh-government-land-valuation" className="block p-5 bg-white border border-gov-border/50 rounded-lg hover:border-gov-blue transition-colors">
             <p className="text-xs font-semibold text-gov-blue uppercase tracking-wider mb-1">Welsh Government</p>
             <p className="text-sm font-semibold text-gov-dark">Land valuation methodologies — five approaches tested</p>
           </Link>
-          <Link to="/case-studies/national-digital-twin-programme" className="block p-5 bg-white border border-gov-border/50 rounded-lg hover:border-gov-blue transition-colors">
+          <Link to="/research/national-digital-twin-programme" className="block p-5 bg-white border border-gov-border/50 rounded-lg hover:border-gov-blue transition-colors">
             <p className="text-xs font-semibold text-gov-blue uppercase tracking-wider mb-1">National Digital Twin Programme</p>
             <p className="text-sm font-semibold text-gov-dark">AI Ontology Extension Generator — open source on GitHub</p>
           </Link>
-          <Link to="/case-studies/bridgeai-creative-industries" className="block p-5 bg-white border border-gov-border/50 rounded-lg hover:border-gov-blue transition-colors">
+          <Link to="/research/bridgeai-creative-industries" className="block p-5 bg-white border border-gov-border/50 rounded-lg hover:border-gov-blue transition-colors">
             <p className="text-xs font-semibold text-gov-blue uppercase tracking-wider mb-1">BridgeAI / Innovate UK</p>
             <p className="text-sm font-semibold text-gov-dark">AI adoption for UK creative industries</p>
           </Link>
-          <Link to="/case-studies/kalgera-financial-vulnerability" className="block p-5 bg-white border border-gov-border/50 rounded-lg hover:border-gov-blue transition-colors">
+          <Link to="/research/kalgera-financial-vulnerability" className="block p-5 bg-white border border-gov-border/50 rounded-lg hover:border-gov-blue transition-colors">
             <p className="text-xs font-semibold text-gov-blue uppercase tracking-wider mb-1">Kalgera / Fintech Scotland</p>
             <p className="text-sm font-semibold text-gov-dark">Financial vulnerability qualitative research</p>
           </Link>

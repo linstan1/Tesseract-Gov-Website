@@ -5,8 +5,8 @@ import { ArrowLeft, ExternalLink } from 'lucide-react';
 const SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'Article',
-  '@id': 'https://gov.tesseract.academy/case-studies/national-digital-twin-programme#article',
-  mainEntityOfPage: 'https://gov.tesseract.academy/case-studies/national-digital-twin-programme',
+  '@id': 'https://gov.tesseract.academy/research/national-digital-twin-programme#article',
+  mainEntityOfPage: 'https://gov.tesseract.academy/research/national-digital-twin-programme',
   headline:
     'AI Ontology Extension Generator — National Digital Twin Programme | Tesseract Academy',
   description:

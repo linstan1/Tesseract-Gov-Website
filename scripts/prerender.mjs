@@ -56,39 +56,39 @@ const PAGE_META = {
     title: 'AI & Procurement Glossary | Tesseract Government Gateway',
     description: '60+ definitions of AI, data science, and procurement terms used in UK public sector contracting. From Algorithmic Impact Assessment to Zero-Shot Learning.',
   },
-  '/case-studies/welsh-government-land-valuation': {
+  '/research/welsh-government-land-valuation': {
     title: 'Welsh Government Land Valuation Research | Tesseract Government Gateway',
     description: 'Five land valuation methodologies tested across 1,916 Welsh LSOAs (99% of Welsh geography). Published March 2026 on GOV.WALES. Informs Welsh Government local government finance policy.',
   },
-  '/case-studies/national-digital-twin-programme': {
+  '/research/national-digital-twin-programme': {
     title: 'AI Ontology Extension Generator — NDTP | Tesseract Government Gateway',
     description: 'Open-source AI ontology tool for the National Digital Twin Programme (Dept for Business and Trade). Four-step wizard, NER + LLMs, CSV/JSON/RDF support. Apache 2.0. Published on GitHub.',
   },
-  '/case-studies/bridgeai-creative-industries': {
+  '/research/bridgeai-creative-industries': {
     title: 'BridgeAI: AI for UK Creative Industries | Tesseract Government Gateway',
     description: 'Innovate UK BridgeAI programme delivery. 1,100 registrations vs 200 target. Satisfaction 4.6/5. Skills Hub launch at Ona Studios, London. Co-delivered with PwC. Contract GSS24646.',
   },
-  '/case-studies/kalgera-financial-vulnerability': {
+  '/research/kalgera-financial-vulnerability': {
     title: 'Financial Vulnerability Research — Kalgera | Tesseract Government Gateway',
     description: 'Qualitative research validating AI-driven financial vulnerability signals for Kalgera/Fintech Scotland. Ethical framework under Adult Support and Protection (Scotland) Act 2007. Signal validation and intervention acceptability reports delivered.',
   },
-  '/case-studies/wastewater-effluent-data-quality': {
+  '/research/wastewater-effluent-data-quality': {
     title: 'Wastewater Effluent Data Quality | Tesseract Government Gateway',
     description: 'Open-data demonstration of statistical and rule-based quality assurance for continuous wastewater effluent monitoring: 1,382 days of full-scale works data, SHACL rules including the COD >= BOD physical invariant. Open source via Open Ontologies.',
   },
-  '/case-studies/wrap-food-loss-waste-taxonomy': {
+  '/research/wrap-food-loss-waste-taxonomy': {
     title: 'WRAP Food Loss and Waste Data Taxonomy | Tesseract Government Gateway',
     description: 'Commissioned by WRAP (PRC228) to build a structured, machine-readable Food Loss and Waste data taxonomy: 5 coded dimensions and 84 entities in SKOS and JSON-LD, grounded in the FLW Standard, the WRAP Data Capture Sheet and Codex GSFA, supporting 400+ Courtauld Commitment 2030 organisations.',
   },
-  '/case-studies/fair-scientific-data': {
+  '/research/fair-scientific-data': {
     title: 'FAIR Dataset Contracts for Scientific Data | Tesseract Government Gateway',
     description: 'A self-initiated, open-data demonstration: an open SHACL dataset-contract toolkit for scientific research data, tested against 30 real public immune and multi-omics datasets. All 30 were catalogued; none met a strict, machine-readable FAIR contract (100% lacked a structured schema and a machine-readable distribution). Open source with a reproducible analysis.',
   },
-  '/case-studies/ies-hqdm-defence-interoperability': {
+  '/research/ies-hqdm-defence-interoperability': {
     title: 'IES to HQDM: an open 4D ontology crosswalk for defence data | Tesseract Government Gateway',
     description: 'The first public crosswalk between the UK Information Exchange Standard (IES) and HQDM, two 4D upper ontologies. Open SSSOM and RDF correspondences, a curated divergences record, SHACL validation, and a worked SAPIENT-node safety case grounding autonomy in IES-typed world states. Supports the Defence Investment Plan interoperability and autonomy-assurance agenda.',
   },
-  '/case-studies/agri-environment-heritage-value': {
+  '/research/agri-environment-heritage-value': {
     title: 'The Value of Agri-Environment Heritage Actions | Tesseract Government Gateway',
     description: 'A self-initiated, open-data demonstration of how we evidence the wider value of agri-environment scheme heritage actions for nature and for people: a scoping-review framework on Natural England\'s NEER001 method, with a real spatial analysis of the 2,206 Scheduled Monuments on the Historic England Heritage at Risk Register 2024.',
   },

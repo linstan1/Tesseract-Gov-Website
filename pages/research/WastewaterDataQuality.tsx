@@ -5,8 +5,8 @@ import { ArrowLeft, ExternalLink } from 'lucide-react';
 const SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'Article',
-  '@id': 'https://gov.tesseract.academy/case-studies/wastewater-effluent-data-quality#article',
-  mainEntityOfPage: 'https://gov.tesseract.academy/case-studies/wastewater-effluent-data-quality',
+  '@id': 'https://gov.tesseract.academy/research/wastewater-effluent-data-quality#article',
+  mainEntityOfPage: 'https://gov.tesseract.academy/research/wastewater-effluent-data-quality',
   headline: 'Wastewater Effluent Data Quality — Tesseract Academy',
   description:
     'An open-data demonstration of statistical and rule-based quality assurance for continuous wastewater effluent monitoring: 1,382 days of full-scale treatment-works data, with SHACL data-quality rules including the COD >= BOD physical invariant. Published open source via Open Ontologies.',
