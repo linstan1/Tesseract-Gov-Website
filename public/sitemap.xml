@@ -94,6 +94,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://gov.tesseract.academy/research/computation-ready-aerial-heritage</loc>
+    <lastmod>2026-07-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://gov.tesseract.academy/research/wrap-food-loss-waste-taxonomy</loc>
     <lastmod>2026-06-22</lastmod>
     <changefreq>monthly</changefreq>

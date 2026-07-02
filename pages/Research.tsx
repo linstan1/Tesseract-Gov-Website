@@ -22,6 +22,16 @@ export const Research: React.FC = () => {
         <h2 className="text-2xl font-bold text-gov-dark mb-8">Selected Publications & Talks</h2>
         <ul className="space-y-8">
            <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
+             <Link to="/research/computation-ready-aerial-heritage"><h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark hover:underline transition-colors">Computation-Ready Aerial Photography Heritage</h3></Link>
+             <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Open digitisation standard and reproducible harvest, 2026</p>
+             <p className="text-base text-gov-dark/90 leading-relaxed">An open standard (NAPH) that turns aerial photography heritage from digitised to computable, tested against a real national archive. A sample of 300 records from the public NCAP Air Photo Finder catalogue showed 100% already carry a machine-readable footprint and an ISO-8601 date; the one genuine gap is machine-readable rights. 292 real frames were reprojected to WGS84 and validated at zero SHACL violations, and the georeferenced index already spans 35+ countries. Publishes the first RiC-O to STAC crosswalk for historic aerial photography, with STAC, GeoJSON and IIIF exports. Fully reproducible and open source.</p>
+             <div className="mt-3 flex flex-wrap gap-3 items-center">
+               <Link to="/research/computation-ready-aerial-heritage" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">Read the case study</Link>
+               <span className="text-gov-border">|</span>
+               <a href="https://github.com/fabio-rovai/open-ontologies/tree/main/case-studies/heritage-aerial" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">Open standard and code (GitHub)<span className="sr-only"> (opens in new tab)</span></a>
+             </div>
+           </li>
+           <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
              <Link to="/research/fair-scientific-data"><h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark hover:underline transition-colors">FAIR Dataset Contracts for Scientific Data</h3></Link>
              <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Open-source toolkit and reproducible analysis, 2026</p>
              <p className="text-base text-gov-dark/90 leading-relaxed">A study of 1,738 real public biomedical datasets across three repositories (EMBL-EBI BioStudies, Dryad, PRIDE), validated against a tiered FAIRSCAPE contract: overwhelmingly findable and accessible, but 0% interoperable or AI-ready (100% lack a machine-readable schema, checksums and provenance). Paired with an open, open-ontologies-certified OWL ontology that models the AI-ready dataset layer, aligned to schema.org, DCAT, PROV-O, SPDX, Bioschemas and MLCommons Croissant. Fully reproducible.</p>
