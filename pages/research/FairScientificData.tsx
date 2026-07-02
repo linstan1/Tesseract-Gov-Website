@@ -111,6 +111,21 @@ export const FairScientificData: React.FC = () => {
       </section>
 
       <section className="space-y-4">
+        <h2 className="text-2xl font-bold text-gov-dark font-serif">From 0 to 100%: we do not just measure the gap, we close it</h2>
+        <p className="text-gov-secondary/90 leading-relaxed">
+          To prove the model works, we took a real open dataset from 0% to 100% AI-ready. The Zenodo Andean climate dataset (a dense high-Andean weather-station network in southern Ecuador) is findable and accessible but, like the rest of the corpus, fails the machine-readable layer: 0% AI-ready in its published form. Using the ontology and toolkit, we enriched it with values derived entirely from the dataset itself: a real SHA-256 integrity checksum, a variable schema and data dictionary built from its 12 real columns, a sample count from its 226 rows, a machine-readable provenance record, and a controlled-vocabulary subject. The enriched record then passes all four tiers, with zero violations against the same published SHACL contract.
+        </p>
+        <figure className="bg-white border border-gov-border/50 rounded-xl p-4">
+          <img src="/fair-ai-ready-before-after.png" alt="Before and after remediation: AI-readiness score 0% to 100%, tiers passed 1 of 4 to 4 of 4, for the Zenodo Andean climate dataset" className="w-full h-auto rounded" />
+          <figcaption className="text-xs text-gov-secondary/70 mt-2 text-center">A real dataset taken from 0% to 100% AI-ready, validated against the same published contract.</figcaption>
+        </figure>
+        <p className="text-gov-secondary/90 leading-relaxed">
+          The full study and this worked remediation are written up in a short report:{' '}
+          <a href="/papers/fair-ai-ready-datasets-tesseract-report.pdf" target="_blank" rel="noopener noreferrer" className="text-gov-blue font-semibold hover:underline">read the report (PDF)<span className="sr-only"> (opens in new tab)</span></a>.
+        </p>
+      </section>
+
+      <section className="space-y-4">
         <h2 className="text-2xl font-bold text-gov-dark font-serif">Why it matters for research data platforms</h2>
         <p className="text-gov-secondary/90 leading-relaxed">
           For any organisation building an AI-ready data platform, whether a biotech scaling multi-omics or a public research programme, the distance between "we deposited it" and "a machine can find, assemble and trust it" is precisely this contract layer. Making that layer explicit, modelled and testable is what turns scattered pipeline outputs into governed, reusable data products, with structure, provenance, versioning and access that hold up to reuse and, later, to regulated use.
