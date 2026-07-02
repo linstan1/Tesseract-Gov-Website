@@ -123,9 +123,9 @@ export const AerialPhotographyHeritage: React.FC = () => {
           We took the <strong>National Collection of Aerial Photography (NCAP)</strong>, one of the world's largest aerial archives at over thirty million images and part of Historic Environment Scotland, and measured a sample of 300 real records from its public catalogue. Metadata only, read-only, rate-limited, and in good faith. The result is a compliment to the collection: the hard part is already done.
         </p>
         <figure className="rounded-xl overflow-hidden border border-gov-border/50">
-          <img src="/case-studies/aerial-data-charts.png" alt="Two bar charts of the real sample: field coverage per record (100% footprint, 100% ISO date, 100% stable identifier, 86% ISAD(G) reference, 0% machine-readable rights) and records by collection (Directorate of Overseas Surveys, Defence Geographic Centre, Allied Central Interpretation Unit, NARA, RCAHM Wales)." className="w-full" />
+          <img src="/case-studies/aerial-map-choropleth.png" alt="World choropleth of NCAP's georeferenced frames by country, on a log scale. The United Kingdom, France and Germany are densest; the reach also covers Iran, China, South Africa, Nigeria, the Caribbean, Australia and more, spanning five continents." className="w-full" />
           <figcaption className="text-sm text-gov-secondary px-4 py-3 bg-gov-bg">
-            Left: how computation-ready each record already is. Right: which collections the sample drew from. The one genuine Baseline gap is machine-readable rights.
+            The georeferenced, mapped subset of NCAP already reaches 35+ countries across five continents (log scale; densest countries are cluster-capped, so shown as lower bounds). Our 292-record sample is a small, deliberately stratified slice of this index.
           </figcaption>
         </figure>
         <div className="overflow-x-auto">
