@@ -123,9 +123,9 @@ export const AerialPhotographyHeritage: React.FC = () => {
           We took the <strong>National Collection of Aerial Photography (NCAP)</strong>, one of the world's largest aerial archives at over thirty million images and part of Historic Environment Scotland, and measured a sample of 300 real records from its public catalogue. Metadata only, read-only, rate-limited, and in good faith. The result is a compliment to the collection: the hard part is already done.
         </p>
         <figure className="rounded-xl overflow-hidden border border-gov-border/50">
-          <img src="/case-studies/aerial-measured-coverage.png" alt="Measured field coverage across 300 real NCAP records: 100% carry a machine-readable footprint, 100% an ISO-8601 date, 100% a stable identifier, 0% machine-readable rights." className="w-full" />
+          <img src="/case-studies/aerial-data-charts.png" alt="Two bar charts of the real sample: field coverage per record (100% footprint, 100% ISO date, 100% stable identifier, 86% ISAD(G) reference, 0% machine-readable rights) and records by collection (Directorate of Overseas Surveys, Defence Geographic Centre, Allied Central Interpretation Unit, NARA, RCAHM Wales)." className="w-full" />
           <figcaption className="text-sm text-gov-secondary px-4 py-3 bg-gov-bg">
-            What the public catalogue already exposes, measured rather than assumed. The computational substrate is already in the data.
+            Left: how computation-ready each record already is. Right: which collections the sample drew from. The one genuine Baseline gap is machine-readable rights.
           </figcaption>
         </figure>
         <div className="overflow-x-auto">
@@ -162,6 +162,15 @@ export const AerialPhotographyHeritage: React.FC = () => {
           <img src="/case-studies/aerial-real-demo-world.png" alt="Interactive map of 292 real aerial photography frames from the NCAP collection, positioned by reprojected WGS84 footprint and coloured by decade, spanning 1924 to 1956 across the globe." className="w-full" />
           <figcaption className="text-sm text-gov-secondary px-4 py-3 bg-gov-bg">
             292 real frames, harvested live and auto-lifted to the Baseline tier, queryable by space and time. Markers coloured by decade; the panel shows one frame's full linked-data record.
+          </figcaption>
+        </figure>
+        <p className="text-gov-secondary leading-relaxed">
+          Zoom to a single sortie and the value of computable footprints becomes obvious. Below are the frames of a 1924 Royal Navy reconnaissance run over Hong Kong. Reprojected and overlapped, the individual footprints trace the aircraft's flight line across Victoria Harbour, a hundred-year-old survey you can now select, query and cross-reference frame by frame.
+        </p>
+        <figure className="rounded-xl overflow-hidden border border-gov-border/50">
+          <img src="/case-studies/aerial-map-hongkong-1924.png" alt="Map of a 1924 Royal Navy aerial reconnaissance sortie over Hong Kong, its individual frame footprints overlapping to trace the flight line across Victoria Harbour and Kowloon, each a queryable NAPH record." className="w-full" />
+          <figcaption className="text-sm text-gov-secondary px-4 py-3 bg-gov-bg">
+            One sortie, frame by frame: a 1924 reconnaissance run over Hong Kong, its footprints reprojected to WGS84 and each linked to its full catalogue record.
           </figcaption>
         </figure>
       </section>
