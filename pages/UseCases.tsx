@@ -55,6 +55,16 @@ const USE_CASES = [
     reusable: 'The QA battery, effluent observation ontology, and SHACL data-quality shapes are open source and re-pointable to any continuous-monitoring stream.',
   },
   {
+    id: 'uc-aerial',
+    slug: '/research/computation-ready-aerial-heritage',
+    title: 'Computation-Ready Aerial Photography Heritage (Open-Data Demonstration)',
+    challenge: 'Most of the UK\'s heritage is digitised but not computable. Aerial photography collections holding tens of millions of frames are scanned, catalogued and mapped, yet a researcher cannot query them at scale by space and time or cross-reference them to other archives. This is the gap the Towards a National Collection programme (AHRC / UKRI) and its N-RICH work set out to close.',
+    intervention: 'Built NAPH, an open computation-ready digitisation standard for aerial photography, assembled from existing standards (GeoSPARQL, PROV-O, Dublin Core, IIIF, Records in Contexts) across three incrementally-adoptable tiers. Tested it against a real national archive: harvested 292 real frames from the public NCAP Air Photo Finder catalogue (metadata only, read-only, rate-limited), reprojected footprints from EPSG:3857 to WGS84, and lifted them to the Baseline tier automatically.',
+    assurance: 'Fully reproducible and published open source in Open Ontologies (MIT and CC BY 4.0). The real data validated at zero SHACL violations, and testing against real holdings surfaced and fixed a defect in the standard\'s own date-precision shape. Every Records in Contexts term in the crosswalk was verified against the published RiC-O 1.1 ontology, not assumed.',
+    outcome: 'Measured finding: the collection is far closer to computation-ready than assumed. 100 percent of records already carry a machine-readable footprint and an ISO-8601 date; the one genuine gap is machine-readable rights. The same records export cleanly to STAC 1.0, GeoJSON and IIIF, and NAPH publishes the previously unoccupied RiC-O to STAC crosswalk that binds archival provenance to spatiotemporal computability.',
+    reusable: 'The ontology, SHACL shapes, live API harvester, STAC and GeoJSON exports, RiC-O crosswalk and an interactive map are open source and adaptable to any aerial or photographic collection.',
+  },
+  {
     id: 'uc6',
     slug: '/research/wrap-food-loss-waste-taxonomy',
     title: 'Food Loss and Waste Data Taxonomy: WRAP',

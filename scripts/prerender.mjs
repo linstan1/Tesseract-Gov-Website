@@ -76,6 +76,10 @@ const PAGE_META = {
     title: 'Wastewater Effluent Data Quality | Tesseract Government Gateway',
     description: 'Open-data demonstration of statistical and rule-based quality assurance for continuous wastewater effluent monitoring: 1,382 days of full-scale works data, SHACL rules including the COD >= BOD physical invariant. Open source via Open Ontologies.',
   },
+  '/research/computation-ready-aerial-heritage': {
+    title: 'Computation-Ready Aerial Photography Heritage | Tesseract Government Gateway',
+    description: 'From digitised to computable: an open standard for aerial photography heritage. 292 real NCAP frames harvested from the public catalogue, reprojected to WGS84 and validated at zero SHACL violations, with a published RiC-O to STAC crosswalk. Open source via Open Ontologies.',
+  },
   '/research/wrap-food-loss-waste-taxonomy': {
     title: 'WRAP Food Loss and Waste Data Taxonomy | Tesseract Government Gateway',
     description: 'Commissioned by WRAP (PRC228) to build a structured, machine-readable Food Loss and Waste data taxonomy: 5 coded dimensions and 84 entities in SKOS and JSON-LD, grounded in the FLW Standard, the WRAP Data Capture Sheet and Codex GSFA, supporting 400+ Courtauld Commitment 2030 organisations.',

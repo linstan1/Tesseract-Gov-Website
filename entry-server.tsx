@@ -24,6 +24,7 @@ import { NationalDigitalTwin } from './pages/research/NationalDigitalTwin';
 import { BridgeAI } from './pages/research/BridgeAI';
 import { Kalgera } from './pages/research/Kalgera';
 import { WastewaterDataQuality } from './pages/research/WastewaterDataQuality';
+import { AerialPhotographyHeritage } from './pages/research/AerialPhotographyHeritage';
 import { WrapFoodWaste } from './pages/research/WrapFoodWaste';
 import { AesHeritage } from './pages/research/AesHeritage';
 import { ConnectiveProductCyberIncidents } from './pages/research/ConnectiveProductCyberIncidents';
@@ -58,6 +59,7 @@ const SSRApp: React.FC = () => (
         <Route path="/research/bridgeai-creative-industries" element={<BridgeAI />} />
         <Route path="/research/kalgera-financial-vulnerability" element={<Kalgera />} />
         <Route path="/research/wastewater-effluent-data-quality" element={<WastewaterDataQuality />} />
+        <Route path="/research/computation-ready-aerial-heritage" element={<AerialPhotographyHeritage />} />
         <Route path="/research/wrap-food-loss-waste-taxonomy" element={<WrapFoodWaste />} />
         <Route path="/research/agri-environment-heritage-value" element={<AesHeritage />} />
         <Route path="/research/connective-product-cyber-incidents" element={<ConnectiveProductCyberIncidents />} />

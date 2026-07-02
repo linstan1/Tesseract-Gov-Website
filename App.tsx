@@ -17,6 +17,7 @@ const NationalDigitalTwin = lazy(() => import('./pages/research/NationalDigitalT
 const BridgeAI = lazy(() => import('./pages/research/BridgeAI').then(m => ({ default: m.BridgeAI })));
 const Kalgera = lazy(() => import('./pages/research/Kalgera').then(m => ({ default: m.Kalgera })));
 const WastewaterDataQuality = lazy(() => import('./pages/research/WastewaterDataQuality').then(m => ({ default: m.WastewaterDataQuality })));
+const AerialPhotographyHeritage = lazy(() => import('./pages/research/AerialPhotographyHeritage').then(m => ({ default: m.AerialPhotographyHeritage })));
 const WrapFoodWaste = lazy(() => import('./pages/research/WrapFoodWaste').then(m => ({ default: m.WrapFoodWaste })));
 const AesHeritage = lazy(() => import('./pages/research/AesHeritage').then(m => ({ default: m.AesHeritage })));
 const ConnectiveProductCyberIncidents = lazy(() => import('./pages/research/ConnectiveProductCyberIncidents').then(m => ({ default: m.ConnectiveProductCyberIncidents })));
@@ -87,6 +88,10 @@ const PAGE_META: Record<string, { title: string; description: string }> = {
   '/research/wastewater-effluent-data-quality': {
     title: 'Wastewater Effluent Data Quality | Tesseract Government Gateway',
     description: 'Open-data demonstration of statistical and rule-based quality assurance for continuous wastewater effluent monitoring: 1,382 days of full-scale works data, SHACL rules including the COD >= BOD physical invariant. Open source via Open Ontologies.',
+  },
+  '/research/computation-ready-aerial-heritage': {
+    title: 'Computation-Ready Aerial Photography Heritage | Tesseract Government Gateway',
+    description: 'From digitised to computable: an open standard for aerial photography heritage. 292 real NCAP frames harvested from the public catalogue, reprojected to WGS84 and validated at zero SHACL violations, with a published RiC-O to STAC crosswalk. Open source via Open Ontologies.',
   },
   '/research/wrap-food-loss-waste-taxonomy': {
     title: 'WRAP Food Loss and Waste Data Taxonomy | Tesseract Government Gateway',
@@ -191,6 +196,7 @@ const App: React.FC = () => {
               <Route path="/research/bridgeai-creative-industries" element={<BridgeAI />} />
               <Route path="/research/kalgera-financial-vulnerability" element={<Kalgera />} />
               <Route path="/research/wastewater-effluent-data-quality" element={<WastewaterDataQuality />} />
+              <Route path="/research/computation-ready-aerial-heritage" element={<AerialPhotographyHeritage />} />
               <Route path="/research/wrap-food-loss-waste-taxonomy" element={<WrapFoodWaste />} />
               <Route path="/research/agri-environment-heritage-value" element={<AesHeritage />} />
               <Route path="/research/connective-product-cyber-incidents" element={<ConnectiveProductCyberIncidents />} />
