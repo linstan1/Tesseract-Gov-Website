@@ -76,16 +76,6 @@ const USE_CASES = [
   },
   {
     id: 'uc8',
-    slug: '/case-studies/connective-product-cyber-incidents',
-    title: 'Cyber Incidents affecting Connective Products (Open Evidence Base)',
-    challenge: 'Connective products (IoT, operational technology, computing devices, networking equipment, and software and firmware) now dominate the cyber attack surface, yet the incident evidence is fragmented across vendors, agencies and insurers, with no open, structured, longitudinal dataset and no shared denominator. Public regulatory context includes the Product Security and Telecommunications Infrastructure Act 2022 (PSTI).',
-    intervention: 'A self-initiated, open research report and dataset built entirely on real public sources: 16 documented incidents (2022 to 2025) mapped to five technology groups, each traced to an authoritative primary source (CISA, NCSC, Unit 42, Cisco Talos, Red Hat, Binarly) and CVE-referenced where a CVE exists. Published as CSV and JSON-LD with a SKOS taxonomy of five product classes and seven vulnerability types, plus a source-quality grading rubric aligned to the six UK Government Data Quality Framework dimensions.',
-    assurance: 'Fully open and reproducible: dataset, taxonomy and grading rubric published on GitHub under CC-BY-4.0. Every count is a triangulated lower bound with confidence flags, and the evidence gaps (no shared denominator, non-additive definitions, unquantified vendor telemetry, extrapolated cost figures) are named openly rather than hidden.',
-    outcome: 'A shared, honest baseline the field lacks: 16 incidents across all five technology groups, including the Ivanti Connect Secure mass exploitation, the MOVEit and Cl0p supply-chain compromise, the XZ Utils backdoor, and Unitronics PLC attacks on water utilities. Corroborates the shift to the network edge: edge devices and VPNs rose to 22% of vulnerability-exploitation targeting in 2025, up from 3% (Verizon DBIR 2025).',
-    reusable: 'The open incident dataset, SKOS taxonomy and source-quality grading rubric transfer to any evidence-baseline question on connected-device and supply-chain cyber risk.',
-  },
-  {
-    id: 'uc9',
     slug: '/case-studies/ies-hqdm-defence-interoperability',
     title: 'IES to HQDM: an Open 4D Ontology Crosswalk for Defence Data',
     challenge: 'The UK Defence Investment Plan (June 2026) commits over £5bn to autonomous systems and £7.5bn to a Digital Backbone and Digital Targeting Web, all of which depend on heterogeneous systems and allies sharing data a machine can reason over. On the UK side that vocabulary is the Information Exchange Standard (IES); the built environment runs on HQDM and the National Digital Twin. Both are 4D and share a common heritage, yet no machine-readable crosswalk between them had ever been published.',

@@ -121,6 +121,16 @@ export const Research: React.FC = () => {
              <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Journal of the British Blockchain Association (JBBA), Peer-Reviewed</p>
              <p className="text-base text-gov-dark/90 leading-relaxed">Peer-reviewed research exploring the intersection of distributed ledger technology and the creative industries. Examined provenance tracking, digital ownership, and the implications of blockchain for cultural asset management and intellectual property governance.</p>
            </li>
+           <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
+             <Link to="/research/connective-product-cyber-incidents"><h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark hover:underline transition-colors">Cyber Incidents affecting Connective Products: an open evidence base</h3></Link>
+             <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Open research report and dataset, 2026</p>
+             <p className="text-base text-gov-dark/90 leading-relaxed">A self-initiated, open, machine-readable evidence base of cyber incidents affecting connective products (IoT, operational technology, computing devices, networking equipment, and software and firmware), built on real public sources. 16 documented incidents (2022 to 2025) across five technology groups, each traced to an authoritative primary source and CVE-referenced where a CVE exists, published with a SKOS taxonomy and a source-quality grading rubric aligned to the six UK Government Data Quality Framework dimensions. The evidence gaps (no shared denominator, non-additive definitions, unquantified vendor telemetry) are named openly.</p>
+             <div className="mt-3 flex flex-wrap gap-3 items-center">
+               <Link to="/research/connective-product-cyber-incidents" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">Read the report</Link>
+               <span className="text-gov-border">|</span>
+               <a href="https://github.com/fabio-rovai/connective-product-cyber-incidents" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">Open dataset and taxonomy (GitHub)<span className="sr-only"> (opens in new tab)</span></a>
+             </div>
+           </li>
         </ul>
       </section>
 

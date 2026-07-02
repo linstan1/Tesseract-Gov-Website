@@ -92,7 +92,7 @@ const PAGE_META = {
     title: 'The Value of Agri-Environment Heritage Actions | Tesseract Government Gateway',
     description: 'A self-initiated, open-data demonstration of how we evidence the wider value of agri-environment scheme heritage actions for nature and for people: a scoping-review framework on Natural England\'s NEER001 method, with a real spatial analysis of the 2,206 Scheduled Monuments on the Historic England Heritage at Risk Register 2024.',
   },
-  '/case-studies/connective-product-cyber-incidents': {
+  '/research/connective-product-cyber-incidents': {
     title: 'Cyber Incidents affecting Connective Products: an open evidence base | Tesseract Government Gateway',
     description: 'A self-initiated, open, machine-readable evidence base of cyber incidents affecting connective products (IoT, operational technology, computing devices, networking equipment and software/firmware): 16 documented incidents (2022 to 2025), a SKOS taxonomy and a source-quality rubric aligned to the six Government Data Quality Framework dimensions, published on GitHub under CC-BY-4.0.',
   },

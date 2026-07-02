@@ -5,8 +5,8 @@ import { ArrowLeft, ExternalLink, Github } from 'lucide-react';
 const SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'Article',
-  '@id': 'https://gov.tesseract.academy/case-studies/connective-product-cyber-incidents#article',
-  mainEntityOfPage: 'https://gov.tesseract.academy/case-studies/connective-product-cyber-incidents',
+  '@id': 'https://gov.tesseract.academy/research/connective-product-cyber-incidents#article',
+  mainEntityOfPage: 'https://gov.tesseract.academy/research/connective-product-cyber-incidents',
   headline: 'Cyber Incidents affecting Connective Products: an open evidence base',
   description:
     'A self-initiated, open, machine-readable evidence base of cyber incidents affecting connective products (IoT, operational technology, computing devices, networking equipment and software/firmware), built on real public sources, with the evidence gaps named honestly.',
@@ -42,9 +42,9 @@ export const ConnectiveProductCyberIncidents: React.FC = () => {
     <article className="max-w-4xl mx-auto px-6 lg:px-8 py-20 space-y-12">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SCHEMA) }} />
       <header>
-        <Link to="/use-cases" className="inline-flex items-center gap-2 text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors mb-8">
+        <Link to="/research" className="inline-flex items-center gap-2 text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors mb-8">
           <ArrowLeft className="w-4 h-4" />
-          Back to Use Cases
+          Back to Research
         </Link>
         <p className="text-sm font-semibold uppercase tracking-wider text-gov-blue mb-3">
           Open research report: Connective Product Security
@@ -223,9 +223,9 @@ export const ConnectiveProductCyberIncidents: React.FC = () => {
       </div>
 
       <div className="pt-4 border-t border-gov-border/30">
-        <Link to="/use-cases" className="inline-flex items-center gap-2 text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">
+        <Link to="/research" className="inline-flex items-center gap-2 text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">
           <ArrowLeft className="w-4 h-4" />
-          Back to Use Cases
+          Back to Research
         </Link>
       </div>
     </article>

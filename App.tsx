@@ -19,7 +19,7 @@ const Kalgera = lazy(() => import('./pages/case-studies/Kalgera').then(m => ({ d
 const WastewaterDataQuality = lazy(() => import('./pages/case-studies/WastewaterDataQuality').then(m => ({ default: m.WastewaterDataQuality })));
 const WrapFoodWaste = lazy(() => import('./pages/case-studies/WrapFoodWaste').then(m => ({ default: m.WrapFoodWaste })));
 const AesHeritage = lazy(() => import('./pages/case-studies/AesHeritage').then(m => ({ default: m.AesHeritage })));
-const ConnectiveProductCyberIncidents = lazy(() => import('./pages/case-studies/ConnectiveProductCyberIncidents').then(m => ({ default: m.ConnectiveProductCyberIncidents })));
+const ConnectiveProductCyberIncidents = lazy(() => import('./pages/research/ConnectiveProductCyberIncidents').then(m => ({ default: m.ConnectiveProductCyberIncidents })));
 const FairScientificData = lazy(() => import('./pages/case-studies/FairScientificData').then(m => ({ default: m.FairScientificData })));
 const IesHqdmCrosswalk = lazy(() => import('./pages/case-studies/IesHqdmCrosswalk').then(m => ({ default: m.IesHqdmCrosswalk })));
 const Glossary = lazy(() => import('./pages/Glossary').then(m => ({ default: m.Glossary })));
@@ -104,7 +104,7 @@ const PAGE_META: Record<string, { title: string; description: string }> = {
     title: 'The Value of Agri-Environment Heritage Actions | Tesseract Government Gateway',
     description: 'A self-initiated, open-data demonstration of how we evidence the wider value of agri-environment scheme heritage actions for nature and for people: a scoping-review framework on Natural England\'s NEER001 method, with a real spatial analysis of the 2,206 Scheduled Monuments on the Historic England Heritage at Risk Register 2024.',
   },
-  '/case-studies/connective-product-cyber-incidents': {
+  '/research/connective-product-cyber-incidents': {
     title: 'Cyber Incidents affecting Connective Products: an open evidence base | Tesseract Government Gateway',
     description: 'A self-initiated, open, machine-readable evidence base of cyber incidents affecting connective products (IoT, operational technology, computing devices, networking equipment and software/firmware): 16 documented incidents (2022 to 2025), a SKOS taxonomy and a source-quality rubric aligned to the six Government Data Quality Framework dimensions, published on GitHub under CC-BY-4.0.',
   },
@@ -193,7 +193,7 @@ const App: React.FC = () => {
               <Route path="/case-studies/wastewater-effluent-data-quality" element={<WastewaterDataQuality />} />
               <Route path="/case-studies/wrap-food-loss-waste-taxonomy" element={<WrapFoodWaste />} />
               <Route path="/case-studies/agri-environment-heritage-value" element={<AesHeritage />} />
-              <Route path="/case-studies/connective-product-cyber-incidents" element={<ConnectiveProductCyberIncidents />} />
+              <Route path="/research/connective-product-cyber-incidents" element={<ConnectiveProductCyberIncidents />} />
               <Route path="/case-studies/fair-scientific-data" element={<FairScientificData />} />
               <Route path="/case-studies/ies-hqdm-defence-interoperability" element={<IesHqdmCrosswalk />} />
               <Route path="/glossary" element={<Glossary />} />

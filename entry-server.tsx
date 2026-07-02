@@ -26,7 +26,7 @@ import { Kalgera } from './pages/case-studies/Kalgera';
 import { WastewaterDataQuality } from './pages/case-studies/WastewaterDataQuality';
 import { WrapFoodWaste } from './pages/case-studies/WrapFoodWaste';
 import { AesHeritage } from './pages/case-studies/AesHeritage';
-import { ConnectiveProductCyberIncidents } from './pages/case-studies/ConnectiveProductCyberIncidents';
+import { ConnectiveProductCyberIncidents } from './pages/research/ConnectiveProductCyberIncidents';
 import { FairScientificData } from './pages/case-studies/FairScientificData';
 import { IesHqdmCrosswalk } from './pages/case-studies/IesHqdmCrosswalk';
 import { Glossary } from './pages/Glossary';
@@ -60,7 +60,7 @@ const SSRApp: React.FC = () => (
         <Route path="/case-studies/wastewater-effluent-data-quality" element={<WastewaterDataQuality />} />
         <Route path="/case-studies/wrap-food-loss-waste-taxonomy" element={<WrapFoodWaste />} />
         <Route path="/case-studies/agri-environment-heritage-value" element={<AesHeritage />} />
-        <Route path="/case-studies/connective-product-cyber-incidents" element={<ConnectiveProductCyberIncidents />} />
+        <Route path="/research/connective-product-cyber-incidents" element={<ConnectiveProductCyberIncidents />} />
         <Route path="/case-studies/fair-scientific-data" element={<FairScientificData />} />
         <Route path="/case-studies/ies-hqdm-defence-interoperability" element={<IesHqdmCrosswalk />} />
         <Route path="/glossary" element={<Glossary />} />

@@ -5,6 +5,11 @@
       "has": [{ "type": "host", "value": "tesseract-gov-website.vercel.app" }],
       "destination": "https://gov.tesseract.academy/:path*",
       "permanent": true
+    },
+    {
+      "source": "/case-studies/connective-product-cyber-incidents",
+      "destination": "/research/connective-product-cyber-incidents",
+      "permanent": true
     }
   ],
   "rewrites": [
