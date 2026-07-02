@@ -30,6 +30,7 @@ import { AesHeritage } from './pages/research/AesHeritage';
 import { ConnectiveProductCyberIncidents } from './pages/research/ConnectiveProductCyberIncidents';
 import { FairScientificData } from './pages/research/FairScientificData';
 import { IesHqdmCrosswalk } from './pages/research/IesHqdmCrosswalk';
+import { PyramidBridge } from './pages/research/PyramidBridge';
 import { Glossary } from './pages/Glossary';
 import { AIConsulting } from './pages/services/AIConsulting';
 import { ResearchPolicy } from './pages/services/ResearchPolicy';
@@ -65,6 +66,7 @@ const SSRApp: React.FC = () => (
         <Route path="/research/connective-product-cyber-incidents" element={<ConnectiveProductCyberIncidents />} />
         <Route path="/research/fair-scientific-data" element={<FairScientificData />} />
         <Route path="/research/ies-hqdm-defence-interoperability" element={<IesHqdmCrosswalk />} />
+        <Route path="/research/pyramid-ies-hqdm-semantic-bridge" element={<PyramidBridge />} />
         <Route path="/glossary" element={<Glossary />} />
         <Route path="/services/ai-consulting" element={<AIConsulting />} />
         <Route path="/services/research-policy" element={<ResearchPolicy />} />

@@ -152,6 +152,15 @@ export const IesHqdmCrosswalk: React.FC = () => {
         </blockquote>
       </section>
 
+      <section className="space-y-4">
+        <div className="border-l-2 border-l-gov-blue pl-6">
+          <h2 className="text-2xl font-bold text-gov-dark font-serif mb-3">Applied example: a PYRAMID avionics bridge</h2>
+          <p className="text-gov-dark leading-relaxed">
+            The crosswalk is not only a reference: it does work. <Link to="/research/pyramid-ies-hqdm-semantic-bridge" className="text-gov-blue underline hover:text-gov-blue-dark">PYRAMID</Link> (UK Defence Standard 00-134), the MOD open architecture for avionics and mission systems, deliberately has no shared data model and pushes interoperability into per-deployment "bridges" that perform semantic translation. Using this crosswalk, we ground three PYRAMID components in IES and HQDM so that the same object, a building that is both a <code className="text-sm bg-gov-bg px-1.5 py-0.5 rounded">Geographical_Feature</code> and a <code className="text-sm bg-gov-bg px-1.5 py-0.5 rounded">Tactical_Object</code>, resolves to one referent. It is the crosswalk's founding motivation, connecting the operational picture to the terrain, reduced to one bridge.
+          </p>
+        </div>
+      </section>
+
       <div className="bg-gov-bg border border-gov-border/50 rounded-xl p-8 flex flex-col sm:flex-row gap-4 sm:items-center sm:justify-between">
         <div>
           <p className="font-semibold text-gov-dark">View the open crosswalk</p>

@@ -94,6 +94,16 @@ const USE_CASES = [
     outcome: 'A shared starting point the field lacked, released so suppliers building across defence and built-environment data can start from something concrete. The divergences record names the traps, including the ies:Event to hqdm:event false friend, that a naive label-based mapping would fall into.',
     reusable: 'The crosswalk, divergences record, SHACL shapes and reference pipeline transfer to any 4D upper-ontology alignment; the safety-case pattern transfers to any autonomous node that must be assured against a shared world model.',
   },
+  {
+    id: 'uc9',
+    slug: '/research/pyramid-ies-hqdm-semantic-bridge',
+    title: 'Grounding a PYRAMID Avionics Bridge in IES and HQDM',
+    challenge: 'PYRAMID (UK Defence Standard 00-134) is the MOD open reference architecture for avionics and mission systems. By design it has no shared data model: its Technical Standard states that components "do not share interface definitions", so a deployment "will use bridges to close the semantic gap", and the accompanying MOD assessment confirms "the PRA does not define a data architecture". The meaning of data across components is left to bridges that are, today, hand-built per deployment.',
+    intervention: 'A self-initiated, open worked example that supplies the reference semantics for one such bridge, built entirely on the Open Government Licence Technical Standard. Entities from three PRA components (Geography, Tactical Objects, Data Fusion) are grounded in IES and HQDM terms using our IES-to-HQDM crosswalk, so the same object, e.g. a building that is both a Geographical_Feature and a Tactical_Object, resolves to one referent (ies:Entity, and hqdm:physical_object through the crosswalk). An executable proof, SHACL enforcement shapes and a negative fixture are included.',
+    assurance: 'Open and reproducible under CC-BY-4.0. The bridge conforms to the crosswalk\'s own SHACL shapes; a co-reference is valid only when both sides denote the same referent, which makes the "Capability" false friend (a distinct entity in all three components) fail validation rather than ship silently. Not affiliated with or endorsed by the MOD PYRAMID programme.',
+    outcome: 'A shared meaning layer beneath an open avionics architecture, demonstrated on the public standard. No published work grounds PYRAMID, or the related FACE Shared Data Model, in any upper ontology; this occupies that gap with ontologies the UK government already owns.',
+    reusable: 'The grounding pattern transfers to any PYRAMID or FACE inter-component bridge, and to any MOSA reference architecture that leaves cross-component data meaning to a bridge layer.',
+  },
 ];
 
 const UseCaseItem: React.FC<{ data: typeof USE_CASES[0] }> = ({ data }) => {

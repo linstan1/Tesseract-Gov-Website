@@ -92,6 +92,10 @@ const PAGE_META = {
     title: 'IES to HQDM: an open 4D ontology crosswalk for defence data | Tesseract Government Gateway',
     description: 'The first public crosswalk between the UK Information Exchange Standard (IES) and HQDM, two 4D upper ontologies. Open SSSOM and RDF correspondences, a curated divergences record, SHACL validation, and a worked SAPIENT-node safety case grounding autonomy in IES-typed world states. Supports the Defence Investment Plan interoperability and autonomy-assurance agenda.',
   },
+  '/research/pyramid-ies-hqdm-semantic-bridge': {
+    title: 'Grounding a PYRAMID avionics bridge in IES and HQDM | Tesseract Government Gateway',
+    description: 'PYRAMID (Def Stan 00-134) is an open avionics reference architecture with no shared data model; it pushes interoperability into inter-component bridges. A worked, open, SHACL-validated example grounds those bridges in the IES and HQDM 4D ontologies, so three PRA components (Geography, Tactical Objects, Data Fusion) that model the same object resolve to one referent. No prior work grounds PYRAMID in an upper ontology.',
+  },
   '/research/agri-environment-heritage-value': {
     title: 'The Value of Agri-Environment Heritage Actions | Tesseract Government Gateway',
     description: 'A self-initiated, open-data demonstration of how we evidence the wider value of agri-environment scheme heritage actions for nature and for people: a scoping-review framework on Natural England\'s NEER001 method, with a real spatial analysis of the 2,206 Scheduled Monuments on the Historic England Heritage at Risk Register 2024.',
