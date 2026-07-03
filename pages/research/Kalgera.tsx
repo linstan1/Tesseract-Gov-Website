@@ -7,7 +7,7 @@ const SCHEMA = {
   '@type': 'Article',
   '@id': 'https://gov.tesseract.academy/research/kalgera-financial-vulnerability#article',
   mainEntityOfPage: 'https://gov.tesseract.academy/research/kalgera-financial-vulnerability',
-  headline: 'Financial Vulnerability Research — Kalgera / Fintech Scotland | Tesseract Academy',
+  headline: 'Financial Vulnerability Research: Kalgera / Fintech Scotland | Tesseract Academy',
   description:
     'Tesseract Academy designed and delivered end-to-end qualitative user research for Kalgera and Fintech Scotland, validating AI-driven financial vulnerability signals for adults in Scotland.',
   author: { '@id': 'https://gov.tesseract.academy/#organization' },
@@ -88,10 +88,10 @@ export const Kalgera: React.FC = () => {
         </Link>
 
         <p className="text-sm font-semibold uppercase tracking-wider text-gov-blue mb-3">
-          Case Study — Kalgera / Fintech Scotland
+          Case Study: Kalgera / Fintech Scotland
         </p>
         <h1 className="text-4xl font-extrabold text-gov-dark mb-6 tracking-tight leading-tight font-serif">
-          Financial Vulnerability Research — Kalgera / Fintech Scotland
+          Financial Vulnerability Research: Kalgera / Fintech Scotland
         </h1>
         <p className="text-xl text-gov-secondary/90 leading-relaxed">
           End-to-end qualitative user research validating AI-driven early warning signals for financially vulnerable adults in Scotland. Three structured outputs delivered: signal validation, acceptability framework, and Finance and Health Lab summary.
@@ -120,16 +120,16 @@ export const Kalgera: React.FC = () => {
         <div className="border-l-2 border-l-gov-blue pl-6">
           <h2 className="text-2xl font-bold text-gov-dark font-serif mb-3">The Challenge</h2>
           <p className="text-gov-dark leading-relaxed">
-            Kalgera's AI-driven early warning system detects financial vulnerability through transaction data signals. Before scaling the product, Kalgera needed primary qualitative research to validate that the signals reflect real lived experiences — not just statistical artefacts. The work was delivered within the regulatory context established by the <a href="https://www.fca.org.uk/firms/consumer-duty" target="_blank" rel="noopener noreferrer" className="text-gov-blue underline hover:text-gov-blue-dark">FCA Consumer Duty</a>, which places explicit obligations on firms to understand the needs of customers in vulnerable circumstances, and the <strong>Financial Conduct Authority</strong>'s Guidance for Firms on the Fair Treatment of Vulnerable Customers (FG21/1).
+            Kalgera's AI-driven early warning system detects financial vulnerability through transaction data signals. Before scaling the product, Kalgera needed primary qualitative research to validate that the signals reflect real lived experiences, not just statistical artefacts. The work was delivered within the regulatory context established by the <a href="https://www.fca.org.uk/firms/consumer-duty" target="_blank" rel="noopener noreferrer" className="text-gov-blue underline hover:text-gov-blue-dark">FCA Consumer Duty</a>, which places explicit obligations on firms to understand the needs of customers in vulnerable circumstances, and the <strong>Financial Conduct Authority</strong>'s Guidance for Firms on the Fair Treatment of Vulnerable Customers (FG21/1).
           </p>
           <p className="text-gov-dark leading-relaxed mt-3">
-            The research had to capture the experiences of financially vulnerable adults in Scotland: people experiencing cognitive decline, scam victims, carers managing money on behalf of others. Reaching this population ethically and reliably required specialist recruitment and a robust ethical framework aligned with the <strong>Adult Support and Protection (Scotland) Act 2007</strong>. <strong>NHS England</strong>'s framework for inclusion research and the <strong>Office for National Statistics</strong> guidance on surveying vulnerable populations informed the recruitment and consent protocols. <strong>Fintech Scotland</strong>, in partnership with the Scottish Government's Financial Health Lab, supported access to the target participant cohort.
+            The research had to capture the experiences of financially vulnerable adults in Scotland: people experiencing cognitive decline, scam victims, carers managing money on behalf of others. Reaching this population ethically and reliably required specialist recruitment and a robust ethical framework aligned with the <strong>Adult Support and Protection (Scotland) Act 2007</strong>. <strong>Fintech Scotland</strong>, in partnership with the Scottish Government's Financial Health Lab, supported access to the target participant cohort.
           </p>
         </div>
       </section>
 
       <section className="space-y-6">
-        <h2 className="text-2xl font-bold text-gov-dark font-serif">Research Programme — Three Stages</h2>
+        <h2 className="text-2xl font-bold text-gov-dark font-serif">Research Programme: Three Stages</h2>
         <div className="overflow-x-auto">
           <table className="w-full text-sm border-collapse">
             <thead>
@@ -156,7 +156,7 @@ export const Kalgera: React.FC = () => {
       </section>
 
       <section className="space-y-6">
-        <h2 className="text-2xl font-bold text-gov-dark font-serif">Kalgera Signal Categories — Interview Protocol</h2>
+        <h2 className="text-2xl font-bold text-gov-dark font-serif">Kalgera Signal Categories: Interview Protocol</h2>
         <p className="text-gov-secondary leading-relaxed text-sm">
           Each interview was structured around all eight of Kalgera's signal categories. Participants were asked to describe experiences relevant to each category in their own words.
         </p>

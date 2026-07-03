@@ -9,7 +9,7 @@ const SCHEMA = {
   mainEntityOfPage: 'https://gov.tesseract.academy/research/wrap-food-loss-waste-taxonomy',
   headline: 'WRAP Food Loss and Waste Data Taxonomy | Tesseract Academy',
   description:
-    'Tesseract Academy was commissioned by WRAP to build a structured, machine-readable Food Loss and Waste data taxonomy (PRC228): five coded dimensions and 84 entities expressed in SKOS and JSON-LD, grounded in the Food Loss and Waste Standard, the WRAP Data Capture Sheet and Codex GSFA, supporting consistent measurement across the Courtauld Commitment 2030.',
+    'Tesseract Academy was commissioned by WRAP to build a structured, machine-readable Food Loss and Waste data taxonomy (PRC228): five coded dimensions and 84 entities expressed in SKOS and JSON-LD, grounded in the Food Loss and Waste Standard, the WRAP Data Capture Sheet and Codex GSFA, supporting consistent measurement across the UK Food and Drink Pact (formerly the Courtauld Commitment 2030).',
   author: { '@id': 'https://gov.tesseract.academy/#organization' },
   publisher: { '@id': 'https://gov.tesseract.academy/#organization' },
   datePublished: '2026-05-01',
@@ -19,7 +19,7 @@ const SCHEMA = {
     name: 'Food loss and waste data standardisation',
   },
   keywords:
-    'WRAP, food loss and waste, data taxonomy, Courtauld Commitment 2030, SKOS, JSON-LD, Codex GSFA, data standards, FoodOn, FoodEx2',
+    'WRAP, food loss and waste, data taxonomy, UK Food and Drink Pact, Courtauld Commitment 2030, SKOS, JSON-LD, Codex GSFA, data standards, FoodOn, FoodEx2',
 };
 
 const ENTITY_GROUPS = [
@@ -67,8 +67,8 @@ export const WrapFoodWaste: React.FC = () => {
         </div>
         <div className="bg-gov-bg border border-gov-border/50 rounded-xl p-6">
           <p className="text-xs font-semibold uppercase tracking-wider text-gov-blue mb-1">Reach</p>
-          <p className="text-3xl font-extrabold text-gov-dark">400+</p>
-          <p className="text-sm text-gov-secondary mt-1">Courtauld 2030 organisations</p>
+          <p className="text-3xl font-extrabold text-gov-dark">~200</p>
+          <p className="text-sm text-gov-secondary mt-1">UK Food and Drink Pact organisations</p>
         </div>
       </div>
 
@@ -76,7 +76,7 @@ export const WrapFoodWaste: React.FC = () => {
         <div className="border-l-2 border-l-gov-blue pl-6">
           <h2 className="text-2xl font-bold text-gov-dark font-serif mb-3">The Challenge</h2>
           <p className="text-gov-dark leading-relaxed">
-            WRAP's <a href="https://www.wrap.ngo" target="_blank" rel="noopener noreferrer" className="text-gov-blue underline hover:text-gov-blue-dark">Courtauld Commitment 2030</a> asks the UK food industry to halve food waste by 2030 (UN Sustainable Development Goal 12.3). More than 400 organisations across an international Food Pact Network report their food loss and waste data, but using locally divergent definitions, product groupings and destination categories. Without a shared, coded classification system this data cannot be reliably aggregated or compared, quietly undermining the ability to measure collective progress against the headline target.
+            WRAP's <a href="https://www.wrap.ngo/taking-action/food-drink/initiatives/courtauld-commitment" target="_blank" rel="noopener noreferrer" className="text-gov-blue underline hover:text-gov-blue-dark">UK Food and Drink Pact</a> (formerly the Courtauld Commitment 2030) asks the UK food industry to halve food waste by 2030 (UN Sustainable Development Goal 12.3), uniting nearly 200 organisations across the supply chain. Together with the wider international network of food pacts, signatories report their food loss and waste data using locally divergent definitions, product groupings and destination categories. Without a shared, coded classification system this data cannot be reliably aggregated or compared, quietly undermining the ability to measure collective progress against the headline target.
           </p>
           <p className="text-gov-dark leading-relaxed mt-3">
             WRAP needed the conceptual Food Loss and Waste Accounting and Reporting Standard translated into implementable, machine-readable data infrastructure that could be used consistently across countries and reporting tools while remaining platform-agnostic.
@@ -135,12 +135,12 @@ export const WrapFoodWaste: React.FC = () => {
         </div>
         <div className="flex flex-col sm:flex-row gap-3">
           <a
-            href="https://www.wrap.ngo"
+            href="https://www.wrap.ngo/taking-action/food-drink/initiatives/courtauld-commitment"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-5 py-2.5 bg-gov-blue text-white text-sm font-semibold rounded-lg hover:bg-gov-blue-dark transition-colors"
           >
-            About WRAP
+            About the Pact
             <ExternalLink className="w-4 h-4" />
           </a>
           <Link
