@@ -9,7 +9,7 @@ const SCHEMA = {
   mainEntityOfPage: 'https://gov.tesseract.academy/research/welsh-government-land-valuation',
   headline: 'Welsh Government Land Valuation Research: Tesseract Academy',
   description:
-    'Tesseract Academy tested five land valuation methodologies across 1,916 Welsh LSOAs for Welsh Government, informing local government finance policy. Published on GOV.WALES, March 2026.',
+    'Tesseract Academy tested five land valuation methodologies across 1,912 Welsh LSOAs for Welsh Government, informing local government finance policy. Published on GOV.WALES, March 2026.',
   author: { '@id': 'https://gov.tesseract.academy/#organization' },
   publisher: { '@id': 'https://gov.tesseract.academy/#organization' },
   datePublished: '2026-03-01',
@@ -80,20 +80,20 @@ export const WelshGovernment: React.FC = () => {
           Welsh Government Land Valuation Research
         </h1>
         <p className="text-xl text-gov-secondary/90 leading-relaxed">
-          Published <time dateTime="2026-03">March 2026</time>. Findings directly inform Welsh Government local government finance policy and are cited in Senedd committee proceedings.
+          Published <time dateTime="2026-03">March 2026</time>. Findings directly inform Welsh Government local government finance policy and are cited in a Welsh Government Ministerial Written Statement.
         </p>
       </header>
 
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
         <div className="bg-gov-bg border border-gov-border/50 rounded-xl p-6">
           <p className="text-xs font-semibold uppercase tracking-wider text-gov-blue mb-1">Coverage</p>
-          <p className="text-3xl font-extrabold text-gov-dark">1,916</p>
+          <p className="text-3xl font-extrabold text-gov-dark">1,912</p>
           <p className="text-sm text-gov-secondary mt-1">Lower Super Output Areas</p>
         </div>
         <div className="bg-gov-bg border border-gov-border/50 rounded-xl p-6">
           <p className="text-xs font-semibold uppercase tracking-wider text-gov-blue mb-1">Geography</p>
           <p className="text-3xl font-extrabold text-gov-dark">99%</p>
-          <p className="text-sm text-gov-secondary mt-1">of Welsh geography covered</p>
+          <p className="text-sm text-gov-secondary mt-1">of Welsh LSOAs covered</p>
         </div>
         <div className="bg-gov-bg border border-gov-border/50 rounded-xl p-6">
           <p className="text-xs font-semibold uppercase tracking-wider text-gov-blue mb-1">Methodologies Tested</p>
@@ -117,7 +117,7 @@ export const WelshGovernment: React.FC = () => {
       <section className="space-y-6">
         <h2 className="text-2xl font-bold text-gov-dark font-serif">Five Methodologies Tested</h2>
         <p className="text-gov-secondary leading-relaxed">
-          Each methodology was applied across all 1,916 <strong>Lower Super Output Areas</strong> (LSOAs), the small-area geographic unit defined and maintained by the <strong>Office for National Statistics</strong>, enabling direct, like-for-like comparison consistent with UK-wide subnational data standards.
+          The analysis spans 1,912 <strong>Lower Super Output Areas</strong> (LSOAs) with land transactions, the small-area geographic unit defined and maintained by the <strong>Office for National Statistics</strong>, which is around 99% of all Welsh LSOAs, enabling direct, like-for-like comparison consistent with UK-wide subnational data standards.
         </p>
         <div className="overflow-x-auto">
           <table className="w-full text-sm border-collapse">
@@ -158,7 +158,7 @@ export const WelshGovernment: React.FC = () => {
             </li>
             <li className="flex items-start gap-2">
               <span className="text-gov-blue font-bold mt-0.5">•</span>
-              <span>Cited in Senedd committee proceedings.</span>
+              <span>Cited in a Welsh Government Ministerial Written Statement (17 March 2026).</span>
             </li>
           </ul>
         </div>
@@ -168,15 +168,15 @@ export const WelshGovernment: React.FC = () => {
         <div className="border-l-2 border-l-gov-blue pl-6">
           <h2 className="text-2xl font-bold text-gov-dark font-serif mb-3">Outcome</h2>
           <p className="text-gov-dark leading-relaxed">
-            Published March 2026. The comparative analysis across all five methodologies directly informs Welsh Government local government finance policy. The machine-learning methodology produced the most granular and consistent estimates across diverse land-use contexts. Findings contribute to the evidence base reviewed by the <strong>National Audit Office</strong> when assessing value-for-money in devolved government programmes, and align with <strong>HM Treasury</strong> Green Book guidance on appraisal and evaluation in central government.
+            Published March 2026. The comparative analysis across all five methodologies directly informs Welsh Government local government finance policy. Of the five methodologies tested, the machine-learning method (Gradient Boosting / CatBoost) delivered the best overall predictive performance, though the report is candid that all five remain below the accuracy required for statutory valuation. Findings align with <strong>HM Treasury</strong> Green Book guidance on appraisal and evaluation.
           </p>
           <p className="text-gov-dark leading-relaxed mt-3">
-            Findings are <a href="https://www.gov.wales/testing-land-valuation-methods" target="_blank" rel="noopener noreferrer" className="text-gov-blue underline hover:text-gov-blue-dark">cited in Senedd committee proceedings</a>. The full report is publicly available on <a href="https://www.gov.wales" target="_blank" rel="noopener noreferrer" className="text-gov-blue underline hover:text-gov-blue-dark">GOV.WALES</a> and as a downloadable PDF. The <strong>Cabinet Office</strong> Centre for Analysis and Evaluation and the <strong>Government Digital Service</strong> (GDS) both reference land-use data as a priority open data asset for devolved administrations.
+            Findings are cited in a <a href="https://www.gov.wales/written-statement-testing-land-valuation-methodologies-publication-findings" target="_blank" rel="noopener noreferrer" className="text-gov-blue underline hover:text-gov-blue-dark">Welsh Government Ministerial Written Statement</a> (17 March 2026). The full report is publicly available on <a href="https://www.gov.wales/testing-land-valuation-methods" target="_blank" rel="noopener noreferrer" className="text-gov-blue underline hover:text-gov-blue-dark">GOV.WALES</a> and as a downloadable PDF.
           </p>
         </div>
 
         <blockquote className="border-l-4 border-l-gov-blue pl-6 py-2 my-6 bg-gov-bg rounded-r-lg">
-          <p className="text-gov-dark italic leading-relaxed">"The Welsh Government land valuation research demonstrates exactly what mixed-methods AI analysis can achieve. Combining machine learning models with conventional valuation techniques across 1,916 lower super output areas gave Welsh Government a genuinely comparative evidence base for local finance policy reform."</p>
+          <p className="text-gov-dark italic leading-relaxed">"The Welsh Government land valuation research demonstrates exactly what mixed-methods AI analysis can achieve. Combining machine learning models with conventional valuation techniques across 1,912 lower super output areas gave Welsh Government a genuinely comparative evidence base for local finance policy reform."</p>
           <cite className="text-sm text-gov-secondary font-semibold not-italic mt-2 block">Dr Stylianos Kampakis, Managing Director, Tesseract Academy</cite>
         </blockquote>
       </section>

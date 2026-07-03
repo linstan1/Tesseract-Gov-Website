@@ -146,13 +146,13 @@ export const AesHeritage: React.FC = () => {
             </li>
           ))}
         </ol>
-        <p className="text-xs text-gov-secondary/80">Method and full protocol: our pre-registered scoping-review protocol sets out the search strategy, eligibility criteria and charting framework in full.</p>
+        <p className="text-xs text-gov-secondary/80">Method and full protocol: our pre-specified scoping-review protocol sets out the search strategy, eligibility criteria and charting framework in full.</p>
       </section>
 
       <div className="bg-gov-bg border border-gov-border/50 rounded-xl p-8 flex flex-col sm:flex-row gap-4 sm:items-center sm:justify-between">
         <div>
           <p className="font-semibold text-gov-dark">Read the open methods note</p>
-          <p className="text-sm text-gov-secondary mt-1">The full pre-registered scoping-review protocol (PDF).</p>
+          <p className="text-sm text-gov-secondary mt-1">The full pre-specified scoping-review protocol (PDF).</p>
         </div>
         <div className="flex flex-col sm:flex-row gap-3">
           <a href="/papers/aes-heritage-cobenefits-scoping-protocol.pdf" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-5 py-2.5 bg-gov-blue text-white text-sm font-semibold rounded-lg hover:bg-gov-blue-dark transition-colors">

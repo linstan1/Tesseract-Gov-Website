@@ -53,7 +53,7 @@ export const ResearchPolicy: React.FC = () => {
         </p>
         <p className="text-gov-dark leading-relaxed text-base">
           Our systematic literature review capability enables rapid evidence synthesis across academic
-          and grey literature, following pre-registered protocols that satisfy peer review standards.
+          and grey literature, following pre-specified protocols that satisfy peer review standards.
           We apply thematic analysis to interview and focus group data and produce research reports
           in plain English aligned to the GOV.UK content design style guide. Deliverables routinely
           include executive summaries suitable for ministerial briefing and technical annexes for

@@ -22,7 +22,7 @@ const SCHEMA = {
 const REPO = 'https://github.com/fabio-rovai/nature-security-risk';
 
 const REFERENCES = [
-  { t: 'UK Government (Defra / MOD / Joint Intelligence Committee) (2026) National Security Assessment on global biodiversity loss, ecosystem collapse and national security.', u: 'https://www.gov.uk/government/publications/nature-security-assessment-on-global-biodiversity-loss-ecosystem-collapse-and-national-security' },
+  { t: 'UK Government, Department for Environment, Food and Rural Affairs (2026) National Security Assessment on global biodiversity loss, ecosystem collapse and national security. Developed across HM Government.', u: 'https://www.gov.uk/government/publications/nature-security-assessment-on-global-biodiversity-loss-ecosystem-collapse-and-national-security' },
   { t: 'IPBES (2024) Nexus Assessment (biodiversity, water, food, health and climate interlinkages).', u: 'https://www.ipbes.net/nexus-assessment' },
   { t: 'IPBES (2019) Global Assessment Report on Biodiversity and Ecosystem Services.', u: 'https://www.ipbes.net/global-assessment' },
   { t: 'IPBES (Daszak, P. et al.) (2020) Workshop Report on Biodiversity and Pandemics.', u: 'https://doi.org/10.5281/zenodo.4147317' },
@@ -55,7 +55,7 @@ export const NatureSecurityRisk: React.FC = () => {
           Nature-Related Security Risk: an open evidence base and systems ontology
         </h1>
         <p className="text-xl text-gov-secondary/90 leading-relaxed">
-          In January 2026 the UK Government assessed, with high confidence, that six strategic ecosystems are on a pathway to collapse, and that this carries national-security consequences. That assessment is a written document, not a tool. This is Tesseract&apos;s self-initiated, open, machine-readable evidence base and systems ontology that turns documented nature-to-security cascades into something a government can query, monitor and act on, built on real sources with the gaps named honestly.
+          In January 2026 the UK Government assessed, with high confidence, that every critical ecosystem is on a pathway to collapse, naming six ecosystems of particular strategic importance to the UK, and that this carries national-security consequences. That assessment is a written document, not a tool. This is Tesseract&apos;s self-initiated, open, machine-readable evidence base and systems ontology that turns documented nature-to-security cascades into something a government can query, monitor and act on, built on real sources with the gaps named honestly.
         </p>
       </header>
 
@@ -73,7 +73,7 @@ export const NatureSecurityRisk: React.FC = () => {
         <div className="bg-gov-bg border border-gov-border/50 rounded-xl p-6">
           <p className="text-xs font-semibold uppercase tracking-wider text-gov-blue mb-1">Strategic ecosystems</p>
           <p className="text-3xl font-extrabold text-gov-dark">6</p>
-          <p className="text-sm text-gov-secondary mt-1">named by the UK assessment, all on a collapse pathway</p>
+          <p className="text-sm text-gov-secondary mt-1">of strategic importance named by the UK assessment (which judges every critical ecosystem to be on a collapse pathway)</p>
         </div>
         <div className="bg-gov-bg border border-gov-border/50 rounded-xl p-6">
           <p className="text-xs font-semibold uppercase tracking-wider text-gov-blue mb-1">Published</p>
@@ -95,7 +95,7 @@ export const NatureSecurityRisk: React.FC = () => {
         <div className="border-l-2 border-l-gov-blue pl-6">
           <h2 className="text-2xl font-bold text-gov-dark font-serif mb-3">Why nature loss is now a security question</h2>
           <p className="text-gov-dark leading-relaxed">
-            The evidence has converged from several directions at once. The World Economic Forum&apos;s 2025 Global Risks Report ranks biodiversity loss and ecosystem collapse the second most severe global risk over ten years. Swiss Re estimates that 55 per cent of global GDP depends moderately or highly on nature. Planetary-boundaries science now places six of nine Earth-system boundaries beyond the safe operating space, biosphere integrity among them (Richardson et al. 2023). The IPBES Global Assessment put around one million species at risk of extinction. The HM Treasury-commissioned Dasgupta Review reframed economies as embedded in nature, not adjacent to it. Against that backdrop the UK Government&apos;s January 2026 assessment, forced into publication by a Green Alliance freedom-of-information request and then debated in the House of Lords, was the first British state document to treat biodiversity loss and ecosystem collapse as a national-security matter and to assess, with high confidence, that every one of its six strategic ecosystems is on a pathway to collapse.
+            The evidence has converged from several directions at once. The World Economic Forum&apos;s 2025 Global Risks Report ranks biodiversity loss and ecosystem collapse the second most severe global risk over ten years. Swiss Re estimates that 55 per cent of global GDP depends moderately or highly on nature. Planetary-boundaries science now places six of nine Earth-system boundaries beyond the safe operating space, biosphere integrity among them (Richardson et al. 2023). The IPBES Global Assessment put around one million species at risk of extinction. The HM Treasury-commissioned Dasgupta Review reframed economies as embedded in nature, not adjacent to it. Against that backdrop the UK Government&apos;s January 2026 assessment, forced into publication by a Green Alliance freedom-of-information request and then debated in the House of Lords, was the first British state document to treat biodiversity loss and ecosystem collapse as a national-security matter and to assess, with high confidence, that every critical ecosystem is on a pathway to collapse, naming six ecosystems of particular strategic importance to the UK.
           </p>
         </div>
       </section>
