@@ -7,7 +7,7 @@ const SCHEMA = {
   '@type': 'Article',
   '@id': 'https://gov.tesseract.academy/research/wastewater-effluent-data-quality#article',
   mainEntityOfPage: 'https://gov.tesseract.academy/research/wastewater-effluent-data-quality',
-  headline: 'Wastewater Effluent Data Quality — Tesseract Academy',
+  headline: 'Wastewater Effluent Data Quality: Tesseract Academy',
   description:
     'An open-data demonstration of statistical and rule-based quality assurance for continuous wastewater effluent monitoring: 1,382 days of full-scale treatment-works data, with SHACL data-quality rules including the COD >= BOD physical invariant. Published open source via Open Ontologies.',
   author: { '@id': 'https://gov.tesseract.academy/#organization' },
@@ -46,7 +46,7 @@ const CHECKS = [
   {
     id: '5',
     name: 'COD >= BOD cross-parameter invariant',
-    description: 'Chemical Oxygen Demand can never be below Biochemical Oxygen Demand. A record where it is, is physically impossible and is rejected — something no single-column check can see.',
+    description: 'Chemical Oxygen Demand can never be below Biochemical Oxygen Demand. A record where it is, is physically impossible and is rejected, something no single-column check can see.',
   },
   {
     id: '6',
@@ -69,7 +69,7 @@ export const WastewaterDataQuality: React.FC = () => {
         </Link>
 
         <p className="text-sm font-semibold uppercase tracking-wider text-gov-blue mb-3">
-          Open-data capability demonstration — Water &amp; Environment
+          Open-data capability demonstration: Water &amp; Environment
         </p>
         <h1 className="text-4xl font-extrabold text-gov-dark mb-6 tracking-tight leading-tight font-serif">
           Wastewater Effluent Data Quality
@@ -93,7 +93,7 @@ export const WastewaterDataQuality: React.FC = () => {
         <div className="bg-gov-bg border border-gov-border/50 rounded-xl p-6">
           <p className="text-xs font-semibold uppercase tracking-wider text-gov-blue mb-1">Validation rules</p>
           <p className="text-3xl font-extrabold text-gov-dark">8</p>
-          <p className="text-sm text-gov-secondary mt-1">machine-checkable SHACL shapes</p>
+          <p className="text-sm text-gov-secondary mt-1">SHACL shapes (R1&ndash;R8)</p>
         </div>
       </div>
 
@@ -112,7 +112,7 @@ export const WastewaterDataQuality: React.FC = () => {
       <section className="space-y-6">
         <h2 className="text-2xl font-bold text-gov-dark font-serif">The quality-assurance battery</h2>
         <p className="text-gov-secondary leading-relaxed">
-          Two layers work together. <strong>Statistics</strong> finds the anomalies; a declarative <strong>ontology and SHACL rule set</strong> encodes the domain physics that decides which anomalies are merely unusual and which are impossible. Every check below is reproducible and open source.
+          Two layers work together. <strong>Statistics</strong> finds the anomalies; a declarative <strong>ontology and SHACL rule set</strong> of eight shapes (R1&ndash;R8: date, four determinand ranges, non-empty record, the COD &ge; BOD invariant and a flow-conservation check) encodes the domain physics that decides which anomalies are merely unusual and which are impossible. The six check families below are reproducible and open source.
         </p>
         <figure className="rounded-xl overflow-hidden border border-gov-border/50">
           <img src="/case-studies/wastewater-effluent-qa.png" alt="Five years of wastewater effluent data-quality analysis: ammonia, BOD, COD and total nitrogen with flagged statistical outliers." className="w-full" />
@@ -158,7 +158,7 @@ export const WastewaterDataQuality: React.FC = () => {
 
         <blockquote className="border-l-4 border-l-gov-blue pl-6 py-2 my-6 bg-gov-bg rounded-r-lg">
           <p className="text-gov-dark italic leading-relaxed">"Classification of whether data can be trusted should be declarative, not learned. Statistics finds the anomalies; the ontology encodes the physics, such as the simple fact that chemical oxygen demand can never fall below biochemical oxygen demand, that decides which anomalies are impossible. That separation is what makes data quality auditable."</p>
-          <cite className="text-sm text-gov-secondary font-semibold not-italic mt-2 block">— Tesseract Academy</cite>
+          <cite className="text-sm text-gov-secondary font-semibold not-italic mt-2 block">Tesseract Academy</cite>
         </blockquote>
       </section>
 

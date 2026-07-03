@@ -7,7 +7,7 @@ const SCHEMA = {
   '@type': 'Article',
   '@id': 'https://gov.tesseract.academy/research/agri-environment-heritage-value#article',
   mainEntityOfPage: 'https://gov.tesseract.academy/research/agri-environment-heritage-value',
-  headline: 'The Value of Agri-Environment Heritage Actions — Tesseract Academy',
+  headline: 'The Value of Agri-Environment Heritage Actions: Tesseract Academy',
   description:
     'An open evidence review of the wider co-benefits of agri-environment scheme heritage actions for nature and for people: a real spatial analysis of the 2,206 Scheduled Monuments on the Historic England Heritage at Risk Register 2024, and an evidence map built from published sources, with honest gaps.',
   author: { '@id': 'https://gov.tesseract.academy/#organization' },
@@ -22,7 +22,7 @@ const SCHEMA = {
 const REFERENCES = [
   { t: 'Historic England (2025) Gaining an understanding of soil carbon and its management in an archaeological context. Research Report Series 50/2025.', u: 'https://historicengland.org.uk/research/results/reports/50-2025' },
   { t: 'Historic England. Management of Archaeological Sites on Grassland (technical advice).', u: 'https://historicengland.org.uk/advice/technical-advice/monuments-and-sites/management-of-archaeological-sites-on-grassland/' },
-  { t: 'Historic England. Grasslands — Nature Recovery and Heritage.', u: 'https://historicengland.org.uk/advice/climate-change/nature-recovery-and-heritage/grasslands/' },
+  { t: 'Historic England. Grasslands: Nature Recovery and Heritage.', u: 'https://historicengland.org.uk/advice/climate-change/nature-recovery-and-heritage/grasslands/' },
   { t: 'English Heritage, ALGAO and Defra (2004) Farming the Historic Landscape: Caring for archaeological sites in grassland.', u: 'https://thegardenstrust.org/wp-content/uploads/2016/11/EH-Farming-the-historic-landscape-Caring-for-archaeological-sites-in-grassland-2004-1.pdf' },
   { t: 'Yang, Y., Tilman, D. et al. (2019) Soil carbon sequestration accelerated by restoration of grassland biodiversity. Nature Communications 10, 718.', u: 'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6372642/' },
   { t: 'Conservation Evidence. Maintain traditional water meadows (including management for breeding and/or wintering waders/waterfowl). Action 696.', u: 'https://www.conservationevidence.com/actions/696' },
@@ -40,7 +40,7 @@ export const AesHeritage: React.FC = () => {
           Back to Use Cases
         </Link>
         <p className="text-sm font-semibold uppercase tracking-wider text-gov-blue mb-3">
-          Open evidence review &mdash; Heritage &amp; Natural Environment
+          Open evidence review: Heritage &amp; Natural Environment
         </p>
         <h1 className="text-4xl font-extrabold text-gov-dark mb-6 tracking-tight leading-tight font-serif">
           The Value of Agri-Environment Heritage Actions
@@ -132,7 +132,7 @@ export const AesHeritage: React.FC = () => {
         </div>
         <blockquote className="border-l-4 border-l-gov-blue pl-6 py-2 my-6 bg-gov-bg rounded-r-lg">
           <p className="text-gov-dark italic leading-relaxed">&quot;A baseline of evidence is what lets a heritage action be defended on the strength of its multi-objective value, rather than lost under budget pressure. The job is to count the benefits that single-outcome accounting hides, name the gaps honestly, and show the working.&quot;</p>
-          <cite className="text-sm text-gov-secondary font-semibold not-italic mt-2 block">&mdash; Tesseract Academy</cite>
+          <cite className="text-sm text-gov-secondary font-semibold not-italic mt-2 block">Tesseract Academy</cite>
         </blockquote>
       </section>
 

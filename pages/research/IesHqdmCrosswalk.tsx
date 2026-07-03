@@ -144,6 +144,9 @@ export const IesHqdmCrosswalk: React.FC = () => {
               <span>Candidate-for-review, and open to correction: the most welcome contribution is a new divergence.</span>
             </li>
           </ul>
+          <p className="text-sm text-gov-secondary/90 leading-relaxed mt-4">
+            This is an independent, self-initiated demonstration. It is not affiliated with, or endorsed by, the Ministry of Defence, the IES Working Group or the National Digital Twin programme. It is built entirely on published open standards and open ontologies.
+          </p>
         </div>
 
         <blockquote className="border-l-4 border-l-gov-blue pl-6 py-2 my-6 bg-gov-bg rounded-r-lg">

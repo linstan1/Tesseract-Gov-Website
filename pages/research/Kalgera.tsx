@@ -188,26 +188,26 @@ export const Kalgera: React.FC = () => {
           <h2 className="text-2xl font-bold text-gov-dark font-serif mb-3">Ethical Framework</h2>
           <ul className="space-y-2 text-gov-dark leading-relaxed">
             <li className="flex items-start gap-2">
-              <span className="text-gov-blue font-bold mt-0.5">—</span>
-              <span>Framework aligned with the <strong>Adult Support and Protection (Scotland) Act 2007</strong>, ensuring duty-of-care obligations were met throughout the research programme.</span>
+              <span className="text-gov-blue font-bold mt-0.5">•</span>
+              <span>Consent and distress protocols aligned with the duty-of-care principles of the <strong>Adult Support and Protection (Scotland) Act 2007</strong>, applied throughout the research programme.</span>
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-gov-blue font-bold mt-0.5">—</span>
-              <span>Distress protocol in place with trained facilitators for all interviews, consistent with <strong>NHS England</strong> inclusion research standards for research involving adults at risk.</span>
+              <span className="text-gov-blue font-bold mt-0.5">•</span>
+              <span>Distress protocol in place with trained facilitators for all interviews involving adults at risk.</span>
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-gov-blue font-bold mt-0.5">—</span>
-              <span>All data encrypted, UK-hosted, and anonymised within 7 days of collection. Data handling aligned with <strong>UK AI Safety Institute</strong> guidance on responsible data use in AI validation research and <strong>Cabinet Office</strong> data security classification requirements.</span>
+              <span className="text-gov-blue font-bold mt-0.5">•</span>
+              <span>All data encrypted, UK-hosted, and anonymised within 7 days of collection.</span>
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-gov-blue font-bold mt-0.5">—</span>
-              <span>Verbal and written consent obtained for participation, recording, and data use. Consent process reviewed against <strong>Office for National Statistics</strong> ethical standards for qualitative social research.</span>
+              <span className="text-gov-blue font-bold mt-0.5">•</span>
+              <span>Verbal and written consent obtained for participation, recording, and data use.</span>
             </li>
           </ul>
 
           <blockquote className="border-l-4 border-l-gov-blue pl-6 py-2 my-6 bg-gov-bg rounded-r-lg">
-            <p className="text-gov-dark italic leading-relaxed">"Qualitative research with financially vulnerable adults requires the same rigour as clinical trials — distress protocols, ethical oversight, and a methodology grounded in lived experience. The Adult Support and Protection (Scotland) Act 2007 framework we built gave Kalgera's signal validation genuine human validity."</p>
-            <cite className="text-sm text-gov-secondary font-semibold not-italic mt-2 block">— Dr Stylianos Kampakis, Managing Director, Tesseract Academy</cite>
+            <p className="text-gov-dark italic leading-relaxed">"Qualitative research with financially vulnerable adults demands the same care and ethical rigour we would apply to any research with adults at risk: distress protocols, informed consent, and a methodology grounded in lived experience. Aligning our protocols with the duty-of-care principles of the Adult Support and Protection (Scotland) Act 2007 gave Kalgera's signal validation genuine human validity."</p>
+            <cite className="text-sm text-gov-secondary font-semibold not-italic mt-2 block">Dr Stylianos Kampakis, Managing Director, Tesseract Academy</cite>
           </blockquote>
         </div>
       </section>

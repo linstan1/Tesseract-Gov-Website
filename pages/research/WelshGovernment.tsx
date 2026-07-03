@@ -7,7 +7,7 @@ const SCHEMA = {
   '@type': 'Article',
   '@id': 'https://gov.tesseract.academy/research/welsh-government-land-valuation#article',
   mainEntityOfPage: 'https://gov.tesseract.academy/research/welsh-government-land-valuation',
-  headline: 'Welsh Government Land Valuation Research — Tesseract Academy',
+  headline: 'Welsh Government Land Valuation Research: Tesseract Academy',
   description:
     'Tesseract Academy tested five land valuation methodologies across 1,916 Welsh LSOAs for Welsh Government, informing local government finance policy. Published on GOV.WALES, March 2026.',
   author: { '@id': 'https://gov.tesseract.academy/#organization' },
@@ -74,7 +74,7 @@ export const WelshGovernment: React.FC = () => {
         </Link>
 
         <p className="text-sm font-semibold uppercase tracking-wider text-gov-blue mb-3">
-          Case Study — Welsh Government
+          Case Study: Welsh Government
         </p>
         <h1 className="text-4xl font-extrabold text-gov-dark mb-6 tracking-tight leading-tight font-serif">
           Welsh Government Land Valuation Research
@@ -117,7 +117,7 @@ export const WelshGovernment: React.FC = () => {
       <section className="space-y-6">
         <h2 className="text-2xl font-bold text-gov-dark font-serif">Five Methodologies Tested</h2>
         <p className="text-gov-secondary leading-relaxed">
-          Each methodology was applied across all 1,916 <strong>Lower Super Output Areas</strong> (LSOAs) — the geographic unit defined by the <strong>Office for National Statistics</strong> for small-area statistics — covering 99% of Welsh geography, enabling direct, like-for-like comparison. LSOA boundaries are maintained by <strong>ONS</strong> in coordination with the <strong>Office for Statistics Regulation</strong>, ensuring the spatial unit is consistent with UK-wide subnational data standards.
+          Each methodology was applied across all 1,916 <strong>Lower Super Output Areas</strong> (LSOAs), the small-area geographic unit defined and maintained by the <strong>Office for National Statistics</strong>, enabling direct, like-for-like comparison consistent with UK-wide subnational data standards.
         </p>
         <div className="overflow-x-auto">
           <table className="w-full text-sm border-collapse">
@@ -149,15 +149,15 @@ export const WelshGovernment: React.FC = () => {
           <h2 className="text-2xl font-bold text-gov-dark font-serif mb-3">Assurance</h2>
           <ul className="space-y-2 text-gov-dark leading-relaxed">
             <li className="flex items-start gap-2">
-              <span className="text-gov-blue font-bold mt-0.5">—</span>
+              <span className="text-gov-blue font-bold mt-0.5">•</span>
               <span>Delivered under Welsh Government procurement standards.</span>
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-gov-blue font-bold mt-0.5">—</span>
+              <span className="text-gov-blue font-bold mt-0.5">•</span>
               <span>Full summary and comprehensive report published on GOV.WALES.</span>
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-gov-blue font-bold mt-0.5">—</span>
+              <span className="text-gov-blue font-bold mt-0.5">•</span>
               <span>Cited in Senedd committee proceedings.</span>
             </li>
           </ul>
@@ -176,8 +176,8 @@ export const WelshGovernment: React.FC = () => {
         </div>
 
         <blockquote className="border-l-4 border-l-gov-blue pl-6 py-2 my-6 bg-gov-bg rounded-r-lg">
-          <p className="text-gov-dark italic leading-relaxed">"The Welsh Government land valuation research demonstrates exactly what mixed-methods AI analysis can achieve — combining machine learning models with conventional valuation techniques across 1,916 lower super output areas gave Welsh Government a genuinely comparative evidence base for local finance policy reform."</p>
-          <cite className="text-sm text-gov-secondary font-semibold not-italic mt-2 block">— Dr Stylianos Kampakis, Managing Director, Tesseract Academy</cite>
+          <p className="text-gov-dark italic leading-relaxed">"The Welsh Government land valuation research demonstrates exactly what mixed-methods AI analysis can achieve. Combining machine learning models with conventional valuation techniques across 1,916 lower super output areas gave Welsh Government a genuinely comparative evidence base for local finance policy reform."</p>
+          <cite className="text-sm text-gov-secondary font-semibold not-italic mt-2 block">Dr Stylianos Kampakis, Managing Director, Tesseract Academy</cite>
         </blockquote>
       </section>
 
