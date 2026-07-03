@@ -96,17 +96,17 @@ export const FairScientificData: React.FC = () => {
           </table>
         </div>
         <p className="text-gov-secondary/90 leading-relaxed">
-          Datasets are overwhelmingly findable and mostly accessible, but not one of the 1,738 is interoperable or AI-ready. Across the whole corpus, 100% lack a machine-readable schema, 100% lack checksums and machine-readable provenance, and about 80% lack a version. FAIR breaks precisely at the machine-readable structural and provenance layer that automated assembly, trust and AI reuse depend on. Every DOI, HTTP status and per-dataset result is recorded in the repository, so the analysis is fully reproducible.
+          Datasets are overwhelmingly findable and mostly accessible, but not one of the 1,738 is interoperable or AI-ready. The whole corpus is missing the machine-readable structural and provenance layer that automated assembly, trust and AI reuse depend on: no dataset carries a machine-readable schema, integrity checksums, or provenance, and about 80% lack a version identifier. Every DOI, HTTP status and per-dataset result is recorded in the repository, so the analysis is fully reproducible.
         </p>
       </section>
 
       <section className="space-y-4">
         <h2 className="text-2xl font-bold text-gov-dark font-serif">The remedy: an open, certified ontology</h2>
         <p className="text-gov-secondary/90 leading-relaxed">
-          Measuring the gap is not enough, so we built the model that fills it: an OWL 2 ontology (<code>far:</code>, the FAIR AI-Ready Dataset ontology) that defines what a dataset needs to be a reusable, AI-ready data product, a machine-readable schema, provenance, integrity checks, a data dictionary, an ethics basis and access specification. Rather than reinvent vocabulary, it composes and aligns to existing standards, with 44 mappings to schema.org, W3C DCAT and PROV-O, SPDX, Bioschemas and MLCommons Croissant. The SHACL tiers are its validation layer, so the diagnostic and the remedy are one coherent artifact.
+          Measuring the gap is not enough, so we built the model that fills it: an OWL 2 ontology (<code>far:</code>, the FAIR AI-Ready Dataset ontology) that defines what a dataset needs to be a reusable, AI-ready data product, a machine-readable schema, provenance, integrity checks, a data dictionary, an ethics basis and access specification. Rather than reinvent vocabulary, it composes and aligns to existing standards, with 42 alignment mappings to schema.org, W3C DCAT and PROV-O, SPDX, Bioschemas and MLCommons Croissant. The SHACL tiers are its validation layer, so the diagnostic and the remedy are one coherent artifact.
         </p>
         <p className="text-gov-secondary/90 leading-relaxed">
-          The ontology is certified through our open-source Open Ontologies engine: it validates cleanly, passes governance linting with zero issues, and is logically consistent under OWL reasoning.
+          The ontology is checked through our open-source Open Ontologies engine: it validates cleanly and, under OWL-RL reasoning (238 asserted triples closing to 705 inferred), surfaces no logical inconsistencies.
         </p>
       </section>
 

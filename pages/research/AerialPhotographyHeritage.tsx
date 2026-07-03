@@ -9,7 +9,7 @@ const SCHEMA = {
   mainEntityOfPage: 'https://gov.tesseract.academy/research/computation-ready-aerial-heritage',
   headline: 'From Digitised to Computable: An Open Standard for Aerial Photography Heritage',
   description:
-    'A worked, open-source demonstration that turns a national aerial photography collection from digitised to computable. 292 real frames harvested from the public NCAP Air Photo Finder catalogue, reprojected to WGS84 and validated against the NAPH standard at zero SHACL violations, with a published RiC-O to STAC crosswalk.',
+    'A worked, open-source demonstration that turns national aerial photography collections from digitised to computable. 292 real frames from the public NCAP Air Photo Finder catalogue (UK), plus the same standard applied unchanged to NAPL (Canada) and WHAIFinder (USA), all validated against the NAPH standard at zero SHACL violations, with a published RiC-O to STAC crosswalk.',
   author: { '@id': 'https://gov.tesseract.academy/#organization' },
   publisher: { '@id': 'https://gov.tesseract.academy/#organization' },
   datePublished: '2026-07-02',
@@ -70,7 +70,7 @@ export const AerialPhotographyHeritage: React.FC = () => {
           From Digitised to Computable: an Open Standard for Aerial Photography Heritage
         </h1>
         <p className="text-xl text-gov-secondary/90 leading-relaxed">
-          Most of the UK's heritage is digitised but not computable. It is scanned, catalogued and on a map, yet a researcher still cannot query it at scale. This is a worked, fully open demonstration of how we close that gap for one collection type done properly, tested against a real national archive.
+          Most of the UK's heritage is digitised but not computable. It is scanned, catalogued and on a map, yet a researcher still cannot query it at scale. This is a worked, fully open demonstration of how we close that gap for one collection type done properly, tested against real national archives in the UK, Canada and the United States.
         </p>
       </header>
 
@@ -112,7 +112,7 @@ export const AerialPhotographyHeritage: React.FC = () => {
         <figure className="rounded-xl overflow-hidden border border-gov-border/50">
           <img src="/case-studies/aerial-map-choropleth.png" alt="World choropleth of NCAP's georeferenced frames by country, on a log scale. The United Kingdom, France and Germany are densest; the reach also covers Iran, China, South Africa, Nigeria, the Caribbean, Australia and more, spanning five continents." className="w-full" />
           <figcaption className="text-sm text-gov-secondary px-4 py-3 bg-gov-bg">
-            The georeferenced, mapped subset of NCAP already reaches 35+ countries across five continents (log scale; densest countries are cluster-capped, so shown as lower bounds). Our 292-record sample is a small, deliberately stratified slice of this index.
+            The georeferenced, mapped subset of NCAP already reaches dozens of countries across multiple continents (log scale; densest countries are cluster-capped, so shown as lower bounds). Our 292-record sample is a small, deliberately stratified slice of this index.
           </figcaption>
         </figure>
         <div className="overflow-x-auto">
@@ -160,6 +160,54 @@ export const AerialPhotographyHeritage: React.FC = () => {
             One sortie, frame by frame: a 1924 reconnaissance run over Hong Kong, its footprints reprojected to WGS84 and each linked to its full catalogue record.
           </figcaption>
         </figure>
+      </section>
+
+      <section className="space-y-6">
+        <h2 className="text-2xl font-bold text-gov-dark font-serif">One standard, three national collections, three continents</h2>
+        <p className="text-gov-secondary leading-relaxed">
+          A standard tested against a single archive risks being quietly shaped around it. So we put the same question to two more national collections on two more continents, and changed nothing but the thin harvester that reads each catalogue. The ontology, the SHACL shapes and the RiC-O to STAC crosswalk stayed identical. All three lift to the same NAPH Baseline at <strong>zero SHACL violations</strong>, and the interesting result is that each collection is missing a <em>different</em> Baseline piece, which is exactly what a shared standard exists to normalise.
+        </p>
+        <figure className="rounded-xl overflow-hidden border border-gov-border/50">
+          <img src="/case-studies/aerial-real-demo-three-country.png" alt="World map showing three national aerial photography collections harvested live and lifted to one NAPH Baseline: NCAP (United Kingdom) in teal, NAPL (Canada) in red, and WHAIFinder (United States, Wisconsin) in amber. Same ontology, shapes and crosswalk across all three; only the harvester differs." className="w-full" />
+          <figcaption className="text-sm text-gov-secondary px-4 py-3 bg-gov-bg">
+            Three national collections, one standard: NCAP (UK), NAPL (Canada) and WHAIFinder (USA), each harvested live from public endpoints and validated against the identical NAPH Baseline at zero SHACL violations.
+          </figcaption>
+        </figure>
+        <div className="overflow-x-auto">
+          <table className="w-full text-sm border-collapse">
+            <thead>
+              <tr className="bg-gov-bg border-b border-gov-border">
+                <th className="text-left px-4 py-3 font-semibold text-gov-dark">Collection</th>
+                <th className="text-left px-4 py-3 font-semibold text-gov-dark">Real records tested</th>
+                <th className="text-left px-4 py-3 font-semibold text-gov-dark">The one Baseline piece it lacks</th>
+                <th className="text-left px-4 py-3 font-semibold text-gov-dark">Single closing transform</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="border-b border-gov-border/50 bg-white">
+                <td className="px-4 py-3 font-medium text-gov-dark">NCAP, United Kingdom<br /><span className="text-gov-secondary font-normal">Historic Environment Scotland</span></td>
+                <td className="px-4 py-3 text-gov-secondary">292 frames (1924&ndash;1956), frame-level</td>
+                <td className="px-4 py-3 text-gov-secondary">Machine-readable rights (0%)</td>
+                <td className="px-4 py-3 text-gov-secondary">Reproject footprint EPSG:3857 to WGS84</td>
+              </tr>
+              <tr className="border-b border-gov-border/50 bg-gov-bg/40">
+                <td className="px-4 py-3 font-medium text-gov-dark">NAPL, Canada<br /><span className="text-gov-secondary font-normal">Natural Resources Canada</span></td>
+                <td className="px-4 py-3 text-gov-secondary">40 dated mosaics across 8 regions (1932&ndash;2004)</td>
+                <td className="px-4 py-3 text-gov-secondary">Frame-level granularity (publishes regional mosaics)</td>
+                <td className="px-4 py-3 text-gov-secondary">None for geometry: footprints are native WGS84, rights already present (OGL-Canada)</td>
+              </tr>
+              <tr className="border-b border-gov-border/50 bg-white">
+                <td className="px-4 py-3 font-medium text-gov-dark">WHAIFinder, United States<br /><span className="text-gov-secondary font-normal">UW-Madison / Wisconsin SCO</span></td>
+                <td className="px-4 py-3 text-gov-secondary">225 frames (1937&ndash;1967, public-domain USDA)</td>
+                <td className="px-4 py-3 text-gov-secondary">Polygon geometry (publishes a centerpoint, not an area)</td>
+                <td className="px-4 py-3 text-gov-secondary">Reconstruct footprint closed-form from centerpoint plus map scale</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p className="text-gov-secondary leading-relaxed">
+          The UK collection has frame-level detail but no machine-readable rights; Canada's open subset has rights and native WGS84 but publishes mosaics; the US index has rights and frames but only a centerpoint. Three collections, three different gaps, one unchanged standard that makes each gap precise and automatable instead of leaving every archive to describe itself in its own vocabulary. That is the portability claim demonstrated, not asserted.
+        </p>
       </section>
 
       <section className="space-y-6">

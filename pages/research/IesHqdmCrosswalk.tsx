@@ -36,6 +36,45 @@ const DELIVERABLES = [
   { item: 'Reference pipeline', detail: 'Candidate generation and validation you can run against the live ontologies.' },
 ];
 
+const DIVERGENCES = [
+  {
+    kind: 'Trap',
+    pair: 'ies:Event vs hqdm:event',
+    detail: 'A name matcher aligns these first and gets it backwards. ies:Event is a durative happening with participants, so its true counterpart is hqdm:activity; hqdm:event is a zero-duration boundary point. Recorded as relatedMatch at confidence 0.25 purely to carry the warning.',
+  },
+  {
+    kind: 'Trap',
+    pair: 'ies:BoundingState vs hqdm:event',
+    detail: 'Both mark where a 4D extent begins and ends, so they are functionally equivalent, but in IES a boundary is a state and in HQDM it is a point event. A correspondence exists, but as a relatedMatch needing an EDOAL-style transformation, not a class equivalence.',
+  },
+  {
+    kind: 'Trap',
+    pair: 'ies:State vs hqdm:state',
+    detail: 'The semantics are close (mapped at 0.85), but ies:State is a top-level root class while hqdm:state is subsumed under spatio_temporal_extent. Any reasoning that relies on state being a spatio-temporal extent holds in HQDM but not from the IES class graph alone: a soundness trap over a naive union.',
+  },
+  {
+    kind: 'Convergence',
+    pair: 'ies:EventParticipant vs hqdm:participant',
+    detail: 'Not every notable pair is a trap. Both models independently make participation a state, not merely a relation, a deep agreement inherited from the shared BORO commitment. This is why the participation correspondences are among the strongest in the set, and where cross-model reasoning is safe.',
+  },
+  {
+    kind: 'Partial',
+    pair: 'ies:PossibleWorld vs hqdm:possible_world',
+    detail: 'The classes correspond (0.80), but the surrounding apparatus differs: how membership in a world is asserted, and whether worlds are themselves classified by a powertype. Mappings of the relations around possible worlds need case-by-case treatment.',
+  },
+  {
+    kind: 'Partial',
+    pair: 'The powertype stack',
+    detail: 'The class-of hierarchies line up at the root (ies:ClassOfElement vs hqdm:class_of_spatio_temporal_extent), but IES’s domain tree is shaped by intelligence and security use cases and HQDM’s by enterprise and engineering. Above the backbone the hierarchies stop being parallel and become a genuine matching problem.',
+  },
+];
+
+const DIVERGENCE_STYLES: Record<string, string> = {
+  Trap: 'bg-red-50 text-red-700 border border-red-200',
+  Convergence: 'bg-green-50 text-green-700 border border-green-200',
+  Partial: 'bg-amber-50 text-amber-700 border border-amber-200',
+};
+
 export const IesHqdmCrosswalk: React.FC = () => {
   return (
     <article className="max-w-4xl mx-auto px-6 lg:px-8 py-20 space-y-12">
@@ -119,9 +158,23 @@ export const IesHqdmCrosswalk: React.FC = () => {
         <div className="border-l-2 border-l-gov-blue pl-6">
           <h2 className="text-2xl font-bold text-gov-dark font-serif mb-3">A finding, not just a mapping</h2>
           <p className="text-gov-dark leading-relaxed">
-            A clean crosswalk is not one with no disagreements; it is one where the disagreements are named. The headline example: a name matcher aligns <code className="text-sm bg-gov-bg px-1.5 py-0.5 rounded">ies:Event</code> to <code className="text-sm bg-gov-bg px-1.5 py-0.5 rounded">hqdm:event</code> and gets it exactly backwards. In IES an Event is a happening with participants, so its true HQDM counterpart is <code className="text-sm bg-gov-bg px-1.5 py-0.5 rounded">hqdm:activity</code>; <code className="text-sm bg-gov-bg px-1.5 py-0.5 rounded">hqdm:event</code> is an instantaneous boundary point with no participants. A tool that maps them on the shared label corrupts the shared picture. The repository records this and five further divergences with evidence from both ontologies, which is where an implementer would otherwise silently get it wrong.
+            A clean crosswalk is not one with no disagreements; it is one where the disagreements are named. The headline example: a name matcher aligns <code className="text-sm bg-gov-bg px-1.5 py-0.5 rounded">ies:Event</code> to <code className="text-sm bg-gov-bg px-1.5 py-0.5 rounded">hqdm:event</code> and gets it exactly backwards. In IES an Event is a happening with participants, so its true HQDM counterpart is <code className="text-sm bg-gov-bg px-1.5 py-0.5 rounded">hqdm:activity</code>; <code className="text-sm bg-gov-bg px-1.5 py-0.5 rounded">hqdm:event</code> is an instantaneous boundary point with no participants. A tool that maps them on the shared label corrupts the shared picture. The repository records this and five further divergences with evidence from both ontologies, which is where an implementer would otherwise silently get it wrong. All six are set out below.
           </p>
         </div>
+        <div className="space-y-3">
+          {DIVERGENCES.map((d, i) => (
+            <div key={i} className="border border-gov-border/50 rounded-xl p-5 bg-white">
+              <div className="flex items-center gap-3 mb-2 flex-wrap">
+                <span className={`text-xs font-semibold uppercase tracking-wider px-2 py-0.5 rounded ${DIVERGENCE_STYLES[d.kind]}`}>{d.kind}</span>
+                <code className="text-sm font-semibold text-gov-dark">{d.pair}</code>
+              </div>
+              <p className="text-sm text-gov-secondary leading-relaxed">{d.detail}</p>
+            </div>
+          ))}
+        </div>
+        <p className="text-sm text-gov-secondary/90 leading-relaxed">
+          Three of these are traps a label matcher falls into, one is a convergence worth exploiting, and two mark where the hand-curated backbone ends and the automated alignment work begins. A clean crosswalk is not one with no divergences; it is one where the divergences are named.
+        </p>
       </section>
 
       <section className="space-y-4">
