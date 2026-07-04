@@ -8,7 +8,7 @@ const CATEGORY_ORDER: CaseStudyCategory[] = ['delivery', 'open-demo'];
 
 const CATEGORY_BLURB: Record<CaseStudyCategory, string> = {
   'delivery': 'Contracts commissioned by government and government-funded programmes.',
-  'open-demo': 'Self-initiated, fully reproducible open demonstrations and standards, built on public data.',
+  'open-demo': 'Our self-funded research programme: open standards, evidence bases and reference implementations built on public data, published in full for independent verification and reuse.',
 };
 
 const UseCaseItem: React.FC<{ data: CaseStudy }> = ({ data }) => {

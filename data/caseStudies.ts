@@ -18,7 +18,7 @@ export interface CaseStudy {
 
 export const CATEGORY_LABELS: Record<CaseStudyCategory, string> = {
   'delivery': 'Commissioned delivery',
-  'open-demo': 'Open demonstrations & standards',
+  'open-demo': 'Tesseract Foundational Research',
 };
 
 export const CASE_STUDIES: CaseStudy[] = [
@@ -80,7 +80,7 @@ export const CASE_STUDIES: CaseStudy[] = [
   {
     id: 'uc5',
     slug: '/research/wastewater-effluent-data-quality',
-    title: 'Wastewater Effluent Data Quality (Open-Data Demonstration)',
+    title: 'Wastewater Effluent Data Quality',
     category: 'open-demo',
     challenge: 'The UK is rolling out continuous water-quality monitoring on wastewater assets under the Environment Act 2021, and the Environment Agency is exploring whether that data can serve as a regulatory tool. The binding question is data quality: calibration drift, fouled probes, telemetry gaps and transcription errors all masquerade as real signals.',
     intervention: 'Analysed a full-scale wastewater treatment works dataset of 1,382 daily records carrying the regulated effluent suite (ammonia, BOD, COD, total nitrogen, inflow, outflow). Applied a two-layer method: a statistical QA battery (completeness, flatline, robust MAD outliers, drift) and a declarative ISO 19156 / SOSA effluent ontology with SHACL data-quality rules, including the domain-aware COD ≥ BOD physical invariant.',
@@ -91,7 +91,7 @@ export const CASE_STUDIES: CaseStudy[] = [
   {
     id: 'uc-aerial',
     slug: '/research/computation-ready-aerial-heritage',
-    title: 'Computation-Ready Aerial Photography Heritage (Open-Data Demonstration)',
+    title: 'Computation-Ready Aerial Photography Heritage',
     category: 'open-demo',
     challenge: 'Most of the UK\'s heritage is digitised but not computable. Aerial photography collections holding tens of millions of frames are scanned, catalogued and mapped, yet a researcher cannot query them at scale by space and time or cross-reference them to other archives. This is the gap the Towards a National Collection programme (AHRC / UKRI) and its N-RICH work set out to close.',
     intervention: 'Built NAPH, an open computation-ready digitisation standard for aerial photography, assembled from existing standards (GeoSPARQL, PROV-O, Dublin Core, IIIF, Records in Contexts) across three incrementally-adoptable tiers. Tested it against a real national archive: harvested 292 real frames from the public NCAP Air Photo Finder catalogue (metadata only, read-only, rate-limited), reprojected footprints from EPSG:3857 to WGS84, and lifted them to the Baseline tier automatically.',
@@ -102,7 +102,7 @@ export const CASE_STUDIES: CaseStudy[] = [
   {
     id: 'uc7',
     slug: '/research/agri-environment-heritage-value',
-    title: 'The Value of Agri-Environment Heritage Actions (Open-Data Demonstration)',
+    title: 'The Value of Agri-Environment Heritage Actions',
     category: 'open-demo',
     challenge: 'Agri-environment schemes are the largest source of government funding for the rural historic environment, yet the wider co-benefits of heritage actions, for nature and for people, are real but evidentially fragmented. As nature recovery is delivered faster and under tighter budgets, heritage actions risk being overlooked unless that value can be evidenced.',
     intervention: 'A self-initiated, open demonstration built entirely on public data: a pre-specified scoping-review protocol on Natural England\'s own evidence-review method (NEER001), PRISMA-ScR and the Collaboration for Environmental Evidence guidelines; a charting framework linking each heritage action to its co-benefits, EIP targets and indicative value for money (Green Book, ENCA); and our own spatial analysis of the Historic England Heritage at Risk Register 2024.',
@@ -135,7 +135,7 @@ export const CASE_STUDIES: CaseStudy[] = [
   {
     id: 'uc-fair',
     slug: '/research/fair-scientific-data',
-    title: 'FAIR Dataset Contracts for Scientific Data (Open-Data Demonstration)',
+    title: 'FAIR Dataset Contracts for Scientific Data',
     category: 'open-demo',
     challenge: 'Scientific data is widely described as FAIR (Findable, Accessible, Interoperable, Reusable), but the claim is rarely tested at scale against a machine-checkable contract, and "AI-ready" is asserted more often than it is evidenced. Without a measurable baseline, funders and repositories cannot see where the real gap is.',
     intervention: 'A self-initiated, open study of 1,738 real public biomedical datasets across three repositories (EMBL-EBI BioStudies, Dryad, PRIDE), validated against a tiered FAIRSCAPE contract. Paired with an open, open-ontologies-certified OWL ontology that models the AI-ready dataset layer, aligned to schema.org, DCAT, PROV-O, SPDX, Bioschemas and MLCommons Croissant.',
@@ -146,7 +146,7 @@ export const CASE_STUDIES: CaseStudy[] = [
   {
     id: 'uc-connective',
     slug: '/research/connective-product-cyber-incidents',
-    title: 'Cyber Incidents Affecting Connective Products (Open Evidence Base)',
+    title: 'Cyber Incidents Affecting Connective Products',
     category: 'open-demo',
     challenge: 'Policy on the security of connective products (IoT, operational technology, computing devices, networking equipment, and software and firmware) is set against headline incident numbers that cannot be reconciled: no shared denominator, non-additive definitions, and vendor telemetry that is never quantified. The field lacks an honest, machine-readable baseline.',
     intervention: 'A self-initiated, open, machine-readable evidence base built on real public sources: 16 documented incidents (2022 to 2025) across five technology groups, each traced to an authoritative primary source and CVE-referenced where a CVE exists, published with a SKOS taxonomy and a source-quality grading rubric aligned to the six UK Government Data Quality Framework dimensions.',
