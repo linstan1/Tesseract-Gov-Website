@@ -53,7 +53,7 @@ const PAGE_META: Record<string, { title: string; description: string }> = {
   },
   '/research': {
     title: 'Research & Publications | Tesseract Government Gateway',
-    description: 'Academic publications, government-commissioned research, and open-source tools. Welsh Government land valuation report, Alan Turing Institute cybersecurity research, NDTP ontology tools.',
+    description: 'Tesseract Foundational Research programme, academic publications and open-source tools. Welsh Government land valuation report, Alan Turing Institute cybersecurity research, NDTP ontology tools.',
   },
   '/partnerships': {
     title: 'Consortium Partnerships - Innovate UK & Horizon Europe | Tesseract Government Gateway',

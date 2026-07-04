@@ -1,6 +1,7 @@
-// Single source of truth for delivery case studies.
-// Rendered as the portfolio on /use-cases (grouped by category) and cross-linked
-// from /research. Each entry's detail page lives at its `slug` (/research/<slug>).
+// Single source of truth for case studies.
+// 'delivery' entries render on /use-cases; 'open-demo' entries render as the
+// Tesseract Foundational Research section on /research. Each entry's detail
+// page lives at its `slug` (/research/<slug>).
 
 export type CaseStudyCategory = 'delivery' | 'open-demo';
 

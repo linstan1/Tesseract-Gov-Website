@@ -34,7 +34,7 @@ const PAGE_META = {
   },
   '/research': {
     title: 'Research & Publications | Tesseract Government Gateway',
-    description: 'Government-commissioned research and academic publications. Cited by Skills England alongside The Alan Turing Institute. Welsh Government land valuation report published on GOV.WALES March 2026.',
+    description: 'Tesseract Foundational Research programme, government-commissioned research and academic publications. Cited by Skills England alongside The Alan Turing Institute. Welsh Government land valuation report published on GOV.WALES March 2026.',
   },
   '/partnerships': {
     title: 'Consortium Partnerships - Innovate UK & Horizon Europe | Tesseract Government Gateway',

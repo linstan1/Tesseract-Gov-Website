@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
+import { CaseStudyItem } from '../components/CaseStudyItem';
+import { CASE_STUDIES, CATEGORY_LABELS } from '../data/caseStudies';
 
 export const Research: React.FC = () => {
   return (
@@ -19,15 +21,29 @@ export const Research: React.FC = () => {
         </p>
       </section>
 
+      <section className="space-y-6">
+        <div className="border-b border-gov-border/30 pb-4">
+          <h2 className="text-3xl font-bold text-gov-dark">{CATEGORY_LABELS['open-demo']}</h2>
+          <p className="text-sm text-gov-secondary mt-2 max-w-4xl">
+            Our self-funded research programme: open standards, evidence bases and reference implementations built on public data, published in full for independent verification and reuse. Each project ships with a complete write-up covering challenge, intervention, assurance and reusable assets.
+          </p>
+        </div>
+        <div className="space-y-6">
+          {CASE_STUDIES.filter(cs => cs.category === 'open-demo').map(cs => (
+            <CaseStudyItem key={cs.id} data={cs} />
+          ))}
+        </div>
+      </section>
+
       <section className="bg-gov-blue/5 border border-gov-blue/20 p-8 rounded-xl flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
         <div>
-          <h2 className="text-xl font-bold text-gov-dark mb-1">Delivery &amp; open-demonstration case studies</h2>
+          <h2 className="text-xl font-bold text-gov-dark mb-1">Commissioned delivery case studies</h2>
           <p className="text-sm text-gov-secondary max-w-2xl">
-            Commissioned contracts and self-initiated open demonstrations, each with a full write-up: challenge, intervention, assurance and reusable assets.
+            Contracts commissioned by government and government-funded programmes, each with a full write-up: challenge, intervention, assurance and reusable assets.
           </p>
         </div>
         <Link to="/use-cases" className="inline-flex items-center gap-1.5 text-sm font-semibold text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors flex-shrink-0">
-          See all case studies <ArrowRight className="w-4 h-4" />
+          See all delivery case studies <ArrowRight className="w-4 h-4" />
         </Link>
       </section>
 
