@@ -30,6 +30,7 @@ import { AesHeritage } from './pages/research/AesHeritage';
 import { ConnectiveProductCyberIncidents } from './pages/research/ConnectiveProductCyberIncidents';
 import { FairScientificData } from './pages/research/FairScientificData';
 import { IesHqdmCrosswalk } from './pages/research/IesHqdmCrosswalk';
+import { Ies4TurtleLanguageModel } from './pages/research/Ies4TurtleLanguageModel';
 import { PyramidBridge } from './pages/research/PyramidBridge';
 import { NatureSecurityRisk } from './pages/research/NatureSecurityRisk';
 import { Glossary } from './pages/Glossary';
@@ -67,6 +68,7 @@ const SSRApp: React.FC = () => (
         <Route path="/research/connective-product-cyber-incidents" element={<ConnectiveProductCyberIncidents />} />
         <Route path="/research/fair-scientific-data" element={<FairScientificData />} />
         <Route path="/research/ies-hqdm-defence-interoperability" element={<IesHqdmCrosswalk />} />
+        <Route path="/research/ies4-turtle-language-model" element={<Ies4TurtleLanguageModel />} />
         <Route path="/research/pyramid-ies-hqdm-semantic-bridge" element={<PyramidBridge />} />
         <Route path="/research/nature-related-security-risk" element={<NatureSecurityRisk />} />
         <Route path="/glossary" element={<Glossary />} />

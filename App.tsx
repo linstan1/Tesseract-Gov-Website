@@ -23,6 +23,7 @@ const AesHeritage = lazy(() => import('./pages/research/AesHeritage').then(m => 
 const ConnectiveProductCyberIncidents = lazy(() => import('./pages/research/ConnectiveProductCyberIncidents').then(m => ({ default: m.ConnectiveProductCyberIncidents })));
 const FairScientificData = lazy(() => import('./pages/research/FairScientificData').then(m => ({ default: m.FairScientificData })));
 const IesHqdmCrosswalk = lazy(() => import('./pages/research/IesHqdmCrosswalk').then(m => ({ default: m.IesHqdmCrosswalk })));
+const Ies4TurtleLanguageModel = lazy(() => import('./pages/research/Ies4TurtleLanguageModel').then(m => ({ default: m.Ies4TurtleLanguageModel })));
 const PyramidBridge = lazy(() => import('./pages/research/PyramidBridge').then(m => ({ default: m.PyramidBridge })));
 const NatureSecurityRisk = lazy(() => import('./pages/research/NatureSecurityRisk').then(m => ({ default: m.NatureSecurityRisk })));
 const Glossary = lazy(() => import('./pages/Glossary').then(m => ({ default: m.Glossary })));
@@ -106,6 +107,10 @@ const PAGE_META: Record<string, { title: string; description: string }> = {
   '/research/ies-hqdm-defence-interoperability': {
     title: 'IES to HQDM: an open 4D ontology crosswalk for defence data | Tesseract Government Gateway',
     description: 'The first public crosswalk between the UK Information Exchange Standard (IES) and HQDM, two 4D upper ontologies. Open SSSOM and RDF correspondences, a curated divergences record, SHACL validation, and a worked SAPIENT-node safety case grounding autonomy in IES-typed world states. Supports the Defence Investment Plan interoperability and autonomy-assurance agenda.',
+  },
+  '/research/ies4-turtle-language-model': {
+    title: 'An open language model for IES4 data | Tesseract Government Gateway',
+    description: 'To our knowledge the first openly published language model fine-tuned for IES4, the UK 4D defence-data ontology. Against the untuned base model, IES term conformance rises from 0% to 88.6% and the hallucinated-term rate falls from 0.937 to 0.010, on correct-by-construction training data double-validated against the published dstl/IES4 ontology. Model, dataset and evaluation harness released open for reproduction.',
   },
   '/research/pyramid-ies-hqdm-semantic-bridge': {
     title: 'Grounding a PYRAMID avionics bridge in IES and HQDM | Tesseract Government Gateway',
@@ -212,6 +217,7 @@ const App: React.FC = () => {
               <Route path="/research/connective-product-cyber-incidents" element={<ConnectiveProductCyberIncidents />} />
               <Route path="/research/fair-scientific-data" element={<FairScientificData />} />
               <Route path="/research/ies-hqdm-defence-interoperability" element={<IesHqdmCrosswalk />} />
+              <Route path="/research/ies4-turtle-language-model" element={<Ies4TurtleLanguageModel />} />
               <Route path="/research/pyramid-ies-hqdm-semantic-bridge" element={<PyramidBridge />} />
               <Route path="/research/nature-related-security-risk" element={<NatureSecurityRisk />} />
               <Route path="/glossary" element={<Glossary />} />

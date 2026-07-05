@@ -134,6 +134,17 @@ export const CASE_STUDIES: CaseStudy[] = [
     reusable: 'The grounding pattern transfers to any PYRAMID or FACE inter-component bridge, and to any MOSA reference architecture that leaves cross-component data meaning to a bridge layer.',
   },
   {
+    id: 'uc-ies-llm',
+    slug: '/research/ies4-turtle-language-model',
+    title: 'An Open Language Model for IES4 Data',
+    category: 'open-demo',
+    challenge: 'The Information Exchange Standard (IES) is the 4D ontology behind UK defence and security data, but authoring IES-conformant RDF by hand is slow and demands scarce ontology expertise. General-purpose language models cannot help: asked to write IES Turtle, a strong 30B code model invents terms that do not exist in the ontology 94% of the time. That hallucination is worse than useless in a standards context, because invalid data that looks plausible is harder to catch than data that fails outright.',
+    intervention: 'A self-initiated, open fine-tune: to our knowledge the first openly published language model trained specifically for IES4. The training data is correct-by-construction, every example graph generated programmatically with the telicent-ies-tool across 14 scenario patterns (employment, events, identifiers, communications, composites and more), then double-validated against the published dstl/IES4 ontology (510 classes, 204 properties) before any training. A LoRA adapter was trained on Qwen3-Coder-30B-A3B on-device (Apple Silicon, MLX), with a held-out out-of-distribution test set drawn from the real published IES sample data.',
+    assurance: 'Measured against the untuned base model on held-out prompts: IES4 term conformance rose from 0% to 88.6%, the hallucinated-term rate fell from 0.937 to 0.010, structural conformance (subject and object types satisfying each property domain and range) reached 0.955, and the model follows a caller-supplied namespace 100% of the time. Every metric, including the weaker out-of-distribution results, is reported honestly in the model card. The full evaluation harness and dataset are published for independent reproduction.',
+    outcome: 'A working assistant for IES data authoring, released as a research prototype with its dataset and eval code, so the small community that works with IES has a concrete starting point rather than a closed demo. It pairs naturally with the IES-to-HQDM crosswalk and the open-ontologies validation engine: the model drafts, the symbolic layer verifies.',
+    reusable: 'The correct-by-construction method (generate valid graphs with a schema-aware tool, then reverse them into natural-language and machine-readable training pairs) transfers to any ontology with a programmatic builder. The term-membership and structural-conformance validators transfer to any IES or RDF quality gate.',
+  },
+  {
     id: 'uc-fair',
     slug: '/research/fair-scientific-data',
     title: 'FAIR Dataset Contracts for Scientific Data',
