@@ -681,6 +681,144 @@ export const SkillsEnglandOccupationalMaps: React.FC = () => {
         </section>
       )}
 
+      {/* Article: the SEOM ontology write-up */}
+      <section aria-label="About the ontology" className="max-w-4xl space-y-10">
+        <div className="space-y-4">
+          <h2 className="text-3xl font-bold text-gov-dark font-serif">The occupational maps, as a graph</h2>
+          <p className="text-lg text-gov-secondary/90 leading-relaxed">
+            Skills England publishes the national occupational maps through a public API: occupational standards
+            arranged into routes, pathways and clusters, each carrying a Standard Occupational Classification mapping,
+            apprenticeship and technical education products, and a green-jobs classification, with progression
+            relationships between occupations. That is a graph. Delivered as JSON over REST endpoints it reads as
+            documents, and consumed the usual way a slice of it ends up flattened into a spreadsheet where the
+            relationships that make it valuable are lost.
+          </p>
+          <p className="text-lg text-gov-secondary/90 leading-relaxed">
+            We turned the whole thing into what it already is: a single, connected, machine-readable graph. Every
+            occupational standard is a node; its route, pathway, cluster, technical level, status, SOC codes, products,
+            green themes and progression targets are typed edges. The result is 51,355 statements that validate against
+            a formal SHACL schema with zero violations, published openly as Turtle and JSON-LD.
+          </p>
+        </div>
+
+        <div className="overflow-x-auto">
+          <table className="w-full text-sm border border-gov-border/60 rounded-xl overflow-hidden">
+            <thead className="bg-gov-bg">
+              <tr>
+                <th className="text-left font-semibold text-gov-dark px-4 py-3">In the graph</th>
+                <th className="text-right font-semibold text-gov-dark px-4 py-3">Count</th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-gov-border/50">
+              {[
+                ['Occupational standards', '1,269'],
+                ['Routes, pathways, clusters', '15 / 35 / 172'],
+                ['SOC 2020 concepts (crosswalk)', '278'],
+                ['SOC 2010 concepts (crosswalk)', '246'],
+                ['Technical education products', '1,313'],
+                ['Green themes (occupation links)', '8 (231)'],
+                ['Progression edges', '2,717'],
+                ['Total triples', '51,355'],
+                ['SHACL validation', '0 violations'],
+              ].map(([k, v]) => (
+                <tr key={k} className="bg-gov-bg-alt">
+                  <td className="px-4 py-2.5 text-gov-dark">{k}</td>
+                  <td className="px-4 py-2.5 text-right tabular-nums font-medium text-gov-dark">{v}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        <div className="space-y-4">
+          <h3 className="text-xl font-bold text-gov-dark font-serif">The challenge</h3>
+          <p className="text-gov-dark/90 leading-relaxed">
+            Occupational standards sit at the join between three systems that rarely share a data model: the education
+            system (apprenticeships, T Levels, Higher Technical Qualifications), the labour market (ONS Standard
+            Occupational Classification, used for every official statistic on jobs and pay), and skills policy (routes,
+            clusters, green-jobs themes). The occupational maps are the object that connects them, which is exactly why
+            they are hard to use well. The data is relational but the delivery is document-shaped; there is no published
+            schema for the connected object, so every consumer re-invents one; and the SOC crosswalk, the single most
+            useful bridge to official labour-market statistics, is buried inside each record rather than exposed as a
+            first-class mapping.
+          </p>
+        </div>
+
+        <div className="space-y-4">
+          <h3 className="text-xl font-bold text-gov-dark font-serif">How we built it</h3>
+          <p className="text-gov-dark/90 leading-relaxed">
+            We harvested a complete static snapshot of the Public API under the Open Government Licence and modelled it
+            as an ontology. Three design choices make it trustworthy and reusable. First, the map is modelled as it is
+            defined: the Route to Pathway to Cluster hierarchy is a SKOS concept scheme, so it can be browsed and
+            reasoned over like any controlled vocabulary. Second, the SOC crosswalk is a first-class citizen: every
+            distinct SOC 2010 and 2020 code becomes a concept in its own scheme, and each occupation carries an explicit
+            mapping edge, so the bridge from standards to ONS statistics is a single query rather than a bespoke join.
+            Third, the graph is constraint-checked, not just serialised: a SHACL shapes file states what a well-formed
+            occupation, product and SOC concept must look like, and the graph is validated against it, and against
+            referential-integrity checks, on every build.
+          </p>
+        </div>
+
+        <div className="space-y-4">
+          <h3 className="text-xl font-bold text-gov-dark font-serif">Assurance</h3>
+          <p className="text-gov-dark/90 leading-relaxed">
+            The graph conforms to the SHACL shapes with zero violations across all 51,355 triples, and passes four
+            referential-integrity checks: no occupation without a route, no progression edge to a non-occupation, no
+            green-theme link to a non-theme, and no SOC reference without a notation. Every one of the 1,269 standards is
+            fully placed in the map (route, pathway, cluster and technical level all present); 1,079 (85%) carry a SOC
+            2020 mapping. The whole pipeline is reproducible: one script rebuilds the graph from the snapshot, another
+            re-runs validation and the coverage report.
+          </p>
+        </div>
+
+        <div className="space-y-4">
+          <h3 className="text-xl font-bold text-gov-dark font-serif">Why an open ontology matters for the skills system</h3>
+          <p className="text-gov-dark/90 leading-relaxed">
+            The direction of travel in national skills policy is a single, authoritative, data-driven view of what the
+            country needs, one that can map the routes from courses and standards through to occupations, and reason
+            about skills demand sector by sector. Priority occupations for the industrial strategy are already identified
+            by SOC code; a new standardised skills classification links skills to occupations through the most detailed
+            level of SOC 2020; and the occupational maps themselves are published as free data behind a public API. The
+            missing layer is not more data. It is the connective tissue that makes the data computable: a typed,
+            validated graph in which routes, occupations, SOC codes, products and progression are first-class,
+            queryable objects rather than fields inside separate documents.
+          </p>
+          <p className="text-gov-dark/90 leading-relaxed">
+            That is what this ontology provides, and it is why we built it as an open artifact rather than an internal
+            tool. Because the SOC crosswalk is a first-class citizen, the maps snap directly onto the classification that
+            underpins every official statistic on jobs, pay and vacancies, and onto the emerging skills classification
+            layered on top of it. Questions that used to need bespoke code become single queries: the full progression
+            neighbourhood of any occupation, every standard that feeds a given SOC group, the apprenticeship and higher
+            technical offer under any green theme, or the occupations that sit across more than one route. It lets
+            employers, providers and analysts compute pathways, gaps and green-transition demand at scale instead of
+            reading pages one at a time.
+          </p>
+        </div>
+
+        <div className="space-y-4">
+          <h3 className="text-xl font-bold text-gov-dark font-serif">Open source, and free to reuse</h3>
+          <p className="text-gov-dark/90 leading-relaxed">
+            Everything here is open. The SEOM vocabulary, the full instance graph in Turtle and JSON-LD, the ONS SOC
+            2010 and 2020 crosswalk as standalone SKOS concept schemes, the SHACL shapes and the reproducible build and
+            validation scripts are all published on GitHub under an open licence, alongside the static snapshot they are
+            built from. Anyone can query it, extend it, align it to their own vocabularies, or regenerate it from a fresh
+            snapshot. We built it to be reused, and to show what the occupational maps become when they are treated as
+            the connected, standards-based, machine-readable evidence base the skills system is asking for.
+          </p>
+          <p>
+            <a
+              href={ONTOLOGY_REPO}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 text-sm font-semibold text-gov-blue hover:text-gov-blue-dark hover:underline"
+            >
+              Ontology, data and reproducible build on GitHub
+              <ExternalLink className="w-4 h-4" />
+            </a>
+          </p>
+        </div>
+      </section>
+
       {/* How this works */}
       <section className="bg-gov-bg border border-gov-border/50 rounded-xl p-8">
         <h2 className="text-xl font-bold text-gov-dark mb-3 font-serif flex items-center gap-2">
