@@ -6,7 +6,7 @@ const COMPANY_DATA = {
   "@id": "https://gov.tesseract.academy/#organization",
   "legalName": "Kampakis and Co Ltd",
   "tradingName": "The Tesseract Academy",
-  "alternateName": "Tesseract Government Gateway",
+  "alternateName": "Tesseract Academy for the Public Sector",
   "companyNumber": "10459791",
   "vatNumber": "GB 371 4744 89",
   "incorporationDate": "2016-11-02",

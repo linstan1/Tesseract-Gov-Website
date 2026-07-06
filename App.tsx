@@ -18,6 +18,7 @@ const BridgeAI = lazy(() => import('./pages/research/BridgeAI').then(m => ({ def
 const Kalgera = lazy(() => import('./pages/research/Kalgera').then(m => ({ default: m.Kalgera })));
 const WastewaterDataQuality = lazy(() => import('./pages/research/WastewaterDataQuality').then(m => ({ default: m.WastewaterDataQuality })));
 const AerialPhotographyHeritage = lazy(() => import('./pages/research/AerialPhotographyHeritage').then(m => ({ default: m.AerialPhotographyHeritage })));
+const ZeroEmissionAviation = lazy(() => import('./pages/research/ZeroEmissionAviation').then(m => ({ default: m.ZeroEmissionAviation })));
 const WrapFoodWaste = lazy(() => import('./pages/research/WrapFoodWaste').then(m => ({ default: m.WrapFoodWaste })));
 const AesHeritage = lazy(() => import('./pages/research/AesHeritage').then(m => ({ default: m.AesHeritage })));
 const ConnectiveProductCyberIncidents = lazy(() => import('./pages/research/ConnectiveProductCyberIncidents').then(m => ({ default: m.ConnectiveProductCyberIncidents })));
@@ -38,131 +39,135 @@ const Insights = lazy(() => import('./pages/Insights').then(m => ({ default: m.I
 
 const PAGE_META: Record<string, { title: string; description: string }> = {
   '/': {
-    title: 'Tesseract Government Gateway - Research, AI & Public Sector Delivery Partner',
+    title: 'Tesseract Academy for the Public Sector - Research, AI & Public Sector Delivery Partner',
     description: 'Tesseract Academy delivers research-backed AI, data science, public engagement, survey design, and policy advisory services for UK and EU public sector organisations. Crown Commercial Service appointed supplier.',
   },
   '/how-to-buy': {
-    title: 'How to Buy - Procurement Routes | Tesseract Government Gateway',
+    title: 'How to Buy - Procurement Routes | Tesseract Academy for the Public Sector',
     description: 'Commission Tesseract Academy through Crown Commercial Service frameworks (RM6200, RM6094, RM6126, RM6219) or direct award. SME supplier for AI, research, training, and digital services.',
   },
   '/capabilities': {
-    title: 'Capabilities - AI, Research, Education & Survey Services | Tesseract Government Gateway',
+    title: 'Capabilities - AI, Research, Education & Survey Services | Tesseract Academy for the Public Sector',
     description: 'Policy-aligned advisory, rapid delivery, data and AI upskilling, and survey design services. Case studies include Welsh Government, BridgeAI, FCA, and US Navy executive training.',
   },
   '/use-cases': {
-    title: 'Use Cases - Public Sector Project Evidence | Tesseract Government Gateway',
+    title: 'Use Cases - Public Sector Project Evidence | Tesseract Academy for the Public Sector',
     description: 'Evidence of delivery across UK government contracts: Welsh Government land valuation, National Digital Twin Programme, BridgeAI creative industries AI, Kalgera financial vulnerability research.',
   },
   '/research': {
-    title: 'Research & Publications | Tesseract Government Gateway',
+    title: 'Research & Publications | Tesseract Academy for the Public Sector',
     description: 'Tesseract Foundational Research programme, academic publications and open-source tools. Welsh Government land valuation report, Alan Turing Institute cybersecurity research, NDTP ontology tools.',
   },
   '/partnerships': {
-    title: 'Consortium Partnerships - Innovate UK & Horizon Europe | Tesseract Government Gateway',
+    title: 'Consortium Partnerships - Innovate UK & Horizon Europe | Tesseract Academy for the Public Sector',
     description: 'Partner with Tesseract Academy on Innovate UK and Horizon Europe bids. Focus areas: trustworthy AI, digital twins, HealthTech, and sustainable technology.',
   },
   '/compliance': {
-    title: 'Compliance & Policies | Tesseract Government Gateway',
+    title: 'Compliance & Policies | Tesseract Academy for the Public Sector',
     description: 'Cyber Essentials certified, ISO 27001 aligned. Download our data protection, information security, modern slavery, carbon reduction, and accessibility policies.',
   },
   '/testimonials': {
-    title: 'Testimonials & Executive Training | Tesseract Government Gateway',
+    title: 'Testimonials & Executive Training | Tesseract Academy for the Public Sector',
     description: 'Client reviews and executive AI training case studies. Workshops delivered for US Navy (40+ participants), Vodafone, and Philips leadership teams. Verified Clutch reviews.',
   },
   '/about': {
-    title: 'About Us - Team, Credentials & Company Profile | Tesseract Government Gateway',
+    title: 'About Us - Team, Credentials & Company Profile | Tesseract Academy for the Public Sector',
     description: 'Meet the Tesseract Academy team: Dr Stylianos Kampakis (PhD UCL, FRSS, CStat) and Fabio Rovai MSc. CCS frameworks RM6200, RM6094, RM6126, RM6219. Cyber Essentials certified. DV-cleared resource available.',
   },
   '/research/welsh-government-land-valuation': {
-    title: 'Welsh Government Land Valuation Research | Tesseract Government Gateway',
+    title: 'Welsh Government Land Valuation Research | Tesseract Academy for the Public Sector',
     description: 'Tesseract Academy tested five land valuation methodologies across 1,916 Welsh LSOAs — 99% of Welsh geography — for Welsh Government. Published on GOV.WALES, March 2026. Informs local government finance policy.',
   },
   '/research/national-digital-twin-programme': {
-    title: 'AI Ontology Extension Generator — National Digital Twin Programme | Tesseract Government Gateway',
+    title: 'AI Ontology Extension Generator — National Digital Twin Programme | Tesseract Academy for the Public Sector',
     description: 'Tesseract Academy contributed to the open-source AI Ontology Extension Generator for the UK National Digital Twin Programme. Production-ready Streamlit app. Apache 2.0. Published on GitHub under National-Digital-Twin.',
   },
   '/research/bridgeai-creative-industries': {
-    title: 'BridgeAI: AI Adoption for UK Creative Industries | Tesseract Government Gateway',
+    title: 'BridgeAI: AI Adoption for UK Creative Industries | Tesseract Academy for the Public Sector',
     description: 'Tesseract Academy delivered the BridgeAI Skills Hub launch and AI readiness sessions under Innovate UK contract GSS24646. 1,100 registrations vs 200 target. Satisfaction rating 4.6 out of 5.',
   },
   '/research/kalgera-financial-vulnerability': {
-    title: 'Financial Vulnerability Research — Kalgera / Fintech Scotland | Tesseract Government Gateway',
+    title: 'Financial Vulnerability Research — Kalgera / Fintech Scotland | Tesseract Academy for the Public Sector',
     description: 'End-to-end qualitative research validating Kalgera\'s AI-driven financial vulnerability signals. A screening survey plus in-depth interviews mapped to 8 financial-vulnerability signals, under an ethical framework aligned with the Adult Support and Protection (Scotland) Act 2007.',
   },
   '/research/wastewater-effluent-data-quality': {
-    title: 'Wastewater Effluent Data Quality | Tesseract Government Gateway',
+    title: 'Wastewater Effluent Data Quality | Tesseract Academy for the Public Sector',
     description: 'Open-data demonstration of statistical and rule-based quality assurance for continuous wastewater effluent monitoring: 1,382 days of full-scale works data, SHACL rules including the COD >= BOD physical invariant. Open source via Open Ontologies.',
   },
   '/research/computation-ready-aerial-heritage': {
-    title: 'Computation-Ready Aerial Photography Heritage | Tesseract Government Gateway',
+    title: 'Computation-Ready Aerial Photography Heritage | Tesseract Academy for the Public Sector',
     description: 'From digitised to computable: an open standard for aerial photography heritage. 292 real NCAP frames harvested from the public catalogue, reprojected to WGS84 and validated at zero SHACL violations, with a published RiC-O to STAC crosswalk. Open source via Open Ontologies.',
   },
+  '/research/zero-emission-flight-ecosystem': {
+    title: 'Mapping the UK Zero-Emission Flight Ecosystem | Tesseract Academy for the Public Sector',
+    description: 'An open, SHACL-validated knowledge graph of the UK hydrogen and electric aviation ecosystem: 42 real entities and 55 relationships across organisations, airports, programmes, projects, funders and technologies, validated at zero SHACL violations with enforced referential integrity. Open source via Open Ontologies.',
+  },
   '/research/wrap-food-loss-waste-taxonomy': {
-    title: 'WRAP Food Loss and Waste Data Taxonomy | Tesseract Government Gateway',
+    title: 'WRAP Food Loss and Waste Data Taxonomy | Tesseract Academy for the Public Sector',
     description: 'Commissioned by WRAP (PRC228) to build a structured, machine-readable Food Loss and Waste data taxonomy: 5 coded dimensions and 84 entities in SKOS and JSON-LD, grounded in the FLW Standard, the WRAP Data Capture Sheet and Codex GSFA, supporting 400+ Courtauld Commitment 2030 organisations.',
   },
   '/research/fair-scientific-data': {
-    title: 'FAIR Dataset Contracts for Scientific Data | Tesseract Government Gateway',
+    title: 'FAIR Dataset Contracts for Scientific Data | Tesseract Academy for the Public Sector',
     description: 'An open study of 1,738 real public biomedical datasets across three repositories (EMBL-EBI BioStudies, Dryad, PRIDE): overwhelmingly findable and accessible, but 0% interoperable or AI-ready (100% lack a machine-readable schema, checksums and provenance). Paired with an open, tool-certified OWL ontology that models the AI-ready dataset layer. Open source and reproducible.',
   },
   '/research/ies-hqdm-defence-interoperability': {
-    title: 'IES to HQDM: an open 4D ontology crosswalk for defence data | Tesseract Government Gateway',
+    title: 'IES to HQDM: an open 4D ontology crosswalk for defence data | Tesseract Academy for the Public Sector',
     description: 'The first public crosswalk between the UK Information Exchange Standard (IES) and HQDM, two 4D upper ontologies. Open SSSOM and RDF correspondences, a curated divergences record, SHACL validation, and a worked SAPIENT-node safety case grounding autonomy in IES-typed world states. Supports the Defence Investment Plan interoperability and autonomy-assurance agenda.',
   },
   '/research/ies4-turtle-language-model': {
-    title: 'An open language model for IES4 data | Tesseract Government Gateway',
+    title: 'An open language model for IES4 data | Tesseract Academy for the Public Sector',
     description: 'To our knowledge the first openly published language model fine-tuned for IES4, the UK 4D defence-data ontology. Against the untuned base model, IES term conformance rises from 0% to 88.6% and the hallucinated-term rate falls from 0.937 to 0.010, on correct-by-construction training data double-validated against the published dstl/IES4 ontology. Model, dataset and evaluation harness released open for reproduction.',
   },
   '/research/pyramid-ies-hqdm-semantic-bridge': {
-    title: 'Grounding a PYRAMID avionics bridge in IES and HQDM | Tesseract Government Gateway',
+    title: 'Grounding a PYRAMID avionics bridge in IES and HQDM | Tesseract Academy for the Public Sector',
     description: 'PYRAMID (Def Stan 00-134) is an open avionics reference architecture with no shared data model; it pushes interoperability into inter-component bridges. A worked, open, SHACL-validated example grounds those bridges in the IES and HQDM 4D ontologies, so three PRA components (Geography, Tactical Objects, Data Fusion) that model the same object resolve to one referent. No prior work grounds PYRAMID in an upper ontology.',
   },
   '/research/agri-environment-heritage-value': {
-    title: 'The Value of Agri-Environment Heritage Actions | Tesseract Government Gateway',
+    title: 'The Value of Agri-Environment Heritage Actions | Tesseract Academy for the Public Sector',
     description: 'A self-initiated, open-data demonstration of how we evidence the wider value of agri-environment scheme heritage actions for nature and for people: a scoping-review framework on Natural England\'s NEER001 method, with a real spatial analysis of the 2,206 Scheduled Monuments on the Historic England Heritage at Risk Register 2024.',
   },
   '/research/connective-product-cyber-incidents': {
-    title: 'Cyber Incidents affecting Connective Products: an open evidence base | Tesseract Government Gateway',
+    title: 'Cyber Incidents affecting Connective Products: an open evidence base | Tesseract Academy for the Public Sector',
     description: 'A self-initiated, open, machine-readable evidence base of cyber incidents affecting connective products (IoT, operational technology, computing devices, networking equipment and software/firmware): 16 documented incidents (2022 to 2025), a SKOS taxonomy and a source-quality rubric aligned to the six Government Data Quality Framework dimensions, published on GitHub under CC-BY-4.0.',
   },
   '/research/nature-related-security-risk': {
-    title: 'Nature-Related Security Risk: an open evidence base and systems ontology | Tesseract Government Gateway',
+    title: 'Nature-Related Security Risk: an open evidence base and systems ontology | Tesseract Academy for the Public Sector',
     description: 'A self-initiated, open, machine-readable evidence base and systems ontology that operationalises the UK National Security Assessment on biodiversity loss and ecosystem collapse (2026): 14 documented nature-to-security cascades graded with the assessment\'s own confidence ratings, an OWL ontology (NSRO), a SKOS taxonomy cross-walked to IPBES and SHACL shapes, published on GitHub under CC-BY-4.0.',
   },
   '/research/skills-england-occupational-maps': {
-    title: 'The Skills England Occupational Maps as an Ontology | Tesseract Government Gateway',
+    title: 'The Skills England Occupational Maps as an Ontology | Tesseract Academy for the Public Sector',
     description: 'An open, machine-readable ontology and explorer of the Skills England occupational maps by Tesseract Academy: 1,269 occupational standards placed in the route, pathway and cluster hierarchy, crosswalked to ONS SOC 2010/2020, linked to apprenticeship and technical education products, green-jobs themes and progression pathways. 51,355 triples, published as Turtle and JSON-LD, validated at zero SHACL violations. Open Government Licence v3.0.',
   },
   '/glossary': {
-    title: 'AI & Procurement Glossary | Tesseract Government Gateway',
+    title: 'AI & Procurement Glossary | Tesseract Academy for the Public Sector',
     description: 'Definitions of 60+ AI, data science, and procurement terms used in UK public sector contracting. From Algorithmic Impact Assessment to Zero-Shot Learning.',
   },
   '/services/ai-consulting': {
-    title: 'AI Consulting for UK Public Sector | Tesseract Government Gateway',
+    title: 'AI Consulting for UK Public Sector | Tesseract Academy for the Public Sector',
     description: 'Custom AI model development, NLP, machine learning pipelines, and predictive analytics for UK public sector. CCS RM6200 appointed supplier. Aligned with GDS Service Standard.',
   },
   '/services/research-policy': {
-    title: 'Research & Policy Advisory | Tesseract Government Gateway',
+    title: 'Research & Policy Advisory | Tesseract Academy for the Public Sector',
     description: 'Evidence-based research design, systematic literature reviews, policy analysis, and regulatory consultation responses for UK government bodies. Published on GOV.WALES.',
   },
   '/services/public-engagement': {
-    title: 'Public Engagement & Participatory Research | Tesseract Government Gateway',
+    title: 'Public Engagement & Participatory Research | Tesseract Academy for the Public Sector',
     description: 'Deliberative workshops, citizen panels, inclusive co-design, and participatory research with diverse communities. Full ethical framework. CCS RM6126 appointed supplier.',
   },
   '/services/survey-design': {
-    title: 'Survey Design & Delivery for Public Sector | Tesseract Government Gateway',
+    title: 'Survey Design & Delivery for Public Sector | Tesseract Academy for the Public Sector',
     description: 'End-to-end survey methodology, questionnaire design, mixed-mode data collection, and statistical analysis. Qualifications Wales 3-year contract (2026-2029). CCS RM6126.',
   },
   '/services/education-upskilling': {
-    title: 'AI Education & Upskilling | Tesseract Government Gateway',
+    title: 'AI Education & Upskilling | Tesseract Academy for the Public Sector',
     description: 'AI literacy programmes, data science workshops, and executive leadership training for UK public sector. UK Government Business Academy partner. BridgeAI / Innovate UK programme delivery.',
   },
   '/services/ai-governance': {
-    title: 'AI Ethics & Governance | Tesseract Government Gateway',
+    title: 'AI Ethics & Governance | Tesseract Academy for the Public Sector',
     description: 'EU AI Act, NIST AI RMF, ISO 42001 compliance. Bias auditing, algorithmic impact assessments. Open-source governance platform with 48 governance tools. Cyber Essentials certified.',
   },
   '/insights': {
-    title: 'UK Public Sector AI Insights — Research Findings | Tesseract Government Gateway',
+    title: 'UK Public Sector AI Insights — Research Findings | Tesseract Academy for the Public Sector',
     description: 'Original research from Tesseract Academy: land valuation ML analysis across 1,916 Welsh LSOAs, BridgeAI 450% oversubscription, NDTP open-source ontology tooling. Evidence from UK government AI delivery 2022-2026.',
   },
 };
@@ -217,6 +222,7 @@ const App: React.FC = () => {
               <Route path="/research/kalgera-financial-vulnerability" element={<Kalgera />} />
               <Route path="/research/wastewater-effluent-data-quality" element={<WastewaterDataQuality />} />
               <Route path="/research/computation-ready-aerial-heritage" element={<AerialPhotographyHeritage />} />
+              <Route path="/research/zero-emission-flight-ecosystem" element={<ZeroEmissionAviation />} />
               <Route path="/research/wrap-food-loss-waste-taxonomy" element={<WrapFoodWaste />} />
               <Route path="/research/agri-environment-heritage-value" element={<AesHeritage />} />
               <Route path="/research/connective-product-cyber-incidents" element={<ConnectiveProductCyberIncidents />} />

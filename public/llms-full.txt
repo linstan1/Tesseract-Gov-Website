@@ -1,4 +1,4 @@
-# Tesseract Government Gateway — Full Content
+# Tesseract Academy for the Public Sector — Full Content
 
 Kampakis and Co Ltd (trading as The Tesseract Academy) is a UK-based AI and data science consultancy. This file contains the complete prose content of all pages for AI model ingestion.
 
@@ -6,7 +6,7 @@ Kampakis and Co Ltd (trading as The Tesseract Academy) is a UK-based AI and data
 
 ## About the Organisation
 
-Kampakis and Co Ltd (company number 10459791, VAT GB 371 4744 89) trades as The Tesseract Academy and operates the Tesseract Government Gateway at https://gov.tesseract.academy. The company was incorporated on 2 November 2016. Registered address: 5 Brunswick Park Gardens, London, England, N11 1EJ.
+Kampakis and Co Ltd (company number 10459791, VAT GB 371 4744 89) trades as The Tesseract Academy and operates the Tesseract Academy for the Public Sector at https://gov.tesseract.academy. The company was incorporated on 2 November 2016. Registered address: 5 Brunswick Park Gardens, London, England, N11 1EJ.
 
 The company is an SME/micro enterprise delivering research-backed AI, data science, public engagement, survey design, education, and policy advisory services exclusively to UK and EU public sector organisations.
 

@@ -25,6 +25,7 @@ import { BridgeAI } from './pages/research/BridgeAI';
 import { Kalgera } from './pages/research/Kalgera';
 import { WastewaterDataQuality } from './pages/research/WastewaterDataQuality';
 import { AerialPhotographyHeritage } from './pages/research/AerialPhotographyHeritage';
+import { ZeroEmissionAviation } from './pages/research/ZeroEmissionAviation';
 import { WrapFoodWaste } from './pages/research/WrapFoodWaste';
 import { AesHeritage } from './pages/research/AesHeritage';
 import { ConnectiveProductCyberIncidents } from './pages/research/ConnectiveProductCyberIncidents';
@@ -64,6 +65,7 @@ const SSRApp: React.FC = () => (
         <Route path="/research/kalgera-financial-vulnerability" element={<Kalgera />} />
         <Route path="/research/wastewater-effluent-data-quality" element={<WastewaterDataQuality />} />
         <Route path="/research/computation-ready-aerial-heritage" element={<AerialPhotographyHeritage />} />
+        <Route path="/research/zero-emission-flight-ecosystem" element={<ZeroEmissionAviation />} />
         <Route path="/research/wrap-food-loss-waste-taxonomy" element={<WrapFoodWaste />} />
         <Route path="/research/agri-environment-heritage-value" element={<AesHeritage />} />
         <Route path="/research/connective-product-cyber-incidents" element={<ConnectiveProductCyberIncidents />} />

@@ -1,4 +1,4 @@
-# Tesseract Government Gateway
+# Tesseract Academy for the Public Sector
 
 > Kampakis and Co Ltd (trading as The Tesseract Academy) is a UK-based AI and data science consultancy delivering research-backed services exclusively to public sector organisations. Crown Commercial Service appointed supplier on RM6200 (AI DPS), RM6094 (Spark DPS), RM6126 (Research & Insights DPS), RM6219 (Learning & Training Services DPS), and RM6235 (Space-Enabled & Geospatial Services DPS). Company number 10459791. Incorporated 2 November 2016.
 

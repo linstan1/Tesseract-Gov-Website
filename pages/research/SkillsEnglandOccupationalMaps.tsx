@@ -152,6 +152,15 @@ const FEATURED = [
   { code: 'OCC0284', label: 'Cyber security technologist' },
 ];
 
+// The occupation `links` array mixes public human-facing pages (rel ending URL)
+// with authenticated API endpoints (rel ending API) that return an error without
+// a key. Only surface the public pages, with readable labels.
+const PUBLIC_LINK_LABELS: Record<string, string> = {
+  occupationalStandardURL: 'View this standard on Skills England',
+  occupationalMapURL: 'View the route map on Skills England',
+  occupationalProgressionURL: 'View the progression map on Skills England',
+};
+
 const StatTile: React.FC<{ icon: React.ReactNode; value: string; label: string }> = ({ icon, value, label }) => (
   <div className="flex items-center gap-4 bg-gov-bg-alt border border-gov-border/60 rounded-xl p-5 shadow-subtle">
     <div className="text-gov-blue">{icon}</div>
@@ -597,12 +606,11 @@ export const SkillsEnglandOccupationalMaps: React.FC = () => {
                 </div>
               )}
 
-              {/* External links */}
-              {detail.links && detail.links.filter((l) => /^https?:/.test(l.href)).length > 0 && (
+              {/* Public Skills England pages (API-only links are intentionally omitted) */}
+              {detail.links && detail.links.some((l) => l.rel && PUBLIC_LINK_LABELS[l.rel]) && (
                 <div className="pt-2 flex flex-wrap gap-4">
                   {detail.links
-                    .filter((l) => /^https?:/.test(l.href))
-                    .slice(0, 4)
+                    .filter((l) => l.rel && PUBLIC_LINK_LABELS[l.rel] && /^https?:\/\//.test(l.href))
                     .map((l, i) => (
                       <a
                         key={i}
@@ -611,7 +619,7 @@ export const SkillsEnglandOccupationalMaps: React.FC = () => {
                         rel="noopener noreferrer"
                         className="inline-flex items-center gap-1.5 text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline"
                       >
-                        {l.title || l.rel || 'View on Skills England'}
+                        {PUBLIC_LINK_LABELS[l.rel as string]}
                         <ExternalLink className="w-3.5 h-3.5" />
                       </a>
                     ))}
