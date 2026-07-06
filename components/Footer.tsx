@@ -7,7 +7,7 @@ export const Footer: React.FC = () => {
       <div className="max-w-7xl mx-auto py-16 px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
           <div className="col-span-1 md:col-span-2">
-            <h3 className="text-base font-bold text-gov-dark mb-4">Tesseract Academy | Government</h3>
+            <h3 className="text-base font-bold text-gov-dark mb-4">Tesseract Academy for the Public Sector</h3>
             <p className="text-sm text-gov-secondary max-w-md leading-relaxed">
               Supporting public sector innovation through research-backed implementation, rapid delivery, and policy-aligned advisory.
             </p>

@@ -23,7 +23,6 @@ export const Navbar: React.FC = () => {
         <div className="flex items-center h-20 gap-8">
           <a href="/" onClick={(e: React.MouseEvent) => { e.preventDefault(); navigate('/'); }} className="flex items-center gap-3 rounded-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-gov-focus focus-visible:ring-offset-2" aria-label="Tesseract Academy for the Public Sector home">
             <img src="https://consulting.tesseract.academy/wp-content/uploads/2024/04/logo-centered.png" alt="" className="h-14" aria-hidden="true" />
-            <span className="font-bold text-base text-gov-dark uppercase tracking-wide ml-1.5">Public Sector</span>
           </a>
 
           <nav className="hidden lg:flex items-center gap-1" aria-label="Main navigation">
