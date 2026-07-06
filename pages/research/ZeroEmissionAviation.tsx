@@ -207,10 +207,27 @@ export const ZeroEmissionAviation: React.FC = () => {
         </div>
         <p className="text-gov-secondary leading-relaxed">
           The technology entities are linked by a <strong>feeds-into</strong> chain that models the physical
-          hydrogen pathway, from green electrolysis through liquefaction, distribution, cryogenic on-airport
-          storage and refuelling to the fuel-cell powertrain and hydrogen combustion, each carrying an
-          indicative, dated maturity. That is the pathways-and-dependencies primitive, in miniature.
+          hydrogen pathway, each stage carrying an indicative, dated maturity. That is the
+          pathways-and-dependencies primitive, in miniature:
         </p>
+        <ol className="flex flex-wrap items-stretch gap-2 list-none p-0 m-0" aria-label="Hydrogen production-to-use chain, five stages">
+          {[
+            ['1', 'Production', 'electrolysis'],
+            ['2', 'Liquefaction', '& distribution'],
+            ['3', 'Storage', 'cryogenic, on-airport'],
+            ['4', 'Refuelling', 'aircraft'],
+            ['5', 'Propulsion', 'fuel cell / turbine'],
+          ].map(([n, name, sub], i, arr) => (
+            <li key={n} className="flex items-center gap-2">
+              <div className="rounded-lg border border-gov-border/60 bg-gov-bg px-4 py-3 min-w-[9rem]">
+                <p className="text-xs font-bold text-gov-blue m-0">Stage {n}</p>
+                <p className="text-sm font-semibold text-gov-dark m-0">{name}</p>
+                <p className="text-xs text-gov-secondary m-0">{sub}</p>
+              </div>
+              {i < arr.length - 1 && <span className="text-gov-blue font-bold" aria-hidden="true">&rarr;</span>}
+            </li>
+          ))}
+        </ol>
       </section>
 
       <section className="space-y-6">
@@ -286,9 +303,11 @@ export const ZeroEmissionAviation: React.FC = () => {
       <section className="bg-gov-bg border border-gov-border/50 rounded-xl p-6 space-y-3">
         <h2 className="text-lg font-bold text-gov-dark">Open source and reproducible</h2>
         <p className="text-sm text-gov-secondary">
-          The dataset, ontology, SHACL shapes, build-and-validate pipeline and interactive graph are
-          published open source (CC BY 4.0) via Open Ontologies. Indicative maturity values are compiled
-          from public roadmaps and statements, each dated, and are not an authoritative assessment.
+          The dataset, ontology, SHACL shapes, build-and-validate pipeline and an interactive explorer
+          (built to WCAG 2.2 AA, with Mermaid diagrams and a keyboard-accessible table alternative to the
+          network view) are published open source (CC BY 4.0) via Open Ontologies. Indicative maturity
+          values are compiled from public roadmaps and statements, each dated, and are not an authoritative
+          assessment.
         </p>
         <a
           href="https://github.com/fabio-rovai/open-ontologies/tree/main/case-studies/zero-emission-aviation"
