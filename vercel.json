@@ -7,6 +7,16 @@
       "permanent": true
     },
     {
+      "source": "/ns/seom",
+      "destination": "/data/skills-england/ontology/seom-vocabulary.ttl",
+      "permanent": false
+    },
+    {
+      "source": "/id/seom/:path*",
+      "destination": "/research/skills-england-occupational-maps",
+      "permanent": false
+    },
+    {
       "source": "/case-studies/connective-product-cyber-incidents",
       "destination": "/research/connective-product-cyber-incidents",
       "permanent": true

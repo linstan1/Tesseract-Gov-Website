@@ -8,7 +8,6 @@ import {
   Leaf,
   TrendingUp,
   Layers,
-  Award,
   AlertCircle,
   GraduationCap,
   Route as RouteIcon,
@@ -296,15 +295,6 @@ export const SkillsEnglandOccupationalMaps: React.FC = () => {
             Open snapshot of the Skills England Occupational Maps
           </span>
           {snapshotDate && <span className="text-gov-secondary/80">· harvested {snapshotDate}</span>}
-          <a
-            href={ONTOLOGY_REPO}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 text-gov-blue hover:text-gov-blue-dark hover:underline font-medium"
-          >
-            Get the ontology (Turtle / JSON-LD)
-            <ExternalLink className="w-3.5 h-3.5" />
-          </a>
         </div>
 
         {loadError ? (
@@ -817,32 +807,6 @@ export const SkillsEnglandOccupationalMaps: React.FC = () => {
             </a>
           </p>
         </div>
-      </section>
-
-      {/* How this works */}
-      <section className="bg-gov-bg border border-gov-border/50 rounded-xl p-8">
-        <h2 className="text-xl font-bold text-gov-dark mb-3 font-serif flex items-center gap-2">
-          <Award className="w-5 h-5 text-gov-blue" /> How this was built
-        </h2>
-        <p className="text-gov-dark/90 leading-relaxed">
-          We harvested a complete static snapshot of the Skills England Occupational Maps Public API under an Open
-          Government Licence, and modelled it as an ontology: the Route to Pathway to Cluster hierarchy as a SKOS
-          concept scheme, the ONS SOC 2010 and 2020 codes as a first-class crosswalk, and occupations, products and
-          progression as typed instances. The graph is 51,000+ triples, published as Turtle and JSON-LD, and validated
-          at zero SHACL violations. This page reads the same open snapshot, so it needs no live credentials and cannot
-          go stale silently: refresh the snapshot, rebuild, and both the ontology and this explorer update together.
-        </p>
-        <p className="mt-4">
-          <a
-            href={ONTOLOGY_REPO}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 text-sm font-semibold text-gov-blue hover:text-gov-blue-dark hover:underline"
-          >
-            Ontology, data and reproducible build on GitHub
-            <ExternalLink className="w-4 h-4" />
-          </a>
-        </p>
       </section>
 
       {/* Mandatory Skills England attribution + Open Government Licence */}
