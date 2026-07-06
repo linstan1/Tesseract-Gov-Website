@@ -112,6 +112,10 @@ const PAGE_META = {
     title: 'Nature-Related Security Risk: an open evidence base and systems ontology | Tesseract Government Gateway',
     description: 'A self-initiated, open, machine-readable evidence base and systems ontology that operationalises the UK National Security Assessment on biodiversity loss and ecosystem collapse (2026): 14 documented nature-to-security cascades graded with the assessment\'s own confidence ratings, an OWL ontology (NSRO), a SKOS taxonomy cross-walked to IPBES and SHACL shapes, published on GitHub under CC-BY-4.0.',
   },
+  '/research/skills-england-occupational-maps': {
+    title: 'The Skills England Occupational Maps as an Ontology | Tesseract Government Gateway',
+    description: 'An open, machine-readable ontology and explorer of the Skills England occupational maps by Tesseract Academy: 1,269 occupational standards placed in the route, pathway and cluster hierarchy, crosswalked to ONS SOC 2010/2020, linked to apprenticeship and technical education products, green-jobs themes and progression pathways. 51,355 triples, published as Turtle and JSON-LD, validated at zero SHACL violations. Open Government Licence v3.0.',
+  },
   '/services/ai-consulting': {
     title: 'AI Consulting for UK Public Sector | Tesseract Government Gateway',
     description: 'Custom AI model development, NLP pipelines, and predictive analytics for UK government. CCS RM6200 appointed supplier. GDS aligned. Welsh Government ML land valuation and NDTP ontology case studies.',

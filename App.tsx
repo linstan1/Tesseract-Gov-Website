@@ -26,6 +26,7 @@ const IesHqdmCrosswalk = lazy(() => import('./pages/research/IesHqdmCrosswalk').
 const Ies4TurtleLanguageModel = lazy(() => import('./pages/research/Ies4TurtleLanguageModel').then(m => ({ default: m.Ies4TurtleLanguageModel })));
 const PyramidBridge = lazy(() => import('./pages/research/PyramidBridge').then(m => ({ default: m.PyramidBridge })));
 const NatureSecurityRisk = lazy(() => import('./pages/research/NatureSecurityRisk').then(m => ({ default: m.NatureSecurityRisk })));
+const SkillsEnglandOccupationalMaps = lazy(() => import('./pages/research/SkillsEnglandOccupationalMaps').then(m => ({ default: m.SkillsEnglandOccupationalMaps })));
 const Glossary = lazy(() => import('./pages/Glossary').then(m => ({ default: m.Glossary })));
 const AIConsulting = lazy(() => import('./pages/services/AIConsulting').then(m => ({ default: m.AIConsulting })));
 const ResearchPolicy = lazy(() => import('./pages/services/ResearchPolicy').then(m => ({ default: m.ResearchPolicy })));
@@ -128,6 +129,10 @@ const PAGE_META: Record<string, { title: string; description: string }> = {
     title: 'Nature-Related Security Risk: an open evidence base and systems ontology | Tesseract Government Gateway',
     description: 'A self-initiated, open, machine-readable evidence base and systems ontology that operationalises the UK National Security Assessment on biodiversity loss and ecosystem collapse (2026): 14 documented nature-to-security cascades graded with the assessment\'s own confidence ratings, an OWL ontology (NSRO), a SKOS taxonomy cross-walked to IPBES and SHACL shapes, published on GitHub under CC-BY-4.0.',
   },
+  '/research/skills-england-occupational-maps': {
+    title: 'The Skills England Occupational Maps as an Ontology | Tesseract Government Gateway',
+    description: 'An open, machine-readable ontology and explorer of the Skills England occupational maps by Tesseract Academy: 1,269 occupational standards placed in the route, pathway and cluster hierarchy, crosswalked to ONS SOC 2010/2020, linked to apprenticeship and technical education products, green-jobs themes and progression pathways. 51,355 triples, published as Turtle and JSON-LD, validated at zero SHACL violations. Open Government Licence v3.0.',
+  },
   '/glossary': {
     title: 'AI & Procurement Glossary | Tesseract Government Gateway',
     description: 'Definitions of 60+ AI, data science, and procurement terms used in UK public sector contracting. From Algorithmic Impact Assessment to Zero-Shot Learning.',
@@ -220,6 +225,7 @@ const App: React.FC = () => {
               <Route path="/research/ies4-turtle-language-model" element={<Ies4TurtleLanguageModel />} />
               <Route path="/research/pyramid-ies-hqdm-semantic-bridge" element={<PyramidBridge />} />
               <Route path="/research/nature-related-security-risk" element={<NatureSecurityRisk />} />
+              <Route path="/research/skills-england-occupational-maps" element={<SkillsEnglandOccupationalMaps />} />
               <Route path="/glossary" element={<Glossary />} />
               <Route path="/services/ai-consulting" element={<AIConsulting />} />
               <Route path="/services/research-policy" element={<ResearchPolicy />} />

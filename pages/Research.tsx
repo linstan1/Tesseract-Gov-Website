@@ -66,6 +66,8 @@ export const Research: React.FC = () => {
                <a href="https://github.com/fabio-rovai/open-ontologies/blob/main/case-studies/skills-mobility/case-study.md" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">Read the case study<span className="sr-only"> (opens in new tab)</span></a>
                <span className="text-gov-border">|</span>
                <a href="https://github.com/fabio-rovai/open-ontologies/tree/main/case-studies/skills-mobility" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">Reproducible code and data scheme<span className="sr-only"> (opens in new tab)</span></a>
+               <span className="text-gov-border">|</span>
+               <Link to="/research/skills-england-occupational-maps" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">Explore the Skills England occupational maps ontology</Link>
              </div>
            </li>
            <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">

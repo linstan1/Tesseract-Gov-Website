@@ -79,6 +79,17 @@ export const CASE_STUDIES: CaseStudy[] = [
     reusable: 'The taxonomy-plus-schema-plus-validation-rules pattern transfers to any multi-organisation reporting domain requiring consistent, comparable data.',
   },
   {
+    id: 'uc-skills-england',
+    slug: '/research/skills-england-occupational-maps',
+    title: 'The Skills England occupational maps, as an ontology',
+    category: 'open-demo',
+    challenge: 'Skills England publishes the national occupational maps (1,269 occupational standards with their routes, pathways and clusters, SOC classifications, apprenticeship and technical education products, green-jobs themes and progression pathways) through a public API. The data is relational but delivered as documents, has no published schema for the connected object, and buries the SOC crosswalk (the bridge to official labour-market statistics) inside each record. Consumed the usual way, a flattened slice ends up in a spreadsheet and the relationships that make it valuable are lost.',
+    intervention: 'Harvested a complete static snapshot of the Skills England Occupational Maps Public API and modelled it as an ontology (SEOM): the Route to Pathway to Cluster hierarchy as a SKOS concept scheme, the ONS SOC 2010 and 2020 codes as a first-class crosswalk, and occupations, products and progression as typed instances. Published as Turtle and JSON-LD. A searchable explorer on the site reads the same open snapshot.',
+    assurance: 'Registered API access granted by Skills England. Data used under the Open Government Licence v3.0, with the mandatory Skills England logo and attribution statement displayed. The graph conforms to a formal SHACL schema with zero violations across 51,000+ triples, plus SPARQL referential-integrity checks.',
+    outcome: 'An open, machine-readable ontology of the entire national occupational map (51,355 triples: 1,269 standards, 15 routes, 35 pathways, 172 clusters, a 278-code SOC 2020 crosswalk, 1,313 products and 2,717 progression edges), with a live explorer on the Tesseract Government Gateway. It is the operational companion to our open PIAAC research on skills and social mobility: PIAAC measures what adults can do, the occupational maps show where those skills lead, and SOC is the join.',
+    reusable: 'The SEOM vocabulary, the full instance graph (Turtle and JSON-LD), the SOC 2010/2020 crosswalk as standalone SKOS schemes, the SHACL shapes, and the reproducible build and validation scripts, all open source via Open Ontologies.',
+  },
+  {
     id: 'uc5',
     slug: '/research/wastewater-effluent-data-quality',
     title: 'Wastewater Effluent Data Quality',
