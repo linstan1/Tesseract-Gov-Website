@@ -9,7 +9,7 @@ const SCHEMA = {
   mainEntityOfPage: 'https://gov.tesseract.academy/research/zero-emission-flight-ecosystem',
   headline: 'Mapping the UK Zero-Emission Flight Ecosystem: an Open, Validated Reference Graph',
   description:
-    'An open, SHACL-validated knowledge graph of the UK hydrogen and electric aviation ecosystem: 42 real entities (organisations, airports, programmes, projects, funders, technologies) and 55 relationships, validated at zero SHACL violations with enforced referential integrity. Open source via Open Ontologies.',
+    'An open, SHACL-validated, provenance-first knowledge graph of the UK hydrogen and electric aviation ecosystem: 45 real entities and 56 relationships across organisations, airports, programmes, projects, funders, standards and technologies, plus a modelled hydrogen production-to-use chain, dated technology-readiness assessments and provenanced funding figures. Validated at zero SHACL violations, answering six competency questions. First-of-kind: no prior hydrogen or zero-emission aviation ontology exists. Open source via Open Ontologies.',
   author: { '@id': 'https://gov.tesseract.academy/#organization' },
   publisher: { '@id': 'https://gov.tesseract.academy/#organization' },
   datePublished: '2026-07-06',
@@ -24,16 +24,22 @@ const ENFORCED = [
     id: '1',
     name: 'Every entity is labelled and typed',
     description:
-      'All 42 entities carry a human-readable label and one of eight ecosystem types (organisation, airport, programme, project, funder, body, alliance, technology).',
+      'All 45 entities carry a human-readable label and one of nine ecosystem types (organisation, airport, programme, project, funder, body, alliance, standard, technology).',
   },
   {
     id: '2',
     name: 'Maturity is controlled and sourced',
     description:
-      'Every technology carries a maturity from a fixed vocabulary (Research, Development, Demonstration, Pilot, Commercial) and a provenance string. Maturity is never unsourced.',
+      'Every technology carries either a maturity band from a controlled SKOS vocabulary, or a reified Technology Readiness Level assessment (integer 1 to 9) that is dated and derived from a named source. Maturity is never an unsourced literal.',
   },
   {
     id: '3',
+    name: 'Every quantity carries a unit and a source',
+    description:
+      'Funding figures, capacities and projections are reified as quantities with a numeric value, a unit and provenance to a citable source, following the PECO emissions-provenance pattern (PROV-O plus QUDT).',
+  },
+  {
+    id: '4',
     name: 'Referential integrity on every relationship',
     description:
       'The object of every relationship must be a declared entity of the correct type. Only stated links are represented; none are inferred. A negative test injects a dangling edge and confirms the validator catches it.',
@@ -46,7 +52,17 @@ const TYPES = [
   ['Programmes', '3', 'ZEFI, ATI FlyZero, the Jet Zero Strategy'],
   ['Funders', '3', 'Department for Transport, Aerospace Technology Institute, UKRI Future Flight Challenge'],
   ['Airports', '4', 'Heathrow, London City, Bristol, Glasgow'],
+  ['Standards', '3', 'ISO 19880-1 (gaseous H2 fuelling), ISO 13985 (LH2 tanks), CAA aerodrome safety'],
   ['Technologies', '7', 'Electrolysis, liquefaction, LH2 storage, fuel-cell powertrain, hydrogen combustion, refuelling'],
+];
+
+// CQ3: provenanced funding figures the graph holds, each traceable to a primary source.
+const FUNDING = [
+  ['January 2021 green-aviation package', '£84.6m', 'Total public + industry (ATI Programme)', 'gov.uk, 2021'],
+  ['GKN H2GEAR', '£54.4m', 'Total (£27.2m ATI grant + industry)', 'gov.uk, 2021'],
+  ['ZeroAvia HyFlyer II', '£24.6m', 'Total (£12.3m ATI grant + industry)', 'gov.uk, 2021'],
+  ['GKN H2FlyGHT', '£44m', '2 MW cryogenic hydrogen-electric propulsion', 'GKN, 2024'],
+  ['Hydrogen in Aviation alliance', '£34bn/yr', 'Projected UK economic benefit by 2050', 'HIA / Rolls-Royce, 2023'],
 ];
 
 export const ZeroEmissionAviation: React.FC = () => {
@@ -80,18 +96,18 @@ export const ZeroEmissionAviation: React.FC = () => {
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
         <div className="bg-gov-bg border border-gov-border/50 rounded-xl p-6">
           <p className="text-xs font-semibold uppercase tracking-wider text-gov-blue mb-1">Entities</p>
-          <p className="text-3xl font-extrabold text-gov-dark">42</p>
-          <p className="text-sm text-gov-secondary mt-1">real, sourced organisations, projects and technologies</p>
+          <p className="text-3xl font-extrabold text-gov-dark">45</p>
+          <p className="text-sm text-gov-secondary mt-1">real, sourced actors, standards and technologies</p>
         </div>
         <div className="bg-gov-bg border border-gov-border/50 rounded-xl p-6">
-          <p className="text-xs font-semibold uppercase tracking-wider text-gov-blue mb-1">Relationships</p>
-          <p className="text-3xl font-extrabold text-gov-dark">55</p>
-          <p className="text-sm text-gov-secondary mt-1">funds, develops, partners, uses-technology and more</p>
+          <p className="text-xs font-semibold uppercase tracking-wider text-gov-blue mb-1">Triples</p>
+          <p className="text-3xl font-extrabold text-gov-dark">482</p>
+          <p className="text-sm text-gov-secondary mt-1">with 8 provenanced quantities and 14 citable sources</p>
         </div>
         <div className="bg-gov-bg border border-gov-border/50 rounded-xl p-6">
           <p className="text-xs font-semibold uppercase tracking-wider text-gov-blue mb-1">Validation</p>
           <p className="text-3xl font-extrabold text-gov-dark">0</p>
-          <p className="text-sm text-gov-secondary mt-1">SHACL violations, with referential integrity enforced</p>
+          <p className="text-sm text-gov-secondary mt-1">SHACL violations; answers 6 competency questions</p>
         </div>
       </div>
 
@@ -195,6 +211,62 @@ export const ZeroEmissionAviation: React.FC = () => {
           storage and refuelling to the fuel-cell powertrain and hydrogen combustion, each carrying an
           indicative, dated maturity. That is the pathways-and-dependencies primitive, in miniature.
         </p>
+      </section>
+
+      <section className="space-y-6">
+        <h2 className="text-2xl font-bold text-gov-dark font-serif">Provenance-first: every number carries its source</h2>
+        <p className="text-gov-secondary leading-relaxed">
+          A coordination tool is only as trustworthy as its evidence, so maturity and every quantity are
+          modelled as first-class, sourced claims rather than bare literals, following the PECO
+          emissions-provenance pattern (PROV-O plus QUDT). One competency question the graph answers,
+          &ldquo;which provenanced quantities does the graph hold, and from which source?&rdquo;, returns the
+          funding landscape below, each figure traceable to a primary source.
+        </p>
+        <div className="overflow-x-auto">
+          <table className="w-full text-sm border-collapse">
+            <thead>
+              <tr className="bg-gov-bg border-b border-gov-border">
+                <th className="text-left px-4 py-3 font-semibold text-gov-dark">Programme or project</th>
+                <th className="text-left px-4 py-3 font-semibold text-gov-dark">Figure</th>
+                <th className="text-left px-4 py-3 font-semibold text-gov-dark">What it is</th>
+                <th className="text-left px-4 py-3 font-semibold text-gov-dark">Source</th>
+              </tr>
+            </thead>
+            <tbody>
+              {FUNDING.map((r, i) => (
+                <tr key={r[0]} className={`border-b border-gov-border/50 ${i % 2 === 0 ? 'bg-white' : 'bg-gov-bg/40'}`}>
+                  <td className="px-4 py-3 font-medium text-gov-dark">{r[0]}</td>
+                  <td className="px-4 py-3 text-gov-blue font-bold">{r[1]}</td>
+                  <td className="px-4 py-3 text-gov-secondary">{r[2]}</td>
+                  <td className="px-4 py-3 text-gov-secondary">{r[3]}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <p className="text-gov-secondary leading-relaxed">
+          The technology layer is modelled the same way: a reified Technology Readiness Level assessment
+          carries an integer, an assessment date and a citation (for example, ATI FlyZero&rsquo;s TRL 3 for
+          the cryogenic liquid-hydrogen fuel system), so the graph can answer &ldquo;which technologies gate a
+          pathway because they are below TRL 6?&rdquo; from evidence rather than assertion.
+        </p>
+      </section>
+
+      <section className="space-y-4">
+        <div className="border-l-2 border-l-gov-blue pl-6">
+          <h2 className="text-2xl font-bold text-gov-dark font-serif mb-3">First of kind, built on the literature</h2>
+          <p className="text-gov-dark leading-relaxed">
+            A structured review conducted for this work found no published ontology or knowledge graph
+            dedicated to hydrogen or zero-emission aviation, and no formal ontology model of Technology
+            Readiness Level at all. Rather than invent from scratch, the design composes established work:
+            the two-axis actors-and-value-chain structure of the HOLY hydrogen-market ontology
+            (ISWC 2023); the provenance discipline of PECO; the continuant/occurrent separation of the
+            Open Energy Ontology; the funding vocabulary of DINGO; and the standard W3C building blocks
+            PROV-O, SKOS, QUDT and Dublin Core. It is engineered to the Linked Open Terms methodology,
+            scoped and tested by competency questions, and published FAIR and open. Full citations are in
+            the repository README.
+          </p>
+        </div>
       </section>
 
       <section className="space-y-4">
