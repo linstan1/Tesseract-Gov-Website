@@ -51,6 +51,14 @@ export const Research: React.FC = () => {
         <h2 className="text-2xl font-bold text-gov-dark mb-8">Selected Publications &amp; Talks</h2>
         <ul className="space-y-8">
            <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
+             <a href="https://huggingface.co/datasets/fabsssss/semantic-web-counterfactual-census" target="_blank" rel="noopener noreferrer"><h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark hover:underline transition-colors">Is the Semantic Web Counterfactual-Ready? A Tractability Census of 528 Public Ontologies<span className="sr-only"> (opens in new tab)</span></h3></a>
+             <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Open dataset and preprint (forthcoming), 2026</p>
+             <p className="text-base text-gov-dark/90 leading-relaxed">The first tractability map of the public semantic web. A compiler certifies whether each of 528 public ontologies can, as written, support a counterfactual ("what if") query. The finding: 56% declare no constraints and are counterfactual-blind, including both of the UK's 4D data standards, IES4 and HQDM, alongside schema.org, CIDOC-CRM, SAREF and GS1. On the 233 that can, a certified counterfactual is computed for each (median 0.19 ms), confirming that the cost is governed by ontology structure, not by the degree-based hardness that would suggest infeasibility. Open, reproducible, and released with a "counterfactual-ready standards" proposal.</p>
+             <div className="mt-3 flex flex-wrap gap-3 items-center">
+               <a href="https://huggingface.co/datasets/fabsssss/semantic-web-counterfactual-census" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">Census and atlas dataset<span className="sr-only"> (opens in new tab)</span></a>
+             </div>
+           </li>
+           <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
              <a href="https://www.gov.wales/testing-land-valuation-methods" target="_blank" rel="noopener noreferrer"><h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark hover:underline transition-colors">Welsh Government Land Valuation Research Report<span className="sr-only"> (opens in new tab)</span></h3></a>
              <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Commissioned by Welsh Government, 2025–2026</p>
              <p className="text-base text-gov-dark/90 leading-relaxed">Independent research into the feasibility of land value tax models for Wales. Combined statistical analysis of land registry data with international comparator evidence and stakeholder interviews across Welsh local authorities. Findings presented to Welsh Government officials and cited in Senedd committee proceedings.</p>

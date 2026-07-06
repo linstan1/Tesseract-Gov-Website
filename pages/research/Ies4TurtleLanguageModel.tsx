@@ -201,7 +201,39 @@ export const Ies4TurtleLanguageModel: React.FC = () => {
             The result is clean, and it refutes two tempting shortcuts at once. First, the repair loop cannot replace the fine-tune: on the untuned base it changes nothing (0% stays 0%), because a model that does not know the vocabulary cannot act on the feedback "that term does not exist", it simply invents a different wrong one. Second, the failure mode of the fine-tuned model is coverage, not capacity: its lower out-of-distribution score reflects IES patterns it has not seen, which a larger model would not fix but broader training data would. What the loop does earn is real: on a model that already holds the knowledge it lifts in-distribution conformance to a perfect 100% and pushes the hard out-of-distribution case from 30% to 50%, halving the hallucination rate along the way.
           </p>
           <p className="text-gov-dark leading-relaxed mt-3">
-            So the fine-tune earns its place as the load-bearing component, and the validator earns its place as the layer that cleans up on top. Neither is sufficient alone. The honest reading is that the right system is not a bigger model, it is knowledge (in the weights, and in future work retrieved into context) plus a symbolic validator in the loop plus broader coverage data. This is a small-scale result (tens of held-out prompts, one ontology), reported as a finding to build on rather than a closed case.
+            So the fine-tune earns its place as the load-bearing component, and the validator earns its place as the layer that cleans up on top. Neither is sufficient alone.
+          </p>
+        </div>
+      </section>
+
+      <section className="space-y-6">
+        <div className="border-l-2 border-l-gov-blue pl-6">
+          <h2 className="text-2xl font-bold text-gov-dark font-serif mb-3">The last mile: what actually breaks the out-of-distribution wall</h2>
+          <p className="text-gov-dark leading-relaxed">
+            We then tested the obvious fixes, one variable at a time, and the result overturned our own first guess. Out-of-distribution term conformance turned out to be invariant to data volume (a 10x larger training set) and to linguistic diversity: it stayed pinned at 30%. A later model (v1.3) that added the exact missing IES construct families lifted in-distribution conformance to 97.7% and improved out-of-distribution structure by 40%, yet term conformance still held at 30%. Diagnosing every residual failure showed why: the model was not missing constructs, it was inventing plausible-but-wrong term spellings on unfamiliar scenarios (writing <code className="text-sm bg-gov-bg px-1.5 py-0.5 rounded">ies:hasParticipant</code> for <code className="text-sm bg-gov-bg px-1.5 py-0.5 rounded">ies:isParticipantIn</code>, or <code className="text-sm bg-gov-bg px-1.5 py-0.5 rounded">ies:MeasureUnit</code> for <code className="text-sm bg-gov-bg px-1.5 py-0.5 rounded">ies:measureUnit</code>).
+          </p>
+          <p className="text-gov-dark leading-relaxed">
+            A plain repair loop that only says "that term is invalid" lifts this from 27% to 45%: it fixes the cases where the model can guess the correction, and stalls where it cannot. A <strong>term-suggesting validator</strong> that returns the nearest real IES term ("use <code className="text-sm bg-gov-bg px-1.5 py-0.5 rounded">ies:isParticipantIn</code>") closes most of the rest.
+          </p>
+        </div>
+        <div className="overflow-x-auto">
+          <table className="w-full text-sm border-collapse">
+            <thead>
+              <tr className="bg-gov-bg border-b border-gov-border">
+                <th className="text-left px-4 py-3 font-semibold text-gov-dark">Pipeline (v1.3, out-of-distribution)</th>
+                <th className="text-left px-4 py-3 font-semibold text-gov-dark">IES4 term conformance</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="border-b border-gov-border/50 bg-white"><td className="px-4 py-3 text-gov-dark">single forward pass</td><td className="px-4 py-3 text-gov-secondary">27%</td></tr>
+              <tr className="border-b border-gov-border/50 bg-gov-bg/40"><td className="px-4 py-3 text-gov-dark">+ repair loop ("term is invalid")</td><td className="px-4 py-3 text-gov-secondary">45%</td></tr>
+              <tr className="border-b border-gov-border/50 bg-white"><td className="px-4 py-3 font-medium text-gov-dark">+ term-suggesting validator ("use <em>X</em>")</td><td className="px-4 py-3 font-semibold text-gov-dark">82%</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div className="border-l-2 border-l-gov-blue pl-6">
+          <p className="text-gov-dark leading-relaxed">
+            The lesson is precise and, we think, general: for niche-format generation the binding constraint is not scale or diversity but term-exactness on novel compositions, and the fix is a validator that supplies the correct term, not merely flags the wrong one. The fine-tune drafts; the symbolic layer perfects. This is a small-scale result (tens of held-out prompts, one ontology), reported as a finding to build on.
           </p>
         </div>
       </section>
