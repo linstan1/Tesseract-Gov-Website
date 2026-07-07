@@ -11,43 +11,43 @@ const SCHEMA = {
   '@id': 'https://gov.tesseract.academy/research/victim-witness-evaluation#article',
   mainEntityOfPage: 'https://gov.tesseract.academy/research/victim-witness-evaluation',
   headline:
-    'A machine-checkable Theory of Change for victim & witness support | Tesseract Academy',
+    'When a Theory of Change has to hold up: making evaluation logic machine-checkable | Tesseract Academy',
   description:
-    'A self-initiated, open, machine-readable Theory of Change and rapid-evidence-assessment demonstrator for the National Witness Service and National Homicide Service, anchored on the four Victims’ Funding Strategy outcomes. A typed ToC ontology (7 pathways), SHACL validation and a structured evidence-extraction schema, published on GitHub under CC-BY-4.0.',
+    'A reflection on where government evaluation is heading — the Evaluation Task Force, the Victims and Prisoners Act 2024, outcome-based commissioning — and a self-initiated open method that answers it: building a Theory of Change as a typed, evidence-graded, SHACL-validated graph so its weak links are named, not buried. Worked on victim and witness support. Published on GitHub under CC-BY-4.0.',
   author: { '@id': 'https://gov.tesseract.academy/#organization' },
   publisher: { '@id': 'https://gov.tesseract.academy/#organization' },
   datePublished: '2026-07-07',
   dateModified: '2026-07-07',
   about: {
     '@type': 'Dataset',
-    name: 'Open machine-checkable Theory of Change for victim & witness support',
+    name: 'Open machine-checkable Theory of Change method',
     url: REPO,
     license: 'https://creativecommons.org/licenses/by/4.0/',
   },
   keywords:
-    'Theory of Change, evaluation, rapid evidence assessment, Magenta Book, Government Social Research, victims, witnesses, National Witness Service, National Homicide Service, Victims Funding Strategy, SHACL, ontology, monitoring and evaluation',
+    'Theory of Change, evaluation methods, Evaluation Task Force, Magenta Book, realist evaluation, theory-based evaluation, Government Social Research, monitoring and evaluation, victim support, SHACL, ontology, evidence grading, value for money',
 };
 
 const TOC_CHART = `flowchart LR
-  subgraph NWS["National Witness Service"]
+  subgraph COURT["Court-based support"]
     P1["P1 Pre-trial familiarisation"]:::moderate
     P2["P2 In-court support"]:::gap
-    P3["P3 Information · Code Right 8"]:::strong
-    P4["P4 London / MOPAC to 2028"]:::limited
+    P3["P3 Information provision"]:::strong
+    P4["P4 Remote delivery"]:::limited
   end
-  subgraph NHS["National Homicide Service"]
+  subgraph BEREAVE["Bereavement support"]
     H1["H1 Emotional / practical / peer"]:::limited
-    H2["H2 Advocacy · Code Right 4"]:::moderate
-    H3["H3 CYP community outreach"]:::gap
+    H2["H2 Advocacy & navigation"]:::moderate
+    H3["H3 Outreach for children"]:::gap
   end
-  O2(("VFS2 Informed"))
-  O3(("VFS3 Support received"))
-  O4(("VFS4 CJS engagement"))
-  O1(("VFS1 Cope & resilience"))
+  O2(("Feeling informed"))
+  O3(("Support received"))
+  O4(("Justice engagement"))
+  O1(("Cope & resilience"))
   P1 --> O2
   P2 --> O4
   P3 --> O3
-  P4 --> O3
+  P4 --> O2
   H1 --> O1
   H2 --> O3
   H3 --> O1
@@ -58,13 +58,13 @@ const TOC_CHART = `flowchart LR
 `;
 
 const PATHWAYS = [
-  { id: 'P1', svc: 'Witness', grade: 'moderate', name: 'Pre-trial familiarisation reduces witness anxiety', vfs: 'VFS2 Informed' },
-  { id: 'P2', svc: 'Witness', grade: 'gap', name: 'In-court support sustains attendance through to testimony', vfs: 'VFS4 CJS engagement' },
-  { id: 'P3', svc: 'Witness', grade: 'strong', name: 'Information provision delivers Victims’ Code Right 8', vfs: 'VFS3 Support received' },
-  { id: 'P4', svc: 'Witness', grade: 'limited', name: 'London pre-trial pathway (devolved to MOPAC to 2028)', vfs: 'VFS3 Support received' },
-  { id: 'H1', svc: 'Homicide', grade: 'limited', name: 'Emotional, practical & peer support builds resilience', vfs: 'VFS1 Cope & resilience' },
-  { id: 'H2', svc: 'Homicide', grade: 'moderate', name: 'Advocacy & information deliver Victims’ Code Right 4', vfs: 'VFS3 Support received' },
-  { id: 'H3', svc: 'Homicide', grade: 'gap', name: 'Community outreach supports children & young people', vfs: 'VFS1 Cope & resilience' },
+  { id: 'P1', svc: 'Court support', grade: 'moderate', name: 'Pre-trial familiarisation reduces witness anxiety', vfs: 'Feeling informed' },
+  { id: 'P2', svc: 'Court support', grade: 'gap', name: 'In-court support sustains attendance through to testimony', vfs: 'Justice engagement' },
+  { id: 'P3', svc: 'Court support', grade: 'strong', name: 'Information provision meets a witness’s right to be informed', vfs: 'Support received' },
+  { id: 'P4', svc: 'Court support', grade: 'limited', name: 'Remote delivery reaches those who cannot attend in person', vfs: 'Feeling informed' },
+  { id: 'H1', svc: 'Bereavement', grade: 'limited', name: 'Emotional, practical & peer support builds resilience', vfs: 'Cope & resilience' },
+  { id: 'H2', svc: 'Bereavement', grade: 'moderate', name: 'Advocacy & navigation connect families to tailored help', vfs: 'Support received' },
+  { id: 'H3', svc: 'Bereavement', grade: 'gap', name: 'Community outreach supports affected children & young people', vfs: 'Cope & resilience' },
 ];
 
 const GRADE_STYLES: Record<string, string> = {
@@ -75,19 +75,19 @@ const GRADE_STYLES: Record<string, string> = {
 };
 
 const DELIVERABLES = [
-  { item: 'ToC ontology (Turtle)', detail: 'A typed Theory-of-Change vocabulary with 7 worked pathways (4 Witness, 3 Homicide), each resolving input → activity → output → outcome → impact.' },
-  { item: 'VFS outcome anchoring', detail: 'Every outcome maps to one of the four Victims’ Funding Strategy national outcomes — the commissioner’s own framework.' },
-  { item: 'SHACL shapes', detail: 'Validate completeness, outcome→VFS alignment, a mandatory evidence grade on every causal claim, and declared assumptions.' },
-  { item: 'Evidence-extraction schema', detail: 'A structured REA table (population, service model, delivery mode, outcome, effect, quality grade, provenance) so the evidence map is queryable and its gaps countable.' },
+  { item: 'ToC ontology (Turtle)', detail: 'A typed Theory-of-Change vocabulary with 7 worked pathways, each resolving input → activity → output → outcome → impact.' },
+  { item: 'Outcome anchoring', detail: 'Every outcome maps to a published national outcome (here, the four Victims’ Funding Strategy outcomes) rather than a bespoke, unaccountable one.' },
+  { item: 'SHACL shapes', detail: 'Validate completeness, outcome alignment, a mandatory evidence grade on every causal claim, and declared assumptions.' },
+  { item: 'Evidence-extraction schema', detail: 'A structured extraction table (population, service model, delivery mode, outcome, effect, quality grade, provenance) so the evidence map is queryable and its gaps countable.' },
   { item: 'Validator', detail: 'A script that runs the SHACL check and prints the evidence-gap map — reproducible with pyshacl.' },
 ];
 
 const EVIDENCE = [
-  { pop: 'Prosecution witnesses', model: 'Pre-trial familiarisation', mode: 'In-person', vfs: 'Informed (VFS2)', effect: 'Positive (anxiety ↓)', grade: 'moderate', prov: 'analogous / indicative' },
-  { pop: 'Prosecution witnesses', model: 'On-the-day in-court support', mode: 'In-person', vfs: 'CJS engagement (VFS4)', effect: 'not estimable', grade: 'gap', prov: 'no robust UK study identified' },
-  { pop: 'Witnesses (Code Right 8)', model: 'Information & signposting', mode: 'In-person / remote', vfs: 'Support received (VFS3)', effect: 'Positive (compliance)', grade: 'strong', prov: 'Victims’ Code; service records' },
-  { pop: 'Bereaved by homicide', model: 'Emotional / practical / peer', mode: 'Blended', vfs: 'Cope & resilience (VFS1)', effect: 'Positive (indicative)', grade: 'limited', prov: 'grey literature / provider MI' },
-  { pop: 'Children & young people', model: 'Short-term community outreach', mode: 'In-person', vfs: 'Cope & resilience (VFS1)', effect: 'not estimable', grade: 'gap', prov: 'no identified evaluation' },
+  { pop: 'Court witnesses', model: 'Pre-trial familiarisation', mode: 'In-person', vfs: 'Informed', effect: 'Positive (anxiety ↓)', grade: 'moderate', prov: 'analogous / indicative' },
+  { pop: 'Court witnesses', model: 'On-the-day in-court support', mode: 'In-person', vfs: 'Justice engagement', effect: 'not estimable', grade: 'gap', prov: 'no robust study identified' },
+  { pop: 'Court witnesses', model: 'Information & signposting', mode: 'In-person / remote', vfs: 'Support received', effect: 'Positive (compliance)', grade: 'strong', prov: 'entitlement + service records' },
+  { pop: 'Bereaved families', model: 'Emotional / practical / peer', mode: 'Blended', vfs: 'Cope & resilience', effect: 'Positive (indicative)', grade: 'limited', prov: 'grey literature / provider data' },
+  { pop: 'Children & young people', model: 'Short-term community outreach', mode: 'In-person', vfs: 'Cope & resilience', effect: 'not estimable', grade: 'gap', prov: 'no identified evaluation' },
 ];
 
 const GRADE_BADGE: Record<string, string> = {
@@ -114,53 +114,53 @@ export const VictimWitnessEvaluation: React.FC = () => {
           Tesseract Foundational Research: Evaluation Methods
         </p>
         <h1 className="text-4xl font-extrabold text-gov-dark mb-6 tracking-tight leading-tight font-serif">
-          A machine-checkable Theory of Change for victim &amp; witness support
+          When a Theory of Change has to hold up
         </h1>
         <p className="text-xl text-gov-secondary/90 leading-relaxed">
-          A Theory of Change is a causal graph, so we build it as one — typed, anchored on the Victims’ Funding Strategy outcomes, and validated for completeness. Assumptions and evidence gaps become machine-checkable rather than buried in prose. Worked openly on the National Witness Service and National Homicide Service.
+          Government is being pulled towards proving that what it funds works. The workhorse of that proof, where trials are not feasible, is the Theory of Change — and as a prose diagram it hides its own weakest links. This is a reflection on where the evaluation agenda is heading, and a small, open method for building a Theory of Change that can actually be checked. We work it on victim and witness support.
         </p>
       </header>
 
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-        <div className="bg-gov-bg border border-gov-border/50 rounded-xl p-6">
-          <p className="text-xs font-semibold uppercase tracking-wider text-gov-blue mb-1">Worked pathways</p>
-          <p className="text-3xl font-extrabold text-gov-dark">7</p>
-          <p className="text-sm text-gov-secondary mt-1">across two services, one schema</p>
+      <section className="space-y-4">
+        <div className="border-l-2 border-l-gov-blue pl-6">
+          <h2 className="text-2xl font-bold text-gov-dark font-serif mb-3">The direction of travel</h2>
+          <p className="text-gov-dark leading-relaxed">
+            The centre of government is steadily raising the evidential bar behind spending. The <a href="https://www.gov.uk/government/organisations/evaluation-task-force/about" target="_blank" rel="noopener noreferrer" className="text-gov-blue underline hover:text-gov-blue-dark">Evaluation Task Force</a> — a joint Cabinet Office and HM Treasury unit set up after the 2020 Spending Review, once it emerged that only 8% of the government’s £432&nbsp;billion of major-project spend had a robust impact-evaluation plan — has since advised on over 380 programmes worth £202&nbsp;billion. Its <a href="https://www.gov.uk/government/publications/evaluation-task-force-strategy-2026-2029" target="_blank" rel="noopener noreferrer" className="text-gov-blue underline hover:text-gov-blue-dark">2026–2029 strategy</a> marks a deliberate shift: from checking that evaluation happens, to ensuring the evidence actually shapes what gets continued, expanded or stopped.
+          </p>
+          <p className="text-gov-dark leading-relaxed mt-3">
+            For services that support victims and witnesses the pull is sharper still. The <a href="https://www.legislation.gov.uk/ukpga/2024/21/contents" target="_blank" rel="noopener noreferrer" className="text-gov-blue underline hover:text-gov-blue-dark">Victims and Prisoners Act 2024</a> puts the Victims’ Code on a statutory footing, adds a duty to collaborate on commissioning victim support, and gives the Victims’ Commissioner powers to request compliance data; the <a href="https://www.gov.uk/government/publications/victims-funding-strategy/victims-funding-strategy" target="_blank" rel="noopener noreferrer" className="text-gov-blue underline hover:text-gov-blue-dark">Victims’ Funding Strategy</a> already commissions against four national outcomes and asks for evaluation plans in contracts. The direction is unmistakable: these services will increasingly have to show, proportionately and on shared outcomes, that they work — and to do it with the <a href="https://www.gov.uk/government/publications/the-magenta-book" target="_blank" rel="noopener noreferrer" className="text-gov-blue underline hover:text-gov-blue-dark">Magenta Book</a> as the standard and, per the Ministry of Justice’s own <a href="https://www.gov.uk/government/publications/ministry-of-justice-areas-of-research-interest-2025" target="_blank" rel="noopener noreferrer" className="text-gov-blue underline hover:text-gov-blue-dark">Areas of Research Interest 2025</a>, an openness to AI-assisted evidence synthesis.
+          </p>
         </div>
-        <div className="bg-gov-bg border border-gov-border/50 rounded-xl p-6">
-          <p className="text-xs font-semibold uppercase tracking-wider text-gov-blue mb-1">Outcome anchoring</p>
-          <p className="text-3xl font-extrabold text-gov-dark">4 / 4</p>
-          <p className="text-sm text-gov-secondary mt-1">Victims’ Funding Strategy outcomes</p>
-        </div>
-        <div className="bg-gov-bg border border-gov-border/50 rounded-xl p-6">
-          <p className="text-xs font-semibold uppercase tracking-wider text-gov-blue mb-1">Verification</p>
-          <p className="text-3xl font-extrabold text-gov-dark">0 / 2</p>
-          <p className="text-sm text-gov-secondary mt-1">SHACL violations; evidence gaps found</p>
-        </div>
-      </div>
+      </section>
 
       <section className="space-y-4">
         <div className="border-l-2 border-l-gov-blue pl-6">
-          <h2 className="text-2xl font-bold text-gov-dark font-serif mb-3">The Challenge</h2>
+          <h2 className="text-2xl font-bold text-gov-dark font-serif mb-3">A method problem, long known</h2>
           <p className="text-gov-dark leading-relaxed">
-            The Ministry of Justice funds both the National Witness Service and the National Homicide Service, delivered by Victim Support, at a scale of over £57m and £24m respectively — yet neither has been formally evaluated for some time. Before an impact evaluation is possible, the groundwork has to exist: a clear Theory of Change, a rapid evidence assessment, and a feasibility-and-M&amp;E framework for each service, to <a href="https://www.gov.uk/government/publications/the-magenta-book" target="_blank" rel="noopener noreferrer" className="text-gov-blue underline hover:text-gov-blue-dark">Magenta Book</a> and Government Social Research standards.
+            Most of that evaluation will rest on a Theory of Change, because randomised designs are rarely feasible for support services. Yet theory-based evaluation has carried the same flaw since Carol Weiss set it out in the 1990s: teams draw the programme theory and then do not use it to steer the evaluation. Pawson and Tilley’s realist evaluation sharpened the question a Theory of Change exists to answer — <em>what works, for whom, in what circumstances</em> — but the artefact itself stays a diagram with a narrative, and on the page a link with no evidence behind it looks exactly like a link with strong evidence. (Blamey and Mackenzie, in <em>Evaluation</em>, 2007, mapped how closely the two traditions actually sit.)
           </p>
           <p className="text-gov-dark leading-relaxed mt-3">
-            The hard part is not drawing the diagram; it is being honest and systematic about which causal links the evidence actually supports, and making those judgements auditable. This demonstrator shows our method: build the Theory of Change as a typed graph, anchor every outcome to the four <a href="https://www.gov.uk/government/publications/victims-funding-strategy/victims-funding-strategy" target="_blank" rel="noopener noreferrer" className="text-gov-blue underline hover:text-gov-blue-dark">Victims’ Funding Strategy</a> outcomes, and let a validator find the gaps for you. It aligns with the Ministry of Justice’s own stated interest (<a href="https://www.gov.uk/government/publications/ministry-of-justice-areas-of-research-interest-2025" target="_blank" rel="noopener noreferrer" className="text-gov-blue underline hover:text-gov-blue-dark">Areas of Research Interest 2025</a>) in AI-assisted evidence synthesis.
+            For services whose outcomes are diffuse and whose evidence base is thin — much of the victim and witness landscape — that is exactly where an evaluation goes wrong before it begins: effort pours into the links that are already well understood, while the load-bearing assumption nobody has tested sits unexamined in the middle of the diagram.
           </p>
         </div>
       </section>
 
       <section className="space-y-6">
-        <h2 className="text-2xl font-bold text-gov-dark font-serif">The Theory of Change, as a typed graph</h2>
+        <div className="border-l-2 border-l-gov-blue pl-6">
+          <h2 className="text-2xl font-bold text-gov-dark font-serif mb-3">The method: treat the Theory of Change as data</h2>
+          <p className="text-gov-dark leading-relaxed">
+            The fix is not a better drawing. It is to make the Theory of Change computable: type every element, anchor each outcome to a <em>published</em> national outcome rather than a bespoke one, attach an evidence grade to every causal claim, declare the assumptions each pathway rests on, and let a validator check the whole graph for completeness. What was a persuasive picture becomes a structure you can query, test and reuse.
+          </p>
+        </div>
+        <h3 className="text-lg font-bold text-gov-dark">Worked on victim &amp; witness support</h3>
         <p className="text-gov-dark leading-relaxed">
-          Each pathway is one mechanism of change, coloured by how well existing evidence supports it. The two links carrying each service’s headline claim — reduced court attrition (P2) and children &amp; young people’s outreach (H3) — are exactly the ones the evidence cannot yet support. They are recorded as gaps and become the prioritised questions for a future evaluation.
+          To show it doing real work we apply the method to victim and witness support — court-based support for witnesses, and support for families bereaved by homicide — anchoring every outcome to the four Victims’ Funding Strategy outcomes. Each pathway below is one mechanism of change, coloured by how well existing evidence supports it. The links carrying the headline claims — that in-court support keeps witnesses engaged (P2), that community outreach helps bereaved children cope (H3) — are exactly the ones the evidence cannot yet support, so they are recorded as gaps and become the questions an evaluation should prioritise.
         </p>
         <div className="bg-white border border-gov-border/50 rounded-xl p-4 sm:p-6">
-          <Mermaid chart={TOC_CHART} id="toc" ariaLabel="Theory of Change graph linking seven service pathways to the four Victims Funding Strategy outcomes, coloured by evidence strength." />
+          <Mermaid chart={TOC_CHART} id="toc" ariaLabel="Theory of Change graph linking seven support pathways to four national outcomes, coloured by evidence strength." />
         </div>
         <div className="flex flex-wrap gap-2 text-xs">
-          <span className="px-2 py-1 rounded bg-green-50 text-green-700 border border-green-200">strong — robust UK evidence</span>
+          <span className="px-2 py-1 rounded bg-green-50 text-green-700 border border-green-200">strong — robust evidence</span>
           <span className="px-2 py-1 rounded bg-sky-50 text-sky-700 border border-sky-200">moderate — indicative / analogous</span>
           <span className="px-2 py-1 rounded bg-amber-50 text-amber-700 border border-amber-200">limited — weak or indirect</span>
           <span className="px-2 py-1 rounded bg-red-50 text-red-700 border border-red-200">evidence gap — prioritise for evaluation</span>
@@ -182,12 +182,12 @@ export const VictimWitnessEvaluation: React.FC = () => {
       </section>
 
       <section className="space-y-6">
-        <h2 className="text-2xl font-bold text-gov-dark font-serif">What we built</h2>
+        <h2 className="text-2xl font-bold text-gov-dark font-serif">What the method produces</h2>
         <div className="overflow-x-auto">
           <table className="w-full text-sm border-collapse">
             <thead>
               <tr className="bg-gov-bg border-b border-gov-border">
-                <th className="text-left px-4 py-3 font-semibold text-gov-dark">Deliverable</th>
+                <th className="text-left px-4 py-3 font-semibold text-gov-dark">Artefact</th>
                 <th className="text-left px-4 py-3 font-semibold text-gov-dark">What it is</th>
               </tr>
             </thead>
@@ -207,7 +207,7 @@ export const VictimWitnessEvaluation: React.FC = () => {
         <div className="border-l-2 border-l-gov-blue pl-6">
           <h2 className="text-2xl font-bold text-gov-dark font-serif mb-3">A validator that finds the gaps for you</h2>
           <p className="text-gov-dark leading-relaxed">
-            Because the pathways are typed, SHACL shapes check the graph the way a spell-checker checks prose: no outcome without a Victims’ Funding Strategy anchor, no causal claim without an evidence grade, no pathway without its declared assumptions. Running the validator on this graph returns <strong>SHACL conforms: true</strong>, then surfaces the evidence-gap map by query — <strong>two genuine gaps across seven pathways</strong>. Structure is guaranteed; the gaps are recorded, not hidden. That is what turns “highlight the evidence gaps” from a hopeful instruction into a mechanical result.
+            Because the pathways are typed, SHACL shapes check the graph the way a spell-checker checks prose: no outcome without a published anchor, no causal claim without an evidence grade, no pathway without its declared assumptions. Running the validator on this graph returns <strong>SHACL conforms: true</strong>, then surfaces the evidence-gap map by query — <strong>two genuine gaps across seven pathways</strong>. Structure is guaranteed; the gaps are recorded, not hidden. That is what turns “name the weak links” from a hope into a mechanical result — and it is precisely what a feasibility assessment or an Evaluation Task Force reviewer is looking for.
           </p>
         </div>
         <div className="overflow-x-auto rounded-xl border border-gov-border/50">
@@ -216,7 +216,7 @@ export const VictimWitnessEvaluation: React.FC = () => {
               <tr className="bg-gov-bg border-b border-gov-border">
                 <th className="text-left px-4 py-3 font-semibold text-gov-dark">Population</th>
                 <th className="text-left px-4 py-3 font-semibold text-gov-dark">Service model</th>
-                <th className="text-left px-4 py-3 font-semibold text-gov-dark">VFS outcome</th>
+                <th className="text-left px-4 py-3 font-semibold text-gov-dark">Outcome</th>
                 <th className="text-left px-4 py-3 font-semibold text-gov-dark">Effect</th>
                 <th className="text-left px-4 py-3 font-semibold text-gov-dark">Quality</th>
                 <th className="text-left px-4 py-3 font-semibold text-gov-dark">Provenance</th>
@@ -237,30 +237,30 @@ export const VictimWitnessEvaluation: React.FC = () => {
           </table>
         </div>
         <p className="text-sm text-gov-secondary/90 leading-relaxed">
-          Effect directions and grades shown here are illustrative of the extraction structure, not asserted findings. The two rows marked <em>gap</em> are genuine: neither service has been formally evaluated for some time — the fact that motivates this work.
+          Effect directions and grades shown here are illustrative of the extraction structure, not asserted findings. The two rows marked <em>gap</em> reflect a real state of the field: these links are widely assumed but not yet robustly evidenced.
         </p>
       </section>
 
       <section className="space-y-4">
         <div className="border-l-2 border-l-gov-blue pl-6">
-          <h2 className="text-2xl font-bold text-gov-dark font-serif mb-3">Outcome</h2>
+          <h2 className="text-2xl font-bold text-gov-dark font-serif mb-3">Where this goes</h2>
           <p className="text-gov-dark leading-relaxed">
-            An open, machine-readable Theory of Change and evidence schema released under CC-BY-4.0, built on Tesseract’s <a href="https://github.com/fabio-rovai/open-ontologies" target="_blank" rel="noopener noreferrer" className="text-gov-blue underline hover:text-gov-blue-dark">open-ontologies</a> approach and validated with SHACL. The deliverables a commissioner sees are the standard products — the Theory of Change diagram, the narrative, the M&amp;E framework; the structured graph underneath is what makes them auditable, consistent across two parallel service strands, and reusable in the full evaluation that follows.
+            An open, machine-readable Theory of Change and evidence schema released under CC-BY-4.0, built on Tesseract’s <a href="https://github.com/fabio-rovai/open-ontologies" target="_blank" rel="noopener noreferrer" className="text-gov-blue underline hover:text-gov-blue-dark">open-ontologies</a> approach and validated with SHACL. As evaluation moves to the centre of spending decisions, a Theory of Change stops being a document produced once and filed. It becomes standing infrastructure — auditable, internally consistent, and carried forward into the full evaluation rather than redrawn from scratch. The products a commissioner sees are still the familiar ones — the diagram, the narrative, the monitoring-and-evaluation framework; the structured graph underneath is what makes them hold up.
           </p>
           <p className="text-sm text-gov-secondary/90 leading-relaxed mt-4">
-            This is an independent, self-initiated demonstration. It is not affiliated with, commissioned by, or endorsed by the Ministry of Justice or Victim Support, and contains no commissioned findings. It is built entirely from public information and open standards.
+            This is an independent, self-initiated reflection on method. It is built entirely from public information and open standards, uses no confidential or commissioned data, and represents no organisation’s findings but our own.
           </p>
         </div>
 
         <blockquote className="border-l-4 border-l-gov-blue pl-6 py-2 my-6 bg-gov-bg rounded-r-lg">
-          <p className="text-gov-dark italic leading-relaxed">"A clean Theory of Change is not one with no weak links; it is one where the weak links are named. Building it as a validated graph forces that honesty — the claims a service cannot yet evidence stop being reassuring prose and become the exact questions the evaluation must answer."</p>
+          <p className="text-gov-dark italic leading-relaxed">"A clean Theory of Change is not one with no weak links; it is one where the weak links are named. Building it as a validated graph forces that honesty — the claims a service cannot yet evidence stop being reassuring prose and become the exact questions an evaluation must answer."</p>
           <cite className="text-sm text-gov-secondary font-semibold not-italic mt-2 block">Fabio Rovai, Tesseract Academy</cite>
         </blockquote>
       </section>
 
       <div className="bg-gov-bg border border-gov-border/50 rounded-xl p-8 flex flex-col sm:flex-row gap-4 sm:items-center sm:justify-between">
         <div>
-          <p className="font-semibold text-gov-dark">View the open Theory of Change</p>
+          <p className="font-semibold text-gov-dark">View the open method</p>
           <p className="text-sm text-gov-secondary mt-1">
             Typed ToC ontology, SHACL shapes, the evidence-extraction schema and the validator.
           </p>

@@ -121,8 +121,8 @@ const PAGE_META = {
     description: 'An open, machine-readable ontology and explorer of the Skills England occupational maps by Tesseract Academy: 1,269 occupational standards placed in the route, pathway and cluster hierarchy, crosswalked to ONS SOC 2010/2020, linked to apprenticeship and technical education products, green-jobs themes and progression pathways. 51,355 triples, published as Turtle and JSON-LD, validated at zero SHACL violations. Open Government Licence v3.0.',
   },
   '/research/victim-witness-evaluation': {
-    title: 'A machine-checkable Theory of Change for victim & witness support | Tesseract Academy for the Public Sector',
-    description: 'A self-initiated, open, machine-readable Theory of Change and rapid-evidence-assessment demonstrator for the National Witness Service and National Homicide Service, anchored on the four Victims\' Funding Strategy outcomes. A typed ToC ontology (7 pathways across two services), SHACL validation at zero violations, and a structured evidence-extraction schema that surfaces two genuine evidence gaps. Aligned to the Magenta Book and MoJ Areas of Research Interest 2025. Published on GitHub under CC-BY-4.0.',
+    title: 'When a Theory of Change has to hold up: machine-checkable evaluation logic | Tesseract Academy for the Public Sector',
+    description: 'A reflection on where government evaluation is heading — the Evaluation Task Force, the Victims and Prisoners Act 2024, outcome-based commissioning — and a self-initiated open method that answers it: building a Theory of Change as a typed, evidence-graded, SHACL-validated graph so its weak links are named, not buried. Worked on victim and witness support, anchored on the Victims\' Funding Strategy outcomes; 7 pathways, zero SHACL violations, two genuine evidence gaps surfaced. Published on GitHub under CC-BY-4.0.',
   },
   '/services/ai-consulting': {
     title: 'AI Consulting for UK Public Sector | Tesseract Academy for the Public Sector',
