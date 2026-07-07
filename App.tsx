@@ -28,6 +28,7 @@ const Ies4TurtleLanguageModel = lazy(() => import('./pages/research/Ies4TurtleLa
 const PyramidBridge = lazy(() => import('./pages/research/PyramidBridge').then(m => ({ default: m.PyramidBridge })));
 const NatureSecurityRisk = lazy(() => import('./pages/research/NatureSecurityRisk').then(m => ({ default: m.NatureSecurityRisk })));
 const SkillsEnglandOccupationalMaps = lazy(() => import('./pages/research/SkillsEnglandOccupationalMaps').then(m => ({ default: m.SkillsEnglandOccupationalMaps })));
+const VictimWitnessEvaluation = lazy(() => import('./pages/research/VictimWitnessEvaluation').then(m => ({ default: m.VictimWitnessEvaluation })));
 const Glossary = lazy(() => import('./pages/Glossary').then(m => ({ default: m.Glossary })));
 const AIConsulting = lazy(() => import('./pages/services/AIConsulting').then(m => ({ default: m.AIConsulting })));
 const ResearchPolicy = lazy(() => import('./pages/services/ResearchPolicy').then(m => ({ default: m.ResearchPolicy })));
@@ -138,6 +139,10 @@ const PAGE_META: Record<string, { title: string; description: string }> = {
     title: 'The Skills England Occupational Maps as an Ontology | Tesseract Academy for the Public Sector',
     description: 'An open, machine-readable ontology and explorer of the Skills England occupational maps by Tesseract Academy: 1,269 occupational standards placed in the route, pathway and cluster hierarchy, crosswalked to ONS SOC 2010/2020, linked to apprenticeship and technical education products, green-jobs themes and progression pathways. 51,355 triples, published as Turtle and JSON-LD, validated at zero SHACL violations. Open Government Licence v3.0.',
   },
+  '/research/victim-witness-evaluation': {
+    title: 'A machine-checkable Theory of Change for victim & witness support | Tesseract Academy for the Public Sector',
+    description: 'A self-initiated, open, machine-readable Theory of Change and rapid-evidence-assessment demonstrator for the National Witness Service and National Homicide Service, anchored on the four Victims\' Funding Strategy outcomes. A typed ToC ontology (7 pathways across two services), SHACL validation at zero violations, and a structured evidence-extraction schema that surfaces two genuine evidence gaps. Aligned to the Magenta Book and MoJ Areas of Research Interest 2025. Published on GitHub under CC-BY-4.0.',
+  },
   '/glossary': {
     title: 'AI & Procurement Glossary | Tesseract Academy for the Public Sector',
     description: 'Definitions of 60+ AI, data science, and procurement terms used in UK public sector contracting. From Algorithmic Impact Assessment to Zero-Shot Learning.',
@@ -232,6 +237,7 @@ const App: React.FC = () => {
               <Route path="/research/pyramid-ies-hqdm-semantic-bridge" element={<PyramidBridge />} />
               <Route path="/research/nature-related-security-risk" element={<NatureSecurityRisk />} />
               <Route path="/research/skills-england-occupational-maps" element={<SkillsEnglandOccupationalMaps />} />
+              <Route path="/research/victim-witness-evaluation" element={<VictimWitnessEvaluation />} />
               <Route path="/glossary" element={<Glossary />} />
               <Route path="/services/ai-consulting" element={<AIConsulting />} />
               <Route path="/services/research-policy" element={<ResearchPolicy />} />

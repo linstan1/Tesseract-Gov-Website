@@ -35,6 +35,7 @@ import { Ies4TurtleLanguageModel } from './pages/research/Ies4TurtleLanguageMode
 import { PyramidBridge } from './pages/research/PyramidBridge';
 import { NatureSecurityRisk } from './pages/research/NatureSecurityRisk';
 import { SkillsEnglandOccupationalMaps } from './pages/research/SkillsEnglandOccupationalMaps';
+import { VictimWitnessEvaluation } from './pages/research/VictimWitnessEvaluation';
 import { Glossary } from './pages/Glossary';
 import { AIConsulting } from './pages/services/AIConsulting';
 import { ResearchPolicy } from './pages/services/ResearchPolicy';
@@ -75,6 +76,7 @@ const SSRApp: React.FC = () => (
         <Route path="/research/pyramid-ies-hqdm-semantic-bridge" element={<PyramidBridge />} />
         <Route path="/research/nature-related-security-risk" element={<NatureSecurityRisk />} />
         <Route path="/research/skills-england-occupational-maps" element={<SkillsEnglandOccupationalMaps />} />
+        <Route path="/research/victim-witness-evaluation" element={<VictimWitnessEvaluation />} />
         <Route path="/glossary" element={<Glossary />} />
         <Route path="/services/ai-consulting" element={<AIConsulting />} />
         <Route path="/services/research-policy" element={<ResearchPolicy />} />

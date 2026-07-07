@@ -120,6 +120,10 @@ const PAGE_META = {
     title: 'The Skills England Occupational Maps as an Ontology | Tesseract Academy for the Public Sector',
     description: 'An open, machine-readable ontology and explorer of the Skills England occupational maps by Tesseract Academy: 1,269 occupational standards placed in the route, pathway and cluster hierarchy, crosswalked to ONS SOC 2010/2020, linked to apprenticeship and technical education products, green-jobs themes and progression pathways. 51,355 triples, published as Turtle and JSON-LD, validated at zero SHACL violations. Open Government Licence v3.0.',
   },
+  '/research/victim-witness-evaluation': {
+    title: 'A machine-checkable Theory of Change for victim & witness support | Tesseract Academy for the Public Sector',
+    description: 'A self-initiated, open, machine-readable Theory of Change and rapid-evidence-assessment demonstrator for the National Witness Service and National Homicide Service, anchored on the four Victims\' Funding Strategy outcomes. A typed ToC ontology (7 pathways across two services), SHACL validation at zero violations, and a structured evidence-extraction schema that surfaces two genuine evidence gaps. Aligned to the Magenta Book and MoJ Areas of Research Interest 2025. Published on GitHub under CC-BY-4.0.',
+  },
   '/services/ai-consulting': {
     title: 'AI Consulting for UK Public Sector | Tesseract Academy for the Public Sector',
     description: 'Custom AI model development, NLP pipelines, and predictive analytics for UK government. CCS RM6200 appointed supplier. GDS aligned. Welsh Government ML land valuation and NDTP ontology case studies.',
