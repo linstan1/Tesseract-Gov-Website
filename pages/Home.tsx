@@ -163,6 +163,14 @@ export const Home: React.FC = () => {
               <img src="/events/edinburgh-protocol-future-payments.jpg" alt="Tesseract Academy presenting the Edinburgh Protocol at the Scottish Centre of Excellence in Digital Trust Future Payments Innovation Challenge" loading="lazy" decoding="async" className="w-full h-72 object-cover rounded-xl shadow-sm" style={{ objectPosition: '50% 32%' }} />
               <figcaption className="text-center text-xs text-gov-secondary mt-2">Edinburgh Protocol pitch, Scottish Centre of Excellence in Digital Trust, Future Payments Innovation Challenge</figcaption>
             </figure>
+            <figure>
+              <img src="/events/ldw2026-lse-panel.jpg" alt="The speaker panel at Tesseract Academy's AI Tools for Everyone: Advancing Disability Inclusion event in the Shaw Library, LSE, with King's Institute for Artificial Intelligence, London Data Week and LSE Data Science Institute banners" loading="lazy" decoding="async" className="w-full h-80 object-cover rounded-xl shadow-sm" style={{ objectPosition: '50% 45%' }} />
+              <figcaption className="text-center text-xs text-gov-secondary mt-2">Speaker panel, AI Tools for Everyone: Advancing Disability Inclusion, London Data Week 2026, Shaw Library, LSE</figcaption>
+            </figure>
+            <figure>
+              <img src="/events/ldw2026-lse-visual-accessibility.jpg" alt="A Tesseract Academy speaker presents AI for Visual Accessibility to the audience at the Shaw Library, LSE, during London Data Week 2026" loading="lazy" decoding="async" className="w-full h-80 object-cover rounded-xl shadow-sm" style={{ objectPosition: '50% 45%' }} />
+              <figcaption className="text-center text-xs text-gov-secondary mt-2">Presenting AI tools for visual accessibility to the audience, London Data Week 2026, LSE</figcaption>
+            </figure>
           </div>
         </div>
 
@@ -234,7 +242,7 @@ export const Home: React.FC = () => {
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-gov-blue flex-shrink-0 mt-0.5" />
-                  <span><strong>London Data Week 2026  - AI Tools for Everyone: Advancing Disability Inclusion</strong>  - Returning bigger in 2026 at the <strong>London School of Economics</strong>. Tesseract Academy is hosting a public session with speakers from technology, disability, research and policy on advancing accessibility and disability inclusion through AI. Wednesday 8 July 2026, Shaw Lecture Theatre, LSE. <a href="https://www.eventbrite.co.uk/e/ai-tools-for-everyone-advancing-disability-inclusion-tickets-1991274539752" target="_blank" rel="noopener noreferrer" className="text-gov-blue hover:underline">Register on Eventbrite</a>.</span>
+                  <span><strong>London Data Week 2026  - AI Tools for Everyone: Advancing Disability Inclusion</strong>  - Hosted at the <strong>London School of Economics</strong> on Wednesday 8 July 2026, bringing together speakers from technology, disability, research and policy on advancing accessibility and disability inclusion through AI. Held in the Shaw Library, LSE, hosted by the LSE Data Science Institute with the King's Institute for Artificial Intelligence.</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-gov-blue flex-shrink-0 mt-0.5" />

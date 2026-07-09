@@ -64,28 +64,62 @@ export const Insights: React.FC = () => {
         <h2 className="text-3xl font-bold text-gov-dark">Recent Announcements</h2>
         <article className="bg-white border border-gov-border/50 rounded-xl p-8">
           <div className="flex items-center gap-3 mb-2">
-            <span className="text-xs font-semibold uppercase tracking-widest text-gov-blue bg-gov-blue/10 px-2.5 py-1 rounded-full">Event: London Data Week 2026</span>
+            <span className="text-xs font-semibold uppercase tracking-widest text-gov-blue bg-gov-blue/10 px-2.5 py-1 rounded-full">Event Recap: London Data Week 2026</span>
             <time className="text-xs text-gov-secondary/70" dateTime="2026-07-08">8 July 2026</time>
           </div>
-          <h3 className="text-lg font-bold text-gov-dark mb-2">
+          <h3 className="text-lg font-bold text-gov-dark mb-4">
             AI Tools for Everyone: Advancing Disability Inclusion (LSE)
           </h3>
+
+          <figure className="mb-5">
+            <img
+              src="/events/ldw2026-lse-panel.jpg"
+              alt="The speaker panel at Tesseract Academy's AI Tools for Everyone: Advancing Disability Inclusion event in the Shaw Library, LSE, in front of the King's Institute for Artificial Intelligence, London Data Week and LSE Data Science Institute banners"
+              width="2048"
+              height="1152"
+              loading="lazy"
+              decoding="async"
+              className="w-full rounded-xl shadow-sm"
+            />
+            <figcaption className="text-xs text-gov-secondary/70 mt-2">
+              The speaker panel at the Shaw Library, LSE, during London Data Week 2026.
+            </figcaption>
+          </figure>
+
           <p className="text-base text-gov-dark/80 leading-relaxed mb-3">
-            Tesseract Academy is hosting{' '}
-            <a
-              href="https://www.eventbrite.co.uk/e/ai-tools-for-everyone-advancing-disability-inclusion-tickets-1991274539752"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gov-blue hover:underline"
-            >
-              AI Tools for Everyone: Advancing Disability Inclusion
-            </a>{' '}
-            as part of London Data Week 2026, returning bigger this year at the London School of Economics. The
-            session brings together speakers from technology, disability, research and policy to explore how AI can
-            enhance accessibility and support for people with diverse disabilities.
+            Thank you to the <strong>LSE Data Science Institute</strong> for hosting Tesseract Academy's{' '}
+            <em>AI Tools for Everyone: Advancing Disability Inclusion</em> at the Shaw Library as part of{' '}
+            London Data Week, and to the <strong>King's Institute for Artificial Intelligence</strong> for
+            making this possible.
           </p>
+          <p className="text-base text-gov-dark/80 leading-relaxed mb-5">
+            A big thank you to all our brilliant speakers: <strong>Owais Niaz</strong>, <strong>Jack Oat</strong>{' '}
+            and <strong>Luqmaan Shafique</strong> from Vision Ability CIC; <strong>Dr Tatia Codreanu</strong> from
+            Imperial; our CEO <strong>Dr Stylianos Kampakis</strong>, CStat; <strong>Jeremiah Johnson</strong>;{' '}
+            <strong>Rafie Cecilia</strong> from King's College London; and <strong>Hui Gong</strong> from UCL. And a
+            special thank you to <strong>Tejasva Gupta</strong> for leading all the communications.
+          </p>
+
+          <figure className="mb-5 sm:max-w-sm">
+            <img
+              src="/events/ldw2026-lse-visual-accessibility.jpg"
+              alt="A speaker presents AI for Visual Accessibility to the audience from the LSE lectern during Tesseract Academy's London Data Week 2026 session"
+              width="1200"
+              height="1600"
+              loading="lazy"
+              decoding="async"
+              className="w-full rounded-xl shadow-sm"
+            />
+            <figcaption className="text-xs text-gov-secondary/70 mt-2">
+              Presenting AI tools for visual accessibility to the audience.
+            </figcaption>
+          </figure>
+
           <p className="text-sm text-gov-secondary/70">
-            Wednesday 8 July 2026, 4&ndash;6pm · Shaw Lecture Theatre, LSE, Houghton Street, London WC2A 2AE · Free, registration via Eventbrite
+            Wednesday 8 July 2026 · Shaw Library, LSE, Houghton Street, London WC2A 2AE · Part of London Data Week 2026
+          </p>
+          <p className="text-xs text-gov-secondary/50 mt-2">
+            #LondonDataWeek #DisabilityInclusion #AIforGood #DataScience
           </p>
         </article>
         <article className="bg-white border border-gov-border/50 rounded-xl p-8 flex gap-6 items-start">
