@@ -1,0 +1,66 @@
+[
+  {
+    "component": "PropertyMarketIndicators",
+    "importPath": "./pages/research/PropertyMarketIndicators",
+    "slug": "/research/property-market-indicators",
+    "title": "What a year of transactions says about every local housing market | Tesseract Academy for the Public Sector",
+    "description": "An open, reproducible set of residential property-market indicators for all 318 local authorities in England and Wales, derived from HM Land Registry Price Paid Data: median and quartile prices, transaction volume, new-build and leasehold share, and property-type mix, from 760,607 standard 2025 transactions. Built from open data under the Open Government Licence, published on GitHub and Hugging Face.",
+    "caseStudy": {
+      "id": "uc-property-market",
+      "title": "Property-Market Indicators for Every Local Authority",
+      "challenge": "Local authorities must repeatedly evidence their housing market for local plans, strategic housing market assessments, stock-condition programmes and viability studies. The raw material, HM Land Registry Price Paid Data, is open and national but arrives as fourteen unlabelled columns and roughly nine hundred thousand rows a year, with no comparable per-authority summary.",
+      "intervention": "A self-initiated, open pipeline that turns a full year of Price Paid Data into ten comparable indicators per local authority: transaction volume, median and quartile prices, mean price, new-build share, leasehold share and property-type mix. Each sale is attributed to its authority via the Price Paid district field, so no postcode lookup introduces error, and only standard price-paid (open-market) transactions are counted, excluding repossessions and bulk transfers.",
+      "assurance": "Fully reproducible from the open CSV with a single script, published on GitHub and Hugging Face under the Open Government Licence v3.0. The dataset is explicit about its scope: a market-activity indicator set, not a dwelling-stock census, with the transaction count shown next to every price so users can judge how much weight each median bears.",
+      "outcome": "Indicators for all 318 local authorities in England and Wales from 760,607 standard 2025 transactions, with local median prices spanning £135,000 to £1.16 million. A comparable, defensible starting point for any local housing-market evidence base, built entirely from open data.",
+      "reusable": "The pipeline extends cleanly to multi-year time series, affordability ratios and joins to deprivation or stock data; the aggregate-and-attribute pattern re-points to any transaction-level open dataset carrying an administrative geography."
+    }
+  },
+  {
+    "component": "IxbrlDisclosureBenchmark",
+    "importPath": "./pages/research/IxbrlDisclosureBenchmark",
+    "slug": "/research/ixbrl-disclosure-benchmark",
+    "title": "How machine-readable are UK company accounts, really? | Tesseract Academy for the Public Sector",
+    "description": "An open benchmark parsing a full day of Companies House Inline XBRL accounts filings to measure what fraction expose each core accounting concept as a structured, machine-readable fact. 8,856 filings, 899 concepts; core balance-sheet concepts exposed in 73 to 97 percent of filings, the empirical premise behind claims that structured data beats PDF for AI-driven reporting. Published on GitHub and Hugging Face under the Open Government Licence.",
+    "caseStudy": {
+      "id": "uc-ixbrl",
+      "title": "How Machine-Readable Are UK Company Accounts, Really?",
+      "challenge": "\"Structured data beats PDF for AI-driven reporting\" is received wisdom in regulatory and reporting circles, but the empirical premise is rarely measured: across the accounts companies actually file, what fraction expose each core figure as a structured fact a machine can read without OCR or layout guessing?",
+      "intervention": "A self-initiated, open benchmark that parses a full day of the Companies House accounts bulk archive (Inline XBRL, where every figure is tagged to a UK-GAAP or IFRS taxonomy concept) and records, per filing, which concepts are exposed as machine-readable facts. The benchmark quantity is concept exposure: the share of real filings in which each accounting concept appears as a structured fact.",
+      "assurance": "Reproducible from the open bulk archive with a single parser, published on GitHub and Hugging Face under the Open Government Licence v3.0. Results are stated as concept exposure over the filed population, not as an aspiration about what could be tagged.",
+      "outcome": "Across 8,856 filings and 899 distinct concepts (median 49 tagged facts per filing), the core balance sheet is genuinely structured: equity exposed in 97.2% of filings, net assets 86.6%, creditors 75.6%. The tail falls away fast and unevenly, with debtors present in only 28%, and that unevenness is the finding: systems must be built on the measured exposure profile, not an assumption of uniform availability.",
+      "reusable": "The parser scales to the full daily and monthly archives for a longitudinal exposure profile and extends to value-level extraction and cross-taxonomy comparison; the exposure-measurement method transfers to any tagged-document corpus."
+    }
+  },
+  {
+    "component": "NatureGovernanceGraph",
+    "importPath": "./pages/research/NatureGovernanceGraph",
+    "slug": "/research/nature-governance-graph",
+    "title": "The UK nature-governance landscape, as a graph you can cite | Tesseract Academy for the Public Sector",
+    "description": "An open, provenance-first reference graph of the UK nature and environment governance landscape: 47 statutory agencies, NGOs, data bodies, funders, sector bodies, partnerships and international conventions, and 48 sourced relationships. Every relationship reified with a cited source; SHACL enforces that no edge is unsourced. Zero SHACL violations. Published in Open Ontologies under CC BY 4.0.",
+    "caseStudy": {
+      "id": "uc-nature-gov",
+      "title": "The UK Nature-Governance Landscape, as a Graph You Can Cite",
+      "challenge": "Stakeholder mapping for the environment sector is usually a slide: boxes and arrows, no provenance, out of date the day it is drawn. The relationships that matter, who sponsors whom, who advises government internationally, whose data flows into the national record, which duties are statutory, are exactly the ones a diagram cannot defend, and getting them wrong in a bid or plan is a real risk.",
+      "intervention": "A self-initiated, open, provenance-first reference graph of the UK nature-governance landscape: 47 actors across statutory agencies, NGOs, data bodies, funders, sector bodies, partnerships and international conventions, and 48 typed relationships. Every relationship is reified with a plain-language basis and a prov:wasDerivedFrom link to a cited source, so no edge can exist without a citation.",
+      "assurance": "SHACL shapes enforce the design commitment: the build fails if any relationship lacks a source or any source lacks a URL. It validates at zero SHACL violations with full referential integrity, across 47 actors, 48 relationships and 42 distinct cited sources. Published in Open Ontologies under CC BY 4.0.",
+      "outcome": "A queryable graph that records the accurate relationship, not the convenient one: it correctly captures that the Forestry Commission is a non-ministerial department not a sponsored body, that NatureScot, NRW and SEPA answer to the devolved governments, and that Local Nature Recovery Strategy authorities are designated under Environment Act 2021 section 104, each carried in a cited basis rather than smoothed over.",
+      "reusable": "The provenance-first, reified-relationship pattern with SHACL-enforced sourcing transfers to any stakeholder or institutional-landscape mapping that must be defensible; the graph answers competency questions on sponsorship, data flows and statutory basis directly."
+    }
+  },
+  {
+    "component": "SkillsEnglandEscoCrosswalk",
+    "importPath": "./pages/research/SkillsEnglandEscoCrosswalk",
+    "slug": "/research/skills-england-esco-crosswalk",
+    "title": "Where England's occupational standards meet Europe's skills vocabulary | Tesseract Academy for the Public Sector",
+    "description": "An open SKOS crosswalk from the 1,269 Skills England occupational standards to the EU ESCO occupation classification, with conservative, labelled confidence: 114 exact, 281 close, 270 related and 604 unmatched. The large unmatched tail quantifies where England's occupational language diverges from ESCO. Published in Open Ontologies under CC BY 4.0.",
+    "caseStudy": {
+      "id": "uc-seom-esco",
+      "title": "Where England's Occupational Standards Meet Europe's Skills Vocabulary",
+      "challenge": "ESCO is the reference occupation and skills classification across Europe; England's Skills England maintains a separate, nationally specific set of occupational standards behind apprenticeships and technical education. To read English skills data against the international vocabulary you need a crosswalk, and one that is honest about how far each link can be trusted.",
+      "intervention": "A self-initiated, open SKOS crosswalk from all 1,269 Skills England occupations to ESCO occupations. For each occupation, its name is compared against every ESCO candidate's title and English alternative labels; the best normalised similarity (sequence ratio with token overlap and containment) is banded into exact, close, related or unmatched, and every link carries its score and match method.",
+      "assurance": "Stated plainly as a lexical crosswalk: a candidate-generation and triage asset, not an authoritative equivalence. The full unmatched set is published alongside the matches, and an embeddings-plus-adjudication approach is named as the next step rather than assumed. Built on the open Skills England occupational-maps ontology; published in Open Ontologies under CC BY 4.0.",
+      "outcome": "114 exact, 281 close, 270 related and 604 unmatched matches (52% any-band, 31% strong). The 604 unmatched occupations are the headline: a measurement of how far England's occupational language sits from ESCO's, and precisely the surface a semantic crosswalk or national ESCO extension must cover.",
+      "reusable": "The banded-confidence crosswalk method (with published gaps and per-link scores) transfers to any two controlled vocabularies that must be reconciled; the SEOM-to-ESCO mappings and unmatched set are open for reuse and extension."
+    }
+  }
+]
