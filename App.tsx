@@ -35,6 +35,7 @@ const ConsultationCorpus = lazy(() => import('./pages/research/ConsultationCorpu
 const EvaluationAtlas = lazy(() => import('./pages/research/EvaluationAtlas').then(m => ({ default: m.EvaluationAtlas })));
 const SkillsEnglandEscoCrosswalk = lazy(() => import('./pages/research/SkillsEnglandEscoCrosswalk').then(m => ({ default: m.SkillsEnglandEscoCrosswalk })));
 const NatureGovernanceGraph = lazy(() => import('./pages/research/NatureGovernanceGraph').then(m => ({ default: m.NatureGovernanceGraph })));
+const ModipPlasticsGraph = lazy(() => import('./pages/research/ModipPlasticsGraph').then(m => ({ default: m.ModipPlasticsGraph })));
 const IxbrlDisclosureBenchmark = lazy(() => import('./pages/research/IxbrlDisclosureBenchmark').then(m => ({ default: m.IxbrlDisclosureBenchmark })));
 const PropertyMarketIndicators = lazy(() => import('./pages/research/PropertyMarketIndicators').then(m => ({ default: m.PropertyMarketIndicators })));
 const Glossary = lazy(() => import('./pages/Glossary').then(m => ({ default: m.Glossary })));
@@ -167,6 +168,11 @@ const PAGE_META: Record<string, { title: string; description: string }> = {
     description: "An open, provenance-first reference graph of the UK nature and environment governance landscape: 47 statutory agencies, NGOs, data bodies, funders, sector bodies, partnerships and international conventions, and 48 sourced relationships. Every relationship reified with a cited source; SHACL enforces that no edge is unsourced. Zero SHACL violations. Published in Open Ontologies under CC BY 4.0.",
   },
 
+  '/research/modip-plastics-knowledge-graph': {
+    title: "From raw museum records to a knowledge graph | Tesseract Academy for the Public Sector",
+    description: "A reproducible pipeline turning the Museum of Design in Plastics' raw open catalogue (11,865 objects, CC BY 4.0 via the Museum Data Service) into a standards-based knowledge graph: a SKOS materials taxonomy grounded in polymer science, a CIDOC-CRM instance graph, verified Getty AAT alignments and a variant graph recovered from description prose. 99.9% of 35,172 material tags resolved; zero SHACL violations. Published in Open Ontologies under CC BY 4.0.",
+  },
+
   '/research/skills-england-esco-crosswalk': {
     title: "Where England's occupational standards meet Europe's skills vocabulary | Tesseract Academy for the Public Sector",
     description: "An open SKOS crosswalk from the 1,269 Skills England occupational standards to the EU ESCO occupation classification, with conservative, labelled confidence: 114 exact, 281 close, 270 related and 604 unmatched. The large unmatched tail quantifies where England's occupational language diverges from ESCO. Published in Open Ontologies under CC BY 4.0.",
@@ -291,6 +297,7 @@ const App: React.FC = () => {
               <Route path="/research/evaluation-evidence-atlas" element={<EvaluationAtlas />} />
               <Route path="/research/skills-england-esco-crosswalk" element={<SkillsEnglandEscoCrosswalk />} />
               <Route path="/research/nature-governance-graph" element={<NatureGovernanceGraph />} />
+              <Route path="/research/modip-plastics-knowledge-graph" element={<ModipPlasticsGraph />} />
               <Route path="/research/ixbrl-disclosure-benchmark" element={<IxbrlDisclosureBenchmark />} />
               <Route path="/research/property-market-indicators" element={<PropertyMarketIndicators />} />
               <Route path="/glossary" element={<Glossary />} />

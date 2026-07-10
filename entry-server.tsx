@@ -42,6 +42,7 @@ import { ConsultationCorpus } from './pages/research/ConsultationCorpus';
 import { EvaluationAtlas } from './pages/research/EvaluationAtlas';
 import { SkillsEnglandEscoCrosswalk } from './pages/research/SkillsEnglandEscoCrosswalk';
 import { NatureGovernanceGraph } from './pages/research/NatureGovernanceGraph';
+import { ModipPlasticsGraph } from './pages/research/ModipPlasticsGraph';
 import { IxbrlDisclosureBenchmark } from './pages/research/IxbrlDisclosureBenchmark';
 import { PropertyMarketIndicators } from './pages/research/PropertyMarketIndicators';
 import { Glossary } from './pages/Glossary';
@@ -91,6 +92,7 @@ const SSRApp: React.FC = () => (
         <Route path="/research/evaluation-evidence-atlas" element={<EvaluationAtlas />} />
         <Route path="/research/skills-england-esco-crosswalk" element={<SkillsEnglandEscoCrosswalk />} />
         <Route path="/research/nature-governance-graph" element={<NatureGovernanceGraph />} />
+        <Route path="/research/modip-plastics-knowledge-graph" element={<ModipPlasticsGraph />} />
         <Route path="/research/ixbrl-disclosure-benchmark" element={<IxbrlDisclosureBenchmark />} />
         <Route path="/research/property-market-indicators" element={<PropertyMarketIndicators />} />
         <Route path="/glossary" element={<Glossary />} />

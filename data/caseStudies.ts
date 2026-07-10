@@ -353,4 +353,15 @@ export const CASE_STUDIES: CaseStudy[] = [
     outcome: "18,224 live warning pages, 15,437 dated, revealing an unambiguous signal: FCA warnings ran at a few hundred a year through the late 2010s, then climbed to 1,616 in 2022 and around 1,900 a year across 2023 to 2025, a near four-fold rise on 2019. Just under a fifth flag clone firms, among the hardest frauds for a consumer to spot.",
     reusable: "Captured on a schedule the observatory becomes a longitudinal record supporting emerging-threat detection (spikes in clone activity or a named sector); the give-a-live-list-a-memory pattern re-points to any public register that publishes only its current state.",
   },
+  {
+    id: "uc-modip-plastics-kg",
+    slug: "/research/modip-plastics-knowledge-graph",
+    title: "From Raw Museum Records to a Knowledge Graph",
+    category: 'open-demo',
+    challenge: "UK museums are opening their collections as data faster than the data can be made usable. The records come out flat and free-text: the same polymer written four different ways as unrelated strings, relationships between objects trapped inside caption prose, no links to anything. The gap between a collection being published and being computable is real, and until it is measured it stays invisible.",
+    intervention: "A self-initiated, reproducible pipeline applied end to end to the Museum of Design in Plastics' full open catalogue (11,865 objects, CC BY 4.0 via the Museum Data Service). Open standards only: a 137-concept SKOS materials taxonomy grounded in polymer science with every abbreviation and trade name folded in as an alternate label, a CIDOC-CRM (Linked Art compatible) instance graph via a published Spectrum-to-CRM crosswalk, Getty AAT alignments reconciled by query, and a variant graph recovered from accession numbers written into descriptions.",
+    assurance: "The build is a gate, not a claim. SHACL validates at zero violations and a closed-world vocabulary check confirms zero dangling concept references. What could not be done is written down: 49 obscure trade names remain unresolved and are listed, Getty alignment is partial by design, noisy dates yield only a year. The whole thing regenerates from committed data with one command. Published in Open Ontologies under CC BY 4.0.",
+    outcome: "99.9% of 35,172 free-text material assertions resolved to a science-grounded concept (476 raw strings collapsed to 137); 100% of technique and use-domain assertions; 55 verified Getty AAT exact matches; a 485,000-triple graph over all 11,865 objects; and 289 object-to-object variant edges recovered from prose no keyword search could traverse.",
+    reusable: "The pipeline applies to any of the 250-plus collections already in the Museum Data Service and to any museum sitting on a Spectrum or CSV export; the polymer taxonomy, the Spectrum-to-CIDOC-CRM crosswalk and the reconciliation method are open for reuse.",
+  },
 ];
