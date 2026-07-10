@@ -37,6 +37,7 @@ import { PyramidBridge } from './pages/research/PyramidBridge';
 import { NatureSecurityRisk } from './pages/research/NatureSecurityRisk';
 import { SkillsEnglandOccupationalMaps } from './pages/research/SkillsEnglandOccupationalMaps';
 import { VictimWitnessEvaluation } from './pages/research/VictimWitnessEvaluation';
+import { FcaWarningsObservatory } from './pages/research/FcaWarningsObservatory';
 import { ConsultationCorpus } from './pages/research/ConsultationCorpus';
 import { EvaluationAtlas } from './pages/research/EvaluationAtlas';
 import { SkillsEnglandEscoCrosswalk } from './pages/research/SkillsEnglandEscoCrosswalk';
@@ -85,6 +86,7 @@ const SSRApp: React.FC = () => (
         <Route path="/research/nature-related-security-risk" element={<NatureSecurityRisk />} />
         <Route path="/research/skills-england-occupational-maps" element={<SkillsEnglandOccupationalMaps />} />
         <Route path="/research/victim-witness-evaluation" element={<VictimWitnessEvaluation />} />
+        <Route path="/research/fca-warnings-observatory" element={<FcaWarningsObservatory />} />
         <Route path="/research/consultation-corpus" element={<ConsultationCorpus />} />
         <Route path="/research/evaluation-evidence-atlas" element={<EvaluationAtlas />} />
         <Route path="/research/skills-england-esco-crosswalk" element={<SkillsEnglandEscoCrosswalk />} />

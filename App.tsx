@@ -30,6 +30,7 @@ const PyramidBridge = lazy(() => import('./pages/research/PyramidBridge').then(m
 const NatureSecurityRisk = lazy(() => import('./pages/research/NatureSecurityRisk').then(m => ({ default: m.NatureSecurityRisk })));
 const SkillsEnglandOccupationalMaps = lazy(() => import('./pages/research/SkillsEnglandOccupationalMaps').then(m => ({ default: m.SkillsEnglandOccupationalMaps })));
 const VictimWitnessEvaluation = lazy(() => import('./pages/research/VictimWitnessEvaluation').then(m => ({ default: m.VictimWitnessEvaluation })));
+const FcaWarningsObservatory = lazy(() => import('./pages/research/FcaWarningsObservatory').then(m => ({ default: m.FcaWarningsObservatory })));
 const ConsultationCorpus = lazy(() => import('./pages/research/ConsultationCorpus').then(m => ({ default: m.ConsultationCorpus })));
 const EvaluationAtlas = lazy(() => import('./pages/research/EvaluationAtlas').then(m => ({ default: m.EvaluationAtlas })));
 const SkillsEnglandEscoCrosswalk = lazy(() => import('./pages/research/SkillsEnglandEscoCrosswalk').then(m => ({ default: m.SkillsEnglandEscoCrosswalk })));
@@ -180,6 +181,11 @@ const PAGE_META: Record<string, { title: string; description: string }> = {
     title: "Every government consultation that reached an outcome, as one corpus | Tesseract Academy for the Public Sector",
     description: "An open, structured corpus of 6,260 UK government consultations with a published outcome, harvested from the GOV.UK APIs and coded by policy area. 98 percent carry policy-area coding; only 77 percent attach response documents to their outcome. Published on GitHub and Hugging Face under the Open Government Licence.",
   },
+
+  '/research/fca-warnings-observatory': {
+    title: "A live list with no memory: reconstructing the FCA scam-warning signal | Tesseract Academy for the Public Sector",
+    description: "The FCA warning list of unauthorised firms shows only the current set with no history. This open dataset reconstructs it as a monthly time series from 18,224 live warning pages: FCA warnings rose nearly four-fold from around 500 a year in 2019 to roughly 1,900 across 2022 to 2025, 18 percent flagging clone firms. Published on GitHub and Hugging Face.",
+  },
   '/research/victim-witness-evaluation': {
     title: 'When a Theory of Change has to hold up: machine-checkable evaluation logic | Tesseract Academy for the Public Sector',
     description: 'A reflection on where government evaluation is heading, the Evaluation Task Force, the Victims and Prisoners Act 2024, outcome-based commissioning, and a self-initiated open method that answers it: building a Theory of Change as a typed, evidence-graded, SHACL-validated graph so its weak links are named, not buried. Worked on victim and witness support, anchored on the Victims\' Funding Strategy outcomes; 7 pathways, zero SHACL violations, two genuine evidence gaps surfaced. Published on GitHub under CC-BY-4.0.',
@@ -280,6 +286,7 @@ const App: React.FC = () => {
               <Route path="/research/nature-related-security-risk" element={<NatureSecurityRisk />} />
               <Route path="/research/skills-england-occupational-maps" element={<SkillsEnglandOccupationalMaps />} />
               <Route path="/research/victim-witness-evaluation" element={<VictimWitnessEvaluation />} />
+              <Route path="/research/fca-warnings-observatory" element={<FcaWarningsObservatory />} />
               <Route path="/research/consultation-corpus" element={<ConsultationCorpus />} />
               <Route path="/research/evaluation-evidence-atlas" element={<EvaluationAtlas />} />
               <Route path="/research/skills-england-esco-crosswalk" element={<SkillsEnglandEscoCrosswalk />} />

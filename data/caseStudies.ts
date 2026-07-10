@@ -342,4 +342,15 @@ export const CASE_STUDIES: CaseStudy[] = [
     outcome: "114 exact, 281 close, 270 related and 604 unmatched matches (52% any-band, 31% strong). The 604 unmatched occupations are the headline: a measurement of how far England's occupational language sits from ESCO's, and precisely the surface a semantic crosswalk or national ESCO extension must cover.",
     reusable: "The banded-confidence crosswalk method (with published gaps and per-link scores) transfers to any two controlled vocabularies that must be reconciled; the SEOM-to-ESCO mappings and unmatched set are open for reuse and extension.",
   },
+  {
+    id: "uc-fca-warnings",
+    slug: "/research/fca-warnings-observatory",
+    title: "A Live List With No Memory: The FCA Scam-Warning Signal",
+    category: 'open-demo',
+    challenge: "The FCA warns the public about unauthorised and scam firms through its warning list, a useful safety tool with one structural blind spot: it shows only the firms flagged right now. There is no history, so the trend, the very thing that says whether the scam problem is growing, is invisible to anyone designing fraud-prevention services or detection tooling.",
+    intervention: "A self-initiated, open reconstruction that gives the list a memory. Every live warning has its own page carrying a machine-readable publication date; we took the FCA's public sitemap of all 18,224 live warning pages, fetched each with a polite crawl, read its date, and flagged clone firms from the page text, then aggregated by month into a warnings-published time series.",
+    assurance: "Reproducible with a documented crawler, published on GitHub and Hugging Face. Scoped honestly as a reconstruction of a live list, not a historical archive: warnings the FCA has since removed are not captured, so recent years are more completely represented, and it is a research reconstruction of a public signal, not an official FCA statistic.",
+    outcome: "18,224 live warning pages, 15,437 dated, revealing an unambiguous signal: FCA warnings ran at a few hundred a year through the late 2010s, then climbed to 1,616 in 2022 and around 1,900 a year across 2023 to 2025, a near four-fold rise on 2019. Just under a fifth flag clone firms, among the hardest frauds for a consumer to spot.",
+    reusable: "Captured on a schedule the observatory becomes a longitudinal record supporting emerging-threat detection (spikes in clone activity or a named sector); the give-a-live-list-a-memory pattern re-points to any public register that publishes only its current state.",
+  },
 ];
