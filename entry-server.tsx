@@ -37,6 +37,8 @@ import { PyramidBridge } from './pages/research/PyramidBridge';
 import { NatureSecurityRisk } from './pages/research/NatureSecurityRisk';
 import { SkillsEnglandOccupationalMaps } from './pages/research/SkillsEnglandOccupationalMaps';
 import { VictimWitnessEvaluation } from './pages/research/VictimWitnessEvaluation';
+import { ConsultationCorpus } from './pages/research/ConsultationCorpus';
+import { EvaluationAtlas } from './pages/research/EvaluationAtlas';
 import { SkillsEnglandEscoCrosswalk } from './pages/research/SkillsEnglandEscoCrosswalk';
 import { NatureGovernanceGraph } from './pages/research/NatureGovernanceGraph';
 import { IxbrlDisclosureBenchmark } from './pages/research/IxbrlDisclosureBenchmark';
@@ -83,6 +85,8 @@ const SSRApp: React.FC = () => (
         <Route path="/research/nature-related-security-risk" element={<NatureSecurityRisk />} />
         <Route path="/research/skills-england-occupational-maps" element={<SkillsEnglandOccupationalMaps />} />
         <Route path="/research/victim-witness-evaluation" element={<VictimWitnessEvaluation />} />
+        <Route path="/research/consultation-corpus" element={<ConsultationCorpus />} />
+        <Route path="/research/evaluation-evidence-atlas" element={<EvaluationAtlas />} />
         <Route path="/research/skills-england-esco-crosswalk" element={<SkillsEnglandEscoCrosswalk />} />
         <Route path="/research/nature-governance-graph" element={<NatureGovernanceGraph />} />
         <Route path="/research/ixbrl-disclosure-benchmark" element={<IxbrlDisclosureBenchmark />} />

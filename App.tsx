@@ -30,6 +30,8 @@ const PyramidBridge = lazy(() => import('./pages/research/PyramidBridge').then(m
 const NatureSecurityRisk = lazy(() => import('./pages/research/NatureSecurityRisk').then(m => ({ default: m.NatureSecurityRisk })));
 const SkillsEnglandOccupationalMaps = lazy(() => import('./pages/research/SkillsEnglandOccupationalMaps').then(m => ({ default: m.SkillsEnglandOccupationalMaps })));
 const VictimWitnessEvaluation = lazy(() => import('./pages/research/VictimWitnessEvaluation').then(m => ({ default: m.VictimWitnessEvaluation })));
+const ConsultationCorpus = lazy(() => import('./pages/research/ConsultationCorpus').then(m => ({ default: m.ConsultationCorpus })));
+const EvaluationAtlas = lazy(() => import('./pages/research/EvaluationAtlas').then(m => ({ default: m.EvaluationAtlas })));
 const SkillsEnglandEscoCrosswalk = lazy(() => import('./pages/research/SkillsEnglandEscoCrosswalk').then(m => ({ default: m.SkillsEnglandEscoCrosswalk })));
 const NatureGovernanceGraph = lazy(() => import('./pages/research/NatureGovernanceGraph').then(m => ({ default: m.NatureGovernanceGraph })));
 const IxbrlDisclosureBenchmark = lazy(() => import('./pages/research/IxbrlDisclosureBenchmark').then(m => ({ default: m.IxbrlDisclosureBenchmark })));
@@ -168,6 +170,16 @@ const PAGE_META: Record<string, { title: string; description: string }> = {
     title: "Where England's occupational standards meet Europe's skills vocabulary | Tesseract Academy for the Public Sector",
     description: "An open SKOS crosswalk from the 1,269 Skills England occupational standards to the EU ESCO occupation classification, with conservative, labelled confidence: 114 exact, 281 close, 270 related and 604 unmatched. The large unmatched tail quantifies where England's occupational language diverges from ESCO. Published in Open Ontologies under CC BY 4.0.",
   },
+
+  '/research/evaluation-evidence-atlas': {
+    title: "What government evaluates, and how openly it says so | Tesseract Academy for the Public Sector",
+    description: "An open atlas of 1,770 UK government evaluation publications, harvested from the GOV.UK Search API and classified by evaluation type and declared method. Impact evaluations dominate, but only 11 percent declare a recognisable method in their metadata. Published on GitHub and Hugging Face under the Open Government Licence.",
+  },
+
+  '/research/consultation-corpus': {
+    title: "Every government consultation that reached an outcome, as one corpus | Tesseract Academy for the Public Sector",
+    description: "An open, structured corpus of 6,260 UK government consultations with a published outcome, harvested from the GOV.UK APIs and coded by policy area. 98 percent carry policy-area coding; only 77 percent attach response documents to their outcome. Published on GitHub and Hugging Face under the Open Government Licence.",
+  },
   '/research/victim-witness-evaluation': {
     title: 'When a Theory of Change has to hold up: machine-checkable evaluation logic | Tesseract Academy for the Public Sector',
     description: 'A reflection on where government evaluation is heading, the Evaluation Task Force, the Victims and Prisoners Act 2024, outcome-based commissioning, and a self-initiated open method that answers it: building a Theory of Change as a typed, evidence-graded, SHACL-validated graph so its weak links are named, not buried. Worked on victim and witness support, anchored on the Victims\' Funding Strategy outcomes; 7 pathways, zero SHACL violations, two genuine evidence gaps surfaced. Published on GitHub under CC-BY-4.0.',
@@ -268,6 +280,8 @@ const App: React.FC = () => {
               <Route path="/research/nature-related-security-risk" element={<NatureSecurityRisk />} />
               <Route path="/research/skills-england-occupational-maps" element={<SkillsEnglandOccupationalMaps />} />
               <Route path="/research/victim-witness-evaluation" element={<VictimWitnessEvaluation />} />
+              <Route path="/research/consultation-corpus" element={<ConsultationCorpus />} />
+              <Route path="/research/evaluation-evidence-atlas" element={<EvaluationAtlas />} />
               <Route path="/research/skills-england-esco-crosswalk" element={<SkillsEnglandEscoCrosswalk />} />
               <Route path="/research/nature-governance-graph" element={<NatureGovernanceGraph />} />
               <Route path="/research/ixbrl-disclosure-benchmark" element={<IxbrlDisclosureBenchmark />} />

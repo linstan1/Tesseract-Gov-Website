@@ -1,5 +1,37 @@
 [
   {
+    "component": "EvaluationAtlas",
+    "importPath": "./pages/research/EvaluationAtlas",
+    "slug": "/research/evaluation-evidence-atlas",
+    "title": "What government evaluates, and how openly it says so | Tesseract Academy for the Public Sector",
+    "description": "An open atlas of 1,770 UK government evaluation publications, harvested from the GOV.UK Search API and classified by evaluation type and declared method. Impact evaluations dominate, but only 11 percent declare a recognisable method in their metadata. Published on GitHub and Hugging Face under the Open Government Licence.",
+    "caseStudy": {
+      "id": "uc-eval-atlas",
+      "title": "What Government Evaluates, and How Openly It Says So",
+      "challenge": "Government publishes a great deal of evaluation and asks suppliers to build on it, but the published record has never been mapped as a whole: what kinds of evaluation dominate, who commissions them, and how clearly they state their own methods. Grounding a bid in the existing evidence base requires knowing the shape of that base, which no one publishes.",
+      "intervention": "A self-initiated, open atlas that harvests every GOV.UK research and independent-report publication whose title declares it an evaluation, then classifies each by evaluation type and by any method its metadata names. Classification is from the title and description only, the publication's own framing, by a locally hosted open-weights model, measuring how evaluations present themselves in the public catalogue.",
+      "assurance": "Reproducible from the GOV.UK Search API, published on GitHub and Hugging Face under the Open Government Licence v3.0. Stated plainly as metadata-based: it describes how publications present themselves, not an audit of their contents; publications the model cannot place are labelled unclear, not guessed.",
+      "outcome": "1,770 classified publications spanning 1996 to 2026. Impact evaluations dominate (886), as the Magenta Book agenda predicts, but only 11% declare a recognisable method in their metadata, so the catalogue itself is largely method-blind: an automated reader cannot distinguish a robust study from a light-touch one without opening every file. The largest commissioners are DfID, DfE and DWP.",
+      "reusable": "The harvest-and-classify pipeline supports evidence-gap mapping by policy area and a method-transparency indicator per department; the metadata-classification method transfers to any large published-document catalogue."
+    }
+  },
+  {
+    "component": "ConsultationCorpus",
+    "importPath": "./pages/research/ConsultationCorpus",
+    "slug": "/research/consultation-corpus",
+    "title": "Every government consultation that reached an outcome, as one corpus | Tesseract Academy for the Public Sector",
+    "description": "An open, structured corpus of 6,260 UK government consultations with a published outcome, harvested from the GOV.UK APIs and coded by policy area. 98 percent carry policy-area coding; only 77 percent attach response documents to their outcome. Published on GitHub and Hugging Face under the Open Government Licence.",
+    "caseStudy": {
+      "id": "uc-consultation-corpus",
+      "title": "Every Government Consultation That Reached an Outcome, as One Corpus",
+      "challenge": "Government runs thousands of public consultations and publishes their outcomes, but the estate has never been assembled as a single, queryable corpus: who consults, on what, and whether they publish what they heard back. Consultation-response coding and automated summarisation both need a structured view of that estate to sample and benchmark against.",
+      "intervention": "A self-initiated, open corpus that harvests every GOV.UK consultation with a published outcome and pulls structured detail for each from the Content API: opening and closing dates, department, whether response documents are attached, and GOV.UK's own policy-area taxonomy, which already codes 98% of consultations so the domain layer needs no guessing.",
+      "assurance": "Reproducible from the GOV.UK Search and Content APIs, published on GitHub and Hugging Face under the Open Government Licence v3.0. Scoped honestly as a corpus frame: it captures each consultation's metadata and outcome flags, not the response texts, which remain on the linked GOV.UK pages.",
+      "outcome": "6,260 consultations with published outcomes, coded by policy area at 98% coverage. Every one has a published outcome page, yet only 77% attach response documents: nearly a quarter close with an outcome carrying no published response analysis. Defra, DfT and MHCLG are the most prolific consulting bodies.",
+      "reusable": "The corpus is the sampling and benchmarking base for consultation-response coding and automated summarisation: draw a stratified sample by policy area and test a coding approach against a known population; the harvest pattern re-points to any GOV.UK document type."
+    }
+  },
+  {
     "component": "PropertyMarketIndicators",
     "importPath": "./pages/research/PropertyMarketIndicators",
     "slug": "/research/property-market-indicators",
