@@ -40,7 +40,7 @@ function patchCaseStudies(specs) {
   let n = 0;
   for (const p of specs) {
     if (!p.caseStudy) continue;
-    if (s.includes(`id: '${p.caseStudy.id}'`)) continue;
+    if (s.includes(`id: '${p.caseStudy.id}'`) || s.includes(`id: "${p.caseStudy.id}"`)) continue;
     const c = p.caseStudy;
     const entry = `  {\n    id: ${JSON.stringify(c.id)},\n    slug: ${JSON.stringify(p.slug)},\n    title: ${JSON.stringify(c.title)},\n    category: 'open-demo',\n    challenge: ${JSON.stringify(c.challenge)},\n    intervention: ${JSON.stringify(c.intervention)},\n    assurance: ${JSON.stringify(c.assurance)},\n    outcome: ${JSON.stringify(c.outcome)},\n    reusable: ${JSON.stringify(c.reusable)},\n  },\n`;
     const anchor = '\n];';
