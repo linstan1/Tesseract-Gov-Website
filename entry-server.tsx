@@ -37,6 +37,9 @@ import { PyramidBridge } from './pages/research/PyramidBridge';
 import { NatureSecurityRisk } from './pages/research/NatureSecurityRisk';
 import { SkillsEnglandOccupationalMaps } from './pages/research/SkillsEnglandOccupationalMaps';
 import { VictimWitnessEvaluation } from './pages/research/VictimWitnessEvaluation';
+import { SmallAreaHealth } from './pages/research/SmallAreaHealth';
+import { AlgorithmicTransparencyCorpus } from './pages/research/AlgorithmicTransparencyCorpus';
+import { LocalLabourMarket } from './pages/research/LocalLabourMarket';
 import { FcaWarningsObservatory } from './pages/research/FcaWarningsObservatory';
 import { ConsultationCorpus } from './pages/research/ConsultationCorpus';
 import { EvaluationAtlas } from './pages/research/EvaluationAtlas';
@@ -87,6 +90,9 @@ const SSRApp: React.FC = () => (
         <Route path="/research/nature-related-security-risk" element={<NatureSecurityRisk />} />
         <Route path="/research/skills-england-occupational-maps" element={<SkillsEnglandOccupationalMaps />} />
         <Route path="/research/victim-witness-evaluation" element={<VictimWitnessEvaluation />} />
+        <Route path="/research/small-area-health-profile" element={<SmallAreaHealth />} />
+        <Route path="/research/algorithmic-transparency-corpus" element={<AlgorithmicTransparencyCorpus />} />
+        <Route path="/research/local-labour-market" element={<LocalLabourMarket />} />
         <Route path="/research/fca-warnings-observatory" element={<FcaWarningsObservatory />} />
         <Route path="/research/consultation-corpus" element={<ConsultationCorpus />} />
         <Route path="/research/evaluation-evidence-atlas" element={<EvaluationAtlas />} />

@@ -1,18 +1,50 @@
 [
   {
-    "component": "FcaWarningsObservatory",
-    "importPath": "./pages/research/FcaWarningsObservatory",
-    "slug": "/research/fca-warnings-observatory",
-    "title": "A live list with no memory: reconstructing the FCA scam-warning signal | Tesseract Academy for the Public Sector",
-    "description": "The FCA warning list of unauthorised firms shows only the current set with no history. This open dataset reconstructs it as a monthly time series from 18,224 live warning pages: FCA warnings rose nearly four-fold from around 500 a year in 2019 to roughly 1,900 across 2022 to 2025, 18 percent flagging clone firms. Published on GitHub and Hugging Face.",
+    "component": "LocalLabourMarket",
+    "importPath": "./pages/research/LocalLabourMarket",
+    "slug": "/research/local-labour-market",
+    "title": "The most timely local labour-market signal, tidied for every authority | Tesseract Academy for the Public Sector",
+    "description": "An open dataset of the latest monthly claimant count for all 374 local authorities in Great Britain, from the ONS via NOMIS. Claimant rate ranges from 1.1 to 10.1 percent against a 3.5 percent mean. Published on GitHub and Hugging Face under the Open Government Licence.",
     "caseStudy": {
-      "id": "uc-fca-warnings",
-      "title": "A Live List With No Memory: The FCA Scam-Warning Signal",
-      "challenge": "The FCA warns the public about unauthorised and scam firms through its warning list, a useful safety tool with one structural blind spot: it shows only the firms flagged right now. There is no history, so the trend, the very thing that says whether the scam problem is growing, is invisible to anyone designing fraud-prevention services or detection tooling.",
-      "intervention": "A self-initiated, open reconstruction that gives the list a memory. Every live warning has its own page carrying a machine-readable publication date; we took the FCA's public sitemap of all 18,224 live warning pages, fetched each with a polite crawl, read its date, and flagged clone firms from the page text, then aggregated by month into a warnings-published time series.",
-      "assurance": "Reproducible with a documented crawler, published on GitHub and Hugging Face. Scoped honestly as a reconstruction of a live list, not a historical archive: warnings the FCA has since removed are not captured, so recent years are more completely represented, and it is a research reconstruction of a public signal, not an official FCA statistic.",
-      "outcome": "18,224 live warning pages, 15,437 dated, revealing an unambiguous signal: FCA warnings ran at a few hundred a year through the late 2010s, then climbed to 1,616 in 2022 and around 1,900 a year across 2023 to 2025, a near four-fold rise on 2019. Just under a fifth flag clone firms, among the hardest frauds for a consumer to spot.",
-      "reusable": "Captured on a schedule the observatory becomes a longitudinal record supporting emerging-threat detection (spikes in clone activity or a named sector); the give-a-live-list-a-memory pattern re-points to any public register that publishes only its current state."
+      "id": "uc-labour-market",
+      "title": "The Most Timely Local Labour-Market Signal, Tidied for Every Authority",
+      "challenge": "Employability programmes, skills bootcamps and local growth plans must target the right places, and the question of where the labour market is tightest has a monthly answer in the claimant count. It is open through the ONS NOMIS service, but delivered through a query builder few outside statistics teams use, so it usually is not to hand.",
+      "intervention": "A self-initiated, open pipeline that pulls the latest month of the ONS Claimant Count from NOMIS for every local authority district and records two figures per authority: the count, and the claimant rate as a share of residents aged 16 to 64.",
+      "assurance": "Reproducible from the NOMIS API, published on GitHub and Hugging Face under the Open Government Licence v3.0. Scoped honestly as a single timely indicator, not a full labour-market model: the claimant count is a leading signal of unemployment-related benefit claims, not the whole picture of worklessness.",
+      "outcome": "A like-for-like reading for all 374 local authorities, refreshed monthly, with claimant rates spanning 1.1% to 10.1% against a 3.5% national mean, Birmingham highest at 10.1%. Exactly the spread a place-based programme needs before deciding where to act.",
+      "reusable": "The NOMIS pipeline extends to employment and economic-activity rates, to a monthly time series, and to a join with skills and occupation data to connect labour-market slack to relieving skills pathways."
+    }
+  },
+  {
+    "component": "AlgorithmicTransparencyCorpus",
+    "importPath": "./pages/research/AlgorithmicTransparencyCorpus",
+    "slug": "/research/algorithmic-transparency-corpus",
+    "title": "The closest thing to a public register of government AI, as a corpus | Tesseract Academy for the Public Sector",
+    "description": "The full set of 136 published UK Algorithmic Transparency Recording Standard records, structured as an open corpus: which of 73 public bodies have disclosed which algorithmic and AI tools. Published on GitHub and Hugging Face under the Open Government Licence.",
+    "caseStudy": {
+      "id": "uc-atrs",
+      "title": "The Closest Thing to a Public Register of Government AI, as a Corpus",
+      "challenge": "The UK asks public bodies to publish how they use algorithmic and AI tools in decisions affecting people, through the Algorithmic Transparency Recording Standard, the nearest thing to a public register of government AI. It is published one record at a time, which makes each disclosure visible but the pattern across government invisible.",
+      "intervention": "A self-initiated, open corpus that harvests every published ATRS record from GOV.UK and structures each: the publishing body, the tool, its description and date. What was 136 separate pages becomes a single analysable dataset.",
+      "assurance": "Reproducible from the GOV.UK Search API, published on GitHub and Hugging Face under the Open Government Licence v3.0. Built entirely from the public register, structuring what government has already disclosed.",
+      "outcome": "136 records spanning 73 distinct public bodies, led by DSIT, DWP, the Money and Pensions Service, DfE, DESNZ and DBT. The corpus makes answerable the questions no single record can: which parts of government are most transparent about their AI, which kinds of tools recur, and how disclosure is spreading.",
+      "reusable": "Captured over time the corpus becomes a live index of government AI adoption and transparency, the base for a disclosure-growth measure and for classifying tools by risk and function."
+    }
+  },
+  {
+    "component": "SmallAreaHealth",
+    "importPath": "./pages/research/SmallAreaHealth",
+    "slug": "/research/small-area-health-profile",
+    "title": "The baseline a local health survey should be read against | Tesseract Academy for the Public Sector",
+    "description": "An open small-area health profile for all 331 local authorities in England and Wales, combining Census 2021 self-reported general health, disability and unpaid care. Self-reported bad health ranges from 2.7 to 9.6 percent. Published on GitHub and Hugging Face under the Open Government Licence.",
+    "caseStudy": {
+      "id": "uc-small-area-health",
+      "title": "The Baseline a Local Health Survey Should Be Read Against",
+      "challenge": "When a council commissions a health-and-wellbeing survey it asks residents to rate their own health, the same question the Census already asks the whole population. A survey read on its own is a number in a vacuum; the full-population baseline for that authority exists but is not laid out ready to compare against.",
+      "intervention": "A self-initiated, open profile that pulls three Census 2021 measures for every local authority in England and Wales, self-reported general health, disability under the Equality Act, and provision of unpaid care, and combines them into one record per authority.",
+      "assurance": "Reproducible from the ONS Census 2021 datasets via NOMIS, published on GitHub and Hugging Face under the Open Government Licence v3.0. Because it is the census it is the whole population, not a sample, carrying no sampling error and reaching every small area.",
+      "outcome": "A comparable baseline for all 331 local authorities. Self-reported bad or very-bad health runs from 2.7% to 9.6%, highest in Blaenau Gwent, Merthyr Tydfil and Blackpool, the geography of health inequality made measurable per authority alongside disability and unpaid-care prevalence.",
+      "reusable": "Held next to a commissioned survey the census baseline turns a raw local figure into a finding; the profile joins to deprivation and to local economic indicators to place health need in its economic context for a needs assessment or targeting decision."
     }
   }
 ]

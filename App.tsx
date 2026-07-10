@@ -30,6 +30,9 @@ const PyramidBridge = lazy(() => import('./pages/research/PyramidBridge').then(m
 const NatureSecurityRisk = lazy(() => import('./pages/research/NatureSecurityRisk').then(m => ({ default: m.NatureSecurityRisk })));
 const SkillsEnglandOccupationalMaps = lazy(() => import('./pages/research/SkillsEnglandOccupationalMaps').then(m => ({ default: m.SkillsEnglandOccupationalMaps })));
 const VictimWitnessEvaluation = lazy(() => import('./pages/research/VictimWitnessEvaluation').then(m => ({ default: m.VictimWitnessEvaluation })));
+const SmallAreaHealth = lazy(() => import('./pages/research/SmallAreaHealth').then(m => ({ default: m.SmallAreaHealth })));
+const AlgorithmicTransparencyCorpus = lazy(() => import('./pages/research/AlgorithmicTransparencyCorpus').then(m => ({ default: m.AlgorithmicTransparencyCorpus })));
+const LocalLabourMarket = lazy(() => import('./pages/research/LocalLabourMarket').then(m => ({ default: m.LocalLabourMarket })));
 const FcaWarningsObservatory = lazy(() => import('./pages/research/FcaWarningsObservatory').then(m => ({ default: m.FcaWarningsObservatory })));
 const ConsultationCorpus = lazy(() => import('./pages/research/ConsultationCorpus').then(m => ({ default: m.ConsultationCorpus })));
 const EvaluationAtlas = lazy(() => import('./pages/research/EvaluationAtlas').then(m => ({ default: m.EvaluationAtlas })));
@@ -192,6 +195,21 @@ const PAGE_META: Record<string, { title: string; description: string }> = {
     title: "A live list with no memory: reconstructing the FCA scam-warning signal | Tesseract Academy for the Public Sector",
     description: "The FCA warning list of unauthorised firms shows only the current set with no history. This open dataset reconstructs it as a monthly time series from 18,224 live warning pages: FCA warnings rose nearly four-fold from around 500 a year in 2019 to roughly 1,900 across 2022 to 2025, 18 percent flagging clone firms. Published on GitHub and Hugging Face.",
   },
+
+  '/research/local-labour-market': {
+    title: "The most timely local labour-market signal, tidied for every authority | Tesseract Academy for the Public Sector",
+    description: "An open dataset of the latest monthly claimant count for all 374 local authorities in Great Britain, from the ONS via NOMIS. Claimant rate ranges from 1.1 to 10.1 percent against a 3.5 percent mean. Published on GitHub and Hugging Face under the Open Government Licence.",
+  },
+
+  '/research/algorithmic-transparency-corpus': {
+    title: "The closest thing to a public register of government AI, as a corpus | Tesseract Academy for the Public Sector",
+    description: "The full set of 136 published UK Algorithmic Transparency Recording Standard records, structured as an open corpus: which of 73 public bodies have disclosed which algorithmic and AI tools. Published on GitHub and Hugging Face under the Open Government Licence.",
+  },
+
+  '/research/small-area-health-profile': {
+    title: "The baseline a local health survey should be read against | Tesseract Academy for the Public Sector",
+    description: "An open small-area health profile for all 331 local authorities in England and Wales, combining Census 2021 self-reported general health, disability and unpaid care. Self-reported bad health ranges from 2.7 to 9.6 percent. Published on GitHub and Hugging Face under the Open Government Licence.",
+  },
   '/research/victim-witness-evaluation': {
     title: 'When a Theory of Change has to hold up: machine-checkable evaluation logic | Tesseract Academy for the Public Sector',
     description: 'A reflection on where government evaluation is heading, the Evaluation Task Force, the Victims and Prisoners Act 2024, outcome-based commissioning, and a self-initiated open method that answers it: building a Theory of Change as a typed, evidence-graded, SHACL-validated graph so its weak links are named, not buried. Worked on victim and witness support, anchored on the Victims\' Funding Strategy outcomes; 7 pathways, zero SHACL violations, two genuine evidence gaps surfaced. Published on GitHub under CC-BY-4.0.',
@@ -292,6 +310,9 @@ const App: React.FC = () => {
               <Route path="/research/nature-related-security-risk" element={<NatureSecurityRisk />} />
               <Route path="/research/skills-england-occupational-maps" element={<SkillsEnglandOccupationalMaps />} />
               <Route path="/research/victim-witness-evaluation" element={<VictimWitnessEvaluation />} />
+              <Route path="/research/small-area-health-profile" element={<SmallAreaHealth />} />
+              <Route path="/research/algorithmic-transparency-corpus" element={<AlgorithmicTransparencyCorpus />} />
+              <Route path="/research/local-labour-market" element={<LocalLabourMarket />} />
               <Route path="/research/fca-warnings-observatory" element={<FcaWarningsObservatory />} />
               <Route path="/research/consultation-corpus" element={<ConsultationCorpus />} />
               <Route path="/research/evaluation-evidence-atlas" element={<EvaluationAtlas />} />
