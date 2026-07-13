@@ -331,4 +331,15 @@ export const CASE_STUDIES: CaseStudy[] = [
     outcome: "A comparable baseline for all 331 local authorities. Self-reported bad or very-bad health runs from 2.7% to 9.6%, highest in Blaenau Gwent, Merthyr Tydfil and Blackpool, the geography of health inequality made measurable per authority alongside disability and unpaid-care prevalence.",
     reusable: "Held next to a commissioned survey the census baseline turns a raw local figure into a finding; the profile joins to deprivation and to local economic indicators to place health need in its economic context for a needs assessment or targeting decision.",
   },
+  {
+    id: 'uc-museumvisits',
+    slug: '/research/museum-visits-observatory',
+    title: 'The DCMS Museum Visits Observatory',
+    category: 'open-demo',
+    challenge: "DCMS publishes monthly visitor figures for every museum and gallery it sponsors, one of the cultural sector's best open data sets, yet it circulates as static spreadsheet tables: no baselines, no seasonality context, no way for a trustee or a marketing team to answer 'are we back, and compared to what?'",
+    intervention: "A self-initiated interactive observatory rebuilt from the official statistical data set: 87 months of visits (January 2019 to March 2026) across 16 museum groups with site-level breakdowns, pandemic closures marked on the chart, and recovery measured against each institution's own calendar-2019 baseline.",
+    assurance: "Built directly from the published DCMS ODS data set under the Open Government Licence v3.0. Missing months shown as gaps, never interpolated; every number in the chart readable in an accessible table view on the same page.",
+    outcome: "A working demonstration of the difference between reporting and insight on data every cultural organisation already knows: recovery is uneven across museum groups, and within a single group the site-level trajectories diverge further still, which is where the actionable signal lives.",
+    reusable: "The same treatment applies to any organisation's visitor, sales or web data: explicit baselines, honest gaps, decomposition to the level where decisions are made. Companion to our digital analytics and audience measurement service.",
+  },
 ];

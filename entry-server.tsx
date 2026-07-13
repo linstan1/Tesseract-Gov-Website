@@ -55,6 +55,8 @@ import { PublicEngagement } from './pages/services/PublicEngagement';
 import { SurveyDesign } from './pages/services/SurveyDesign';
 import { EducationUpskilling } from './pages/services/EducationUpskilling';
 import { AIGovernance } from './pages/services/AIGovernance';
+import { DigitalAnalytics } from './pages/services/DigitalAnalytics';
+import { MuseumVisitsObservatory } from './pages/research/MuseumVisitsObservatory';
 import { Insights } from './pages/Insights';
 
 const SSRApp: React.FC = () => (
@@ -108,6 +110,8 @@ const SSRApp: React.FC = () => (
         <Route path="/services/survey-design" element={<SurveyDesign />} />
         <Route path="/services/education-upskilling" element={<EducationUpskilling />} />
         <Route path="/services/ai-governance" element={<AIGovernance />} />
+        <Route path="/services/digital-analytics" element={<DigitalAnalytics />} />
+        <Route path="/research/museum-visits-observatory" element={<MuseumVisitsObservatory />} />
         <Route path="/insights" element={<Insights />} />
       </Routes>
     </main>

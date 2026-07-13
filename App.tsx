@@ -48,6 +48,8 @@ const PublicEngagement = lazy(() => import('./pages/services/PublicEngagement').
 const SurveyDesign = lazy(() => import('./pages/services/SurveyDesign').then(m => ({ default: m.SurveyDesign })));
 const EducationUpskilling = lazy(() => import('./pages/services/EducationUpskilling').then(m => ({ default: m.EducationUpskilling })));
 const AIGovernance = lazy(() => import('./pages/services/AIGovernance').then(m => ({ default: m.AIGovernance })));
+const DigitalAnalytics = lazy(() => import('./pages/services/DigitalAnalytics').then(m => ({ default: m.DigitalAnalytics })));
+const MuseumVisitsObservatory = lazy(() => import('./pages/research/MuseumVisitsObservatory').then(m => ({ default: m.MuseumVisitsObservatory })));
 const Insights = lazy(() => import('./pages/Insights').then(m => ({ default: m.Insights })));
 
 const PAGE_META: Record<string, { title: string; description: string }> = {
@@ -234,6 +236,14 @@ const PAGE_META: Record<string, { title: string; description: string }> = {
     title: 'Survey Design & Delivery for Public Sector | Tesseract Academy for the Public Sector',
     description: 'End-to-end survey methodology, questionnaire design, mixed-mode data collection, and statistical analysis. Qualifications Wales 3-year contract (2026-2029). CCS RM6126.',
   },
+  '/services/digital-analytics': {
+    title: 'Digital Analytics & Audience Measurement | Tesseract Academy for the Public Sector',
+    description: 'GA4 and Google Tag Manager implementation and audit, consent-aware measurement, Power BI and Looker Studio dashboards, KPI frameworks, test-and-learn support, and analytics capability building for UK public sector and cultural organisations. CCS RM6126 appointed supplier.',
+  },
+  '/research/museum-visits-observatory': {
+    title: 'The DCMS Museum Visits Observatory | Tesseract Academy for the Public Sector',
+    description: 'An interactive observatory of monthly visits to all DCMS-sponsored museums and galleries, January 2019 to March 2026, built from the official DCMS statistical data set: 16 museum groups, site-level detail, pandemic closures marked, and recovery measured against each institution\'s own 2019 baseline. Open Government Licence v3.0.',
+  },
   '/services/education-upskilling': {
     title: 'AI Education & Upskilling | Tesseract Academy for the Public Sector',
     description: 'AI literacy programmes, data science workshops, and executive leadership training for UK public sector. UK Government Business Academy partner. BridgeAI / Innovate UK programme delivery.',
@@ -328,6 +338,8 @@ const App: React.FC = () => {
               <Route path="/services/survey-design" element={<SurveyDesign />} />
               <Route path="/services/education-upskilling" element={<EducationUpskilling />} />
               <Route path="/services/ai-governance" element={<AIGovernance />} />
+              <Route path="/services/digital-analytics" element={<DigitalAnalytics />} />
+              <Route path="/research/museum-visits-observatory" element={<MuseumVisitsObservatory />} />
               <Route path="/insights" element={<Insights />} />
             </Routes>
           </Suspense>

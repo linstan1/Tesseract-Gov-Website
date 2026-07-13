@@ -199,6 +199,14 @@ const PAGE_META = {
     title: 'Survey Design & Delivery | Tesseract Academy for the Public Sector',
     description: 'End-to-end survey methodology, questionnaire design, mixed-mode collection, and statistical analysis. Qualifications Wales 3-year contract (2026-2029). CCS RM6126 appointed supplier.',
   },
+  '/services/digital-analytics': {
+    title: 'Digital Analytics & Audience Measurement | Tesseract Academy for the Public Sector',
+    description: 'GA4 and Google Tag Manager implementation and audit, consent-aware measurement, Power BI and Looker Studio dashboards, KPI frameworks, test-and-learn support, and analytics capability building for UK public sector and cultural organisations. CCS RM6126 appointed supplier.',
+  },
+  '/research/museum-visits-observatory': {
+    title: 'The DCMS Museum Visits Observatory | Tesseract Academy for the Public Sector',
+    description: "An interactive observatory of monthly visits to all DCMS-sponsored museums and galleries, January 2019 to March 2026, built from the official DCMS statistical data set: 16 museum groups, site-level detail, pandemic closures marked, and recovery measured against each institution's own 2019 baseline. Open Government Licence v3.0.",
+  },
   '/services/education-upskilling': {
     title: 'AI Education & Upskilling | Tesseract Academy for the Public Sector',
     description: 'AI literacy programmes, data science workshops, and executive leadership training. US Navy executive workshop (40+ participants). UK Government Business Academy webinars (2025). BridgeAI / Innovate UK delivery.',

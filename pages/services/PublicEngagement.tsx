@@ -166,6 +166,38 @@ export const PublicEngagement: React.FC = () => {
 
         <div className="bg-gov-bg border border-gov-border/40 rounded-xl p-8">
           <p className="text-xs font-semibold text-gov-blue uppercase tracking-wider mb-3">
+            London Data Week 2026 — AI Tools for Everyone, at LSE
+          </p>
+          <h3 className="text-xl font-bold text-gov-dark mb-4">
+            AI Tools for Everyone: Advancing Disability Inclusion
+          </h3>
+          <p className="text-base text-gov-dark/90 leading-relaxed mb-4">
+            On 8 July 2026, as part of London Data Week 2026, we convened a free public session at
+            the London School of Economics (Shaw Library) on how AI can advance accessibility and
+            support for people with diverse disabilities. Hosted with the LSE Data Science
+            Institute and the King's Institute for Artificial Intelligence, the programme combined
+            an opening talk, a panel and live demonstrations of accessible AI tools, with speakers
+            from Vision Ability CIC, Imperial College London, King's College London, UCL and
+            Tesseract Academy.
+          </p>
+          <div className="grid grid-cols-3 gap-4 mt-6">
+            <div className="text-center p-4 bg-white rounded-lg border border-gov-border/30">
+              <p className="text-2xl font-extrabold text-gov-blue">LSE</p>
+              <p className="text-sm text-gov-secondary mt-1">Hosted with the LSE Data Science Institute</p>
+            </div>
+            <div className="text-center p-4 bg-white rounded-lg border border-gov-border/30">
+              <p className="text-2xl font-extrabold text-gov-blue">4</p>
+              <p className="text-sm text-gov-secondary mt-1">Universities represented among speakers</p>
+            </div>
+            <div className="text-center p-4 bg-white rounded-lg border border-gov-border/30">
+              <p className="text-2xl font-extrabold text-gov-blue">Free</p>
+              <p className="text-sm text-gov-secondary mt-1">Open to the public, live demos included</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="bg-gov-bg border border-gov-border/40 rounded-xl p-8">
+          <p className="text-xs font-semibold text-gov-blue uppercase tracking-wider mb-3">
             London Data Week 2025 — AI Accessibility Workshop
           </p>
           <h3 className="text-xl font-bold text-gov-dark mb-4">
