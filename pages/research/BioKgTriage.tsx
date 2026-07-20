@@ -12,7 +12,7 @@ const SCHEMA = {
   mainEntityOfPage: 'https://gov.tesseract.academy/research/ontology-grounded-biomedical-kg',
   headline: 'Grounded, not retrieved: an ontology-validated biomedical knowledge graph | Tesseract Academy',
   description:
-    'A gene-disease knowledge graph built from 40 real Open Targets associations, typed with the Biolink Model and validated by a closed-world vocabulary gate. The grounded graph has 0 SHACL and 0 vocabulary violations across 284 triples; an ungrounded variant with one fabricated Biolink predicate passes SHACL but is caught by the gate. Reproducible, with a provenance-carrying hypothesis triage.',
+    'A validated biomedical knowledge graph across three grounded layers: structured gene-disease associations (Open Targets + Biolink), literature relations machine-extracted by PubTator3, and antimicrobial resistance from CARD/ARO. Every grounded layer has 0 SHACL and 0 closed-world vocabulary violations; every ungrounded twin with one fabricated term passes SHACL but is caught by the gate. Reproducible, with a provenance-carrying hypothesis triage.',
   author: { '@id': 'https://gov.tesseract.academy/#organization' },
   publisher: { '@id': 'https://gov.tesseract.academy/#organization' },
   datePublished: '2026-07-20',
@@ -123,6 +123,54 @@ export const BioKgTriage: React.FC = () => {
 
       <section className="space-y-6">
         <div className="border-l-2 border-l-gov-blue pl-6">
+          <h2 className="text-2xl font-bold text-gov-dark font-serif mb-3">Three grounded layers</h2>
+          <p className="text-gov-dark leading-relaxed">
+            The gate is not tied to one source or one ontology. We built three layers, each from a different real source, and validated all three the same way. The structured layer above is the first; the second turns raw literature into a KG, and the third moves to a different domain and a different ontology entirely.
+          </p>
+        </div>
+        <div className="overflow-x-auto">
+          <table className="w-full text-sm border-collapse">
+            <thead>
+              <tr className="bg-gov-bg border-b border-gov-border">
+                <th className="text-left px-4 py-3 font-semibold text-gov-dark">Layer</th>
+                <th className="text-left px-4 py-3 font-semibold text-gov-dark">Source</th>
+                <th className="text-left px-4 py-3 font-semibold text-gov-dark">Grounded triples</th>
+                <th className="text-left px-4 py-3 font-semibold text-gov-dark">Closed-world violations</th>
+                <th className="text-left px-4 py-3 font-semibold text-gov-dark">Ungrounded twin</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="border-b border-gov-border/50 bg-white">
+                <td className="px-4 py-3 font-medium text-gov-dark">Structured (target-disease)</td>
+                <td className="px-4 py-3 text-gov-secondary">Open Targets + Biolink</td>
+                <td className="px-4 py-3 text-gov-secondary">284</td>
+                <td className="px-4 py-3 font-semibold text-gov-dark">0</td>
+                <td className="px-4 py-3 text-gov-secondary">caught</td>
+              </tr>
+              <tr className="border-b border-gov-border/50 bg-gov-bg/40">
+                <td className="px-4 py-3 font-medium text-gov-dark">Literature</td>
+                <td className="px-4 py-3 text-gov-secondary">PubTator3 + Biolink</td>
+                <td className="px-4 py-3 text-gov-secondary">169</td>
+                <td className="px-4 py-3 font-semibold text-gov-dark">0</td>
+                <td className="px-4 py-3 text-gov-secondary">caught</td>
+              </tr>
+              <tr className="border-b border-gov-border/50 bg-white">
+                <td className="px-4 py-3 font-medium text-gov-dark">Antimicrobial resistance</td>
+                <td className="px-4 py-3 text-gov-secondary">CARD / ARO</td>
+                <td className="px-4 py-3 text-gov-secondary">1,283</td>
+                <td className="px-4 py-3 font-semibold text-gov-dark">0</td>
+                <td className="px-4 py-3 text-gov-secondary">caught</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p className="text-gov-dark leading-relaxed">
+          The literature layer keeps only the gene-disease relations PubTator3 machine-extracts from 40 real PubMed abstracts, 57 across the eight target genes, and grounds each in Biolink. The AMR layer takes 800 of the 5,053 real "confers resistance to" relationships in CARD's Antibiotic Resistance Ontology and polices the ARO namespace instead of Biolink, so the gate is shown working on a third ontology and a different domain. Every grounded layer: zero violations. Every ungrounded twin: caught.
+        </p>
+      </section>
+
+      <section className="space-y-6">
+        <div className="border-l-2 border-l-gov-blue pl-6">
           <h2 className="text-2xl font-bold text-gov-dark font-serif mb-3">Triage, on a graph you can trust</h2>
           <p className="text-gov-dark leading-relaxed">
             Because every edge is validated and typed, the graph answers a ranked, provenance-carrying query directly. These are the top gene-disease hypotheses by Open Targets association score, each row a validated Biolink triple with a source. The score is Open Targets', not a model we invented; the contribution is that a triage built on this graph cannot rank on a fabricated edge.
@@ -166,7 +214,7 @@ export const BioKgTriage: React.FC = () => {
         </blockquote>
 
         <p className="text-sm text-gov-secondary/90 leading-relaxed">
-          An independent, self-initiated study on open data and open tools: the Biolink Model, and gene-disease associations from the Open Targets Platform, both used under their open licences. This grounds and validates the target-disease layer; the literature-extraction front end and an antimicrobial-resistance layer are documented next steps, not built here. The full method, honest scope and reproducible code are in the repository.
+          An independent, self-initiated study on open data and open tools: the Biolink Model, the Open Targets Platform, PubTator3, and CARD's Antibiotic Resistance Ontology, all used under their open licences. All three layers are built and validated. The one honest gap that remains: the AMR layer grounds resistance-to-drug edges but does not yet link resistance genes to pathogens via NCBITaxon, which is the next input. The full method, honest scope and reproducible code are in the repository.
         </p>
       </section>
 
