@@ -39,6 +39,7 @@ import { FoundryGradeMachineOntologies } from './pages/research/FoundryGradeMach
 import { NeuroSymbolicVerificationDirection } from './pages/research/NeuroSymbolicVerificationDirection';
 import { CertifiedDenotation } from './pages/research/CertifiedDenotation';
 import { BioKgTriage } from './pages/research/BioKgTriage';
+import { CopulaCoupledUncertainty } from './pages/research/CopulaCoupledUncertainty';
 import { BiologyOntologyLanguageModel } from './pages/research/BiologyOntologyLanguageModel';
 import { PyramidBridge } from './pages/research/PyramidBridge';
 import { NatureSecurityRisk } from './pages/research/NatureSecurityRisk';
@@ -101,6 +102,7 @@ const SSRApp: React.FC = () => (
         <Route path="/research/neuro-symbolic-verification-direction" element={<NeuroSymbolicVerificationDirection />} />
         <Route path="/research/certified-denotation" element={<CertifiedDenotation />} />
         <Route path="/research/ontology-grounded-biomedical-kg" element={<BioKgTriage />} />
+        <Route path="/research/copula-coupled-uncertainty-certificates" element={<CopulaCoupledUncertainty />} />
         <Route path="/research/biology-ontology-language-model" element={<BiologyOntologyLanguageModel />} />
         <Route path="/research/pyramid-ies-hqdm-semantic-bridge" element={<PyramidBridge />} />
         <Route path="/research/nature-related-security-risk" element={<NatureSecurityRisk />} />

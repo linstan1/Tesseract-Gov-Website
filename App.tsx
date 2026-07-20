@@ -32,6 +32,7 @@ const FoundryGradeMachineOntologies = lazy(() => import('./pages/research/Foundr
 const NeuroSymbolicVerificationDirection = lazy(() => import('./pages/research/NeuroSymbolicVerificationDirection').then(m => ({ default: m.NeuroSymbolicVerificationDirection })));
 const CertifiedDenotation = lazy(() => import('./pages/research/CertifiedDenotation').then(m => ({ default: m.CertifiedDenotation })));
 const BioKgTriage = lazy(() => import('./pages/research/BioKgTriage').then(m => ({ default: m.BioKgTriage })));
+const CopulaCoupledUncertainty = lazy(() => import('./pages/research/CopulaCoupledUncertainty').then(m => ({ default: m.CopulaCoupledUncertainty })));
 const BiologyOntologyLanguageModel = lazy(() => import('./pages/research/BiologyOntologyLanguageModel').then(m => ({ default: m.BiologyOntologyLanguageModel })));
 const PyramidBridge = lazy(() => import('./pages/research/PyramidBridge').then(m => ({ default: m.PyramidBridge })));
 const NatureSecurityRisk = lazy(() => import('./pages/research/NatureSecurityRisk').then(m => ({ default: m.NatureSecurityRisk })));
@@ -167,6 +168,10 @@ const PAGE_META: Record<string, { title: string; description: string }> = {
   '/research/ontology-grounded-biomedical-kg': {
     title: 'Grounded, not retrieved: an ontology-validated biomedical knowledge graph | Tesseract Academy for the Public Sector',
     description: 'A gene-disease knowledge graph from 40 real Open Targets associations, typed with the Biolink Model and validated by a closed-world vocabulary gate. The grounded graph has 0 SHACL and 0 vocabulary violations across 284 triples; an ungrounded variant with one fabricated Biolink predicate passes SHACL but is caught by the gate. Reproducible, with a provenance-carrying hypothesis triage.',
+  },
+  '/research/copula-coupled-uncertainty-certificates': {
+    title: 'Marginal coverage is not joint coverage: copula-coupled uncertainty certificates | Tesseract Academy for the Public Sector',
+    description: 'On 1,600 real OQMD materials with a frozen regressor, independent conformal prediction gives 90% per-target coverage but only 79% joint coverage. A coupled max-score certificate restores 90% joint coverage (22% tighter than Bonferroni), and a Gaussian-copula region matches it at 0.43x the size. Calibrated, machine-checkable uncertainty for correlated scientific outputs.',
   },
   '/research/biology-ontology-language-model': {
     title: 'An open, conformant language model for biomedical knowledge graphs | Tesseract Academy for the Public Sector',
@@ -357,6 +362,7 @@ const App: React.FC = () => {
               <Route path="/research/neuro-symbolic-verification-direction" element={<NeuroSymbolicVerificationDirection />} />
               <Route path="/research/certified-denotation" element={<CertifiedDenotation />} />
               <Route path="/research/ontology-grounded-biomedical-kg" element={<BioKgTriage />} />
+              <Route path="/research/copula-coupled-uncertainty-certificates" element={<CopulaCoupledUncertainty />} />
               <Route path="/research/biology-ontology-language-model" element={<BiologyOntologyLanguageModel />} />
               <Route path="/research/pyramid-ies-hqdm-semantic-bridge" element={<PyramidBridge />} />
               <Route path="/research/nature-related-security-risk" element={<NatureSecurityRisk />} />

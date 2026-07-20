@@ -128,6 +128,10 @@ const PAGE_META = {
     title: 'Grounded, not retrieved: an ontology-validated biomedical knowledge graph | Tesseract Academy for the Public Sector',
     description: 'A gene-disease knowledge graph from 40 real Open Targets associations, typed with the Biolink Model and validated by a closed-world vocabulary gate. The grounded graph has 0 SHACL and 0 vocabulary violations across 284 triples; an ungrounded variant with one fabricated Biolink predicate passes SHACL but is caught by the gate. Reproducible, with a provenance-carrying hypothesis triage.',
   },
+  '/research/copula-coupled-uncertainty-certificates': {
+    title: 'Marginal coverage is not joint coverage: copula-coupled uncertainty certificates | Tesseract Academy for the Public Sector',
+    description: 'On 1,600 real OQMD materials with a frozen regressor, independent conformal prediction gives 90% per-target coverage but only 79% joint coverage. A coupled max-score certificate restores 90% joint coverage (22% tighter than Bonferroni), and a Gaussian-copula region matches it at 0.43x the size. Calibrated, machine-checkable uncertainty for correlated scientific outputs.',
+  },
   '/research/biology-ontology-language-model': {
     title: 'An open, conformant language model for biomedical knowledge graphs | Tesseract Academy for the Public Sector',
     description: 'To our knowledge the first openly published language model fine-tuned for the Biolink Model and GO-CAM. Against the untuned base model, term conformance rises from 0% to 100% and the hallucinated-term rate falls from 0.42 to 0.00, holding at 89% on multi-association graphs never seen in training. Correct-by-construction data validated with the Biolink Model Toolkit and the GO-CAM schema; model, dataset and evaluation harness released open for reproduction.',
