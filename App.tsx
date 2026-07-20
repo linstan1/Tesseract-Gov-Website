@@ -33,6 +33,7 @@ const NeuroSymbolicVerificationDirection = lazy(() => import('./pages/research/N
 const CertifiedDenotation = lazy(() => import('./pages/research/CertifiedDenotation').then(m => ({ default: m.CertifiedDenotation })));
 const BioKgTriage = lazy(() => import('./pages/research/BioKgTriage').then(m => ({ default: m.BioKgTriage })));
 const CopulaCoupledUncertainty = lazy(() => import('./pages/research/CopulaCoupledUncertainty').then(m => ({ default: m.CopulaCoupledUncertainty })));
+const VerifiaBench = lazy(() => import('./pages/research/VerifiaBench').then(m => ({ default: m.VerifiaBench })));
 const BiologyOntologyLanguageModel = lazy(() => import('./pages/research/BiologyOntologyLanguageModel').then(m => ({ default: m.BiologyOntologyLanguageModel })));
 const PyramidBridge = lazy(() => import('./pages/research/PyramidBridge').then(m => ({ default: m.PyramidBridge })));
 const NatureSecurityRisk = lazy(() => import('./pages/research/NatureSecurityRisk').then(m => ({ default: m.NatureSecurityRisk })));
@@ -172,6 +173,10 @@ const PAGE_META: Record<string, { title: string; description: string }> = {
   '/research/copula-coupled-uncertainty-certificates': {
     title: 'Marginal coverage is not joint coverage: copula-coupled uncertainty certificates | Tesseract Academy for the Public Sector',
     description: 'On 1,600 real OQMD materials with a frozen regressor, independent conformal prediction gives 90% per-target coverage but only 79% joint coverage. A coupled max-score certificate restores 90% joint coverage (22% tighter than Bonferroni), and a Gaussian-copula region matches it at 0.43x the size. Calibrated, machine-checkable uncertainty for correlated scientific outputs.',
+  },
+  '/research/verifiable-scientific-llm-benchmark': {
+    title: 'Fluency is saturated, correctness is not: an un-game-able scientific-LLM benchmark | Tesseract Academy for the Public Sector',
+    description: 'verifiabench grades LLM Biolink-RDF output with a closed-world oracle (term existence + structure, no LLM judge) instead of fluency. Across five open models raw capability saturates at 1.00 while verified capability ranges 0.00 to 1.00: two models produce fluent RDF that invents half its terms, one gets every term real. Reproducible against any endpoint.',
   },
   '/research/biology-ontology-language-model': {
     title: 'An open, conformant language model for biomedical knowledge graphs | Tesseract Academy for the Public Sector',
@@ -363,6 +368,7 @@ const App: React.FC = () => {
               <Route path="/research/certified-denotation" element={<CertifiedDenotation />} />
               <Route path="/research/ontology-grounded-biomedical-kg" element={<BioKgTriage />} />
               <Route path="/research/copula-coupled-uncertainty-certificates" element={<CopulaCoupledUncertainty />} />
+              <Route path="/research/verifiable-scientific-llm-benchmark" element={<VerifiaBench />} />
               <Route path="/research/biology-ontology-language-model" element={<BiologyOntologyLanguageModel />} />
               <Route path="/research/pyramid-ies-hqdm-semantic-bridge" element={<PyramidBridge />} />
               <Route path="/research/nature-related-security-risk" element={<NatureSecurityRisk />} />

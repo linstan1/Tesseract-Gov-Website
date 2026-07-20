@@ -260,6 +260,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://gov.tesseract.academy/research/verifiable-scientific-llm-benchmark</loc>
+    <lastmod>2026-07-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://gov.tesseract.academy/research/biology-ontology-language-model</loc>
     <lastmod>2026-07-08</lastmod>
     <changefreq>weekly</changefreq>
