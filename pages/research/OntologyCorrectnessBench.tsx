@@ -202,6 +202,8 @@ export const OntologyCorrectnessBench: React.FC = () => {
           <li><Link to="/research/shacl-shapes-not-vocabulary" className="text-gov-blue underline hover:text-gov-blue-dark">SHACL validates shapes, not vocabulary</Link>, why the open-world semantics are a feature, and where the companion check belongs.</li>
           <li><Link to="/research/symbol-existence-box" className="text-gov-blue underline hover:text-gov-blue-dark">The missing box</Link>, symbol-existence checking as a named component in a neuro-symbolic pipeline.</li>
           <li><Link to="/research/foundry-grade-machine-ontologies" className="text-gov-blue underline hover:text-gov-blue-dark">Foundry-grade guarantees for machine-authored ontologies</Link>, the same test on the OBO Foundry's own PATO and RO.</li>
+          <li><Link to="/research/neuro-symbolic-verification-direction" className="text-gov-blue underline hover:text-gov-blue-dark">Neuro-symbolic AI has a direction problem</Link>, symbols should verify the neural output, not only feed it.</li>
+          <li><Link to="/research/certified-denotation" className="text-gov-blue underline hover:text-gov-blue-dark">Beyond existence: certified denotation</Link>, the next gate after the vocabulary check.</li>
         </ul>
       </section>
 

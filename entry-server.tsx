@@ -36,6 +36,8 @@ import { OntologyCorrectnessBench } from './pages/research/OntologyCorrectnessBe
 import { ShaclShapesNotVocabulary } from './pages/research/ShaclShapesNotVocabulary';
 import { SymbolExistenceBox } from './pages/research/SymbolExistenceBox';
 import { FoundryGradeMachineOntologies } from './pages/research/FoundryGradeMachineOntologies';
+import { NeuroSymbolicVerificationDirection } from './pages/research/NeuroSymbolicVerificationDirection';
+import { CertifiedDenotation } from './pages/research/CertifiedDenotation';
 import { BiologyOntologyLanguageModel } from './pages/research/BiologyOntologyLanguageModel';
 import { PyramidBridge } from './pages/research/PyramidBridge';
 import { NatureSecurityRisk } from './pages/research/NatureSecurityRisk';
@@ -95,6 +97,8 @@ const SSRApp: React.FC = () => (
         <Route path="/research/shacl-shapes-not-vocabulary" element={<ShaclShapesNotVocabulary />} />
         <Route path="/research/symbol-existence-box" element={<SymbolExistenceBox />} />
         <Route path="/research/foundry-grade-machine-ontologies" element={<FoundryGradeMachineOntologies />} />
+        <Route path="/research/neuro-symbolic-verification-direction" element={<NeuroSymbolicVerificationDirection />} />
+        <Route path="/research/certified-denotation" element={<CertifiedDenotation />} />
         <Route path="/research/biology-ontology-language-model" element={<BiologyOntologyLanguageModel />} />
         <Route path="/research/pyramid-ies-hqdm-semantic-bridge" element={<PyramidBridge />} />
         <Route path="/research/nature-related-security-risk" element={<NatureSecurityRisk />} />

@@ -29,6 +29,8 @@ const OntologyCorrectnessBench = lazy(() => import('./pages/research/OntologyCor
 const ShaclShapesNotVocabulary = lazy(() => import('./pages/research/ShaclShapesNotVocabulary').then(m => ({ default: m.ShaclShapesNotVocabulary })));
 const SymbolExistenceBox = lazy(() => import('./pages/research/SymbolExistenceBox').then(m => ({ default: m.SymbolExistenceBox })));
 const FoundryGradeMachineOntologies = lazy(() => import('./pages/research/FoundryGradeMachineOntologies').then(m => ({ default: m.FoundryGradeMachineOntologies })));
+const NeuroSymbolicVerificationDirection = lazy(() => import('./pages/research/NeuroSymbolicVerificationDirection').then(m => ({ default: m.NeuroSymbolicVerificationDirection })));
+const CertifiedDenotation = lazy(() => import('./pages/research/CertifiedDenotation').then(m => ({ default: m.CertifiedDenotation })));
 const BiologyOntologyLanguageModel = lazy(() => import('./pages/research/BiologyOntologyLanguageModel').then(m => ({ default: m.BiologyOntologyLanguageModel })));
 const PyramidBridge = lazy(() => import('./pages/research/PyramidBridge').then(m => ({ default: m.PyramidBridge })));
 const NatureSecurityRisk = lazy(() => import('./pages/research/NatureSecurityRisk').then(m => ({ default: m.NatureSecurityRisk })));
@@ -152,6 +154,14 @@ const PAGE_META: Record<string, { title: string; description: string }> = {
   '/research/foundry-grade-machine-ontologies': {
     title: 'Foundry-grade guarantees for machine-authored ontologies | Tesseract Academy for the Public Sector',
     description: 'The OBO Foundry spent two decades insisting biomedical terms mean one thing and are declared in one place. Measured on the Foundry ontologies PATO and RO, open-world SHACL admits every fabricated identifier while a closed-world gate catches all of them, so machine output can be held to the same standard as human curation.',
+  },
+  '/research/neuro-symbolic-verification-direction': {
+    title: 'Neuro-symbolic AI has a direction problem | Tesseract Academy for the Public Sector',
+    description: 'Most neuro-symbolic work feeds symbols into the neural model. The under-built direction is the reverse, symbols verifying what the model produced. On the Kautz taxonomy the closed-world vocabulary gate is the cheapest reliable instance of that reverse arrow, and it catches an error class no amount of knowledge injection prevents.',
+  },
+  '/research/certified-denotation': {
+    title: 'Beyond existence: certified denotation, the next gate | Tesseract Academy for the Public Sector',
+    description: 'The closed-world vocabulary gate proves every term exists; it does not prove the term is used soundly. Certified denotation is the next gate, from ontology domain and range up to a certified world model. An honest roadmap of the correctness ladder, existence then type soundness then world-state soundness.',
   },
   '/research/biology-ontology-language-model': {
     title: 'An open, conformant language model for biomedical knowledge graphs | Tesseract Academy for the Public Sector',
@@ -339,6 +349,8 @@ const App: React.FC = () => {
               <Route path="/research/shacl-shapes-not-vocabulary" element={<ShaclShapesNotVocabulary />} />
               <Route path="/research/symbol-existence-box" element={<SymbolExistenceBox />} />
               <Route path="/research/foundry-grade-machine-ontologies" element={<FoundryGradeMachineOntologies />} />
+              <Route path="/research/neuro-symbolic-verification-direction" element={<NeuroSymbolicVerificationDirection />} />
+              <Route path="/research/certified-denotation" element={<CertifiedDenotation />} />
               <Route path="/research/biology-ontology-language-model" element={<BiologyOntologyLanguageModel />} />
               <Route path="/research/pyramid-ies-hqdm-semantic-bridge" element={<PyramidBridge />} />
               <Route path="/research/nature-related-security-risk" element={<NatureSecurityRisk />} />
