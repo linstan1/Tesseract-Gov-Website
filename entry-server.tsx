@@ -33,6 +33,9 @@ import { FairScientificData } from './pages/research/FairScientificData';
 import { IesHqdmCrosswalk } from './pages/research/IesHqdmCrosswalk';
 import { Ies4TurtleLanguageModel } from './pages/research/Ies4TurtleLanguageModel';
 import { OntologyCorrectnessBench } from './pages/research/OntologyCorrectnessBench';
+import { ShaclShapesNotVocabulary } from './pages/research/ShaclShapesNotVocabulary';
+import { SymbolExistenceBox } from './pages/research/SymbolExistenceBox';
+import { FoundryGradeMachineOntologies } from './pages/research/FoundryGradeMachineOntologies';
 import { BiologyOntologyLanguageModel } from './pages/research/BiologyOntologyLanguageModel';
 import { PyramidBridge } from './pages/research/PyramidBridge';
 import { NatureSecurityRisk } from './pages/research/NatureSecurityRisk';
@@ -89,6 +92,9 @@ const SSRApp: React.FC = () => (
         <Route path="/research/ies-hqdm-defence-interoperability" element={<IesHqdmCrosswalk />} />
         <Route path="/research/ies4-turtle-language-model" element={<Ies4TurtleLanguageModel />} />
         <Route path="/research/ontology-correctness-benchmark" element={<OntologyCorrectnessBench />} />
+        <Route path="/research/shacl-shapes-not-vocabulary" element={<ShaclShapesNotVocabulary />} />
+        <Route path="/research/symbol-existence-box" element={<SymbolExistenceBox />} />
+        <Route path="/research/foundry-grade-machine-ontologies" element={<FoundryGradeMachineOntologies />} />
         <Route path="/research/biology-ontology-language-model" element={<BiologyOntologyLanguageModel />} />
         <Route path="/research/pyramid-ies-hqdm-semantic-bridge" element={<PyramidBridge />} />
         <Route path="/research/nature-related-security-risk" element={<NatureSecurityRisk />} />

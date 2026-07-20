@@ -194,6 +194,15 @@ export const OntologyCorrectnessBench: React.FC = () => {
         </p>
       </section>
 
+      <section className="space-y-4">
+        <h2 className="text-2xl font-bold text-gov-dark font-serif">Further reading</h2>
+        <ul className="space-y-2 text-gov-dark">
+          <li><Link to="/research/shacl-shapes-not-vocabulary" className="text-gov-blue underline hover:text-gov-blue-dark">SHACL validates shapes, not vocabulary</Link>, why the open-world semantics are a feature, and where the companion check belongs.</li>
+          <li><Link to="/research/symbol-existence-box" className="text-gov-blue underline hover:text-gov-blue-dark">The missing box</Link>, symbol-existence checking as a named component in a neuro-symbolic pipeline.</li>
+          <li><Link to="/research/foundry-grade-machine-ontologies" className="text-gov-blue underline hover:text-gov-blue-dark">Foundry-grade guarantees for machine-authored ontologies</Link>, the same test on the OBO Foundry's own PATO and RO.</li>
+        </ul>
+      </section>
+
       <div className="bg-gov-bg border border-gov-border/50 rounded-xl p-8 flex flex-col sm:flex-row gap-4 sm:items-center sm:justify-between">
         <div>
           <p className="font-semibold text-gov-dark">Reproduce the benchmark</p>

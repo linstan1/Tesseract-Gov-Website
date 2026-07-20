@@ -26,6 +26,9 @@ const FairScientificData = lazy(() => import('./pages/research/FairScientificDat
 const IesHqdmCrosswalk = lazy(() => import('./pages/research/IesHqdmCrosswalk').then(m => ({ default: m.IesHqdmCrosswalk })));
 const Ies4TurtleLanguageModel = lazy(() => import('./pages/research/Ies4TurtleLanguageModel').then(m => ({ default: m.Ies4TurtleLanguageModel })));
 const OntologyCorrectnessBench = lazy(() => import('./pages/research/OntologyCorrectnessBench').then(m => ({ default: m.OntologyCorrectnessBench })));
+const ShaclShapesNotVocabulary = lazy(() => import('./pages/research/ShaclShapesNotVocabulary').then(m => ({ default: m.ShaclShapesNotVocabulary })));
+const SymbolExistenceBox = lazy(() => import('./pages/research/SymbolExistenceBox').then(m => ({ default: m.SymbolExistenceBox })));
+const FoundryGradeMachineOntologies = lazy(() => import('./pages/research/FoundryGradeMachineOntologies').then(m => ({ default: m.FoundryGradeMachineOntologies })));
 const BiologyOntologyLanguageModel = lazy(() => import('./pages/research/BiologyOntologyLanguageModel').then(m => ({ default: m.BiologyOntologyLanguageModel })));
 const PyramidBridge = lazy(() => import('./pages/research/PyramidBridge').then(m => ({ default: m.PyramidBridge })));
 const NatureSecurityRisk = lazy(() => import('./pages/research/NatureSecurityRisk').then(m => ({ default: m.NatureSecurityRisk })));
@@ -137,6 +140,18 @@ const PAGE_META: Record<string, { title: string; description: string }> = {
   '/research/ontology-correctness-benchmark': {
     title: 'The open-world hole: why SHACL cannot catch a hallucinated ontology term | Tesseract Academy for the Public Sector',
     description: 'A reproducible benchmark on three real vocabularies (schema.org, IES4, OBO PATO+RO) showing that open-world SHACL validates as conformant every data graph containing a fabricated ontology term (300 of 300), while a closed-world vocabulary gate catches all 300 with zero false positives across 418 fabricated terms. The correctness layer for AI-generated knowledge graphs, from the open-ontologies engine.',
+  },
+  '/research/shacl-shapes-not-vocabulary': {
+    title: 'SHACL validates shapes, not vocabulary: the case for a closed-world companion | Tesseract Academy for the Public Sector',
+    description: 'SHACL Core is open-world by design: it constrains the nodes a shape targets and is silent about everything else, including terms that do not exist in the ontology. Why sh:closed does not close the gap, and where a closed-world vocabulary check belongs in a generative RDF pipeline.',
+  },
+  '/research/symbol-existence-box': {
+    title: 'The missing box: where symbol-existence checking belongs in a neuro-symbolic pipeline | Tesseract Academy for the Public Sector',
+    description: 'Neuro-symbolic systems are assemblies of distinct components. Most LLM-to-knowledge-graph pipelines have generation and SHACL and assume SHACL is the symbol-grounding box. It is not. Read through the boxology of hybrid learning-and-reasoning systems, the missing box is symbol grounding.',
+  },
+  '/research/foundry-grade-machine-ontologies': {
+    title: 'Foundry-grade guarantees for machine-authored ontologies | Tesseract Academy for the Public Sector',
+    description: 'The OBO Foundry spent two decades insisting biomedical terms mean one thing and are declared in one place. Measured on the Foundry ontologies PATO and RO, open-world SHACL admits every fabricated identifier while a closed-world gate catches all of them, so machine output can be held to the same standard as human curation.',
   },
   '/research/biology-ontology-language-model': {
     title: 'An open, conformant language model for biomedical knowledge graphs | Tesseract Academy for the Public Sector',
@@ -321,6 +336,9 @@ const App: React.FC = () => {
               <Route path="/research/ies-hqdm-defence-interoperability" element={<IesHqdmCrosswalk />} />
               <Route path="/research/ies4-turtle-language-model" element={<Ies4TurtleLanguageModel />} />
               <Route path="/research/ontology-correctness-benchmark" element={<OntologyCorrectnessBench />} />
+              <Route path="/research/shacl-shapes-not-vocabulary" element={<ShaclShapesNotVocabulary />} />
+              <Route path="/research/symbol-existence-box" element={<SymbolExistenceBox />} />
+              <Route path="/research/foundry-grade-machine-ontologies" element={<FoundryGradeMachineOntologies />} />
               <Route path="/research/biology-ontology-language-model" element={<BiologyOntologyLanguageModel />} />
               <Route path="/research/pyramid-ies-hqdm-semantic-bridge" element={<PyramidBridge />} />
               <Route path="/research/nature-related-security-risk" element={<NatureSecurityRisk />} />
