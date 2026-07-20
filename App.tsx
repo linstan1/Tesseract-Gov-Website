@@ -31,6 +31,7 @@ const SymbolExistenceBox = lazy(() => import('./pages/research/SymbolExistenceBo
 const FoundryGradeMachineOntologies = lazy(() => import('./pages/research/FoundryGradeMachineOntologies').then(m => ({ default: m.FoundryGradeMachineOntologies })));
 const NeuroSymbolicVerificationDirection = lazy(() => import('./pages/research/NeuroSymbolicVerificationDirection').then(m => ({ default: m.NeuroSymbolicVerificationDirection })));
 const CertifiedDenotation = lazy(() => import('./pages/research/CertifiedDenotation').then(m => ({ default: m.CertifiedDenotation })));
+const BioKgTriage = lazy(() => import('./pages/research/BioKgTriage').then(m => ({ default: m.BioKgTriage })));
 const BiologyOntologyLanguageModel = lazy(() => import('./pages/research/BiologyOntologyLanguageModel').then(m => ({ default: m.BiologyOntologyLanguageModel })));
 const PyramidBridge = lazy(() => import('./pages/research/PyramidBridge').then(m => ({ default: m.PyramidBridge })));
 const NatureSecurityRisk = lazy(() => import('./pages/research/NatureSecurityRisk').then(m => ({ default: m.NatureSecurityRisk })));
@@ -162,6 +163,10 @@ const PAGE_META: Record<string, { title: string; description: string }> = {
   '/research/certified-denotation': {
     title: 'Beyond existence: certified denotation, the next gate | Tesseract Academy for the Public Sector',
     description: 'The closed-world vocabulary gate proves every term exists; it does not prove the term is used soundly. Certified denotation is the next gate, from ontology domain and range up to a certified world model. An honest roadmap of the correctness ladder, existence then type soundness then world-state soundness.',
+  },
+  '/research/ontology-grounded-biomedical-kg': {
+    title: 'Grounded, not retrieved: an ontology-validated biomedical knowledge graph | Tesseract Academy for the Public Sector',
+    description: 'A gene-disease knowledge graph from 40 real Open Targets associations, typed with the Biolink Model and validated by a closed-world vocabulary gate. The grounded graph has 0 SHACL and 0 vocabulary violations across 284 triples; an ungrounded variant with one fabricated Biolink predicate passes SHACL but is caught by the gate. Reproducible, with a provenance-carrying hypothesis triage.',
   },
   '/research/biology-ontology-language-model': {
     title: 'An open, conformant language model for biomedical knowledge graphs | Tesseract Academy for the Public Sector',
@@ -351,6 +356,7 @@ const App: React.FC = () => {
               <Route path="/research/foundry-grade-machine-ontologies" element={<FoundryGradeMachineOntologies />} />
               <Route path="/research/neuro-symbolic-verification-direction" element={<NeuroSymbolicVerificationDirection />} />
               <Route path="/research/certified-denotation" element={<CertifiedDenotation />} />
+              <Route path="/research/ontology-grounded-biomedical-kg" element={<BioKgTriage />} />
               <Route path="/research/biology-ontology-language-model" element={<BiologyOntologyLanguageModel />} />
               <Route path="/research/pyramid-ies-hqdm-semantic-bridge" element={<PyramidBridge />} />
               <Route path="/research/nature-related-security-risk" element={<NatureSecurityRisk />} />
