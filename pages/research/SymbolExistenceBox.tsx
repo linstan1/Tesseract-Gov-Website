@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { ArrowLeft, ExternalLink } from 'lucide-react';
 
 const REPO = 'https://github.com/fabio-rovai/open-ontologies';
+const DEMO = 'https://colab.research.google.com/github/fabio-rovai/open-ontologies/blob/main/case-studies/onto-correctness-bench/demo.ipynb';
 
 const SCHEMA = {
   '@context': 'https://schema.org',
@@ -84,9 +85,9 @@ export const SymbolExistenceBox: React.FC = () => {
           <a href={REPO} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-5 py-2.5 bg-gov-blue text-white text-sm font-semibold rounded-lg hover:bg-gov-blue-dark transition-colors">
             open-ontologies on GitHub <ExternalLink className="w-4 h-4" />
           </a>
-          <Link to="/how-to-buy" className="inline-flex items-center gap-2 px-5 py-2.5 border border-gov-blue text-gov-blue text-sm font-semibold rounded-lg hover:bg-gov-blue/5 transition-colors">
-            Run it on your ontology
-          </Link>
+          <a href={DEMO} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-5 py-2.5 border border-gov-blue text-gov-blue text-sm font-semibold rounded-lg hover:bg-gov-blue/5 transition-colors">
+            Run it now (Colab) <ExternalLink className="w-4 h-4" />
+          </a>
         </div>
       </div>
 
