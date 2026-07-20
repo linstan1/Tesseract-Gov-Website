@@ -25,6 +25,7 @@ const ConnectiveProductCyberIncidents = lazy(() => import('./pages/research/Conn
 const FairScientificData = lazy(() => import('./pages/research/FairScientificData').then(m => ({ default: m.FairScientificData })));
 const IesHqdmCrosswalk = lazy(() => import('./pages/research/IesHqdmCrosswalk').then(m => ({ default: m.IesHqdmCrosswalk })));
 const Ies4TurtleLanguageModel = lazy(() => import('./pages/research/Ies4TurtleLanguageModel').then(m => ({ default: m.Ies4TurtleLanguageModel })));
+const OntologyCorrectnessBench = lazy(() => import('./pages/research/OntologyCorrectnessBench').then(m => ({ default: m.OntologyCorrectnessBench })));
 const BiologyOntologyLanguageModel = lazy(() => import('./pages/research/BiologyOntologyLanguageModel').then(m => ({ default: m.BiologyOntologyLanguageModel })));
 const PyramidBridge = lazy(() => import('./pages/research/PyramidBridge').then(m => ({ default: m.PyramidBridge })));
 const NatureSecurityRisk = lazy(() => import('./pages/research/NatureSecurityRisk').then(m => ({ default: m.NatureSecurityRisk })));
@@ -132,6 +133,10 @@ const PAGE_META: Record<string, { title: string; description: string }> = {
   '/research/ies4-turtle-language-model': {
     title: 'An open language model for IES4 data | Tesseract Academy for the Public Sector',
     description: 'To our knowledge the first openly published language model fine-tuned for IES4, the UK 4D defence-data ontology. Against the untuned base model, IES term conformance rises from 0% to 88.6% and the hallucinated-term rate falls from 0.937 to 0.010, on correct-by-construction training data double-validated against the published dstl/IES4 ontology. Model, dataset and evaluation harness released open for reproduction.',
+  },
+  '/research/ontology-correctness-benchmark': {
+    title: 'The open-world hole: why SHACL cannot catch a hallucinated ontology term | Tesseract Academy for the Public Sector',
+    description: 'A reproducible benchmark on three real vocabularies (schema.org, IES4, OBO PATO+RO) showing that open-world SHACL validates as conformant every data graph containing a fabricated ontology term (300 of 300), while a closed-world vocabulary gate catches all 300 with zero false positives across 418 fabricated terms. The correctness layer for AI-generated knowledge graphs, from the open-ontologies engine.',
   },
   '/research/biology-ontology-language-model': {
     title: 'An open, conformant language model for biomedical knowledge graphs | Tesseract Academy for the Public Sector',
@@ -315,6 +320,7 @@ const App: React.FC = () => {
               <Route path="/research/fair-scientific-data" element={<FairScientificData />} />
               <Route path="/research/ies-hqdm-defence-interoperability" element={<IesHqdmCrosswalk />} />
               <Route path="/research/ies4-turtle-language-model" element={<Ies4TurtleLanguageModel />} />
+              <Route path="/research/ontology-correctness-benchmark" element={<OntologyCorrectnessBench />} />
               <Route path="/research/biology-ontology-language-model" element={<BiologyOntologyLanguageModel />} />
               <Route path="/research/pyramid-ies-hqdm-semantic-bridge" element={<PyramidBridge />} />
               <Route path="/research/nature-related-security-risk" element={<NatureSecurityRisk />} />

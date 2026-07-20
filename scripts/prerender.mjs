@@ -100,6 +100,10 @@ const PAGE_META = {
     title: 'An open language model for IES4 data | Tesseract Academy for the Public Sector',
     description: 'To our knowledge the first openly published language model fine-tuned for IES4, the UK 4D defence-data ontology. Against the untuned base model, IES term conformance rises from 0% to 88.6% and the hallucinated-term rate falls from 0.937 to 0.010, on correct-by-construction training data double-validated against the published dstl/IES4 ontology. Model, dataset and evaluation harness released open for reproduction.',
   },
+  '/research/ontology-correctness-benchmark': {
+    title: 'The open-world hole: why SHACL cannot catch a hallucinated ontology term | Tesseract Academy for the Public Sector',
+    description: 'A reproducible benchmark on three real vocabularies (schema.org, IES4, OBO PATO+RO) showing that open-world SHACL validates as conformant every data graph containing a fabricated ontology term (300 of 300), while a closed-world vocabulary gate catches all 300 with zero false positives across 418 fabricated terms. The correctness layer for AI-generated knowledge graphs, from the open-ontologies engine.',
+  },
   '/research/biology-ontology-language-model': {
     title: 'An open, conformant language model for biomedical knowledge graphs | Tesseract Academy for the Public Sector',
     description: 'To our knowledge the first openly published language model fine-tuned for the Biolink Model and GO-CAM. Against the untuned base model, term conformance rises from 0% to 100% and the hallucinated-term rate falls from 0.42 to 0.00, holding at 89% on multi-association graphs never seen in training. Correct-by-construction data validated with the Biolink Model Toolkit and the GO-CAM schema; model, dataset and evaluation harness released open for reproduction.',
