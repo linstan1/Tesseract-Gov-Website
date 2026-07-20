@@ -12,7 +12,7 @@ const SCHEMA = {
   mainEntityOfPage: 'https://gov.tesseract.academy/research/ontology-grounded-biomedical-kg',
   headline: 'Grounded, not retrieved: an ontology-validated biomedical knowledge graph | Tesseract Academy',
   description:
-    'A validated biomedical knowledge graph across three grounded layers: structured gene-disease associations (Open Targets + Biolink), literature relations machine-extracted by PubTator3, and antimicrobial resistance from CARD/ARO. Every grounded layer has 0 SHACL and 0 closed-world vocabulary violations; every ungrounded twin with one fabricated term passes SHACL but is caught by the gate. Reproducible, with a provenance-carrying hypothesis triage.',
+    'A validated biomedical knowledge graph across four grounded layers: structured gene-disease associations (Open Targets + Biolink), literature relations from PubTator3, antimicrobial resistance from CARD/ARO, and a pathogen linkage policing ARO, Biolink and NCBITaxon at once against the current NCBI taxonomy. Grounded layers validate clean; ungrounded twins with one fabricated term pass SHACL but are caught by the gate, which also flags 17 retired taxon ids in CARD as a data-freshness signal. Reproducible, with a provenance-carrying hypothesis triage.',
   author: { '@id': 'https://gov.tesseract.academy/#organization' },
   publisher: { '@id': 'https://gov.tesseract.academy/#organization' },
   datePublished: '2026-07-20',
@@ -123,9 +123,9 @@ export const BioKgTriage: React.FC = () => {
 
       <section className="space-y-6">
         <div className="border-l-2 border-l-gov-blue pl-6">
-          <h2 className="text-2xl font-bold text-gov-dark font-serif mb-3">Three grounded layers</h2>
+          <h2 className="text-2xl font-bold text-gov-dark font-serif mb-3">Four grounded layers</h2>
           <p className="text-gov-dark leading-relaxed">
-            The gate is not tied to one source or one ontology. We built three layers, each from a different real source, and validated all three the same way. The structured layer above is the first; the second turns raw literature into a KG, and the third moves to a different domain and a different ontology entirely.
+            The gate is not tied to one source or one ontology. We built four layers, each from a different real source, and validated all four the same way. The structured layer above is the first; the second turns raw literature into a KG; the third moves to a different domain and ontology; the fourth links resistance genes to their pathogens and polices three ontologies at once.
           </p>
         </div>
         <div className="overflow-x-auto">
@@ -155,17 +155,27 @@ export const BioKgTriage: React.FC = () => {
                 <td className="px-4 py-3 text-gov-secondary">caught</td>
               </tr>
               <tr className="border-b border-gov-border/50 bg-white">
-                <td className="px-4 py-3 font-medium text-gov-dark">Antimicrobial resistance</td>
+                <td className="px-4 py-3 font-medium text-gov-dark">AMR (resistance-to-drug)</td>
                 <td className="px-4 py-3 text-gov-secondary">CARD / ARO</td>
                 <td className="px-4 py-3 text-gov-secondary">1,283</td>
                 <td className="px-4 py-3 font-semibold text-gov-dark">0</td>
+                <td className="px-4 py-3 text-gov-secondary">caught</td>
+              </tr>
+              <tr className="border-b border-gov-border/50 bg-gov-bg/40">
+                <td className="px-4 py-3 font-medium text-gov-dark">AMR pathogen linkage</td>
+                <td className="px-4 py-3 text-gov-secondary">CARD + NCBI taxonomy</td>
+                <td className="px-4 py-3 text-gov-secondary">20,692</td>
+                <td className="px-4 py-3 font-semibold text-gov-dark">fake taxid caught; 17 retired flagged</td>
                 <td className="px-4 py-3 text-gov-secondary">caught</td>
               </tr>
             </tbody>
           </table>
         </div>
         <p className="text-gov-dark leading-relaxed">
-          The literature layer keeps only the gene-disease relations PubTator3 machine-extracts from 40 real PubMed abstracts, 57 across the eight target genes, and grounds each in Biolink. The AMR layer takes 800 of the 5,053 real "confers resistance to" relationships in CARD's Antibiotic Resistance Ontology and polices the ARO namespace instead of Biolink, so the gate is shown working on a third ontology and a different domain. Every grounded layer: zero violations. Every ungrounded twin: caught.
+          The literature layer keeps only the gene-disease relations PubTator3 machine-extracts from 40 real PubMed abstracts, 57 across the eight target genes, and grounds each in Biolink. The resistance-to-drug layer takes 800 of the 5,053 real "confers resistance to" relationships in CARD's Antibiotic Resistance Ontology and polices the ARO namespace, so the gate is shown working on a third ontology and a different domain.
+        </p>
+        <p className="text-gov-dark leading-relaxed">
+          The pathogen layer goes further: 6,404 gene-organism edges from CARD, policing <strong>three ontologies at once</strong>, ARO for the gene, Biolink for the <code className="text-sm bg-gov-bg px-1.5 py-0.5 rounded">in_taxon</code> predicate and types, and NCBITaxon for the organism, checked against the current NCBI taxonomy of 2,871,791 taxids. A fabricated taxon id is caught, as expected. And here the gate earns more than its keep: run against the current taxonomy, it flags <strong>17 organism identifiers in CARD as no longer current</strong>, all seventeen confirmed retired and merged in NCBI's own records. That is a real data-freshness signal, not fabrication, and it is exactly the kind of silent staleness open-world SHACL and a naive well-formedness check both wave through.
         </p>
       </section>
 
@@ -214,7 +224,7 @@ export const BioKgTriage: React.FC = () => {
         </blockquote>
 
         <p className="text-sm text-gov-secondary/90 leading-relaxed">
-          An independent, self-initiated study on open data and open tools: the Biolink Model, the Open Targets Platform, PubTator3, and CARD's Antibiotic Resistance Ontology, all used under their open licences. All three layers are built and validated. The one honest gap that remains: the AMR layer grounds resistance-to-drug edges but does not yet link resistance genes to pathogens via NCBITaxon, which is the next input. The full method, honest scope and reproducible code are in the repository.
+          An independent, self-initiated study on open data and open tools: the Biolink Model, the Open Targets Platform, PubTator3, CARD, and the NCBI taxonomy, all used under their open licences. All four layers are built and validated. Honest limits: the resistance-to-drug layer uses a logged 800-edge slice of ARO's relationships, PubTator3's associations are its own machine extraction, and the triage ranks on Open Targets' own score with provenance rather than a new model. The 17 retired taxon ids the pathogen gate flags are a feature, real but deprecated ids CARD still carries. The full method and reproducible code are in the repository.
         </p>
       </section>
 
