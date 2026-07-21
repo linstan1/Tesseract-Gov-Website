@@ -120,6 +120,38 @@ export const VerifiaBench: React.FC = () => {
         </p>
       </section>
 
+      <section className="space-y-6">
+        <div className="border-l-2 border-l-gov-blue pl-6">
+          <h2 className="text-2xl font-bold text-gov-dark font-serif mb-3">Two authorities, three task families</h2>
+          <p className="text-gov-dark leading-relaxed">
+            The benchmark above uses one ontology and one task. That was the easy case, and it let a local model tie the frontier. So we extended it to a second authority, the <a href="https://geneontology.org/" target="_blank" rel="noopener noreferrer" className="text-gov-blue underline hover:text-gov-blue-dark">Gene Ontology</a> (48,329 terms), and three task families: single-hop gene-disease (Biolink), GO annotation (emit a real GO term for a named process), and cross-ontology multi-hop (gene, disease and process, Biolink and GO in one graph). The oracle now checks term existence across both authorities, and multi-hop cannot be gamed by getting one authority right and inventing the other.
+          </p>
+        </div>
+        <div className="overflow-x-auto">
+          <table className="w-full text-sm border-collapse">
+            <thead>
+              <tr className="bg-gov-bg border-b border-gov-border">
+                <th className="text-left px-4 py-3 font-semibold text-gov-dark">Model</th>
+                <th className="text-left px-4 py-3 font-semibold text-gov-dark">Overall verified</th>
+                <th className="text-left px-4 py-3 font-semibold text-gov-dark">Biolink</th>
+                <th className="text-left px-4 py-3 font-semibold text-gov-dark">GO annotation</th>
+                <th className="text-left px-4 py-3 font-semibold text-gov-dark">Multi-hop</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="border-b border-gov-border/50 bg-white"><td className="px-4 py-3 font-medium text-gov-dark">Claude Opus</td><td className="px-4 py-3 font-semibold text-gov-dark">1.00</td><td className="px-4 py-3 text-gov-secondary">1.00</td><td className="px-4 py-3 text-gov-secondary">1.00</td><td className="px-4 py-3 text-gov-secondary">1.00</td></tr>
+              <tr className="border-b border-gov-border/50 bg-gov-bg/40"><td className="px-4 py-3 font-medium text-gov-dark">Claude Sonnet</td><td className="px-4 py-3 font-semibold text-gov-dark">0.75</td><td className="px-4 py-3 text-gov-secondary">0.60</td><td className="px-4 py-3 text-gov-secondary">0.85</td><td className="px-4 py-3 text-gov-secondary">0.93</td></tr>
+              <tr className="border-b border-gov-border/50 bg-white"><td className="px-4 py-3 font-medium text-gov-dark">Qwen3-Coder-30B</td><td className="px-4 py-3 font-semibold text-gov-dark">0.48</td><td className="px-4 py-3 text-gov-secondary">1.00</td><td className="px-4 py-3 font-semibold text-gov-dark">0.00</td><td className="px-4 py-3 text-gov-secondary">0.07</td></tr>
+              <tr className="border-b border-gov-border/50 bg-gov-bg/40"><td className="px-4 py-3 font-medium text-gov-dark">Claude Haiku</td><td className="px-4 py-3 font-semibold text-gov-dark">0.43</td><td className="px-4 py-3 text-gov-secondary">0.77</td><td className="px-4 py-3 text-gov-secondary">0.20</td><td className="px-4 py-3 text-gov-secondary">0.07</td></tr>
+              <tr className="border-b border-gov-border/50 bg-white"><td className="px-4 py-3 font-medium text-gov-dark">Llama-3.2-3B / Qwen2.5-3B</td><td className="px-4 py-3 font-semibold text-gov-dark">0.00</td><td className="px-4 py-3 text-gov-secondary">0.00</td><td className="px-4 py-3 text-gov-secondary">0.00</td><td className="px-4 py-3 text-gov-secondary">0.00</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p className="text-gov-dark leading-relaxed">
+          On the single-authority task the local Qwen3-Coder-30B tied Claude Opus at 1.00. Add a second ontology and multi-hop, and the tie breaks: <strong>Opus scores 1.00 across all three families, the 30B collapses to 0.48</strong>, perfect on Biolink but zero on GO annotation, where it fluently emits fabricated 7-digit GO identifiers, and near zero on multi-hop. GO annotation is the discriminator; multi-hop is the hardest. A single family called several models equal; the multi-domain version re-separates them and exposes the cross-ontology hallucination the single family hid.
+        </p>
+      </section>
+
       <section className="space-y-4">
         <div className="border-l-2 border-l-gov-blue pl-6">
           <h2 className="text-2xl font-bold text-gov-dark font-serif mb-3">Why this is the ownable gap</h2>
@@ -134,7 +166,7 @@ export const VerifiaBench: React.FC = () => {
         </blockquote>
 
         <p className="text-sm text-gov-secondary/90 leading-relaxed">
-          An independent, self-initiated study: the Biolink Model, five locally-run open checkpoints over an OpenAI-compatible endpoint, and Claude Haiku, Sonnet and Opus. Qwen3.6-35B is a reasoning model, scored on its final answer with a large token budget so it can finish reasoning. One task family (Biolink gene-disease RDF) on one authority; GO, ChEBI and EDAM are the documented next step. The 30 facts are public, so the honest use is relative comparison and a versioned, inspectable oracle, not a secret leaderboard. Full method, per-task outputs and reproducible code in the repository.
+          An independent, self-initiated study: the Biolink Model, five locally-run open checkpoints over an OpenAI-compatible endpoint, and Claude Haiku, Sonnet and Opus. Qwen3.6-35B is a reasoning model, scored on its final answer with a large token budget so it can finish reasoning. Two authorities (Biolink and the Gene Ontology) and three task families including cross-ontology multi-hop; ChEBI, Reactome and EDAM extend the same oracle further. The facts are public, so the honest use is relative comparison and a versioned, inspectable oracle, not a secret leaderboard. The Claude models are queried through the claude -p CLI, which loads this machine's configuration, a raw API call would be the cleaner comparison. Full method, per-task outputs and reproducible code in the repository.
         </p>
       </section>
 
