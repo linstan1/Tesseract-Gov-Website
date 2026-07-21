@@ -134,7 +134,7 @@ const PAGE_META = {
   },
   '/research/verifiable-scientific-llm-benchmark': {
     title: 'Fluency is saturated, correctness is not: an un-game-able scientific-LLM benchmark | Tesseract Academy for the Public Sector',
-    description: 'verifiabench grades LLM Biolink-RDF output with a closed-world oracle (term existence + structure, no LLM judge) instead of fluency. Across five open models raw capability saturates at 1.00 while verified capability ranges 0.00 to 1.00: two models produce fluent RDF that invents half its terms, one gets every term real. Reproducible against any endpoint.',
+    description: 'verifiabench grades LLM Biolink-RDF output with a closed-world oracle (term existence + structure, no LLM judge) instead of fluency. Across nine models including Claude Opus, Sonnet and Haiku, raw fluency saturates at 1.00 while verified capability ranges 0.00 to 1.00: a local Qwen3-Coder-30B ties Claude Opus at 1.00 while some fluent models invent half their terms. Reproducible against any endpoint.',
   },
   '/research/biology-ontology-language-model': {
     title: 'An open, conformant language model for biomedical knowledge graphs | Tesseract Academy for the Public Sector',

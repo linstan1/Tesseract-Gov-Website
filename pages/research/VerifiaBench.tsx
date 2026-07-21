@@ -11,7 +11,7 @@ const SCHEMA = {
   mainEntityOfPage: 'https://gov.tesseract.academy/research/verifiable-scientific-llm-benchmark',
   headline: 'Fluency is saturated, correctness is not: an un-game-able scientific-LLM benchmark | Tesseract Academy',
   description:
-    'verifiabench grades LLM scientific-workflow output with a closed-world oracle (term existence + structure, no LLM judge) instead of fluency. Across five open models, raw capability saturates at 1.00 while verified capability ranges from 0.00 to 1.00 on the same tasks: two models produce fluent Biolink RDF that invents half its terms, one gets every term real.',
+    'verifiabench grades LLM scientific-workflow output with a closed-world oracle (term existence + structure, no LLM judge) instead of fluency. Across nine models including Claude Opus, Sonnet, Haiku and local open checkpoints, raw fluency saturates at 1.00 while verified capability ranges 0.00 to 1.00 on identical tasks: a local Qwen3-Coder-30B ties Claude Opus at 1.00, while some fluent models invent half their terms.',
   author: { '@id': 'https://gov.tesseract.academy/#organization' },
   publisher: { '@id': 'https://gov.tesseract.academy/#organization' },
   datePublished: '2026-07-20',
@@ -27,8 +27,12 @@ const SCHEMA = {
 
 const BOARD = [
   { m: 'Qwen3-Coder-30B-A3B (8bit)', raw: '1.00', ver: '1.00', ex: '1.00', fake: '0' },
-  { m: 'Qwen2.5-3B', raw: '1.00', ver: '0.00', ex: '0.51', fake: '65' },
+  { m: 'Claude Opus', raw: '1.00', ver: '1.00', ex: '1.00', fake: '0' },
+  { m: 'Claude Haiku', raw: '1.00', ver: '0.93', ex: '0.99', fake: '1' },
+  { m: 'Qwen3.6-35B-A3B (8bit)', raw: '1.00', ver: '0.77', ex: '0.92', fake: '7' },
+  { m: 'Claude Sonnet', raw: '1.00', ver: '0.73', ex: '1.00', fake: '0' },
   { m: 'Llama-3.2-3B', raw: '1.00', ver: '0.00', ex: '0.51', fake: '49' },
+  { m: 'Qwen2.5-3B', raw: '1.00', ver: '0.00', ex: '0.51', fake: '65' },
   { m: 'gemma-2-2b', raw: '0.23', ver: '0.00', ex: '0.06', fake: '21' },
   { m: 'Qwen2.5-0.5B', raw: '0.00', ver: '0.00', ex: '0.00', fake: '0' },
 ];
@@ -57,7 +61,7 @@ export const VerifiaBench: React.FC = () => {
         <div className="bg-gov-bg border border-gov-border/50 rounded-xl p-6">
           <p className="text-xs font-semibold uppercase tracking-wider text-gov-blue mb-1">Fluency (raw)</p>
           <p className="text-3xl font-extrabold text-gov-dark">saturated</p>
-          <p className="text-sm text-gov-secondary mt-1">1.00 for three of five models</p>
+          <p className="text-sm text-gov-secondary mt-1">1.00 for seven of nine models</p>
         </div>
         <div className="bg-gov-bg border border-gov-border/50 rounded-xl p-6">
           <p className="text-xs font-semibold uppercase tracking-wider text-gov-blue mb-1">Verified capability</p>
@@ -84,7 +88,7 @@ export const VerifiaBench: React.FC = () => {
         <div className="border-l-2 border-l-gov-blue pl-6">
           <h2 className="text-2xl font-bold text-gov-dark font-serif mb-3">The benchmark</h2>
           <p className="text-gov-dark leading-relaxed">
-            30 real gene-disease facts, each asking a model to write Biolink-typed RDF. The oracle parses the output, checks that every Biolink term it emits actually exists in the <a href="https://github.com/biolink/biolink-model" target="_blank" rel="noopener noreferrer" className="text-gov-blue underline hover:text-gov-blue-dark">Biolink Model</a>, and checks the structure (a real gene, a real disease, a real association predicate). Correctness is set-membership plus constraints, computed deterministically, the same <Link to="/research/ontology-correctness-benchmark" className="text-gov-blue underline hover:text-gov-blue-dark">closed-world principle</Link> that catches hallucinated terms in generated knowledge graphs, turned into an evaluation. Five open models, run locally:
+            30 real gene-disease facts, each asking a model to write Biolink-typed RDF. The oracle parses the output, checks that every Biolink term it emits actually exists in the <a href="https://github.com/biolink/biolink-model" target="_blank" rel="noopener noreferrer" className="text-gov-blue underline hover:text-gov-blue-dark">Biolink Model</a>, and checks the structure (a real gene, a real disease, a real association predicate). Correctness is set-membership plus constraints, computed deterministically, the same <Link to="/research/ontology-correctness-benchmark" className="text-gov-blue underline hover:text-gov-blue-dark">closed-world principle</Link> that catches hallucinated terms in generated knowledge graphs, turned into an evaluation. Nine models, five open checkpoints run locally and Claude Haiku, Sonnet and Opus:
           </p>
         </div>
         <div className="overflow-x-auto">
@@ -112,7 +116,7 @@ export const VerifiaBench: React.FC = () => {
           </table>
         </div>
         <p className="text-gov-dark leading-relaxed">
-          Three models produce structured Biolink RDF on every task (raw 1.00), yet Qwen2.5-3B and Llama-3.2-3B score 0.00 verified: every one of their outputs invents terms, about half of everything they emit does not exist in Biolink. Only Qwen3-Coder-30B actually gets it right, 1.00 verified with zero fabricated terms. A fluency- or judge-based benchmark would rank the two hallucinating models near the top. The oracle separates them cleanly, and you cannot lift the score by writing more fluent RDF, only by using terms that are real.
+          Seven of nine models produce structured Biolink RDF on every task (raw 1.00), so fluency tells you almost nothing. Verified capability spans the full range. Two models tie at the top with perfect verified correctness and zero fabricated terms, one local (Qwen3-Coder-30B) and one frontier (Claude Opus). At the bottom, Qwen2.5-3B and Llama-3.2-3B look identical to the leaders on fluency yet score 0.00 verified, inventing roughly half of every term they emit. The oracle also separates two failure modes fluency grading cannot see: hallucination (the small local models, 49 to 65 fabricated terms) and structural incompleteness (Claude Sonnet, 0.73 verified with zero fabricated terms, its misses are a missing typed disease, not an invented term). You cannot lift the score by writing more fluent RDF, only by using terms that are real.
         </p>
       </section>
 
@@ -130,7 +134,7 @@ export const VerifiaBench: React.FC = () => {
         </blockquote>
 
         <p className="text-sm text-gov-secondary/90 leading-relaxed">
-          An independent, self-initiated study on open tools and open models: the Biolink Model, and five locally-run open checkpoints over an OpenAI-compatible endpoint. One task family (Biolink gene-disease RDF) on one authority; GO, ChEBI and EDAM are the documented next step. The 30 facts are public, so the honest use is relative comparison and a versioned, inspectable oracle, not a secret leaderboard. Full method, per-task outputs and reproducible code in the repository.
+          An independent, self-initiated study: the Biolink Model, five locally-run open checkpoints over an OpenAI-compatible endpoint, and Claude Haiku, Sonnet and Opus. Qwen3.6-35B is a reasoning model, scored on its final answer with a large token budget so it can finish reasoning. One task family (Biolink gene-disease RDF) on one authority; GO, ChEBI and EDAM are the documented next step. The 30 facts are public, so the honest use is relative comparison and a versioned, inspectable oracle, not a secret leaderboard. Full method, per-task outputs and reproducible code in the repository.
         </p>
       </section>
 
