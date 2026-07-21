@@ -42,6 +42,7 @@ import { BioKgTriage } from './pages/research/BioKgTriage';
 import { CopulaCoupledUncertainty } from './pages/research/CopulaCoupledUncertainty';
 import { VerifiaBench } from './pages/research/VerifiaBench';
 import { ProofCarryingGatekeeper } from './pages/research/ProofCarryingGatekeeper';
+import { AssureHealth } from './pages/research/AssureHealth';
 import { BiologyOntologyLanguageModel } from './pages/research/BiologyOntologyLanguageModel';
 import { PyramidBridge } from './pages/research/PyramidBridge';
 import { NatureSecurityRisk } from './pages/research/NatureSecurityRisk';
@@ -107,6 +108,7 @@ const SSRApp: React.FC = () => (
         <Route path="/research/copula-coupled-uncertainty-certificates" element={<CopulaCoupledUncertainty />} />
         <Route path="/research/verifiable-scientific-llm-benchmark" element={<VerifiaBench />} />
         <Route path="/research/proof-carrying-action-gatekeeper" element={<ProofCarryingGatekeeper />} />
+        <Route path="/research/health-ai-privacy-fairness-assurance" element={<AssureHealth />} />
         <Route path="/research/biology-ontology-language-model" element={<BiologyOntologyLanguageModel />} />
         <Route path="/research/pyramid-ies-hqdm-semantic-bridge" element={<PyramidBridge />} />
         <Route path="/research/nature-related-security-risk" element={<NatureSecurityRisk />} />

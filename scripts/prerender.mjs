@@ -140,6 +140,10 @@ const PAGE_META = {
     title: 'The gate you can trust: a proof-carrying-action gatekeeper, exhaustively verified | Tesseract Academy for the Public Sector',
     description: 'A reference ARIA-Safeguarded-AI-style gatekeeper for a bounded multi-agent system. Actions dispatch only if a certificate passes a 31-line trusted core. Verified exhaustively, not sampled: over 96 reachable states and 1,176 transitions it blocks 672/672 unsafe actions and admits 504/504 safe ones at 0.36 microseconds per check. Without the gate, 57% of actions violate the spec.',
   },
+  '/research/health-ai-privacy-fairness-assurance': {
+    title: 'One report card for privacy and fairness: the disparate impact of differential privacy | Tesseract Academy for the Public Sector',
+    description: 'Privacy and fairness are audited separately, but they interact. On the real UCI Diabetes readmission dataset, one report card runs membership inference and per-subgroup equity on the same model across a differential-privacy sweep. At epsilon 0.25, DP costs minority subgroups 2.6x more accuracy than the majority while the membership leakage it targets is near zero. The trade is only visible with both planes on one card.',
+  },
   '/research/biology-ontology-language-model': {
     title: 'An open, conformant language model for biomedical knowledge graphs | Tesseract Academy for the Public Sector',
     description: 'To our knowledge the first openly published language model fine-tuned for the Biolink Model and GO-CAM. Against the untuned base model, term conformance rises from 0% to 100% and the hallucinated-term rate falls from 0.42 to 0.00, holding at 89% on multi-association graphs never seen in training. Correct-by-construction data validated with the Biolink Model Toolkit and the GO-CAM schema; model, dataset and evaluation harness released open for reproduction.',

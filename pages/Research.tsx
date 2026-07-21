@@ -96,6 +96,15 @@ export const Research: React.FC = () => {
              </div>
            </li>
            <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
+             <Link to="/research/health-ai-privacy-fairness-assurance"><h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark hover:underline transition-colors">The Privacy Fix That Quietly Breaks Fairness: One Report Card for Health AI</h3></Link>
+             <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Open case study, 2026</p>
+             <p className="text-base text-gov-dark/90 leading-relaxed">Privacy and fairness are audited separately, but they interact. On the real UCI Diabetes readmission dataset, one report card runs membership inference and per-subgroup equity on the same clinical model across a differential-privacy sweep. At the tightest privacy, differential privacy costs minority subgroups 2.6x more accuracy than the majority (drops ordered by subgroup size), while the membership leakage it targets is near zero, almost all equity cost for almost no privacy gain, visible only when both planes sit on one card.</p>
+             <div className="mt-3 flex flex-wrap gap-3 items-center">
+               <Link to="/research/health-ai-privacy-fairness-assurance" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">Read the study</Link>
+               <a href="https://github.com/fabio-rovai/open-ontologies/tree/main/case-studies/assure-health" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">Code and reproduction<span className="sr-only"> (opens in new tab)</span></a>
+             </div>
+           </li>
+           <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
              <a href="https://huggingface.co/datasets/fabsssss/semantic-web-counterfactual-census" target="_blank" rel="noopener noreferrer"><h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark hover:underline transition-colors">Is the Semantic Web Counterfactual-Ready? A Tractability Census of Public Ontologies<span className="sr-only"> (opens in new tab)</span></h3></a>
              <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Open dataset and preprint (forthcoming), 2026</p>
              <p className="text-base text-gov-dark/90 leading-relaxed">The first tractability map of the public semantic web. A compiler certifies whether each of 528 public ontologies can, as written, support a counterfactual ("what if") query. The finding: 56% declare no constraints and are counterfactual-blind, including both of the UK's 4D data standards, IES4 and HQDM, alongside schema.org, CIDOC-CRM, SAREF and GS1. On the 233 that can, a certified counterfactual is computed for each (median 0.19 ms), confirming that the cost is governed by ontology structure, not by the degree-based hardness that would suggest infeasibility. Open, reproducible, and released with a "counterfactual-ready standards" proposal.</p>

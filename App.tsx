@@ -35,6 +35,7 @@ const BioKgTriage = lazy(() => import('./pages/research/BioKgTriage').then(m => 
 const CopulaCoupledUncertainty = lazy(() => import('./pages/research/CopulaCoupledUncertainty').then(m => ({ default: m.CopulaCoupledUncertainty })));
 const VerifiaBench = lazy(() => import('./pages/research/VerifiaBench').then(m => ({ default: m.VerifiaBench })));
 const ProofCarryingGatekeeper = lazy(() => import('./pages/research/ProofCarryingGatekeeper').then(m => ({ default: m.ProofCarryingGatekeeper })));
+const AssureHealth = lazy(() => import('./pages/research/AssureHealth').then(m => ({ default: m.AssureHealth })));
 const BiologyOntologyLanguageModel = lazy(() => import('./pages/research/BiologyOntologyLanguageModel').then(m => ({ default: m.BiologyOntologyLanguageModel })));
 const PyramidBridge = lazy(() => import('./pages/research/PyramidBridge').then(m => ({ default: m.PyramidBridge })));
 const NatureSecurityRisk = lazy(() => import('./pages/research/NatureSecurityRisk').then(m => ({ default: m.NatureSecurityRisk })));
@@ -182,6 +183,10 @@ const PAGE_META: Record<string, { title: string; description: string }> = {
   '/research/proof-carrying-action-gatekeeper': {
     title: 'The gate you can trust: a proof-carrying-action gatekeeper, exhaustively verified | Tesseract Academy for the Public Sector',
     description: 'A reference ARIA-Safeguarded-AI-style gatekeeper for a bounded multi-agent system. Actions dispatch only if a certificate passes a 31-line trusted core. Verified exhaustively, not sampled: over 96 reachable states and 1,176 transitions it blocks 672/672 unsafe actions and admits 504/504 safe ones at 0.36 microseconds per check. Without the gate, 57% of actions violate the spec.',
+  },
+  '/research/health-ai-privacy-fairness-assurance': {
+    title: 'One report card for privacy and fairness: the disparate impact of differential privacy | Tesseract Academy for the Public Sector',
+    description: 'Privacy and fairness are audited separately, but they interact. On the real UCI Diabetes readmission dataset, one report card runs membership inference and per-subgroup equity on the same model across a differential-privacy sweep. At epsilon 0.25, DP costs minority subgroups 2.6x more accuracy than the majority while the membership leakage it targets is near zero. The trade is only visible with both planes on one card.',
   },
   '/research/biology-ontology-language-model': {
     title: 'An open, conformant language model for biomedical knowledge graphs | Tesseract Academy for the Public Sector',
@@ -375,6 +380,7 @@ const App: React.FC = () => {
               <Route path="/research/copula-coupled-uncertainty-certificates" element={<CopulaCoupledUncertainty />} />
               <Route path="/research/verifiable-scientific-llm-benchmark" element={<VerifiaBench />} />
               <Route path="/research/proof-carrying-action-gatekeeper" element={<ProofCarryingGatekeeper />} />
+              <Route path="/research/health-ai-privacy-fairness-assurance" element={<AssureHealth />} />
               <Route path="/research/biology-ontology-language-model" element={<BiologyOntologyLanguageModel />} />
               <Route path="/research/pyramid-ies-hqdm-semantic-bridge" element={<PyramidBridge />} />
               <Route path="/research/nature-related-security-risk" element={<NatureSecurityRisk />} />
