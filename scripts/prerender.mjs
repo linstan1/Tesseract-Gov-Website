@@ -136,6 +136,10 @@ const PAGE_META = {
     title: 'Fluency is saturated, correctness is not: an un-game-able scientific-LLM benchmark | Tesseract Academy for the Public Sector',
     description: 'verifiabench grades LLM Biolink-RDF output with a closed-world oracle (term existence + structure, no LLM judge) instead of fluency. Across nine models including Claude Opus, Sonnet and Haiku, raw fluency saturates at 1.00 while verified capability ranges 0.00 to 1.00: a local Qwen3-Coder-30B ties Claude Opus at 1.00 while some fluent models invent half their terms. Reproducible against any endpoint.',
   },
+  '/research/proof-carrying-action-gatekeeper': {
+    title: 'The gate you can trust: a proof-carrying-action gatekeeper, exhaustively verified | Tesseract Academy for the Public Sector',
+    description: 'A reference ARIA-Safeguarded-AI-style gatekeeper for a bounded multi-agent system. Actions dispatch only if a certificate passes a 31-line trusted core. Verified exhaustively, not sampled: over 96 reachable states and 1,176 transitions it blocks 672/672 unsafe actions and admits 504/504 safe ones at 0.36 microseconds per check. Without the gate, 57% of actions violate the spec.',
+  },
   '/research/biology-ontology-language-model': {
     title: 'An open, conformant language model for biomedical knowledge graphs | Tesseract Academy for the Public Sector',
     description: 'To our knowledge the first openly published language model fine-tuned for the Biolink Model and GO-CAM. Against the untuned base model, term conformance rises from 0% to 100% and the hallucinated-term rate falls from 0.42 to 0.00, holding at 89% on multi-association graphs never seen in training. Correct-by-construction data validated with the Biolink Model Toolkit and the GO-CAM schema; model, dataset and evaluation harness released open for reproduction.',

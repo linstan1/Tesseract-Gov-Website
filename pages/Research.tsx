@@ -87,6 +87,15 @@ export const Research: React.FC = () => {
              </div>
            </li>
            <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
+             <Link to="/research/proof-carrying-action-gatekeeper"><h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark hover:underline transition-colors">The Gate You Can Trust: A Proof-Carrying-Action Gatekeeper, Exhaustively Verified</h3></Link>
+             <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Open reference implementation, 2026</p>
+             <p className="text-base text-gov-dark/90 leading-relaxed">A safeguarded AI permits an action only if it carries a certificate a small trusted component can check. This is a working reference gatekeeper for a bounded multi-agent system, verified exhaustively rather than tested: over 96 reachable states and 1,176 transitions it blocks 672 of 672 unsafe actions and admits 504 of 504 safe ones, at 0.36 microseconds per check with a 31-line trusted core. Without the gate, 57% of actions violate the safety spec.</p>
+             <div className="mt-3 flex flex-wrap gap-3 items-center">
+               <Link to="/research/proof-carrying-action-gatekeeper" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">Read the study</Link>
+               <a href="https://github.com/fabio-rovai/open-ontologies/tree/main/case-studies/tardygrada-gatekeeper" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">Code and reproduction<span className="sr-only"> (opens in new tab)</span></a>
+             </div>
+           </li>
+           <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
              <a href="https://huggingface.co/datasets/fabsssss/semantic-web-counterfactual-census" target="_blank" rel="noopener noreferrer"><h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark hover:underline transition-colors">Is the Semantic Web Counterfactual-Ready? A Tractability Census of Public Ontologies<span className="sr-only"> (opens in new tab)</span></h3></a>
              <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Open dataset and preprint (forthcoming), 2026</p>
              <p className="text-base text-gov-dark/90 leading-relaxed">The first tractability map of the public semantic web. A compiler certifies whether each of 528 public ontologies can, as written, support a counterfactual ("what if") query. The finding: 56% declare no constraints and are counterfactual-blind, including both of the UK's 4D data standards, IES4 and HQDM, alongside schema.org, CIDOC-CRM, SAREF and GS1. On the 233 that can, a certified counterfactual is computed for each (median 0.19 ms), confirming that the cost is governed by ontology structure, not by the degree-based hardness that would suggest infeasibility. Open, reproducible, and released with a "counterfactual-ready standards" proposal.</p>
