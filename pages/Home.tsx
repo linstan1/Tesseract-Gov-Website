@@ -75,12 +75,6 @@ export const Home: React.FC = () => {
           <div className="flex items-center gap-3">
             <Award className="w-5 h-5 text-gov-blue flex-shrink-0" />
             <p className="text-sm text-gov-dark">
-              <strong className="text-gov-blue">New Contract Award</strong>  - Appointed to the Expert Help for Business framework (Lot 1  - Financial Management) by Aberdeenshire Council, Scotland. March 2026.
-            </p>
-          </div>
-          <div className="flex items-center gap-3">
-            <Award className="w-5 h-5 text-gov-blue flex-shrink-0" />
-            <p className="text-sm text-gov-dark">
               <strong className="text-gov-blue">New Contract Award</strong>  - Subject Expert Services for Monitoring National Qualifications, appointed by Qualifications Wales. 3-year contract (2026–2029).
             </p>
           </div>
@@ -287,7 +281,6 @@ export const Home: React.FC = () => {
             <img src="/logos/logo5.png" alt="National Digital Twin Programme" className="h-16 object-contain grayscale hover:grayscale-0 transition-all" />
             <img src="/logos/logo6.png" alt="UK Export Academy" className="h-16 object-contain grayscale hover:grayscale-0 transition-all" />
             <img src="/logos/dbt.svg" alt="Department for Business and Trade" className="h-16 object-contain grayscale hover:grayscale-0 transition-all" />
-            <img src="/logos/business-gateway.png" alt="Business Gateway" className="h-24 object-contain grayscale hover:grayscale-0 transition-all" />
             <img src="/logos/logo9.png" alt="The Alan Turing Institute" className="h-16 object-contain grayscale hover:grayscale-0 transition-all" />
             <img src="/logos/logo10.png" alt="The Growth Company" className="h-16 object-contain grayscale hover:grayscale-0 transition-all" />
             <img src="/logos/fintech-scotland.png" alt="Fintech Scotland" className="h-16 object-contain grayscale hover:grayscale-0 transition-all" />
