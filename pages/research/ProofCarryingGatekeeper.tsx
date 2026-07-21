@@ -12,7 +12,7 @@ const SCHEMA = {
   mainEntityOfPage: 'https://gov.tesseract.academy/research/proof-carrying-action-gatekeeper',
   headline: 'The gate you can trust: a proof-carrying-action gatekeeper, exhaustively verified | Tesseract Academy',
   description:
-    'A reference ARIA-Safeguarded-AI-style gatekeeper for a bounded multi-agent system. Actions dispatch only if a certificate passes a 31-line trusted core (integrity + safety invariants). Verified exhaustively, not sampled: over 96 reachable states and 1,176 transitions it blocks 672/672 unsafe actions and admits 504/504 safe ones, at 0.36 microseconds per check. Without the gate, 57% of actions violate the spec.',
+    'A proof-carrying-action gatekeeper: actions dispatch only if a certificate passes a 31-line trusted core. Verified exhaustively, not sampled, on three systems: a warehouse (672/672 unsafe blocked), DeepMind AI Safety Gridworlds Island Navigation (10/10 water-entry moves blocked on the official map), and the Melting Pot Commons Harvest substrate (447/447 patch-killing harvests blocked; ungated agents collapse the commons to 0 apples, gated agents sustain it). 0.36 microseconds per check.',
   author: { '@id': 'https://gov.tesseract.academy/#organization' },
   publisher: { '@id': 'https://gov.tesseract.academy/#organization' },
   datePublished: '2026-07-21',
@@ -105,6 +105,39 @@ export const ProofCarryingGatekeeper: React.FC = () => {
         </p>
       </section>
 
+      <section className="space-y-6">
+        <div className="border-l-2 border-l-gov-blue pl-6">
+          <h2 className="text-2xl font-bold text-gov-dark font-serif mb-3">The same gate on two real benchmarks</h2>
+          <p className="text-gov-dark leading-relaxed">
+            The gate is not tied to the warehouse. We run it, unchanged, on two published multi-agent safety benchmarks, using their real maps and safety definitions.
+          </p>
+          <p className="text-gov-dark leading-relaxed mt-3">
+            <strong>Island Navigation</strong> (<a href="https://github.com/google-deepmind/ai-safety-gridworlds" target="_blank" rel="noopener noreferrer" className="text-gov-blue underline hover:text-gov-blue-dark">DeepMind AI Safety Gridworlds</a>). We take the official map and safety definition verbatim from the repo: the agent must reach the goal without ever entering water, an irreversible drowning penalised at -50. The gate permits a move only if its certified destination is not water. Exhaustive over the 21 reachable cells and 84 moves, it blocks <strong>10 of 10</strong> water-entering moves and admits <strong>74 of 74</strong> safe ones, sound and complete; ungated, 11.9% of moves would drown the agent.
+          </p>
+          <p className="text-gov-dark leading-relaxed mt-3">
+            <strong>Commons Harvest</strong> (<a href="https://github.com/google-deepmind/meltingpot" target="_blank" rel="noopener noreferrer" className="text-gov-blue underline hover:text-gov-blue-dark">Melting Pot</a>), a faithful reimplementation of the substrate's dynamics: apples regrow only while an apple remains nearby, so eating the last apple in a patch kills it forever, the tragedy of the commons. The safety spec is sustainability, never harvest so as to empty a patch. The gate is verified exhaustively on a bounded instance (<strong>447 of 447</strong> patch-killing harvests blocked, <strong>1,857 of 1,857</strong> safe harvests admitted), and a dynamic episode with four greedy agents shows what it buys:
+          </p>
+        </div>
+        <div className="overflow-x-auto">
+          <table className="w-full text-sm border-collapse">
+            <thead>
+              <tr className="bg-gov-bg border-b border-gov-border">
+                <th className="text-left px-4 py-3 font-semibold text-gov-dark">Commons after 200 steps (mean of 20 runs)</th>
+                <th className="text-left px-4 py-3 font-semibold text-gov-dark">Ungated</th>
+                <th className="text-left px-4 py-3 font-semibold text-gov-dark">Gated</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="border-b border-gov-border/50 bg-white"><td className="px-4 py-3 font-medium text-gov-dark">Dead cells (irrecoverable)</td><td className="px-4 py-3 font-semibold text-gov-dark">36 / 36</td><td className="px-4 py-3 font-semibold text-gov-dark">0 / 36</td></tr>
+              <tr className="border-b border-gov-border/50 bg-gov-bg/40"><td className="px-4 py-3 font-medium text-gov-dark">Apples remaining</td><td className="px-4 py-3 text-gov-secondary">0</td><td className="px-4 py-3 text-gov-secondary">~10</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p className="text-gov-dark leading-relaxed">
+          Ungated greedy agents collapse the commons completely; the same agents behind the sustainability gate never kill a patch, and the resource persists. Same 31-line trusted core, three different systems.
+        </p>
+      </section>
+
       <section className="space-y-4">
         <div className="border-l-2 border-l-gov-blue pl-6">
           <h2 className="text-2xl font-bold text-gov-dark font-serif mb-3">Why this is the ownable gap</h2>
@@ -119,7 +152,7 @@ export const ProofCarryingGatekeeper: React.FC = () => {
         </blockquote>
 
         <p className="text-sm text-gov-secondary/90 leading-relaxed">
-          An independent, self-initiated study. The exhaustive guarantee holds over a bounded model (two robots, a 3x3 grid, a small battery); scaling to large systems needs symbolic model checking, where the same small checker stays small. This repo verifies the system exhaustively but does not ship a machine-checked proof of the checker itself, that is the role of the Tardygrada formally-verified runtime, whose C core is the production vehicle for this gate. The scenario is a reference model in the spirit of the DeepMind AI Safety Gridworlds; running the gate on those environments and Melting Pot is the documented next step. Full method and reproducible code in the repository.
+          An independent, self-initiated study. Every guarantee is exhaustive over a bounded model; scaling to large systems needs symbolic model checking, where the same small checker stays small. This repo verifies the systems exhaustively but does not ship a machine-checked proof of the checker itself, that is the role of the Tardygrada formally-verified runtime, whose C core is the production vehicle for this gate. The Island Navigation map and safety definition are taken verbatim from the official AI Safety Gridworlds repository (its live engine also loads and steps here); Commons Harvest is a faithful reimplementation of the Melting Pot substrate, since that engine's dmlab2d backend does not build in this environment. Full method and reproducible code in the repository.
         </p>
       </section>
 
