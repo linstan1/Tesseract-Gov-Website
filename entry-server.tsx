@@ -69,6 +69,8 @@ import { AIGovernance } from './pages/services/AIGovernance';
 import { DigitalAnalytics } from './pages/services/DigitalAnalytics';
 import { MuseumVisitsObservatory } from './pages/research/MuseumVisitsObservatory';
 import { Insights } from './pages/Insights';
+import { FineTuningLlmGovernmentDataStandard } from './pages/research/FineTuningLlmGovernmentDataStandard';
+import { MachineValidatedOpenOntologies } from './pages/research/MachineValidatedOpenOntologies';
 
 const SSRApp: React.FC = () => (
   <div className="flex flex-col min-h-screen">
@@ -135,6 +137,8 @@ const SSRApp: React.FC = () => (
         <Route path="/services/digital-analytics" element={<DigitalAnalytics />} />
         <Route path="/research/museum-visits-observatory" element={<MuseumVisitsObservatory />} />
         <Route path="/insights" element={<Insights />} />
+        <Route path="/research/fine-tuning-llm-government-data-standard" element={<FineTuningLlmGovernmentDataStandard />} />
+        <Route path="/research/machine-validated-open-ontologies" element={<MachineValidatedOpenOntologies />} />
       </Routes>
     </main>
     <Footer />

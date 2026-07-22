@@ -263,6 +263,14 @@ const PAGE_META = {
     title: 'UK Public Sector AI Insights — Research Findings | Tesseract Academy for the Public Sector',
     description: 'Original research from Tesseract Academy: land valuation ML analysis across 1,916 Welsh LSOAs, BridgeAI 450% oversubscription, NDTP open-source ontology tooling. Evidence from UK government AI delivery 2022-2026.',
   },
+  '/research/fine-tuning-llm-government-data-standard': {
+    title: 'Teaching an open-source LLM a government information standard: from 94% hallucination to 1% | Tesseract Academy for the Public Sector',
+    description: 'Tesseract Academy fine-tuned Qwen3-Coder-30B on IES4, the UK government Information Exchange Standard for defence and national security data sharing. Term confabulation fell from 93.7% to 1.0%, term conformance rose from 0% to 88.6%, every claim machine-verified against the published ontology. Published openly on Hugging Face.',
+  },
+  '/research/machine-validated-open-ontologies': {
+    title: 'Publishing machine-validated open data structures for the public sector | Tesseract Academy for the Public Sector',
+    description: 'Three delivered examples of open, machine-validated data structures: the Skills England occupational maps as a formal ontology (51,355 triples, 0 SHACL violations), the open-ontologies validation toolkit, and a computation-ready heritage aerial-photography archive (292 frames, 0 SHACL violations). Data, rules and checker published together.',
+  },
 };
 
 function escapeHtmlAttr(str) {
