@@ -37,6 +37,12 @@ export const Footer: React.FC = () => {
             </ul>
           </div>
         </div>
+        <div className="mb-12">
+          <a href="https://aiskillshub.org.uk" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 group">
+            <img src="/logos/ai-skills-hub.svg" alt="AI Skills Hub" className="h-8 object-contain" />
+            <span className="text-sm text-gov-secondary group-hover:text-gov-dark transition-colors">Training provider on the UK Government AI Skills Hub</span>
+          </a>
+        </div>
         <div className="border-t border-gov-border/30 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-xs text-gov-secondary">
             &copy; {new Date().getFullYear()} Tesseract Academy. All rights reserved.

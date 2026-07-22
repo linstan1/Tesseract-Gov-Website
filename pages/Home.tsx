@@ -316,6 +316,10 @@ export const Home: React.FC = () => {
             <div className="flex flex-col items-center gap-2">
               <img src="/logos/ccs.svg" alt="Crown Commercial Service Appointed Supplier" className="h-20 object-contain" />
             </div>
+            <a href="https://aiskillshub.org.uk" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center gap-2 group">
+              <img src="/logos/ai-skills-hub.svg" alt="AI Skills Hub" className="h-12 object-contain" />
+              <span className="text-xs text-gov-secondary group-hover:text-gov-dark transition-colors">Training provider on the UK Government AI Skills Hub</span>
+            </a>
           </div>
         </div>
       </div>
