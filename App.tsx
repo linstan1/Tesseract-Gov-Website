@@ -51,6 +51,7 @@ const SkillsEnglandEscoCrosswalk = lazy(() => import('./pages/research/SkillsEng
 const NatureGovernanceGraph = lazy(() => import('./pages/research/NatureGovernanceGraph').then(m => ({ default: m.NatureGovernanceGraph })));
 const ModipPlasticsGraph = lazy(() => import('./pages/research/ModipPlasticsGraph').then(m => ({ default: m.ModipPlasticsGraph })));
 const IxbrlDisclosureBenchmark = lazy(() => import('./pages/research/IxbrlDisclosureBenchmark').then(m => ({ default: m.IxbrlDisclosureBenchmark })));
+const XbrlPdfHtmlAiBenchmark = lazy(() => import('./pages/research/XbrlPdfHtmlAiBenchmark').then(m => ({ default: m.XbrlPdfHtmlAiBenchmark })));
 const PropertyMarketIndicators = lazy(() => import('./pages/research/PropertyMarketIndicators').then(m => ({ default: m.PropertyMarketIndicators })));
 const Glossary = lazy(() => import('./pages/Glossary').then(m => ({ default: m.Glossary })));
 const AIConsulting = lazy(() => import('./pages/services/AIConsulting').then(m => ({ default: m.AIConsulting })));
@@ -223,6 +224,11 @@ const PAGE_META: Record<string, { title: string; description: string }> = {
   '/research/ixbrl-disclosure-benchmark': {
     title: "How machine-readable are UK company accounts, really? | Tesseract Academy for the Public Sector",
     description: "An open benchmark parsing a full day of Companies House Inline XBRL accounts filings to measure what fraction expose each core accounting concept as a structured, machine-readable fact. 8,856 filings, 899 concepts; core balance-sheet concepts exposed in 73 to 97 percent of filings, the empirical premise behind claims that structured data beats PDF for AI-driven reporting. Published on GitHub and Hugging Face under the Open Government Licence.",
+  },
+
+  '/research/xbrl-pdf-html-ai-benchmark': {
+    title: "Does structured data actually help AI read company accounts? A controlled pilot | Tesseract Academy for the Public Sector",
+    description: "A self-funded controlled pilot comparing how well an open-weights language model reads the same UK annual reports as structured XBRL facts, HTML text and PDF text. Three FY2026 filed reports, 21 tasks, 189 scored model calls. Financial extraction accuracy: XBRL 88.9%, PDF 86.7%, HTML 80.0%; only XBRL ever retrieved a bracketed negative equity figure with the correct sign, at 2.9x the token cost.",
   },
 
   '/research/nature-governance-graph': {
@@ -406,6 +412,7 @@ const App: React.FC = () => {
               <Route path="/research/nature-governance-graph" element={<NatureGovernanceGraph />} />
               <Route path="/research/modip-plastics-knowledge-graph" element={<ModipPlasticsGraph />} />
               <Route path="/research/ixbrl-disclosure-benchmark" element={<IxbrlDisclosureBenchmark />} />
+              <Route path="/research/xbrl-pdf-html-ai-benchmark" element={<XbrlPdfHtmlAiBenchmark />} />
               <Route path="/research/property-market-indicators" element={<PropertyMarketIndicators />} />
               <Route path="/glossary" element={<Glossary />} />
               <Route path="/services/ai-consulting" element={<AIConsulting />} />

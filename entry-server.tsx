@@ -58,6 +58,7 @@ import { SkillsEnglandEscoCrosswalk } from './pages/research/SkillsEnglandEscoCr
 import { NatureGovernanceGraph } from './pages/research/NatureGovernanceGraph';
 import { ModipPlasticsGraph } from './pages/research/ModipPlasticsGraph';
 import { IxbrlDisclosureBenchmark } from './pages/research/IxbrlDisclosureBenchmark';
+import { XbrlPdfHtmlAiBenchmark } from './pages/research/XbrlPdfHtmlAiBenchmark';
 import { PropertyMarketIndicators } from './pages/research/PropertyMarketIndicators';
 import { Glossary } from './pages/Glossary';
 import { AIConsulting } from './pages/services/AIConsulting';
@@ -126,6 +127,7 @@ const SSRApp: React.FC = () => (
         <Route path="/research/nature-governance-graph" element={<NatureGovernanceGraph />} />
         <Route path="/research/modip-plastics-knowledge-graph" element={<ModipPlasticsGraph />} />
         <Route path="/research/ixbrl-disclosure-benchmark" element={<IxbrlDisclosureBenchmark />} />
+        <Route path="/research/xbrl-pdf-html-ai-benchmark" element={<XbrlPdfHtmlAiBenchmark />} />
         <Route path="/research/property-market-indicators" element={<PropertyMarketIndicators />} />
         <Route path="/glossary" element={<Glossary />} />
         <Route path="/services/ai-consulting" element={<AIConsulting />} />
