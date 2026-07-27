@@ -12,11 +12,11 @@ const SCHEMA = {
   headline:
     'IES to HQDM: an open 4D ontology crosswalk for defence data | Tesseract Academy',
   description:
-    'The first public crosswalk between the UK Information Exchange Standard (IES) and the Higher Quality Data Model (HQDM), two 4D upper ontologies. Open dataset, curated divergences, SHACL validation, and a worked SAPIENT-node safety case grounded in IES.',
+    'The first public crosswalk between the UK Information Exchange Standard (IES) and the Higher Quality Data Model (HQDM), two 4D upper ontologies. Open dataset, curated divergences, SHACL validation, and a reasoner-certified logical bridge: the crosswalk promoted to OWL and checked with the HermiT reasoner, which shows published HQDM is natively incoherent and yields a certified bridge with zero new logical errors.',
   author: { '@id': 'https://gov.tesseract.academy/#organization' },
   publisher: { '@id': 'https://gov.tesseract.academy/#organization' },
   datePublished: '2026-07-01',
-  dateModified: '2026-07-01',
+  dateModified: '2026-07-27',
   about: {
     '@type': 'Dataset',
     name: 'IES to HQDM crosswalk',
@@ -24,7 +24,7 @@ const SCHEMA = {
     license: 'https://creativecommons.org/licenses/by/4.0/',
   },
   keywords:
-    'IES, HQDM, ontology alignment, crosswalk, 4D ontology, BORO, defence data, interoperability, autonomy assurance, SAPIENT, SHACL, SSSOM',
+    'IES, HQDM, BFO, ontology alignment, crosswalk, 4D ontology, BORO, defence data, interoperability, autonomy assurance, SAPIENT, SHACL, SSSOM, OWL reasoning, HermiT, description logic, unsatisfiable classes, coherence, conservativity',
 };
 
 const DELIVERABLES = [
@@ -32,6 +32,7 @@ const DELIVERABLES = [
   { item: 'Crosswalk (RDF)', detail: 'SKOS mapping triples with PROV-O provenance and reified correspondences.' },
   { item: 'Divergences record', detail: 'The curated pairs that look like they map and do not: the original scholarship.' },
   { item: 'SHACL shapes', detail: 'Validate every correspondence has a subject, object, SKOS predicate, confidence and provenance.' },
+  { item: 'Reasoner-certified bridge', detail: 'The crosswalk promoted to logic and checked with the HermiT reasoner: a 21-axiom bridge with zero new logical errors, plus the finding that published HQDM has 39 self-contradictory classes on its own. Fully reproducible.' },
   { item: 'SAPIENT safety case', detail: 'A worked example grounding one autonomous sensor node in IES-typed world states.' },
   { item: 'Reference pipeline', detail: 'Candidate generation and validation you can run against the live ontologies.' },
 ];
@@ -111,9 +112,9 @@ export const IesHqdmCrosswalk: React.FC = () => {
           <p className="text-sm text-gov-secondary mt-1">IES and HQDM, both 4D</p>
         </div>
         <div className="bg-gov-bg border border-gov-border/50 rounded-xl p-6">
-          <p className="text-xs font-semibold uppercase tracking-wider text-gov-blue mb-1">Verification</p>
-          <p className="text-3xl font-extrabold text-gov-dark">17 / 0</p>
-          <p className="text-sm text-gov-secondary mt-1">correspondences resolve; SHACL conforms</p>
+          <p className="text-xs font-semibold uppercase tracking-wider text-gov-blue mb-1">Reasoner-certified</p>
+          <p className="text-3xl font-extrabold text-gov-dark">21 / 0</p>
+          <p className="text-sm text-gov-secondary mt-1">logic-checked bridge axioms; 0 new incoherences</p>
         </div>
       </div>
 
@@ -179,9 +180,38 @@ export const IesHqdmCrosswalk: React.FC = () => {
 
       <section className="space-y-4">
         <div className="border-l-2 border-l-gov-blue pl-6">
+          <h2 className="text-2xl font-bold text-gov-dark font-serif mb-3">From matches to logic: a reasoner-certified bridge</h2>
+          <p className="text-gov-dark leading-relaxed">
+            A crosswalk of soft matches is a starting point. The harder question, and the one that decides whether a machine can safely reason across the two standards, is what happens when each match is read as a strict logical statement rather than a note of resemblance. We tested exactly that: we promoted every correspondence to a formal class equivalence, merged the complete IES and HQDM ontologies, and ran the <a href="http://www.hermit-reasoner.com/" target="_blank" rel="noopener noreferrer" className="text-gov-blue underline hover:text-gov-blue-dark">HermiT</a> logic reasoner over the result. The reasoner is deterministic: the same inputs always give the same, provable answer, with no statistical guesswork.
+          </p>
+          <ul className="mt-4 space-y-3 text-gov-dark leading-relaxed">
+            <li className="flex items-start gap-2">
+              <span className="text-gov-blue font-bold mt-0.5">1.</span>
+              <span><strong>Published HQDM is already incoherent on its own.</strong> Reasoned in isolation, before any mapping is applied, the published HQDM OWL file has <strong>39 classes that can never have a member</strong>. This is a known side effect of rendering an ISO 15926-style model into OWL, and HQDM's own file documents the approximation; it is invisible to the ordinary "is it consistent?" check. IES on its own, and BFO on its own, are clean.</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-gov-blue font-bold mt-0.5">2.</span>
+              <span><strong>Raw equivalences pass the usual check but are quietly broken.</strong> Promoting the matches to hard equalities keeps the merge technically consistent, so the standard check gives a green light, yet around 140 classes become empty and the union starts entailing things neither standard ever stated, for instance that an Entity is a kind of State. Coherence, not consistency, is the property that actually matters, and it is the one that fails silently.</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-gov-blue font-bold mt-0.5">3.</span>
+              <span><strong>The fix is a certified bridge, not a bigger table.</strong> Rather than delete mappings, we let the reasoner decide, pair by pair, how strong each correspondence can safely be. The result is a small <strong>21-axiom bridge with zero new incoherences and zero unintended entailments</strong>: full equivalences where the two 4D models genuinely agree, and one-directional links where they do not, each weakening carrying the reasoner's own counterexample as its justification.</span>
+            </li>
+          </ul>
+          <p className="text-gov-dark leading-relaxed mt-4">
+            The same method settles the harder IES-to-BFO question raised by the emerging US and NATO defence-ontology foundry. The obvious mapping, treating an IES Entity as a BFO material entity, is refuted by BFO's own axioms: a whole-life 4D individual is not a persisting object, it is that object's <em>history</em>, and BFO already ships a class for exactly that. The corrected bridge points there and is certified clean.
+          </p>
+          <p className="text-sm text-gov-secondary/90 leading-relaxed mt-4">
+            Every step is reproducible: the <code className="text-sm bg-gov-bg px-1.5 py-0.5 rounded">reasoning/</code> directory in the repository re-runs the whole analysis in about two minutes, and the result was independently re-checked with the HermiT command-line tool.
+          </p>
+        </div>
+      </section>
+
+      <section className="space-y-4">
+        <div className="border-l-2 border-l-gov-blue pl-6">
           <h2 className="text-2xl font-bold text-gov-dark font-serif mb-3">Outcome</h2>
           <p className="text-gov-dark leading-relaxed">
-            An open, machine-readable crosswalk released under CC-BY-4.0, built on Tesseract's <a href="https://github.com/fabio-rovai/open-ontologies" target="_blank" rel="noopener noreferrer" className="text-gov-blue underline hover:text-gov-blue-dark">open-ontologies</a> alignment engine and validated against the live published ontologies: every one of the 17 correspondences resolves, and the SHACL shapes conform. It ships with a worked safety case showing how one SAPIENT (BSI Flex 335) autonomous sensor node can have its behaviour grounded in IES-typed world states, connecting our <a href="https://arxiv.org/abs/2605.09168" target="_blank" rel="noopener noreferrer" className="text-gov-blue underline hover:text-gov-blue-dark">CIVeX</a> agent-verification research to the defence data standard.
+            An open, machine-readable crosswalk released under CC-BY-4.0, built on Tesseract's <a href="https://github.com/fabio-rovai/open-ontologies" target="_blank" rel="noopener noreferrer" className="text-gov-blue underline hover:text-gov-blue-dark">open-ontologies</a> alignment engine and validated against the live published ontologies: every one of the 17 correspondences resolves, the SHACL shapes conform, and, promoted to logic, the mappings are certified with the HermiT reasoner into a 21-axiom bridge that introduces no new logical errors. It ships with a worked safety case showing how one SAPIENT (BSI Flex 335) autonomous sensor node can have its behaviour grounded in IES-typed world states, connecting our <a href="https://arxiv.org/abs/2605.09168" target="_blank" rel="noopener noreferrer" className="text-gov-blue underline hover:text-gov-blue-dark">CIVeX</a> agent-verification research to the defence data standard.
           </p>
           <ul className="mt-4 space-y-2 text-gov-dark leading-relaxed">
             <li className="flex items-start gap-2">
@@ -221,7 +251,7 @@ export const IesHqdmCrosswalk: React.FC = () => {
         <div>
           <p className="font-semibold text-gov-dark">View the open crosswalk</p>
           <p className="text-sm text-gov-secondary mt-1">
-            SSSOM and RDF correspondences, the divergences record, SHACL shapes, and the SAPIENT safety case.
+            SSSOM and RDF correspondences, the divergences record, SHACL shapes, the reasoner-certified bridge, and the SAPIENT safety case.
           </p>
         </div>
         <a
