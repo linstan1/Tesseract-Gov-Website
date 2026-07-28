@@ -24,6 +24,8 @@ const AesHeritage = lazy(() => import('./pages/research/AesHeritage').then(m => 
 const ConnectiveProductCyberIncidents = lazy(() => import('./pages/research/ConnectiveProductCyberIncidents').then(m => ({ default: m.ConnectiveProductCyberIncidents })));
 const FairScientificData = lazy(() => import('./pages/research/FairScientificData').then(m => ({ default: m.FairScientificData })));
 const IesHqdmCrosswalk = lazy(() => import('./pages/research/IesHqdmCrosswalk').then(m => ({ default: m.IesHqdmCrosswalk })));
+const IndustrialOntologyCrosswalks = lazy(() => import('./pages/research/IndustrialOntologyCrosswalks').then(m => ({ default: m.IndustrialOntologyCrosswalks })));
+const SpaceMetricsCrosswalk = lazy(() => import('./pages/research/SpaceMetricsCrosswalk').then(m => ({ default: m.SpaceMetricsCrosswalk })));
 const Ies4TurtleLanguageModel = lazy(() => import('./pages/research/Ies4TurtleLanguageModel').then(m => ({ default: m.Ies4TurtleLanguageModel })));
 const OntologyCorrectnessBench = lazy(() => import('./pages/research/OntologyCorrectnessBench').then(m => ({ default: m.OntologyCorrectnessBench })));
 const ShaclShapesNotVocabulary = lazy(() => import('./pages/research/ShaclShapesNotVocabulary').then(m => ({ default: m.ShaclShapesNotVocabulary })));
@@ -142,6 +144,14 @@ const PAGE_META: Record<string, { title: string; description: string }> = {
   '/research/ies-hqdm-defence-interoperability': {
     title: 'IES to HQDM: an open 4D ontology crosswalk for defence data | Tesseract Academy for the Public Sector',
     description: 'The first public crosswalk between the UK Information Exchange Standard (IES) and HQDM, two 4D upper ontologies. Open SSSOM and RDF correspondences, a curated divergences record, SHACL validation, and a worked SAPIENT-node safety case grounding autonomy in IES-typed world states. Supports the Defence Investment Plan interoperability and autonomy-assurance agenda.',
+  },
+  '/research/space-metrics-crosswalk': {
+    title: 'Space debris metrics that cannot be added up: an open composition checker | Tesseract Academy for the Public Sector',
+    description: 'The two premier orbital debris engineering models disagree by a factor of 2.3 to 3.0 at the 1 cm collision-risk threshold, and by almost two orders of magnitude in the sub-millimetre regime, because they partition the same physical population along orthogonal axes: MASTER-8 by generative source, ORDEM 3.1 by material density. Every indicator built on either model silently inherits that partition and never declares it. An open, MIT-licensed composition checker built on QUDT, SOSA/SSN and PROV-O that refuses invalid combinations with a reason and states what may be done instead.',
+  },
+  '/research/industrial-ontology-crosswalks': {
+    title: 'Why industrial data crosswalks fail, measured across seven standards | Tesseract Academy for the Public Sector',
+    description: 'Open crosswalks between four pairs of industrial data standards (ISO 15926-14, IFC4, ISA-95, CFIHOS, OPC UA, SAREF, Asset Administration Shell) plus the measurement that explains why they fail. Four of the seven cannot reject any mis-mapping at all, so the usual reasoner check could never have failed. IFC4 has 163 times more disjointness axioms than ISO 15926-14 and is 6.6 times less checkable. Every correspondence passes validation alone while the set collapses 29 classes together.',
   },
   '/research/ies4-turtle-language-model': {
     title: 'An open language model for IES4 data | Tesseract Academy for the Public Sector',
@@ -385,6 +395,8 @@ const App: React.FC = () => {
               <Route path="/research/connective-product-cyber-incidents" element={<ConnectiveProductCyberIncidents />} />
               <Route path="/research/fair-scientific-data" element={<FairScientificData />} />
               <Route path="/research/ies-hqdm-defence-interoperability" element={<IesHqdmCrosswalk />} />
+              <Route path="/research/industrial-ontology-crosswalks" element={<IndustrialOntologyCrosswalks />} />
+              <Route path="/research/space-metrics-crosswalk" element={<SpaceMetricsCrosswalk />} />
               <Route path="/research/ies4-turtle-language-model" element={<Ies4TurtleLanguageModel />} />
               <Route path="/research/ontology-correctness-benchmark" element={<OntologyCorrectnessBench />} />
               <Route path="/research/shacl-shapes-not-vocabulary" element={<ShaclShapesNotVocabulary />} />

@@ -31,6 +31,8 @@ import { AesHeritage } from './pages/research/AesHeritage';
 import { ConnectiveProductCyberIncidents } from './pages/research/ConnectiveProductCyberIncidents';
 import { FairScientificData } from './pages/research/FairScientificData';
 import { IesHqdmCrosswalk } from './pages/research/IesHqdmCrosswalk';
+import { IndustrialOntologyCrosswalks } from './pages/research/IndustrialOntologyCrosswalks';
+import { SpaceMetricsCrosswalk } from './pages/research/SpaceMetricsCrosswalk';
 import { Ies4TurtleLanguageModel } from './pages/research/Ies4TurtleLanguageModel';
 import { OntologyCorrectnessBench } from './pages/research/OntologyCorrectnessBench';
 import { ShaclShapesNotVocabulary } from './pages/research/ShaclShapesNotVocabulary';
@@ -100,6 +102,8 @@ const SSRApp: React.FC = () => (
         <Route path="/research/connective-product-cyber-incidents" element={<ConnectiveProductCyberIncidents />} />
         <Route path="/research/fair-scientific-data" element={<FairScientificData />} />
         <Route path="/research/ies-hqdm-defence-interoperability" element={<IesHqdmCrosswalk />} />
+        <Route path="/research/industrial-ontology-crosswalks" element={<IndustrialOntologyCrosswalks />} />
+        <Route path="/research/space-metrics-crosswalk" element={<SpaceMetricsCrosswalk />} />
         <Route path="/research/ies4-turtle-language-model" element={<Ies4TurtleLanguageModel />} />
         <Route path="/research/ontology-correctness-benchmark" element={<OntologyCorrectnessBench />} />
         <Route path="/research/shacl-shapes-not-vocabulary" element={<ShaclShapesNotVocabulary />} />
