@@ -62,8 +62,8 @@ const TONE: Record<string, string> = {
 };
 
 const DELIVERABLES = [
-  { item: 'Four crosswalks', detail: 'ISO 15926-14 to IFC4, ISA-95 to Asset Administration Shell, CFIHOS to ISO 15926-14, and SAREF4INMA to OPC UA. SSSOM correspondences with predicate, confidence, justification and provenance.' },
-  { item: 'Asserted non-mappings', detail: 'The pairs that look alignable and are not, published as machine-readable denials rather than left as silent omissions. Seventeen across the two mapped pairs.' },
+  { item: 'Four crosswalks', detail: 'ISO 15926-14 to IFC4, ISA-95 to the Asset Administration Shell, CFIHOS to IFC4, and SAREF4INMA to OPC UA. 51 SSSOM correspondences in total, each carrying predicate, confidence, justification and provenance. Every one of the 120 distinct identifiers used is checked to exist in the source it claims to come from.' },
+  { item: 'Asserted non-mappings', detail: 'The pairs that look alignable and are not, plus the concepts with no counterpart at all, published as machine-readable denials rather than left as silent omissions. 31 across the four pairs, and on two of them the denials outnumber the mappings. That imbalance is the result, not a gap in the work.' },
   { item: 'Axiomatic Strength Index', detail: 'A reproducible count, per standard, of the axioms actually capable of producing a contradiction.' },
   { item: 'Falsifiability rate', detail: 'The fraction of possible mis-groundings a vocabulary can reject. The metric that decides whether any automated check of an alignment can work at all.' },
   { item: 'Documented schema lifts', detail: 'ISA-95 ships XML Schemas and OPC UA ships an address-space NodeSet, so both need transforming before alignment. The transformations are first-class artefacts that count and report what they discard.' },
@@ -130,9 +130,9 @@ export const IndustrialOntologyCrosswalks: React.FC = () => (
 
     <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
       <div className="bg-gov-bg border border-gov-border/50 rounded-xl p-6">
-        <p className="text-xs font-semibold uppercase tracking-wider text-gov-blue mb-1">Standards measured</p>
-        <p className="text-3xl font-extrabold text-gov-dark">7</p>
-        <p className="text-sm text-gov-secondary mt-1">across four crosswalk pairs</p>
+        <p className="text-xs font-semibold uppercase tracking-wider text-gov-blue mb-1">Correspondences</p>
+        <p className="text-3xl font-extrabold text-gov-dark">51 + 31</p>
+        <p className="text-sm text-gov-secondary mt-1">mappings plus asserted non-mappings, across 7 standards</p>
       </div>
       <div className="bg-gov-bg border border-gov-border/50 rounded-xl p-6">
         <p className="text-xs font-semibold uppercase tracking-wider text-gov-blue mb-1">Cannot be contradicted</p>
