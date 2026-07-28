@@ -3,6 +3,14 @@ import { Link } from 'react-router-dom';
 import { ArrowLeft, ExternalLink } from 'lucide-react';
 
 const REPO = 'https://github.com/fabio-rovai/industrial-ontology-crosswalks';
+const COURSE = 'https://tesseract.academy/courses/running-open-ontologies-build-validate-and-certify-a-standards-crosswalk/';
+
+const CURRICULUM = [
+  { n: '1 to 4', title: 'Foundations', detail: 'The handover problem and why it is semantic, not a file-format issue. What a crosswalk is: SSSOM, the five SKOS mapping predicates, and why every correspondence needs reified provenance. Fetching standards by IRI with a checksum lockfile. Reading an unfamiliar ontology by its disjointness rather than its labels.' },
+  { n: '5 to 7', title: 'Measuring a standard', detail: 'The Axiomatic Strength Index: counting the axioms that can actually produce a contradiction. Refutation-inert ontologies and why a clean reasoner report against them proves nothing. The falsifiability rate, and why axiom placement beats axiom count.' },
+  { n: '8 to 12', title: 'Building the crosswalk', detail: 'Lifting standards that ship schemas rather than ontologies, and what you must refuse to lift. Candidate generation once lexical matching has failed. Authoring correspondences, confidence and asserted non-mappings. A field guide to false friends. SHACL shapes that reject a lazy crosswalk.' },
+  { n: '13 to 15', title: 'Proving it holds', detail: 'Consistency is not coherence: what happens when SKOS becomes OWL. The emergent-failure result and why per-mapping review cannot work. Orientation search: certifying a bridge and knowing when to drop a mapping.' },
+];
 
 const SCHEMA = {
   '@context': 'https://schema.org',
@@ -23,6 +31,16 @@ const SCHEMA = {
     url: REPO,
     license: 'https://creativecommons.org/licenses/by/4.0/',
   },
+  citation: [
+    {
+      '@type': 'Course',
+      name: 'Running Open Ontologies: Build, Validate and Certify a Standards Crosswalk',
+      url: 'https://tesseract.academy/courses/running-open-ontologies-build-validate-and-certify-a-standards-crosswalk/',
+      description:
+        'Free 15-lesson course teaching the method used to produce these crosswalks: SSSOM authoring, schema lifts, SHACL validation, OWL promotion and reasoner certification.',
+      provider: { '@id': 'https://gov.tesseract.academy/#organization' },
+    },
+  ],
   keywords:
     'ISO 15926, IFC, ISA-95, IEC 62264, CFIHOS, OPC UA, SAREF, Asset Administration Shell, ontology alignment, crosswalk, SSSOM, SHACL, OWL reasoning, HermiT, coherence, conservativity, falsifiability, industrial data, capital facilities handover, digital twin',
 };
@@ -248,6 +266,43 @@ export const IndustrialOntologyCrosswalks: React.FC = () => (
       </div>
     </section>
 
+    <section className="space-y-6">
+      <div className="border-l-2 border-l-gov-blue pl-6">
+        <h2 className="text-2xl font-bold text-gov-dark font-serif mb-3">Learn the method: free 15-lesson course</h2>
+        <p className="text-gov-dark leading-relaxed">
+          The whole method above is taught as a free course on the Tesseract Academy platform, worked end to end on the same standards and the same measurements. Every figure quoted in the lessons is one produced by the repository, so the course and the crosswalks check each other. Fifteen lessons, each with a structural diagram and a graded quiz.
+        </p>
+      </div>
+      <div className="overflow-x-auto">
+        <table className="w-full text-sm border-collapse">
+          <thead>
+            <tr className="bg-gov-bg border-b border-gov-border">
+              <th className="text-left px-4 py-3 font-semibold text-gov-dark">Lessons</th>
+              <th className="text-left px-4 py-3 font-semibold text-gov-dark">Module</th>
+              <th className="text-left px-4 py-3 font-semibold text-gov-dark">What it covers</th>
+            </tr>
+          </thead>
+          <tbody>
+            {CURRICULUM.map((c, i) => (
+              <tr key={c.n} className={`border-b border-gov-border/50 ${i % 2 === 0 ? 'bg-white' : 'bg-gov-bg/40'}`}>
+                <td className="px-4 py-3 font-medium text-gov-dark whitespace-nowrap">{c.n}</td>
+                <td className="px-4 py-3 font-medium text-gov-dark whitespace-nowrap">{c.title}</td>
+                <td className="px-4 py-3 text-gov-secondary">{c.detail}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <a
+        href={COURSE}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-flex items-center gap-2 bg-gov-blue text-white px-5 py-3 rounded-lg font-semibold hover:bg-gov-blue-dark transition-colors"
+      >
+        Take the course: Running Open Ontologies <ExternalLink className="w-4 h-4" />
+      </a>
+    </section>
+
     <section className="space-y-4">
       <h2 className="text-2xl font-bold text-gov-dark font-serif">Open, and reproducible</h2>
       <p className="text-gov-dark leading-relaxed">
@@ -257,7 +312,7 @@ export const IndustrialOntologyCrosswalks: React.FC = () => (
         industrial-ontology-crosswalks on GitHub <ExternalLink className="w-4 h-4" />
       </a>
       <p className="text-sm text-gov-secondary/90 leading-relaxed">
-        Released CC BY 4.0. The CFIHOS audit examines a third-party ontology by Abad-Navarro, Fernandez-Breis and Garcia-Castro at Universidad de Murcia, and is offered as an independent measurement rather than a competing alignment. Related work: the <Link to="/research/ies-hqdm-defence-interoperability" className="text-gov-blue underline hover:text-gov-blue-dark">IES to HQDM crosswalk</Link> applies the same reasoner-certification method to defence data.
+        Released CC BY 4.0. The CFIHOS audit examines a third-party ontology by Abad-Navarro, Fernandez-Breis and Garcia-Castro at Universidad de Murcia, and is offered as an independent measurement rather than a competing alignment. Related work: the <Link to="/research/ies-hqdm-defence-interoperability" className="text-gov-blue underline hover:text-gov-blue-dark">IES to HQDM crosswalk</Link> applies the same reasoner-certification method to defence data, and the method itself is taught in the free <a href={COURSE} target="_blank" rel="noopener noreferrer" className="text-gov-blue underline hover:text-gov-blue-dark">Running Open Ontologies</a> course.
       </p>
     </section>
   </article>
