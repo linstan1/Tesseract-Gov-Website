@@ -100,6 +100,10 @@ const PAGE_META = {
     title: 'Space debris metrics that cannot be added up: an open composition checker | Tesseract Academy for the Public Sector',
     description: 'The two premier orbital debris engineering models disagree by a factor of 2.3 to 3.0 at the 1 cm collision-risk threshold, and by almost two orders of magnitude in the sub-millimetre regime, because they partition the same physical population along orthogonal axes: MASTER-8 by generative source, ORDEM 3.1 by material density. Every indicator built on either model silently inherits that partition and never declares it. An open, MIT-licensed composition checker built on QUDT, SOSA/SSN and PROV-O that refuses invalid combinations with a reason and states what may be done instead.',
   },
+  '/research/construction-standards-crosswalks': {
+    title: 'Construction data standards cannot check your AI: IFC, COBie, Uniclass and BOT measured | Tesseract Academy for the Public Sector',
+    description: 'Open crosswalks between the standards a building passes through (IFC4, COBie/BS 1192-4, Uniclass 2015, W3C BOT): 49 correspondences and 7 asserted non-mappings, all 96 identifiers machine-verified, every row argued. The classification layer of construction is 0% falsifiable, so no wrong AI mapping into COBie or Uniclass can ever be machine-rejected. BOT reaches 80.95% checkability from 9 axioms; IFC4 reaches 11.45% from 2,443. Axiom placement beats axiom count, measured on a second domain.',
+  },
   '/research/industrial-ontology-crosswalks': {
     title: 'Why industrial data crosswalks fail, measured across seven standards | Tesseract Academy for the Public Sector',
     description: 'Open crosswalks between four pairs of industrial data standards (ISO 15926-14, IFC4, ISA-95, CFIHOS, OPC UA, SAREF, Asset Administration Shell) plus the measurement that explains why they fail. Four of the seven cannot reject any mis-mapping at all, so the usual reasoner check could never have failed. IFC4 has 163 times more disjointness axioms than ISO 15926-14 and is 6.6 times less checkable. Every correspondence passes validation alone while the set collapses 29 classes together.',

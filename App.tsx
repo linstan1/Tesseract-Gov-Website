@@ -25,6 +25,7 @@ const ConnectiveProductCyberIncidents = lazy(() => import('./pages/research/Conn
 const FairScientificData = lazy(() => import('./pages/research/FairScientificData').then(m => ({ default: m.FairScientificData })));
 const IesHqdmCrosswalk = lazy(() => import('./pages/research/IesHqdmCrosswalk').then(m => ({ default: m.IesHqdmCrosswalk })));
 const IndustrialOntologyCrosswalks = lazy(() => import('./pages/research/IndustrialOntologyCrosswalks').then(m => ({ default: m.IndustrialOntologyCrosswalks })));
+const ConstructionStandardsCrosswalks = lazy(() => import('./pages/research/ConstructionStandardsCrosswalks').then(m => ({ default: m.ConstructionStandardsCrosswalks })));
 const SpaceMetricsCrosswalk = lazy(() => import('./pages/research/SpaceMetricsCrosswalk').then(m => ({ default: m.SpaceMetricsCrosswalk })));
 const Ies4TurtleLanguageModel = lazy(() => import('./pages/research/Ies4TurtleLanguageModel').then(m => ({ default: m.Ies4TurtleLanguageModel })));
 const OntologyCorrectnessBench = lazy(() => import('./pages/research/OntologyCorrectnessBench').then(m => ({ default: m.OntologyCorrectnessBench })));
@@ -148,6 +149,10 @@ const PAGE_META: Record<string, { title: string; description: string }> = {
   '/research/space-metrics-crosswalk': {
     title: 'Space debris metrics that cannot be added up: an open composition checker | Tesseract Academy for the Public Sector',
     description: 'The two premier orbital debris engineering models disagree by a factor of 2.3 to 3.0 at the 1 cm collision-risk threshold, and by almost two orders of magnitude in the sub-millimetre regime, because they partition the same physical population along orthogonal axes: MASTER-8 by generative source, ORDEM 3.1 by material density. Every indicator built on either model silently inherits that partition and never declares it. An open, MIT-licensed composition checker built on QUDT, SOSA/SSN and PROV-O that refuses invalid combinations with a reason and states what may be done instead.',
+  },
+  '/research/construction-standards-crosswalks': {
+    title: 'Construction data standards cannot check your AI: IFC, COBie, Uniclass and BOT measured | Tesseract Academy for the Public Sector',
+    description: 'Open crosswalks between the standards a building passes through (IFC4, COBie/BS 1192-4, Uniclass 2015, W3C BOT): 49 correspondences and 7 asserted non-mappings, all 96 identifiers machine-verified, every row argued. The classification layer of construction is 0% falsifiable, so no wrong AI mapping into COBie or Uniclass can ever be machine-rejected. BOT reaches 80.95% checkability from 9 axioms; IFC4 reaches 11.45% from 2,443. Axiom placement beats axiom count, measured on a second domain.',
   },
   '/research/industrial-ontology-crosswalks': {
     title: 'Why industrial data crosswalks fail, measured across seven standards | Tesseract Academy for the Public Sector',
@@ -396,6 +401,7 @@ const App: React.FC = () => {
               <Route path="/research/fair-scientific-data" element={<FairScientificData />} />
               <Route path="/research/ies-hqdm-defence-interoperability" element={<IesHqdmCrosswalk />} />
               <Route path="/research/industrial-ontology-crosswalks" element={<IndustrialOntologyCrosswalks />} />
+              <Route path="/research/construction-standards-crosswalks" element={<ConstructionStandardsCrosswalks />} />
               <Route path="/research/space-metrics-crosswalk" element={<SpaceMetricsCrosswalk />} />
               <Route path="/research/ies4-turtle-language-model" element={<Ies4TurtleLanguageModel />} />
               <Route path="/research/ontology-correctness-benchmark" element={<OntologyCorrectnessBench />} />

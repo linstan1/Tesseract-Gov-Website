@@ -51,6 +51,15 @@ export const Research: React.FC = () => {
         <h2 className="text-2xl font-bold text-gov-dark mb-8">Selected Publications &amp; Talks</h2>
         <ul className="space-y-8">
            <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
+             <Link to="/research/construction-standards-crosswalks"><h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark hover:underline transition-colors">Construction Data Standards Cannot Check Your AI: IFC, COBie, Uniclass and BOT Measured</h3></Link>
+             <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Open crosswalks and measurement, 2026</p>
+             <p className="text-base text-gov-dark/90 leading-relaxed">AI tools now assign Uniclass codes and fill COBie workbooks automatically, and the target standards assert zero disjointness: measured falsifiability 0.00%, so no wrong mapping into them can ever be machine-rejected. Open, argued crosswalks across IFC4, COBie, Uniclass 2015 and the W3C Building Topology Ontology: 49 correspondences, 7 recorded refusals including the bot:Zone false friend and the framed-structures part-whole trap, all 96 identifiers verified against pinned sources, every Uniclass code confirmed against the live NBS service. BOT reaches 80.95% checkability from 9 axioms; IFC4 reaches 11.45% from 2,443.</p>
+             <div className="mt-3 flex flex-wrap gap-3 items-center">
+               <Link to="/research/construction-standards-crosswalks" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">Read the study</Link>
+               <a href="https://github.com/fabio-rovai/construction-standards-crosswalks" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">crosswalks on GitHub<span className="sr-only"> (opens in new tab)</span></a>
+             </div>
+           </li>
+           <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
              <Link to="/research/ontology-correctness-benchmark"><h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark hover:underline transition-colors">The Open-World Hole: Why SHACL Cannot Catch a Hallucinated Ontology Term</h3></Link>
              <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Open benchmark, 2026</p>
              <p className="text-base text-gov-dark/90 leading-relaxed">SHACL, the default RDF validator, is open-world: it silently passes any ontology term it has no shape for, which is exactly the failure mode of an LLM authoring RDF. Measured on three real vocabularies (schema.org, IES4, and the OBO Foundry's PATO and RO), open-world SHACL validated as conformant every one of 300 data graphs carrying a fabricated term, across 418 fakes. A closed-world vocabulary gate caught all 300 with zero false positives on clean data. The correctness layer for AI-generated knowledge graphs, released reproducible.</p>

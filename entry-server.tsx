@@ -32,6 +32,7 @@ import { ConnectiveProductCyberIncidents } from './pages/research/ConnectiveProd
 import { FairScientificData } from './pages/research/FairScientificData';
 import { IesHqdmCrosswalk } from './pages/research/IesHqdmCrosswalk';
 import { IndustrialOntologyCrosswalks } from './pages/research/IndustrialOntologyCrosswalks';
+import { ConstructionStandardsCrosswalks } from './pages/research/ConstructionStandardsCrosswalks';
 import { SpaceMetricsCrosswalk } from './pages/research/SpaceMetricsCrosswalk';
 import { Ies4TurtleLanguageModel } from './pages/research/Ies4TurtleLanguageModel';
 import { OntologyCorrectnessBench } from './pages/research/OntologyCorrectnessBench';
@@ -103,6 +104,7 @@ const SSRApp: React.FC = () => (
         <Route path="/research/fair-scientific-data" element={<FairScientificData />} />
         <Route path="/research/ies-hqdm-defence-interoperability" element={<IesHqdmCrosswalk />} />
         <Route path="/research/industrial-ontology-crosswalks" element={<IndustrialOntologyCrosswalks />} />
+        <Route path="/research/construction-standards-crosswalks" element={<ConstructionStandardsCrosswalks />} />
         <Route path="/research/space-metrics-crosswalk" element={<SpaceMetricsCrosswalk />} />
         <Route path="/research/ies4-turtle-language-model" element={<Ies4TurtleLanguageModel />} />
         <Route path="/research/ontology-correctness-benchmark" element={<OntologyCorrectnessBench />} />
