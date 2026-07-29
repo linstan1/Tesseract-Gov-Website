@@ -26,6 +26,7 @@ const FairScientificData = lazy(() => import('./pages/research/FairScientificDat
 const IesHqdmCrosswalk = lazy(() => import('./pages/research/IesHqdmCrosswalk').then(m => ({ default: m.IesHqdmCrosswalk })));
 const IndustrialOntologyCrosswalks = lazy(() => import('./pages/research/IndustrialOntologyCrosswalks').then(m => ({ default: m.IndustrialOntologyCrosswalks })));
 const ConstructionStandardsCrosswalks = lazy(() => import('./pages/research/ConstructionStandardsCrosswalks').then(m => ({ default: m.ConstructionStandardsCrosswalks })));
+const NeurosymbolicSpaceKg = lazy(() => import('./pages/research/NeurosymbolicSpaceKg').then(m => ({ default: m.NeurosymbolicSpaceKg })));
 const SpaceMetricsCrosswalk = lazy(() => import('./pages/research/SpaceMetricsCrosswalk').then(m => ({ default: m.SpaceMetricsCrosswalk })));
 const Ies4TurtleLanguageModel = lazy(() => import('./pages/research/Ies4TurtleLanguageModel').then(m => ({ default: m.Ies4TurtleLanguageModel })));
 const OntologyCorrectnessBench = lazy(() => import('./pages/research/OntologyCorrectnessBench').then(m => ({ default: m.OntologyCorrectnessBench })));
@@ -149,6 +150,10 @@ const PAGE_META: Record<string, { title: string; description: string }> = {
   '/research/space-metrics-crosswalk': {
     title: 'Space debris metrics that cannot be added up: an open composition checker | Tesseract Academy for the Public Sector',
     description: 'The two premier orbital debris engineering models disagree by a factor of 2.3 to 3.0 at the 1 cm collision-risk threshold, and by almost two orders of magnitude in the sub-millimetre regime, because they partition the same physical population along orthogonal axes: MASTER-8 by generative source, ORDEM 3.1 by material density. Every indicator built on either model silently inherits that partition and never declares it. An open, MIT-licensed composition checker built on QUDT, SOSA/SSN and PROV-O that refuses invalid combinations with a reason and states what may be done instead.',
+  },
+  '/research/neurosymbolic-space-kg': {
+    title: 'The reasoner is silent in orbit: a knowledge graph of every catalogued space object | Tesseract Academy for the Public Sector',
+    description: 'A public 832,680-triple knowledge graph of all 70,122 catalogued space objects from a pinned CelesTrak SATCAT snapshot, aligned to the Space Situational Awareness Ontology. The ontology declares one disjointness axiom, so 99.4% of its vocabulary can never reject a wrong AI classification; the catalogue refutes plausible mis-mappings with up to 35,411 instance witnesses, and yields a 10,016-object lower bound on the IADC 25-year debris population. Full methodology in a forthcoming paper.',
   },
   '/research/construction-standards-crosswalks': {
     title: 'Construction data standards cannot check your AI: IFC, COBie, Uniclass and BOT measured | Tesseract Academy for the Public Sector',
@@ -402,6 +407,7 @@ const App: React.FC = () => {
               <Route path="/research/ies-hqdm-defence-interoperability" element={<IesHqdmCrosswalk />} />
               <Route path="/research/industrial-ontology-crosswalks" element={<IndustrialOntologyCrosswalks />} />
               <Route path="/research/construction-standards-crosswalks" element={<ConstructionStandardsCrosswalks />} />
+              <Route path="/research/neurosymbolic-space-kg" element={<NeurosymbolicSpaceKg />} />
               <Route path="/research/space-metrics-crosswalk" element={<SpaceMetricsCrosswalk />} />
               <Route path="/research/ies4-turtle-language-model" element={<Ies4TurtleLanguageModel />} />
               <Route path="/research/ontology-correctness-benchmark" element={<OntologyCorrectnessBench />} />

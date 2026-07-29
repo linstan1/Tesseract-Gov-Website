@@ -100,6 +100,10 @@ const PAGE_META = {
     title: 'Space debris metrics that cannot be added up: an open composition checker | Tesseract Academy for the Public Sector',
     description: 'The two premier orbital debris engineering models disagree by a factor of 2.3 to 3.0 at the 1 cm collision-risk threshold, and by almost two orders of magnitude in the sub-millimetre regime, because they partition the same physical population along orthogonal axes: MASTER-8 by generative source, ORDEM 3.1 by material density. Every indicator built on either model silently inherits that partition and never declares it. An open, MIT-licensed composition checker built on QUDT, SOSA/SSN and PROV-O that refuses invalid combinations with a reason and states what may be done instead.',
   },
+  '/research/neurosymbolic-space-kg': {
+    title: 'The reasoner is silent in orbit: a knowledge graph of every catalogued space object | Tesseract Academy for the Public Sector',
+    description: 'A public 832,680-triple knowledge graph of all 70,122 catalogued space objects from a pinned CelesTrak SATCAT snapshot, aligned to the Space Situational Awareness Ontology. The ontology declares one disjointness axiom, so 99.4% of its vocabulary can never reject a wrong AI classification; the catalogue refutes plausible mis-mappings with up to 35,411 instance witnesses, and yields a 10,016-object lower bound on the IADC 25-year debris population. Full methodology in a forthcoming paper.',
+  },
   '/research/construction-standards-crosswalks': {
     title: 'Construction data standards cannot check your AI: IFC, COBie, Uniclass and BOT measured | Tesseract Academy for the Public Sector',
     description: 'Open crosswalks between the standards a building passes through (IFC4, COBie/BS 1192-4, Uniclass 2015, W3C BOT): 49 correspondences and 7 asserted non-mappings, all 96 identifiers machine-verified, every row argued. The classification layer of construction is 0% falsifiable, so no wrong AI mapping into COBie or Uniclass can ever be machine-rejected. BOT reaches 80.95% checkability from 9 axioms; IFC4 reaches 11.45% from 2,443. Axiom placement beats axiom count, measured on a second domain.',
