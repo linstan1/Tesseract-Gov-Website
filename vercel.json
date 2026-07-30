@@ -29,7 +29,12 @@
     { "source": "/case-studies/wrap-food-loss-waste-taxonomy", "destination": "/research/wrap-food-loss-waste-taxonomy", "permanent": true },
     { "source": "/case-studies/agri-environment-heritage-value", "destination": "/research/agri-environment-heritage-value", "permanent": true },
     { "source": "/case-studies/fair-scientific-data", "destination": "/research/fair-scientific-data", "permanent": true },
-    { "source": "/case-studies/ies-hqdm-defence-interoperability", "destination": "/research/ies-hqdm-defence-interoperability", "permanent": true }
+    { "source": "/case-studies/ies-hqdm-defence-interoperability", "destination": "/research/ies-hqdm-defence-interoperability", "permanent": true },
+    { "source": "/research/basis-risk-false-negative", "destination": "/research/parametric-payout-assurance", "permanent": true },
+    { "source": "/research/pre-event-payability", "destination": "/research/parametric-payout-assurance", "permanent": true },
+    { "source": "/research/spatial-basis-disclosure", "destination": "/research/parametric-payout-assurance", "permanent": true },
+    { "source": "/research/verification-burden-paradox", "destination": "/research/parametric-payout-assurance", "permanent": true },
+    { "source": "/research/assurance-provenance-discipline", "destination": "/research/parametric-payout-assurance", "permanent": true }
   ],
   "rewrites": [
     { "source": "/((?!api/|llms\\.txt|llms-full\\.txt|robots\\.txt|sitemap\\.xml|\\.well-known|\\.json).*)", "destination": "/index.html" }
