@@ -2,9 +2,18 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { CaseStudyItem } from '../components/CaseStudyItem';
-import { CASE_STUDIES, CATEGORY_LABELS } from '../data/caseStudies';
+import { ResearchTopicGroup } from '../components/ResearchTopicGroup';
+import { CASE_STUDIES, CATEGORY_LABELS, RESEARCH_TOPICS } from '../data/caseStudies';
+
+const PublicationGroup: React.FC<{ title: string; count: number; children: React.ReactNode }> = ({ title, count, children }) => (
+  <ResearchTopicGroup title={title} count={count}>
+    <ul className="space-y-8 pt-6">{children}</ul>
+  </ResearchTopicGroup>
+);
 
 export const Research: React.FC = () => {
+  const openDemos = CASE_STUDIES.filter(cs => cs.category === 'open-demo');
+
   return (
     <div className="max-w-6xl mx-auto px-6 lg:px-8 py-20 space-y-16">
       <header className="border-b border-gov-border/30 pb-10">
@@ -25,13 +34,23 @@ export const Research: React.FC = () => {
         <div className="border-b border-gov-border/30 pb-4">
           <h2 className="text-3xl font-bold text-gov-dark">{CATEGORY_LABELS['open-demo']}</h2>
           <p className="text-sm text-gov-secondary mt-2 max-w-4xl">
-            Our self-funded research programme: open standards, evidence bases and reference implementations built on public data, published in full for independent verification and reuse. Each project ships with a complete write-up covering challenge, intervention, assurance and reusable assets.
+            Our self-funded research programme: open standards, evidence bases and reference implementations built on public data, published in full for independent verification and reuse. Each project ships with a complete write-up covering challenge, intervention, assurance and reusable assets. Browse by topic below.
           </p>
         </div>
-        <div className="space-y-6">
-          {CASE_STUDIES.filter(cs => cs.category === 'open-demo').map(cs => (
-            <CaseStudyItem key={cs.id} data={cs} />
-          ))}
+        <div className="space-y-4">
+          {RESEARCH_TOPICS.map(topic => {
+            const items = openDemos.filter(cs => cs.topic === topic);
+            if (items.length === 0) return null;
+            return (
+              <ResearchTopicGroup key={topic} title={topic} count={items.length}>
+                <div className="space-y-6 pt-6">
+                  {items.map(cs => (
+                    <CaseStudyItem key={cs.id} data={cs} />
+                  ))}
+                </div>
+              </ResearchTopicGroup>
+            );
+          })}
         </div>
       </section>
 
@@ -47,55 +66,14 @@ export const Research: React.FC = () => {
         </Link>
       </section>
 
-      <section className="bg-gov-bg border border-gov-border/50 p-10 rounded-xl">
-        <h2 className="text-2xl font-bold text-gov-dark mb-8">Selected Publications &amp; Talks</h2>
-        <ul className="space-y-8">
-           <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
-             <Link to="/research/parametric-payout-assurance"><h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark hover:underline transition-colors">Can a Parametric Climate Insurance Product Prove It Paid?</h3></Link>
-             <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Open standard and measurement, 2026</p>
-             <p className="text-base text-gov-dark/90 leading-relaxed">An open vocabulary and twelve machine-checkable rules that audit a parametric climate insurance promise at the three points where it fails: whether the promise is specifiable at all, whether a registered household is payable before a storm, and whether the payout arrived after one. The replay produces a documented false negative from public records. Severe Tropical Storm Nalgae came ashore at 110 km/h, eight short of the 118 km/h that defines a typhoon, and destroyed roughly 67,000 tonnes of mostly rice worth about PHP 1.3 billion. A trigger set at typhoon strength pays nothing for that. Every one of the twelve rules ships with a case built to trip it, and the build report lists what we could not obtain.</p>
-             <div className="mt-3 flex flex-wrap gap-3 items-center">
-               <Link to="/research/parametric-payout-assurance" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">Read the study</Link>
-               <a href="https://github.com/fabio-rovai/payout-assurance-standard" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">repository on GitHub<span className="sr-only"> (opens in new tab)</span></a>
-             </div>
-           </li>
-           <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
-             <Link to="/research/waste-reporting-loss"><h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark hover:underline transition-colors">Half the Detail Dies on the Way to the Return: What UK Waste Reporting Throws Away</h3></Link>
-             <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Open crosswalks, measurement and reporting engine, 2026</p>
-             <p className="text-base text-gov-dark/90 leading-relaxed">AI analytics classify waste at the belt in over a hundred categories and the industry sells that granularity as regulatory reporting. Every UK channel that consumes composition data accepts between 7 and 47 values. Of 5.907 bits of composition detail, the List of Waste retains 53.8%, pEPR 52.1%, RAM 2027 49.5% and Simpler Recycling 38.4%. The crosswalk cannot be a function in either direction: it collapses up to 23 classes onto one value, 7 classes fix no regulatory value at all, and the packaging schemes cannot represent 19 to 22 of them. Of ten operational questions, two are answerable in every channel and four in none, including the aluminium against steel split that sets the pEPR fee and for which the List of Waste offers a single code. Ships a reporting engine that emits returns as intervals rather than point estimates, and a release gate that caught a language-tag defect hiding the most-used municipal code in the upstream ontology.</p>
-             <div className="mt-3 flex flex-wrap gap-3 items-center">
-               <Link to="/research/waste-reporting-loss" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">Read the study</Link>
-               <a href="https://github.com/fabio-rovai/waste-vocab-crosswalk" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">repository on GitHub<span className="sr-only"> (opens in new tab)</span></a>
-             </div>
-           </li>
-           <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
-             <Link to="/research/financial-answer-verification"><h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark hover:underline transition-colors">Provenance Beats Plausibility: Catching Wrong Financial Answers Without a Gold Key</h3></Link>
-             <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Open measurement and benchmark audit, 2026</p>
-             <p className="text-base text-gov-dark/90 leading-relaxed">The failure that matters when a model reads a filing is a confidently wrong number wearing plausible provenance. FinanceBench ships 2,400 model answers carrying human correctness labels, an unused supervision set for verification. A deterministic check that never sees the gold answer recovers 57.4% of labelled errors and lifts served accuracy from 68.8% to 78.0% at 60.5% coverage, with positive recall in all sixteen configurations. Two negative results matter more: the same check against the whole filing recovers 3.6%, because a filing carries a median of 1,270 numbers against 69 on the cited page, and excusing answers reconstructible by arithmetic excuses 98.6% of them while the excused are more often wrong than the rest. The audit also finds evidence page numbers are 0-indexed and that the two shipped gold files disagree on 15 of 51 numeric cases, every one by exactly 100x.</p>
-             <div className="mt-3 flex flex-wrap gap-3 items-center">
-               <Link to="/research/financial-answer-verification" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">Read the study</Link>
-               <a href="https://github.com/fabio-rovai/financebench-verification" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">repository on GitHub<span className="sr-only"> (opens in new tab)</span></a>
-             </div>
-           </li>
-           <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
-             <Link to="/research/neurosymbolic-space-kg"><h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark hover:underline transition-colors">Silence Is Not Assent: What Catches a Wrong AI Classification in Orbit</h3></Link>
-             <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Open knowledge graph and measurement, 2026</p>
-             <p className="text-base text-gov-dark/90 leading-relaxed">A public 833,403-triple knowledge graph of all 70,122 catalogued space objects, aligned to the Space Situational Awareness Ontology. The ontology declares exactly one exclusion axiom, between two coordinate formats, so 351 of its 353 classes can never reject a wrong AI classification. The instance data can: LogMap 4.0 on this pair reports zero repair conflicts while the catalogue refutes nine of its candidates, catches a category error in its final output and rescues one it wrongly discarded. The threshold sweep also caught a circular measurement in our own earlier version, which is reported rather than buried. Includes the first openly published language model for a space ontology: hallucinated ontology terms fall from 13.81 to 0.06 per output.</p>
-             <div className="mt-3 flex flex-wrap gap-3 items-center">
-               <Link to="/research/neurosymbolic-space-kg" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">Read the study</Link>
-               <a href="https://github.com/fabio-rovai/neurosymbolic-space-kg" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">repository on GitHub<span className="sr-only"> (opens in new tab)</span></a>
-               <a href="https://huggingface.co/fabsssss/qwen3-coder-30b-a3b-space" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">model on Hugging Face<span className="sr-only"> (opens in new tab)</span></a>
-             </div>
-           </li>
-           <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
-             <Link to="/research/construction-standards-crosswalks"><h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark hover:underline transition-colors">Construction Data Standards Cannot Check Your AI: IFC, COBie, Uniclass and BOT Measured</h3></Link>
-             <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Open crosswalks and measurement, 2026</p>
-             <p className="text-base text-gov-dark/90 leading-relaxed">AI tools now assign Uniclass codes and fill COBie workbooks automatically, and the target standards assert zero disjointness: measured falsifiability 0.00%, so no wrong mapping into them can ever be machine-rejected. Open, argued crosswalks across IFC4, COBie, Uniclass 2015 and the W3C Building Topology Ontology: 49 correspondences, 7 recorded refusals including the bot:Zone false friend and the framed-structures part-whole trap, all 96 identifiers verified against pinned sources, every Uniclass code confirmed against the live NBS service. BOT reaches 80.95% checkability from 9 axioms; IFC4 reaches 11.45% from 2,443.</p>
-             <div className="mt-3 flex flex-wrap gap-3 items-center">
-               <Link to="/research/construction-standards-crosswalks" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">Read the study</Link>
-               <a href="https://github.com/fabio-rovai/construction-standards-crosswalks" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">crosswalks on GitHub<span className="sr-only"> (opens in new tab)</span></a>
-             </div>
-           </li>
+      <section className="bg-gov-bg border border-gov-border/50 p-6 sm:p-10 rounded-xl">
+        <div className="mb-8">
+          <h2 className="text-2xl font-bold text-gov-dark mb-2">Selected Publications &amp; Talks</h2>
+          <p className="text-sm text-gov-secondary max-w-4xl">Grouped by topic. Open a group to see the studies, papers and talks inside it.</p>
+        </div>
+        <div className="space-y-4">
+
+        <PublicationGroup title="AI verification & safety" count={6}>
            <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
              <Link to="/research/ontology-correctness-benchmark"><h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark hover:underline transition-colors">The Open-World Hole: Why SHACL Cannot Catch a Hallucinated Ontology Term</h3></Link>
              <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Open benchmark, 2026</p>
@@ -103,15 +81,6 @@ export const Research: React.FC = () => {
              <div className="mt-3 flex flex-wrap gap-3 items-center">
                <Link to="/research/ontology-correctness-benchmark" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">Read the study</Link>
                <a href="https://github.com/fabio-rovai/open-ontologies" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">open-ontologies engine<span className="sr-only"> (opens in new tab)</span></a>
-             </div>
-           </li>
-           <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
-             <Link to="/research/ontology-grounded-biomedical-kg"><h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark hover:underline transition-colors">Grounded, Not Retrieved: An Ontology-Validated Biomedical Knowledge Graph</h3></Link>
-             <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Open case study, 2026</p>
-             <p className="text-base text-gov-dark/90 leading-relaxed">A gene-disease knowledge graph built from 40 real Open Targets associations, every edge typed with the Biolink Model and checked by a closed-world vocabulary gate before it enters the graph. The grounded graph has zero SHACL and zero vocabulary violations across 284 triples; an ungrounded twin with one fabricated Biolink predicate passes SHACL but is caught by the gate. Ships with a provenance-carrying hypothesis triage and a one-click reproduction.</p>
-             <div className="mt-3 flex flex-wrap gap-3 items-center">
-               <Link to="/research/ontology-grounded-biomedical-kg" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">Read the study</Link>
-               <a href="https://github.com/fabio-rovai/open-ontologies/tree/main/case-studies/bio-kg-triage" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">Code and reproduction<span className="sr-only"> (opens in new tab)</span></a>
              </div>
            </li>
            <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
@@ -151,6 +120,43 @@ export const Research: React.FC = () => {
              </div>
            </li>
            <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
+             <h3 className="font-semibold text-lg text-gov-dark mb-2">Proving the Utility of Large Language Models in Cybersecurity Simulations</h3>
+             <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Collaboration with The Alan Turing Institute, 2025</p>
+             <p className="text-base text-gov-dark/90 leading-relaxed">Research paper exploring how Large Language Models can bolster cybersecurity simulations by automating the creation of synthetic environments and identifying latent vulnerabilities. Co-authored with researchers from The Alan Turing Institute.</p>
+             <a href="/papers/alan-turing-ontology-paper.pdf" target="_blank" rel="noopener noreferrer" className="inline-block mt-3 text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">Read the paper (PDF)<span className="sr-only"> (opens in new tab)</span></a>
+           </li>
+        </PublicationGroup>
+
+        <PublicationGroup title="Knowledge graphs & ontologies" count={4}>
+           <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
+             <Link to="/research/neurosymbolic-space-kg"><h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark hover:underline transition-colors">Silence Is Not Assent: What Catches a Wrong AI Classification in Orbit</h3></Link>
+             <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Open knowledge graph and measurement, 2026</p>
+             <p className="text-base text-gov-dark/90 leading-relaxed">A public 833,403-triple knowledge graph of all 70,122 catalogued space objects, aligned to the Space Situational Awareness Ontology. The ontology declares exactly one exclusion axiom, between two coordinate formats, so 351 of its 353 classes can never reject a wrong AI classification. The instance data can: LogMap 4.0 on this pair reports zero repair conflicts while the catalogue refutes nine of its candidates, catches a category error in its final output and rescues one it wrongly discarded. The threshold sweep also caught a circular measurement in our own earlier version, which is reported rather than buried. Includes the first openly published language model for a space ontology: hallucinated ontology terms fall from 13.81 to 0.06 per output.</p>
+             <div className="mt-3 flex flex-wrap gap-3 items-center">
+               <Link to="/research/neurosymbolic-space-kg" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">Read the study</Link>
+               <a href="https://github.com/fabio-rovai/neurosymbolic-space-kg" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">repository on GitHub<span className="sr-only"> (opens in new tab)</span></a>
+               <a href="https://huggingface.co/fabsssss/qwen3-coder-30b-a3b-space" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">model on Hugging Face<span className="sr-only"> (opens in new tab)</span></a>
+             </div>
+           </li>
+           <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
+             <Link to="/research/ontology-grounded-biomedical-kg"><h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark hover:underline transition-colors">Grounded, Not Retrieved: An Ontology-Validated Biomedical Knowledge Graph</h3></Link>
+             <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Open case study, 2026</p>
+             <p className="text-base text-gov-dark/90 leading-relaxed">A gene-disease knowledge graph built from 40 real Open Targets associations, every edge typed with the Biolink Model and checked by a closed-world vocabulary gate before it enters the graph. The grounded graph has zero SHACL and zero vocabulary violations across 284 triples; an ungrounded twin with one fabricated Biolink predicate passes SHACL but is caught by the gate. Ships with a provenance-carrying hypothesis triage and a one-click reproduction.</p>
+             <div className="mt-3 flex flex-wrap gap-3 items-center">
+               <Link to="/research/ontology-grounded-biomedical-kg" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">Read the study</Link>
+               <a href="https://github.com/fabio-rovai/open-ontologies/tree/main/case-studies/bio-kg-triage" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">Code and reproduction<span className="sr-only"> (opens in new tab)</span></a>
+             </div>
+           </li>
+           <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
+             <Link to="/research/construction-standards-crosswalks"><h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark hover:underline transition-colors">Construction Data Standards Cannot Check Your AI: IFC, COBie, Uniclass and BOT Measured</h3></Link>
+             <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Open crosswalks and measurement, 2026</p>
+             <p className="text-base text-gov-dark/90 leading-relaxed">AI tools now assign Uniclass codes and fill COBie workbooks automatically, and the target standards assert zero disjointness: measured falsifiability 0.00%, so no wrong mapping into them can ever be machine-rejected. Open, argued crosswalks across IFC4, COBie, Uniclass 2015 and the W3C Building Topology Ontology: 49 correspondences, 7 recorded refusals including the bot:Zone false friend and the framed-structures part-whole trap, all 96 identifiers verified against pinned sources, every Uniclass code confirmed against the live NBS service. BOT reaches 80.95% checkability from 9 axioms; IFC4 reaches 11.45% from 2,443.</p>
+             <div className="mt-3 flex flex-wrap gap-3 items-center">
+               <Link to="/research/construction-standards-crosswalks" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">Read the study</Link>
+               <a href="https://github.com/fabio-rovai/construction-standards-crosswalks" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">crosswalks on GitHub<span className="sr-only"> (opens in new tab)</span></a>
+             </div>
+           </li>
+           <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
              <a href="https://huggingface.co/datasets/fabsssss/semantic-web-counterfactual-census" target="_blank" rel="noopener noreferrer"><h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark hover:underline transition-colors">Is the Semantic Web Counterfactual-Ready? A Tractability Census of Public Ontologies<span className="sr-only"> (opens in new tab)</span></h3></a>
              <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Open dataset and preprint (forthcoming), 2026</p>
              <p className="text-base text-gov-dark/90 leading-relaxed">The first tractability map of the public semantic web. A compiler certifies whether each of 528 public ontologies can, as written, support a counterfactual ("what if") query. The finding: 56% declare no constraints and are counterfactual-blind, including both of the UK's 4D data standards, IES4 and HQDM, alongside schema.org, CIDOC-CRM, SAREF and GS1. On the 233 that can, a certified counterfactual is computed for each (median 0.19 ms), confirming that the cost is governed by ontology structure, not by the degree-based hardness that would suggest infeasibility. Open, reproducible, and released with a "counterfactual-ready standards" proposal.</p>
@@ -158,6 +164,52 @@ export const Research: React.FC = () => {
                <a href="https://huggingface.co/datasets/fabsssss/semantic-web-counterfactual-census" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">Census and atlas dataset<span className="sr-only"> (opens in new tab)</span></a>
              </div>
            </li>
+        </PublicationGroup>
+
+        <PublicationGroup title="Climate, environment & waste" count={2}>
+           <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
+             <Link to="/research/parametric-payout-assurance"><h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark hover:underline transition-colors">Can a Parametric Climate Insurance Product Prove It Paid?</h3></Link>
+             <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Open standard and measurement, 2026</p>
+             <p className="text-base text-gov-dark/90 leading-relaxed">An open vocabulary and twelve machine-checkable rules that audit a parametric climate insurance promise at the three points where it fails: whether the promise is specifiable at all, whether a registered household is payable before a storm, and whether the payout arrived after one. The replay produces a documented false negative from public records. Severe Tropical Storm Nalgae came ashore at 110 km/h, eight short of the 118 km/h that defines a typhoon, and destroyed roughly 67,000 tonnes of mostly rice worth about PHP 1.3 billion. A trigger set at typhoon strength pays nothing for that. Every one of the twelve rules ships with a case built to trip it, and the build report lists what we could not obtain.</p>
+             <div className="mt-3 flex flex-wrap gap-3 items-center">
+               <Link to="/research/parametric-payout-assurance" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">Read the study</Link>
+               <a href="https://github.com/fabio-rovai/payout-assurance-standard" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">repository on GitHub<span className="sr-only"> (opens in new tab)</span></a>
+             </div>
+           </li>
+           <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
+             <Link to="/research/waste-reporting-loss"><h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark hover:underline transition-colors">Half the Detail Dies on the Way to the Return: What UK Waste Reporting Throws Away</h3></Link>
+             <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Open crosswalks, measurement and reporting engine, 2026</p>
+             <p className="text-base text-gov-dark/90 leading-relaxed">AI analytics classify waste at the belt in over a hundred categories and the industry sells that granularity as regulatory reporting. Every UK channel that consumes composition data accepts between 7 and 47 values. Of 5.907 bits of composition detail, the List of Waste retains 53.8%, pEPR 52.1%, RAM 2027 49.5% and Simpler Recycling 38.4%. The crosswalk cannot be a function in either direction: it collapses up to 23 classes onto one value, 7 classes fix no regulatory value at all, and the packaging schemes cannot represent 19 to 22 of them. Of ten operational questions, two are answerable in every channel and four in none, including the aluminium against steel split that sets the pEPR fee and for which the List of Waste offers a single code. Ships a reporting engine that emits returns as intervals rather than point estimates, and a release gate that caught a language-tag defect hiding the most-used municipal code in the upstream ontology.</p>
+             <div className="mt-3 flex flex-wrap gap-3 items-center">
+               <Link to="/research/waste-reporting-loss" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">Read the study</Link>
+               <a href="https://github.com/fabio-rovai/waste-vocab-crosswalk" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">repository on GitHub<span className="sr-only"> (opens in new tab)</span></a>
+             </div>
+           </li>
+        </PublicationGroup>
+
+        <PublicationGroup title="Finance & digital assets" count={3}>
+           <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
+             <Link to="/research/financial-answer-verification"><h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark hover:underline transition-colors">Provenance Beats Plausibility: Catching Wrong Financial Answers Without a Gold Key</h3></Link>
+             <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Open measurement and benchmark audit, 2026</p>
+             <p className="text-base text-gov-dark/90 leading-relaxed">The failure that matters when a model reads a filing is a confidently wrong number wearing plausible provenance. FinanceBench ships 2,400 model answers carrying human correctness labels, an unused supervision set for verification. A deterministic check that never sees the gold answer recovers 57.4% of labelled errors and lifts served accuracy from 68.8% to 78.0% at 60.5% coverage, with positive recall in all sixteen configurations. Two negative results matter more: the same check against the whole filing recovers 3.6%, because a filing carries a median of 1,270 numbers against 69 on the cited page, and excusing answers reconstructible by arithmetic excuses 98.6% of them while the excused are more often wrong than the rest. The audit also finds evidence page numbers are 0-indexed and that the two shipped gold files disagree on 15 of 51 numeric cases, every one by exactly 100x.</p>
+             <div className="mt-3 flex flex-wrap gap-3 items-center">
+               <Link to="/research/financial-answer-verification" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">Read the study</Link>
+               <a href="https://github.com/fabio-rovai/financebench-verification" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">repository on GitHub<span className="sr-only"> (opens in new tab)</span></a>
+             </div>
+           </li>
+           <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
+             <a href="https://thedatascientist.com/fca-stablecoins-and-the-future-of-uk-crypto-regulation/" target="_blank" rel="noopener noreferrer"><h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark hover:underline transition-colors">FCA Consultation: Stablecoins and UK Crypto Regulation<span className="sr-only"> (opens in new tab)</span></h3></a>
+             <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Financial Conduct Authority Regulatory Consultation, 2025</p>
+             <p className="text-base text-gov-dark/90 leading-relaxed">Contributed expert analysis to the FCA's consultation on stablecoin regulation and the future of crypto asset oversight in the UK. Provided evidence-based commentary on regulatory frameworks, consumer protection mechanisms, and systemic risk considerations for digital assets.</p>
+           </li>
+           <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
+             <a href="https://jbba.scholasticahq.com/article/10237-is-blockchain-part-of-the-future-of-art" target="_blank" rel="noopener noreferrer"><h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark hover:underline transition-colors">Is Blockchain Part of the Future of Art?<span className="sr-only"> (opens in new tab)</span></h3></a>
+             <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Journal of the British Blockchain Association (JBBA), Peer-Reviewed</p>
+             <p className="text-base text-gov-dark/90 leading-relaxed">Peer-reviewed research exploring the intersection of distributed ledger technology and the creative industries. Examined provenance tracking, digital ownership, and the implications of blockchain for cultural asset management and intellectual property governance.</p>
+           </li>
+        </PublicationGroup>
+
+        <PublicationGroup title="Government, skills & public policy" count={3}>
            <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
              <a href="https://www.gov.wales/testing-land-valuation-methods" target="_blank" rel="noopener noreferrer"><h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark hover:underline transition-colors">Welsh Government Land Valuation Research Report<span className="sr-only"> (opens in new tab)</span></h3></a>
              <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Commissioned by Welsh Government, 2025–2026</p>
@@ -183,22 +235,9 @@ export const Research: React.FC = () => {
              <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Skills England / UK Government Publication, 2025</p>
              <p className="text-base text-gov-dark/90 leading-relaxed">Tesseract Academy is cited as an AI training provider and consultancy in Skills England's official research into AI skills for the UK workforce. The publication's methodology included stakeholder workshops with 43 organisations, with Tesseract Academy contributing alongside institutions including The Alan Turing Institute and the Surrey AI Centre.</p>
            </li>
-           <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
-             <h3 className="font-semibold text-lg text-gov-dark mb-2">Proving the Utility of Large Language Models in Cybersecurity Simulations</h3>
-             <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Collaboration with The Alan Turing Institute, 2025</p>
-             <p className="text-base text-gov-dark/90 leading-relaxed">Research paper exploring how Large Language Models can bolster cybersecurity simulations by automating the creation of synthetic environments and identifying latent vulnerabilities. Co-authored with researchers from The Alan Turing Institute.</p>
-             <a href="/papers/alan-turing-ontology-paper.pdf" target="_blank" rel="noopener noreferrer" className="inline-block mt-3 text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">Read the paper (PDF)<span className="sr-only"> (opens in new tab)</span></a>
-           </li>
-           <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
-             <a href="https://jbba.scholasticahq.com/article/10237-is-blockchain-part-of-the-future-of-art" target="_blank" rel="noopener noreferrer"><h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark hover:underline transition-colors">Is Blockchain Part of the Future of Art?<span className="sr-only"> (opens in new tab)</span></h3></a>
-             <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Journal of the British Blockchain Association (JBBA), Peer-Reviewed</p>
-             <p className="text-base text-gov-dark/90 leading-relaxed">Peer-reviewed research exploring the intersection of distributed ledger technology and the creative industries. Examined provenance tracking, digital ownership, and the implications of blockchain for cultural asset management and intellectual property governance.</p>
-           </li>
-           <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
-             <a href="https://thedatascientist.com/fca-stablecoins-and-the-future-of-uk-crypto-regulation/" target="_blank" rel="noopener noreferrer"><h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark hover:underline transition-colors">FCA Consultation: Stablecoins and UK Crypto Regulation<span className="sr-only"> (opens in new tab)</span></h3></a>
-             <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Financial Conduct Authority Regulatory Consultation, 2025</p>
-             <p className="text-base text-gov-dark/90 leading-relaxed">Contributed expert analysis to the FCA's consultation on stablecoin regulation and the future of crypto asset oversight in the UK. Provided evidence-based commentary on regulatory frameworks, consumer protection mechanisms, and systemic risk considerations for digital assets.</p>
-           </li>
+        </PublicationGroup>
+
+        <PublicationGroup title="Talks, community & open tools" count={4}>
            <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
              <h3 className="font-semibold text-lg text-gov-dark mb-2">UK Government Business Academy - AI Webinar Series</h3>
              <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Department for Business and Trade, Business Academy, 2025</p>
@@ -229,7 +268,9 @@ export const Research: React.FC = () => {
              <p className="text-sm text-gov-secondary/80 mb-3 font-medium">London Data Week, co-organised with Vision Ability CIC, 2025</p>
              <p className="text-base text-gov-dark/90 leading-relaxed">Co-organised a public workshop and demonstration on making AI tools accessible to people with visual impairments. Delivered at Chabad Islington Community Centre as part of London Data Week 2025, in partnership with Vision Ability CIC.</p>
            </li>
-        </ul>
+        </PublicationGroup>
+
+        </div>
       </section>
 
       <aside className="pt-4">
