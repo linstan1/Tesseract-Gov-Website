@@ -33,11 +33,6 @@ import { FairScientificData } from './pages/research/FairScientificData';
 import { IesHqdmCrosswalk } from './pages/research/IesHqdmCrosswalk';
 import { IndustrialOntologyCrosswalks } from './pages/research/IndustrialOntologyCrosswalks';
 import { ParametricPayoutAssurance } from './pages/research/ParametricPayoutAssurance';
-import { BasisRiskFalseNegative } from './pages/research/BasisRiskFalseNegative';
-import { PreEventPayability } from './pages/research/PreEventPayability';
-import { SpatialBasisDisclosure } from './pages/research/SpatialBasisDisclosure';
-import { VerificationBurdenParadox } from './pages/research/VerificationBurdenParadox';
-import { AssuranceProvenanceDiscipline } from './pages/research/AssuranceProvenanceDiscipline';
 import { ConstructionStandardsCrosswalks } from './pages/research/ConstructionStandardsCrosswalks';
 import { NeurosymbolicSpaceKg } from './pages/research/NeurosymbolicSpaceKg';
 import { WasteReportingLoss } from './pages/research/WasteReportingLoss';
@@ -114,11 +109,6 @@ const SSRApp: React.FC = () => (
         <Route path="/research/ies-hqdm-defence-interoperability" element={<IesHqdmCrosswalk />} />
         <Route path="/research/industrial-ontology-crosswalks" element={<IndustrialOntologyCrosswalks />} />
         <Route path="/research/parametric-payout-assurance" element={<ParametricPayoutAssurance />} />
-        <Route path="/research/basis-risk-false-negative" element={<BasisRiskFalseNegative />} />
-        <Route path="/research/pre-event-payability" element={<PreEventPayability />} />
-        <Route path="/research/spatial-basis-disclosure" element={<SpatialBasisDisclosure />} />
-        <Route path="/research/verification-burden-paradox" element={<VerificationBurdenParadox />} />
-        <Route path="/research/assurance-provenance-discipline" element={<AssuranceProvenanceDiscipline />} />
         <Route path="/research/construction-standards-crosswalks" element={<ConstructionStandardsCrosswalks />} />
         <Route path="/research/neurosymbolic-space-kg" element={<NeurosymbolicSpaceKg />} />
         <Route path="/research/waste-reporting-loss" element={<WasteReportingLoss />} />

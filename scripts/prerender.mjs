@@ -120,26 +120,6 @@ const PAGE_META = {
     title: 'Can a parametric climate insurance product prove it paid? | Tesseract Academy for the Public Sector',
     description: 'An open vocabulary and twelve machine-checkable rules that audit a parametric climate insurance promise at the three points where it fails: whether the promise is specifiable at all, whether a registered household is payable before a storm, and whether the payout arrived after one. Includes a documented false negative computed from public records: Severe Tropical Storm Nalgae came ashore 8 km/h below a typhoon trigger and destroyed roughly 67,000 tonnes of mostly rice.',
   },
-  '/research/basis-risk-false-negative': {
-    title: 'The 8 km/h that decided a season: a documented false negative in parametric crop cover | Tesseract Academy for the Public Sector',
-    description: 'Severe Tropical Storm Nalgae came ashore in the Philippines at 110 km/h, eight short of the 118 km/h that defines a typhoon, and destroyed roughly 67,000 tonnes of mostly rice worth about PHP 1.3 billion. A wind trigger set at typhoon strength pays nothing for that. We compute the result from public records and argue basis risk should be a published product disclosure before sale.',
-  },
-  '/research/pre-event-payability': {
-    title: 'The payout that fails before the storm: register integrity in adaptation finance | Tesseract Academy for the Public Sector',
-    description: 'Where climate cover is premium-subsidised or donor-paid and enrolled in bulk from a public register, whether a household is payable is decided before any event: correct name, correct barangay, a georeferenced parcel or registered gear, and a live payout instrument in a matching name. Four open validation rules find those failures while there is still time to fix them.',
-  },
-  '/research/spatial-basis-disclosure': {
-    title: 'Two products, one headline, different promises: spatial basis in parametric insurance | Tesseract Academy for the Public Sector',
-    description: 'Two parametric products can advertise an identical 118 km/h trigger and pay on completely different sets of storms, because one settles on wind at the storm centre at landfall and the other over the insured parcel. That difference is invisible on any product register and detectable from the encoding alone, with no event data required.',
-  },
-  '/research/verification-burden-paradox': {
-    title: 'Verification cuts both ways: checking that costs the household nothing | Tesseract Academy for the Public Sector',
-    description: 'Absent verification destroys trust in climate insurance, and added verification destroys uptake. Vietnam is the cautionary case: heavy premium subsidy under a national agricultural insurance programme, and participation that still fell away, with administrative and loss-verification burden among the documented causes. Verification has to sit on the institution rather than the household.',
-  },
-  '/research/assurance-provenance-discipline': {
-    title: 'What a certification standard owes its own evidence | Tesseract Academy for the Public Sector',
-    description: 'We built a standard that refuses unsourced claims, then caught ourselves citing Wikipedia for a landfall wind speed. The provenance discipline we adopted in response: a confidence level on every product encoding, a primary-or-secondary marker on every data row, negative test cases for every rule, and a build report listing what we could not obtain.',
-  },
   '/research/industrial-ontology-crosswalks': {
     title: 'Why industrial data crosswalks fail, measured across seven standards | Tesseract Academy for the Public Sector',
     description: 'Open crosswalks between four pairs of industrial data standards (ISO 15926-14, IFC4, ISA-95, CFIHOS, OPC UA, SAREF, Asset Administration Shell) plus the measurement that explains why they fail. Four of the seven cannot reject any mis-mapping at all, so the usual reasoner check could never have failed. IFC4 has 163 times more disjointness axioms than ISO 15926-14 and is 6.6 times less checkable. Every correspondence passes validation alone while the set collapses 29 classes together.',
