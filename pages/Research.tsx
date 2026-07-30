@@ -73,7 +73,7 @@ export const Research: React.FC = () => {
         </div>
         <div className="space-y-4">
 
-        <PublicationGroup title="AI verification & safety" count={6}>
+        <PublicationGroup title="Safe & verifiable AI" count={11}>
            <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
              <Link to="/research/ontology-correctness-benchmark"><h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark hover:underline transition-colors">The Open-World Hole: Why SHACL Cannot Catch a Hallucinated Ontology Term</h3></Link>
              <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Open benchmark, 2026</p>
@@ -125,9 +125,6 @@ export const Research: React.FC = () => {
              <p className="text-base text-gov-dark/90 leading-relaxed">Research paper exploring how Large Language Models can bolster cybersecurity simulations by automating the creation of synthetic environments and identifying latent vulnerabilities. Co-authored with researchers from The Alan Turing Institute.</p>
              <a href="/papers/alan-turing-ontology-paper.pdf" target="_blank" rel="noopener noreferrer" className="inline-block mt-3 text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">Read the paper (PDF)<span className="sr-only"> (opens in new tab)</span></a>
            </li>
-        </PublicationGroup>
-
-        <PublicationGroup title="Knowledge graphs & ontologies" count={4}>
            <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
              <Link to="/research/neurosymbolic-space-kg"><h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark hover:underline transition-colors">Silence Is Not Assent: What Catches a Wrong AI Classification in Orbit</h3></Link>
              <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Open knowledge graph and measurement, 2026</p>
@@ -164,9 +161,14 @@ export const Research: React.FC = () => {
                <a href="https://huggingface.co/datasets/fabsssss/semantic-web-counterfactual-census" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">Census and atlas dataset<span className="sr-only"> (opens in new tab)</span></a>
              </div>
            </li>
+           <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
+             <a href="https://github.com/fabio-rovai/open-governance" target="_blank" rel="noopener noreferrer"><h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark hover:underline transition-colors">Open Governance: Open-Source AI Governance Server<span className="sr-only"> (opens in new tab)</span></h3></a>
+             <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Open-Source Tool, Ongoing</p>
+             <p className="text-base text-gov-dark/90 leading-relaxed">An open-source AI governance platform that helps organisations discover, assess, and monitor AI systems against EU AI Act, NIST AI RMF, and ISO 42001 frameworks. Provides automated risk classification, compliance matrices, bias and hallucination monitoring, policy enforcement gates, and audit-ready reporting through 48 governance tools.</p>
+           </li>
         </PublicationGroup>
 
-        <PublicationGroup title="Climate, environment & waste" count={2}>
+        <PublicationGroup title="Environment & climate" count={2}>
            <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
              <Link to="/research/parametric-payout-assurance"><h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark hover:underline transition-colors">Can a Parametric Climate Insurance Product Prove It Paid?</h3></Link>
              <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Open standard and measurement, 2026</p>
@@ -187,7 +189,7 @@ export const Research: React.FC = () => {
            </li>
         </PublicationGroup>
 
-        <PublicationGroup title="Finance & digital assets" count={3}>
+        <PublicationGroup title="Economy, finance & skills" count={6}>
            <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
              <Link to="/research/financial-answer-verification"><h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark hover:underline transition-colors">Provenance Beats Plausibility: Catching Wrong Financial Answers Without a Gold Key</h3></Link>
              <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Open measurement and benchmark audit, 2026</p>
@@ -207,9 +209,6 @@ export const Research: React.FC = () => {
              <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Journal of the British Blockchain Association (JBBA), Peer-Reviewed</p>
              <p className="text-base text-gov-dark/90 leading-relaxed">Peer-reviewed research exploring the intersection of distributed ledger technology and the creative industries. Examined provenance tracking, digital ownership, and the implications of blockchain for cultural asset management and intellectual property governance.</p>
            </li>
-        </PublicationGroup>
-
-        <PublicationGroup title="Government, skills & public policy" count={3}>
            <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
              <a href="https://www.gov.wales/testing-land-valuation-methods" target="_blank" rel="noopener noreferrer"><h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark hover:underline transition-colors">Welsh Government Land Valuation Research Report<span className="sr-only"> (opens in new tab)</span></h3></a>
              <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Commissioned by Welsh Government, 2025–2026</p>
@@ -237,7 +236,7 @@ export const Research: React.FC = () => {
            </li>
         </PublicationGroup>
 
-        <PublicationGroup title="Talks, community & open tools" count={4}>
+        <PublicationGroup title="Talks & community" count={3}>
            <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
              <h3 className="font-semibold text-lg text-gov-dark mb-2">UK Government Business Academy - AI Webinar Series</h3>
              <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Department for Business and Trade, Business Academy, 2025</p>
@@ -249,11 +248,6 @@ export const Research: React.FC = () => {
                <span className="text-gov-border">|</span>
                <a href="https://www.business.gov.uk/business-academy/events/building-internal-ai-capability-skills-teams-culture-for-long-term-success-12-november-2025/" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">Building AI Capability<span className="sr-only"> (opens in new tab)</span></a>
              </div>
-           </li>
-           <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
-             <a href="https://github.com/fabio-rovai/open-governance" target="_blank" rel="noopener noreferrer"><h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark hover:underline transition-colors">Open Governance: Open-Source AI Governance Server<span className="sr-only"> (opens in new tab)</span></h3></a>
-             <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Open-Source Tool, Ongoing</p>
-             <p className="text-base text-gov-dark/90 leading-relaxed">An open-source AI governance platform that helps organisations discover, assess, and monitor AI systems against EU AI Act, NIST AI RMF, and ISO 42001 frameworks. Provides automated risk classification, compliance matrices, bias and hallucination monitoring, policy enforcement gates, and audit-ready reporting through 48 governance tools.</p>
            </li>
            <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
              <Link to="/insights"><h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark hover:underline transition-colors">London Data Week 2026: AI Tools for Everyone, Advancing Disability Inclusion</h3></Link>
