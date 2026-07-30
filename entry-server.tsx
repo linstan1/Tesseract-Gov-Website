@@ -40,6 +40,8 @@ import { VerificationBurdenParadox } from './pages/research/VerificationBurdenPa
 import { AssuranceProvenanceDiscipline } from './pages/research/AssuranceProvenanceDiscipline';
 import { ConstructionStandardsCrosswalks } from './pages/research/ConstructionStandardsCrosswalks';
 import { NeurosymbolicSpaceKg } from './pages/research/NeurosymbolicSpaceKg';
+import { WasteReportingLoss } from './pages/research/WasteReportingLoss';
+import { FinancialAnswerVerification } from './pages/research/FinancialAnswerVerification';
 import { SpaceMetricsCrosswalk } from './pages/research/SpaceMetricsCrosswalk';
 import { Ies4TurtleLanguageModel } from './pages/research/Ies4TurtleLanguageModel';
 import { OntologyCorrectnessBench } from './pages/research/OntologyCorrectnessBench';
@@ -119,6 +121,8 @@ const SSRApp: React.FC = () => (
         <Route path="/research/assurance-provenance-discipline" element={<AssuranceProvenanceDiscipline />} />
         <Route path="/research/construction-standards-crosswalks" element={<ConstructionStandardsCrosswalks />} />
         <Route path="/research/neurosymbolic-space-kg" element={<NeurosymbolicSpaceKg />} />
+        <Route path="/research/waste-reporting-loss" element={<WasteReportingLoss />} />
+        <Route path="/research/financial-answer-verification" element={<FinancialAnswerVerification />} />
         <Route path="/research/space-metrics-crosswalk" element={<SpaceMetricsCrosswalk />} />
         <Route path="/research/ies4-turtle-language-model" element={<Ies4TurtleLanguageModel />} />
         <Route path="/research/ontology-correctness-benchmark" element={<OntologyCorrectnessBench />} />

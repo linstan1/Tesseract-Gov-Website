@@ -33,6 +33,8 @@ const VerificationBurdenParadox = lazy(() => import('./pages/research/Verificati
 const AssuranceProvenanceDiscipline = lazy(() => import('./pages/research/AssuranceProvenanceDiscipline').then(m => ({ default: m.AssuranceProvenanceDiscipline })));
 const ConstructionStandardsCrosswalks = lazy(() => import('./pages/research/ConstructionStandardsCrosswalks').then(m => ({ default: m.ConstructionStandardsCrosswalks })));
 const NeurosymbolicSpaceKg = lazy(() => import('./pages/research/NeurosymbolicSpaceKg').then(m => ({ default: m.NeurosymbolicSpaceKg })));
+const WasteReportingLoss = lazy(() => import('./pages/research/WasteReportingLoss').then(m => ({ default: m.WasteReportingLoss })));
+const FinancialAnswerVerification = lazy(() => import('./pages/research/FinancialAnswerVerification').then(m => ({ default: m.FinancialAnswerVerification })));
 const SpaceMetricsCrosswalk = lazy(() => import('./pages/research/SpaceMetricsCrosswalk').then(m => ({ default: m.SpaceMetricsCrosswalk })));
 const Ies4TurtleLanguageModel = lazy(() => import('./pages/research/Ies4TurtleLanguageModel').then(m => ({ default: m.Ies4TurtleLanguageModel })));
 const OntologyCorrectnessBench = lazy(() => import('./pages/research/OntologyCorrectnessBench').then(m => ({ default: m.OntologyCorrectnessBench })));
@@ -156,6 +158,14 @@ const PAGE_META: Record<string, { title: string; description: string }> = {
   '/research/space-metrics-crosswalk': {
     title: 'Space debris metrics that cannot be added up: an open composition checker | Tesseract Academy for the Public Sector',
     description: 'The two premier orbital debris engineering models disagree by a factor of 2.3 to 3.0 at the 1 cm collision-risk threshold, and by almost two orders of magnitude in the sub-millimetre regime, because they partition the same physical population along orthogonal axes: MASTER-8 by generative source, ORDEM 3.1 by material density. Every indicator built on either model silently inherits that partition and never declares it. An open, MIT-licensed composition checker built on QUDT, SOSA/SSN and PROV-O that refuses invalid combinations with a reason and states what may be done instead.',
+  },
+  '/research/waste-reporting-loss': {
+    title: 'Half the detail dies on the way to the return: what UK waste reporting throws away | Tesseract Academy for the Public Sector',
+    description: 'AI waste analytics classify material at the belt in over a hundred categories; every UK channel that consumes composition data accepts between 7 and 47. Of 5.907 bits of composition detail, the List of Waste retains 53.8%, pEPR 52.1%, RAM 2027 49.5% and Simpler Recycling 38.4%. The crosswalk cannot be a function in either direction: collapse up to 23 classes per value, 7 classes that fix no regulatory value at all, and 19 to 22 classes the packaging schemes cannot represent. Of ten operational questions two are answerable in every channel and four in none, including the aluminium against steel split that sets the pEPR fee. Open SKOS vocabularies, SSSOM alignments, a SHACL release gate that caught a language-tag defect in the upstream List of Waste ontology, and a reporting engine that emits returns as intervals.',
+  },
+  '/research/financial-answer-verification': {
+    title: 'Provenance beats plausibility: catching wrong financial answers without a gold key | Tesseract Academy for the Public Sector',
+    description: 'FinanceBench ships 2,400 model answers carrying human correctness labels, an unused supervision set for answer verification. A deterministic check that never sees the gold answer recovers 57.4% of labelled errors and lifts the accuracy of served answers from 68.8% to 78.0% at 60.5% coverage, with positive recall in all sixteen model configurations. The same check against the whole filing recovers 3.6%, because a filing carries a median of 1,270 numbers against 69 on the cited page. Excusing answers that are reconstructible by arithmetic is anti-informative. The ground-truth audit finds page numbers are 0-indexed and that the two shipped gold files disagree on 15 of 51 numeric cases, every one by exactly 100x.',
   },
   '/research/neurosymbolic-space-kg': {
     title: 'Silence is not assent: what catches a wrong AI classification in orbit | Tesseract Academy for the Public Sector',
@@ -444,6 +454,8 @@ const App: React.FC = () => {
               <Route path="/research/assurance-provenance-discipline" element={<AssuranceProvenanceDiscipline />} />
               <Route path="/research/construction-standards-crosswalks" element={<ConstructionStandardsCrosswalks />} />
               <Route path="/research/neurosymbolic-space-kg" element={<NeurosymbolicSpaceKg />} />
+              <Route path="/research/waste-reporting-loss" element={<WasteReportingLoss />} />
+              <Route path="/research/financial-answer-verification" element={<FinancialAnswerVerification />} />
               <Route path="/research/space-metrics-crosswalk" element={<SpaceMetricsCrosswalk />} />
               <Route path="/research/ies4-turtle-language-model" element={<Ies4TurtleLanguageModel />} />
               <Route path="/research/ontology-correctness-benchmark" element={<OntologyCorrectnessBench />} />
