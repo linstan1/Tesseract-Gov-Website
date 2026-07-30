@@ -5,6 +5,8 @@ import { Mermaid } from '../../components/Mermaid';
 
 const REPO = 'https://github.com/fabio-rovai/neurosymbolic-space-kg';
 const COURSE = 'https://tesseract.academy/courses/neurosymbolic-ai-in-space-knowledge-graphs-for-orbit/';
+const MODEL = 'https://huggingface.co/fabsssss/qwen3-coder-30b-a3b-space';
+const DATASET = 'https://huggingface.co/datasets/fabsssss/ssao-space-instruct';
 
 const SCHEMA = {
   '@context': 'https://schema.org',
@@ -232,6 +234,57 @@ export const NeurosymbolicSpaceKg: React.FC = () => (
       </p>
     </section>
 
+
+    <section className="space-y-6">
+      <div className="border-l-2 border-l-emerald-600 pl-6">
+        <h2 className="text-2xl font-bold text-gov-dark font-serif mb-3">Result 4: a model that stays inside the vocabulary</h2>
+        <p className="text-gov-dark leading-relaxed">
+          If an ontology cannot reject a wrong term, the practical defence is a model that does not produce wrong terms. We fine-tuned Qwen3-Coder-30B on data derived from this study and published it openly: to our knowledge the first language model targeting a space-domain ontology.
+        </p>
+        <p className="text-gov-dark leading-relaxed mt-3">
+          The baseline behaviour is the study&apos;s thesis in miniature. Asked for SSAO Turtle, the untuned model invents <strong>13.81 non-existent ontology terms per output</strong>, and what it invents is telling: <code>ssao:SpaceObject</code>, <code>ssao:launchDate</code>, <code>ssao:OrbitalElements</code>, fluent camelCase that SSAO never defines. It also declares no prefixes, so nothing it writes parses. Confident, well-formed, unusable, and in this domain nothing would reject it.
+        </p>
+      </div>
+      <div className="overflow-x-auto">
+        <table className="w-full text-sm border-collapse">
+          <thead>
+            <tr className="bg-gov-bg border-b border-gov-border">
+              <th className="text-left px-4 py-3 font-semibold text-gov-dark">Metric (held-out, n=99)</th>
+              <th className="text-right px-4 py-3 font-semibold text-gov-dark">Base</th>
+              <th className="text-right px-4 py-3 font-semibold text-gov-dark">Tuned</th>
+            </tr>
+          </thead>
+          <tbody>
+            {[
+              ['Turtle parse rate', '0.0%', '98.6%'],
+              ['Term conformance (every term real)', '0.0%', '97.2%'],
+              ['Hallucinated terms per output', '13.81', '0.06'],
+              ['Namespace fidelity', '33.3%', '100%'],
+              ['Primary class accuracy', '36.1%', '100%'],
+              ['Orbit regime accuracy', '0.0%', '80.6%'],
+              ['Refusal rate on unanswerable questions', '75%', '100%'],
+            ].map((r, i) => (
+              <tr key={r[0]} className={`border-b border-gov-border/50 ${i % 2 === 0 ? 'bg-white' : 'bg-gov-bg/40'}`}>
+                <td className="px-4 py-3 font-medium text-gov-dark">{r[0]}</td>
+                <td className="px-4 py-3 text-right text-gov-secondary">{r[1]}</td>
+                <td className="px-4 py-3 text-right font-semibold text-gov-dark">{r[2]}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <p className="text-gov-dark leading-relaxed">
+        Two honest notes. The domain&apos;s canonical error survives: three of fourteen regime errors label a geostationary orbit geosynchronous, though in the safe direction, since every geostationary orbit genuinely is geosynchronous. And the model will volunteer fields you did not supply: given the ISS with no COSPAR number, it emitted the correct 1998-067A from pretraining, which is helpful for a famous object and a fabrication risk for an obscure one. The vocabulary gate catches invented <em>terms</em>; it cannot catch invented <em>values</em>. Both limitations are recorded in the model card rather than left for a user to discover.
+      </p>
+      <div className="flex flex-wrap gap-4">
+        <a href={MODEL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-gov-blue text-white px-5 py-3 rounded-lg font-semibold hover:bg-gov-blue-dark transition-colors">
+          The model on Hugging Face <ExternalLink className="w-4 h-4" />
+        </a>
+        <a href={DATASET} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-gov-blue underline hover:text-gov-blue-dark font-medium px-2 py-3">
+          The training dataset and eval traces <ExternalLink className="w-4 h-4" />
+        </a>
+      </div>
+    </section>
     <section className="space-y-4">
       <div className="border-l-2 border-l-gov-blue pl-6">
         <h2 className="text-2xl font-bold text-gov-dark font-serif mb-3">The same machinery, as an application</h2>

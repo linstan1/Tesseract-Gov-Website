@@ -102,7 +102,7 @@ const PAGE_META = {
   },
   '/research/neurosymbolic-space-kg': {
     title: 'Silence is not assent: what catches a wrong AI classification in orbit | Tesseract Academy for the Public Sector',
-    description: 'A public 833,403-triple knowledge graph of all 70,122 catalogued space objects from a pinned CelesTrak SATCAT snapshot, aligned to the Space Situational Awareness Ontology. The ontology declares one disjointness axiom, so 351 of its 353 classes can never reject a wrong AI classification. LogMap 4.0 on the same pair reports zero repair conflicts while the catalogue refutes nine of its twenty candidates, catches a category error in its final output and rescues one it wrongly discarded. Includes the threshold sweep that caught a circular measurement in our own earlier version.',
+    description: 'A public 833,403-triple knowledge graph of all 70,122 catalogued space objects from a pinned CelesTrak SATCAT snapshot, aligned to the Space Situational Awareness Ontology. The ontology declares one disjointness axiom, so 351 of its 353 classes can never reject a wrong AI classification. LogMap 4.0 on the same pair reports zero repair conflicts while the catalogue refutes nine of its twenty candidates, catches a category error in its final output and rescues one it wrongly discarded. We also publish the first openly released language model for a space ontology: hallucinated ontology terms fall from 13.81 to 0.06 per output. Includes the threshold sweep that caught a circular measurement in our own earlier version.',
   },
   '/research/construction-standards-crosswalks': {
     title: 'Construction data standards cannot check your AI: IFC, COBie, Uniclass and BOT measured | Tesseract Academy for the Public Sector',
