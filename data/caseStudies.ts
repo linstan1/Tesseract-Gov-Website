@@ -84,9 +84,9 @@ export const CASE_STUDIES: CaseStudy[] = [
     title: 'Food Loss and Waste Data Taxonomy: WRAP',
     category: 'delivery',
     challenge: 'WRAP\'s Courtauld Commitment 2030 asks the UK food industry to halve food waste by 2030 (UN SDG 12.3). More than 400 organisations across an international Food Pact Network report their data using locally divergent definitions, so it cannot be reliably aggregated or compared, undermining measurement of collective progress.',
-    intervention: 'Commissioned by WRAP (PRC228) to translate the international Food Loss and Waste Standard into structured, machine-readable data infrastructure: five coded dimensions (product category, supply chain stage, waste destination, intervention type, food and drink material hierarchy) with controlled vocabularies and unique codes, 84 coded entities expressed in SKOS and JSON-LD, grounded in the WRAP Data Capture Sheet and Codex GSFA, with FoodOn product-category alignment. SHACL validation shapes and FoodEx2 mappings are scaffolded for Phase 2. Delivered through iterative co-design with WRAP subject-matter experts.',
-    assurance: 'Built as working data infrastructure with version-controlled change governance and 100% structural coverage of the WRAP Data Capture Sheet controlled vocabularies at Level 1 (680 validated RDF triples).',
-    outcome: 'A publishable, machine-readable taxonomy that lets the Food Pact Network classify and compare food waste data on a like-for-like basis for the first time, and feeds the developing international data standard.',
+    intervention: 'Commissioned by WRAP to translate the international Food Loss and Waste Standard into structured, machine-readable data infrastructure that can be applied consistently across jurisdictions and reporting tools while remaining platform-agnostic. The engagement is in delivery; design detail is held with the client and is not published.',
+    assurance: 'Built as working data infrastructure rather than a static reference document, with version-controlled change governance so the classification survives product, process and regulatory change.',
+    outcome: 'In delivery. Outputs and results will be described once agreed with the client.',
     reusable: 'The taxonomy-plus-schema-plus-validation-rules pattern transfers to any multi-organisation reporting domain requiring consistent, comparable data.',
   },
   {

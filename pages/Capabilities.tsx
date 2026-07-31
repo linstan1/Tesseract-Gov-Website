@@ -120,10 +120,10 @@ export const Capabilities: React.FC = () => {
           <div className="bg-gov-bg rounded-lg p-4 mt-auto border border-gov-border/30">
             <p className="text-xs font-semibold text-gov-blue uppercase tracking-wider mb-2">Proof</p>
             <p className="text-sm text-gov-secondary leading-relaxed mb-3">
-              <strong>WRAP</strong>  - translated the Food Loss and Waste Standard into a <strong>5</strong>-dimension, machine-readable taxonomy (<strong>84</strong> coded entities in SKOS and JSON-LD), supporting consistent measurement across <strong>400+</strong> Courtauld Commitment 2030 organisations.
+              <strong>WRAP</strong>  - commissioned to translate the Food Loss and Waste Standard into machine-readable data infrastructure, so that reporting across the UK Food and Drink Pact and the international Food Pact Network can be aggregated and compared on a like-for-like basis. In delivery.
             </p>
             <Link to="/research/wrap-food-loss-waste-taxonomy" className="inline-flex items-center gap-1.5 text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline">
-              Read the case study <ArrowRight className="w-4 h-4" />
+              Read the background <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
         </Card>

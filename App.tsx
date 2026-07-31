@@ -140,7 +140,7 @@ const PAGE_META: Record<string, { title: string; description: string }> = {
   },
   '/research/wrap-food-loss-waste-taxonomy': {
     title: 'WRAP Food Loss and Waste Data Taxonomy | Tesseract Academy for the Public Sector',
-    description: 'Commissioned by WRAP (PRC228) to build a structured, machine-readable Food Loss and Waste data taxonomy: 5 coded dimensions and 84 entities in SKOS and JSON-LD, grounded in the FLW Standard, the WRAP Data Capture Sheet and Codex GSFA, supporting 400+ Courtauld Commitment 2030 organisations.',
+    description: 'Tesseract Academy has been commissioned by WRAP to develop a Food Loss and Waste data taxonomy for its Food Programme and global Food Pact Network. The engagement is in delivery; this page sets out the measurement problem the work addresses.',
   },
   '/research/fair-scientific-data': {
     title: 'FAIR Dataset Contracts for Scientific Data | Tesseract Academy for the Public Sector',
