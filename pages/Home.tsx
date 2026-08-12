@@ -303,6 +303,40 @@ export const Home: React.FC = () => {
           <p className="text-center text-xs text-gov-secondary/70 mt-6 max-w-2xl mx-auto">We co-host and co-deliver public events with leading universities and industry, including London Data Week at the LSE and the Innovate UK BridgeAI creative-industries launch with PwC.</p>
         </div>
 
+        {/* Innovation Programmes & Challenges */}
+        <div className="py-12 border-t border-gov-border/30">
+          <h3 className="text-center text-sm font-semibold text-gov-secondary uppercase tracking-wider mb-2">Selected for international innovation programmes</h3>
+          <p className="text-center text-xs text-gov-secondary/70 mb-8 max-w-2xl mx-auto">Competitively selected onto regulator-run and university-backed innovation programmes in financial services and digital trust.</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+
+            <div className="flex flex-col items-center text-center gap-5 bg-white border border-gov-border/50 rounded-xl p-6">
+              <a href="https://www.iosco.org/v2/training/?subsection=tech-sprint" target="_blank" rel="noopener noreferrer" className="flex h-20 w-full max-w-[320px] items-center justify-center">
+                <img src="/logos/iosco-techsprint.png" alt="IOSCO TechSprint" width="1030" height="133" loading="lazy" decoding="async" className="max-h-full w-auto max-w-full object-contain rounded-lg shadow-soft" />
+              </a>
+              <div>
+                <p className="text-sm font-bold text-gov-dark">IOSCO TechSprint 2026 - selected cohort participant</p>
+                <p className="text-xs text-gov-secondary leading-relaxed mt-2">
+                  <em>Investor Education in the Age of Artificial Intelligence</em>, the inaugural TechSprint of the International Organization of Securities Commissions, powered by the UK Financial Conduct Authority AI Lab. Our entry, Aegis, tackles AI-enabled investment fraud and AI-assisted financial learning for retail investors. Demo Day at the IOSCO C8 Plenary, Madrid, 8 October 2026.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex flex-col items-center text-center gap-5 bg-white border border-gov-border/50 rounded-xl p-6">
+              <a href="https://coetrust.com/" target="_blank" rel="noopener noreferrer" className="flex h-20 w-full max-w-[320px] items-center justify-center">
+                <img src="/logos/digital-trust-coe.png" alt="Scottish Centre of Excellence in Digital Trust and DLT" width="1543" height="317" loading="lazy" decoding="async" className="max-h-full w-auto max-w-full object-contain" />
+              </a>
+              <div>
+                <p className="text-sm font-bold text-gov-dark">2nd Future Payments Innovation Challenge - finalist, one of five</p>
+                <p className="text-xs text-gov-secondary leading-relaxed mt-2">
+                  Run by the Scottish Centre of Excellence in Digital Trust and DLT, hosted at Edinburgh Napier University with the University of Edinburgh and the University of Glasgow. Our entry, the <a href="https://github.com/fabio-rovai/edinburgh-protocol" target="_blank" rel="noopener noreferrer" className="text-gov-blue hover:underline">Edinburgh Protocol</a>, is open-source payment-commitment infrastructure against late payment to Scottish SMEs. Shortlisted and pitched in Edinburgh, May 2026; not selected for incubation funding.
+                </p>
+              </div>
+            </div>
+
+          </div>
+          <p className="text-center text-[11px] text-gov-secondary/60 mt-6 max-w-3xl mx-auto">Selection for, or participation in, these programmes does not constitute endorsement of Tesseract Academy by IOSCO, the Financial Conduct Authority, or the Scottish Centre of Excellence in Digital Trust and DLT.</p>
+        </div>
+
         {/* Accreditations & Frameworks */}
         <div className="py-12 border-t border-gov-border/30">
           <h3 className="text-center text-sm font-semibold text-gov-secondary uppercase tracking-wider mb-8">Accreditations & Procurement Frameworks</h3>
