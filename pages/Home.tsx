@@ -292,7 +292,7 @@ export const Home: React.FC = () => {
                 <img src="/logos/digital-trust-coe.png" alt="Scottish Centre of Excellence in Digital Trust and DLT" width="1543" height="317" loading="lazy" decoding="async" className="max-h-full w-auto max-w-full object-contain" />
               </a>
               <div>
-                <p className="text-sm font-bold text-gov-dark">2nd Future Payments Innovation Challenge - finalist, one of five</p>
+                <p className="text-sm font-bold text-gov-dark">2nd Future Payments Innovation Challenge - finalist</p>
                 <p className="text-xs text-gov-secondary leading-relaxed mt-2">
                   Run by the Scottish Centre of Excellence in Digital Trust and DLT, hosted at Edinburgh Napier University with the University of Edinburgh and the University of Glasgow. Our entry, the <a href="https://github.com/fabio-rovai/edinburgh-protocol" target="_blank" rel="noopener noreferrer" className="text-gov-blue hover:underline">Edinburgh Protocol</a>, is open-source payment-commitment infrastructure against late payment to Scottish SMEs. Shortlisted and pitched in Edinburgh, May 2026.
                 </p>
