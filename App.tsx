@@ -30,6 +30,7 @@ const ConstructionStandardsCrosswalks = lazy(() => import('./pages/research/Cons
 const NeurosymbolicSpaceKg = lazy(() => import('./pages/research/NeurosymbolicSpaceKg').then(m => ({ default: m.NeurosymbolicSpaceKg })));
 const WasteReportingLoss = lazy(() => import('./pages/research/WasteReportingLoss').then(m => ({ default: m.WasteReportingLoss })));
 const FinancialAnswerVerification = lazy(() => import('./pages/research/FinancialAnswerVerification').then(m => ({ default: m.FinancialAnswerVerification })));
+const InvestmentFundOntology = lazy(() => import('./pages/research/InvestmentFundOntology').then(m => ({ default: m.InvestmentFundOntology })));
 const SpaceMetricsCrosswalk = lazy(() => import('./pages/research/SpaceMetricsCrosswalk').then(m => ({ default: m.SpaceMetricsCrosswalk })));
 const Ies4TurtleLanguageModel = lazy(() => import('./pages/research/Ies4TurtleLanguageModel').then(m => ({ default: m.Ies4TurtleLanguageModel })));
 const OntologyCorrectnessBench = lazy(() => import('./pages/research/OntologyCorrectnessBench').then(m => ({ default: m.OntologyCorrectnessBench })));
@@ -157,6 +158,10 @@ const PAGE_META: Record<string, { title: string; description: string }> = {
   '/research/waste-reporting-loss': {
     title: 'Half the detail dies on the way to the return: what UK waste reporting throws away | Tesseract Academy for the Public Sector',
     description: 'AI waste analytics classify material at the belt in over a hundred categories; every UK channel that consumes composition data accepts between 7 and 47. Of 5.907 bits of composition detail, the List of Waste retains 53.8%, pEPR 52.1%, RAM 2027 49.5% and Simpler Recycling 38.4%. The crosswalk cannot be a function in either direction: collapse up to 23 classes per value, 7 classes that fix no regulatory value at all, and 19 to 22 classes the packaging schemes cannot represent. Of ten operational questions two are answerable in every channel and four in none, including the aluminium against steel split that sets the pEPR fee. Open SKOS vocabularies, SSSOM alignments, a SHACL release gate that caught a language-tag defect in the upstream List of Waste ontology, and a reporting engine that emits returns as intervals.',
+  },
+  '/research/investment-fund-ontology': {
+    title: 'The largest index fund is missing from the open identifier map: the US fund register as a governance graph | Tesseract Academy for the Public Sector',
+    description: 'An open OWL 2 ontology, SKOS identifier registry and SHACL governance layer built against the whole public US fund universe: 2,316 registrants, 14,841 funds, 43,344 share classes, joined to four quarters of Form N-CEN and all 9,119,948 GLEIF ISIN-LEI pairs. GLEIF is checksum-clean at full scale; SEC filings are not, carrying 19 LEIs that fail ISO 7064 including a padded integer filed as an LEI. Only 12.3% of ETF fund LEIs have any ISIN in the open mapping, the Vanguard 500 Index Fund among the missing. 96.8% of register quotations name no venue, and class-level ISIN resolution is enclosed behind licensed CUSIP data: 259 funds resolve from public data alone. Twenty identifier schemes across six markets, FIBO alignment with every target IRI verified live.',
   },
   '/research/financial-answer-verification': {
     title: 'Provenance beats plausibility: catching wrong financial answers without a gold key | Tesseract Academy for the Public Sector',
@@ -426,6 +431,7 @@ const App: React.FC = () => {
               <Route path="/research/neurosymbolic-space-kg" element={<NeurosymbolicSpaceKg />} />
               <Route path="/research/waste-reporting-loss" element={<WasteReportingLoss />} />
               <Route path="/research/financial-answer-verification" element={<FinancialAnswerVerification />} />
+              <Route path="/research/investment-fund-ontology" element={<InvestmentFundOntology />} />
               <Route path="/research/space-metrics-crosswalk" element={<SpaceMetricsCrosswalk />} />
               <Route path="/research/ies4-turtle-language-model" element={<Ies4TurtleLanguageModel />} />
               <Route path="/research/ontology-correctness-benchmark" element={<OntologyCorrectnessBench />} />

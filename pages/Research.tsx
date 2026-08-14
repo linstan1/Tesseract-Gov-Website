@@ -189,7 +189,16 @@ export const Research: React.FC = () => {
            </li>
         </PublicationGroup>
 
-        <PublicationGroup title="Economy, finance & skills" count={6}>
+        <PublicationGroup title="Economy, finance & skills" count={7}>
+           <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
+             <Link to="/research/investment-fund-ontology"><h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark hover:underline transition-colors">The Largest Index Fund Is Missing From the Open Identifier Map: the US Fund Register as a Governance Graph</h3></Link>
+             <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Open ontology, full-universe measurement, 2026</p>
+             <p className="text-base text-gov-dark/90 leading-relaxed">Fund data is an identifier problem before it is anything else. An open OWL 2 ontology, twenty-scheme SKOS identifier registry and SHACL governance layer, built and run against the whole public US fund universe: 2,316 registrants, 14,841 funds and 43,344 share classes joined to four quarters of Form N-CEN and all 9,119,948 GLEIF ISIN-LEI pairs. GLEIF is checksum-clean at full scale; SEC filings carry 19 LEIs that fail ISO 7064, including a padded integer filed as an LEI. Only 12.3% of ETF fund LEIs have any ISIN in the open mapping, the Vanguard 500 Index Fund among the missing, and 96.8% of register quotations name no trading venue. Class-level ISIN resolution is enclosed behind licensed CUSIP data: 259 funds resolve from public data alone.</p>
+             <div className="mt-3 flex flex-wrap gap-3 items-center">
+               <Link to="/research/investment-fund-ontology" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">Read the study</Link>
+               <a href="https://github.com/fabio-rovai/investment-fund-ontology" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">repository on GitHub<span className="sr-only"> (opens in new tab)</span></a>
+             </div>
+           </li>
            <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
              <Link to="/research/financial-answer-verification"><h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark hover:underline transition-colors">Provenance Beats Plausibility: Catching Wrong Financial Answers Without a Gold Key</h3></Link>
              <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Open measurement and benchmark audit, 2026</p>
