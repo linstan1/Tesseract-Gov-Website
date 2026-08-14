@@ -31,6 +31,7 @@ const NeurosymbolicSpaceKg = lazy(() => import('./pages/research/NeurosymbolicSp
 const WasteReportingLoss = lazy(() => import('./pages/research/WasteReportingLoss').then(m => ({ default: m.WasteReportingLoss })));
 const FinancialAnswerVerification = lazy(() => import('./pages/research/FinancialAnswerVerification').then(m => ({ default: m.FinancialAnswerVerification })));
 const InvestmentFundOntology = lazy(() => import('./pages/research/InvestmentFundOntology').then(m => ({ default: m.InvestmentFundOntology })));
+const InsuranceRegisterOntology = lazy(() => import('./pages/research/InsuranceRegisterOntology').then(m => ({ default: m.InsuranceRegisterOntology })));
 const SpaceMetricsCrosswalk = lazy(() => import('./pages/research/SpaceMetricsCrosswalk').then(m => ({ default: m.SpaceMetricsCrosswalk })));
 const Ies4TurtleLanguageModel = lazy(() => import('./pages/research/Ies4TurtleLanguageModel').then(m => ({ default: m.Ies4TurtleLanguageModel })));
 const OntologyCorrectnessBench = lazy(() => import('./pages/research/OntologyCorrectnessBench').then(m => ({ default: m.OntologyCorrectnessBench })));
@@ -162,6 +163,10 @@ const PAGE_META: Record<string, { title: string; description: string }> = {
   '/research/investment-fund-ontology': {
     title: 'The largest index fund is missing from the open identifier map: the US fund register as a governance graph | Tesseract Academy for the Public Sector',
     description: 'An open OWL 2 ontology, SKOS identifier registry and SHACL governance layer built against the whole public US fund universe: 2,316 registrants, 14,841 funds, 43,344 share classes, joined to four quarters of Form N-CEN and all 9,119,948 GLEIF ISIN-LEI pairs, every pair check-digit validated with zero failures. SEC filings are not as clean: 19 of 14,960 self-reported LEIs (0.13%) fail the same check digit. Only 497 of 4,053 self-reported ETF fund LEIs (12.3%) carry any ISIN in GLEIF\'s open mapping, including the Vanguard 500 Index Fund, which holds a valid ISIN in commercial data that GLEIF\'s open file simply does not carry. 29,258 of 30,238 register quotations (96.8%) carry no venue field, mostly because the field is ETF-only in the source schema. Class-level ISIN resolution is enclosed behind licensed CUSIP data: 259 of 19,803 funds (1.3%) resolve from public data alone. Twenty identifier schemes across six markets, FIBO alignment with every target IRI verified live. Figures as of the 14 August 2026 build.',
+  },
+  '/research/insurance-register-ontology': {
+    title: 'One in five of Europe’s insurers has no LEI in the EU’s own register: the EEA insurance fabric as a governance graph | Tesseract Academy for the Public Sector',
+    description: 'An open OWL 2 ontology, SKOS registries and SHACL governance layer built against the entire EIOPA Register of Insurance Undertakings (33,924 rows) joined with a same-day GLEIF harvest of all 3,630 LEIs the register files. 643 of 3,304 active domestic (re)insurers (19.5%) carry no LEI at all; 4 filed LEI values are arithmetically impossible, including a letter-O-for-zero transposition that severs a Danish insurer from the global identifier system; 118 active insurers’ LEIs have lapsed and 42 point at entities GLEIF says have ceased; one LEI is filed for both SCOR Global Reinsurance France and SCOR Global Reinsurance Ireland; 283 cross-border passports outlive the authorization they derive from. 276,683 triples, verified against the 2026 crop of insurance ontologist job advertisements, all findings reproducible. Figures as of the 14 August 2026 build.',
   },
   '/research/financial-answer-verification': {
     title: 'Provenance beats plausibility: catching wrong financial answers without a gold key | Tesseract Academy for the Public Sector',
@@ -432,6 +437,7 @@ const App: React.FC = () => {
               <Route path="/research/waste-reporting-loss" element={<WasteReportingLoss />} />
               <Route path="/research/financial-answer-verification" element={<FinancialAnswerVerification />} />
               <Route path="/research/investment-fund-ontology" element={<InvestmentFundOntology />} />
+              <Route path="/research/insurance-register-ontology" element={<InsuranceRegisterOntology />} />
               <Route path="/research/space-metrics-crosswalk" element={<SpaceMetricsCrosswalk />} />
               <Route path="/research/ies4-turtle-language-model" element={<Ies4TurtleLanguageModel />} />
               <Route path="/research/ontology-correctness-benchmark" element={<OntologyCorrectnessBench />} />

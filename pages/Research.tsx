@@ -189,7 +189,16 @@ export const Research: React.FC = () => {
            </li>
         </PublicationGroup>
 
-        <PublicationGroup title="Economy, finance & skills" count={7}>
+        <PublicationGroup title="Economy, finance & skills" count={8}>
+           <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
+             <Link to="/research/insurance-register-ontology"><h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark hover:underline transition-colors">One in Five of Europe&apos;s Insurers Has No LEI in the EU&apos;s Own Register: the EEA Insurance Fabric as a Governance Graph</h3></Link>
+             <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Open ontology, full-register measurement, 2026</p>
+             <p className="text-base text-gov-dark/90 leading-relaxed">Insurance entity data is an identifier problem before it is anything else. An open OWL 2 ontology, SKOS registries and three-layer SHACL governance built and run against the entire EIOPA Register of Insurance Undertakings, 33,924 rows joined with a same-day GLEIF harvest of all 3,630 LEIs the register files. 643 of 3,304 active domestic (re)insurers (19.5%) carry no LEI at all. Four filed LEI values are arithmetically impossible, including a letter-O-for-zero transposition that silently severs a Danish insurer from the global identifier system. 118 active insurers&apos; LEIs have lapsed, 42 point at entities GLEIF says have ceased to exist, and one LEI is filed for both SCOR Global Reinsurance France and SCOR Global Reinsurance Ireland, two distinct reinsurance legal entities on one identifier. 283 cross-border passports outlive the authorization they derive from. Mapped, capability by capability, against the 2026 crop of insurance ontologist job advertisements from Munich Re, The Hartford, S&amp;P Global and AIG.</p>
+             <div className="mt-3 flex flex-wrap gap-3 items-center">
+               <Link to="/research/insurance-register-ontology" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">Read the study</Link>
+               <a href="https://github.com/fabio-rovai/insurance-register-ontology" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">repository on GitHub<span className="sr-only"> (opens in new tab)</span></a>
+             </div>
+           </li>
            <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
              <Link to="/research/investment-fund-ontology"><h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark hover:underline transition-colors">The Largest Index Fund Is Missing From the Open Identifier Map: the US Fund Register as a Governance Graph</h3></Link>
              <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Open ontology, full-universe measurement, 2026</p>

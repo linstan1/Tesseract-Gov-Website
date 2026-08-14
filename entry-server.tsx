@@ -38,6 +38,7 @@ import { NeurosymbolicSpaceKg } from './pages/research/NeurosymbolicSpaceKg';
 import { WasteReportingLoss } from './pages/research/WasteReportingLoss';
 import { FinancialAnswerVerification } from './pages/research/FinancialAnswerVerification';
 import { InvestmentFundOntology } from './pages/research/InvestmentFundOntology';
+import { InsuranceRegisterOntology } from './pages/research/InsuranceRegisterOntology';
 import { SpaceMetricsCrosswalk } from './pages/research/SpaceMetricsCrosswalk';
 import { Ies4TurtleLanguageModel } from './pages/research/Ies4TurtleLanguageModel';
 import { OntologyCorrectnessBench } from './pages/research/OntologyCorrectnessBench';
@@ -115,6 +116,7 @@ const SSRApp: React.FC = () => (
         <Route path="/research/waste-reporting-loss" element={<WasteReportingLoss />} />
         <Route path="/research/financial-answer-verification" element={<FinancialAnswerVerification />} />
         <Route path="/research/investment-fund-ontology" element={<InvestmentFundOntology />} />
+        <Route path="/research/insurance-register-ontology" element={<InsuranceRegisterOntology />} />
         <Route path="/research/space-metrics-crosswalk" element={<SpaceMetricsCrosswalk />} />
         <Route path="/research/ies4-turtle-language-model" element={<Ies4TurtleLanguageModel />} />
         <Route path="/research/ontology-correctness-benchmark" element={<OntologyCorrectnessBench />} />
