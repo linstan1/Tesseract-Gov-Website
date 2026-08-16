@@ -189,7 +189,28 @@ export const Research: React.FC = () => {
            </li>
         </PublicationGroup>
 
-        <PublicationGroup title="Economy, finance & skills" count={12}>
+        <PublicationGroup title="Register assurance" count={1}>
+           <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
+             <Link to="/research/register-assurance"><h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark hover:underline transition-colors">Register Assurance: Why Every Public Register Fails at Its Boundary</h3></Link>
+             <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Research programme pillar, 2026</p>
+             <p className="text-base text-gov-dark/90 leading-relaxed">Public registers increasingly assure their own records, and GLEIF is the standing proof that it can be done: 99.99 average data-quality score across 3.39 million LEI records. But assurance stops at the register boundary. Nothing checks conformance when one register embeds another&apos;s identifiers, nothing verifies that embedded identifiers still resolve, and nothing reconciles what two registers claim about the same entity. Measured across six domains with one open method, the boundary fails in the same four ways every time: embedded-scheme non-conformance, resolution failure, cross-register disagreement, and missing governance metadata. All 2,252 FDIC LEIs are truncated and invalid, 19.5 per cent of active EEA insurers carry no LEI, the largest index fund is missing from the open identifier map, the registers of retraction agree on 72.42 per cent, all 67,141 dereferenced US academic-standards identifiers return 404, and zero of 300 sampled GOV.UK documents carry any maintenance commitment. The pillar names the discipline, indexes the six open ontologies as one program, and announces the Register Integrity Index.</p>
+             <div className="mt-3 flex flex-wrap gap-3 items-center">
+               <Link to="/research/register-assurance" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">Read the pillar</Link>
+               <a href="https://github.com/fabio-rovai/register-integrity-index" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">register-integrity-index on GitHub<span className="sr-only"> (opens in new tab)</span></a>
+             </div>
+           </li>
+        </PublicationGroup>
+
+        <PublicationGroup title="Economy, finance & skills" count={13}>
+           <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
+             <Link to="/research/bank-register-ontology"><h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark hover:underline transition-colors">The FDIC Publishes 2,252 Legal Entity Identifiers. Not One of Them Is a Valid LEI.</h3></Link>
+             <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Open ontology, full-register measurement, 2026</p>
+             <p className="text-base text-gov-dark/90 leading-relaxed">Every LEI value in the FDIC BankFind register is exactly 16 characters, truncated from the 20 that ISO 17442 requires, discarding both check digits, so no value can be validated and none matches the Global LEI System as published. Resolving all of them against the complete GLEIF golden copy of 3,403,760 records shows why arithmetic cannot repair it: 16 characters puts 6.37 per cent of the entire global LEI population into a collision, and nine FDIC values denote up to six unrelated companies each, across four countries. Two values, confirmed by GLEIF&apos;s own consolidation records, identify the wrong legal entity: Associated Bank carries the LEI of Associated Banc-Corp, its parent holding company, while the bank&apos;s own active LEI appears nowhere in the register. The Federal Reserve&apos;s MDRM dictionary shows the mirror-image defect in the concept fabric: item names and definitions are pure functions of the item code across forms with different consolidation bases, and 27,445 of 47,305 item codes carry no definition at all. An open OWL 2 ontology, SKOS registries and SHACL governance layer, 1,123,634 triples, every headline computed twice, reproducible from public data.</p>
+             <div className="mt-3 flex flex-wrap gap-3 items-center">
+               <Link to="/research/bank-register-ontology" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">Read the study</Link>
+               <a href="https://github.com/fabio-rovai/bank-register-ontology" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">repository on GitHub<span className="sr-only"> (opens in new tab)</span></a>
+             </div>
+           </li>
            <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
              <Link to="/research/enterprise-knowledge-ontology"><h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark hover:underline transition-colors">Your Search Index and Your AI Pipeline Are Reading Different Corpora</h3></Link>
              <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Open ontology, corpus measurement, 2026</p>

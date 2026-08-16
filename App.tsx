@@ -78,6 +78,8 @@ const MuseumVisitsObservatory = lazy(() => import('./pages/research/MuseumVisits
 const Insights = lazy(() => import('./pages/Insights').then(m => ({ default: m.Insights })));
 const FineTuningLlmGovernmentDataStandard = lazy(() => import('./pages/research/FineTuningLlmGovernmentDataStandard').then(m => ({ default: m.FineTuningLlmGovernmentDataStandard })));
 const MachineValidatedOpenOntologies = lazy(() => import('./pages/research/MachineValidatedOpenOntologies').then(m => ({ default: m.MachineValidatedOpenOntologies })));
+const BankRegisterOntology = lazy(() => import('./pages/research/BankRegisterOntology').then(m => ({ default: m.BankRegisterOntology })));
+const RegisterAssurance = lazy(() => import('./pages/research/RegisterAssurance').then(m => ({ default: m.RegisterAssurance })));
 
 const PAGE_META: Record<string, { title: string; description: string }> = {
   '/': {
@@ -187,6 +189,14 @@ const PAGE_META: Record<string, { title: string; description: string }> = {
   '/research/insurance-register-ontology': {
     title: 'An open ontology for insurance and reinsurance: what the EU register says about 3,304 insurers, and what it gets wrong | Tesseract Academy for the Public Sector',
     description: 'The first open OWL 2 ontology, SKOS registry and SHACL governance layer for insurance and reinsurance entity data, built against the complete EIOPA Register of Insurance Undertakings (33,924 rows), joined to GLEIF and cross-checked against the German national register. 643 of 3,304 active EEA insurers carry no LEI. Four filed LEI values are arithmetically impossible, including a letter O where the real identifier carries a zero. 118 have lapsed, 42 name entities GLEIF says no longer exist, one identifier is shared by SCOR Global Reinsurance France and SCOR Global Reinsurance Ireland, and 283 passports outlive the authorisation they depend on. Where both registers populate the field they agree perfectly across 344 undertakings: the problem is coverage, not contradiction. Reproducible from public data with five commands.',
+  },
+  '/research/bank-register-ontology': {
+    title: 'The FDIC publishes 2,252 Legal Entity Identifiers. Not one of them is a valid LEI. | Tesseract Academy for the Public Sector',
+    description: 'Every LEI in the FDIC BankFind register is truncated to 16 of the 20 characters ISO 17442 requires, discarding both check digits. Measured against the complete GLEIF golden copy of 3,403,760 records: 16 characters puts 6.37 per cent of the global LEI population into a collision, nine FDIC values are ambiguous across up to six unrelated companies, and two resolve to the wrong legal entity, including Associated Bank carrying its parent holding company’s identifier. The Federal Reserve’s MDRM dictionary shows the mirror-image defect: one definition per item code across forms with different consolidation bases, and 58 per cent of item codes with no definition at all. An open OWL 2 ontology, SKOS registries and SHACL governance layer, 1,123,634 triples, reproducible from public data.',
+  },
+  '/research/register-assurance': {
+    title: 'Register assurance: why every public register fails at its boundary | Tesseract Academy for the Public Sector',
+    description: 'Public registers increasingly assure their own records: GLEIF scores 99.99 across 3.39 million LEI records. But assurance stops at the register boundary: nothing checks conformance when one register embeds another’s identifiers, nothing verifies they still resolve, and nothing reconciles cross-register claims. Measured across six domains with one open method: all 2,252 FDIC LEIs are truncated and invalid, 19.5 per cent of active EEA insurers carry no LEI, the largest index fund is missing from the open identifier map, the registers of retraction agree on 72.42 per cent, all 67,141 dereferenced US academic-standards identifiers return 404, and zero of 300 sampled GOV.UK documents carry any maintenance commitment. Four boundary defect classes, six open ontologies, and the Register Integrity Index.',
   },
   '/research/financial-answer-verification': {
     title: 'Provenance beats plausibility: catching wrong financial answers without a gold key | Tesseract Academy for the Public Sector',
@@ -504,6 +514,8 @@ const App: React.FC = () => {
               <Route path="/insights" element={<Insights />} />
               <Route path="/research/fine-tuning-llm-government-data-standard" element={<FineTuningLlmGovernmentDataStandard />} />
               <Route path="/research/machine-validated-open-ontologies" element={<MachineValidatedOpenOntologies />} />
+              <Route path="/research/bank-register-ontology" element={<BankRegisterOntology />} />
+              <Route path="/research/register-assurance" element={<RegisterAssurance />} />
             </Routes>
           </Suspense>
         </main>

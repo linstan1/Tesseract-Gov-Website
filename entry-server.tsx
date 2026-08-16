@@ -85,6 +85,8 @@ import { MuseumVisitsObservatory } from './pages/research/MuseumVisitsObservator
 import { Insights } from './pages/Insights';
 import { FineTuningLlmGovernmentDataStandard } from './pages/research/FineTuningLlmGovernmentDataStandard';
 import { MachineValidatedOpenOntologies } from './pages/research/MachineValidatedOpenOntologies';
+import { BankRegisterOntology } from './pages/research/BankRegisterOntology';
+import { RegisterAssurance } from './pages/research/RegisterAssurance';
 
 const SSRApp: React.FC = () => (
   <div className="flex flex-col min-h-screen">
@@ -167,6 +169,8 @@ const SSRApp: React.FC = () => (
         <Route path="/insights" element={<Insights />} />
         <Route path="/research/fine-tuning-llm-government-data-standard" element={<FineTuningLlmGovernmentDataStandard />} />
         <Route path="/research/machine-validated-open-ontologies" element={<MachineValidatedOpenOntologies />} />
+        <Route path="/research/bank-register-ontology" element={<BankRegisterOntology />} />
+        <Route path="/research/register-assurance" element={<RegisterAssurance />} />
       </Routes>
     </main>
     <Footer />
