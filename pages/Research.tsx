@@ -189,7 +189,7 @@ export const Research: React.FC = () => {
            </li>
         </PublicationGroup>
 
-        <PublicationGroup title="Economy, finance & skills" count={11}>
+        <PublicationGroup title="Economy, finance & skills" count={12}>
            <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
              <Link to="/research/enterprise-knowledge-ontology"><h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark hover:underline transition-colors">Your Search Index and Your AI Pipeline Are Reading Different Corpora</h3></Link>
              <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Open ontology, corpus measurement, 2026</p>
@@ -206,6 +206,15 @@ export const Research: React.FC = () => {
              <div className="mt-3 flex flex-wrap gap-3 items-center">
                <Link to="/research/scholarly-record-ontology" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">Read the study</Link>
                <a href="https://github.com/fabio-rovai/scholarly-record-ontology" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">repository on GitHub<span className="sr-only"> (opens in new tab)</span></a>
+             </div>
+           </li>
+           <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
+             <Link to="/research/media-attention-ontology"><h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark hover:underline transition-colors">The Content Registry Television Measurement Runs On Covers 1.84 Per Cent of Television</h3></Link>
+             <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Open ontology, full-corpus identifier measurement, 2026</p>
+             <p className="text-base text-gov-dark/90 leading-relaxed">EIDR is the audiovisual industry&apos;s own content registry, and it models properly the distinction measurement depends on: a title is not a cut, and a cut is not an encoding, because nobody watches an abstraction and duration is what completion and frequency are computed from. In the open graph it reaches 53.44 per cent of films and 1.84 per cent of television series. We harvested 224,710 EIDR identifier assertions across 224,182 works and resolved 1,179 of them against EIDR&apos;s public registry to learn what each actually denotes. Of the 522 works carrying more than one EIDR identifier, 285 hold identifiers at more than one level of the abstraction hierarchy at once, pairing a title-level record with a specific cut as though they were interchangeable, and a further 133 identifiers are each claimed by two distinct works. There is a trap for implementers underneath all of it: EIDR runs ISO 7064 MOD 37,36 but maps the supplementary value to the digit 0 where the standard convention is an asterisk, so a validator built from the standard alone rejects 6,252 perfectly valid identifiers, one in thirty-six, as corrupt, while across all 224,577 distinct identifiers exactly zero genuinely fail their arithmetic. IMDb mints no season-level identifier at all and covers 0.78 per cent of seasons. The IAB Tech Lab taxonomies, the advertising industry&apos;s shared vocabularies for content, audience and ad product, contain no RDF, SKOS or OWL of any kind, and are published here as SKOS for the first time, 2,845 concepts, with the 10 structural defects found in the source reported rather than repaired. schema.org carries 2,987 labelled terms and not one expresses viewership, impressions, exposure or reach. 2,702,154 triples, findings computed twice and agreeing exactly, reproducible from public data.</p>
+             <div className="mt-3 flex flex-wrap gap-3 items-center">
+               <Link to="/research/media-attention-ontology" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">Read the study</Link>
+               <a href="https://github.com/fabio-rovai/media-attention-ontology" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">repository on GitHub<span className="sr-only"> (opens in new tab)</span></a>
              </div>
            </li>
            <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">

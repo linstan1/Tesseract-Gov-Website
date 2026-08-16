@@ -33,6 +33,7 @@ const FinancialAnswerVerification = lazy(() => import('./pages/research/Financia
 const InvestmentFundOntology = lazy(() => import('./pages/research/InvestmentFundOntology').then(m => ({ default: m.InvestmentFundOntology })));
 const InsuranceRegisterOntology = lazy(() => import('./pages/research/InsuranceRegisterOntology').then(m => ({ default: m.InsuranceRegisterOntology })));
 const LearningStandardsOntology = lazy(() => import('./pages/research/LearningStandardsOntology').then(m => ({ default: m.LearningStandardsOntology })));
+const MediaAttentionOntology = lazy(() => import('./pages/research/MediaAttentionOntology').then(m => ({ default: m.MediaAttentionOntology })));
 const ScholarlyRecordOntology = lazy(() => import('./pages/research/ScholarlyRecordOntology').then(m => ({ default: m.ScholarlyRecordOntology })));
 const EnterpriseKnowledgeOntology = lazy(() => import('./pages/research/EnterpriseKnowledgeOntology').then(m => ({ default: m.EnterpriseKnowledgeOntology })));
 const SpaceMetricsCrosswalk = lazy(() => import('./pages/research/SpaceMetricsCrosswalk').then(m => ({ default: m.SpaceMetricsCrosswalk })));
@@ -174,6 +175,10 @@ const PAGE_META: Record<string, { title: string; description: string }> = {
   '/research/scholarly-record-ontology': {
     title: 'Science has no Shepard\u2019s: measuring how far the registers of retraction disagree | Tesseract Academy for the Public Sector',
     description: 'An open ontology and dataset for the integrity status of the scholarly record, measured across four public registers. Crossref and Retraction Watch, both published by Crossref since its 2023 acquisition, agree on only 72.42 per cent of retracted DOIs. OpenAlex flags 94.5 per cent of retraction notices as retracted research, confirmed independently at 95.95 per cent against Europe PMC, while Crossref does so for 0.91 per cent and Europe PMC for 0.32 per cent. Crossref update-type is a closed 12-value enumeration yet the live index holds 34 values, 22 invalid, including two misspellings of retraction and a bare integer. Only 19.24 per cent of a 137,243 DOI union is agreed by all four registers and 43.09 per cent rests on one. 43,683 citations to the most-cited retracted works post-date their retraction, including 1,171 to the Wakefield paper, none carrying a machine-readable warning. Reproducible from public data.',
+  },
+  '/research/media-attention-ontology': {
+    title: 'The content registry television measurement runs on covers 1.84 per cent of television | Tesseract Academy for the Public Sector',
+    description: "EIDR is the audiovisual industry's own content registry and it models the abstraction hierarchy that measurement depends on, yet in the open graph it reaches 53.44 per cent of films and 1.84 per cent of television series. We harvested 224,710 EIDR identifier assertions across 224,182 works and resolved 1,179 of them against EIDR's public registry to learn what each one denotes. 285 of the 522 works carrying more than one EIDR identifier hold identifiers at more than one level of the abstraction hierarchy at once, pairing a title-level record with a specific cut, and 133 identifiers are each claimed by two distinct works. EIDR maps the ISO 7064 MOD 37,36 supplementary value to 0 rather than an asterisk, so a validator built on a stock library rejects 6,252 perfectly valid identifiers, 2.78 per cent, as corrupt; across all 224,577 distinct identifiers zero genuinely fail. IMDb mints no season identifier and covers 0.78 per cent of seasons. The IAB Tech Lab taxonomies contain no RDF, SKOS or OWL of any kind, published here as SKOS for the first time with 2,845 concepts and 10 source defects reported rather than repaired. schema.org has 2,987 labelled terms and none for viewership, impressions, exposure or reach. 2,702,154 triples, reproducible from public data.",
   },
   '/research/learning-standards-ontology': {
     title: 'Every identifier in American K-12 academic standards is dead: 67,141 dereferenced, none resolve | Tesseract Academy for the Public Sector',
@@ -454,6 +459,7 @@ const App: React.FC = () => {
               <Route path="/research/investment-fund-ontology" element={<InvestmentFundOntology />} />
               <Route path="/research/insurance-register-ontology" element={<InsuranceRegisterOntology />} />
               <Route path="/research/learning-standards-ontology" element={<LearningStandardsOntology />} />
+              <Route path="/research/media-attention-ontology" element={<MediaAttentionOntology />} />
               <Route path="/research/scholarly-record-ontology" element={<ScholarlyRecordOntology />} />
               <Route path="/research/enterprise-knowledge-ontology" element={<EnterpriseKnowledgeOntology />} />
               <Route path="/research/space-metrics-crosswalk" element={<SpaceMetricsCrosswalk />} />
