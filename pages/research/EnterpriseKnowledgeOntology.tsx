@@ -221,6 +221,38 @@ export const EnterpriseKnowledgeOntology: React.FC = () => (
     </section>
 
     <section className="space-y-4">
+      <h2 className="text-2xl font-bold text-gov-dark font-serif">A second corpus, and the claim we could not previously prove</h2>
+      <p className="text-gov-dark leading-relaxed">
+        Everything above rests on an estate that publishes no verification date, which left the most important claim in the framework as an argument rather than a measurement. We said that time since last modification flatters a corpus, because a typo fix resets it without anyone checking a fact. We could not show it, because GOV.UK does not record the other quantity.
+      </p>
+      <p className="text-gov-dark leading-relaxed">
+        Docs-as-code estates do. Microsoft Learn&apos;s house style defines the <code>ms.date</code> field as the date an article was last reviewed for accuracy, and git records independently when the file actually changed. So we scanned two more corpora on 16 August 2026: the Kubernetes documentation, 1,672 documents, and the .NET documentation, 13,412 documents.
+      </p>
+      <div className="overflow-x-auto">
+        <table className="w-full text-sm border border-gov-border">
+          <thead className="bg-gov-bg/40"><tr><th className="p-3 text-left">Corpus</th><th className="p-3 text-right">Declared verification date</th><th className="p-3 text-right">Named owner</th><th className="p-3 text-right">Strict commitment</th></tr></thead>
+          <tbody className="divide-y divide-gov-border">
+            <tr><td className="p-3">GOV.UK guidance (54,222)</td><td className="p-3 text-right font-semibold">0%</td><td className="p-3 text-right font-semibold">0%</td><td className="p-3 text-right font-bold">0%</td></tr>
+            <tr><td className="p-3">kubernetes/website (1,672)</td><td className="p-3 text-right font-semibold">0%</td><td className="p-3 text-right font-semibold">14.0%</td><td className="p-3 text-right font-bold">0%</td></tr>
+            <tr><td className="p-3">dotnet/docs (13,412)</td><td className="p-3 text-right font-semibold">98.9%</td><td className="p-3 text-right font-semibold">9.8%</td><td className="p-3 text-right font-bold">9.8%</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p className="text-gov-dark leading-relaxed">
+        Kubernetes names people and never dates a check. Microsoft dates almost every check and rarely names anyone. The two estates fail in opposite directions, and neither manages both across most of its corpus.
+      </p>
+      <p className="text-gov-dark leading-relaxed">
+        On the 13,267 .NET documents carrying both signals, they diverge sharply. The median document was last declared verified <strong>9.38 years ago</strong> and last changed <strong>1.94 years ago</strong>. Measured by declared verification, 87.8 per cent are stale beyond two years. Measured by modification, 49.6 per cent are. <strong>5,077 documents, 38.3 per cent of the corpus, look current by modification and are stale by their publisher&apos;s own verification date.</strong>
+      </p>
+      <p className="text-gov-dark leading-relaxed">
+        The obvious objection is that this is just documentation for closed technologies, and it deserved testing rather than dismissing. Splitting the corpus, the frozen legacy subtrees such as WCF and .NET Framework show a 37.4 point gap between the two measures. The actively developed half shows <strong>40.0 points</strong>: a median of six months since last change against nearly four years since last declared verification. The effect is larger where the work is live, so it is not an artefact of abandoned content.
+      </p>
+      <p className="text-gov-dark leading-relaxed">
+        What this actually indicts is not Microsoft. Frozen content is a legitimate state, and documentation for a closed technology does not need re-verifying every quarter. The defect is that the corpus cannot say so. A document last verified in 2017 because the technology is closed, one last verified in 2017 because nobody has looked, and one whose date was stamped once and abandoned are indistinguishable in the data. All three present as the same stale date. A declared review cadence and a scope statement are what separate them, which is why both are mandatory fields in the ontology rather than optional ones.
+      </p>
+    </section>
+
+    <section className="space-y-4">
       <h2 className="text-2xl font-bold text-gov-dark font-serif">What already exists, and what was missing</h2>
       <p className="text-gov-dark leading-relaxed">
         We should be clear about what is and is not new here, because two bodies of work sit right next to this one.
