@@ -189,7 +189,16 @@ export const Research: React.FC = () => {
            </li>
         </PublicationGroup>
 
-        <PublicationGroup title="Economy, finance & skills" count={8}>
+        <PublicationGroup title="Economy, finance & skills" count={9}>
+           <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
+             <Link to="/research/scholarly-record-ontology"><h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark hover:underline transition-colors">Science Has No Shepard&apos;s: Measuring How Far the Registers of Retraction Disagree</h3></Link>
+             <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Open ontology, four-register measurement, 2026</p>
+             <p className="text-base text-gov-dark/90 leading-relaxed">Legal research has known since 1873 whether an authority still stands, because Frank Shepard began printing citation labels marking which decisions had been overruled. Science has registers of retraction instead, and they do not agree. We built an open OWL ontology, SKOS status vocabulary and three-layer SHACL suite for the integrity status of scholarly works, then measured it against four public registers. Crossref and Retraction Watch, both published by Crossref since it acquired the database in September 2023, agree on only 72.42 per cent of the retracted DOIs between them. OpenAlex flags 94.5 per cent of retraction notices as retracted research, a category error confirmed independently at 95.95 per cent against Europe PMC&apos;s MEDLINE publication types, while Crossref does this for 0.91 per cent of the same notices and Europe PMC for 0.32 per cent, which shows the distinction is achievable rather than hard. The central metadata field carries 19 uncontrolled values including two different misspellings of retraction and a bare integer. Only 19.24 per cent of a 137,243 DOI union is agreed by all four registers. 43,683 citations to the most-cited retracted works post-date their retraction, including 1,171 to the Wakefield paper retracted in 2010 for falsification, none carrying any machine-readable warning. 3.19 million triples, reproducible from public data.</p>
+             <div className="mt-3 flex flex-wrap gap-3 items-center">
+               <Link to="/research/scholarly-record-ontology" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">Read the study</Link>
+               <a href="https://github.com/fabio-rovai/scholarly-record-ontology" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">repository on GitHub<span className="sr-only"> (opens in new tab)</span></a>
+             </div>
+           </li>
            <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
              <Link to="/research/insurance-register-ontology"><h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark hover:underline transition-colors">An Open Ontology for Insurance and Reinsurance, Tested Against Every Insurer in Europe</h3></Link>
              <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Open ontology, full-register measurement, 2026</p>
