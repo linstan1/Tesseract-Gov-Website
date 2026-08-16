@@ -13,11 +13,11 @@ const SCHEMA = {
   headline:
     'The largest index fund is missing from the open identifier map: the US fund register as a governance graph | Tesseract Academy',
   description:
-    'An open OWL 2 ontology, SKOS identifier registry and SHACL governance layer built against the whole public US fund universe: 2,316 registrants, 14,841 funds, 43,344 share classes, joined to four quarters of Form N-CEN and all 9,119,948 GLEIF ISIN-LEI pairs, every pair check-digit validated with zero failures. SEC filings are not as clean: 19 of 14,960 self-reported LEIs (0.13%) fail the same check digit. Only 497 of 4,053 self-reported ETF fund LEIs (12.3%) carry any ISIN in GLEIF\'s open mapping, including the Vanguard 500 Index Fund, which holds a valid ISIN in commercial data that GLEIF\'s open file simply does not carry. 29,258 of 30,238 register quotations (96.8%) carry no venue field, mostly because the field is ETF-only in the source schema. Class-level ISIN resolution is enclosed behind licensed CUSIP data: 259 of 19,803 funds (1.3%) resolve from public data alone. Figures as of the 14 August 2026 build.',
+    'An open OWL 2 ontology, SKOS identifier registry and SHACL governance layer built against the whole public US fund universe: 2,316 registrants, 14,841 funds, 43,344 share classes, joined to four quarters of Form N-CEN and all 9,119,948 GLEIF ISIN-LEI pairs, every pair check-digit validated with zero failures. SEC filings are not as clean: 19 of 14,960 self-reported LEIs (0.13%) fail the same check digit. Only 497 of 4,053 self-reported ETF fund LEIs (12.3%) carry any ISIN in GLEIF\'s open mapping, including the Vanguard 500 Index Fund, which holds a valid ISIN in commercial data that GLEIF\'s open file simply does not carry. 29,258 of 30,238 register quotations (96.8%) carry no venue field, mostly because the field is ETF-only in the source schema. Class-level ISIN resolution is enclosed behind licensed CUSIP data: 259 of 19,803 funds (1.3%) resolve from public data alone by unique pairing. The v0.2 release then builds the missing open map from SEC N-PORT filings and OpenFIGI: 2,186 of 5,176 fund-ISIN rows (42.2%) resolve to an exact SEC share class, ETF open-ISIN coverage rises from 12.3% to 35.4%, and one quarter of N-PORT attests 235,327 LEI-ISIN pairs of which 185,894 (79%) are absent from the GLEIF open file. Baseline figures as of the 14 August 2026 build; open-map figures as of v0.2.',
   author: { '@id': 'https://gov.tesseract.academy/#organization' },
   publisher: { '@id': 'https://gov.tesseract.academy/#organization' },
   datePublished: '2026-08-14',
-  dateModified: '2026-08-14',
+  dateModified: '2026-08-16',
   about: {
     '@type': 'Dataset',
     name: 'Investment Fund Ontology (IFO) and full-universe US build',
@@ -52,7 +52,7 @@ const FINDINGS = [
   { f: 'Funds sharing an LEI with their registrant or with sibling series, most plausibly legitimate series-trust structures (one legal entity, many SEC series); graded Warning, a question of identifier granularity rather than a confirmed error', n: '214 funds; largest shared LEI spans 27 series', sev: 'signal' },
   { f: 'Funds whose registered share classes exceed the class count on their own N-CEN annual report', n: '2,148', sev: 'signal' },
   { f: 'ISINs issued by US-registered funds under non-US prefixes (DE, PR, CH, GB, KY, NL)', n: '127 of 7,112 (1.8%)', sev: 'signal' },
-  { f: 'Fund-level ISINs resolvable to an exact share class from public data alone, by unique pairing', n: '259 of 19,803 (1.3%)', sev: 'gap' },
+  { f: 'Fund-level ISINs resolvable to an exact share class from public data alone, by unique pairing. This is the v0.1 baseline; the v0.2 open map below lifts exact-class resolution to 42.2% of fund-ISIN rows', n: '259 of 19,803 (1.3%)', sev: 'gap' },
 ];
 
 const SEV_STYLE: Record<string, string> = {
@@ -172,6 +172,24 @@ export const InvestmentFundOntology: React.FC = () => (
     </section>
 
     <section className="space-y-4">
+      <div className="rounded-lg border border-gov-blue/30 bg-gov-blue/5 p-6 space-y-4">
+        <h2 className="text-2xl font-bold text-gov-dark font-serif">Update, 16 August 2026: v0.2 builds the open map this page said was missing</h2>
+        <p className="text-gov-dark leading-relaxed">
+          The findings above are the v0.1 baseline, and the natural objection to them is: if the last hop is licensed, can it be rebuilt from public data at all? Release v0.2 of the repository answers that with a working artefact. The open fund identifier map joins three keyless public sources: GLEIF&apos;s open ISIN-to-LEI mapping, the SEC&apos;s Form N-PORT portfolio filings (in which every fund that holds another fund must state that holding&apos;s ISIN), and the OpenFIGI API. No CUSIP, no SEDOL, no licensed feed anywhere in the pipeline.
+        </p>
+        <ul className="list-disc pl-5 space-y-2 text-gov-dark leading-relaxed">
+          <li><strong>Exact-class resolution goes from 259 funds to 2,186 of 5,176 fund-ISIN rows (42.2%)</strong>, an 8.4x lift over the forced-pairing baseline, with zero ticker conflicts across the map and 86.4% of rows carrying FIGIs.</li>
+          <li><strong>ETF open-ISIN coverage rises from 12.3% to 35.4%.</strong> 937 ETFs gain their first open ISIN from a single quarter of N-PORT; three more quarters remain to be folded in.</li>
+          <li><strong>One quarter of N-PORT attests 235,327 (LEI, ISIN) pairs. 185,894 of them (79%) are absent from GLEIF&apos;s open file, and 2,055 contradict it.</strong> The open map is not merely thinner than the licensed one; it is missing four fifths of what regulatory filings themselves attest, and the filings are public.</li>
+          <li>The same pass surfaced four more ISINs in SEC filings that fail their own check digit, extending the v0.1 defect family.</li>
+        </ul>
+        <p className="text-sm text-gov-secondary/90 leading-relaxed">
+          The map ships in the repository as <code className="text-sm bg-gov-bg px-1.5 py-0.5 rounded">open-map/fund_identifier_map.csv</code> under the v0.2.1 release, together with the resumable OpenFIGI harvester, an offline test suite and CI. The v0.1 figures above stand as the dated baseline they always were; this update is what changes when you stop measuring the gap and start closing it.
+        </p>
+      </div>
+    </section>
+
+    <section className="space-y-4">
       <h2 className="text-2xl font-bold text-gov-dark font-serif">Policy as shapes, arithmetic as code</h2>
       <p className="text-gov-dark leading-relaxed">
         The governance layer is 15 SHACL shapes plus six SPARQL-based business rules, and the division of labour is deliberate. Check-digit arithmetic runs in the pipeline and is asserted into the graph; shapes then require the recorded result to be true. Encoding MOD 97 in SPARQL is possible and unwise. The rules that pay for the machinery are the conditional ones: an exchange-traded fund whose share class has no listing is flagged at the moment of assertion, which is the executable form of &quot;an ETF you cannot trade is a launch defect&quot;. 73 of 4,053 ETF funds (1.8 percent) hit this rule, the single Violation-severity result in the whole governance layer; every other finding on this page is graded Warning. The same rule family catches identifiers attached at the wrong scope level, conflicting LEIs from different sources, and funds whose registered classes exceed the count on their own annual report (2,148 of them, Warning-severity, part timing artefact, part genuine drift, and the shape severity says which interpretation it earns).
@@ -187,7 +205,7 @@ export const InvestmentFundOntology: React.FC = () => (
         <ul className="list-disc pl-5 mt-3 space-y-2 text-gov-dark leading-relaxed">
           <li><strong>Validate at entry, mechanically.</strong> Nineteen of 14,960 self-reported LEIs (0.13%) sit in regulatory filings failing their own check digit because no form divided by 97. A SHACL shape at the point of capture costs nothing and ends the class of defect.</li>
           <li><strong>Treat scope as schema.</strong> Deciding once, in data, whether each scheme names an entity, an issue or a venue admission removes the largest single source of silent reconciliation error between source systems.</li>
-          <li><strong>Do not assume the open fabric covers you.</strong> If your golden-source strategy leans on GLEIF for fund-to-ISIN linkage, measure the coverage first; for self-reported ETFs it is roughly one in eight (497 of 4,053, 12.3%).</li>
+          <li><strong>Do not assume the open fabric covers you.</strong> If your golden-source strategy leans on GLEIF for fund-to-ISIN linkage, measure the coverage first; for self-reported ETFs it is roughly one in eight (497 of 4,053, 12.3%). The v0.2 open map lifts that to 35.4% from public filings alone, which also tells you the residual gap is a data-publication problem, not a data-existence problem.</li>
           <li><strong>Provenance is not optional.</strong> Named graph per source system plus a source assertion on every identifier is what makes &quot;which system said this&quot; a query. Anything less and cross-system disagreement is invisible until it is expensive.</li>
           <li><strong>Honest boundary:</strong> this build is US-only instance data by declared scope, the registry models all six markets; venue resolution and class-level ISIN attachment are limited by what public data can say, and the build report lists every such limit as a finding rather than a footnote.</li>
           <li><strong>These numbers will drift.</strong> The SEC series/class register and the GLEIF file are fetched as latest, not pinned; the N-CEN and N-PORT inputs are pinned and reproduce exactly. Every figure on this page is dated to the 14 August 2026 build against the GLEIF file dated 8 August 2026; a rerun today will not reproduce these exact totals.</li>
