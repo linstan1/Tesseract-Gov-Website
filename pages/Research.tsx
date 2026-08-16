@@ -189,7 +189,16 @@ export const Research: React.FC = () => {
            </li>
         </PublicationGroup>
 
-        <PublicationGroup title="Economy, finance & skills" count={9}>
+        <PublicationGroup title="Economy, finance & skills" count={10}>
+           <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
+             <Link to="/research/enterprise-knowledge-ontology"><h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark hover:underline transition-colors">Your Search Index and Your AI Pipeline Are Reading Different Corpora</h3></Link>
+             <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Open ontology, corpus measurement, 2026</p>
+             <p className="text-base text-gov-dark/90 leading-relaxed">Every organisation is wiring its documents into an AI assistant and almost none can say whether the knowledge is any good, because the field answers that question with adjectives. We built an open OWL ontology defining authority as a property of a maintenance commitment rather than of content, ten SKOS schemes, a SHACL publish gate that exits non-zero in CI, and the Corpus Readiness Index, then ran the instrument against 54,222 GOV.UK guidance documents. Across 300 randomly sampled documents and 133 distinct schema keys, not one field expresses a review date, an owner, a maintainer or a verification date. GOV.UK search correctly returns zero withdrawn documents, while its public sitemap advertises roughly 55,000 of them still serving body text at a median 5.87 years since withdrawal, so any pipeline that crawls rather than consuming the curated index ingests exactly what that index was careful to exclude. 4,810 documents are owned only by organisations that no longer exist, including a 1955 treaty attributed to a department merged away in 2020. 63.5 per cent are unchanged in over two years and 13,595 are still tagged to the 2010 to 2015 coalition government, more than are tagged to the current one. 29.7 per cent carry under 500 characters of indexable text because the answer sits inside an attachment. Reproducible from public data, with a build report listing four defects we found in our own code.</p>
+             <div className="mt-3 flex flex-wrap gap-3 items-center">
+               <Link to="/research/enterprise-knowledge-ontology" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">Read the study</Link>
+               <a href="https://github.com/fabio-rovai/enterprise-knowledge-ontology" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">repository on GitHub<span className="sr-only"> (opens in new tab)</span></a>
+             </div>
+           </li>
            <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
              <Link to="/research/scholarly-record-ontology"><h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark hover:underline transition-colors">Science Has No Shepard&apos;s: Measuring How Far the Registers of Retraction Disagree</h3></Link>
              <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Open ontology, four-register measurement, 2026</p>

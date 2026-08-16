@@ -33,6 +33,7 @@ const FinancialAnswerVerification = lazy(() => import('./pages/research/Financia
 const InvestmentFundOntology = lazy(() => import('./pages/research/InvestmentFundOntology').then(m => ({ default: m.InvestmentFundOntology })));
 const InsuranceRegisterOntology = lazy(() => import('./pages/research/InsuranceRegisterOntology').then(m => ({ default: m.InsuranceRegisterOntology })));
 const ScholarlyRecordOntology = lazy(() => import('./pages/research/ScholarlyRecordOntology').then(m => ({ default: m.ScholarlyRecordOntology })));
+const EnterpriseKnowledgeOntology = lazy(() => import('./pages/research/EnterpriseKnowledgeOntology').then(m => ({ default: m.EnterpriseKnowledgeOntology })));
 const SpaceMetricsCrosswalk = lazy(() => import('./pages/research/SpaceMetricsCrosswalk').then(m => ({ default: m.SpaceMetricsCrosswalk })));
 const Ies4TurtleLanguageModel = lazy(() => import('./pages/research/Ies4TurtleLanguageModel').then(m => ({ default: m.Ies4TurtleLanguageModel })));
 const OntologyCorrectnessBench = lazy(() => import('./pages/research/OntologyCorrectnessBench').then(m => ({ default: m.OntologyCorrectnessBench })));
@@ -164,6 +165,10 @@ const PAGE_META: Record<string, { title: string; description: string }> = {
   '/research/investment-fund-ontology': {
     title: 'The largest index fund is missing from the open identifier map: the US fund register as a governance graph | Tesseract Academy for the Public Sector',
     description: 'An open OWL 2 ontology, SKOS identifier registry and SHACL governance layer built against the whole public US fund universe: 2,316 registrants, 14,841 funds, 43,344 share classes, joined to four quarters of Form N-CEN and all 9,119,948 GLEIF ISIN-LEI pairs, every pair check-digit validated with zero failures. SEC filings are not as clean: 19 of 14,960 self-reported LEIs (0.13%) fail the same check digit. Only 497 of 4,053 self-reported ETF fund LEIs (12.3%) carry any ISIN in GLEIF\'s open mapping, including the Vanguard 500 Index Fund, which holds a valid ISIN in commercial data that GLEIF\'s open file simply does not carry. 29,258 of 30,238 register quotations (96.8%) carry no venue field, mostly because the field is ETF-only in the source schema. Class-level ISIN resolution is enclosed behind licensed CUSIP data: 259 of 19,803 funds (1.3%) resolve from public data alone. Twenty identifier schemes across six markets, FIBO alignment with every target IRI verified live. Figures as of the 14 August 2026 build.',
+  },
+  '/research/enterprise-knowledge-ontology': {
+    title: 'Your search index and your AI pipeline are reading different corpora | Tesseract Academy for the Public Sector',
+    description: 'An open OWL ontology, ten SKOS schemes, a SHACL publish gate and the Corpus Readiness Index, measured against 54,222 GOV.UK guidance documents. Across 300 randomly sampled documents and 133 distinct schema keys, zero carry any field expressing who maintains the content or when it was last verified. GOV.UK search returns zero withdrawn documents while its public sitemap advertises roughly 55,000 of them, still serving body text, median 5.87 years since withdrawal, so a retrieval pipeline that crawls ingests exactly what the curated index excludes. 4,810 documents are owned only by organisations that no longer exist. 63.5 per cent are unchanged in over two years and 13,595 are still tagged to the 2010 to 2015 coalition government. 29.7 per cent carry under 500 characters of indexable text because the answer is inside an attachment. Reproducible from public data.',
   },
   '/research/scholarly-record-ontology': {
     title: 'Science has no Shepard\u2019s: measuring how far the registers of retraction disagree | Tesseract Academy for the Public Sector',
@@ -444,6 +449,7 @@ const App: React.FC = () => {
               <Route path="/research/investment-fund-ontology" element={<InvestmentFundOntology />} />
               <Route path="/research/insurance-register-ontology" element={<InsuranceRegisterOntology />} />
               <Route path="/research/scholarly-record-ontology" element={<ScholarlyRecordOntology />} />
+              <Route path="/research/enterprise-knowledge-ontology" element={<EnterpriseKnowledgeOntology />} />
               <Route path="/research/space-metrics-crosswalk" element={<SpaceMetricsCrosswalk />} />
               <Route path="/research/ies4-turtle-language-model" element={<Ies4TurtleLanguageModel />} />
               <Route path="/research/ontology-correctness-benchmark" element={<OntologyCorrectnessBench />} />
