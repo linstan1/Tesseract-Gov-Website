@@ -321,6 +321,12 @@ export const ScholarlyRecordOntology: React.FC = () => (
         RELX has already taken the citator idea further than most people outside legal publishing realise. Its 2024 Annual Report describes Lexis+ AI as using &quot;the LexisNexis proprietary Retrieval Augmented Generation platform, integrated with advanced Shepard&apos;s Knowledge Graph&quot;, so that customers can harness Shepard&apos;s case law relationship information for &quot;authoritative, complete, and final AI-generated responses&quot;.
       </p>
       <p className="text-gov-dark leading-relaxed">
+        RELX is more explicit still in its 2025 Annual Report, where a diagram of how the group adds value with generative AI places &quot;Knowledge Graphs&quot; in the grounding layer, along an axis labelled &quot;Decreasing hallucination, irrelevant content, non-attributable content (lack of citations)&quot;. The company&apos;s own published position is that knowledge graphs and linking are the mechanism by which attributability is restored. The same report is the only place where Elsevier&apos;s product language names the technique directly, describing a multi-model approach adapted for specific domains &quot;through hybrid search, knowledge graphs, ontologies, large language model and human expertise-based evaluations&quot;.
+      </p>
+      <p className="text-gov-dark leading-relaxed">
+        Set against that, one absence is striking. The word &quot;retract&quot; does not appear anywhere in the 252 pages of the RELX 2025 Annual Report, nor anywhere in its Form 20-F for the same year. Research integrity is disclosed as a formal risk factor, and the detection tooling is described in some detail, but no retraction count, no paper-mill interception figure and no research-integrity metric is published. For a group whose case for its AI products rests on the trustworthiness of its content, that is a conspicuous gap in the reporting rather than in the work.
+      </p>
+      <p className="text-gov-dark leading-relaxed">
         Read that with the scholarly record in mind. RELX has concluded that grounding a language model on legal content is not sufficient on its own, and that the model must also be wired into a knowledge graph of citation treatment so that it does not confidently cite authority that has been overturned. That is exactly the architecture the scientific record lacks, built by the same company, and shipped as a product. If citation-treatment grounding is necessary to stop a legal AI relying on overturned authority, it is necessary for the same reason to stop a scientific AI relying on retracted findings. The difference is not technical. It is that one market pays for the assurance and the other has never been asked to.
       </p>
       <p className="text-gov-dark leading-relaxed">
@@ -329,6 +335,17 @@ export const ScholarlyRecordOntology: React.FC = () => (
     </section>
 
     <section className="space-y-4">
+      <h2 className="text-2xl font-bold text-gov-dark font-serif">Related work</h2>
+      <p className="text-gov-dark leading-relaxed">
+        Retraction has a real quantitative literature and this study sits alongside it rather than ahead of it. Jonas Oppenlaender&apos;s <em>How Ten Publishers Retract Research</em> (arXiv:2602.19197, February 2026) analyses 46,087 retractions in the Retraction Watch database and reports retraction rates per publisher: Hindawi at 320.02 per 10,000 published, IEEE at 17.70, Springer Nature at 9.06 and Elsevier lowest of the ten at 3.97. That work measures who retracts. This one measures whether the registers agree that a retraction happened at all, and whether anything propagates the result, which is a different question about the same corpus.
+      </p>
+      <p className="text-gov-dark leading-relaxed">
+        One finding of Oppenlaender&apos;s bears directly on the ontology. Of 98 articles reinstated following retraction, 86 were published in Elsevier journals. Reinstatement is therefore a real state that occurs at measurable scale, and Retraction Watch records 160 such cases. It is also a state that no existing scholarly vocabulary can express: the string does not occur in CiTO, FaBiO, PSO, PRO, SCoRO or DEO. A record that models retraction as terminal will continue to carry a warning against work that has been cleared, which is a reputational harm to named authors rather than a modelling inconvenience.
+      </p>
+      <p className="text-gov-dark leading-relaxed">
+        A note on reading Elsevier&apos;s low retraction rate. It is equally consistent with a cleaner corpus and with a more conservative retraction practice, and the pairing with the highest reinstatement share is what makes it interesting rather than settled. Our own propagation measurement is the narrower and more defensible claim: where Elsevier does retract, 98.9 per cent of those papers carry a corresponding Crossref assertion.
+      </p>
+
       <h2 className="text-2xl font-bold text-gov-dark font-serif">What we are not claiming</h2>
       <p className="text-gov-dark leading-relaxed">
         We cannot compare any of this against Scopus or Web of Science, because both are licensed products with no open API for the purpose. That limitation is itself part of the point: the open record is what most downstream tooling actually consumes, and increasingly what language models are trained and grounded on.
