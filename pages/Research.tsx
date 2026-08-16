@@ -189,7 +189,7 @@ export const Research: React.FC = () => {
            </li>
         </PublicationGroup>
 
-        <PublicationGroup title="Economy, finance & skills" count={10}>
+        <PublicationGroup title="Economy, finance & skills" count={11}>
            <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
              <Link to="/research/enterprise-knowledge-ontology"><h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark hover:underline transition-colors">Your Search Index and Your AI Pipeline Are Reading Different Corpora</h3></Link>
              <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Open ontology, corpus measurement, 2026</p>
@@ -206,6 +206,15 @@ export const Research: React.FC = () => {
              <div className="mt-3 flex flex-wrap gap-3 items-center">
                <Link to="/research/scholarly-record-ontology" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">Read the study</Link>
                <a href="https://github.com/fabio-rovai/scholarly-record-ontology" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">repository on GitHub<span className="sr-only"> (opens in new tab)</span></a>
+             </div>
+           </li>
+           <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
+             <Link to="/research/learning-standards-ontology"><h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark hover:underline transition-colors">Every Identifier Underneath American Academic Standards Is Dead, and the Redirect Still Works</h3></Link>
+             <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Open ontology, three-population census, 2026</p>
+             <p className="text-base text-gov-dark/90 leading-relaxed">The Achievement Standards Network minted the persistent identifiers that United States K-12 academic standards were published under, and that the LRMI educationalAlignment pattern was designed around, so they sit inside learning-resource metadata across the open education web. We dereferenced 67,141 of them across three populations, two of which are complete censuses rather than samples. Every single one returns HTTP 404. The vocabulary that describes them still returns 200, served from a static object store, so a system checking whether the scheme is alive gets a reassuring and false answer. The dependency reaches the standards bodies: 1EdTech, publisher of the successor specification CASE, ships a QTI v3 example package whose curriculum references are dead ASN URIs, and so do DCMI&apos;s own worked LRMI examples. Alongside the census we measured what the surviving artefacts can reject. The CEDS Ontology v14 from the US Department of Education declares zero owl:ObjectProperty and zero rdfs:domain across its 2,336 properties, types 965 terms as both an owl:Class and a skos:ConceptScheme, and publishes 19,546 concepts with no broader relations at all; given six specific mis-statements it detects none, five of them being inexpressible in it, while the abandoned 465-triple ASN schema detects one. The corpus fails in both directions at once: 433 identifiers name materially different standards, one attaching four statements about controlled investigations and one about cellular respiration to the same name, while the single most replicated statement text carries 718 distinct identifiers. In the live Georgia CASE package, 2,453 of 2,483 associations are document structure and cross-framework associations number zero. 1,931,913 standard statements across 771 jurisdictions, 21,404,069 triples, reproducible from public data.</p>
+             <div className="mt-3 flex flex-wrap gap-3 items-center">
+               <Link to="/research/learning-standards-ontology" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">Read the study</Link>
+               <a href="https://github.com/fabio-rovai/learning-standards-ontology" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">repository on GitHub<span className="sr-only"> (opens in new tab)</span></a>
              </div>
            </li>
            <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">

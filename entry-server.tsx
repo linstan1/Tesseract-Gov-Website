@@ -39,6 +39,7 @@ import { WasteReportingLoss } from './pages/research/WasteReportingLoss';
 import { FinancialAnswerVerification } from './pages/research/FinancialAnswerVerification';
 import { InvestmentFundOntology } from './pages/research/InvestmentFundOntology';
 import { InsuranceRegisterOntology } from './pages/research/InsuranceRegisterOntology';
+import { LearningStandardsOntology } from './pages/research/LearningStandardsOntology';
 import { ScholarlyRecordOntology } from './pages/research/ScholarlyRecordOntology';
 import { EnterpriseKnowledgeOntology } from './pages/research/EnterpriseKnowledgeOntology';
 import { SpaceMetricsCrosswalk } from './pages/research/SpaceMetricsCrosswalk';
@@ -119,6 +120,7 @@ const SSRApp: React.FC = () => (
         <Route path="/research/financial-answer-verification" element={<FinancialAnswerVerification />} />
         <Route path="/research/investment-fund-ontology" element={<InvestmentFundOntology />} />
         <Route path="/research/insurance-register-ontology" element={<InsuranceRegisterOntology />} />
+        <Route path="/research/learning-standards-ontology" element={<LearningStandardsOntology />} />
         <Route path="/research/scholarly-record-ontology" element={<ScholarlyRecordOntology />} />
         <Route path="/research/enterprise-knowledge-ontology" element={<EnterpriseKnowledgeOntology />} />
         <Route path="/research/space-metrics-crosswalk" element={<SpaceMetricsCrosswalk />} />

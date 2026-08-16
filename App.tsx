@@ -32,6 +32,7 @@ const WasteReportingLoss = lazy(() => import('./pages/research/WasteReportingLos
 const FinancialAnswerVerification = lazy(() => import('./pages/research/FinancialAnswerVerification').then(m => ({ default: m.FinancialAnswerVerification })));
 const InvestmentFundOntology = lazy(() => import('./pages/research/InvestmentFundOntology').then(m => ({ default: m.InvestmentFundOntology })));
 const InsuranceRegisterOntology = lazy(() => import('./pages/research/InsuranceRegisterOntology').then(m => ({ default: m.InsuranceRegisterOntology })));
+const LearningStandardsOntology = lazy(() => import('./pages/research/LearningStandardsOntology').then(m => ({ default: m.LearningStandardsOntology })));
 const ScholarlyRecordOntology = lazy(() => import('./pages/research/ScholarlyRecordOntology').then(m => ({ default: m.ScholarlyRecordOntology })));
 const EnterpriseKnowledgeOntology = lazy(() => import('./pages/research/EnterpriseKnowledgeOntology').then(m => ({ default: m.EnterpriseKnowledgeOntology })));
 const SpaceMetricsCrosswalk = lazy(() => import('./pages/research/SpaceMetricsCrosswalk').then(m => ({ default: m.SpaceMetricsCrosswalk })));
@@ -173,6 +174,10 @@ const PAGE_META: Record<string, { title: string; description: string }> = {
   '/research/scholarly-record-ontology': {
     title: 'Science has no Shepard\u2019s: measuring how far the registers of retraction disagree | Tesseract Academy for the Public Sector',
     description: 'An open ontology and dataset for the integrity status of the scholarly record, measured across four public registers. Crossref and Retraction Watch, both published by Crossref since its 2023 acquisition, agree on only 72.42 per cent of retracted DOIs. OpenAlex flags 94.5 per cent of retraction notices as retracted research, confirmed independently at 95.95 per cent against Europe PMC, while Crossref does so for 0.91 per cent and Europe PMC for 0.32 per cent. Crossref update-type is a closed 12-value enumeration yet the live index holds 34 values, 22 invalid, including two misspellings of retraction and a bare integer. Only 19.24 per cent of a 137,243 DOI union is agreed by all four registers and 43.09 per cent rests on one. 43,683 citations to the most-cited retracted works post-date their retraction, including 1,171 to the Wakefield paper, none carrying a machine-readable warning. Reproducible from public data.',
+  },
+  '/research/learning-standards-ontology': {
+    title: 'Every identifier in American K-12 academic standards is dead: 67,141 dereferenced, none resolve | Tesseract Academy for the Public Sector',
+    description: 'The Achievement Standards Network was the identifier layer for United States academic standards, and its identifiers sit inside learning-resource metadata across the open education web. We dereferenced 67,141 of them across three populations, two of them complete censuses: every single one returns HTTP 404, while the vocabulary describing them still returns 200 from a static object store. 1EdTech, the body behind the successor specification CASE, ships a QTI v3 example package whose curriculum references are dead ASN URIs, as do DCMI\'s own LRMI examples. The CEDS Ontology v14 declares zero owl:ObjectProperty and zero rdfs:domain across 2,336 properties, types 965 terms as both an owl:Class and a skos:ConceptScheme, and publishes 19,546 concepts with no broader relations. Given six mis-statements it detects none, five being inexpressible in it, while the abandoned 465-triple ASN schema detects one. 433 identifiers name materially different standards and the most replicated statement text carries 718 distinct identifiers. 1,931,913 standard statements, 771 jurisdictions, 21,404,069 triples, reproducible from public data.',
   },
   '/research/insurance-register-ontology': {
     title: 'An open ontology for insurance and reinsurance: what the EU register says about 3,304 insurers, and what it gets wrong | Tesseract Academy for the Public Sector',
@@ -448,6 +453,7 @@ const App: React.FC = () => {
               <Route path="/research/financial-answer-verification" element={<FinancialAnswerVerification />} />
               <Route path="/research/investment-fund-ontology" element={<InvestmentFundOntology />} />
               <Route path="/research/insurance-register-ontology" element={<InsuranceRegisterOntology />} />
+              <Route path="/research/learning-standards-ontology" element={<LearningStandardsOntology />} />
               <Route path="/research/scholarly-record-ontology" element={<ScholarlyRecordOntology />} />
               <Route path="/research/enterprise-knowledge-ontology" element={<EnterpriseKnowledgeOntology />} />
               <Route path="/research/space-metrics-crosswalk" element={<SpaceMetricsCrosswalk />} />
