@@ -10,7 +10,7 @@ const SCHEMA = {
   '@id': 'https://gov.tesseract.academy/research/semantic-asset-register#article',
   mainEntityOfPage: 'https://gov.tesseract.academy/research/semantic-asset-register',
   headline:
-    '13,040,382 triples of US federal vocabulary. 130 findings. Only 10 of them break a rule. | Tesseract Academy',
+    'What 13 Million Triples Reveal About the Quality of US Federal Vocabularies | Tesseract Academy',
   description:
     'An open, re-runnable quality assessment of 28 vocabularies and ontologies published by 10 US federal agencies. Every check names the authority it derives from and declares whether failing it violates a published specification or departs from a community practice the publisher never agreed to. 10 normative failures against 120 conventional ones. The Library of Congress MADS/RDF ontology does not parse, and 7,782 concepts depend on it. All 507 ISO 639-2 concepts violate SKOS integrity condition S14 because the vocabulary of language codes carries no language tags. Findings are W3C EARL assertions anchored to dated, hashed retrievals, every headline computed twice by two independent paths.',
   author: { '@id': 'https://gov.tesseract.academy/#organization' },
@@ -94,7 +94,7 @@ export const SemanticAssetRegister: React.FC = () => (
     <header className="space-y-4">
       <p className="text-xs font-semibold uppercase tracking-wider text-gov-blue">Open research, August 2026</p>
       <h1 className="text-4xl font-extrabold text-gov-dark mb-6 tracking-tight leading-tight font-serif">
-        13,040,382 triples of US federal vocabulary. 130 findings. Only 10 of them break a rule.
+        What 13 Million Triples Reveal About the Quality of US Federal Vocabularies
       </h1>
       <p className="text-xl text-gov-secondary/90 leading-relaxed">
         Consultancies sell ontology assessment. Job descriptions ask for the ability to assess existing ontologies and recommend improvements. Almost nobody who sells that service has published an assessment of a single named, real-world ontology. So we built one and pointed it at the vocabularies the US federal government actually publishes: 28 assets from 10 publishers, retrieved on 16 August 2026, hashed, and put through 26 checks. The interesting result is not that the estate is bad. It is that the estate is mostly fine, and that saying so precisely is what makes the ten real failures worth acting on.
