@@ -216,6 +216,18 @@ export const SemanticAssetRegister: React.FC = () => (
     </section>
 
     <section className="space-y-4">
+      <div className="rounded-lg border-l-4 border-gov-blue bg-gov-bg/40 p-6">
+        <h2 className="text-lg font-bold text-gov-dark font-serif mb-3">Correction, 16 August 2026</h2>
+        <p className="text-gov-dark leading-relaxed">
+          A reader pointed out on the day of publication that the repository this register harvested the DCAT-US artefacts from, <code className="text-sm bg-gov-bg px-1.5 py-0.5 rounded">github.com/DOI-DO/dcat-us</code>, was archived on 28 April 2026 and is read-only. The live home is <code className="text-sm bg-gov-bg px-1.5 py-0.5 rounded">github.com/GSA/dcat-us</code>, maintained by the Data.gov team on a documented semi-annual cycle. The check outcomes for those two payloads are unaffected, because the bytes assessed are the bytes that repository still serves and the snapshot hashes are unchanged. What was wrong was the provenance, and provenance is most of what this register claims to get right.
+        </p>
+        <p className="text-gov-dark leading-relaxed mt-3">
+          The correction surfaced something larger, which belongs in the findings rather than in a footnote. As of 16 August 2026 the live GSA repository contains no SHACL directory and no Turtle files at all, and <code className="text-sm bg-gov-bg px-1.5 py-0.5 rounded">nara-restrictions.ttl</code> sits under <code className="text-sm bg-gov-bg px-1.5 py-0.5 rounded">DEPRECATED/vocabularies</code>. The canonical validation artefact for DCAT-US v3.0 is now JSON Schema, following draft 2020-12. The SHACL shapes assessed on this page survive only in the archived repository. A register whose purpose is to measure whether published semantic assets can be relied upon should have noticed that one of its own sources was frozen, and it did not. The full entry is in <code className="text-sm bg-gov-bg px-1.5 py-0.5 rounded">docs/CORRECTIONS.md</code>.
+        </p>
+      </div>
+    </section>
+
+    <section className="space-y-4">
       <h2 className="text-2xl font-bold text-gov-dark font-serif">Credit where it is due</h2>
       <p className="text-gov-dark leading-relaxed">
         Reproducible ontology quality tooling is not new, and this register would be dishonest to imply otherwise. The closest prior work is directly on part of this corpus: Mader, Haslhofer and Isaac defined fifteen computable quality functions, implemented them as qSKOS, and ran them over fifteen vocabularies including LCSH, MeSH and NAICS, published at TPDL 2012. They found issues in all fifteen, including 342,848 undocumented concepts in LCSH. The SKOS checks here are a narrower and more conservative descendant of theirs.
