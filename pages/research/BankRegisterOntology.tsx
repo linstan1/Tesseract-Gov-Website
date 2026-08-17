@@ -11,9 +11,9 @@ const SCHEMA = {
   '@id': 'https://gov.tesseract.academy/research/bank-register-ontology#article',
   mainEntityOfPage: 'https://gov.tesseract.academy/research/bank-register-ontology',
   headline:
-    'The FDIC publishes 2,252 Legal Entity Identifiers. Not one of them is a valid LEI. | Tesseract Academy',
+    'An open ontology for US bank registers, tested against the FDIC, the Federal Reserve, and the Global LEI System | Tesseract Academy',
   description:
-    'Every LEI in the FDIC BankFind register is truncated to 16 of the 20 characters ISO 17442 requires, discarding both check digits. Measured against the complete GLEIF golden copy of 3,403,760 LEI records: 16 characters puts 6.37 per cent of the global LEI population into a collision, nine FDIC values are ambiguous across up to six unrelated companies, and two resolve to the wrong legal entity, including Associated Bank carrying its parent holding company’s identifier. The Federal Reserve’s MDRM dictionary shows the mirror-image defect: one definition per item code across forms with different consolidation bases, and 58 per cent of item codes with no definition at all. An open OWL 2 ontology, SKOS registries and SHACL governance layer, 1,123,634 triples, reproducible from public data.',
+    'An open OWL 2, SKOS and SHACL ontology for the entity and regulatory-reporting fabric of US banking, measured against the FDIC BankFind register, the Federal Reserve MDRM dictionary, and the complete GLEIF golden copy of 3,403,760 LEI records. The measurement finds every one of the 2,252 LEI values in the FDIC register truncated to 16 of the 20 characters ISO 17442 requires, discarding both check digits. Sixteen characters puts 6.37 per cent of the global LEI population into a collision, nine FDIC values are ambiguous across up to six unrelated companies, and two resolve to the wrong legal entity, including Associated Bank carrying its parent holding company’s identifier. The MDRM dictionary shows the mirror-image defect: one definition per item code across forms with different consolidation bases, and 58 per cent of item codes with no definition at all. The artefact comprises 1,123,634 triples, reproducible from public data.',
   author: { '@id': 'https://gov.tesseract.academy/#organization' },
   publisher: { '@id': 'https://gov.tesseract.academy/#organization' },
   datePublished: '2026-08-16',
@@ -24,7 +24,7 @@ const SCHEMA = {
     url: REPO,
   },
   keywords:
-    'bank register ontology, FDIC BankFind, LEI validation, ISO 17442, ISO 7064 check digits, GLEIF golden copy, Financial Data Transparency Act, FDTA joint data standards, MDRM, Call Report, FR Y-9C, FFIEC 041, bank entity data, counterparty resolution, holding company hierarchy, SHACL banking, FIBO, FinRegOnt, regulatory reporting data quality',
+    'bank register ontology, FDIC BankFind, LEI validation, ISO 17442, ISO 7064 check digits, GLEIF golden copy, Financial Data Transparency Act, FDTA joint data standards, MDRM, Call Report, FR Y-9C, FFIEC 041, bank entity data, counterparty resolution, holding company hierarchy, SHACL banking, FIBO, FinRegOnt, regulatory reporting data quality, FDIC LEI truncation',
 };
 
 const FAQ_SCHEMA = {
@@ -159,7 +159,7 @@ export const BankRegisterOntology: React.FC = () => (
     <header className="space-y-4">
       <p className="text-xs font-semibold uppercase tracking-wider text-gov-blue">Open research, August 2026</p>
       <h1 className="text-4xl font-extrabold text-gov-dark mb-6 tracking-tight leading-tight font-serif">
-        The FDIC publishes 2,252 Legal Entity Identifiers. Not one of them is a valid LEI.
+        An open ontology for US bank registers, tested against the FDIC, the Federal Reserve, and the Global LEI System
       </h1>
       <p className="text-xl text-gov-secondary/90 leading-relaxed">
         Every figure on this page is from a build of 16 August 2026 and is reproducible from the open repository. We pulled all 27,836 institution records from the FDIC&apos;s BankFind register and measured the length of every LEI in it. The histogram has exactly one bucket: 16 characters, 2,252 times, without a single exception, truncated by four characters from the twenty the standard requires. We then resolved every value against the complete Global LEI System, found nine that denote up to six unrelated companies each, and found two, confirmed by GLEIF&apos;s own consolidation records, that identify the wrong legal entity entirely. This page explains what was measured, why the four missing characters are the four that matter, and what the same census says about the global identifier system itself.
