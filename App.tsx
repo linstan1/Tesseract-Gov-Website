@@ -80,6 +80,7 @@ const FineTuningLlmGovernmentDataStandard = lazy(() => import('./pages/research/
 const MachineValidatedOpenOntologies = lazy(() => import('./pages/research/MachineValidatedOpenOntologies').then(m => ({ default: m.MachineValidatedOpenOntologies })));
 const BankRegisterOntology = lazy(() => import('./pages/research/BankRegisterOntology').then(m => ({ default: m.BankRegisterOntology })));
 const SecuritiesRegisterOntology = lazy(() => import('./pages/research/SecuritiesRegisterOntology').then(m => ({ default: m.SecuritiesRegisterOntology })));
+const UkRegisterOntology = lazy(() => import('./pages/research/UkRegisterOntology').then(m => ({ default: m.UkRegisterOntology })));
 const SemanticAssetRegister = lazy(() => import('./pages/research/SemanticAssetRegister').then(m => ({ default: m.SemanticAssetRegister })));
 const RegisterAssurance = lazy(() => import('./pages/research/RegisterAssurance').then(m => ({ default: m.RegisterAssurance })));
 
@@ -199,6 +200,10 @@ const PAGE_META: Record<string, { title: string; description: string }> = {
   '/research/securities-register-ontology': {
     title: 'The missing CIK-to-LEI crosswalk: an open ontology for US securities entity registers | Tesseract Academy for the Public Sector',
     description: "An open OWL 2, SKOS and SHACL ontology and reproducible audit of the boundary between the SEC's EDGAR entity register and the Global LEI System, built from complete downloads of both registers and of every open register that embeds them, all taken on 17 August 2026. The lei field is populated in 773 of 981,355 EDGAR entity records, 0.079 per cent, and only 667 of those are valid LEIs: the rest include telephone numbers, IRS EINs, entity names and 35 literal N/A strings. In one quarter 1,973 fund registrants stated their LEI to the SEC on Forms N-PORT and N-CEN, and the entity register surfaces 12 of them. GLEIF publishes 27,704 records that map LEIs to EDGAR identifiers daily under CC0, while no SEC surface publishes the reverse. Reconciling the two halves of the series crosswalk across 12,604 fund series finds 100 fund series carrying two different LEIs across the register boundary, and 56.6 per cent of all US LEI records are LAPSED. The joint data standards rule under the Financial Data Transparency Act adopts the Legal Entity Identifier as the common entity identifier for nine federal financial agencies, the SEC among them, from 1 October 2026. The artefact comprises 525,387 triples, with every headline computed two independent ways, reproducible from public data.",
+  },
+  '/research/uk-register-ontology': {
+    title: 'An open ontology for UK public registers, tested against Companies House, the Charity Commission and the Global LEI System | Tesseract Academy for the Public Sector',
+    description: "An open OWL 2, SKOS and SHACL ontology and reproducible audit of the boundary between the UK's public registers, built from complete keyless downloads of the Companies House bulk file (5,695,465 live companies, 1 August 2026), the Charity Commission register, the Companies House PSC snapshot and the GLEIF LEI golden copy (all 17 August 2026). 1,268 of 31,612 Registered charitable companies (4.01 per cent) cite a company number that resolves to nothing on the live register, including 32 placeholders (00000000, 01234567, 12345678) that pass the format rule. 1,082 charities disagree with Companies House about their own company's name. Of 117,324 GLEIF records naming UK Companies House as registration authority, 36 live issued LEIs cite in-range company numbers absent from the live register and 2,666 disagree with Companies House on the name. Companies House's own bulk file contains 5,912 live companies whose numbers violate the documented format, and its PSC snapshot misspells its own enum value in 621,705 production records. Every headline computed two independent ways, reproducible from public data.",
   },
   '/research/semantic-asset-register': {
     title: 'What 13 Million Triples Reveal About the Quality of US Federal Vocabularies | Tesseract Academy for the Public Sector',
@@ -526,6 +531,7 @@ const App: React.FC = () => {
               <Route path="/research/machine-validated-open-ontologies" element={<MachineValidatedOpenOntologies />} />
               <Route path="/research/bank-register-ontology" element={<BankRegisterOntology />} />
               <Route path="/research/securities-register-ontology" element={<SecuritiesRegisterOntology />} />
+              <Route path="/research/uk-register-ontology" element={<UkRegisterOntology />} />
               <Route path="/research/semantic-asset-register" element={<SemanticAssetRegister />} />
               <Route path="/research/register-assurance" element={<RegisterAssurance />} />
             </Routes>

@@ -189,7 +189,16 @@ export const Research: React.FC = () => {
            </li>
         </PublicationGroup>
 
-        <PublicationGroup title="Register assurance" count={2}>
+        <PublicationGroup title="Register assurance" count={3}>
+           <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
+             <Link to="/research/uk-register-ontology"><h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark hover:underline transition-colors">An Open Ontology for UK Public Registers, Tested Against Companies House, the Charity Commission and the Global LEI System</h3></Link>
+             <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Open ontology, four-register measurement, 2026</p>
+             <p className="text-base text-gov-dark/90 leading-relaxed">An open OWL 2, SKOS and SHACL ontology and reproducible audit of the boundary between the UK&apos;s public registers, built from complete keyless downloads of the Companies House bulk file of 5,695,465 live companies, the full Charity Commission register, the 12.9&nbsp;GB PSC snapshot and the GLEIF LEI golden copy, pinned to snapshots of 1 and 17 August 2026. 1,268 of 31,612 Registered charitable companies (4.01 per cent) cite a company number that resolves to nothing on the live register, including 18 charities registered under the placeholder 00000000, 9 under 01234567 and 5 under 12345678, all of which pass the format rule and none of which resolve. 1,082 charities disagree with Companies House about their own company&apos;s name, and 662 charitable companies are in a distress state at Companies House, including 223 in liquidation, while the charity remains Registered. Of 117,324 GLEIF records naming UK Companies House as registration authority, 36 live issued LEIs cite format-valid, in-range company numbers absent from the live register, 2,666 disagree with Companies House on the name, and one in three has lapsed certification. Companies House&apos;s own bulk file carries 5,912 live companies whose numbers violate the documented format, and its PSC snapshot misspells its own enum value in 621,705 production records. Every headline computed two independent ways, reproducible from public data.</p>
+             <div className="mt-3 flex flex-wrap gap-3 items-center">
+               <Link to="/research/uk-register-ontology" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">Read the study</Link>
+               <a href="https://github.com/fabio-rovai/uk-register-ontology" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">repository on GitHub<span className="sr-only"> (opens in new tab)</span></a>
+             </div>
+           </li>
            <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
              <Link to="/research/securities-register-ontology"><h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark hover:underline transition-colors">The Missing CIK-to-LEI Crosswalk: An Open Ontology for US Securities Entity Registers</h3></Link>
              <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Open ontology, four-register measurement, 2026</p>

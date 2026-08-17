@@ -178,6 +178,13 @@ const FAMILY = [
     repo: 'https://github.com/fabio-rovai/securities-register-ontology',
   },
   {
+    name: 'UK Public Register Ontology (UKRO)',
+    ns: 'https://gov.tesseract.academy/def/uk#',
+    schemes: 'https://gov.tesseract.academy/def/uk/scheme#',
+    line: 'The UK entity fabric: the Companies House bulk and PSC products, the Charity Commission register and the GLEIF golden copy, with placeholders, cross-scheme values, dangling company numbers and name disagreements as typed failure modes.',
+    repo: 'https://github.com/fabio-rovai/uk-register-ontology',
+  },
+  {
     name: 'Insurance Register Ontology (IRO)',
     ns: 'https://gov.tesseract.academy/def/insurance#',
     schemes: 'https://gov.tesseract.academy/def/insurance/scheme#',
