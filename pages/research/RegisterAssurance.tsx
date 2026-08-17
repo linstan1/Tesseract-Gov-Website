@@ -171,6 +171,13 @@ const FAMILY = [
     repo: 'https://github.com/fabio-rovai/bank-register-ontology',
   },
   {
+    name: 'Securities Entity Register Ontology (SERO)',
+    ns: 'https://gov.tesseract.academy/def/securities#',
+    schemes: 'https://gov.tesseract.academy/def/securities/scheme#',
+    line: 'The US securities entity fabric: the EDGAR entity register, the GLEIF golden copy, the N-PORT and N-CEN structured datasets and the ISIN-LEI mapping, with coverage and reconciliation observations as first-class nodes.',
+    repo: 'https://github.com/fabio-rovai/securities-register-ontology',
+  },
+  {
     name: 'Insurance Register Ontology (IRO)',
     ns: 'https://gov.tesseract.academy/def/insurance#',
     schemes: 'https://gov.tesseract.academy/def/insurance/scheme#',
@@ -311,9 +318,9 @@ export const RegisterAssurance: React.FC = () => (
     </section>
 
     <section className="space-y-4">
-      <h2 className="text-2xl font-bold text-gov-dark font-serif">The ontology family: one program, six instruments</h2>
+      <h2 className="text-2xl font-bold text-gov-dark font-serif">The ontology family: one program, seven instruments</h2>
       <p className="text-gov-dark leading-relaxed">
-        The six ontologies are one program, not six projects. They share a design stance: identifiers are reified assertions rather than string attributes, scope is declared as data, lifecycles are nodes, disagreement is recorded rather than adjudicated, and arithmetic is computed in code while policy is enforced in shapes. Four publish their terms under the <code className="text-sm bg-gov-bg px-1.5 py-0.5 rounded">https://gov.tesseract.academy/def/</code> namespace root, and two publish under sibling Tesseract Academy hosts as recorded in their repositories. Each namespace below is taken from the repository&apos;s own Turtle source, not from documentation.
+        The seven ontologies are one program, not seven projects. They share a design stance: identifiers are reified assertions rather than string attributes, scope is declared as data, lifecycles are nodes, disagreement is recorded rather than adjudicated, and arithmetic is computed in code while policy is enforced in shapes. Five publish their terms under the <code className="text-sm bg-gov-bg px-1.5 py-0.5 rounded">https://gov.tesseract.academy/def/</code> namespace root, and two publish under sibling Tesseract Academy hosts as recorded in their repositories. Each namespace below is taken from the repository&apos;s own Turtle source, not from documentation.
       </p>
       <div className="overflow-x-auto rounded-lg border border-gov-border">
         <table className="min-w-full text-sm">
@@ -346,7 +353,7 @@ export const RegisterAssurance: React.FC = () => (
         </table>
       </div>
       <p className="text-sm text-gov-secondary/90 leading-relaxed">
-        All six are open: ontologies and shapes under CC BY 4.0, code under MIT or equivalent, every headline reproducible from public data via the pipelines in each repository.
+        All seven are open: ontologies and shapes under CC BY 4.0, code under MIT or equivalent, every headline reproducible from public data via the pipelines in each repository.
       </p>
     </section>
 
@@ -366,7 +373,7 @@ export const RegisterAssurance: React.FC = () => (
       <div className="rounded-lg border border-gov-border bg-gov-bg/40 p-6 space-y-3">
         <h2 className="text-2xl font-bold text-gov-dark font-serif">Working with us</h2>
         <p className="text-gov-dark leading-relaxed">
-          Everything on this page is a worked example you can run today. Each of the six repositories contains the ontology, the shapes, the harvesting pipeline and the queries that produced its headlines, and each study page walks through the method in enough detail to apply it without us. If you operate a register, the constructive reading of this page is that the boundary checks are cheap: check-digit validation is one modulo operation, resolution is a lookup, and a SHACL shape enforcing your embedded schemes runs on every ingest.
+          Everything on this page is a worked example you can run today. Each of the seven repositories contains the ontology, the shapes, the harvesting pipeline and the queries that produced its headlines, and each study page walks through the method in enough detail to apply it without us. If you operate a register, the constructive reading of this page is that the boundary checks are cheap: check-digit validation is one modulo operation, resolution is a lookup, and a SHACL shape enforcing your embedded schemes runs on every ingest.
         </p>
         <p className="text-gov-dark leading-relaxed">
           If you run entity data, reference data, or a corpus that embeds identifiers from registers you do not control, a typical first engagement is bounded and diagnostic: we build the identifier fabric over your data as it is, run the four defect classes against it, and return a graded findings report with the queries attached so your team can re-run it. That report is useful whether or not the work continues. Write to <a href="mailto:fabio@thetesseractacademy.com" className="text-gov-blue underline hover:text-gov-blue-dark">fabio@thetesseractacademy.com</a> with a description of the registers your systems depend on, and we will tell you which of the four defect classes we would expect to find, before any commitment.

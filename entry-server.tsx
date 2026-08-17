@@ -86,6 +86,7 @@ import { Insights } from './pages/Insights';
 import { FineTuningLlmGovernmentDataStandard } from './pages/research/FineTuningLlmGovernmentDataStandard';
 import { MachineValidatedOpenOntologies } from './pages/research/MachineValidatedOpenOntologies';
 import { BankRegisterOntology } from './pages/research/BankRegisterOntology';
+import { SecuritiesRegisterOntology } from './pages/research/SecuritiesRegisterOntology';
 import { SemanticAssetRegister } from './pages/research/SemanticAssetRegister';
 import { RegisterAssurance } from './pages/research/RegisterAssurance';
 
@@ -171,6 +172,7 @@ const SSRApp: React.FC = () => (
         <Route path="/research/fine-tuning-llm-government-data-standard" element={<FineTuningLlmGovernmentDataStandard />} />
         <Route path="/research/machine-validated-open-ontologies" element={<MachineValidatedOpenOntologies />} />
         <Route path="/research/bank-register-ontology" element={<BankRegisterOntology />} />
+        <Route path="/research/securities-register-ontology" element={<SecuritiesRegisterOntology />} />
         <Route path="/research/semantic-asset-register" element={<SemanticAssetRegister />} />
         <Route path="/research/register-assurance" element={<RegisterAssurance />} />
       </Routes>

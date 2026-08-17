@@ -79,6 +79,7 @@ const Insights = lazy(() => import('./pages/Insights').then(m => ({ default: m.I
 const FineTuningLlmGovernmentDataStandard = lazy(() => import('./pages/research/FineTuningLlmGovernmentDataStandard').then(m => ({ default: m.FineTuningLlmGovernmentDataStandard })));
 const MachineValidatedOpenOntologies = lazy(() => import('./pages/research/MachineValidatedOpenOntologies').then(m => ({ default: m.MachineValidatedOpenOntologies })));
 const BankRegisterOntology = lazy(() => import('./pages/research/BankRegisterOntology').then(m => ({ default: m.BankRegisterOntology })));
+const SecuritiesRegisterOntology = lazy(() => import('./pages/research/SecuritiesRegisterOntology').then(m => ({ default: m.SecuritiesRegisterOntology })));
 const SemanticAssetRegister = lazy(() => import('./pages/research/SemanticAssetRegister').then(m => ({ default: m.SemanticAssetRegister })));
 const RegisterAssurance = lazy(() => import('./pages/research/RegisterAssurance').then(m => ({ default: m.RegisterAssurance })));
 
@@ -194,6 +195,10 @@ const PAGE_META: Record<string, { title: string; description: string }> = {
   '/research/bank-register-ontology': {
     title: 'The FDIC publishes 2,252 Legal Entity Identifiers. Not one of them is a valid LEI. | Tesseract Academy for the Public Sector',
     description: 'Every LEI in the FDIC BankFind register is truncated to 16 of the 20 characters ISO 17442 requires, discarding both check digits. Measured against the complete GLEIF golden copy of 3,403,760 records: 16 characters puts 6.37 per cent of the global LEI population into a collision, nine FDIC values are ambiguous across up to six unrelated companies, and two resolve to the wrong legal entity, including Associated Bank carrying its parent holding company’s identifier. The Federal Reserve’s MDRM dictionary shows the mirror-image defect: one definition per item code across forms with different consolidation bases, and 58 per cent of item codes with no definition at all. An open OWL 2 ontology, SKOS registries and SHACL governance layer, 1,123,634 triples, reproducible from public data.',
+  },
+  '/research/securities-register-ontology': {
+    title: "Forty-five days before the LEI becomes the US entity standard, the SEC's register of 981,355 entities lists 773 | Tesseract Academy for the Public Sector",
+    description: "On 1 October 2026 the FDTA joint data standards rule makes the ISO 17442 Legal Entity Identifier the common entity standard for nine US federal financial agencies, the SEC among them. We downloaded the SEC's entire entity register and every open register that embeds it, all on 17 August 2026. The lei field is populated in 773 of 981,355 EDGAR entity records, 0.079 per cent, and only 667 of those are valid LEIs: the rest include telephone numbers, IRS EINs, entity names and 35 literal N/A strings. In one quarter 1,973 fund registrants stated their LEI to the SEC on Forms N-PORT and N-CEN, and the entity register surfaces 12 of them. GLEIF publishes the reverse CIK and series crosswalk daily under CC0; the SEC publishes no mapping in either direction. Reconciling the two halves of the series crosswalk across 12,604 fund series finds 100 carrying two different LEIs on the two sides of the register boundary, and 56.6 per cent of all US LEI records are LAPSED. An open OWL 2 ontology, SKOS scheme registry and SHACL governance layer, 525,387 triples, every headline computed two independent ways, reproducible from public data.",
   },
   '/research/semantic-asset-register': {
     title: 'What 13 Million Triples Reveal About the Quality of US Federal Vocabularies | Tesseract Academy for the Public Sector',
@@ -520,6 +525,7 @@ const App: React.FC = () => {
               <Route path="/research/fine-tuning-llm-government-data-standard" element={<FineTuningLlmGovernmentDataStandard />} />
               <Route path="/research/machine-validated-open-ontologies" element={<MachineValidatedOpenOntologies />} />
               <Route path="/research/bank-register-ontology" element={<BankRegisterOntology />} />
+              <Route path="/research/securities-register-ontology" element={<SecuritiesRegisterOntology />} />
               <Route path="/research/semantic-asset-register" element={<SemanticAssetRegister />} />
               <Route path="/research/register-assurance" element={<RegisterAssurance />} />
             </Routes>
