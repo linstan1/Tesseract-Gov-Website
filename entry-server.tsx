@@ -88,6 +88,10 @@ import { MachineValidatedOpenOntologies } from './pages/research/MachineValidate
 import { BankRegisterOntology } from './pages/research/BankRegisterOntology';
 import { SecuritiesRegisterOntology } from './pages/research/SecuritiesRegisterOntology';
 import { UkRegisterOntology } from './pages/research/UkRegisterOntology';
+import { OneRecordKorea } from './pages/research/OneRecordKorea';
+import { OneRecordTaiwan } from './pages/research/OneRecordTaiwan';
+import { MachineryKorea } from './pages/research/MachineryKorea';
+import { MachineryTaiwan } from './pages/research/MachineryTaiwan';
 import { ItalyRegisterOntology } from './pages/research/ItalyRegisterOntology';
 import { SemanticAssetRegister } from './pages/research/SemanticAssetRegister';
 import { RegisterAssurance } from './pages/research/RegisterAssurance';
@@ -176,6 +180,10 @@ const SSRApp: React.FC = () => (
         <Route path="/research/bank-register-ontology" element={<BankRegisterOntology />} />
         <Route path="/research/securities-register-ontology" element={<SecuritiesRegisterOntology />} />
         <Route path="/research/uk-register-ontology" element={<UkRegisterOntology />} />
+        <Route path="/research/one-record-domain-axioms-korea" element={<OneRecordKorea />} />
+        <Route path="/research/one-record-domain-axioms-taiwan" element={<OneRecordTaiwan />} />
+        <Route path="/research/machinery-regulation-readiness-korea" element={<MachineryKorea />} />
+        <Route path="/research/machinery-regulation-readiness-taiwan" element={<MachineryTaiwan />} />
         <Route path="/research/italy-register-ontology" element={<ItalyRegisterOntology />} />
         <Route path="/research/semantic-asset-register" element={<SemanticAssetRegister />} />
         <Route path="/research/register-assurance" element={<RegisterAssurance />} />

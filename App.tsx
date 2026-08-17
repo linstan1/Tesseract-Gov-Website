@@ -82,6 +82,10 @@ const BankRegisterOntology = lazy(() => import('./pages/research/BankRegisterOnt
 const SecuritiesRegisterOntology = lazy(() => import('./pages/research/SecuritiesRegisterOntology').then(m => ({ default: m.SecuritiesRegisterOntology })));
 const UkRegisterOntology = lazy(() => import('./pages/research/UkRegisterOntology').then(m => ({ default: m.UkRegisterOntology })));
 const ItalyRegisterOntology = lazy(() => import('./pages/research/ItalyRegisterOntology').then(m => ({ default: m.ItalyRegisterOntology })));
+const OneRecordKorea = lazy(() => import('./pages/research/OneRecordKorea').then(m => ({ default: m.OneRecordKorea })));
+const OneRecordTaiwan = lazy(() => import('./pages/research/OneRecordTaiwan').then(m => ({ default: m.OneRecordTaiwan })));
+const MachineryKorea = lazy(() => import('./pages/research/MachineryKorea').then(m => ({ default: m.MachineryKorea })));
+const MachineryTaiwan = lazy(() => import('./pages/research/MachineryTaiwan').then(m => ({ default: m.MachineryTaiwan })));
 const SemanticAssetRegister = lazy(() => import('./pages/research/SemanticAssetRegister').then(m => ({ default: m.SemanticAssetRegister })));
 const RegisterAssurance = lazy(() => import('./pages/research/RegisterAssurance').then(m => ({ default: m.RegisterAssurance })));
 
@@ -201,6 +205,22 @@ const PAGE_META: Record<string, { title: string; description: string }> = {
   '/research/securities-register-ontology': {
     title: 'The missing CIK-to-LEI crosswalk: an open ontology for US securities entity registers | Tesseract Academy for the Public Sector',
     description: "An open OWL 2, SKOS and SHACL ontology and reproducible audit of the boundary between the SEC's EDGAR entity register and the Global LEI System, built from complete downloads of both registers and of every open register that embeds them, all taken on 17 August 2026. The lei field is populated in 773 of 981,355 EDGAR entity records, 0.079 per cent, and only 667 of those are valid LEIs: the rest include telephone numbers, IRS EINs, entity names and 35 literal N/A strings. In one quarter 1,973 fund registrants stated their LEI to the SEC on Forms N-PORT and N-CEN, and the entity register surfaces 12 of them. GLEIF publishes 27,718 records that map LEIs to EDGAR identifiers daily under CC0, while no SEC surface publishes the reverse. Reconciling the two halves of the series crosswalk across 12,604 fund series finds 100 fund series carrying two different LEIs across the register boundary, and 56.6 per cent of all US LEI records are LAPSED. The joint data standards rule under the Financial Data Transparency Act adopts the Legal Entity Identifier as the common entity identifier for nine federal financial agencies, the SEC among them, from 1 October 2026. The artefact comprises 526,098 triples, with every headline computed two independent ways, reproducible from public data.",
+  },
+  '/research/one-record-domain-axioms-korea': {
+    title: "The air cargo ontology Korean carriers are implementing lost its domain axioms in 2023, and the 2024 release did not restore them | Tesseract Academy for the Public Sector",
+    description: "An independent, dual-engine audit of the IATA ONE Record data model ontology across six releases. Every one of the 496 properties in the 2022-12 release declares an rdfs:domain. None of the 522 properties in 2023-12 do, and none of the 534 in 2024-12 do. Classes with no rdfs:label rose from 1 to 58 over the same span, and total lint issues rose from 2 to 650. Verified two independent ways, with rdflib and with the open-source Open Ontologies engine, which agree exactly. Written for Korean air cargo operators building on ONE Record, in English and Korean, with a reproducible check over the MIT-licensed public repository.",
+  },
+  '/research/one-record-domain-axioms-taiwan': {
+    title: "Taiwan's Air and Ocean Cargo Both Run on Open Standards, and One of Them Removed a Foundational Axiom | Tesseract Academy for the Public Sector",
+    description: "An independent, dual-engine audit of the IATA ONE Record data model ontology across six releases, written for Taiwan's air and ocean freight sector. Every one of the 496 properties in the 2022-12 release declares an rdfs:domain. None of the 522 properties in 2023-12 do, and none of the 534 in 2024-12 do. Classes with no rdfs:label rose from 1 to 58 and lint issues from 2 to 650. Includes a contrast with the DCSA ocean container OpenAPI specifications, 174 files under Apache 2.0. Verified two independent ways with rdflib and the Open Ontologies engine. In English and Traditional Chinese.",
+  },
+  '/research/machinery-regulation-readiness-korea': {
+    title: "Korean Machine Builders Have Until 14 January 2027, and the Open Standards They Rely On Are Not as Clean as They Look | Tesseract Academy for the Public Sector",
+    description: "A readiness assessment for Korean machine tool and equipment exporters against EU Machinery Regulation 2023/1230, which applies from 14 January 2027, verified against the EUR-Lex primary text at Article 54 because several vendor summaries give the wrong date. Audits the two semantic carriers the sector relies on. MTConnect publishes each version as both XSD and JSON Schema, and the JSON AlarmStateEnum admits INSTANT while the XSD AlarmStateType does not, identically in 2.0, 2.1 and 2.2. Includes a retracted finding: an initial count of 111 divergences collapsed to one after 105 proved to be a deliberate design difference and three were our own matching artefact. Also tests and refutes the common claim that AAS submodel compliance requires a paid ECLASS subscription. In English and Korean.",
+  },
+  '/research/machinery-regulation-readiness-taiwan': {
+    title: "Taiwan's Machine Tool Cluster Has Until 14 January 2027, and the Standards It Builds On Contain a Defect We Can Show You | Tesseract Academy for the Public Sector",
+    description: "A readiness assessment for Taiwan's machine tool cluster against EU Machinery Regulation 2023/1230, which applies from 14 January 2027, verified against the EUR-Lex primary text at Article 54. Audits MTConnect and the Asset Administration Shell. The MTConnect JSON Schema AlarmStateEnum admits INSTANT while the XSD AlarmStateType does not, identically across 2.0, 2.1 and 2.2. Includes a retracted finding, an initial 111 divergences reduced to one verified defect. Counts 1,529 IDTA IRI references against 18 ECLASS and 9 IEC CDD, refuting the claim that compliance requires a paid dictionary subscription. In English and Traditional Chinese.",
   },
   '/research/italy-register-ontology': {
     title: 'An open ontology for Italian public registers, tested against IPA, ANAC, OpenCUP and ISTAT | Tesseract Academy for the Public Sector',
@@ -537,6 +557,10 @@ const App: React.FC = () => {
               <Route path="/research/bank-register-ontology" element={<BankRegisterOntology />} />
               <Route path="/research/securities-register-ontology" element={<SecuritiesRegisterOntology />} />
               <Route path="/research/uk-register-ontology" element={<UkRegisterOntology />} />
+              <Route path="/research/one-record-domain-axioms-korea" element={<OneRecordKorea />} />
+              <Route path="/research/one-record-domain-axioms-taiwan" element={<OneRecordTaiwan />} />
+              <Route path="/research/machinery-regulation-readiness-korea" element={<MachineryKorea />} />
+              <Route path="/research/machinery-regulation-readiness-taiwan" element={<MachineryTaiwan />} />
               <Route path="/research/italy-register-ontology" element={<ItalyRegisterOntology />} />
               <Route path="/research/semantic-asset-register" element={<SemanticAssetRegister />} />
               <Route path="/research/register-assurance" element={<RegisterAssurance />} />

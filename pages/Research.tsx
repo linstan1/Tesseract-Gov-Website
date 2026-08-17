@@ -189,6 +189,45 @@ export const Research: React.FC = () => {
            </li>
         </PublicationGroup>
 
+        <PublicationGroup title="Industrial and freight standards assurance" count={4}>
+           <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
+             <Link to="/research/one-record-domain-axioms-korea"><h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark hover:underline transition-colors">The air cargo ontology Korean carriers are implementing lost its domain axioms in 2023, and the 2024 release did not restore them</h3></Link>
+             <p className="text-sm text-gov-secondary/80 mb-3 font-medium">IATA ONE Record audit, dual-engine verified, English and Korean, 2026</p>
+             <p className="text-base text-gov-dark/90 leading-relaxed">An independent, dual-engine audit of the IATA ONE Record data model ontology across six releases. Every one of the 496 properties in the 2022-12 release declares an rdfs:domain. None of the 522 properties in 2023-12 do, and none of the 534 in 2024-12 do. Classes with no rdfs:label rose from 1 to 58 over the same span, and total lint issues rose from 2 to 650. Verified two independent ways, with rdflib and with the open-source Open Ontologies engine, which agree exactly. Written for Korean air cargo operators building on ONE Record, in English and Korean, with a reproducible check over the MIT-licensed public repository.</p>
+             <div className="mt-3 flex flex-wrap gap-3 items-center">
+               <Link to="/research/one-record-domain-axioms-korea" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">Read the study</Link>
+               <a href="https://github.com/fabio-rovai/cargo-semantics" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">repository on GitHub<span className="sr-only"> (opens in new tab)</span></a>
+             </div>
+           </li>
+           <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
+             <Link to="/research/one-record-domain-axioms-taiwan"><h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark hover:underline transition-colors">Taiwan's Air and Ocean Cargo Both Run on Open Standards, and One of Them Removed a Foundational Axiom</h3></Link>
+             <p className="text-sm text-gov-secondary/80 mb-3 font-medium">IATA ONE Record and DCSA audit, English and Traditional Chinese, 2026</p>
+             <p className="text-base text-gov-dark/90 leading-relaxed">An independent, dual-engine audit of the IATA ONE Record data model ontology across six releases, written for Taiwan&apos;s air and ocean freight sector. Every one of the 496 properties in the 2022-12 release declares an rdfs:domain. None of the 522 properties in 2023-12 do, and none of the 534 in 2024-12 do. Classes with no rdfs:label rose from 1 to 58 and lint issues from 2 to 650. Includes a contrast with the DCSA ocean container OpenAPI specifications, 174 files under Apache 2.0. Verified two independent ways with rdflib and the Open Ontologies engine. In English and Traditional Chinese.</p>
+             <div className="mt-3 flex flex-wrap gap-3 items-center">
+               <Link to="/research/one-record-domain-axioms-taiwan" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">Read the study</Link>
+               <a href="https://github.com/fabio-rovai/cargo-semantics" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">repository on GitHub<span className="sr-only"> (opens in new tab)</span></a>
+             </div>
+           </li>
+           <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
+             <Link to="/research/machinery-regulation-readiness-korea"><h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark hover:underline transition-colors">Korean Machine Builders Have Until 14 January 2027, and the Open Standards They Rely On Are Not as Clean as They Look</h3></Link>
+             <p className="text-sm text-gov-secondary/80 mb-3 font-medium">EU Machinery Regulation readiness, MTConnect and AAS audit, English and Korean, 2026</p>
+             <p className="text-base text-gov-dark/90 leading-relaxed">A readiness assessment for Korean machine tool and equipment exporters against EU Machinery Regulation 2023/1230, which applies from 14 January 2027, verified against the EUR-Lex primary text at Article 54 because several vendor summaries give the wrong date. Audits the two semantic carriers the sector relies on. MTConnect publishes each version as both XSD and JSON Schema, and the JSON AlarmStateEnum admits INSTANT while the XSD AlarmStateType does not, identically in 2.0, 2.1 and 2.2. Includes a retracted finding: an initial count of 111 divergences collapsed to one after 105 proved to be a deliberate design difference and three were our own matching artefact. Also tests and refutes the common claim that AAS submodel compliance requires a paid ECLASS subscription. In English and Korean.</p>
+             <div className="mt-3 flex flex-wrap gap-3 items-center">
+               <Link to="/research/machinery-regulation-readiness-korea" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">Read the study</Link>
+               <a href="https://github.com/fabio-rovai/machinery-semantics" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">repository on GitHub<span className="sr-only"> (opens in new tab)</span></a>
+             </div>
+           </li>
+           <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
+             <Link to="/research/machinery-regulation-readiness-taiwan"><h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark hover:underline transition-colors">Taiwan's Machine Tool Cluster Has Until 14 January 2027, and the Standards It Builds On Contain a Defect We Can Show You</h3></Link>
+             <p className="text-sm text-gov-secondary/80 mb-3 font-medium">EU Machinery Regulation readiness, MTConnect and AAS audit, English and Traditional Chinese, 2026</p>
+             <p className="text-base text-gov-dark/90 leading-relaxed">A readiness assessment for Taiwan&apos;s machine tool cluster against EU Machinery Regulation 2023/1230, which applies from 14 January 2027, verified against the EUR-Lex primary text at Article 54. Audits MTConnect and the Asset Administration Shell. The MTConnect JSON Schema AlarmStateEnum admits INSTANT while the XSD AlarmStateType does not, identically across 2.0, 2.1 and 2.2. Includes a retracted finding, an initial 111 divergences reduced to one verified defect. Counts 1,529 IDTA IRI references against 18 ECLASS and 9 IEC CDD, refuting the claim that compliance requires a paid dictionary subscription. In English and Traditional Chinese.</p>
+             <div className="mt-3 flex flex-wrap gap-3 items-center">
+               <Link to="/research/machinery-regulation-readiness-taiwan" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">Read the study</Link>
+               <a href="https://github.com/fabio-rovai/machinery-semantics" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">repository on GitHub<span className="sr-only"> (opens in new tab)</span></a>
+             </div>
+           </li>
+        </PublicationGroup>
+
         <PublicationGroup title="Register assurance" count={4}>
            <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
              <Link to="/research/italy-register-ontology"><h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark hover:underline transition-colors">An Open Ontology for Italian Public Registers, Tested Against IPA, ANAC, OpenCUP and ISTAT</h3></Link>
