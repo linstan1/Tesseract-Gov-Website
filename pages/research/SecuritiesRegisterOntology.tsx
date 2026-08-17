@@ -11,9 +11,9 @@ const SCHEMA = {
   '@id': 'https://gov.tesseract.academy/research/securities-register-ontology#article',
   mainEntityOfPage: 'https://gov.tesseract.academy/research/securities-register-ontology',
   headline:
-    "Forty-five days before the LEI becomes the US entity standard, the SEC's register of 981,355 entities lists 773 | Tesseract Academy",
+    'The missing CIK-to-LEI crosswalk: an open ontology for US securities entity registers | Tesseract Academy',
   description:
-    "On 1 October 2026 the FDTA joint data standards rule makes the ISO 17442 Legal Entity Identifier the common entity standard for nine US federal financial agencies, the SEC among them. We downloaded the SEC's entire entity register and every open register that embeds it, all on 17 August 2026. The lei field is populated in 773 of 981,355 EDGAR entity records, 0.079 per cent, and only 667 of those are valid LEIs: the rest include telephone numbers, IRS EINs, entity names and 35 literal N/A strings. In one quarter 1,973 fund registrants stated their LEI to the SEC on Forms N-PORT and N-CEN, and the entity register surfaces 12 of them. GLEIF publishes the reverse CIK and series crosswalk daily under CC0; the SEC publishes no mapping in either direction. Reconciling the two halves of the series crosswalk across 12,604 fund series finds 100 carrying two different LEIs on the two sides of the register boundary, and 56.6 per cent of all US LEI records are LAPSED. An open OWL 2 ontology, SKOS scheme registry and SHACL governance layer, 525,387 triples, every headline computed two independent ways, reproducible from public data.",
+    "An open OWL 2, SKOS and SHACL ontology and reproducible audit of the boundary between the SEC's EDGAR entity register and the Global LEI System, built from complete downloads of both registers and of every open register that embeds them, all taken on 17 August 2026. The lei field is populated in 773 of 981,355 EDGAR entity records, 0.079 per cent, and only 667 of those are valid LEIs: the rest include telephone numbers, IRS EINs, entity names and 35 literal N/A strings. In one quarter 1,973 fund registrants stated their LEI to the SEC on Forms N-PORT and N-CEN, and the entity register surfaces 12 of them. GLEIF publishes 27,704 records that map LEIs to EDGAR identifiers daily under CC0, while no SEC surface publishes the reverse. Reconciling the two halves of the series crosswalk across 12,604 fund series finds 100 fund series carrying two different LEIs across the register boundary, and 56.6 per cent of all US LEI records are LAPSED. The joint data standards rule under the Financial Data Transparency Act adopts the Legal Entity Identifier as the common entity identifier for nine federal financial agencies, the SEC among them, from 1 October 2026. The artefact comprises 525,387 triples, with every headline computed two independent ways, reproducible from public data.",
   author: { '@id': 'https://gov.tesseract.academy/#organization' },
   publisher: { '@id': 'https://gov.tesseract.academy/#organization' },
   datePublished: '2026-08-17',
@@ -24,7 +24,7 @@ const SCHEMA = {
     url: REPO,
   },
   keywords:
-    'securities entity register, SEC EDGAR LEI, CIK to LEI mapping, FDTA, Financial Data Transparency Act, 91 FR 38246, LEI validation, ISO 17442, ISO 7064 check digits, N-PORT data quality, N-CEN, GLEIF golden copy, ISIN-LEI mapping, register assurance, SHACL, OWL 2 ontology, SKOS, EDGAR entity register, fund LEI reconciliation, securities register ontology',
+    'securities entity register, SEC EDGAR LEI, CIK to LEI mapping, CIK to LEI crosswalk, FDTA, Financial Data Transparency Act, 91 FR 38246, LEI validation, ISO 17442, ISO 7064 check digits, N-PORT data quality, N-CEN, GLEIF golden copy, ISIN-LEI mapping, register assurance, SHACL, OWL 2 ontology, SKOS, EDGAR entity register, fund LEI reconciliation, securities register ontology',
 };
 
 const FAQ_SCHEMA = {
@@ -159,7 +159,7 @@ export const SecuritiesRegisterOntology: React.FC = () => (
     <header className="space-y-4">
       <p className="text-xs font-semibold uppercase tracking-wider text-gov-blue">Open research, August 2026</p>
       <h1 className="text-4xl font-extrabold text-gov-dark mb-6 tracking-tight leading-tight font-serif">
-        Forty-five days before the LEI becomes the US entity standard, the SEC&apos;s register of 981,355 entities lists 773
+        The missing CIK-to-LEI crosswalk: an open ontology for US securities entity registers
       </h1>
       <p className="text-xl text-gov-secondary/90 leading-relaxed">
         On 1 October 2026, the joint data standards rule under the Financial Data Transparency Act takes effect. Nine federal financial agencies, the SEC among them, adopted the ISO 17442 Legal Entity Identifier as their common legal entity identifier, and the rule&apos;s operative text requires data schemas with semantics documented in machine-readable taxonomy or ontology models. We took that requirement literally. On 17 August 2026 we downloaded the SEC&apos;s entire entity register and every open register that embeds or is embedded by it, and we measured what the public record actually says. This is a case study in register assurance: the practice of auditing what a register publishes against the rules its identifiers declare for themselves and against the other registers that carry the same identity. Everything below is reproducible from the open repository, every headline is computed two independent ways, and the pipeline fails its own build if the two ever disagree.
