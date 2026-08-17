@@ -9,7 +9,7 @@ const SCHEMA = {
   "@type": "Article",
   "@id": "https://gov.tesseract.academy/research/machinery-regulation-readiness-taiwan#article",
   "mainEntityOfPage": "https://gov.tesseract.academy/research/machinery-regulation-readiness-taiwan",
-  "headline": "Taiwan's machine tool cluster has until 14 January 2027, and the standards it builds on contain a defect we can show you | Tesseract Academy",
+  "headline": "An overview of ontology and schema quality issues in machine tool data standards, tested against MTConnect and the Asset Administration Shell | Tesseract Academy",
   "description": "A readiness assessment for Taiwan's machine tool cluster against EU Machinery Regulation 2023/1230, which applies from 14 January 2027, verified against the EUR-Lex primary text at Article 54. Audits MTConnect and the Asset Administration Shell. The MTConnect JSON Schema AlarmStateEnum admits INSTANT while the XSD AlarmStateType does not, identically across 2.0, 2.1 and 2.2. Includes a retracted finding, an initial 111 divergences reduced to one verified defect. Counts 1,529 IDTA IRI references against 18 ECLASS and 9 IEC CDD, refuting the claim that compliance requires a paid dictionary subscription. In English and Traditional Chinese.",
   "author": {
     "@id": "https://gov.tesseract.academy/#organization"
@@ -37,10 +37,10 @@ export const MachineryTaiwan: React.FC = () => (
       <Link to="/research" className="inline-flex items-center gap-2 text-sm font-medium text-gov-blue hover:underline mb-8">
         <ArrowLeft className="w-4 h-4" /> Back to research
       </Link>
-      <h1 className="text-3xl sm:text-4xl font-bold text-gov-blue mb-6">{"Taiwan's machine tool cluster has until 14 January 2027, and the standards it builds on contain a defect we can show you"}</h1>
+      <h1 className="text-3xl sm:text-4xl font-bold text-gov-blue mb-6">{"An overview of ontology and schema quality issues in machine tool data standards, tested against MTConnect and the Asset Administration Shell"}</h1>
       <p className="text-sm text-gov-dark/70 mb-2">Published 17 August 2026. Available in English and Traditional Chinese.</p>
       <p className="text-sm mb-8"><a href={REPO} target="_blank" rel="noopener noreferrer" className="text-gov-blue hover:underline">Repository on GitHub<span className="sr-only"> (opens in new tab)</span></a></p>
-      <nav className="mb-10 text-sm"><a href="#english" className="text-gov-blue hover:underline">English</a><span className="mx-2 text-gov-dark/40">|</span><a href="#native" className="text-gov-blue hover:underline">{"臺灣工具機聚落的期限是 2027 年 1 月 14 日，"}</a></nav>
+      <nav className="mb-10 text-sm"><a href="#english" className="text-gov-blue hover:underline">English</a><span className="mx-2 text-gov-dark/40">|</span><a href="#native" className="text-gov-blue hover:underline">{"工具機資料標準的本體與綱要品質問題概觀：以 MTConn"}</a></nav>
 
       <section id="english" lang="en">
             <p className="text-base text-gov-dark/90 leading-relaxed mb-4">{"The EU Machinery Regulation (EU) 2023/1230 applies from 14 January 2027, the same day Directive 2006/42/EC is repealed. We verified both against the EUR-Lex primary text at Article 54, because several vendor summaries in circulation give 20 January and are wrong. Articles 26 to 42 have already applied since 14 January 2024."}</p>
@@ -70,7 +70,7 @@ export const MachineryTaiwan: React.FC = () => (
       <hr className="my-14 border-gov-blue/20" />
 
       <section id="native" lang="zh-Hant">
-        <h2 className="text-2xl font-bold text-gov-blue mb-6">{"臺灣工具機聚落的期限是 2027 年 1 月 14 日，而所依賴的標準中存在一項我們可以具體展示的缺陷"}</h2>
+        <h2 className="text-2xl font-bold text-gov-blue mb-6">{"工具機資料標準的本體與綱要品質問題概觀：以 MTConnect 與資產管理殼檢驗"}</h2>
             <p className="text-base text-gov-dark/90 leading-relaxed mb-4">{"歐盟機械法規 (EU) 2023/1230 自 2027 年 1 月 14 日起適用，同日指令 2006/42/EC 廢止。我們已對照 EUR-Lex 原文第 54 條查核這兩個日期，因為市面流通的多份供應商摘要寫成 1 月 20 日，那是錯誤的。第 26 條至第 42 條則自 2024 年 1 月 14 日起即已適用。"}</p>
             <p className="text-base text-gov-dark/90 leading-relaxed mb-4">{"臺灣是全球最大的工具機出口國之一，臺中聚落從上銀、台達電到東台與亞崴，對歐洲銷售比重甚高。對這些企業而言，這項法規把技術文件轉變成一個資料工程問題。業界所收斂的語意載體，在產品文件方面是資產管理殼，在生產現場資料方面則是 MTConnect。"}</p>
             <p className="text-base text-gov-dark/90 leading-relaxed mb-4">{"我們對兩者進行了稽核，並且將我們自己未通過驗證的數字，與通過驗證的發現一併公開。"}</p>

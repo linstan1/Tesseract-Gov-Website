@@ -9,7 +9,7 @@ const SCHEMA = {
   "@type": "Article",
   "@id": "https://gov.tesseract.academy/research/machinery-regulation-readiness-korea#article",
   "mainEntityOfPage": "https://gov.tesseract.academy/research/machinery-regulation-readiness-korea",
-  "headline": "Korean machine builders have until 14 January 2027, and the open standards they rely on are not as clean as they look | Tesseract Academy",
+  "headline": "An overview of ontology and schema quality issues in machinery data standards, tested against MTConnect and the Asset Administration Shell | Tesseract Academy",
   "description": "A readiness assessment for Korean machine tool and equipment exporters against EU Machinery Regulation 2023/1230, which applies from 14 January 2027, verified against the EUR-Lex primary text at Article 54 because several vendor summaries give the wrong date. Audits the two semantic carriers the sector relies on. MTConnect publishes each version as both XSD and JSON Schema, and the JSON AlarmStateEnum admits INSTANT while the XSD AlarmStateType does not, identically in 2.0, 2.1 and 2.2. Includes a retracted finding: an initial count of 111 divergences collapsed to one after 105 proved to be a deliberate design difference and three were our own matching artefact. Also tests and refutes the common claim that AAS submodel compliance requires a paid ECLASS subscription. In English and Korean.",
   "author": {
     "@id": "https://gov.tesseract.academy/#organization"
@@ -37,10 +37,10 @@ export const MachineryKorea: React.FC = () => (
       <Link to="/research" className="inline-flex items-center gap-2 text-sm font-medium text-gov-blue hover:underline mb-8">
         <ArrowLeft className="w-4 h-4" /> Back to research
       </Link>
-      <h1 className="text-3xl sm:text-4xl font-bold text-gov-blue mb-6">{"Korean machine builders have until 14 January 2027, and the open standards they rely on are not as clean as they look"}</h1>
+      <h1 className="text-3xl sm:text-4xl font-bold text-gov-blue mb-6">{"An overview of ontology and schema quality issues in machinery data standards, tested against MTConnect and the Asset Administration Shell"}</h1>
       <p className="text-sm text-gov-dark/70 mb-2">Published 17 August 2026. Available in English and Korean.</p>
       <p className="text-sm mb-8"><a href={REPO} target="_blank" rel="noopener noreferrer" className="text-gov-blue hover:underline">Repository on GitHub<span className="sr-only"> (opens in new tab)</span></a></p>
-      <nav className="mb-10 text-sm"><a href="#english" className="text-gov-blue hover:underline">English</a><span className="mx-2 text-gov-dark/40">|</span><a href="#native" className="text-gov-blue hover:underline">{"한국 기계 제조사에게 남은 기한은 2027년 1월 "}</a></nav>
+      <nav className="mb-10 text-sm"><a href="#english" className="text-gov-blue hover:underline">English</a><span className="mx-2 text-gov-dark/40">|</span><a href="#native" className="text-gov-blue hover:underline">{"기계류 데이터 표준의 온톨로지 및 스키마 품질 문제"}</a></nav>
 
       <section id="english" lang="en">
             <p className="text-base text-gov-dark/90 leading-relaxed mb-4">{"The EU Machinery Regulation (EU) 2023/1230 applies from 14 January 2027. On that date Directive 2006/42/EC is repealed. We verified both dates against the EUR-Lex primary text, Article 54, because a number of vendor summaries circulating online give 20 January and are simply wrong. Parts of the Regulation already bite: Articles 26 to 42 have applied since 14 January 2024."}</p>
@@ -70,7 +70,7 @@ export const MachineryKorea: React.FC = () => (
       <hr className="my-14 border-gov-blue/20" />
 
       <section id="native" lang="ko">
-        <h2 className="text-2xl font-bold text-gov-blue mb-6">{"한국 기계 제조사에게 남은 기한은 2027년 1월 14일이며, 의존하게 될 개방 표준은 보이는 것만큼 깨끗하지 않습니다"}</h2>
+        <h2 className="text-2xl font-bold text-gov-blue mb-6">{"기계류 데이터 표준의 온톨로지 및 스키마 품질 문제 개관: MTConnect와 자산 관리 셸 검증"}</h2>
             <p className="text-base text-gov-dark/90 leading-relaxed mb-4">{"EU 기계류 규정 (EU) 2023/1230은 2027년 1월 14일부터 적용됩니다. 같은 날 지침 2006/42/EC는 폐지됩니다. 저희는 두 날짜 모두를 EUR-Lex 원문 제54조에서 직접 확인했습니다. 온라인에 유통되는 여러 벤더 요약본이 1월 20일이라고 기재하고 있으나 이는 사실이 아니기 때문입니다. 규정의 일부는 이미 발효 중입니다. 제26조부터 제42조까지는 2024년 1월 14일부터 적용되고 있습니다."}</p>
             <p className="text-base text-gov-dark/90 leading-relaxed mb-4">{"두산과 현대위아를 비롯한 부품 공급사에 이르기까지, 한국의 공작기계 및 장비 수출 기업에게 이 규정은 문서화를 데이터 문제로 전환시킵니다. 사용설명서, 적합성 선언, 기술 문서가 기계 판독 가능한 형태로 이동하며, 업계가 정착시킨 의미 전달 수단은 자산 관리 셸과 현장 데이터의 경우 MTConnect입니다."}</p>
             <p className="text-base text-gov-dark/90 leading-relaxed mb-4">{"저희는 두 가지 모두를 감사했습니다. 검증을 통과하지 못한 저희 자신의 수치를 포함하여 결과를 공개합니다."}</p>

@@ -9,7 +9,7 @@ const SCHEMA = {
   "@type": "Article",
   "@id": "https://gov.tesseract.academy/research/one-record-domain-axioms-taiwan#article",
   "mainEntityOfPage": "https://gov.tesseract.academy/research/one-record-domain-axioms-taiwan",
-  "headline": "Taiwan's air and ocean cargo both run on open standards, and one of them removed a foundational axiom | Tesseract Academy",
+  "headline": "An overview of ontology quality issues in air and ocean freight data standards, tested against IATA ONE Record and DCSA | Tesseract Academy",
   "description": "An independent, dual-engine audit of the IATA ONE Record data model ontology across six releases, written for Taiwan's air and ocean freight sector. Every one of the 496 properties in the 2022-12 release declares an rdfs:domain. None of the 522 properties in 2023-12 do, and none of the 534 in 2024-12 do. Classes with no rdfs:label rose from 1 to 58 and lint issues from 2 to 650. Includes a contrast with the DCSA ocean container OpenAPI specifications, 174 files under Apache 2.0. Verified two independent ways with rdflib and the Open Ontologies engine. In English and Traditional Chinese.",
   "author": {
     "@id": "https://gov.tesseract.academy/#organization"
@@ -37,10 +37,10 @@ export const OneRecordTaiwan: React.FC = () => (
       <Link to="/research" className="inline-flex items-center gap-2 text-sm font-medium text-gov-blue hover:underline mb-8">
         <ArrowLeft className="w-4 h-4" /> Back to research
       </Link>
-      <h1 className="text-3xl sm:text-4xl font-bold text-gov-blue mb-6">{"Taiwan's air and ocean cargo both run on open standards, and one of them removed a foundational axiom"}</h1>
+      <h1 className="text-3xl sm:text-4xl font-bold text-gov-blue mb-6">{"An overview of ontology quality issues in air and ocean freight data standards, tested against IATA ONE Record and DCSA"}</h1>
       <p className="text-sm text-gov-dark/70 mb-2">Published 17 August 2026. Available in English and Traditional Chinese.</p>
       <p className="text-sm mb-8"><a href={REPO} target="_blank" rel="noopener noreferrer" className="text-gov-blue hover:underline">Repository on GitHub<span className="sr-only"> (opens in new tab)</span></a></p>
-      <nav className="mb-10 text-sm"><a href="#english" className="text-gov-blue hover:underline">English</a><span className="mx-2 text-gov-dark/40">|</span><a href="#native" className="text-gov-blue hover:underline">{"臺灣的空運與海運貨載都建立在開放標準之上，而其中一項標準"}</a></nav>
+      <nav className="mb-10 text-sm"><a href="#english" className="text-gov-blue hover:underline">English</a><span className="mx-2 text-gov-dark/40">|</span><a href="#native" className="text-gov-blue hover:underline">{"空運與海運貨載資料標準的本體品質問題概觀：以 IATA "}</a></nav>
 
       <section id="english" lang="en">
             <p className="text-base text-gov-dark/90 leading-relaxed mb-4">{"Taiwan sits at the centre of two global freight networks. China Airlines and EVA Air are among the world's largest air cargo operators, and Evergreen, Yang Ming and Wan Hai make Taiwan a top-tier container shipping nation. Both networks are converging on open data standards. We audited them, and the air cargo side has a problem worth knowing about before you build on it."}</p>
@@ -67,7 +67,7 @@ export const OneRecordTaiwan: React.FC = () => (
       <hr className="my-14 border-gov-blue/20" />
 
       <section id="native" lang="zh-Hant">
-        <h2 className="text-2xl font-bold text-gov-blue mb-6">{"臺灣的空運與海運貨載都建立在開放標準之上，而其中一項標準悄悄移除了一個基礎公理"}</h2>
+        <h2 className="text-2xl font-bold text-gov-blue mb-6">{"空運與海運貨載資料標準的本體品質問題概觀：以 IATA ONE Record 與 DCSA 檢驗"}</h2>
             <p className="text-base text-gov-dark/90 leading-relaxed mb-4">{"臺灣位居兩大全球貨運網絡的核心。中華航空與長榮航空名列全球最大的空運貨載業者，長榮海運、陽明海運與萬海航運則使臺灣成為頂尖的貨櫃航運國家。這兩個網絡都正在向開放資料標準收斂。我們對其進行了稽核，而空運這一側存在一個值得在建置之前先行了解的問題。"}</p>
             <h2 className="text-2xl font-semibold text-gov-blue mt-10 mb-4">{"稽核發現"}</h2>
             <p className="text-base text-gov-dark/90 leading-relaxed mb-4">{"IATA ONE Record 以 MIT 授權公開其資料模型的 OWL 本體。我們以兩個獨立引擎驗證了每一個已發布版本，分別是我們自行開發的開源引擎 Open Ontologies 與 rdflib。兩者結果完全一致。"}</p>

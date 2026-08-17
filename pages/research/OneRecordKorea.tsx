@@ -9,7 +9,7 @@ const SCHEMA = {
   "@type": "Article",
   "@id": "https://gov.tesseract.academy/research/one-record-domain-axioms-korea#article",
   "mainEntityOfPage": "https://gov.tesseract.academy/research/one-record-domain-axioms-korea",
-  "headline": "The air cargo ontology Korean carriers are implementing lost its domain axioms in 2023 | Tesseract Academy",
+  "headline": "An overview of ontology quality issues in air cargo data standards, tested against IATA ONE Record | Tesseract Academy",
   "description": "An independent, dual-engine audit of the IATA ONE Record data model ontology across six releases. Every one of the 496 properties in the 2022-12 release declares an rdfs:domain. None of the 522 properties in 2023-12 do, and none of the 534 in 2024-12 do. Classes with no rdfs:label rose from 1 to 58 over the same span, and total lint issues rose from 2 to 650. Verified two independent ways, with rdflib and with the open-source Open Ontologies engine, which agree exactly. Written for Korean air cargo operators building on ONE Record, in English and Korean, with a reproducible check over the MIT-licensed public repository.",
   "author": {
     "@id": "https://gov.tesseract.academy/#organization"
@@ -37,10 +37,10 @@ export const OneRecordKorea: React.FC = () => (
       <Link to="/research" className="inline-flex items-center gap-2 text-sm font-medium text-gov-blue hover:underline mb-8">
         <ArrowLeft className="w-4 h-4" /> Back to research
       </Link>
-      <h1 className="text-3xl sm:text-4xl font-bold text-gov-blue mb-6">{"The air cargo ontology Korean carriers are implementing lost its domain axioms in 2023"}</h1>
+      <h1 className="text-3xl sm:text-4xl font-bold text-gov-blue mb-6">{"An overview of ontology quality issues in air cargo data standards, tested against IATA ONE Record"}</h1>
       <p className="text-sm text-gov-dark/70 mb-2">Published 17 August 2026. Available in English and Korean.</p>
       <p className="text-sm mb-8"><a href={REPO} target="_blank" rel="noopener noreferrer" className="text-gov-blue hover:underline">Repository on GitHub<span className="sr-only"> (opens in new tab)</span></a></p>
-      <nav className="mb-10 text-sm"><a href="#english" className="text-gov-blue hover:underline">English</a><span className="mx-2 text-gov-dark/40">|</span><a href="#native" className="text-gov-blue hover:underline">{"대한민국 항공화물 업계가 구현 중인 온톨로지는 20"}</a></nav>
+      <nav className="mb-10 text-sm"><a href="#english" className="text-gov-blue hover:underline">English</a><span className="mx-2 text-gov-dark/40">|</span><a href="#native" className="text-gov-blue hover:underline">{"항공화물 데이터 표준의 온톨로지 품질 문제 개관: "}</a></nav>
 
       <section id="english" lang="en">
             <p className="text-base text-gov-dark/90 leading-relaxed mb-4">{"IATA ONE Record is the data standard the air cargo industry has agreed to converge on. Its data model is published as an OWL ontology under an MIT licence, which means anyone can check it. We did, across six releases, and found that one release removed a foundational modelling construct from every single property in the ontology."}</p>
@@ -69,7 +69,7 @@ export const OneRecordKorea: React.FC = () => (
       <hr className="my-14 border-gov-blue/20" />
 
       <section id="native" lang="ko">
-        <h2 className="text-2xl font-bold text-gov-blue mb-6">{"대한민국 항공화물 업계가 구현 중인 온톨로지는 2023년에 도메인 공리를 잃었고, 2024년 릴리스에서도 복구되지 않았습니다"}</h2>
+        <h2 className="text-2xl font-bold text-gov-blue mb-6">{"항공화물 데이터 표준의 온톨로지 품질 문제 개관: IATA ONE Record 검증"}</h2>
             <p className="text-base text-gov-dark/90 leading-relaxed mb-4">{"IATA ONE Record는 항공화물 산업이 수렴하기로 합의한 데이터 표준입니다. 데이터 모델은 MIT 라이선스로 공개된 OWL 온톨로지이므로 누구나 검증할 수 있습니다. 저희는 여섯 개 릴리스를 대상으로 검증했고, 한 릴리스에서 온톨로지의 모든 속성으로부터 기초적인 모델링 구조가 제거되었음을 확인했습니다."}</p>
             <h2 className="text-2xl font-semibold text-gov-blue mt-10 mb-4">{"측정 결과"}</h2>
             <p className="text-base text-gov-dark/90 leading-relaxed mb-4">{"저희는 공개된 모든 ONE Record 데이터 모델 온톨로지 버전을 두 개의 독립적인 엔진으로 검증했습니다. 자체 오픈소스 엔진인 Open Ontologies와 rdflib입니다. 두 엔진의 결과는 정확히 일치합니다."}</p>
