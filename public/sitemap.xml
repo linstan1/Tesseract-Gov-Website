@@ -308,6 +308,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://gov.tesseract.academy/research/italy-register-ontology</loc>
+    <lastmod>2026-08-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://gov.tesseract.academy/research/uk-register-ontology</loc>
     <lastmod>2026-08-17</lastmod>
     <changefreq>weekly</changefreq>

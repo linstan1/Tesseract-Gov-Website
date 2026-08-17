@@ -178,6 +178,13 @@ const FAMILY = [
     repo: 'https://github.com/fabio-rovai/securities-register-ontology',
   },
   {
+    name: 'Italian Public Register Ontology',
+    ns: 'https://gov.tesseract.academy/def/italy#',
+    schemes: 'https://gov.tesseract.academy/def/italy/scheme#',
+    line: 'The Italian public register fabric: IPA, ANAC contracts, OpenCUP projects, the ISTAT register of administrative units and the national semantic vocabulary, with vocabulary currency, pair reconciliation and CIG-to-CUP linkage as typed failure modes, and the fix contributed upstream as SHACL.',
+    repo: 'https://github.com/fabio-rovai/italy-register-ontology',
+  },
+  {
     name: 'UK Public Register Ontology (UKRO)',
     ns: 'https://gov.tesseract.academy/def/uk#',
     schemes: 'https://gov.tesseract.academy/def/uk/scheme#',

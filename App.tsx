@@ -81,6 +81,7 @@ const MachineValidatedOpenOntologies = lazy(() => import('./pages/research/Machi
 const BankRegisterOntology = lazy(() => import('./pages/research/BankRegisterOntology').then(m => ({ default: m.BankRegisterOntology })));
 const SecuritiesRegisterOntology = lazy(() => import('./pages/research/SecuritiesRegisterOntology').then(m => ({ default: m.SecuritiesRegisterOntology })));
 const UkRegisterOntology = lazy(() => import('./pages/research/UkRegisterOntology').then(m => ({ default: m.UkRegisterOntology })));
+const ItalyRegisterOntology = lazy(() => import('./pages/research/ItalyRegisterOntology').then(m => ({ default: m.ItalyRegisterOntology })));
 const SemanticAssetRegister = lazy(() => import('./pages/research/SemanticAssetRegister').then(m => ({ default: m.SemanticAssetRegister })));
 const RegisterAssurance = lazy(() => import('./pages/research/RegisterAssurance').then(m => ({ default: m.RegisterAssurance })));
 
@@ -200,6 +201,10 @@ const PAGE_META: Record<string, { title: string; description: string }> = {
   '/research/securities-register-ontology': {
     title: 'The missing CIK-to-LEI crosswalk: an open ontology for US securities entity registers | Tesseract Academy for the Public Sector',
     description: "An open OWL 2, SKOS and SHACL ontology and reproducible audit of the boundary between the SEC's EDGAR entity register and the Global LEI System, built from complete downloads of both registers and of every open register that embeds them, all taken on 17 August 2026. The lei field is populated in 773 of 981,355 EDGAR entity records, 0.079 per cent, and only 667 of those are valid LEIs: the rest include telephone numbers, IRS EINs, entity names and 35 literal N/A strings. In one quarter 1,973 fund registrants stated their LEI to the SEC on Forms N-PORT and N-CEN, and the entity register surfaces 12 of them. GLEIF publishes 27,704 records that map LEIs to EDGAR identifiers daily under CC0, while no SEC surface publishes the reverse. Reconciling the two halves of the series crosswalk across 12,604 fund series finds 100 fund series carrying two different LEIs across the register boundary, and 56.6 per cent of all US LEI records are LAPSED. The joint data standards rule under the Financial Data Transparency Act adopts the Legal Entity Identifier as the common entity identifier for nine federal financial agencies, the SEC among them, from 1 October 2026. The artefact comprises 525,387 triples, with every headline computed two independent ways, reproducible from public data.",
+  },
+  '/research/italy-register-ontology': {
+    title: 'An open ontology for Italian public registers, tested against IPA, ANAC, OpenCUP and ISTAT | Tesseract Academy for the Public Sector',
+    description: "An open OWL 2, SKOS and SHACL ontology and reproducible audit of Italy's public register fabric, built from hands-on downloads of the IPA register of 23,735 public administrations, the ANAC contracts register, the OpenCUP register of 11.9 million public investment projects, the ISTAT register of administrative units and the national semantic vocabulary, taken on 17 August 2026. The national cities vocabulary and the ISTAT CSV export both predate the 2026 Sardinian territorial reform: 380 dead municipality codes are published as current and 378 current codes are missing, while the operational IPA register already uses the new codes with zero mismatches across all 23,735 entities. All 23,735 IPA fiscal codes pass their checksum, a clean null result stated as a finding. In a two-month sample of 2025 contracts, 140 well-formed CUPs referenced by 255 contracts are absent from the published OpenCUP open-data exports, and 45 values in the CUP field fail the CUP grammar, including ESENTE and ATT000NON000CUP. The findings are delivered upstream as a contribute-first SHACL package answering the vocabulary maintainers' own request. Every headline computed two independent ways, reproducible from public data.",
   },
   '/research/uk-register-ontology': {
     title: 'An open ontology for UK public registers, tested against Companies House, the Charity Commission and the Global LEI System | Tesseract Academy for the Public Sector',
@@ -532,6 +537,7 @@ const App: React.FC = () => {
               <Route path="/research/bank-register-ontology" element={<BankRegisterOntology />} />
               <Route path="/research/securities-register-ontology" element={<SecuritiesRegisterOntology />} />
               <Route path="/research/uk-register-ontology" element={<UkRegisterOntology />} />
+              <Route path="/research/italy-register-ontology" element={<ItalyRegisterOntology />} />
               <Route path="/research/semantic-asset-register" element={<SemanticAssetRegister />} />
               <Route path="/research/register-assurance" element={<RegisterAssurance />} />
             </Routes>

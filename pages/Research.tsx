@@ -189,7 +189,16 @@ export const Research: React.FC = () => {
            </li>
         </PublicationGroup>
 
-        <PublicationGroup title="Register assurance" count={3}>
+        <PublicationGroup title="Register assurance" count={4}>
+           <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
+             <Link to="/research/italy-register-ontology"><h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark hover:underline transition-colors">An Open Ontology for Italian Public Registers, Tested Against IPA, ANAC, OpenCUP and ISTAT</h3></Link>
+             <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Open ontology, five-register measurement and upstream SHACL contribution, 2026</p>
+             <p className="text-base text-gov-dark/90 leading-relaxed">An open OWL 2, SKOS and SHACL ontology and reproducible audit of Italy&apos;s public register fabric, built from hands-on downloads of the IPA register of 23,735 public administrations, the ANAC contracts register, the OpenCUP register of 11.9 million public investment projects, both flavours of the ISTAT register of administrative units and the national semantic vocabulary, taken on 17 August 2026. The national cities vocabulary and the ISTAT CSV export both predate the 2026 Sardinian territorial reform: 380 dead municipality codes are published as current and 378 current codes are missing, so joins against the semantic layer silently drop every Sardinian municipality, while the operational IPA register already uses the new codes with zero pair mismatches across all 23,735 entities. All 23,735 IPA codici fiscali pass their checksum, a clean null result stated as a finding. In a seeded two-month sample of 2025 contracts, 140 well-formed CUPs referenced by 255 contracts are absent from the published OpenCUP exports, and 45 values in the CUP field fail the CUP grammar, including ESENTE and ATT000NON000CUP. The findings are delivered upstream as a contribute-first SHACL package answering the vocabulary maintainers&apos; own request in issue #225, including the currency test that would have caught the drift in CI. Every headline computed two independent ways, reproducible from public data.</p>
+             <div className="mt-3 flex flex-wrap gap-3 items-center">
+               <Link to="/research/italy-register-ontology" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">Read the study</Link>
+               <a href="https://github.com/fabio-rovai/italy-register-ontology" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">repository on GitHub<span className="sr-only"> (opens in new tab)</span></a>
+             </div>
+           </li>
            <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
              <Link to="/research/uk-register-ontology"><h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark hover:underline transition-colors">An Open Ontology for UK Public Registers, Tested Against Companies House, the Charity Commission and the Global LEI System</h3></Link>
              <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Open ontology, four-register measurement, 2026</p>
