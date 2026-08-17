@@ -13,7 +13,7 @@ const SCHEMA = {
   headline:
     'The missing CIK-to-LEI crosswalk: an open ontology for US securities entity registers | Tesseract Academy',
   description:
-    "An open OWL 2, SKOS and SHACL ontology and reproducible audit of the boundary between the SEC's EDGAR entity register and the Global LEI System, built from complete downloads of both registers and of every open register that embeds them, all taken on 17 August 2026. The lei field is populated in 773 of 981,355 EDGAR entity records, 0.079 per cent, and only 667 of those are valid LEIs: the rest include telephone numbers, IRS EINs, entity names and 35 literal N/A strings. In one quarter 1,973 fund registrants stated their LEI to the SEC on Forms N-PORT and N-CEN, and the entity register surfaces 12 of them. GLEIF publishes 27,704 records that map LEIs to EDGAR identifiers daily under CC0, while no SEC surface publishes the reverse. Reconciling the two halves of the series crosswalk across 12,604 fund series finds 100 fund series carrying two different LEIs across the register boundary, and 56.6 per cent of all US LEI records are LAPSED. The joint data standards rule under the Financial Data Transparency Act adopts the Legal Entity Identifier as the common entity identifier for nine federal financial agencies, the SEC among them, from 1 October 2026. The artefact comprises 525,387 triples, with every headline computed two independent ways, reproducible from public data.",
+    "An open OWL 2, SKOS and SHACL ontology and reproducible audit of the boundary between the SEC's EDGAR entity register and the Global LEI System, built from complete downloads of both registers and of every open register that embeds them, all taken on 17 August 2026. The lei field is populated in 773 of 981,355 EDGAR entity records, 0.079 per cent, and only 667 of those are valid LEIs: the rest include telephone numbers, IRS EINs, entity names and 35 literal N/A strings. In one quarter 1,973 fund registrants stated their LEI to the SEC on Forms N-PORT and N-CEN, and the entity register surfaces 12 of them. GLEIF publishes 27,718 records that map LEIs to EDGAR identifiers daily under CC0, while no SEC surface publishes the reverse. Reconciling the two halves of the series crosswalk across 12,604 fund series finds 100 fund series carrying two different LEIs across the register boundary, and 56.6 per cent of all US LEI records are LAPSED. The joint data standards rule under the Financial Data Transparency Act adopts the Legal Entity Identifier as the common entity identifier for nine federal financial agencies, the SEC among them, from 1 October 2026. The artefact comprises 526,098 triples, with every headline computed two independent ways, reproducible from public data.",
   author: { '@id': 'https://gov.tesseract.academy/#organization' },
   publisher: { '@id': 'https://gov.tesseract.academy/#organization' },
   datePublished: '2026-08-17',
@@ -37,7 +37,7 @@ const FAQ_SCHEMA = {
       name: 'Does the SEC publish LEIs for the companies in EDGAR?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: "Barely. Every one of the 981,355 entity records in the SEC's EDGAR bulk submissions file carries a top-level field named lei, and as of the 17 August 2026 build measured in this study it is populated in 773 of them, which is 0.079 per cent. Among the 7,992 listed operating companies in the register, 25 carry an LEI. Apple's LEI has been ISSUED at GLEIF since 2012, and Apple's EDGAR record says null, as do the records of Microsoft, JPMorgan and essentially every household-name filer. For comparison, the same day's GLEIF golden copy contains 358,275 US LEI records.",
+        text: "Barely. Every one of the 981,355 entity records in the SEC's EDGAR bulk submissions file carries a top-level field named lei, and as of the 17 August 2026 build measured in this study it is populated in 773 of them, which is 0.079 per cent. Among the 7,992 listed operating companies in the register, 25 carry an LEI. Apple's LEI has been ISSUED at GLEIF since 2012, and Apple's EDGAR record says null, as do the records of Microsoft, JPMorgan and essentially every household-name filer. For comparison, the same day's GLEIF golden copy contains 358,294 US LEI records.",
       },
     },
     {
@@ -53,7 +53,7 @@ const FAQ_SCHEMA = {
       name: 'Is there a CIK to LEI mapping?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: "Not from the SEC. No SEC surface publishes a CIK-to-LEI or series-to-LEI file, and the SEC's own investment company series and class register, 19,340 series, has no LEI column at all. The mapping exists at GLEIF: 27,704 LEI records in the golden copy name EDGAR as their registration authority and carry an EDGAR identifier in their registeredAs field, 22,672 series IDs and 5,019 CIKs, published daily under CC0 by a Swiss foundation. A further partial crosswalk can be recovered from the SEC's own structured form datasets, because 1,973 fund registrants stated their LEIs to the SEC on Forms N-PORT and N-CEN in 2026 Q2 alone.",
+        text: "Not from the SEC. No SEC surface publishes a CIK-to-LEI or series-to-LEI file, and the SEC's own investment company series and class register, 19,340 series, has no LEI column at all. The mapping exists at GLEIF: 27,718 LEI records in the golden copy name EDGAR as their registration authority and carry an EDGAR identifier in their registeredAs field, 22,688 series IDs and 5,017 CIKs, published daily under CC0 by a Swiss foundation. A further partial crosswalk can be recovered from the SEC's own structured form datasets, because 1,973 fund registrants stated their LEIs to the SEC on Forms N-PORT and N-CEN in 2026 Q2 alone.",
       },
     },
     {
@@ -116,8 +116,8 @@ const FINDINGS = [
     means: "Identity assigned to the wrong side of a control relationship at the register boundary. The same defect class was found last week in the FDIC's register, so this is two US regulators with one failure mode.",
   },
   {
-    f: 'LEI records in the GLEIF golden copy naming EDGAR as their registration authority, carrying 22,672 series IDs and 5,019 CIKs in their registeredAs field, published daily under CC0. The SEC publishes no mapping in either direction and its series register has no LEI column',
-    n: '27,704',
+    f: 'LEI records in the GLEIF golden copy naming EDGAR as their registration authority, carrying 22,688 series IDs and 5,017 CIKs in their registeredAs field, published daily under CC0. The SEC publishes no mapping in either direction and its series register has no LEI column',
+    n: '27,718',
     sev: 'signal',
     means: 'The authoritative crosswalk between the US securities register and the US-adopted entity standard is maintained outside the United States, by the counterparty register.',
   },
@@ -135,7 +135,7 @@ const FINDINGS = [
   },
   {
     f: 'US LEI records in the golden copy that are LAPSED, materially worse than the global lapse rate',
-    n: '202,698 of 358,275 (56.6%)',
+    n: '202,698 of 358,294 (56.6%)',
     sev: 'signal',
     means: 'Adoption without renewal is not identification. It is an inventory of expired claims.',
   },
@@ -173,9 +173,9 @@ export const SecuritiesRegisterOntology: React.FC = () => (
           <li>Every one of the 981,355 records in the SEC&apos;s EDGAR entity register carries a top-level <code className="text-sm bg-gov-bg px-1.5 py-0.5 rounded">lei</code> field. It is populated in 773 of them, and only 667 of those are valid LEIs.</li>
           <li>The invalid values include telephone numbers, IRS employer identification numbers, entity names typed into the identifier field, fourteen strings that fail the ISO 7064 check digits, and thirty-five records whose LEI is the literal text &quot;N/A&quot;.</li>
           <li>In a single quarter, 1,973 fund registrants stated their LEI to the SEC on Forms N-PORT and N-CEN, and the entity register surfaces 12 of them. For 1,954 CIKs the operator demonstrably holds a valid LEI that its own register does not publish.</li>
-          <li>GLEIF publishes a daily CC0 mapping from 27,704 LEIs to EDGAR identifiers. The SEC publishes no mapping in either direction, so the authoritative crosswalk to the US-adopted standard is maintained in Switzerland.</li>
+          <li>GLEIF publishes a daily CC0 mapping from 27,718 LEIs to EDGAR identifiers. The SEC publishes no mapping in either direction, so the authoritative crosswalk to the US-adopted standard is maintained in Switzerland.</li>
           <li>Reconciling the two halves of the series crosswalk across 12,604 fund series finds 100 series carrying two different LEIs on the two sides of the register boundary, and 56.6 per cent of all US LEI records are LAPSED.</li>
-          <li>The artefact is an open OWL 2 ontology, SKOS scheme registry and SHACL governance layer, 525,387 triples, code MIT, ontology and documentation CC BY 4.0, reproducible from public data.</li>
+          <li>The artefact is an open OWL 2 ontology, SKOS scheme registry and SHACL governance layer, 526,098 triples, code MIT, ontology and documentation CC BY 4.0, reproducible from public data.</li>
         </ul>
       </div>
     </section>
@@ -183,7 +183,7 @@ export const SecuritiesRegisterOntology: React.FC = () => (
     <section className="space-y-4">
       <h2 className="text-2xl font-bold text-gov-dark font-serif">What we measured</h2>
       <p className="text-gov-dark leading-relaxed">
-        Four register surfaces, all keyless, all fetched on the same day. The EDGAR bulk submissions file is the SEC&apos;s entity register: 981,355 entity records, refreshed daily, one JSON document per CIK. Every record carries a top-level field named <code className="text-sm bg-gov-bg px-1.5 py-0.5 rounded">lei</code>. The GLEIF golden copy is the global LEI register: 3,403,856 records in the 17 August publish, of which 358,275 are US entities. The SEC&apos;s structured form datasets for 2026 Q2 record what regulated funds told the SEC on Forms N-PORT and N-CEN, including their own LEIs, their series&apos; LEIs, and the LEIs and CUSIPs of 5.3 million portfolio holdings. The GLEIF ISIN-LEI mapping file links 9,135,428 securities to their issuers&apos; LEIs, openly and daily.
+        Four register surfaces, all keyless, all fetched on the same day. The EDGAR bulk submissions file is the SEC&apos;s entity register: 981,355 entity records, refreshed daily, one JSON document per CIK. Every record carries a top-level field named <code className="text-sm bg-gov-bg px-1.5 py-0.5 rounded">lei</code>. The GLEIF golden copy is the global LEI register: 3,404,295 records in the 17 August 16:00 UTC publish, of which 358,294 are US entities. The SEC&apos;s structured form datasets for 2026 Q2 record what regulated funds told the SEC on Forms N-PORT and N-CEN, including their own LEIs, their series&apos; LEIs, and the LEIs and CUSIPs of 5.3 million portfolio holdings. The GLEIF ISIN-LEI mapping file links 9,135,428 securities to their issuers&apos; LEIs, openly and daily.
       </p>
     </section>
 
@@ -220,7 +220,7 @@ export const SecuritiesRegisterOntology: React.FC = () => (
     <section className="space-y-4">
       <h2 className="text-2xl font-bold text-gov-dark font-serif">Finding four: the reverse crosswalk exists, at GLEIF</h2>
       <p className="text-gov-dark leading-relaxed">
-        27,704 LEI records in the golden copy name EDGAR as their registration authority and carry an EDGAR identifier in their registeredAs field: 22,672 series IDs and 5,019 CIKs. GLEIF, a Swiss foundation, publishes a mapping from LEIs to SEC identifiers every day under CC0. The SEC publishes no mapping in either direction, and its own investment company series and class register, 19,340 series, has no LEI column at all. The authoritative crosswalk between the US securities register and the US-adopted entity standard is maintained outside the United States, by the counterparty register.
+        27,718 LEI records in the golden copy name EDGAR as their registration authority and carry an EDGAR identifier in their registeredAs field: 22,688 series IDs and 5,017 CIKs. GLEIF, a Swiss foundation, publishes a mapping from LEIs to SEC identifiers every day under CC0. The SEC publishes no mapping in either direction, and its own investment company series and class register, 19,340 series, has no LEI column at all. The authoritative crosswalk between the US securities register and the US-adopted entity standard is maintained outside the United States, by the counterparty register.
       </p>
     </section>
 
@@ -240,7 +240,7 @@ export const SecuritiesRegisterOntology: React.FC = () => (
     <section className="space-y-4">
       <h2 className="text-2xl font-bold text-gov-dark font-serif">Finding six: most US LEIs are not current anyway</h2>
       <p className="text-gov-dark leading-relaxed">
-        Of 358,275 US LEI records, 202,698 are LAPSED: 56.6 per cent, materially worse than the global lapse rate. Among the LEIs asserted on SEC surfaces the status distribution is better but not clean, and the full breakdown is in the repository&apos;s governance summary. Adoption without renewal is not identification; it is an inventory of expired claims.
+        Of 358,294 US LEI records, 202,698 are LAPSED: 56.6 per cent, materially worse than the global lapse rate. Among the LEIs asserted on SEC surfaces the status distribution is better but not clean, and the full breakdown is in the repository&apos;s governance summary. Adoption without renewal is not identification; it is an inventory of expired claims.
       </p>
     </section>
 
@@ -322,7 +322,7 @@ export const SecuritiesRegisterOntology: React.FC = () => (
     <section className="space-y-4">
       <h2 className="text-2xl font-bold text-gov-dark font-serif">Open, reproducible, and free to use</h2>
       <p className="text-gov-dark leading-relaxed">
-        The repository, with the ontology, the SKOS scheme registry, the three SHACL layers, the harvest and reconciliation pipeline, the query library and the build report, is public: code under MIT, ontology and documentation under CC BY 4.0. The build report lists what could not be obtained as carefully as what could, and the graph of 525,387 triples regenerates from about 2.5&nbsp;GB of open register data with the scripts as shipped.
+        The repository, with the ontology, the SKOS scheme registry, the three SHACL layers, the harvest and reconciliation pipeline, the query library and the build report, is public: code under MIT, ontology and documentation under CC BY 4.0. The build report lists what could not be obtained as carefully as what could, and the graph of 526,098 triples regenerates from about 2.5&nbsp;GB of open register data with the scripts as shipped.
       </p>
       <div className="flex flex-wrap gap-4">
         <a href={REPO} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-gov-blue text-white px-5 py-3 rounded-lg font-semibold hover:bg-gov-blue-dark transition-colors">
