@@ -25,7 +25,7 @@ export const Navbar: React.FC = () => {
             <img src="https://consulting.tesseract.academy/wp-content/uploads/2024/04/logo-centered.png" alt="" className="h-14" aria-hidden="true" />
           </a>
 
-          <nav className="hidden lg:flex items-center gap-1" aria-label="Main navigation">
+          <nav className="hidden xl:flex items-center gap-1" aria-label="Main navigation">
             {NAV_ITEMS.map((item) => (
               <NavLink
                 key={item.path}
@@ -44,7 +44,14 @@ export const Navbar: React.FC = () => {
             ))}
           </nav>
 
-          <div className="flex items-center lg:hidden ml-auto">
+          <a
+            href="mailto:fabio@thetesseractacademy.com"
+            className="hidden xl:inline-flex items-center ml-auto whitespace-nowrap px-5 py-2.5 text-sm font-semibold text-white bg-gov-cta rounded-lg transition-colors duration-150 hover:bg-gov-cta-dark focus:outline-none focus-visible:ring-2 focus-visible:ring-gov-focus focus-visible:ring-offset-2"
+          >
+            Get in touch
+          </a>
+
+          <div className="flex items-center xl:hidden ml-auto">
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="inline-flex items-center justify-center p-2 rounded-lg text-gov-text hover:bg-gov-bg focus:outline-none focus:ring-2 focus:ring-gov-focus focus:ring-offset-2"
@@ -60,7 +67,7 @@ export const Navbar: React.FC = () => {
       </div>
 
       {isOpen && (
-        <nav id="mobile-menu" className="lg:hidden bg-white border-t border-gov-border/30" aria-label="Mobile navigation">
+        <nav id="mobile-menu" className="xl:hidden bg-white border-t border-gov-border/30" aria-label="Mobile navigation">
           <div className="px-4 py-4 space-y-1">
             {NAV_ITEMS.map((item) => (
               <NavLink
@@ -79,6 +86,13 @@ export const Navbar: React.FC = () => {
                 {item.label}
               </NavLink>
             ))}
+            <a
+              href="mailto:fabio@thetesseractacademy.com"
+              onClick={() => setIsOpen(false)}
+              className="block mt-3 px-4 py-3 text-base font-semibold text-center text-white bg-gov-cta rounded-lg hover:bg-gov-cta-dark focus:outline-none focus-visible:ring-2 focus-visible:ring-gov-focus focus-visible:ring-offset-2"
+            >
+              Get in touch
+            </a>
           </div>
         </nav>
       )}

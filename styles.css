@@ -8,6 +8,9 @@
   --color-gov-blue: #3a9e99;
   --color-gov-blue-dark: #2d8884;
   --color-gov-blue-light: #5ac3be;
+  /* CTA teal: darkened so white text clears WCAG 2.1 AA (5.65:1 / 6.97:1 hover). */
+  --color-gov-cta: #26726e;
+  --color-gov-cta-dark: #1f6360;
   --color-gov-dark: #313b45;
   --color-gov-text: #444e57;
   --color-gov-secondary: #5c6670;
