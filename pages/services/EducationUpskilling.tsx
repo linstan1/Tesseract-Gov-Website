@@ -11,11 +11,11 @@ const SCHEMA = {
   },
   serviceType: 'Education and Professional Development',
   description:
-    'AI literacy programmes, data science workshops, and executive leadership training for UK public sector. UK Government Business Academy webinars (2025). BridgeAI / Innovate UK 1,100 registrations. US Navy executive workshop (40+ participants).',
+    'AI literacy programmes, data science workshops, and executive leadership training for UK public sector. UK Government Business Academy webinars (2025 and 2026). BridgeAI / Innovate UK 1,100 registrations. US Navy executive workshop (40+ participants).',
   url: 'https://gov.tesseract.academy/services/education-upskilling',
   areaServed: 'GB',
   datePublished: '2026-04-29',
-  dateModified: '2026-04-29',
+  dateModified: '2026-08-18',
 };
 
 export const EducationUpskilling: React.FC = () => {
@@ -32,8 +32,8 @@ export const EducationUpskilling: React.FC = () => {
         <p className="text-xl text-gov-secondary/90 leading-relaxed max-w-4xl">
           We design and deliver AI literacy, data science, and executive leadership training for UK
           public sector and government-funded programmes. Our work combines academic depth with
-          practical application — including three official UK Government Business Academy webinars
-          delivered in 2025 in partnership with the Department for Business and Trade, and BridgeAI
+          practical application — including six official UK Government Business Academy webinars
+          delivered across 2025 and 2026 in partnership with the Department for Business and Trade, and BridgeAI
           / Innovate UK programme delivery for creative industries.
         </p>
       </header>
@@ -60,7 +60,7 @@ export const EducationUpskilling: React.FC = () => {
           governance frameworks, making informed commissioning decisions, and evaluating AI supplier
           claims in line with the <a href="https://www.gov.uk/government/publications/ai-regulation-a-pro-innovation-approach" target="_blank" rel="noopener noreferrer" className="text-gov-blue hover:underline">UK AI Framework</a>. These programmes have been delivered for the US Navy (40+ senior participants),
           Vodafone Egypt, Philips, and through the UK Government Business Academy, where Dr Stylianos
-          Kampakis delivered three official webinars in 2025 on AI roadmap design, AI tool selection,
+          Kampakis delivered six official webinars in 2025 and 2026 on AI roadmap design, AI tool selection,
           and building internal AI capability. The Alan Turing Institute and the UK AI Safety Institute have both identified these capability gaps as priorities for the public sector.
         </p>
         <p className="text-gov-dark leading-relaxed text-base">
@@ -128,7 +128,7 @@ export const EducationUpskilling: React.FC = () => {
           </div>
           <div className="text-center p-6 bg-gov-bg border border-gov-border/40 rounded-xl">
             <p className="text-4xl font-extrabold text-gov-blue">3</p>
-            <p className="text-sm text-gov-secondary mt-2">Official UK Government Business Academy webinars (2025, in partnership with DBT)</p>
+            <p className="text-sm text-gov-secondary mt-2">Official UK Government Business Academy webinars (2025 and 2026, in partnership with DBT)</p>
           </div>
           <div className="text-center p-6 bg-gov-bg border border-gov-border/40 rounded-xl">
             <p className="text-4xl font-extrabold text-gov-blue">40+</p>
@@ -173,10 +173,10 @@ export const EducationUpskilling: React.FC = () => {
 
         <div className="bg-gov-bg border border-gov-border/40 rounded-xl p-8">
           <p className="text-xs font-semibold text-gov-blue uppercase tracking-wider mb-3">
-            UK Government Business Academy — AI Webinar Series (2025)
+            UK Government Business Academy — AI Webinar Series (2025 and 2026)
           </p>
           <h3 className="text-xl font-bold text-gov-dark mb-4">
-            Three Official UK Government Business Academy Webinars
+            Six Official UK Government Business Academy Webinars
           </h3>
           <p className="text-base text-gov-dark/90 leading-relaxed mb-4">
             Dr Stylianos Kampakis delivered three official UK Government Business Academy webinars
@@ -185,16 +185,17 @@ export const EducationUpskilling: React.FC = () => {
             to business objectives, and building internal AI capability including skills-gap analysis
             and organisational models. Webinars remain available on the business.gov.uk academy
             platform and have been viewed by civil servants, SMEs, and public sector leaders across
-            the UK.
+            the UK. The Business Academy recommissioned the series for autumn 2026, taking the
+            programme to six official webinars.
           </p>
           <div className="grid grid-cols-3 gap-4 mt-6">
             <div className="text-center p-4 bg-white rounded-lg border border-gov-border/30">
-              <p className="text-2xl font-extrabold text-gov-blue">3</p>
+              <p className="text-2xl font-extrabold text-gov-blue">6</p>
               <p className="text-sm text-gov-secondary mt-1">Official DBT Business Academy webinars</p>
             </div>
             <div className="text-center p-4 bg-white rounded-lg border border-gov-border/30">
-              <p className="text-2xl font-extrabold text-gov-blue">2025</p>
-              <p className="text-sm text-gov-secondary mt-1">Delivered October-November</p>
+              <p className="text-2xl font-extrabold text-gov-blue">2025 &amp; 2026</p>
+              <p className="text-sm text-gov-secondary mt-1">Two commissioned series</p>
             </div>
             <div className="text-center p-4 bg-white rounded-lg border border-gov-border/30">
               <p className="text-2xl font-extrabold text-gov-blue">OCT</p>

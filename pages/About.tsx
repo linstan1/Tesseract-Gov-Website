@@ -74,7 +74,7 @@ export const About: React.FC = () => {
           <h3 className="text-2xl font-bold text-gov-dark mb-1 font-serif">Dr Stylianos Kampakis</h3>
           <p className="text-sm font-semibold text-gov-blue mb-4 uppercase tracking-wider">Managing Director</p>
           <p className="text-gov-dark leading-relaxed text-base mb-4">
-            Dr Kampakis holds a PhD in Machine Learning from University College London (UCL) and is a Chartered Statistician (CStat) and Fellow of the Royal Statistical Society (FRSS). He is an Honorary Research Fellow at the UCL Centre for Blockchain Technologies and a Data Science Advisor at London Business School. He has published more than 40 peer-reviewed journal articles, authored 3 books on data science and tokenomics, and delivered the official UK Government Business Academy AI webinar series (Department for Business and Trade, 2025) — a three-part programme reaching UK businesses through the government's own Business Academy platform.
+            Dr Kampakis holds a PhD in Machine Learning from University College London (UCL) and is a Chartered Statistician (CStat) and Fellow of the Royal Statistical Society (FRSS). He is an Honorary Research Fellow at the UCL Centre for Blockchain Technologies and a Data Science Advisor at London Business School. He has published more than 40 peer-reviewed journal articles, authored 3 books on data science and tokenomics, and delivered the official UK Government Business Academy AI webinar series (Department for Business and Trade), six webinars across two commissioned series in 2025 and 2026, reaching UK businesses through the government's own Business Academy platform.
           </p>
           <p className="text-gov-dark leading-relaxed text-base">
             Dr Kampakis is a Department for Business and Trade partner and has contributed expert evidence to the Financial Conduct Authority and to UK parliamentary proceedings. His OCT (Objectives-Capabilities-Tools) methodology for AI strategy has been adopted by public and private sector clients across 12 countries.
@@ -134,7 +134,7 @@ export const About: React.FC = () => {
               </tr>
               <tr className="bg-white hover:bg-gov-bg/50 transition-colors">
                 <td className="px-6 py-4 font-medium text-gov-dark">Government Engagement</td>
-                <td className="px-6 py-4 text-gov-dark">DBT Business Academy webinars (2025); FCA consultation; DBT Partner</td>
+                <td className="px-6 py-4 text-gov-dark">DBT Business Academy webinars (2025 and 2026); FCA consultation; DBT Partner</td>
                 <td className="px-6 py-4 text-gov-dark">BridgeAI; NDTP; Welsh Government</td>
                 <td className="px-6 py-4 text-gov-dark">OFFICIAL-SENSITIVE; SECRET</td>
               </tr>

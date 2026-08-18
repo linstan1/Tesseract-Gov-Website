@@ -46,7 +46,7 @@ const PAGE_META = {
   },
   '/testimonials': {
     title: 'Testimonials & Executive Training | Tesseract Academy for the Public Sector',
-    description: 'Client reviews and executive AI training case studies. Workshops for US Navy (40+ participants), Vodafone, Philips leadership. UK Government Business Academy webinars (2025). Verified Clutch reviews.',
+    description: 'Client reviews and executive AI training case studies. Workshops for US Navy (40+ participants), Vodafone, Philips leadership. UK Government Business Academy webinars (2025 and 2026). Verified Clutch reviews.',
   },
   '/about': {
     title: 'About Tesseract Academy - Team & Credentials | Tesseract Academy for the Public Sector',
@@ -350,7 +350,7 @@ const PAGE_META = {
   },
   '/services/education-upskilling': {
     title: 'AI Education & Upskilling | Tesseract Academy for the Public Sector',
-    description: 'AI literacy programmes, data science workshops, and executive leadership training. US Navy executive workshop (40+ participants). UK Government Business Academy webinars (2025). BridgeAI / Innovate UK delivery.',
+    description: 'AI literacy programmes, data science workshops, and executive leadership training. US Navy executive workshop (40+ participants). UK Government Business Academy webinars (2025 and 2026). BridgeAI / Innovate UK delivery.',
   },
   '/services/ai-governance': {
     title: 'AI Ethics & Governance | Tesseract Academy for the Public Sector',
