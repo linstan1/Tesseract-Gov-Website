@@ -11,76 +11,17 @@ const SCHEMA = {
   },
   serviceType: 'Education and Professional Development',
   description:
-    'AI literacy programmes, data science workshops, and executive leadership training for UK public sector. UK Government Business Academy webinar series commissioned in 2025 and 2026. BridgeAI / Innovate UK 1,100 registrations. US Navy executive workshop (40+ participants).',
+    'AI literacy programmes, data science workshops, and executive leadership training for UK public sector. UK Government Business Academy webinars (2025). BridgeAI / Innovate UK 1,100 registrations. US Navy executive workshop (40+ participants).',
   url: 'https://gov.tesseract.academy/services/education-upskilling',
   areaServed: 'GB',
   datePublished: '2026-04-29',
-  dateModified: '2026-08-18',
+  dateModified: '2026-04-29',
 };
-
-const BUSINESS_ACADEMY_EVENTS = [
-  {
-    name: 'Designing your AI roadmap: A step-by-step guide for growing businesses',
-    start: '2026-08-24T11:00:00+01:00',
-    end: '2026-08-24T12:00:00+01:00',
-    url: 'https://www.business.gov.uk/business-academy/events/designing-your-ai-roadmap-a-step-by-step-guide-for-growing-businesses-24-august-2026/',
-    description:
-      'Identifying AI opportunities across operations, marketing and product, ranking them by commercial impact against technical feasibility, and sequencing them into a phased roadmap with success metrics and governance checkpoints agreed before delivery starts.',
-  },
-  {
-    name: 'Tool-agnostic AI automation: Streamlining your existing workflows',
-    start: '2026-09-24T11:00:00+01:00',
-    end: '2026-09-24T12:00:00+01:00',
-    url: 'https://www.business.gov.uk/business-academy/events/toolagnostic-ai-automation-streamlining-your-existing-workflows-24-september-2026/',
-    description:
-      'Finding the repetitive workflows worth automating, evaluating them before procurement, and selecting tooling without creating vendor lock-in.',
-  },
-  {
-    name: 'AI adoption in practice: Making it work in your team',
-    start: '2026-10-06T11:00:00+01:00',
-    end: '2026-10-06T12:00:00+01:00',
-    url: 'https://www.business.gov.uk/business-academy/events/ai-adoption-in-practice-making-it-work-in-your-team-06-october-2026/',
-    description:
-      'Moving AI from isolated experiments to a capability a team trusts and uses: ownership, day-to-day working practice, and the evidence that shows adoption is real rather than reported.',
-  },
-];
-
-const EVENT_SCHEMAS = BUSINESS_ACADEMY_EVENTS.map((event) => ({
-  '@context': 'https://schema.org',
-  '@type': 'Event',
-  name: event.name,
-  description: event.description,
-  startDate: event.start,
-  endDate: event.end,
-  eventAttendanceMode: 'https://schema.org/OnlineEventAttendanceMode',
-  eventStatus: 'https://schema.org/EventScheduled',
-  url: event.url,
-  inLanguage: 'en-GB',
-  location: { '@type': 'VirtualLocation', url: event.url },
-  organizer: {
-    '@type': 'GovernmentOrganization',
-    name: 'Business Academy, business.gov.uk',
-    url: 'https://www.business.gov.uk/business-academy/',
-  },
-  performer: {
-    '@type': 'Person',
-    '@id': 'https://gov.tesseract.academy/#kampakis',
-    name: 'Dr Stylianos Kampakis',
-  },
-  offers: {
-    '@type': 'Offer',
-    price: '0',
-    priceCurrency: 'GBP',
-    availability: 'https://schema.org/InStock',
-    url: event.url,
-    validFrom: '2026-08-01T00:00:00+01:00',
-  },
-}));
 
 export const EducationUpskilling: React.FC = () => {
   return (
     <div className="max-w-6xl mx-auto px-6 lg:px-8 py-20 space-y-16">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([SCHEMA, ...EVENT_SCHEMAS]) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SCHEMA) }} />
       <header className="border-b border-gov-border/30 pb-10">
         <p className="text-sm font-semibold text-gov-blue uppercase tracking-wider mb-4">
           Service — Education and Upskilling
@@ -91,8 +32,8 @@ export const EducationUpskilling: React.FC = () => {
         <p className="text-xl text-gov-secondary/90 leading-relaxed max-w-4xl">
           We design and deliver AI literacy, data science, and executive leadership training for UK
           public sector and government-funded programmes. Our work combines academic depth with
-          practical application, including six official UK Government Business Academy webinars
-          delivered across 2025 and 2026 in partnership with the Department for Business and Trade, and BridgeAI
+          practical application — including three official UK Government Business Academy webinars
+          delivered in 2025 in partnership with the Department for Business and Trade, and BridgeAI
           / Innovate UK programme delivery for creative industries.
         </p>
       </header>
@@ -232,10 +173,10 @@ export const EducationUpskilling: React.FC = () => {
 
         <div className="bg-gov-bg border border-gov-border/40 rounded-xl p-8">
           <p className="text-xs font-semibold text-gov-blue uppercase tracking-wider mb-3">
-            UK Government Business Academy AI Webinar Series (2025 and 2026)
+            UK Government Business Academy — AI Webinar Series (2025)
           </p>
           <h3 className="text-xl font-bold text-gov-dark mb-4">
-            Two Commissioned Series of Three Business Academy Webinars
+            Three Official UK Government Business Academy Webinars
           </h3>
           <p className="text-base text-gov-dark/90 leading-relaxed mb-4">
             Dr Stylianos Kampakis delivered three official UK Government Business Academy webinars
@@ -246,34 +187,14 @@ export const EducationUpskilling: React.FC = () => {
             platform and have been viewed by civil servants, SMEs, and public sector leaders across
             the UK.
           </p>
-          <p className="text-base text-gov-dark/90 leading-relaxed mb-4">
-            The Business Academy recommissioned the series for autumn 2026. Three further sessions run
-            free and online at 11:00, each lasting one hour and recorded to the Business Academy video
-            library afterwards. Booking is open on business.gov.uk.
-          </p>
-          <ul className="space-y-3 mb-4">
-            {BUSINESS_ACADEMY_EVENTS.map((event) => (
-              <li key={event.url} className="text-base text-gov-dark/90 leading-relaxed">
-                <a href={event.url} target="_blank" rel="noopener noreferrer" className="text-gov-blue font-medium hover:underline">
-                  {event.name}
-                </a>
-                <span className="block text-sm text-gov-secondary">
-                  <time dateTime={event.start.slice(0, 10)}>
-                    {new Date(event.start).toLocaleDateString('en-GB', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric', timeZone: 'Europe/London' })}
-                  </time>
-                  , 11:00. {event.description}
-                </span>
-              </li>
-            ))}
-          </ul>
           <div className="grid grid-cols-3 gap-4 mt-6">
             <div className="text-center p-4 bg-white rounded-lg border border-gov-border/30">
-              <p className="text-2xl font-extrabold text-gov-blue">6</p>
+              <p className="text-2xl font-extrabold text-gov-blue">3</p>
               <p className="text-sm text-gov-secondary mt-1">Official DBT Business Academy webinars</p>
             </div>
             <div className="text-center p-4 bg-white rounded-lg border border-gov-border/30">
-              <p className="text-2xl font-extrabold text-gov-blue">2025 &amp; 2026</p>
-              <p className="text-sm text-gov-secondary mt-1">Two commissioned series</p>
+              <p className="text-2xl font-extrabold text-gov-blue">2025</p>
+              <p className="text-sm text-gov-secondary mt-1">Delivered October-November</p>
             </div>
             <div className="text-center p-4 bg-white rounded-lg border border-gov-border/30">
               <p className="text-2xl font-extrabold text-gov-blue">OCT</p>

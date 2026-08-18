@@ -389,14 +389,24 @@ export const Research: React.FC = () => {
         <PublicationGroup title="Talks & community" count={3}>
            <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
              <h3 className="font-semibold text-lg text-gov-dark mb-2">UK Government Business Academy - AI Webinar Series</h3>
-             <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Department for Business and Trade, Business Academy, 2025</p>
+             <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Department for Business and Trade, Business Academy, 2025 and 2026</p>
              <p className="text-base text-gov-dark/90 leading-relaxed">Delivered a series of three official UK Government Business Academy webinars on AI adoption for growing businesses, led by Dr Stylianos Kampakis. Topics covered: designing AI roadmaps, choosing the right AI tools using the OCT (Objectives-Capabilities-Tools) methodology, and building internal AI capability including skills-gap analysis and organisational models for long-term success.</p>
-             <div className="mt-3 flex flex-wrap gap-3">
+             <p className="text-base text-gov-dark/90 leading-relaxed mt-3">The Business Academy recommissioned the series for autumn 2026, taking the programme to six official webinars. The three 2026 sessions run free and online at 11:00 on 24 August, 24 September and 6 October 2026, covering roadmap design, tool-agnostic automation of existing workflows, and what has to change inside a team for AI adoption to hold once the pilot ends.</p>
+             <p className="text-sm font-semibold text-gov-secondary/80 mt-4 mb-1">2025 series</p>
+             <div className="flex flex-wrap gap-3">
                <a href="https://www.business.gov.uk/business-academy/events/designing-your-ai-roadmap-a-step-by-step-guide-for-growing-businesses-27-october-2025/" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">AI Roadmap<span className="sr-only"> (opens in new tab)</span></a>
                <span className="text-gov-border">|</span>
                <a href="https://www.business.gov.uk/business-academy/events/choosing-the-right-ai-tools-matching-technology-to-business-objectives-06-november-2025/" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">Choosing AI Tools<span className="sr-only"> (opens in new tab)</span></a>
                <span className="text-gov-border">|</span>
                <a href="https://www.business.gov.uk/business-academy/events/building-internal-ai-capability-skills-teams-culture-for-long-term-success-12-november-2025/" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">Building AI Capability<span className="sr-only"> (opens in new tab)</span></a>
+             </div>
+             <p className="text-sm font-semibold text-gov-secondary/80 mt-4 mb-1">2026 series, booking open</p>
+             <div className="flex flex-wrap gap-3">
+               <a href="https://www.business.gov.uk/business-academy/events/designing-your-ai-roadmap-a-step-by-step-guide-for-growing-businesses-24-august-2026/" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">AI Roadmap, 24 August<span className="sr-only"> (opens in new tab)</span></a>
+               <span className="text-gov-border">|</span>
+               <a href="https://www.business.gov.uk/business-academy/events/toolagnostic-ai-automation-streamlining-your-existing-workflows-24-september-2026/" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">Tool-Agnostic AI Automation, 24 September<span className="sr-only"> (opens in new tab)</span></a>
+               <span className="text-gov-border">|</span>
+               <a href="https://www.business.gov.uk/business-academy/events/ai-adoption-in-practice-making-it-work-in-your-team-06-october-2026/" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">AI Adoption in Practice, 6 October<span className="sr-only"> (opens in new tab)</span></a>
              </div>
            </li>
            <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
