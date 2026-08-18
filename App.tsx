@@ -82,6 +82,7 @@ const FineTuningLlmGovernmentDataStandard = lazy(() => import('./pages/research/
 const MachineValidatedOpenOntologies = lazy(() => import('./pages/research/MachineValidatedOpenOntologies').then(m => ({ default: m.MachineValidatedOpenOntologies })));
 const BankRegisterOntology = lazy(() => import('./pages/research/BankRegisterOntology').then(m => ({ default: m.BankRegisterOntology })));
 const SecuritiesRegisterOntology = lazy(() => import('./pages/research/SecuritiesRegisterOntology').then(m => ({ default: m.SecuritiesRegisterOntology })));
+const BiosurveillanceRegisterOntology = lazy(() => import('./pages/research/BiosurveillanceRegisterOntology').then(m => ({ default: m.BiosurveillanceRegisterOntology })));
 const UkRegisterOntology = lazy(() => import('./pages/research/UkRegisterOntology').then(m => ({ default: m.UkRegisterOntology })));
 const ItalyRegisterOntology = lazy(() => import('./pages/research/ItalyRegisterOntology').then(m => ({ default: m.ItalyRegisterOntology })));
 const OneRecordKorea = lazy(() => import('./pages/research/OneRecordKorea').then(m => ({ default: m.OneRecordKorea })));
@@ -235,6 +236,10 @@ const PAGE_META: Record<string, { title: string; description: string }> = {
   '/research/bank-register-ontology': {
     title: 'An open ontology for US bank registers, tested against the FDIC, the Federal Reserve, and the Global LEI System | Tesseract Academy for the Public Sector',
     description: 'An open OWL 2, SKOS and SHACL ontology for the entity and regulatory-reporting fabric of US banking, measured against the FDIC BankFind register, the Federal Reserve MDRM dictionary, and the complete GLEIF golden copy of 3,403,760 LEI records. The measurement finds every one of the 2,252 LEI values in the FDIC register truncated to 16 of the 20 characters ISO 17442 requires, discarding both check digits. Sixteen characters puts 6.37 per cent of the global LEI population into a collision, nine FDIC values are ambiguous across up to six unrelated companies, and two resolve to the wrong legal entity, including Associated Bank carrying its parent holding company’s identifier. The MDRM dictionary shows the mirror-image defect: one definition per item code across forms with different consolidation bases, and 58 per cent of item codes with no definition at all. The artefact comprises 1,123,634 triples, reproducible from public data.',
+  },
+  '/research/biosurveillance-register-ontology': {
+    title: 'The missing pathogen crosswalk: an open ontology for One Health biosurveillance registers | Tesseract Academy for the Public Sector',
+    description: "An open OWL 2, SKOS and SHACL ontology and a complete census of the Food Standards Agency's open food alert register, all 1,348 alerts published from 9 January 2018 to 10 August 2026, taken on 18 August 2026 under the Open Government Licence. The register maintains 27 allergen concepts and 5 pathogen concepts, the pathogen scheme last modified on 4 September 2017. Of 234 alerts naming a pathogen, 57 name it in prose with no concept to join on. Pathogen coding was zero across all 188 alerts issued in 2018 and has never exceeded 19.7 per cent in any year, while allergen coding has run between 47.7 and 64.6 per cent every year without exception. Four pathogens named in the register have no concept available to code them: Bacillus cereus, hepatitis A, Cronobacter sakazakii and norovirus. No pathogen concept carries any external alignment, and all five denote at genus or species level while genomic food chain surveillance identifies isolates at serovar and sequence type. The study ships the NCBI Taxonomy crosswalk the register lacks, resolved two independent ways with zero disagreements, and every headline is computed twice with a build that fails if the two paths differ.",
   },
   '/research/securities-register-ontology': {
     title: 'The missing CIK-to-LEI crosswalk: an open ontology for US securities entity registers | Tesseract Academy for the Public Sector',
@@ -598,6 +603,7 @@ const App: React.FC = () => {
               <Route path="/research/machine-validated-open-ontologies" element={<MachineValidatedOpenOntologies />} />
               <Route path="/research/bank-register-ontology" element={<BankRegisterOntology />} />
               <Route path="/research/securities-register-ontology" element={<SecuritiesRegisterOntology />} />
+              <Route path="/research/biosurveillance-register-ontology" element={<BiosurveillanceRegisterOntology />} />
               <Route path="/research/uk-register-ontology" element={<UkRegisterOntology />} />
               <Route path="/research/one-record-domain-axioms-korea" element={<OneRecordKorea />} />
               <Route path="/research/one-record-domain-axioms-taiwan" element={<OneRecordTaiwan />} />

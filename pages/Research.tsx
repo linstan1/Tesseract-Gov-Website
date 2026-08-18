@@ -228,7 +228,7 @@ export const Research: React.FC = () => {
            </li>
         </PublicationGroup>
 
-        <PublicationGroup title="Register assurance" count={4}>
+        <PublicationGroup title="Register assurance" count={5}>
            <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
              <Link to="/research/italy-register-ontology"><h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark hover:underline transition-colors">An Open Ontology for Italian Public Registers, Tested Against IPA, ANAC, OpenCUP and ISTAT</h3></Link>
              <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Open ontology, five-register measurement and upstream SHACL contribution, 2026</p>
@@ -245,6 +245,15 @@ export const Research: React.FC = () => {
              <div className="mt-3 flex flex-wrap gap-3 items-center">
                <Link to="/research/uk-register-ontology" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">Read the study</Link>
                <a href="https://github.com/fabio-rovai/uk-register-ontology" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">repository on GitHub<span className="sr-only"> (opens in new tab)</span></a>
+             </div>
+           </li>
+           <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
+             <Link to="/research/biosurveillance-register-ontology"><h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark hover:underline transition-colors">The Missing Pathogen Crosswalk: An Open Ontology for One Health Biosurveillance Registers</h3></Link>
+             <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Open ontology, complete register census, 2026</p>
+             <p className="text-base text-gov-dark/90 leading-relaxed">One Health is an integration claim, and it can be tested by asking whether a record in one surveillance register can actually be joined to a record in another. Measured across the Food Standards Agency&apos;s complete open food alert register, all 1,348 alerts published from 9 January 2018 to 10 August 2026 under the Open Government Licence, the answer for most pathogen alerts is no. The register maintains 27 allergen concepts, granular enough to distinguish macadamia from pecan and gluten-free oats from oats, and 5 pathogen concepts whose scheme declares its last modification as 4 September 2017. Of 234 alerts naming a pathogen, 57 name it in prose with no concept to join on. Pathogen coding was zero across all 188 alerts issued in 2018, including the register&apos;s first record about Salmonella in pulled pork, and has never exceeded 19.7 per cent in any year, while allergen coding has run between 47.7 and 64.6 per cent every year without exception. Four organisms appear with no concept available to code them: Bacillus cereus, hepatitis A, Cronobacter sakazakii and norovirus. No pathogen concept carries any external mapping, and all five denote at genus or species level while genomic food chain surveillance identifies isolates at serovar and sequence type, so a record coded &quot;Salmonella spp&quot; cannot be joined to one about Salmonella Typhimurium ST34. The study separates three failure modes with three different remedies, ships the NCBI Taxonomy crosswalk the register lacks with every taxon resolved two independent ways and zero disagreements, and computes every headline twice with a build that fails if the two paths differ.</p>
+             <div className="mt-3 flex flex-wrap gap-3 items-center">
+               <Link to="/research/biosurveillance-register-ontology" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">Read the study</Link>
+               <a href="https://github.com/fabio-rovai/biosurveillance-ontology" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">repository on GitHub<span className="sr-only"> (opens in new tab)</span></a>
              </div>
            </li>
            <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
