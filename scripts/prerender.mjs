@@ -48,10 +48,6 @@ const PAGE_META = {
     title: 'Testimonials & Executive Training | Tesseract Academy for the Public Sector',
     description: 'Client reviews and executive AI training case studies. Workshops for US Navy (40+ participants), Vodafone, Philips leadership. UK Government Business Academy webinars (2025). Verified Clutch reviews.',
   },
-  '/speaking': {
-    title: 'Talks & Webinars - UK Government Business Academy AI Series | Tesseract Academy for the Public Sector',
-    description: 'Dr Stylianos Kampakis delivers the AI strategy webinar series on the UK government Business Academy (business.gov.uk): designing your AI roadmap 24 August 2026, tool-agnostic AI automation 24 September 2026, AI adoption in practice 6 October 2026. Free online sessions; closed departmental deliveries available via CCS frameworks.',
-  },
   '/about': {
     title: 'About Tesseract Academy - Team & Credentials | Tesseract Academy for the Public Sector',
     description: 'Dr Stylianos Kampakis (PhD UCL, CStat, FRSS, 40+ publications) and Fabio Rovai MSc (UAL, NeurIPS reviewer). DV-cleared consultant available. Incorporated 2016. CCS frameworks RM6200, RM6094, RM6126.',

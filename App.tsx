@@ -67,7 +67,6 @@ const IxbrlDisclosureBenchmark = lazy(() => import('./pages/research/IxbrlDisclo
 const XbrlPdfHtmlAiBenchmark = lazy(() => import('./pages/research/XbrlPdfHtmlAiBenchmark').then(m => ({ default: m.XbrlPdfHtmlAiBenchmark })));
 const PropertyMarketIndicators = lazy(() => import('./pages/research/PropertyMarketIndicators').then(m => ({ default: m.PropertyMarketIndicators })));
 const Glossary = lazy(() => import('./pages/Glossary').then(m => ({ default: m.Glossary })));
-const Speaking = lazy(() => import('./pages/Speaking').then(m => ({ default: m.Speaking })));
 const AIConsulting = lazy(() => import('./pages/services/AIConsulting').then(m => ({ default: m.AIConsulting })));
 const ResearchPolicy = lazy(() => import('./pages/services/ResearchPolicy').then(m => ({ default: m.ResearchPolicy })));
 const PublicEngagement = lazy(() => import('./pages/services/PublicEngagement').then(m => ({ default: m.PublicEngagement })));
@@ -122,10 +121,6 @@ const PAGE_META: Record<string, { title: string; description: string }> = {
   '/testimonials': {
     title: 'Testimonials & Executive Training | Tesseract Academy for the Public Sector',
     description: 'Client reviews and executive AI training case studies. Workshops delivered for US Navy (40+ participants), Vodafone, and Philips leadership teams. Verified Clutch reviews.',
-  },
-  '/speaking': {
-    title: 'Talks & Webinars - UK Government Business Academy AI Series | Tesseract Academy for the Public Sector',
-    description: 'Dr Stylianos Kampakis delivers the AI strategy webinar series on the UK government Business Academy (business.gov.uk): AI roadmaps 24 August 2026, tool-agnostic automation 24 September 2026, AI adoption in practice 6 October 2026. Free to attend, closed departmental sessions available.',
   },
   '/about': {
     title: 'About Us - Team, Credentials & Company Profile | Tesseract Academy for the Public Sector',
@@ -493,7 +488,6 @@ const App: React.FC = () => {
               <Route path="/compliance" element={<Compliance />} />
               <Route path="/testimonials" element={<Feedback />} />
               <Route path="/about" element={<About />} />
-              <Route path="/speaking" element={<Speaking />} />
               <Route path="/research/welsh-government-land-valuation" element={<WelshGovernment />} />
               <Route path="/research/national-digital-twin-programme" element={<NationalDigitalTwin />} />
               <Route path="/research/bridgeai-creative-industries" element={<BridgeAI />} />
