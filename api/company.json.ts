@@ -151,11 +151,12 @@ const COMPANY_DATA = {
       "url": "https://gov.tesseract.academy/papers/testing-land-valuation-methods-tesseract-academy-report.pdf"
     },
     {
-      "title": "Proving the Utility of LLMs in Cybersecurity Simulations",
+      "title": "Proving the Utility of Large Language Models in Cybersecurity Simulations: A Comprehensive Examination",
       "type": "ResearchPaper",
       "collaborator": "The Alan Turing Institute",
-      "year": 2025,
-      "url": "https://gov.tesseract.academy/papers/alan-turing-ontology-paper.pdf"
+      "year": 2026,
+      "url": "https://arxiv.org/abs/2608.16422",
+      "arxivId": "2608.16422"
     },
     {
       "title": "AI Skills for the UK Workforce",

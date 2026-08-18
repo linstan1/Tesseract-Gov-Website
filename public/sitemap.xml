@@ -370,12 +370,6 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://gov.tesseract.academy/papers/alan-turing-ontology-paper.pdf</loc>
-    <lastmod>2025-01-01</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://gov.tesseract.academy/papers/decision-makers-handbook-data-science.pdf</loc>
     <lastmod>2024-01-01</lastmod>
     <changefreq>yearly</changefreq>
