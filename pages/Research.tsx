@@ -73,7 +73,7 @@ export const Research: React.FC = () => {
         </div>
         <div className="space-y-4">
 
-        <PublicationGroup title="Safe & verifiable AI" count={11}>
+        <PublicationGroup title="Safe & verifiable AI" count={14}>
            <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
              <Link to="/research/ontology-correctness-benchmark"><h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark hover:underline transition-colors">The Open-World Hole: Why SHACL Cannot Catch a Hallucinated Ontology Term</h3></Link>
              <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Open benchmark, 2026</p>
@@ -166,9 +166,33 @@ export const Research: React.FC = () => {
              <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Open-Source Tool, Ongoing</p>
              <p className="text-base text-gov-dark/90 leading-relaxed">An open-source AI governance platform that helps organisations discover, assess, and monitor AI systems against EU AI Act, NIST AI RMF, and ISO 42001 frameworks. Provides automated risk classification, compliance matrices, bias and hallucination monitoring, policy enforcement gates, and audit-ready reporting through 48 governance tools.</p>
            </li>
+           <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
+             <Link to="/research/algorithmic-transparency-corpus"><h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark hover:underline transition-colors">The closest thing to a public register of government AI, as a corpus</h3></Link>
+             <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Open research, 2026</p>
+             <p className="text-base text-gov-dark/90 leading-relaxed">The full set of 136 published UK Algorithmic Transparency Recording Standard records, structured as an open corpus: which of 73 public bodies have disclosed which algorithmic and AI tools. Published on GitHub and Hugging Face under the Open Government Licence.</p>
+             <div className="mt-3 flex flex-wrap gap-3 items-center">
+               <Link to="/research/algorithmic-transparency-corpus" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">Read the study</Link>
+             </div>
+           </li>
+           <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
+             <Link to="/research/fine-tuning-llm-government-data-standard"><h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark hover:underline transition-colors">Teaching an open-source LLM a government information standard: from 94% hallucination to 1%</h3></Link>
+             <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Open research, 2026</p>
+             <p className="text-base text-gov-dark/90 leading-relaxed">Tesseract Academy fine-tuned Qwen3-Coder-30B on IES4, the UK government Information Exchange Standard for defence and national security data sharing. Term confabulation fell from 93.7% to 1.0%, term conformance rose from 0% to 88.6%, every claim machine-verified against the published ontology. Published openly on Hugging Face.</p>
+             <div className="mt-3 flex flex-wrap gap-3 items-center">
+               <Link to="/research/fine-tuning-llm-government-data-standard" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">Read the study</Link>
+             </div>
+           </li>
+           <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
+             <Link to="/research/fair-scientific-data"><h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark hover:underline transition-colors">FAIR Dataset Contracts for Scientific Data</h3></Link>
+             <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Open research, 2026</p>
+             <p className="text-base text-gov-dark/90 leading-relaxed">An open study of 1,738 real public biomedical datasets across three repositories (EMBL-EBI BioStudies, Dryad, PRIDE): overwhelmingly findable and accessible, but 0% interoperable or AI-ready (100% lack a machine-readable schema, checksums and provenance). Paired with an open, tool-certified OWL ontology that models the AI-ready dataset layer. Open source and reproducible.</p>
+             <div className="mt-3 flex flex-wrap gap-3 items-center">
+               <Link to="/research/fair-scientific-data" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">Read the study</Link>
+             </div>
+           </li>
         </PublicationGroup>
 
-        <PublicationGroup title="Environment & climate" count={2}>
+        <PublicationGroup title="Environment & climate" count={5}>
            <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
              <Link to="/research/parametric-payout-assurance"><h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark hover:underline transition-colors">Can a Parametric Climate Insurance Product Prove It Paid?</h3></Link>
              <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Open standard and measurement, 2026</p>
@@ -185,6 +209,30 @@ export const Research: React.FC = () => {
              <div className="mt-3 flex flex-wrap gap-3 items-center">
                <Link to="/research/waste-reporting-loss" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">Read the study</Link>
                <a href="https://github.com/fabio-rovai/waste-vocab-crosswalk" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">repository on GitHub<span className="sr-only"> (opens in new tab)</span></a>
+             </div>
+           </li>
+           <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
+             <Link to="/research/modip-plastics-knowledge-graph"><h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark hover:underline transition-colors">From raw museum records to a knowledge graph</h3></Link>
+             <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Open research, 2026</p>
+             <p className="text-base text-gov-dark/90 leading-relaxed">A reproducible pipeline turning the Museum of Design in Plastics&apos; raw open catalogue (11,865 objects, CC BY 4.0 via the Museum Data Service) into a standards-based knowledge graph: a SKOS materials taxonomy grounded in polymer science, a CIDOC-CRM instance graph, verified Getty AAT alignments and a variant graph recovered from description prose. 99.9% of 35,172 material tags resolved; zero SHACL violations. Published in Open Ontologies under CC BY 4.0.</p>
+             <div className="mt-3 flex flex-wrap gap-3 items-center">
+               <Link to="/research/modip-plastics-knowledge-graph" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">Read the study</Link>
+             </div>
+           </li>
+           <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
+             <Link to="/research/agri-environment-heritage-value"><h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark hover:underline transition-colors">The Value of Agri-Environment Heritage Actions</h3></Link>
+             <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Open research, 2026</p>
+             <p className="text-base text-gov-dark/90 leading-relaxed">A self-initiated, open-data demonstration of how we evidence the wider value of agri-environment scheme heritage actions for nature and for people: a scoping-review framework on Natural England\&apos;s NEER001 method, with a real spatial analysis of the 2,206 Scheduled Monuments on the Historic England Heritage at Risk Register 2024.</p>
+             <div className="mt-3 flex flex-wrap gap-3 items-center">
+               <Link to="/research/agri-environment-heritage-value" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">Read the study</Link>
+             </div>
+           </li>
+           <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
+             <Link to="/research/zero-emission-flight-ecosystem"><h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark hover:underline transition-colors">Mapping the UK Zero-Emission Flight Ecosystem</h3></Link>
+             <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Open research, 2026</p>
+             <p className="text-base text-gov-dark/90 leading-relaxed">An open, SHACL-validated knowledge graph of the UK hydrogen and electric aviation ecosystem: 42 real entities and 55 relationships across organisations, airports, programmes, projects, funders and technologies, validated at zero SHACL violations with enforced referential integrity. Open source via Open Ontologies.</p>
+             <div className="mt-3 flex flex-wrap gap-3 items-center">
+               <Link to="/research/zero-emission-flight-ecosystem" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">Read the study</Link>
              </div>
            </li>
         </PublicationGroup>
@@ -228,16 +276,7 @@ export const Research: React.FC = () => {
            </li>
         </PublicationGroup>
 
-        <PublicationGroup title="Register assurance" count={7}>
-           <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
-             <Link to="/research/italy-register-ontology"><h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark hover:underline transition-colors">An Open Ontology for Italian Public Registers, Tested Against IPA, ANAC, OpenCUP and ISTAT</h3></Link>
-             <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Open ontology, five-register measurement and upstream SHACL contribution, 2026</p>
-             <p className="text-base text-gov-dark/90 leading-relaxed">An open OWL 2, SKOS and SHACL ontology and reproducible audit of Italy&apos;s public register fabric, built from hands-on downloads of the IPA register of 23,735 public administrations, the ANAC contracts register, the OpenCUP register of 11.9 million public investment projects, both flavours of the ISTAT register of administrative units and the national semantic vocabulary, taken on 17 August 2026. The national cities vocabulary and the ISTAT CSV export both predate the 2026 Sardinian territorial reform: 380 dead municipality codes are published as current and 378 current codes are missing, so joins against the semantic layer silently drop every Sardinian municipality, while the operational IPA register already uses the new codes with zero pair mismatches across all 23,735 entities. All 23,735 IPA codici fiscali pass their checksum, a clean null result stated as a finding. In a seeded two-month sample of 2025 contracts, 140 well-formed CUPs referenced by 255 contracts are absent from the published OpenCUP exports, and 45 values in the CUP field fail the CUP grammar, including ESENTE and ATT000NON000CUP. The findings are delivered upstream as a contribute-first SHACL package answering the vocabulary maintainers&apos; own request in issue #225, including the currency test that would have caught the drift in CI. Every headline computed two independent ways, reproducible from public data.</p>
-             <div className="mt-3 flex flex-wrap gap-3 items-center">
-               <Link to="/research/italy-register-ontology" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">Read the study</Link>
-               <a href="https://github.com/fabio-rovai/italy-register-ontology" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">repository on GitHub<span className="sr-only"> (opens in new tab)</span></a>
-             </div>
-           </li>
+        <PublicationGroup title="Security, defence & space" count={6}>
            <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
              <Link to="/research/space-object-register-ontology"><h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark hover:underline transition-colors">An Open Ontology for Space Object Catalogues, Tested Against CelesTrak and the General Catalog of Artificial Space Objects</h3></Link>
              <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Open ontology, two-catalogue measurement, 2026</p>
@@ -245,6 +284,58 @@ export const Research: React.FC = () => {
              <div className="mt-3 flex flex-wrap gap-3 items-center">
                <Link to="/research/space-object-register-ontology" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">Read the study</Link>
                <a href="https://github.com/fabio-rovai/space-object-register-ontology" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">repository on GitHub<span className="sr-only"> (opens in new tab)</span></a>
+             </div>
+           </li>
+           <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
+             <Link to="/research/space-metrics-crosswalk"><h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark hover:underline transition-colors">Space debris metrics that cannot be added up: an open composition checker</h3></Link>
+             <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Open research, 2026</p>
+             <p className="text-base text-gov-dark/90 leading-relaxed">The two premier orbital debris engineering models disagree by a factor of 2.3 to 3.0 at the 1 cm collision-risk threshold, and by almost two orders of magnitude in the sub-millimetre regime, because they partition the same physical population along orthogonal axes: MASTER-8 by generative source, ORDEM 3.1 by material density. Every indicator built on either model silently inherits that partition and never declares it. An open, MIT-licensed composition checker built on QUDT, SOSA/SSN and PROV-O that refuses invalid combinations with a reason and states what may be done instead.</p>
+             <div className="mt-3 flex flex-wrap gap-3 items-center">
+               <Link to="/research/space-metrics-crosswalk" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">Read the study</Link>
+             </div>
+           </li>
+           <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
+             <Link to="/research/ies-hqdm-defence-interoperability"><h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark hover:underline transition-colors">IES to HQDM: an open 4D ontology crosswalk for defence data</h3></Link>
+             <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Open research, 2026</p>
+             <p className="text-base text-gov-dark/90 leading-relaxed">The first public crosswalk between the UK Information Exchange Standard (IES) and HQDM, two 4D upper ontologies. Open SSSOM and RDF correspondences, a curated divergences record, SHACL validation, and a worked SAPIENT-node safety case grounding autonomy in IES-typed world states. Supports the Defence Investment Plan interoperability and autonomy-assurance agenda.</p>
+             <div className="mt-3 flex flex-wrap gap-3 items-center">
+               <Link to="/research/ies-hqdm-defence-interoperability" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">Read the study</Link>
+             </div>
+           </li>
+           <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
+             <Link to="/research/pyramid-ies-hqdm-semantic-bridge"><h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark hover:underline transition-colors">Grounding a PYRAMID avionics bridge in IES and HQDM</h3></Link>
+             <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Open research, 2026</p>
+             <p className="text-base text-gov-dark/90 leading-relaxed">PYRAMID (Def Stan 00-134) is an open avionics reference architecture with no shared data model; it pushes interoperability into inter-component bridges. A worked, open, SHACL-validated example grounds those bridges in the IES and HQDM 4D ontologies, so three PRA components (Geography, Tactical Objects, Data Fusion) that model the same object resolve to one referent. No prior work grounds PYRAMID in an upper ontology.</p>
+             <div className="mt-3 flex flex-wrap gap-3 items-center">
+               <Link to="/research/pyramid-ies-hqdm-semantic-bridge" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">Read the study</Link>
+             </div>
+           </li>
+           <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
+             <Link to="/research/nature-related-security-risk"><h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark hover:underline transition-colors">Nature-Related Security Risk: an open evidence base and systems ontology</h3></Link>
+             <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Open research, 2026</p>
+             <p className="text-base text-gov-dark/90 leading-relaxed">A self-initiated, open, machine-readable evidence base and systems ontology that operationalises the UK National Security Assessment on biodiversity loss and ecosystem collapse (2026): 14 documented nature-to-security cascades graded with the assessment\&apos;s own confidence ratings, an OWL ontology (NSRO), a SKOS taxonomy cross-walked to IPBES and SHACL shapes, published on GitHub under CC-BY-4.0.</p>
+             <div className="mt-3 flex flex-wrap gap-3 items-center">
+               <Link to="/research/nature-related-security-risk" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">Read the study</Link>
+             </div>
+           </li>
+           <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
+             <Link to="/research/connective-product-cyber-incidents"><h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark hover:underline transition-colors">Cyber Incidents affecting Connective Products: an open evidence base</h3></Link>
+             <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Open research, 2026</p>
+             <p className="text-base text-gov-dark/90 leading-relaxed">A self-initiated, open, machine-readable evidence base of cyber incidents affecting connective products (IoT, operational technology, computing devices, networking equipment and software/firmware): 16 documented incidents (2022 to 2025), a SKOS taxonomy and a source-quality rubric aligned to the six Government Data Quality Framework dimensions, published on GitHub under CC-BY-4.0.</p>
+             <div className="mt-3 flex flex-wrap gap-3 items-center">
+               <Link to="/research/connective-product-cyber-incidents" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">Read the study</Link>
+             </div>
+           </li>
+        </PublicationGroup>
+
+        <PublicationGroup title="Register assurance" count={6}>
+           <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
+             <Link to="/research/italy-register-ontology"><h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark hover:underline transition-colors">An Open Ontology for Italian Public Registers, Tested Against IPA, ANAC, OpenCUP and ISTAT</h3></Link>
+             <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Open ontology, five-register measurement and upstream SHACL contribution, 2026</p>
+             <p className="text-base text-gov-dark/90 leading-relaxed">An open OWL 2, SKOS and SHACL ontology and reproducible audit of Italy&apos;s public register fabric, built from hands-on downloads of the IPA register of 23,735 public administrations, the ANAC contracts register, the OpenCUP register of 11.9 million public investment projects, both flavours of the ISTAT register of administrative units and the national semantic vocabulary, taken on 17 August 2026. The national cities vocabulary and the ISTAT CSV export both predate the 2026 Sardinian territorial reform: 380 dead municipality codes are published as current and 378 current codes are missing, so joins against the semantic layer silently drop every Sardinian municipality, while the operational IPA register already uses the new codes with zero pair mismatches across all 23,735 entities. All 23,735 IPA codici fiscali pass their checksum, a clean null result stated as a finding. In a seeded two-month sample of 2025 contracts, 140 well-formed CUPs referenced by 255 contracts are absent from the published OpenCUP exports, and 45 values in the CUP field fail the CUP grammar, including ESENTE and ATT000NON000CUP. The findings are delivered upstream as a contribute-first SHACL package answering the vocabulary maintainers&apos; own request in issue #225, including the currency test that would have caught the drift in CI. Every headline computed two independent ways, reproducible from public data.</p>
+             <div className="mt-3 flex flex-wrap gap-3 items-center">
+               <Link to="/research/italy-register-ontology" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">Read the study</Link>
+               <a href="https://github.com/fabio-rovai/italy-register-ontology" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">repository on GitHub<span className="sr-only"> (opens in new tab)</span></a>
              </div>
            </li>
            <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
@@ -294,7 +385,7 @@ export const Research: React.FC = () => {
            </li>
         </PublicationGroup>
 
-        <PublicationGroup title="Economy, finance & skills" count={14}>
+        <PublicationGroup title="Economy, finance & skills" count={20}>
            <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
              <Link to="/research/semantic-asset-register"><h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark hover:underline transition-colors">What 13 Million Triples Reveal About the Quality of US Federal Vocabularies</h3></Link>
              <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Open register, reproducible assessment, 2026</p>
@@ -410,6 +501,54 @@ export const Research: React.FC = () => {
              <a href="https://www.gov.uk/government/publications/ai-skills-for-the-uk-workforce/annex-a-methodology" target="_blank" rel="noopener noreferrer"><h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark hover:underline transition-colors">AI Skills for the UK Workforce - Skills England<span className="sr-only"> (opens in new tab)</span></h3></a>
              <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Skills England / UK Government Publication, 2025</p>
              <p className="text-base text-gov-dark/90 leading-relaxed">Tesseract Academy is cited as an AI training provider and consultancy in Skills England's official research into AI skills for the UK workforce. The publication's methodology included stakeholder workshops with 43 organisations, with Tesseract Academy contributing alongside institutions including The Alan Turing Institute and the Surrey AI Centre.</p>
+           </li>
+           <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
+             <Link to="/research/fca-warnings-observatory"><h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark hover:underline transition-colors">A live list with no memory: reconstructing the FCA scam-warning signal</h3></Link>
+             <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Open research, 2026</p>
+             <p className="text-base text-gov-dark/90 leading-relaxed">The FCA warning list of unauthorised firms shows only the current set with no history. This open dataset reconstructs it as a monthly time series from 18,224 live warning pages: FCA warnings rose nearly four-fold from around 500 a year in 2019 to roughly 1,900 across 2022 to 2025, 18 percent flagging clone firms. Published on GitHub and Hugging Face.</p>
+             <div className="mt-3 flex flex-wrap gap-3 items-center">
+               <Link to="/research/fca-warnings-observatory" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">Read the study</Link>
+             </div>
+           </li>
+           <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
+             <Link to="/research/xbrl-pdf-html-ai-benchmark"><h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark hover:underline transition-colors">Does structured data actually help AI read company accounts? A controlled pilot</h3></Link>
+             <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Open research, 2026</p>
+             <p className="text-base text-gov-dark/90 leading-relaxed">A self-funded controlled pilot comparing how well an open-weights language model reads the same UK annual reports as structured XBRL facts, HTML text and PDF text. Three FY2026 filed reports, 21 tasks, 189 scored model calls. Financial extraction accuracy: XBRL 88.9%, PDF 86.7%, HTML 80.0%; only XBRL ever retrieved a bracketed negative equity figure with the correct sign, at 2.9x the token cost.</p>
+             <div className="mt-3 flex flex-wrap gap-3 items-center">
+               <Link to="/research/xbrl-pdf-html-ai-benchmark" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">Read the study</Link>
+             </div>
+           </li>
+           <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
+             <Link to="/research/consultation-corpus"><h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark hover:underline transition-colors">Every government consultation that reached an outcome, as one corpus</h3></Link>
+             <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Open research, 2026</p>
+             <p className="text-base text-gov-dark/90 leading-relaxed">An open, structured corpus of 6,260 UK government consultations with a published outcome, harvested from the GOV.UK APIs and coded by policy area. 98 percent carry policy-area coding; only 77 percent attach response documents to their outcome. Published on GitHub and Hugging Face under the Open Government Licence.</p>
+             <div className="mt-3 flex flex-wrap gap-3 items-center">
+               <Link to="/research/consultation-corpus" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">Read the study</Link>
+             </div>
+           </li>
+           <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
+             <Link to="/research/evaluation-evidence-atlas"><h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark hover:underline transition-colors">What government evaluates, and how openly it says so</h3></Link>
+             <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Open research, 2026</p>
+             <p className="text-base text-gov-dark/90 leading-relaxed">An open atlas of 1,770 UK government evaluation publications, harvested from the GOV.UK Search API and classified by evaluation type and declared method. Impact evaluations dominate, but only 11 percent declare a recognisable method in their metadata. Published on GitHub and Hugging Face under the Open Government Licence.</p>
+             <div className="mt-3 flex flex-wrap gap-3 items-center">
+               <Link to="/research/evaluation-evidence-atlas" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">Read the study</Link>
+             </div>
+           </li>
+           <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
+             <Link to="/research/local-labour-market"><h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark hover:underline transition-colors">The most timely local labour-market signal, tidied for every authority</h3></Link>
+             <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Open research, 2026</p>
+             <p className="text-base text-gov-dark/90 leading-relaxed">An open dataset of the latest monthly claimant count for all 374 local authorities in Great Britain, from the ONS via NOMIS. Claimant rate ranges from 1.1 to 10.1 percent against a 3.5 percent mean. Published on GitHub and Hugging Face under the Open Government Licence.</p>
+             <div className="mt-3 flex flex-wrap gap-3 items-center">
+               <Link to="/research/local-labour-market" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">Read the study</Link>
+             </div>
+           </li>
+           <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
+             <Link to="/research/small-area-health-profile"><h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark hover:underline transition-colors">The baseline a local health survey should be read against</h3></Link>
+             <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Open research, 2026</p>
+             <p className="text-base text-gov-dark/90 leading-relaxed">An open small-area health profile for all 331 local authorities in England and Wales, combining Census 2021 self-reported general health, disability and unpaid care. Self-reported bad health ranges from 2.7 to 9.6 percent. Published on GitHub and Hugging Face under the Open Government Licence.</p>
+             <div className="mt-3 flex flex-wrap gap-3 items-center">
+               <Link to="/research/small-area-health-profile" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">Read the study</Link>
+             </div>
            </li>
         </PublicationGroup>
 
