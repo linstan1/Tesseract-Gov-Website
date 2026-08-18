@@ -83,6 +83,7 @@ const MachineValidatedOpenOntologies = lazy(() => import('./pages/research/Machi
 const BankRegisterOntology = lazy(() => import('./pages/research/BankRegisterOntology').then(m => ({ default: m.BankRegisterOntology })));
 const SecuritiesRegisterOntology = lazy(() => import('./pages/research/SecuritiesRegisterOntology').then(m => ({ default: m.SecuritiesRegisterOntology })));
 const BiosurveillanceRegisterOntology = lazy(() => import('./pages/research/BiosurveillanceRegisterOntology').then(m => ({ default: m.BiosurveillanceRegisterOntology })));
+const SurveillanceReportingIdentifiers = lazy(() => import('./pages/research/SurveillanceReportingIdentifiers').then(m => ({ default: m.SurveillanceReportingIdentifiers })));
 const UkRegisterOntology = lazy(() => import('./pages/research/UkRegisterOntology').then(m => ({ default: m.UkRegisterOntology })));
 const ItalyRegisterOntology = lazy(() => import('./pages/research/ItalyRegisterOntology').then(m => ({ default: m.ItalyRegisterOntology })));
 const OneRecordKorea = lazy(() => import('./pages/research/OneRecordKorea').then(m => ({ default: m.OneRecordKorea })));
@@ -236,6 +237,10 @@ const PAGE_META: Record<string, { title: string; description: string }> = {
   '/research/bank-register-ontology': {
     title: 'An open ontology for US bank registers, tested against the FDIC, the Federal Reserve, and the Global LEI System | Tesseract Academy for the Public Sector',
     description: 'An open OWL 2, SKOS and SHACL ontology for the entity and regulatory-reporting fabric of US banking, measured against the FDIC BankFind register, the Federal Reserve MDRM dictionary, and the complete GLEIF golden copy of 3,403,760 LEI records. The measurement finds every one of the 2,252 LEI values in the FDIC register truncated to 16 of the 20 characters ISO 17442 requires, discarding both check digits. Sixteen characters puts 6.37 per cent of the global LEI population into a collision, nine FDIC values are ambiguous across up to six unrelated companies, and two resolve to the wrong legal entity, including Associated Bank carrying its parent holding company’s identifier. The MDRM dictionary shows the mirror-image defect: one definition per item code across forms with different consolidation bases, and 58 per cent of item codes with no definition at all. The artefact comprises 1,123,634 triples, reproducible from public data.',
+  },
+  '/research/surveillance-reporting-identifiers': {
+    title: 'An open census of UK operational surveillance reporting, and what its identifiers actually denote | Tesseract Academy for the Public Sector',
+    description: "A complete census of every publication held by the Animal and Plant Health Agency, the UK Health Security Agency and the Centre for Environment, Fisheries and Aquaculture Science on GOV.UK, taken on 18 August 2026 from the open Search and Content APIs: 6,897 publications indexed, 2,704 report pages carrying 12,769 published files. Every page carries a persistent content_id, so these outputs are not unidentified. But 10,582 files, 82.9 per cent, share their only persistent identifier with every other file on the same page, with up to 165 under one identifier. Of 8,758 dated report editions, 5,212 carry no report-level identifier, and 242 recurring series carry none on any edition. The UKHSA weekly national flu and COVID-19 surveillance series shows identifier coverage of 99.2 per cent in 2023 to 2024 and 0.7 per cent in 2025 to 2026, which makes the practice a habit rather than a governed rule. A field named unique_reference is non-unique on 204 values once legitimate format variants are excluded.",
   },
   '/research/biosurveillance-register-ontology': {
     title: 'The missing pathogen crosswalk: an open ontology for One Health biosurveillance registers | Tesseract Academy for the Public Sector',
@@ -604,6 +609,7 @@ const App: React.FC = () => {
               <Route path="/research/bank-register-ontology" element={<BankRegisterOntology />} />
               <Route path="/research/securities-register-ontology" element={<SecuritiesRegisterOntology />} />
               <Route path="/research/biosurveillance-register-ontology" element={<BiosurveillanceRegisterOntology />} />
+              <Route path="/research/surveillance-reporting-identifiers" element={<SurveillanceReportingIdentifiers />} />
               <Route path="/research/uk-register-ontology" element={<UkRegisterOntology />} />
               <Route path="/research/one-record-domain-axioms-korea" element={<OneRecordKorea />} />
               <Route path="/research/one-record-domain-axioms-taiwan" element={<OneRecordTaiwan />} />

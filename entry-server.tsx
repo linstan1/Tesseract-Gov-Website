@@ -90,6 +90,7 @@ import { MachineValidatedOpenOntologies } from './pages/research/MachineValidate
 import { BankRegisterOntology } from './pages/research/BankRegisterOntology';
 import { SecuritiesRegisterOntology } from './pages/research/SecuritiesRegisterOntology';
 import { BiosurveillanceRegisterOntology } from './pages/research/BiosurveillanceRegisterOntology';
+import { SurveillanceReportingIdentifiers } from './pages/research/SurveillanceReportingIdentifiers';
 import { UkRegisterOntology } from './pages/research/UkRegisterOntology';
 import { OneRecordKorea } from './pages/research/OneRecordKorea';
 import { OneRecordTaiwan } from './pages/research/OneRecordTaiwan';
@@ -191,6 +192,7 @@ const SSRApp: React.FC = () => (
         <Route path="/research/bank-register-ontology" element={<BankRegisterOntology />} />
         <Route path="/research/securities-register-ontology" element={<SecuritiesRegisterOntology />} />
         <Route path="/research/biosurveillance-register-ontology" element={<BiosurveillanceRegisterOntology />} />
+        <Route path="/research/surveillance-reporting-identifiers" element={<SurveillanceReportingIdentifiers />} />
         <Route path="/research/uk-register-ontology" element={<UkRegisterOntology />} />
         <Route path="/research/one-record-domain-axioms-korea" element={<OneRecordKorea />} />
         <Route path="/research/one-record-domain-axioms-taiwan" element={<OneRecordTaiwan />} />

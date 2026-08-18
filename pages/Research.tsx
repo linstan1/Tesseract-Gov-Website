@@ -228,7 +228,7 @@ export const Research: React.FC = () => {
            </li>
         </PublicationGroup>
 
-        <PublicationGroup title="Register assurance" count={5}>
+        <PublicationGroup title="Register assurance" count={6}>
            <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
              <Link to="/research/italy-register-ontology"><h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark hover:underline transition-colors">An Open Ontology for Italian Public Registers, Tested Against IPA, ANAC, OpenCUP and ISTAT</h3></Link>
              <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Open ontology, five-register measurement and upstream SHACL contribution, 2026</p>
@@ -245,6 +245,15 @@ export const Research: React.FC = () => {
              <div className="mt-3 flex flex-wrap gap-3 items-center">
                <Link to="/research/uk-register-ontology" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">Read the study</Link>
                <a href="https://github.com/fabio-rovai/uk-register-ontology" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">repository on GitHub<span className="sr-only"> (opens in new tab)</span></a>
+             </div>
+           </li>
+           <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
+             <Link to="/research/surveillance-reporting-identifiers"><h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark hover:underline transition-colors">An Open Census of UK Operational Surveillance Reporting, and What Its Identifiers Actually Denote</h3></Link>
+             <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Open ontology, complete publisher census, 2026</p>
+             <p className="text-base text-gov-dark/90 leading-relaxed">A companion to our census of the FSA alert register, asking the prior question: can the report that carries a surveillance finding be cited at all? Every publication held by APHA, UKHSA and Cefas on GOV.UK was censused on 18 August 2026 through the open Search and Content APIs, giving 6,897 publications indexed and 2,704 report pages carrying 12,769 published files. Two of our own hypotheses died and are reported: every page does carry a persistent content_id, and the report-level unique_reference field is populated on 38.62 per cent of files rather than never. What survives is that 10,582 files, 82.9 per cent, share their only persistent identifier with every other file on the same page, with up to 165 under one identifier, so a specific edition cannot be durably cited. Of 8,758 dated editions, 5,212 carry no report-level identifier and 242 recurring series carry none on any edition. The governance finding is that the UKHSA weekly national flu and COVID-19 surveillance series ran at 99.2 per cent identifier coverage in 2023 to 2024 and 0.7 per cent in 2025 to 2026, a range of 98.5 points across consecutive seasons of one series, which makes the practice a habit rather than a rule. A field named unique_reference is non-unique on 204 values after excluding 362 legitimate format variants. The dual-computation gate caught a 14-page duplication in our own harvest before publication.</p>
+             <div className="mt-3 flex flex-wrap gap-3 items-center">
+               <Link to="/research/surveillance-reporting-identifiers" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">Read the study</Link>
+               <a href="https://github.com/fabio-rovai/biosurveillance-ontology" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">repository on GitHub<span className="sr-only"> (opens in new tab)</span></a>
              </div>
            </li>
            <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
