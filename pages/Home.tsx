@@ -44,7 +44,7 @@ export const Home: React.FC = () => {
           ].map((m, i) => (
             <div key={i}>
               <div className="text-3xl font-extrabold text-white mb-1">{m.value}</div>
-              <div className="text-sm text-gov-blue font-semibold mb-0.5">{m.label}</div>
+              <div className="text-sm text-gov-blue-light font-semibold mb-0.5">{m.label}</div>
               <div className="text-xs text-white/60">{m.sub}</div>
             </div>
           ))}

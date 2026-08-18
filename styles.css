@@ -5,8 +5,11 @@
   --font-sans: "Inter", system-ui, -apple-system, sans-serif;
   --font-serif: "Inter", system-ui, -apple-system, sans-serif;
 
-  --color-gov-blue: #3a9e99;
-  --color-gov-blue-dark: #2d8884;
+  /* Darkened 18 Aug 2026 so text and buttons clear WCAG 2.1 AA on light
+     surfaces: 5.26:1 on white, 5.02:1 on gov-bg. Use gov-blue-light on dark
+     surfaces, where a darker teal would fail instead. */
+  --color-gov-blue: #2c7773;
+  --color-gov-blue-dark: #24615e;
   --color-gov-blue-light: #5ac3be;
   /* CTA teal: darkened so white text clears WCAG 2.1 AA (5.65:1 / 6.97:1 hover). */
   --color-gov-cta: #26726e;
@@ -20,7 +23,7 @@
   --color-gov-border: #e2e6e9;
   --color-gov-border-light: #f0f3f4;
   --color-gov-focus: #ffdd00;
-  --color-gov-accent: #3a9e99;
+  --color-gov-accent: #2c7773;
 
   --shadow-subtle: 0 1px 2px 0 rgba(0, 0, 0, 0.02);
   --shadow-soft: 0 1px 3px 0 rgba(0, 0, 0, 0.05), 0 1px 2px -1px rgba(0, 0, 0, 0.03);
