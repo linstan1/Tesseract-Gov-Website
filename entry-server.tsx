@@ -15,6 +15,8 @@ import { HowToBuy } from './pages/HowToBuy';
 import { Capabilities } from './pages/Capabilities';
 import { UseCases } from './pages/UseCases';
 import { Research } from './pages/Research';
+import { Industries } from './pages/Industries';
+import { IndustryPage } from './pages/industries/IndustryPage';
 import { Partnerships } from './pages/Partnerships';
 import { Compliance } from './pages/Compliance';
 import { Feedback } from './pages/Feedback';
@@ -107,6 +109,14 @@ const SSRApp: React.FC = () => (
         <Route path="/capabilities" element={<Capabilities />} />
         <Route path="/use-cases" element={<UseCases />} />
         <Route path="/research" element={<Research />} />
+        <Route path="/industries" element={<Industries />} />
+        <Route path="/industries/government-public-services" element={<IndustryPage slug="government-public-services" />} />
+        <Route path="/industries/financial-services-insurance" element={<IndustryPage slug="financial-services-insurance" />} />
+        <Route path="/industries/defence-security-space" element={<IndustryPage slug="defence-security-space" />} />
+        <Route path="/industries/industry-manufacturing-supply-chain" element={<IndustryPage slug="industry-manufacturing-supply-chain" />} />
+        <Route path="/industries/health-life-sciences" element={<IndustryPage slug="health-life-sciences" />} />
+        <Route path="/industries/energy-environment-climate" element={<IndustryPage slug="energy-environment-climate" />} />
+        <Route path="/industries/education-skills" element={<IndustryPage slug="education-skills" />} />
         <Route path="/partnerships" element={<Partnerships />} />
         <Route path="/compliance" element={<Compliance />} />
         <Route path="/testimonials" element={<Feedback />} />

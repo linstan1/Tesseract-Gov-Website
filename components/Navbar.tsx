@@ -6,6 +6,7 @@ const NAV_ITEMS = [
   { label: 'How to Buy', path: '/how-to-buy' },
   { label: 'Capabilities', path: '/capabilities' },
   { label: 'Use Cases', path: '/use-cases' },
+  { label: 'Industries', path: '/industries' },
   { label: 'Research', path: '/research' },
   { label: 'Partnerships', path: '/partnerships' },
   { label: 'Testimonials', path: '/testimonials' },

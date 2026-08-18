@@ -8,6 +8,8 @@ const HowToBuy = lazy(() => import('./pages/HowToBuy').then(m => ({ default: m.H
 const Capabilities = lazy(() => import('./pages/Capabilities').then(m => ({ default: m.Capabilities })));
 const UseCases = lazy(() => import('./pages/UseCases').then(m => ({ default: m.UseCases })));
 const Research = lazy(() => import('./pages/Research').then(m => ({ default: m.Research })));
+const Industries = lazy(() => import('./pages/Industries').then(m => ({ default: m.Industries })));
+const IndustryPage = lazy(() => import('./pages/industries/IndustryPage').then(m => ({ default: m.IndustryPage })));
 const Partnerships = lazy(() => import('./pages/Partnerships').then(m => ({ default: m.Partnerships })));
 const Compliance = lazy(() => import('./pages/Compliance').then(m => ({ default: m.Compliance })));
 const Feedback = lazy(() => import('./pages/Feedback').then(m => ({ default: m.Feedback })));
@@ -90,6 +92,38 @@ const SemanticAssetRegister = lazy(() => import('./pages/research/SemanticAssetR
 const RegisterAssurance = lazy(() => import('./pages/research/RegisterAssurance').then(m => ({ default: m.RegisterAssurance })));
 
 const PAGE_META: Record<string, { title: string; description: string }> = {
+  '/industries': {
+    title: 'Industries - The Sectors We Work In | Tesseract Academy for the Public Sector',
+    description: 'The sectors Tesseract Academy works in, with the delivered engagements and the open research that sits under each one. Government, financial services, defence, industry, health, environment and skills.',
+  },
+  '/industries/government-public-services': {
+    title: 'Government and Public Services | Tesseract Academy for the Public Sector',
+    description: 'Delivered for the Welsh Government, the National Digital Twin Programme, Qualifications Wales and Imperial War Museums. Appointed on five Crown Commercial Service frameworks. Open research on public registers, consultations and government evaluation.',
+  },
+  '/industries/financial-services-insurance': {
+    title: 'Financial Services and Insurance | Tesseract Academy for the Public Sector',
+    description: 'Open ontologies and register-integrity research tested against the FDIC, the Federal Reserve, EIOPA, EDGAR and the Global LEI System. Selected for the IOSCO TechSprint 2026. Financial vulnerability research with Kalgera and Fintech Scotland.',
+  },
+  '/industries/defence-security-space': {
+    title: 'Defence, Security and Space | Tesseract Academy for the Public Sector',
+    description: 'Open 4D ontology crosswalks between IES and HQDM, a PYRAMID avionics semantic bridge, and space debris metric composition checking. DV-cleared consultant available. Appointed on RM6235 Space-Enabled and Geospatial Services DPS.',
+  },
+  '/industries/industry-manufacturing-supply-chain': {
+    title: 'Industry, Manufacturing and Supply Chain | Tesseract Academy for the Public Sector',
+    description: 'Measured ontology and schema quality defects in IATA ONE Record, machinery and machine tool data standards, IFC, COBie, Uniclass and BOT. Findings verified with two independent reasoners.',
+  },
+  '/industries/health-life-sciences': {
+    title: 'Health and Life Sciences | Tesseract Academy for the Public Sector',
+    description: 'Ontology-validated biomedical knowledge graphs, an open conformant biomedical language model, FAIR dataset contracts, and a joint privacy and fairness report card measured on the UCI Diabetes readmission dataset.',
+  },
+  '/industries/energy-environment-climate': {
+    title: 'Energy, Environment and Climate | Tesseract Academy for the Public Sector',
+    description: 'Commissioned by WRAP to build a digital Food Loss and Waste data taxonomy for its Food Programme and the global Food Pact Network. Open research on UK waste reporting, wastewater effluent data quality and the UK nature-governance landscape.',
+  },
+  '/industries/education-skills': {
+    title: 'Education and Skills | Tesseract Academy for the Public Sector',
+    description: 'Innovate UK BridgeAI creative industries AI training, 1,100 registrations against a 200 capacity target, rated 4.6 out of 5. Cited by Skills England alongside The Alan Turing Institute. Training provider on the UK Government AI Skills Hub.',
+  },
   '/': {
     title: 'Tesseract Academy for the Public Sector - Research, AI & Public Sector Delivery Partner',
     description: 'Tesseract Academy delivers research-backed AI, data science, public engagement, survey design, and policy advisory services for UK and EU public sector organisations. Crown Commercial Service appointed supplier.',
@@ -484,6 +518,14 @@ const App: React.FC = () => {
               <Route path="/capabilities" element={<Capabilities />} />
               <Route path="/use-cases" element={<UseCases />} />
               <Route path="/research" element={<Research />} />
+              <Route path="/industries" element={<Industries />} />
+              <Route path="/industries/government-public-services" element={<IndustryPage slug="government-public-services" />} />
+              <Route path="/industries/financial-services-insurance" element={<IndustryPage slug="financial-services-insurance" />} />
+              <Route path="/industries/defence-security-space" element={<IndustryPage slug="defence-security-space" />} />
+              <Route path="/industries/industry-manufacturing-supply-chain" element={<IndustryPage slug="industry-manufacturing-supply-chain" />} />
+              <Route path="/industries/health-life-sciences" element={<IndustryPage slug="health-life-sciences" />} />
+              <Route path="/industries/energy-environment-climate" element={<IndustryPage slug="energy-environment-climate" />} />
+              <Route path="/industries/education-skills" element={<IndustryPage slug="education-skills" />} />
               <Route path="/partnerships" element={<Partnerships />} />
               <Route path="/compliance" element={<Compliance />} />
               <Route path="/testimonials" element={<Feedback />} />
