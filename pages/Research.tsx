@@ -228,7 +228,7 @@ export const Research: React.FC = () => {
            </li>
         </PublicationGroup>
 
-        <PublicationGroup title="Register assurance" count={6}>
+        <PublicationGroup title="Register assurance" count={7}>
            <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
              <Link to="/research/italy-register-ontology"><h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark hover:underline transition-colors">An Open Ontology for Italian Public Registers, Tested Against IPA, ANAC, OpenCUP and ISTAT</h3></Link>
              <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Open ontology, five-register measurement and upstream SHACL contribution, 2026</p>
@@ -236,6 +236,15 @@ export const Research: React.FC = () => {
              <div className="mt-3 flex flex-wrap gap-3 items-center">
                <Link to="/research/italy-register-ontology" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">Read the study</Link>
                <a href="https://github.com/fabio-rovai/italy-register-ontology" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">repository on GitHub<span className="sr-only"> (opens in new tab)</span></a>
+             </div>
+           </li>
+           <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
+             <Link to="/research/space-object-register-ontology"><h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark hover:underline transition-colors">An Open Ontology for Space Object Catalogues, Tested Against CelesTrak and the General Catalog of Artificial Space Objects</h3></Link>
+             <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Open ontology, two-catalogue measurement, 2026</p>
+             <p className="text-base text-gov-dark/90 leading-relaxed">An open OWL 2, SKOS and SHACL ontology and reproducible audit of the boundary between the two open catalogues of objects in Earth orbit, built from keyless downloads of CelesTrak&apos;s SATCAT of 70,292 objects and Jonathan McDowell&apos;s General Catalog of Artificial Space Objects across all four of its catalogues, both pinned to 18 August 2026. GCAT marks 22 entries as corresponding to no real object, giving its reasons in its own words including radar error, cataloging error and duplicate, and CelesTrak carries all 22; one of them, catalog number 11006, has no decay date and therefore counts as a tracked object still in orbit. 1,094 objects GCAT records as no longer tracked carry no CelesTrak data status code, which is a finding rather than a scope difference because CelesTrak maintains that field and applies it to 1,292 other objects. 20,198 of 34,814 on-orbit objects, 58.0 per cent, have no published radar cross section, so no size or mass can be derived from the open record. CelesTrak&apos;s owner code collapses the Soviet Union and the Russian Federation into a single value where GCAT separates 16,142 objects from 9,016, and 157 objects are attributed to the United States by one catalogue and to New Zealand by the other. All 70,292 COSPAR designators are well formed with no collisions, a hypothesis that died and is reported as such. Every headline computed two independent ways.</p>
+             <div className="mt-3 flex flex-wrap gap-3 items-center">
+               <Link to="/research/space-object-register-ontology" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">Read the study</Link>
+               <a href="https://github.com/fabio-rovai/space-object-register-ontology" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">repository on GitHub<span className="sr-only"> (opens in new tab)</span></a>
              </div>
            </li>
            <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">

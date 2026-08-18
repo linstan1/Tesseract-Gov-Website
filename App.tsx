@@ -84,6 +84,7 @@ const BankRegisterOntology = lazy(() => import('./pages/research/BankRegisterOnt
 const SecuritiesRegisterOntology = lazy(() => import('./pages/research/SecuritiesRegisterOntology').then(m => ({ default: m.SecuritiesRegisterOntology })));
 const BiosurveillanceRegisterOntology = lazy(() => import('./pages/research/BiosurveillanceRegisterOntology').then(m => ({ default: m.BiosurveillanceRegisterOntology })));
 const SurveillanceReportingIdentifiers = lazy(() => import('./pages/research/SurveillanceReportingIdentifiers').then(m => ({ default: m.SurveillanceReportingIdentifiers })));
+const SpaceObjectRegisterOntology = lazy(() => import('./pages/research/SpaceObjectRegisterOntology').then(m => ({ default: m.SpaceObjectRegisterOntology })));
 const UkRegisterOntology = lazy(() => import('./pages/research/UkRegisterOntology').then(m => ({ default: m.UkRegisterOntology })));
 const ItalyRegisterOntology = lazy(() => import('./pages/research/ItalyRegisterOntology').then(m => ({ default: m.ItalyRegisterOntology })));
 const OneRecordKorea = lazy(() => import('./pages/research/OneRecordKorea').then(m => ({ default: m.OneRecordKorea })));
@@ -269,6 +270,10 @@ const PAGE_META: Record<string, { title: string; description: string }> = {
   '/research/italy-register-ontology': {
     title: 'An open ontology for Italian public registers, tested against IPA, ANAC, OpenCUP and ISTAT | Tesseract Academy for the Public Sector',
     description: "An open OWL 2, SKOS and SHACL ontology and reproducible audit of Italy's public register fabric, built from hands-on downloads of the IPA register of 23,735 public administrations, the ANAC contracts register, the OpenCUP register of 11.9 million public investment projects, the ISTAT register of administrative units and the national semantic vocabulary, taken on 17 August 2026. The national cities vocabulary and the ISTAT CSV export both predate the 2026 Sardinian territorial reform: 380 dead municipality codes are published as current and 378 current codes are missing, while the operational IPA register already uses the new codes with zero mismatches across all 23,735 entities. All 23,735 IPA fiscal codes pass their checksum, a clean null result stated as a finding. In a two-month sample of 2025 contracts, 140 well-formed CUPs referenced by 255 contracts are absent from the published OpenCUP open-data exports, and 45 values in the CUP field fail the CUP grammar, including ESENTE and ATT000NON000CUP. The findings are delivered upstream as a contribute-first SHACL package answering the vocabulary maintainers' own request. Every headline computed two independent ways, reproducible from public data.",
+  },
+  '/research/space-object-register-ontology': {
+    title: 'An open ontology for space object catalogues, tested against CelesTrak and the General Catalog of Artificial Space Objects | Tesseract Academy for the Public Sector',
+    description: "An open OWL 2, SKOS and SHACL ontology and reproducible audit of the boundary between the two open catalogues of objects in Earth orbit, built from keyless downloads of CelesTrak's SATCAT (70,292 objects) and Jonathan McDowell's General Catalog of Artificial Space Objects (69,391 numbered objects across four catalogues), both retrieved on 18 August 2026. GCAT marks 22 entries as corresponding to no real object, giving reasons such as radar error and cataloging error, and CelesTrak carries all 22, one of them with no decay date and therefore as a tracked object still in orbit. 1,094 objects GCAT records as no longer tracked carry no data status code in CelesTrak, which maintains that field and applies it to 1,292 others. 20,198 of 34,814 on-orbit objects, 58.0 per cent, have no published radar cross section. CelesTrak's owner code collapses the Soviet Union and the Russian Federation into one value where GCAT separates 16,142 objects from 9,016. Every headline computed two independent ways.",
   },
   '/research/uk-register-ontology': {
     title: 'An open ontology for UK public registers, tested against Companies House, the Charity Commission and the Global LEI System | Tesseract Academy for the Public Sector',
@@ -610,6 +615,7 @@ const App: React.FC = () => {
               <Route path="/research/securities-register-ontology" element={<SecuritiesRegisterOntology />} />
               <Route path="/research/biosurveillance-register-ontology" element={<BiosurveillanceRegisterOntology />} />
               <Route path="/research/surveillance-reporting-identifiers" element={<SurveillanceReportingIdentifiers />} />
+              <Route path="/research/space-object-register-ontology" element={<SpaceObjectRegisterOntology />} />
               <Route path="/research/uk-register-ontology" element={<UkRegisterOntology />} />
               <Route path="/research/one-record-domain-axioms-korea" element={<OneRecordKorea />} />
               <Route path="/research/one-record-domain-axioms-taiwan" element={<OneRecordTaiwan />} />
