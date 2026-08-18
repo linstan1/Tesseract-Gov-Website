@@ -32,8 +32,8 @@ export const EducationUpskilling: React.FC = () => {
         <p className="text-xl text-gov-secondary/90 leading-relaxed max-w-4xl">
           We design and deliver AI literacy, data science, and executive leadership training for UK
           public sector and government-funded programmes. Our work combines academic depth with
-          practical application — including three official UK Government Business Academy webinars
-          delivered in 2025 in partnership with the Department for Business and Trade, and BridgeAI
+          practical application, including six official UK Government Business Academy webinars
+          delivered across 2025 and 2026 in partnership with the Department for Business and Trade, and BridgeAI
           / Innovate UK programme delivery for creative industries.
         </p>
       </header>
@@ -173,10 +173,10 @@ export const EducationUpskilling: React.FC = () => {
 
         <div className="bg-gov-bg border border-gov-border/40 rounded-xl p-8">
           <p className="text-xs font-semibold text-gov-blue uppercase tracking-wider mb-3">
-            UK Government Business Academy — AI Webinar Series (2025)
+            UK Government Business Academy AI Webinar Series (2025 and 2026)
           </p>
           <h3 className="text-xl font-bold text-gov-dark mb-4">
-            Three Official UK Government Business Academy Webinars
+            Two Commissioned Series of Three Business Academy Webinars
           </h3>
           <p className="text-base text-gov-dark/90 leading-relaxed mb-4">
             Dr Stylianos Kampakis delivered three official UK Government Business Academy webinars
@@ -187,14 +187,21 @@ export const EducationUpskilling: React.FC = () => {
             platform and have been viewed by civil servants, SMEs, and public sector leaders across
             the UK.
           </p>
+          <p className="text-base text-gov-dark/90 leading-relaxed mb-4">
+            The Business Academy recommissioned the series for autumn 2026. Three further sessions
+            run on 24 August, 24 September and 6 October 2026, covering AI roadmap design,
+            tool-agnostic workflow automation, and what changes inside a team when AI adoption moves
+            past the pilot stage. Dates and booking links are listed on our{' '}
+            <a href="/speaking" className="text-gov-blue font-medium hover:underline">talks and webinars</a> page.
+          </p>
           <div className="grid grid-cols-3 gap-4 mt-6">
             <div className="text-center p-4 bg-white rounded-lg border border-gov-border/30">
               <p className="text-2xl font-extrabold text-gov-blue">3</p>
               <p className="text-sm text-gov-secondary mt-1">Official DBT Business Academy webinars</p>
             </div>
             <div className="text-center p-4 bg-white rounded-lg border border-gov-border/30">
-              <p className="text-2xl font-extrabold text-gov-blue">2025</p>
-              <p className="text-sm text-gov-secondary mt-1">Delivered October-November</p>
+              <p className="text-2xl font-extrabold text-gov-blue">2025 &amp; 2026</p>
+              <p className="text-sm text-gov-secondary mt-1">Two commissioned series</p>
             </div>
             <div className="text-center p-4 bg-white rounded-lg border border-gov-border/30">
               <p className="text-2xl font-extrabold text-gov-blue">OCT</p>

@@ -18,6 +18,7 @@ import { Research } from './pages/Research';
 import { Partnerships } from './pages/Partnerships';
 import { Compliance } from './pages/Compliance';
 import { Feedback } from './pages/Feedback';
+import { Speaking } from './pages/Speaking';
 import { About } from './pages/About';
 import { WelshGovernment } from './pages/research/WelshGovernment';
 import { NationalDigitalTwin } from './pages/research/NationalDigitalTwin';
@@ -111,6 +112,7 @@ const SSRApp: React.FC = () => (
         <Route path="/compliance" element={<Compliance />} />
         <Route path="/testimonials" element={<Feedback />} />
         <Route path="/about" element={<About />} />
+        <Route path="/speaking" element={<Speaking />} />
         <Route path="/research/welsh-government-land-valuation" element={<WelshGovernment />} />
         <Route path="/research/national-digital-twin-programme" element={<NationalDigitalTwin />} />
         <Route path="/research/bridgeai-creative-industries" element={<BridgeAI />} />
