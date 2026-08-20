@@ -49,6 +49,7 @@ import { SpaceMetricsCrosswalk } from './pages/research/SpaceMetricsCrosswalk';
 import { Ies4TurtleLanguageModel } from './pages/research/Ies4TurtleLanguageModel';
 import { OntologyCorrectnessBench } from './pages/research/OntologyCorrectnessBench';
 import { ShaclShapesNotVocabulary } from './pages/research/ShaclShapesNotVocabulary';
+import { SemanticIntegrityDetectionDelta } from './pages/research/SemanticIntegrityDetectionDelta';
 import { SymbolExistenceBox } from './pages/research/SymbolExistenceBox';
 import { FoundryGradeMachineOntologies } from './pages/research/FoundryGradeMachineOntologies';
 import { NeuroSymbolicVerificationDirection } from './pages/research/NeuroSymbolicVerificationDirection';
@@ -152,6 +153,7 @@ const SSRApp: React.FC = () => (
         <Route path="/research/ies4-turtle-language-model" element={<Ies4TurtleLanguageModel />} />
         <Route path="/research/ontology-correctness-benchmark" element={<OntologyCorrectnessBench />} />
         <Route path="/research/shacl-shapes-not-vocabulary" element={<ShaclShapesNotVocabulary />} />
+        <Route path="/research/semantic-integrity-detection-delta" element={<SemanticIntegrityDetectionDelta />} />
         <Route path="/research/symbol-existence-box" element={<SymbolExistenceBox />} />
         <Route path="/research/foundry-grade-machine-ontologies" element={<FoundryGradeMachineOntologies />} />
         <Route path="/research/neuro-symbolic-verification-direction" element={<NeuroSymbolicVerificationDirection />} />

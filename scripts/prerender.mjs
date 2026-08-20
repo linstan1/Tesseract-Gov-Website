@@ -244,6 +244,10 @@ const PAGE_META = {
     title: 'SHACL validates shapes, not vocabulary: the case for a closed-world companion | Tesseract Academy for the Public Sector',
     description: 'SHACL Core is open-world by design: it constrains the nodes a shape targets and is silent about everything else, including terms that do not exist in the ontology. Why sh:closed does not close the gap, and where a closed-world vocabulary check belongs in a generative RDF pipeline.',
   },
+  '/research/semantic-integrity-detection-delta': {
+    title: 'When the Validator Says Pass: Detecting Semantic-Integrity Defects Across Four Knowledge-Graph Libraries | Tesseract Academy for the Public Sector',
+    description: 'A controlled study of four real defects in popular open-source knowledge-graph libraries and whether mainstream static analysis and SHACL validation catch them. They do not; a semantic verifier does.',
+  },
   '/research/symbol-existence-box': {
     title: 'The missing box: where symbol-existence checking belongs in a neuro-symbolic pipeline | Tesseract Academy for the Public Sector',
     description: 'Neuro-symbolic systems are assemblies of distinct components. Most LLM-to-knowledge-graph pipelines have generation and SHACL and assume SHACL is the symbol-grounding box. It is not. Read through the boxology of hybrid learning-and-reasoning systems, the missing box is symbol grounding.',
