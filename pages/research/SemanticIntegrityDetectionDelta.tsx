@@ -9,7 +9,7 @@ const SCHEMA = {
   '@type': 'Article',
   '@id': 'https://gov.tesseract.academy/research/semantic-integrity-detection-delta#article',
   mainEntityOfPage: 'https://gov.tesseract.academy/research/semantic-integrity-detection-delta',
-  headline: 'When the Validator Says Pass: Detecting Semantic-Integrity Defects Across Four Knowledge-Graph Libraries | Tesseract Academy',
+  headline: 'Semantic-Integrity Defects Evade Static Analysis and Shape Validation: A Cross-Library Detection Study | Tesseract Academy',
   description:
     'A controlled study of four real defects in popular open-source knowledge-graph libraries and whether mainstream static analysis and SHACL validation catch them. They do not; a semantic verifier does.',
   author: { '@id': 'https://gov.tesseract.academy/#organization' },
@@ -59,7 +59,7 @@ export const SemanticIntegrityDetectionDelta: React.FC = () => {
           Foundational Research: Ontology-Native AI
         </p>
         <h1 className="text-4xl font-extrabold text-gov-dark mb-6 tracking-tight leading-tight font-serif">
-          When the validator says pass
+          Semantic-Integrity Defects Evade Static Analysis and Shape Validation: A Cross-Library Detection Study
         </h1>
         <p className="text-xl text-gov-secondary/90 leading-relaxed">
           Detecting semantic-integrity defects across four knowledge-graph libraries. A controlled study of four real defects in popular open-source knowledge-graph libraries, and whether mainstream static analysis and SHACL validation catch them. They do not. A semantic verifier does.
