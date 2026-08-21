@@ -89,6 +89,7 @@ const SurveillanceReportingIdentifiers = lazy(() => import('./pages/research/Sur
 const SpaceObjectRegisterOntology = lazy(() => import('./pages/research/SpaceObjectRegisterOntology').then(m => ({ default: m.SpaceObjectRegisterOntology })));
 const UkRegisterOntology = lazy(() => import('./pages/research/UkRegisterOntology').then(m => ({ default: m.UkRegisterOntology })));
 const LandRegisterOntology = lazy(() => import('./pages/research/LandRegisterOntology').then(m => ({ default: m.LandRegisterOntology })));
+const LandCarbonMeasurement = lazy(() => import('./pages/research/LandCarbonMeasurement').then(m => ({ default: m.LandCarbonMeasurement })));
 const ItalyRegisterOntology = lazy(() => import('./pages/research/ItalyRegisterOntology').then(m => ({ default: m.ItalyRegisterOntology })));
 const OneRecordKorea = lazy(() => import('./pages/research/OneRecordKorea').then(m => ({ default: m.OneRecordKorea })));
 const OneRecordTaiwan = lazy(() => import('./pages/research/OneRecordTaiwan').then(m => ({ default: m.OneRecordTaiwan })));
@@ -281,6 +282,10 @@ const PAGE_META: Record<string, { title: string; description: string }> = {
   '/research/space-object-register-ontology': {
     title: 'An open ontology for space object catalogues, tested against CelesTrak and the General Catalog of Artificial Space Objects | Tesseract Academy for the Public Sector',
     description: "An open OWL 2, SKOS and SHACL ontology and reproducible audit of the boundary between the two open catalogues of objects in Earth orbit, built from keyless downloads of CelesTrak's SATCAT (70,292 objects) and Jonathan McDowell's General Catalog of Artificial Space Objects (69,391 numbered objects across four catalogues), both retrieved on 18 August 2026. GCAT marks 22 entries as corresponding to no real object, giving reasons such as radar error and cataloging error, and CelesTrak carries all 22, one of them with no decay date and therefore as a tracked object still in orbit. 1,094 objects GCAT records as no longer tracked carry no data status code in CelesTrak, which maintains that field and applies it to 1,292 others. 20,198 of 34,814 on-orbit objects, 58.0 per cent, have no published radar cross section. CelesTrak's owner code collapses the Soviet Union and the Russian Federation into one value where GCAT separates 16,142 objects from 9,016. Every headline computed two independent ways.",
+  },
+  '/research/land-carbon-measurement': {
+    title: 'Measuring peat on a Scottish landholding, tested against the national cadastre and the national habitat map | Tesseract Academy for the Public Sector',
+    description: "The Land Reform (Scotland) Act 2025 requires land management plans addressing carbon for holdings of 1,000 hectares or more, and three independent defects compound against that calculation. Registers of Scotland publishes no areas: the INSPIRE areavalue attribute carries the literal string UNPOPULATED on all 1,564,345 parcels. Area computed from geometry depends on method, with summation exceeding the geometric union by 1,867,044 hectares or 28.37 per cent. NatureScot's habitat map declares a NoData value of 0 that neither GeoTIFF encodes, so 7,205,895,872 of 8,100,000,000 pixels, 88.96 per cent of the national grid, present as a valid class. All 8.1 billion pixel pairs of the Level 1 and Level 2 EUNIS maps were compared: 98.6761 per cent roll up correctly and 1.3239 per cent, 118,374 hectares, do not, every violation being the same marine and coastal confusion across only four class pairs. The peat class Q1 is clean in both maps. Scotland's raised and blanket bog covers 1,330,616 hectares, 14.88 per cent of classified extent.",
   },
   '/research/land-register-ontology': {
     title: 'An open ontology for land register integrity, tested against all 33 Scottish registration counties | Tesseract Academy for the Public Sector',
@@ -635,6 +640,7 @@ const App: React.FC = () => {
               <Route path="/research/space-object-register-ontology" element={<SpaceObjectRegisterOntology />} />
               <Route path="/research/uk-register-ontology" element={<UkRegisterOntology />} />
               <Route path="/research/land-register-ontology" element={<LandRegisterOntology />} />
+              <Route path="/research/land-carbon-measurement" element={<LandCarbonMeasurement />} />
               <Route path="/research/one-record-domain-axioms-korea" element={<OneRecordKorea />} />
               <Route path="/research/one-record-domain-axioms-taiwan" element={<OneRecordTaiwan />} />
               <Route path="/research/machinery-regulation-readiness-korea" element={<MachineryKorea />} />

@@ -262,6 +262,79 @@ export const LandRegisterOntology: React.FC = () => (
         this evidence Registers of Scotland conforms to its own declared identifier rules.
       </p>
 
+      <h2 className="text-2xl font-bold text-gov-black mt-12 mb-4">Where the register is good, measured</h2>
+
+      <p className="text-gray-700 mb-6">
+        A study that only reports faults is not a measurement, so we tested three guarantees
+        Registers of Scotland states in its own specification, across all 1,564,345 parcels.
+        It passes all three.
+      </p>
+
+      <div className="overflow-x-auto mb-6">
+        <table className="min-w-full border border-gray-200 text-sm">
+          <thead className="bg-gray-50"><tr>
+            <th className="text-left px-4 py-2 border-b font-semibold">Measure</th>
+            <th className="text-right px-4 py-2 border-b font-semibold">Count</th>
+          </tr></thead>
+          <tbody>
+            <tr><td className="px-4 py-2 border-b">Duplicate geometries, after normalising vertex order</td><td className="px-4 py-2 border-b text-right">0</td></tr>
+            <tr><td className="px-4 py-2 border-b">Invalid geometries requiring repair</td><td className="px-4 py-2 border-b text-right">2</td></tr>
+            <tr><td className="px-4 py-2 border-b">Slivers under one square metre</td><td className="px-4 py-2 border-b text-right">392</td></tr>
+            <tr><td className="px-4 py-2 border-b">Parcels outside the national bounding envelope</td><td className="px-4 py-2 border-b text-right">1</td></tr>
+            <tr><td className="px-4 py-2 border-b">Identifier format violations against RoS&rsquo;s own declared rules</td><td className="px-4 py-2 border-b text-right">0</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p className="text-gray-700 mb-6">
+        Its specification says &ldquo;there should be no duplicated polygons within the
+        dataset&rdquo;, and there are none. Geometry validity is two failures in 1.56 million.
+        This also corrected a gap in our own first pass, which repaired invalid geometry with
+        a zero-width buffer without counting how often it had to, and so would have let a
+        source with poor geometry hygiene pass as clean.
+      </p>
+
+      <h2 className="text-2xl font-bold text-gov-black mt-12 mb-4">Carbon, and why this matters beyond conveyancing</h2>
+
+      <p className="text-gray-700 mb-6">
+        A land management plan under the Act is expected to address carbon, which in Scotland
+        mostly means peat. Sizing peat on a holding means overlaying it on the national
+        habitat map, and that calculation inherits every problem on this page before it meets
+        problems of its own. We measured that separately in{' '}
+        <Link to="/research/land-carbon-measurement" className="text-gov-blue hover:underline">
+          measuring peat on a Scottish landholding
+        </Link>, which compares all 8.1 billion pixel pairs of the two national habitat maps.
+        Scotland&rsquo;s raised and blanket bog covers 1,330,616 hectares, and the peat class
+        is clean in both maps.
+      </p>
+
+      <h2 className="text-2xl font-bold text-gov-black mt-12 mb-4">What we got wrong, and corrected</h2>
+
+      <p className="text-gray-700 mb-6">
+        Two errors of ours are worth stating, because a study that audits other people&rsquo;s
+        data should hold its own to the same standard.
+      </p>
+
+      <p className="text-gray-700 mb-6">
+        We reported that our second validation engine could not match focus nodes for a common
+        SHACL targeting construct. That was wrong, and it was wrong because we had invoked the
+        tool incorrectly. Run correctly, the two engines agree exactly on the structural layer
+        and on the cross-source layer that carries the argument. The single genuine
+        disagreement isolates to one unimplemented constraint, which has since been fixed in
+        that engine along with two related defects, all of which caused it to report a pass
+        over data it had not checked.
+      </p>
+
+      <p className="text-gray-700 mb-6">
+        Running the two engines against each other also exposed a real error in our own
+        shapes, an unconstrained cross product that inflated one layer&rsquo;s results, and a
+        later audit found two modelling errors and a self-contradiction in our own ontology:
+        a property declared on too narrow a class, and an identifier scheme whose declared
+        length disagreed with its own pattern. All are fixed, and both audits now run in
+        continuous integration so they cannot return. The corrections are recorded in the
+        build report rather than applied silently.
+      </p>
+
       <h2 className="text-2xl font-bold text-gov-black mt-12 mb-4">Scope, stated plainly</h2>
 
       <p className="text-gray-700 mb-6">

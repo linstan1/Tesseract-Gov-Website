@@ -328,7 +328,7 @@ export const Research: React.FC = () => {
            </li>
         </PublicationGroup>
 
-        <PublicationGroup title="Register assurance" count={7}>
+        <PublicationGroup title="Register assurance" count={8}>
            <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
              <Link to="/research/italy-register-ontology"><h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark hover:underline transition-colors">An Open Ontology for Italian Public Registers, Tested Against IPA, ANAC, OpenCUP and ISTAT</h3></Link>
              <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Open ontology, five-register measurement and upstream SHACL contribution, 2026</p>
@@ -336,6 +336,15 @@ export const Research: React.FC = () => {
              <div className="mt-3 flex flex-wrap gap-3 items-center">
                <Link to="/research/italy-register-ontology" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">Read the study</Link>
                <a href="https://github.com/fabio-rovai/italy-register-ontology" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">repository on GitHub<span className="sr-only"> (opens in new tab)</span></a>
+             </div>
+           </li>
+           <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
+             <Link to="/research/land-carbon-measurement"><h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark hover:underline transition-colors">Measuring Peat on a Scottish Landholding, Tested Against the National Cadastre and the National Habitat Map</h3></Link>
+             <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Open pipeline, 8.1 billion pixel comparison, 2026</p>
+             <p className="text-base text-gov-dark/90 leading-relaxed">The Land Reform (Scotland) Act 2025 requires a land management plan addressing carbon for every holding of 1,000 hectares or more, and in Scotland carbon mostly means peat. Sizing it is an overlay of the national cadastre on the national habitat map, and three independent defects compound against the answer. Registers of Scotland publishes no areas at all, the INSPIRE areavalue attribute carrying the literal string UNPOPULATED on every one of 1,564,345 parcels. Area computed from the published geometry depends on the method chosen, summation exceeding the geometric union by 1,867,044 hectares or 28.37 per cent because overlapping polygons are valid in the data model. And NatureScot&apos;s habitat map declares a NoData value of 0 that neither GeoTIFF actually encodes, so 7,205,895,872 of 8,100,000,000 pixels, 88.96 per cent of the national grid, present themselves as a valid class and unclassified ground inside a boundary is silently counted rather than excluded. Against that, the habitat map tests well: comparing all 8.1 billion pixel pairs of the EUNIS Level 1 and Level 2 maps, 98.6761 per cent roll up correctly and the 1.3239 per cent that do not, 118,374 hectares, are every one of them the same marine and coastal confusion across only four class pairs, with the peat class Q1 clean, no undocumented codes and perfect co-registration. Scotland&apos;s raised and blanket bog covers 1,330,616 hectares, 14.88 per cent of classified extent. Every cadastral headline computed two independent ways.</p>
+             <div className="mt-3 flex flex-wrap gap-3 items-center">
+               <Link to="/research/land-carbon-measurement" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">Read the study</Link>
+               <a href="https://github.com/fabio-rovai/scotland-land-register-ontology" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">repository on GitHub<span className="sr-only"> (opens in new tab)</span></a>
              </div>
            </li>
            <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">

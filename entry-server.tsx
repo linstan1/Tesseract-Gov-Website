@@ -96,6 +96,7 @@ import { SurveillanceReportingIdentifiers } from './pages/research/SurveillanceR
 import { SpaceObjectRegisterOntology } from './pages/research/SpaceObjectRegisterOntology';
 import { UkRegisterOntology } from './pages/research/UkRegisterOntology';
 import { LandRegisterOntology } from './pages/research/LandRegisterOntology';
+import { LandCarbonMeasurement } from './pages/research/LandCarbonMeasurement';
 import { OneRecordKorea } from './pages/research/OneRecordKorea';
 import { OneRecordTaiwan } from './pages/research/OneRecordTaiwan';
 import { MachineryKorea } from './pages/research/MachineryKorea';
@@ -202,6 +203,7 @@ const SSRApp: React.FC = () => (
         <Route path="/research/space-object-register-ontology" element={<SpaceObjectRegisterOntology />} />
         <Route path="/research/uk-register-ontology" element={<UkRegisterOntology />} />
         <Route path="/research/land-register-ontology" element={<LandRegisterOntology />} />
+        <Route path="/research/land-carbon-measurement" element={<LandCarbonMeasurement />} />
         <Route path="/research/one-record-domain-axioms-korea" element={<OneRecordKorea />} />
         <Route path="/research/one-record-domain-axioms-taiwan" element={<OneRecordTaiwan />} />
         <Route path="/research/machinery-regulation-readiness-korea" element={<MachineryKorea />} />
