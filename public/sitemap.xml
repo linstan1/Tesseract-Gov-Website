@@ -326,6 +326,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://gov.tesseract.academy/research/verifying-extraction-pipeline-rdf</loc>
+    <lastmod>2026-08-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://gov.tesseract.academy/research/bank-register-ontology</loc>
     <lastmod>2026-08-16</lastmod>
     <changefreq>weekly</changefreq>

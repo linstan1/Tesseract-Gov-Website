@@ -35,6 +35,7 @@ export const INDUSTRIES: Industry[] = [
       'A UK government agency, anonymised at their request. All KPIs delivered in half the contract time and within 75 per cent of budget.',
     ],
     research: [
+      { route: '/research/verifying-extraction-pipeline-rdf', title: 'Checking the knowledge graph your pipeline just built' },
       { route: '/research/welsh-government-land-valuation', title: 'Welsh Government Land Valuation Research' },
       { route: '/research/national-digital-twin-programme', title: 'AI Ontology Extension Generator' },
       { route: '/research/computation-ready-aerial-heritage', title: 'Computation-Ready Aerial Photography Heritage' },
