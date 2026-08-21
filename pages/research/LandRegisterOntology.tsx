@@ -112,15 +112,15 @@ export const LandRegisterOntology: React.FC = () => (
       </p>
 
       <p className="text-gray-700 mb-6">
-        That is not a rhetorical flourish. The INSPIRE Cadastral Parcels dataset, which
-        Registers of Scotland publishes to satisfy the INSPIRE Directive, defines an{' '}
+        The INSPIRE Cadastral Parcels dataset, which Registers of Scotland publishes to
+        satisfy the INSPIRE Directive, defines an{' '}
         <code className="bg-gray-100 px-1 rounded">areavalue</code> attribute as the
         &ldquo;registered area value giving quantification of the area projected on the
         horizontal plane of the cadastral parcel&rdquo;. We downloaded all 33 registration
         counties on 21 August 2026, 1,564,345 parcels in total, and checked what that field
         contains. It contains the literal string{' '}
-        <code className="bg-gray-100 px-1 rounded">UNPOPULATED</code>. On every parcel. It is
-        the only value the field takes anywhere in Scotland.
+        <code className="bg-gray-100 px-1 rounded">UNPOPULATED</code> on every parcel, and
+        that is the only value the field takes anywhere in Scotland.
       </p>
 
       <p className="text-gray-700 mb-6">
@@ -129,8 +129,8 @@ export const LandRegisterOntology: React.FC = () => (
         <code className="bg-gray-100 px-1 rounded">beginlifespanversion</code>,{' '}
         <code className="bg-gray-100 px-1 rounded">endlifespanversion</code>,{' '}
         <code className="bg-gray-100 px-1 rounded">validfrom</code> and{' '}
-        <code className="bg-gray-100 px-1 rounded">validto</code>. Six mandated attributes,
-        1,564,345 parcels, one distinct value across all of them.
+        <code className="bg-gray-100 px-1 rounded">validto</code>. That is six mandated
+        attributes across 1,564,345 parcels with one distinct value between them.
       </p>
 
       <h2 className="text-2xl font-bold text-gov-black mt-12 mb-4">Why a magic word is worse than an empty field</h2>
@@ -170,7 +170,7 @@ export const LandRegisterOntology: React.FC = () => (
       </div>
 
       <p className="text-gray-700 mb-6">
-        Summing double counts, and it does so by design rather than by error. Registers of
+        Summing double counts, and it does so by design. Registers of
         Scotland states that overlapping and stacked polygons are a valid part of its data
         model, that holes such as removals and exceptions are indicated with an overlapping
         polygon, and that polygons representing holes are not removed from ownership
@@ -265,9 +265,8 @@ export const LandRegisterOntology: React.FC = () => (
       <h2 className="text-2xl font-bold text-gov-black mt-12 mb-4">Where the register is good, measured</h2>
 
       <p className="text-gray-700 mb-6">
-        A study that only reports faults is not a measurement, so we tested three guarantees
-        Registers of Scotland states in its own specification, across all 1,564,345 parcels.
-        It passes all three.
+        We also tested three guarantees Registers of Scotland states in its own
+        specification, across all 1,564,345 parcels. It passes all three.
       </p>
 
       <div className="overflow-x-auto mb-6">

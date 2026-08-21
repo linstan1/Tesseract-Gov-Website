@@ -86,15 +86,15 @@ export const LandCarbonMeasurement: React.FC = () => (
       </p>
 
       <p className="text-gray-700 mb-6">
-        The data to answer it is published and free. A national cadastre gives the parcels.
-        A national habitat map gives the bog. The calculation is an overlay, and any
-        competent GIS analyst would price it at an afternoon.
+        The data to answer it is published and free. A national cadastre gives the parcels,
+        a national habitat map gives the bog, and the calculation between them is an overlay
+        that any competent GIS analyst would price at an afternoon.
       </p>
 
       <p className="text-gray-700 mb-6">
-        We ran it, and three independent defects compound against the answer. None of them
-        is dramatic on its own. Each is separately fixable. They happen to land on the same
-        calculation.
+        We ran it. Three separate defects compound against the answer, and any one of them
+        could be fixed without much trouble. What makes them matter is that they all land on
+        the same calculation.
       </p>
 
       <h2 className="text-2xl font-bold text-gov-black mt-12 mb-4">First: the register publishes no areas</h2>
@@ -119,8 +119,8 @@ export const LandCarbonMeasurement: React.FC = () => (
 
       <p className="text-gray-700 mb-6">
         Overlapping and stacked polygons are a valid part of the Registers of Scotland data
-        model, and hole polygons are not removed before publication. So adding parcels up
-        double counts, and taking the geometric union does not.
+        model, and hole polygons stay in when the data is published. Adding parcels up
+        therefore counts some ground twice. Taking the geometric union counts it once.
       </p>
 
       <div className="overflow-x-auto mb-6">
@@ -138,8 +138,8 @@ export const LandCarbonMeasurement: React.FC = () => (
       </div>
 
       <p className="text-gray-700 mb-6">
-        The gap is not constant, so no correction factor exists: it runs from 1.33 per cent
-        in Nairn to 95.40 per cent in West Lothian. Of 270 connected parcel groups that reach
+        The gap runs from 1.33 per cent in Nairn to 95.40 per cent in West Lothian, so there
+        is no single correction factor to apply. Of 270 connected parcel groups that reach
         1,000 hectares by summation, 20 fall below it by union.
       </p>
 
@@ -159,10 +159,10 @@ export const LandCarbonMeasurement: React.FC = () => (
       </p>
 
       <p className="text-gray-700 mb-6">
-        For a holding-level overlay the consequence is specific rather than catastrophic:
-        unclassified ground inside a boundary is silently counted as a class instead of being
-        excluded, so both the denominator and every per-class share come out wrong, and
-        nothing warns you. It is a one-line fix at write time.
+        For a holding-level overlay this has one specific consequence. Unclassified ground
+        inside a boundary gets counted as a class instead of being left out, so the
+        denominator and every per-class share come out wrong, and nothing warns you. The fix
+        is one line at write time.
       </p>
 
       <h2 className="text-2xl font-bold text-gov-black mt-12 mb-4">What the habitat map does get right</h2>
@@ -190,17 +190,16 @@ export const LandCarbonMeasurement: React.FC = () => (
       </div>
 
       <p className="text-gray-700 mb-6">
-        That 1.32 per cent is 118,374 hectares, and it is worth being precise about what it
-        is and is not. There are only four distinct violating class pairs, and every one of
-        them is the same marine and coastal confusion: ground the Level 1 map calls marine
-        benthic and the Level 2 map calls coastal dunes, rock cliffs or shingle, or the
-        reverse. The intertidal zone is the hardest thing in a product of this kind to
-        classify, and a single coherent cause is a fixable issue rather than a quality
-        problem.
+        That 1.32 per cent is 118,374 hectares. Its shape matters more than its size. Only
+        four distinct violating class pairs exist, and every one of them is the same marine
+        and coastal confusion, where the Level 1 map calls ground marine benthic and the
+        Level 2 map calls it coastal dunes, rock cliffs or shingle, or the other way round.
+        The intertidal zone is the hardest thing in a product like this to classify, and one
+        coherent cause points at something fixable.
       </p>
 
       <p className="text-gray-700 mb-6">
-        <strong>For this question, the important result is a null one.</strong> The peat class{' '}
+        <strong>For this question the important result is a null.</strong> The peat class{' '}
         <code className="bg-gray-100 px-1 rounded">Q1</code> is involved in none of the
         violations. No pixel in either raster uses a code absent from its attribute table. No
         pixel is classified in one map but not the other. Away from the coast, the two maps
@@ -225,30 +224,28 @@ export const LandCarbonMeasurement: React.FC = () => (
       </div>
 
       <p className="text-gray-700 mb-6">
-        Roughly one hectare in seven of classified Scotland is raised or blanket bog. Class
-        Q4 is worth a footnote of its own: it occupies 84 pixels in the entire country, under
-        a single hectare, which is a documented class that has effectively no extent in the
-        product that documents it.
+        Roughly one hectare in seven of classified Scotland is raised or blanket bog. Q4
+        deserves a footnote of its own. It occupies 84 pixels in the whole country, under a
+        single hectare, so the map documents a class that barely exists in it.
       </p>
 
       <h2 className="text-2xl font-bold text-gov-black mt-12 mb-4">What this adds up to</h2>
 
       <p className="text-gray-700 mb-6">
-        None of these three defects is a scandal. The habitat map is good, and our own
-        hierarchy test mostly demonstrates that. But the Act now attaches a duty to an area
-        threshold and expects that duty to engage with carbon, and the public record cannot
-        currently support that calculation end to end: the areas are not published, the
-        geometry does not sum safely, and the habitat raster does not declare its own gaps.
-        An adviser who runs the obvious overlay will get a number, will get no warning, and
-        will not be able to say how wrong it is.
+        The habitat map is good, and our own hierarchy test mostly demonstrates that. But
+        the Act now attaches a duty to an area threshold and expects that duty to engage with
+        carbon, and the public record cannot support that calculation from end to end. The
+        areas are not published, the geometry does not sum safely, and the raster does not
+        declare its own gaps. An adviser who runs the obvious overlay gets a number with no
+        warning attached and no way to say how far off it is.
       </p>
 
       <p className="text-gray-700 mb-6">
         The defects we found in NatureScot&rsquo;s delivery, including the unencoded NoData
         value and a README that gives a Level 1 class code as <code className="bg-gray-100 px-1 rounded">O</code>{' '}
         where the shipped attribute table gives <code className="bg-gray-100 px-1 rounded">OW</code>,
-        are written up as reproducible reports in the repository and are being sent to the
-        publisher rather than simply published about.
+        are written up as reproducible reports in the repository, and we are sending them to
+        the publisher.
       </p>
 
       <h2 className="text-2xl font-bold text-gov-black mt-12 mb-4">Method and scope</h2>
