@@ -68,7 +68,7 @@ const FAQ_SCHEMA = {
       name: 'Why does this matter for AI crawlers rather than only for SEO?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Because the divergence runs in Google’s favour. A site publishing an escaped ampersand or an escaped apostrophe inside a JSON-LD string value is read correctly by Googlebot, which unescapes it, and incorrectly by every parser built to the specification, which does not. That includes Bing, non-Google AI crawlers, aggregators, comparison engines and the Web Data Commons corpus that much research is built on. The structured data is correct inside Google and wrong everywhere else, and nothing in Google’s guidance tells the affected publishers that.',
+        text: 'Because the divergence runs in Google’s favour. A site publishing an escaped ampersand or an escaped apostrophe inside a JSON-LD string value is read correctly by Googlebot, which unescapes it, and incorrectly by every parser built to the specification, which does not. That includes PyLD and jsonld.js, the two JSON-LD 1.1 reference processors, and extruct, which sits underneath much SEO and scraping tooling. Bing and the AI crawlers are not measured here, because neither Bing nor Yandex exposes a validator without a login, and we do not assert what we have not measured. The structured data is correct inside Google and wrong everywhere else, and nothing in Google’s guidance tells the affected publishers that.',
       },
     },
   ],
@@ -204,7 +204,7 @@ export const JsonLdEscapingConformance: React.FC = () => (
         The larger group is the reverse case, correct in Google and wrong everywhere else. It includes Samsung, Meta, NASA, the White House, Salesforce, Tencent, People, France Info and the Google blog itself, which publishes an escaped apostrophe in the phrase describing itself as Google&apos;s official blog. The sharpest single example is T-Online, whose sitelinks searchbox target URL uses an escaped ampersand as its query separator. Googlebot resolves it and the search works. Every conformant consumer receives a URL whose separator is a literal five-character entity, and for them the URL is simply broken.
       </p>
       <p className="text-gov-dark leading-relaxed">
-        That is the operational consequence, and it is not an SEO consequence. A site in this group has structured data that is correct in Google Search and incorrect in Bing, in non-Google AI crawlers, in aggregators and comparison engines, and in the Web Data Commons corpus that a great deal of published research is built on. As more consumers of schema.org appear that are not Google, the cost of being correct only in Google rises. Nothing in Google&apos;s guidance tells these publishers that they are in this position.
+        That is the operational consequence, and it is not an SEO consequence. A site in this group has structured data that is correct in Google Search and incorrect in every parser we measured that is not Googlebot, which includes PyLD and jsonld.js, the two JSON-LD 1.1 reference processors, and extruct, which sits underneath a great deal of SEO and scraping tooling. As more consumers of schema.org appear that are not Google, the cost of being correct only in Google rises. Nothing in Google&apos;s guidance tells these publishers that they are in this position.
       </p>
     </section>
 
@@ -231,6 +231,24 @@ export const JsonLdEscapingConformance: React.FC = () => (
       </p>
       <p className="text-gov-dark leading-relaxed">
         One structural observation worth recording. There is no public issue tracker for Googlebot&apos;s structured data parser. We checked Google Issue Tracker components, the schema.org repository and the Search Central documentation. The documented route for reporting a parsing defect is a help community thread. For a component that determines how a large fraction of the web&apos;s machine-readable data is interpreted, that is a thin channel, and we have filed the specification side of this finding as an issue against the JSON-LD syntax specification, where section 7.2 lives, so that at least part of it sits somewhere public and citable.
+      </p>
+    </section>
+
+    <section className="space-y-4">
+      <h2 className="text-2xl font-bold text-gov-dark font-serif">Correction, and a second pass, 22 August 2026</h2>
+      <div className="rounded-lg border border-amber-300 bg-amber-50/60 p-6">
+        <p className="text-gov-dark leading-relaxed">
+          <strong>A claim in the first version of this page has been withdrawn.</strong> It said that the affected sites read incorrectly in Bing and in non-Google AI crawlers. We had measured four parsers. Bing was not one of them and neither was any AI crawler, so that was an inference presented as a measurement. Neither Bing nor Yandex exposes a validator without a login, so both remain untested and we no longer claim anything about them. The correction is stated here rather than applied quietly, because a page arguing that someone else should disclose a problem cannot hide its own.
+        </p>
+      </div>
+      <p className="text-gov-dark leading-relaxed">
+        In place of the withdrawn claim the measured set was widened to the two JSON-LD 1.1 reference processors, PyLD and jsonld.js. Both preserve every character reference through expansion, which is a stronger result than the HTML parsers alone, because these are the implementations the specification is written against.
+      </p>
+      <p className="text-gov-dark leading-relaxed">
+        A second hypothesis died in the same pass, and it is the more interesting failure. We expected a small number of platforms to emit most of the defective markup, so that a few upstream bug reports would fix the bulk of it. Detecting platform signatures across the 199 diverging domains appeared to confirm it, putting WordPress on 58 per cent, Yoast on 30 per cent and Rank Math on 18 per cent. That table is misleading and we very nearly acted on it. Detecting a plugin somewhere on a page is not evidence that the plugin emitted the defective block. Both Yoast and Rank Math wrap their output in distinctive HTML comments, so each block can be attributed by position. Doing that gives Yoast 8.4 per cent, Rank Math 8.0 per cent, and 83.5 per cent attributable to neither. Page-level detection overstates vendor responsibility by about three and a half times, and filing bugs on the strength of it would have been wrong four times in five, against two open source projects that had done nothing wrong. The owner of most of this defect is the site, not a vendor.
+      </p>
+      <p className="text-gov-dark leading-relaxed">
+        Finally, the homepage figure was described above as a lower bound, and it is, by roughly a factor of two. A seeded random sample of 400 of the JSON-LD publishing domains, taking up to three deeper pages each, finds that 81.8 per cent of deeper pages publish JSON-LD against 45.6 per cent of homepages, and that divergence across those same 400 domains rises from 7.75 per cent on the homepage to 15.75 per cent once you look past it. Forty-nine domains diverge only on a deeper page and are invisible to a homepage census, among them Asus, Anker, Clarivate and 20minutos. The corrected headline is that roughly one domain in six publishing JSON-LD, rather than one in fifteen, carries a value that Googlebot and every conformant parser read differently. The ratio against the population Google&apos;s change addressed narrows from about twenty to one to about eleven to one, because the double-escaped population grows too. It remains an order of magnitude.
       </p>
     </section>
 
