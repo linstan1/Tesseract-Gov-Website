@@ -290,7 +290,7 @@ export const MuseumVisitsObservatory: React.FC = () => {
           { n: '100%', l: 'reproducible from the official data set' },
         ].map(t => (
           <div key={t.l} className="border border-gov-border/50 rounded-xl p-5 bg-white text-center">
-            <div className="text-2xl font-bold text-gov-dark tabular-nums">{t.n}</div>
+            <div className="text-2xl font-bold text-gov-dark tabular-nums font-mono">{t.n}</div>
             <div className="text-xs text-gov-secondary mt-1 leading-snug">{t.l}</div>
           </div>
         ))}

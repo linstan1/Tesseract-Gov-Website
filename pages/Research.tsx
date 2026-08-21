@@ -328,7 +328,7 @@ export const Research: React.FC = () => {
            </li>
         </PublicationGroup>
 
-        <PublicationGroup title="Register assurance" count={6}>
+        <PublicationGroup title="Register assurance" count={7}>
            <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
              <Link to="/research/italy-register-ontology"><h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark hover:underline transition-colors">An Open Ontology for Italian Public Registers, Tested Against IPA, ANAC, OpenCUP and ISTAT</h3></Link>
              <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Open ontology, five-register measurement and upstream SHACL contribution, 2026</p>
@@ -336,6 +336,15 @@ export const Research: React.FC = () => {
              <div className="mt-3 flex flex-wrap gap-3 items-center">
                <Link to="/research/italy-register-ontology" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">Read the study</Link>
                <a href="https://github.com/fabio-rovai/italy-register-ontology" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">repository on GitHub<span className="sr-only"> (opens in new tab)</span></a>
+             </div>
+           </li>
+           <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
+             <Link to="/research/land-register-ontology"><h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark hover:underline transition-colors">An Open Ontology for Land Register Integrity, Tested Against All 33 Scottish Registration Counties</h3></Link>
+             <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Open ontology, complete national cadastral census, 2026</p>
+             <p className="text-base text-gov-dark/90 leading-relaxed">An open OWL 2, SKOS and SHACL ontology and reproducible audit of the Registers of Scotland INSPIRE Cadastral Parcels dataset, built from a complete keyless download of all 33 registration counties, 1,564,345 parcels, retrieved on 21 August 2026 under the Open Government Licence. The Land Reform (Scotland) Act 2025 attaches duties to landholdings of 1,000 hectares or more, and the register publishes no areas: the INSPIRE areavalue attribute, defined as the quantification of the parcel&apos;s area, carries the literal string UNPOPULATED on every one of the 1,564,345 parcels, as do referencepoint, beginlifespanversion, endlifespanversion, validfrom and validto, six mandated attributes with one distinct value between them. Because the area must therefore be computed from the published geometry, and because overlapping and stacked polygons are a valid part of the Registers of Scotland data model with hole polygons left in, the answer depends on the method: summing parcels gives 6,581,717 hectares and the geometric union of the same polygons gives 4,714,673, a difference of 1,867,044 hectares or 28.37 per cent, ranging from 1.33 per cent in Nairn to 95.40 per cent in West Lothian, so no single correction factor exists. Every parcel passes the identifier rules Registers of Scotland states in its own specification, zero violations and zero duplicates, a null result stated as a finding. Every headline computed two independent ways, reproducible from public data.</p>
+             <div className="mt-3 flex flex-wrap gap-3 items-center">
+               <Link to="/research/land-register-ontology" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">Read the study</Link>
+               <a href="https://github.com/fabio-rovai/scotland-land-register-ontology" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">repository on GitHub<span className="sr-only"> (opens in new tab)</span></a>
              </div>
            </li>
            <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">

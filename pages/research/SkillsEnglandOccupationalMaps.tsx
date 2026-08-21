@@ -165,7 +165,7 @@ const StatTile: React.FC<{ icon: React.ReactNode; value: string; label: string }
   <div className="flex items-center gap-4 bg-gov-bg-alt border border-gov-border/60 rounded-xl p-5 shadow-subtle">
     <div className="text-gov-blue">{icon}</div>
     <div>
-      <div className="text-2xl font-extrabold text-gov-dark tabular-nums">{value}</div>
+      <div className="text-2xl font-extrabold text-gov-dark tabular-nums font-mono">{value}</div>
       <div className="text-sm text-gov-secondary">{label}</div>
     </div>
   </div>

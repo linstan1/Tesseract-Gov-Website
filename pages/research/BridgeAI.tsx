@@ -85,7 +85,7 @@ export const BridgeAI: React.FC = () => {
         {METRICS.map((m) => (
           <div key={m.label} className="bg-gov-bg border border-gov-border/50 rounded-xl p-5">
             <p className="text-xs font-semibold uppercase tracking-wider text-gov-blue mb-1">{m.label}</p>
-            <p className="text-2xl font-extrabold text-gov-dark">{m.value}</p>
+            <p className="text-2xl font-extrabold text-gov-dark font-mono tabular-nums">{m.value}</p>
             <p className="text-xs text-gov-secondary mt-1">{m.context}</p>
           </div>
         ))}

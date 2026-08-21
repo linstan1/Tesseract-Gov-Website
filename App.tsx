@@ -88,6 +88,7 @@ const BiosurveillanceRegisterOntology = lazy(() => import('./pages/research/Bios
 const SurveillanceReportingIdentifiers = lazy(() => import('./pages/research/SurveillanceReportingIdentifiers').then(m => ({ default: m.SurveillanceReportingIdentifiers })));
 const SpaceObjectRegisterOntology = lazy(() => import('./pages/research/SpaceObjectRegisterOntology').then(m => ({ default: m.SpaceObjectRegisterOntology })));
 const UkRegisterOntology = lazy(() => import('./pages/research/UkRegisterOntology').then(m => ({ default: m.UkRegisterOntology })));
+const LandRegisterOntology = lazy(() => import('./pages/research/LandRegisterOntology').then(m => ({ default: m.LandRegisterOntology })));
 const ItalyRegisterOntology = lazy(() => import('./pages/research/ItalyRegisterOntology').then(m => ({ default: m.ItalyRegisterOntology })));
 const OneRecordKorea = lazy(() => import('./pages/research/OneRecordKorea').then(m => ({ default: m.OneRecordKorea })));
 const OneRecordTaiwan = lazy(() => import('./pages/research/OneRecordTaiwan').then(m => ({ default: m.OneRecordTaiwan })));
@@ -280,6 +281,10 @@ const PAGE_META: Record<string, { title: string; description: string }> = {
   '/research/space-object-register-ontology': {
     title: 'An open ontology for space object catalogues, tested against CelesTrak and the General Catalog of Artificial Space Objects | Tesseract Academy for the Public Sector',
     description: "An open OWL 2, SKOS and SHACL ontology and reproducible audit of the boundary between the two open catalogues of objects in Earth orbit, built from keyless downloads of CelesTrak's SATCAT (70,292 objects) and Jonathan McDowell's General Catalog of Artificial Space Objects (69,391 numbered objects across four catalogues), both retrieved on 18 August 2026. GCAT marks 22 entries as corresponding to no real object, giving reasons such as radar error and cataloging error, and CelesTrak carries all 22, one of them with no decay date and therefore as a tracked object still in orbit. 1,094 objects GCAT records as no longer tracked carry no data status code in CelesTrak, which maintains that field and applies it to 1,292 others. 20,198 of 34,814 on-orbit objects, 58.0 per cent, have no published radar cross section. CelesTrak's owner code collapses the Soviet Union and the Russian Federation into one value where GCAT separates 16,142 objects from 9,016. Every headline computed two independent ways.",
+  },
+  '/research/land-register-ontology': {
+    title: 'An open ontology for land register integrity, tested against all 33 Scottish registration counties | Tesseract Academy for the Public Sector',
+    description: "An open OWL 2, SKOS and SHACL ontology and reproducible audit of the Registers of Scotland INSPIRE Cadastral Parcels dataset, built from a complete keyless download of all 33 registration counties, 1,564,345 parcels, retrieved on 21 August 2026 under the Open Government Licence. The Land Reform (Scotland) Act 2025 attaches duties to landholdings of 1,000 hectares or more, and the register publishes no areas: the INSPIRE areavalue attribute carries the literal string UNPOPULATED on all 1,564,345 parcels, as do referencepoint, beginlifespanversion, endlifespanversion, validfrom and validto. Area computed from the published geometry depends on the method chosen: summing parcels gives 6,581,717 hectares, the geometric union of the same polygons gives 4,714,673, a difference of 1,867,044 hectares or 28.37 per cent, ranging from 1.33 per cent in Nairn to 95.40 per cent in West Lothian. Zero identifier format violations across all 1,564,345 parcels, a null result reported as one. Every headline computed two independent ways.",
   },
   '/research/uk-register-ontology': {
     title: 'An open ontology for UK public registers, tested against Companies House, the Charity Commission and the Global LEI System | Tesseract Academy for the Public Sector',
@@ -629,6 +634,7 @@ const App: React.FC = () => {
               <Route path="/research/surveillance-reporting-identifiers" element={<SurveillanceReportingIdentifiers />} />
               <Route path="/research/space-object-register-ontology" element={<SpaceObjectRegisterOntology />} />
               <Route path="/research/uk-register-ontology" element={<UkRegisterOntology />} />
+              <Route path="/research/land-register-ontology" element={<LandRegisterOntology />} />
               <Route path="/research/one-record-domain-axioms-korea" element={<OneRecordKorea />} />
               <Route path="/research/one-record-domain-axioms-taiwan" element={<OneRecordTaiwan />} />
               <Route path="/research/machinery-regulation-readiness-korea" element={<MachineryKorea />} />

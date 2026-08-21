@@ -71,7 +71,7 @@ export const SkillsEnglandEscoCrosswalk: React.FC = () => {
             <div key={b.band} className={`rounded-xl p-5 border ${b.cls}`}>
               <div className="flex items-baseline justify-between">
                 <code className="text-sm font-bold">{b.band}</code>
-                <span className="text-2xl font-bold tabular-nums">{b.n}</span>
+                <span className="text-2xl font-bold tabular-nums font-mono">{b.n}</span>
               </div>
               <p className="text-xs mt-1 opacity-90">{b.def}</p>
             </div>

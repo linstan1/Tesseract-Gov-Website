@@ -1,9 +1,19 @@
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+/* Self-hosted, subsetted, SIL OFL 1.1. Replaces the Google Fonts request that
+   previously sent every visitor's IP to a third party on page load. */
+@font-face{font-family:"Libertinus";font-style:normal;font-weight:400;font-display:swap;src:url("/fonts/libertinus-400.woff2") format("woff2");}
+@font-face{font-family:"Libertinus";font-style:italic;font-weight:400;font-display:swap;src:url("/fonts/libertinus-400i.woff2") format("woff2");}
+@font-face{font-family:"Libertinus";font-style:normal;font-weight:600;font-display:swap;src:url("/fonts/libertinus-600.woff2") format("woff2");}
+@font-face{font-family:"Libertinus";font-style:normal;font-weight:700 900;font-display:swap;src:url("/fonts/libertinus-700.woff2") format("woff2");}
+@font-face{font-family:"JetBrains Mono";font-style:normal;font-weight:100 800;font-display:swap;src:url("/fonts/jetbrains-mono.woff2") format("woff2");}
 
 @theme {
-  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
-  --font-serif: "Inter", system-ui, -apple-system, sans-serif;
+  /* Body and headings both set in Libertinus. The old tokens both pointed at
+     Inter, so font-serif was never actually a serif. */
+  --font-sans: "Libertinus", "Iowan Old Style", Charter, Georgia, serif;
+  --font-serif: "Libertinus", "Iowan Old Style", Charter, Georgia, serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
 
   /* Darkened 18 Aug 2026 so text and buttons clear WCAG 2.1 AA on light
      surfaces: 5.26:1 on white, 5.02:1 on gov-bg. Use gov-blue-light on dark

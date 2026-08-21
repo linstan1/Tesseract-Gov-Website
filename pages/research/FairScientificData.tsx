@@ -59,7 +59,7 @@ export const FairScientificData: React.FC = () => {
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
         {STATS.map((s) => (
           <div key={s.label} className="bg-gov-bg border border-gov-border/50 rounded-xl p-6">
-            <p className="text-3xl font-extrabold text-gov-dark">{s.value}</p>
+            <p className="text-3xl font-extrabold text-gov-dark font-mono tabular-nums">{s.value}</p>
             <p className="text-xs font-semibold uppercase tracking-wider text-gov-blue mt-1">{s.label}</p>
           </div>
         ))}
