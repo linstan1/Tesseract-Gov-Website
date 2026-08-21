@@ -89,6 +89,7 @@ import { Insights } from './pages/Insights';
 import { FineTuningLlmGovernmentDataStandard } from './pages/research/FineTuningLlmGovernmentDataStandard';
 import { MachineValidatedOpenOntologies } from './pages/research/MachineValidatedOpenOntologies';
 import { BankRegisterOntology } from './pages/research/BankRegisterOntology';
+import { JsonLdEscapingConformance } from './pages/research/JsonLdEscapingConformance';
 import { VerifyingExtractionPipelineRdf } from './pages/research/VerifyingExtractionPipelineRdf';
 import { SecuritiesRegisterOntology } from './pages/research/SecuritiesRegisterOntology';
 import { BiosurveillanceRegisterOntology } from './pages/research/BiosurveillanceRegisterOntology';
@@ -196,6 +197,7 @@ const SSRApp: React.FC = () => (
         <Route path="/research/fine-tuning-llm-government-data-standard" element={<FineTuningLlmGovernmentDataStandard />} />
         <Route path="/research/machine-validated-open-ontologies" element={<MachineValidatedOpenOntologies />} />
         <Route path="/research/bank-register-ontology" element={<BankRegisterOntology />} />
+        <Route path="/research/jsonld-escaping-conformance" element={<JsonLdEscapingConformance />} />
         <Route path="/research/verifying-extraction-pipeline-rdf" element={<VerifyingExtractionPipelineRdf />} />
         <Route path="/research/securities-register-ontology" element={<SecuritiesRegisterOntology />} />
         <Route path="/research/biosurveillance-register-ontology" element={<BiosurveillanceRegisterOntology />} />

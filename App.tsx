@@ -82,6 +82,7 @@ const Insights = lazy(() => import('./pages/Insights').then(m => ({ default: m.I
 const FineTuningLlmGovernmentDataStandard = lazy(() => import('./pages/research/FineTuningLlmGovernmentDataStandard').then(m => ({ default: m.FineTuningLlmGovernmentDataStandard })));
 const MachineValidatedOpenOntologies = lazy(() => import('./pages/research/MachineValidatedOpenOntologies').then(m => ({ default: m.MachineValidatedOpenOntologies })));
 const BankRegisterOntology = lazy(() => import('./pages/research/BankRegisterOntology').then(m => ({ default: m.BankRegisterOntology })));
+const JsonLdEscapingConformance = lazy(() => import('./pages/research/JsonLdEscapingConformance').then(m => ({ default: m.JsonLdEscapingConformance })));
 const VerifyingExtractionPipelineRdf = lazy(() => import('./pages/research/VerifyingExtractionPipelineRdf').then(m => ({ default: m.VerifyingExtractionPipelineRdf })));
 const SecuritiesRegisterOntology = lazy(() => import('./pages/research/SecuritiesRegisterOntology').then(m => ({ default: m.SecuritiesRegisterOntology })));
 const BiosurveillanceRegisterOntology = lazy(() => import('./pages/research/BiosurveillanceRegisterOntology').then(m => ({ default: m.BiosurveillanceRegisterOntology })));
@@ -242,6 +243,10 @@ const PAGE_META: Record<string, { title: string; description: string }> = {
   '/research/verifying-extraction-pipeline-rdf': {
     title: 'Checking the knowledge graph your pipeline just built | Tesseract Academy for the Public Sector',
     description: "A document-to-graph pipeline that emits RDF is making a formal claim, and it cannot check its own claim. This study runs that check against Semantica 0.6.5 and 0.6.6, an MIT-licensed Python pipeline with about 9,300 stars, by reading every output back through two independent RDF engines. Seventeen defects were found and reported, four fixes are merged upstream, six pull requests are open as of 21 August 2026. The failures share a shape: the export succeeds, a lenient reader accepts it, and the graph is wrong or largely absent anyway. A two-entity JSON-LD export parsed as 2 triples through a plain graph reader and 21 quads through a dataset reader, with no error on either path. pySHACL reported conformance on data that violated every constraint, because the generated shapes targeted a namespace the generated data never used. Timestamps written without a UTC offset made a timezone-qualified SPARQL filter indeterminate, so Oxigraph silently dropped every affected row from the result. The PROV-O export, the one module serialised through a real RDF library rather than by hand, had nothing wrong with it.",
+  },
+  '/research/jsonld-escaping-conformance': {
+    title: 'How Many Passes of HTML Unescaping Should a JSON-LD Parser Do? A Census of the Tranco Top 10,000 | Tesseract Academy',
+    description: 'In August 2026 Google changed JSON-LD extraction to a single pass of HTML unescaping, saying it brought the parser up to standards. The HTML Standard and JSON-LD 1.1 both put the conformant number at zero. A census of the Tranco top 10,000 finds 199 of 2,969 domains publishing JSON-LD that Googlebot and every conformant parser read differently, against 10 affected by the change Google announced. Dell and Investopedia are visibly broken inside Google today, and two Google properties are in the diverging set.',
   },
   '/research/bank-register-ontology': {
     title: 'An open ontology for US bank registers, tested against the FDIC, the Federal Reserve, and the Global LEI System | Tesseract Academy for the Public Sector',
@@ -633,6 +638,7 @@ const App: React.FC = () => {
               <Route path="/research/fine-tuning-llm-government-data-standard" element={<FineTuningLlmGovernmentDataStandard />} />
               <Route path="/research/machine-validated-open-ontologies" element={<MachineValidatedOpenOntologies />} />
               <Route path="/research/bank-register-ontology" element={<BankRegisterOntology />} />
+              <Route path="/research/jsonld-escaping-conformance" element={<JsonLdEscapingConformance />} />
               <Route path="/research/verifying-extraction-pipeline-rdf" element={<VerifyingExtractionPipelineRdf />} />
               <Route path="/research/securities-register-ontology" element={<SecuritiesRegisterOntology />} />
               <Route path="/research/biosurveillance-register-ontology" element={<BiosurveillanceRegisterOntology />} />

@@ -73,7 +73,16 @@ export const Research: React.FC = () => {
         </div>
         <div className="space-y-4">
 
-        <PublicationGroup title="Safe & verifiable AI" count={14}>
+        <PublicationGroup title="Safe & verifiable AI" count={15}>
+           <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
+             <Link to="/research/jsonld-escaping-conformance"><h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark hover:underline transition-colors">How Many Passes of HTML Unescaping Should a JSON-LD Parser Do? A Census of the Tranco Top 10,000</h3></Link>
+             <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Open census, measured against Google&apos;s own parser, 2026</p>
+             <p className="text-base text-gov-dark/90 leading-relaxed">In August 2026 Google changed its JSON-LD extraction to apply a single pass of HTML unescaping rather than two, saying the change brought its parser up to JSON and other standards. Two specifications put the conformant number at zero: the HTML Standard never decodes character references inside a script element, and JSON-LD 1.1 states that escaped content remains escaped after processing, with a worked example showing exactly that. One pass is as unspecified as two. Rather than trust the announcement we measured Googlebot against Google&apos;s own validator, which confirmed exactly one pass, applied to string values after JSON structure is parsed, so character references cannot inject structure. We then censused the Tranco top 10,000 homepages. Of 2,969 domains publishing JSON-LD, 10 are affected by the change Google announced and 199 contain a value that Googlebot and every conformant parser read differently, a ratio of roughly twenty to one that held steady as the sample grew. Dell and Investopedia are visibly broken inside Google today, confirmed against their live markup, and two Google properties sit in the diverging set. The operational point is not search ranking. It is that seven per cent of these publishers have structured data that is correct in Google and wrong in Bing, in non-Google AI crawlers, and in the Web Data Commons corpus that much published research is built on.</p>
+             <div className="mt-3 flex flex-wrap gap-3 items-center">
+               <Link to="/research/jsonld-escaping-conformance" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">Read the study</Link>
+               <a href="https://github.com/fabio-rovai/jsonld-escaping-conformance" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">repository on GitHub<span className="sr-only"> (opens in new tab)</span></a>
+             </div>
+           </li>
            <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
              <Link to="/research/ontology-correctness-benchmark"><h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark hover:underline transition-colors">The Open-World Hole: Why SHACL Cannot Catch a Hallucinated Ontology Term</h3></Link>
              <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Open benchmark, 2026</p>
