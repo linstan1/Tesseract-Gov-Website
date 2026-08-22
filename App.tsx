@@ -88,6 +88,7 @@ const SecuritiesRegisterOntology = lazy(() => import('./pages/research/Securitie
 const BiosurveillanceRegisterOntology = lazy(() => import('./pages/research/BiosurveillanceRegisterOntology').then(m => ({ default: m.BiosurveillanceRegisterOntology })));
 const SurveillanceReportingIdentifiers = lazy(() => import('./pages/research/SurveillanceReportingIdentifiers').then(m => ({ default: m.SurveillanceReportingIdentifiers })));
 const SpaceObjectRegisterOntology = lazy(() => import('./pages/research/SpaceObjectRegisterOntology').then(m => ({ default: m.SpaceObjectRegisterOntology })));
+const SpectralLibraryOntology = lazy(() => import('./pages/research/SpectralLibraryOntology').then(m => ({ default: m.SpectralLibraryOntology })));
 const UkRegisterOntology = lazy(() => import('./pages/research/UkRegisterOntology').then(m => ({ default: m.UkRegisterOntology })));
 const LandRegisterOntology = lazy(() => import('./pages/research/LandRegisterOntology').then(m => ({ default: m.LandRegisterOntology })));
 const LandCarbonMeasurement = lazy(() => import('./pages/research/LandCarbonMeasurement').then(m => ({ default: m.LandCarbonMeasurement })));
@@ -283,6 +284,10 @@ const PAGE_META: Record<string, { title: string; description: string }> = {
   '/research/italy-register-ontology': {
     title: 'An open ontology for Italian public registers, tested against IPA, ANAC, OpenCUP and ISTAT | Tesseract Academy for the Public Sector',
     description: "An open OWL 2, SKOS and SHACL ontology and reproducible audit of Italy's public register fabric, built from hands-on downloads of the IPA register of 23,735 public administrations, the ANAC contracts register, the OpenCUP register of 11.9 million public investment projects, the ISTAT register of administrative units and the national semantic vocabulary, taken on 17 August 2026. The national cities vocabulary and the ISTAT CSV export both predate the 2026 Sardinian territorial reform: 380 dead municipality codes are published as current and 378 current codes are missing, while the operational IPA register already uses the new codes with zero mismatches across all 23,735 entities. All 23,735 IPA fiscal codes pass their checksum, a clean null result stated as a finding. In a two-month sample of 2025 contracts, 140 well-formed CUPs referenced by 255 contracts are absent from the published OpenCUP open-data exports, and 45 values in the CUP field fail the CUP grammar, including ESENTE and ATT000NON000CUP. The findings are delivered upstream as a contribute-first SHACL package answering the vocabulary maintainers' own request. Every headline computed two independent ways, reproducible from public data.",
+  },
+  '/research/spectral-library-ontology': {
+    title: 'The register that publishes its own contradiction: an open ontology for mass spectrometry reference libraries | Tesseract Academy for the Public Sector',
+    description: "An open OWL 2, SKOS and SHACL ontology and reproducible audit of the public mass spectrometry reference libraries, built from keyless downloads of 2,091,754 GNPS2 library spectra across 98 libraries, 20,052 MassIVE datasets and 1,065,831 ReDU sample rows, all retrieved on 21 August 2026. GNPS derives an InChIKey from the depositor's SMILES and a second from the depositor's InChI and publishes both, which makes its own internal disagreement countable: on 1,485,480 records carrying both, they diverge 14,012 times, 13,112 at stereochemistry and 662 at connectivity. Independent recomputation with RDKit cuts the connectivity figure to 229 and reclassifies the other 418 as failures in the register's own derivation. The corpus rate of 0.94 per cent hides a range from 1.41 per cent in MONA to 59.44 per cent in BILELIB19. 164,137 InChI strings lack the mandatory prefix and do not parse, 6,710 CAS numbers fail their own check digit, and not one of the 2,091,754 records carries a valid SPLASH. 145 of the 4,418 ProteomeXchange accessions MassIVE publishes resolve nowhere. ReDU, by contrast, is 100.00 per cent conformant on 977,015 taxonomy values. Every headline computed three independent ways.",
   },
   '/research/space-object-register-ontology': {
     title: 'An open ontology for space object catalogues, tested against CelesTrak and the General Catalog of Artificial Space Objects | Tesseract Academy for the Public Sector',
@@ -644,6 +649,7 @@ const App: React.FC = () => {
               <Route path="/research/biosurveillance-register-ontology" element={<BiosurveillanceRegisterOntology />} />
               <Route path="/research/surveillance-reporting-identifiers" element={<SurveillanceReportingIdentifiers />} />
               <Route path="/research/space-object-register-ontology" element={<SpaceObjectRegisterOntology />} />
+              <Route path="/research/spectral-library-ontology" element={<SpectralLibraryOntology />} />
               <Route path="/research/uk-register-ontology" element={<UkRegisterOntology />} />
               <Route path="/research/land-register-ontology" element={<LandRegisterOntology />} />
               <Route path="/research/land-carbon-measurement" element={<LandCarbonMeasurement />} />

@@ -95,6 +95,7 @@ import { SecuritiesRegisterOntology } from './pages/research/SecuritiesRegisterO
 import { BiosurveillanceRegisterOntology } from './pages/research/BiosurveillanceRegisterOntology';
 import { SurveillanceReportingIdentifiers } from './pages/research/SurveillanceReportingIdentifiers';
 import { SpaceObjectRegisterOntology } from './pages/research/SpaceObjectRegisterOntology';
+import { SpectralLibraryOntology } from './pages/research/SpectralLibraryOntology';
 import { UkRegisterOntology } from './pages/research/UkRegisterOntology';
 import { LandRegisterOntology } from './pages/research/LandRegisterOntology';
 import { LandCarbonMeasurement } from './pages/research/LandCarbonMeasurement';
@@ -203,6 +204,7 @@ const SSRApp: React.FC = () => (
         <Route path="/research/biosurveillance-register-ontology" element={<BiosurveillanceRegisterOntology />} />
         <Route path="/research/surveillance-reporting-identifiers" element={<SurveillanceReportingIdentifiers />} />
         <Route path="/research/space-object-register-ontology" element={<SpaceObjectRegisterOntology />} />
+        <Route path="/research/spectral-library-ontology" element={<SpectralLibraryOntology />} />
         <Route path="/research/uk-register-ontology" element={<UkRegisterOntology />} />
         <Route path="/research/land-register-ontology" element={<LandRegisterOntology />} />
         <Route path="/research/land-carbon-measurement" element={<LandCarbonMeasurement />} />
