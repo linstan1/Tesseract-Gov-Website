@@ -82,6 +82,7 @@ const Insights = lazy(() => import('./pages/Insights').then(m => ({ default: m.I
 const FineTuningLlmGovernmentDataStandard = lazy(() => import('./pages/research/FineTuningLlmGovernmentDataStandard').then(m => ({ default: m.FineTuningLlmGovernmentDataStandard })));
 const MachineValidatedOpenOntologies = lazy(() => import('./pages/research/MachineValidatedOpenOntologies').then(m => ({ default: m.MachineValidatedOpenOntologies })));
 const BankRegisterOntology = lazy(() => import('./pages/research/BankRegisterOntology').then(m => ({ default: m.BankRegisterOntology })));
+const ChainControlOntology = lazy(() => import('./pages/research/ChainControlOntology').then(m => ({ default: m.ChainControlOntology })));
 const JsonLdEscapingConformance = lazy(() => import('./pages/research/JsonLdEscapingConformance').then(m => ({ default: m.JsonLdEscapingConformance })));
 const VerifyingExtractionPipelineRdf = lazy(() => import('./pages/research/VerifyingExtractionPipelineRdf').then(m => ({ default: m.VerifyingExtractionPipelineRdf })));
 const SecuritiesRegisterOntology = lazy(() => import('./pages/research/SecuritiesRegisterOntology').then(m => ({ default: m.SecuritiesRegisterOntology })));
@@ -254,6 +255,10 @@ const PAGE_META: Record<string, { title: string; description: string }> = {
   '/research/bank-register-ontology': {
     title: 'An open ontology for US bank registers, tested against the FDIC, the Federal Reserve, and the Global LEI System | Tesseract Academy for the Public Sector',
     description: 'An open OWL 2, SKOS and SHACL ontology for the entity and regulatory-reporting fabric of US banking, measured against the FDIC BankFind register, the Federal Reserve MDRM dictionary, and the complete GLEIF golden copy of 3,403,760 LEI records. The measurement finds every one of the 2,252 LEI values in the FDIC register truncated to 16 of the 20 characters ISO 17442 requires, discarding both check digits. Sixteen characters puts 6.37 per cent of the global LEI population into a collision, nine FDIC values are ambiguous across up to six unrelated companies, and two resolve to the wrong legal entity, including Associated Bank carrying its parent holding company’s identifier. The MDRM dictionary shows the mirror-image defect: one definition per item code across forms with different consolidation bases, and 58 per cent of item codes with no definition at all. The artefact comprises 1,123,634 triples, reproducible from public data.',
+  },
+  '/research/chain-control-ontology': {
+    title: 'USDC Has a Different Upgrade Key on Every Chain, and Its Own owner() Names None of Them | Tesseract Academy for the Public Sector',
+    description: 'An open OWL 2, SKOS and SHACL ontology for on-chain control, measured across 6,316 contracts on seven EVM chains plus Solana. Of 656 upgradeable contracts with a resolvable upgrade authority, 390 report a different account through owner() than the one that can replace their code, and for 556 the proxy admin slot is not the real controller. Walking every path to its end, 132 resolve to a single private key and 335 to a multisig, eight of which have a threshold of one.',
   },
   '/research/surveillance-reporting-identifiers': {
     title: 'An open census of UK operational surveillance reporting, and what its identifiers actually denote | Tesseract Academy for the Public Sector',
@@ -653,6 +658,7 @@ const App: React.FC = () => {
               <Route path="/research/fine-tuning-llm-government-data-standard" element={<FineTuningLlmGovernmentDataStandard />} />
               <Route path="/research/machine-validated-open-ontologies" element={<MachineValidatedOpenOntologies />} />
               <Route path="/research/bank-register-ontology" element={<BankRegisterOntology />} />
+              <Route path="/research/chain-control-ontology" element={<ChainControlOntology />} />
               <Route path="/research/jsonld-escaping-conformance" element={<JsonLdEscapingConformance />} />
               <Route path="/research/verifying-extraction-pipeline-rdf" element={<VerifyingExtractionPipelineRdf />} />
               <Route path="/research/securities-register-ontology" element={<SecuritiesRegisterOntology />} />

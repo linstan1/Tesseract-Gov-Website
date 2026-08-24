@@ -337,7 +337,16 @@ export const Research: React.FC = () => {
            </li>
         </PublicationGroup>
 
-        <PublicationGroup title="Register assurance" count={11}>
+        <PublicationGroup title="Register assurance" count={12}>
+          <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
+            <Link to="/research/chain-control-ontology"><h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark hover:underline transition-colors">USDC Has a Different Upgrade Key on Every Chain, and Its Own owner() Names None of Them</h3></Link>
+            <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Open ontology, cross-chain control census, 2026</p>
+            <p className="text-base text-gov-dark/90 leading-relaxed">An open OWL 2, SKOS and SHACL ontology for on-chain control, in which control is never a property of a contract but a dated assertion carrying an explicit evidence class, measured across 6,316 contracts on seven EVM chains plus a Solana leg. Of the 656 upgradeable contracts whose upgrade authority resolves, 390 return a different account from their own owner() function than the account that can replace their code, because on a transparent proxy that call is delegated to the implementation. For 556 of the 656 the proxy admin slot is not the controller either, since the path continues past it: only 100 resolve in one hop, 536 need two, 18 need three and 2 need four. Walking every path to its terminal node gives 335 multisigs, 132 single private keys, 109 timelocks and 7 contracts that renounced control, and eight of those multisigs have a threshold of one, which puts effective single-signature control at 140 of 656. Thirty-seven contracts are upgradeable through storage slots outside EIP-1967 and are reported as immutable by tooling that checks only that slot. Native USDC carries six different bare-key upgrade authorities across six EVM chains with no signer reuse, while the same issuer runs two separate 2-of-4 on-chain multisigs with disjoint signers for mint and freeze on Solana. The vocabulary marks where chain state stops answering, and a SHACL rule refuses any link from an account to a legal entity that is not backed by an off-chain attestation. Every headline computed twice, with a build report listing four defects found in our own code.</p>
+            <div className="mt-3 flex flex-wrap gap-3 items-center">
+              <Link to="/research/chain-control-ontology" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">Read the study</Link>
+              <a href="https://github.com/fabio-rovai/chain-control-ontology" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">repository on GitHub<span className="sr-only"> (opens in new tab)</span></a>
+            </div>
+          </li>
           <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
             <Link to="/research/spectral-library-ontology"><h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark hover:underline transition-colors">The Register That Publishes Its Own Contradiction: An Open Ontology for Mass Spectrometry Reference Libraries</h3></Link>
             <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Open ontology, three-register measurement, 2026</p>
