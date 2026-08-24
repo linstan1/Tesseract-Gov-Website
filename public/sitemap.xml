@@ -320,6 +320,18 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://gov.tesseract.academy/research/open-data-catalog-assurance</loc>
+    <lastmod>2026-08-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gov.tesseract.academy/research/dkan-portal-census</loc>
+    <lastmod>2026-08-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://gov.tesseract.academy/research/uk-register-ontology</loc>
     <lastmod>2026-08-17</lastmod>
     <changefreq>weekly</changefreq>
