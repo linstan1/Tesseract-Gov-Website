@@ -350,6 +350,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://gov.tesseract.academy/research/chain-control-ontology</loc>
+    <lastmod>2026-08-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://gov.tesseract.academy/research/investment-fund-ontology</loc>
     <lastmod>2026-08-14</lastmod>
     <changefreq>weekly</changefreq>
