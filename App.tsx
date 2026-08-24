@@ -90,6 +90,8 @@ const SurveillanceReportingIdentifiers = lazy(() => import('./pages/research/Sur
 const SpaceObjectRegisterOntology = lazy(() => import('./pages/research/SpaceObjectRegisterOntology').then(m => ({ default: m.SpaceObjectRegisterOntology })));
 const SpectralLibraryOntology = lazy(() => import('./pages/research/SpectralLibraryOntology').then(m => ({ default: m.SpectralLibraryOntology })));
 const UkRegisterOntology = lazy(() => import('./pages/research/UkRegisterOntology').then(m => ({ default: m.UkRegisterOntology })));
+const OpenDataCatalogAssurance = lazy(() => import('./pages/research/OpenDataCatalogAssurance').then(m => ({ default: m.OpenDataCatalogAssurance })));
+const DkanPortalCensus = lazy(() => import('./pages/research/DkanPortalCensus').then(m => ({ default: m.DkanPortalCensus })));
 const LandRegisterOntology = lazy(() => import('./pages/research/LandRegisterOntology').then(m => ({ default: m.LandRegisterOntology })));
 const LandCarbonMeasurement = lazy(() => import('./pages/research/LandCarbonMeasurement').then(m => ({ default: m.LandCarbonMeasurement })));
 const ItalyRegisterOntology = lazy(() => import('./pages/research/ItalyRegisterOntology').then(m => ({ default: m.ItalyRegisterOntology })));
@@ -300,6 +302,14 @@ const PAGE_META: Record<string, { title: string; description: string }> = {
   '/research/land-register-ontology': {
     title: 'An open ontology for land register integrity, tested against all 33 Scottish registration counties | Tesseract Academy for the Public Sector',
     description: "An open OWL 2, SKOS and SHACL ontology and reproducible audit of the Registers of Scotland INSPIRE Cadastral Parcels dataset, built from a complete keyless download of all 33 registration counties, 1,564,345 parcels, retrieved on 21 August 2026 under the Open Government Licence. The Land Reform (Scotland) Act 2025 attaches duties to landholdings of 1,000 hectares or more, and the register publishes no areas: the INSPIRE areavalue attribute carries the literal string UNPOPULATED on all 1,564,345 parcels, as do referencepoint, beginlifespanversion, endlifespanversion, validfrom and validto. Area computed from the published geometry depends on the method chosen: summing parcels gives 6,581,717 hectares, the geometric union of the same polygons gives 4,714,673, a difference of 1,867,044 hectares or 28.37 per cent, ranging from 1.33 per cent in Nairn to 95.40 per cent in West Lothian. Zero identifier format violations across all 1,564,345 parcels, a null result reported as one. Every headline computed two independent ways.",
+  },
+  '/research/open-data-catalog-assurance': {
+    title: 'Fifty-nine federal agencies are validated against the schema that exempts them | Tesseract Academy for the Public Sector',
+    description: "An open OWL 2, SKOS and SHACL ontology and reproducible audit of the US federal open data catalogue estate, built on 21 August 2026 from data.gov's own keyless harvest API. Of 130 DCAT-US harvest sources, 76 covering 59 federal agencies are registered under the dcatus1.1 non-federal validation schema, which drops bureauCode and programCode from required and additionally permits null for both. Zero federal-typed organizations are registered under the federal schema, and the list includes the Office of Management and Budget, which mandates the bureau code, and the General Services Administration, which operates data.gov. The federal schema's bureauCode pattern is published unanchored, so it accepts xx024:01yy, and its own normative example 015:010 contradicts the pattern printed beside it. 997 Department of Energy datasets carry the Department of Education's agency code. 179 of 793 harvest sources completed their most recent job having errored every record. Every headline computed two independent ways.",
+  },
+  '/research/dkan-portal-census': {
+    title: 'We probed every .gov domain for DKAN and found three portals, all publishing the same wrong identity | Tesseract Academy for the Public Sector',
+    description: "A complete census of the DKAN open data portal across the US federal estate, taken on 21 August 2026. We probed 20,135 hostnames: all 16,535 registrable .gov domains from CISA dotgov-data, plus 3,600 DNS-resolving open data subdomains. DKAN 2.x answers on exactly three, data.medicaid.gov, data.healthcare.gov and data.sba.gov, and all three publish the catalogue identity http://dkan/data.json, root-caused to line 3 of schema/collections/catalog.json in GetDKAN/dkan. 368 occurrences of dcat:references and 7 of dcat:_update are minted into the W3C DCAT namespace, which defines neither, by the federal context's @vocab fallback. The first census frame returned a false zero and the error is published alongside the result.",
   },
   '/research/uk-register-ontology': {
     title: 'An open ontology for UK public registers, tested against Companies House, the Charity Commission and the Global LEI System | Tesseract Academy for the Public Sector',
@@ -651,6 +661,8 @@ const App: React.FC = () => {
               <Route path="/research/space-object-register-ontology" element={<SpaceObjectRegisterOntology />} />
               <Route path="/research/spectral-library-ontology" element={<SpectralLibraryOntology />} />
               <Route path="/research/uk-register-ontology" element={<UkRegisterOntology />} />
+              <Route path="/research/open-data-catalog-assurance" element={<OpenDataCatalogAssurance />} />
+              <Route path="/research/dkan-portal-census" element={<DkanPortalCensus />} />
               <Route path="/research/land-register-ontology" element={<LandRegisterOntology />} />
               <Route path="/research/land-carbon-measurement" element={<LandCarbonMeasurement />} />
               <Route path="/research/one-record-domain-axioms-korea" element={<OneRecordKorea />} />

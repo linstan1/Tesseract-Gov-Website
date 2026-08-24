@@ -97,6 +97,8 @@ import { SurveillanceReportingIdentifiers } from './pages/research/SurveillanceR
 import { SpaceObjectRegisterOntology } from './pages/research/SpaceObjectRegisterOntology';
 import { SpectralLibraryOntology } from './pages/research/SpectralLibraryOntology';
 import { UkRegisterOntology } from './pages/research/UkRegisterOntology';
+import { OpenDataCatalogAssurance } from './pages/research/OpenDataCatalogAssurance';
+import { DkanPortalCensus } from './pages/research/DkanPortalCensus';
 import { LandRegisterOntology } from './pages/research/LandRegisterOntology';
 import { LandCarbonMeasurement } from './pages/research/LandCarbonMeasurement';
 import { OneRecordKorea } from './pages/research/OneRecordKorea';
@@ -206,6 +208,8 @@ const SSRApp: React.FC = () => (
         <Route path="/research/space-object-register-ontology" element={<SpaceObjectRegisterOntology />} />
         <Route path="/research/spectral-library-ontology" element={<SpectralLibraryOntology />} />
         <Route path="/research/uk-register-ontology" element={<UkRegisterOntology />} />
+        <Route path="/research/open-data-catalog-assurance" element={<OpenDataCatalogAssurance />} />
+        <Route path="/research/dkan-portal-census" element={<DkanPortalCensus />} />
         <Route path="/research/land-register-ontology" element={<LandRegisterOntology />} />
         <Route path="/research/land-carbon-measurement" element={<LandCarbonMeasurement />} />
         <Route path="/research/one-record-domain-axioms-korea" element={<OneRecordKorea />} />
