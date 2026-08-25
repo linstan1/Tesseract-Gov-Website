@@ -16,12 +16,25 @@ const SCHEMA = {
   author: { '@id': 'https://gov.tesseract.academy/#organization' },
   publisher: { '@id': 'https://gov.tesseract.academy/#organization' },
   datePublished: '2026-07-01',
-  dateModified: '2026-07-27',
+  dateModified: '2026-08-25',
   about: {
     '@type': 'Dataset',
     name: 'IES to HQDM crosswalk',
     url: REPO,
     license: 'https://creativecommons.org/licenses/by/4.0/',
+  },
+  citation: {
+    '@type': 'ScholarlyArticle',
+    name: 'Consistency Is Not Coherence: Orientation Search for Certified Alignments Between 4D Defence Upper Ontologies',
+    author: { '@type': 'Person', name: 'Fabio Rovai' },
+    datePublished: '2026-08-22',
+    url: 'https://arxiv.org/abs/2608.21914',
+    identifier: 'arXiv:2608.21914',
+    sameAs: 'https://doi.org/10.48550/arXiv.2608.21914',
+    isPartOf: {
+      '@type': 'PublicationEvent',
+      name: 'Ontology Matching workshop (OM 2026), co-located with the International Semantic Web Conference 2026, Bari',
+    },
   },
   keywords:
     'IES, HQDM, BFO, ontology alignment, crosswalk, 4D ontology, BORO, defence data, interoperability, autonomy assurance, SAPIENT, SHACL, SSSOM, OWL reasoning, HermiT, description logic, unsatisfiable classes, coherence, conservativity',
@@ -99,6 +112,24 @@ export const IesHqdmCrosswalk: React.FC = () => {
           The first public crosswalk between the UK Information Exchange Standard (IES), the 4D ontology behind UK defence and security data, and HQDM, the model underpinning the National Digital Twin. Open, validated, and released so that suppliers building across the two can start from something concrete.
         </p>
       </header>
+
+      <aside className="bg-gov-bg border border-gov-border/50 rounded-xl p-6 sm:p-8">
+        <p className="text-xs font-semibold uppercase tracking-wider text-gov-blue mb-2">Peer-reviewed</p>
+        <p className="text-gov-dark leading-relaxed">
+          The reasoning behind this crosswalk has been written up as{' '}
+          <em>Consistency Is Not Coherence: Orientation Search for Certified Alignments Between 4D Defence Upper Ontologies</em>, accepted as a long paper at the 21st International Workshop on Ontology Matching (OM 2026), co-located with the International Semantic Web Conference 2026 in Bari. The paper adds the third ontology, BFO, and the method the certified bridge is built with: rather than deleting correspondences that break under reasoning, it treats the direction of each correspondence as the variable to solve for.
+        </p>
+        <a
+          href="https://arxiv.org/abs/2608.21914"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 mt-4 text-sm font-semibold text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors"
+        >
+          Read the paper on arXiv (2608.21914)
+          <ExternalLink className="w-4 h-4" />
+          <span className="sr-only"> (opens in new tab)</span>
+        </a>
+      </aside>
 
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
         <div className="bg-gov-bg border border-gov-border/50 rounded-xl p-6">

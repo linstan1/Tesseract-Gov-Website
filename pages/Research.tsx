@@ -285,7 +285,17 @@ export const Research: React.FC = () => {
            </li>
         </PublicationGroup>
 
-        <PublicationGroup title="Security, defence & space" count={6}>
+        <PublicationGroup title="Security, defence & space" count={7}>
+           <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
+             <h3 className="font-semibold text-lg text-gov-dark mb-2">Consistency Is Not Coherence: Orientation Search for Certified Alignments Between 4D Defence Upper Ontologies</h3>
+             <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Long paper accepted at the Ontology Matching workshop (OM 2026), co-located with the International Semantic Web Conference 2026, Bari. arXiv 2608.21914, 2026</p>
+             <p className="text-base text-gov-dark/90 leading-relaxed">Three upper ontologies sit under UK and NATO defence data infrastructure: the Information Exchange Standard (IES), the Higher Quality Data Model (HQDM) that underpins the National Digital Twin, and Basic Formal Ontology (BFO). No public alignment between IES and HQDM existed. Promoting a hand-curated seventeen-correspondence crosswalk to OWL and reasoning over the complete merged ontologies with HermiT gives three results. Published HQDM is natively incoherent, with 39 classes that can never have a member before any mapping is applied. Reading the crosswalk as strict equivalences leaves the merge consistent, so the usual check passes, while adding 100 further empty classes and 218 conservativity violations: consistency is the property that is tested and coherence is the property that matters. The repair is not deletion but orientation, treating the direction of each correspondence as the variable the reasoner solves for, which yields a 21-axiom certified bridge and settles the IES-to-BFO question in favour of bfo:history rather than material entity. Measured against LogMap, LogMapLt and its repair debugger, and against a language-model oracle in base and IES fine-tuned form: both models fall for the same ies:Event to hqdm:event false friend.</p>
+             <div className="mt-3 flex flex-wrap gap-3 items-center">
+               <a href="https://arxiv.org/abs/2608.21914" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">Read the paper on arXiv<span className="sr-only"> (opens in new tab)</span></a>
+               <Link to="/research/ies-hqdm-defence-interoperability" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">Read the case study</Link>
+               <a href="https://github.com/fabio-rovai/ies-hqdm-crosswalk" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">Code and data on GitHub<span className="sr-only"> (opens in new tab)</span></a>
+             </div>
+           </li>
            <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
              <Link to="/research/space-object-register-ontology"><h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark hover:underline transition-colors">An Open Ontology for Space Object Catalogues, Tested Against CelesTrak and the General Catalog of Artificial Space Objects</h3></Link>
              <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Open ontology, two-catalogue measurement, 2026</p>

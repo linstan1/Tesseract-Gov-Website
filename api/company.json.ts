@@ -144,6 +144,17 @@ const COMPANY_DATA = {
   ],
   "publications": [
     {
+      "title": "Consistency Is Not Coherence: Orientation Search for Certified Alignments Between 4D Defence Upper Ontologies",
+      "type": "ResearchPaper",
+      "venue": "Ontology Matching workshop (OM 2026), co-located with the International Semantic Web Conference 2026, Bari",
+      "peerReviewed": true,
+      "year": 2026,
+      "url": "https://arxiv.org/abs/2608.21914",
+      "arxivId": "2608.21914",
+      "doi": "10.48550/arXiv.2608.21914",
+      "code": "https://github.com/fabio-rovai/ies-hqdm-crosswalk"
+    },
+    {
       "title": "Testing Land Valuation Methods",
       "type": "GovernmentReport",
       "client": "Welsh Government",
