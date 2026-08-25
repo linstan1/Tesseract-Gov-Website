@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, ExternalLink } from 'lucide-react';
+import { ConformanceChart, ThemeBindingChart, SquattedThemeChart, FindataLanguageChart } from '../../components/HdcoCharts';
 
 const REPO = 'https://github.com/fabio-rovai/health-dataset-catalogue-ontology';
 
@@ -215,6 +216,7 @@ export const NordicHealthDataCatalogues: React.FC = () => (
         because descriptions were selected by carrying the health theme in the first place. It is in the table so
         the table is complete.
       </p>
+      <ConformanceChart />
       <p className="text-gov-dark leading-relaxed">
         The useful shape here is the contrast with the generic layer. <code className="text-sm bg-gov-bg px-1.5 py-0.5 rounded">dct:title</code> is
         on all 2,811. <code className="text-sm bg-gov-bg px-1.5 py-0.5 rounded">dct:description</code> is on all 2,811.
@@ -247,6 +249,7 @@ export const NordicHealthDataCatalogues: React.FC = () => (
         18,701. The Swedish INSPIRE node binds all 178 of its 178. The Icelandic geoportal binds 383 of 422. Even
         the weakest of the others, Geonorge at 112 of 347, is not at zero.
       </p>
+      <ThemeBindingChart />
       <p className="text-gov-dark leading-relaxed">
         The consequence is immediate and it is the whole point of the exercise. A European health filter returns
         zero Finnish datasets. Finland has them, and avoindata.fi&apos;s own search returns 57 results for health
@@ -283,25 +286,7 @@ export const NordicHealthDataCatalogues: React.FC = () => (
         and then dereferenced every one of them. 36 distinct IRIs are in use. The authority defines 14. The other
         22 were minted by publishers inside the European Union&apos;s own namespace, and 1,238 datasets carry one.
       </p>
-      <div className="overflow-x-auto">
-        <table className="w-full text-sm border border-gov-border">
-          <thead className="bg-gov-bg/60">
-            <tr>
-              <th className="text-left p-3 font-semibold text-gov-dark border-b border-gov-border">Undefined value</th>
-              <th className="text-right p-3 font-semibold text-gov-dark border-b border-gov-border">Datasets</th>
-              <th className="text-left p-3 font-semibold text-gov-dark border-b border-gov-border">Published by</th>
-            </tr>
-          </thead>
-          <tbody className="text-gov-dark">
-            <tr><td className="p-3 border-b border-gov-border"><code>data-theme/undefined</code></td><td className="p-3 text-right border-b border-gov-border">806</td><td className="p-3 border-b border-gov-border">Moldova government portal 647, Zagreb 157, Czech national catalogue 2</td></tr>
-            <tr><td className="p-3 border-b border-gov-border"><code>data-theme/ENV</code></td><td className="p-3 text-right border-b border-gov-border">237</td><td className="p-3 border-b border-gov-border">London Datastore. The authority defines <code>ENVI</code>.</td></tr>
-            <tr><td className="p-3 border-b border-gov-border"><code>data-theme/UKLF</code></td><td className="p-3 text-right border-b border-gov-border">34</td><td className="p-3 border-b border-gov-border"></td></tr>
-            <tr><td className="p-3 border-b border-gov-border"><code>data-theme/VERWALTUNG</code></td><td className="p-3 text-right border-b border-gov-border">29</td><td className="p-3 border-b border-gov-border">German language publishers</td></tr>
-            <tr><td className="p-3 border-b border-gov-border"><code>data-theme/BEVOELKERUNG</code></td><td className="p-3 text-right border-b border-gov-border">26</td><td className="p-3 border-b border-gov-border">German language publishers</td></tr>
-            <tr><td className="p-3"><code>data-theme/GESUNDHEIT</code> and <code>data-theme/Gesundheit</code></td><td className="p-3 text-right">3</td><td className="p-3">govdata.de, two spellings of a health theme</td></tr>
-          </tbody>
-        </table>
-      </div>
+      <SquattedThemeChart />
       <p className="text-gov-dark leading-relaxed">
         806 datasets carry the literal string <code className="text-sm bg-gov-bg px-1.5 py-0.5 rounded">undefined</code> as a
         theme. That is a serialiser writing a JavaScript value into a public authority namespace, and it has been
@@ -340,6 +325,7 @@ export const NordicHealthDataCatalogues: React.FC = () => (
         and a description that is complete domestically and monolingual is not a complete description for that
         purpose however good it is.
       </p>
+      <FindataLanguageChart />
       <p className="text-gov-dark leading-relaxed">
         A second gap compounds it. All 2,948 concept tags in the catalogue, spread across 2,059 descriptions,
         report a null concept scheme. There are 508 distinct concepts and 477 of them have English labels. They
@@ -390,6 +376,23 @@ export const NordicHealthDataCatalogues: React.FC = () => (
         the position finding two measures. We state this as an observation about the document&apos;s text and not
         about the authors&apos; knowledge: figures in the report are images, we read the extracted text, and the
         omission may well be deliberate scoping rather than oversight.
+      </p>
+      <p className="text-gov-dark leading-relaxed">
+        This is not an abstract gap, and Finland is already paying to close it. On 20 May 2026 Business Finland
+        announced funding for <em>Roadmap to Finnish Health Data Space</em>, a joint project with a budget of
+        7.7 million euros of which Business Finland funds 4.6 million. It is the first joint project of the
+        Finnish wellbeing regions to be funded. The participants are HUS, the Pirkanmaa wellbeing region, the
+        University of Helsinki, Orion, GE Healthcare Finland, Productivity Leap and Biocomputing Platforms, and
+        the announcement is explicit that the work is driven by what the European Health Data Space Regulation
+        requires.
+      </p>
+      <p className="text-gov-dark leading-relaxed">
+        Seven named organisations, a four year public investment and a regulation that starts to bite in 2029 are
+        the reason a measurement like this one is worth taking now rather than in 2028. The number that matters to
+        that project is not our headline. It is the per record list underneath it, which says exactly which
+        descriptions fail which requirement, and which of those requirements the current schema cannot source at
+        all. The first is a data entry problem. The second is a system design decision, and it is much cheaper to
+        take at the start of a roadmap than at the end of one.
       </p>
       <p className="text-gov-dark leading-relaxed">
         The constructive version is short. Finland already has a binding national regulation on dataset
@@ -461,6 +464,24 @@ export const NordicHealthDataCatalogues: React.FC = () => (
         Our claim is narrower and does not overlap theirs. They designed the profile and validated it against
         curated examples. We measured the installed base of live national catalogues against the shipped Release
         7. Neither piece of work answers the other&apos;s question.
+      </p>
+      <p className="text-gov-dark leading-relaxed">
+        A second piece of prior art sits alongside this one and is worth naming, because it shares an author with
+        the Finnish proposal. Ole A. Andreassen and colleagues, with Olli Kallioniemi as last author, published
+        &ldquo;An AI-Health infrastructure for the Nordic region: technical foundations, data assets, and a
+        roadmap for deployment&rdquo; in <em>Nature Medicine</em> in 2026 (doi 10.1038/s41591-026-04575-4). It sets
+        out the Nordic AI-Health Initiative: a platform built on the region&apos;s large scale longitudinal and
+        multimodal health datasets, aimed at secure and regulation compliant access and at generalisable models
+        for AI driven discovery. The same person is therefore arguing for a national Finnish health data space and
+        for a Nordic AI health platform, which is a coherent position and the right ambition.
+      </p>
+      <p className="text-gov-dark leading-relaxed">
+        We could not read that paper in full. It sits behind an authentication wall, its SSRN preprint returned
+        HTTP 403, and we are not going to characterise a paper from its abstract and a press release. So we make
+        no claim about whether it addresses catalogue metadata, and a reader should check rather than take our
+        silence either way. What we can say is narrow and verifiable: a platform built on those data assets has to
+        make them findable to the people it is built for, and on the one axis measured here the region currently
+        publishes nothing that a European discovery route can see.
       </p>
       <p className="text-gov-dark leading-relaxed">
         The European Commission also publishes an official HealthDCAT-AP validator, built on the Interoperability
