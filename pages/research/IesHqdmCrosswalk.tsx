@@ -33,7 +33,10 @@ const SCHEMA = {
     sameAs: 'https://doi.org/10.48550/arXiv.2608.21914',
     isPartOf: {
       '@type': 'PublicationEvent',
-      name: 'Ontology Matching workshop (OM 2026), co-located with the International Semantic Web Conference 2026, Bari',
+      name: '21st International Workshop on Ontology Matching (OM 2026), co-located with the 25th International Semantic Web Conference',
+      url: 'https://om.ontologymatching.org/2026/',
+      startDate: '2026-10-25',
+      location: { '@type': 'Place', name: 'Bari, Italy' },
     },
   },
   keywords:
@@ -117,7 +120,8 @@ export const IesHqdmCrosswalk: React.FC = () => {
         <p className="text-xs font-semibold uppercase tracking-wider text-gov-blue mb-2">Peer-reviewed</p>
         <p className="text-gov-dark leading-relaxed">
           The reasoning behind this crosswalk has been written up as{' '}
-          <em>Consistency Is Not Coherence: Orientation Search for Certified Alignments Between 4D Defence Upper Ontologies</em>, accepted as a long paper at the 21st International Workshop on Ontology Matching (OM 2026), co-located with the International Semantic Web Conference 2026 in Bari. The paper adds the third ontology, BFO, and the method the certified bridge is built with: rather than deleting correspondences that break under reasoning, it treats the direction of each correspondence as the variable to solve for.
+          <em>Consistency Is Not Coherence: Orientation Search for Certified Alignments Between 4D Defence Upper Ontologies</em>, accepted as a long paper at the{' '}
+          <a href="https://om.ontologymatching.org/2026/" target="_blank" rel="noopener noreferrer" className="text-gov-blue underline hover:text-gov-blue-dark">21st International Workshop on Ontology Matching (OM 2026)</a>, co-located with the 25th International Semantic Web Conference in Bari on 25 October 2026. The paper adds the third ontology, BFO, and the method the certified bridge is built with: rather than deleting correspondences that break under reasoning, it treats the direction of each correspondence as the variable to solve for.
         </p>
         <a
           href="https://arxiv.org/abs/2608.21914"
