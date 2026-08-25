@@ -12,7 +12,7 @@ export const Footer: React.FC = () => {
               Supporting public sector innovation through research-backed implementation, rapid delivery, and policy-aligned advisory.
             </p>
             <p className="text-sm mt-4">
-              <Link to="/open-source" className="text-gov-blue hover:text-gov-blue-dark transition-colors font-medium">
+              <Link to="/research/open-source" className="text-gov-blue hover:text-gov-blue-dark transition-colors font-medium">
                 Open source: the standards we file bugs against
               </Link>
             </p>

@@ -32,6 +32,24 @@ export const Research: React.FC = () => {
 
       <section className="space-y-6">
         <div className="border-b border-gov-border/30 pb-4">
+          <h2 className="text-3xl font-bold text-gov-dark">Upstream contributions</h2>
+        </div>
+        <p className="text-base text-gov-dark/90 leading-relaxed max-w-4xl">
+          The same reading that produces the studies below produces defect reports against the standards
+          themselves. We have reported faults in the IATA ONE Record data model, in FIBO, in the W3C JSON-LD
+          specification, in DCAT-US at the General Services Administration and in the USDA National
+          Agricultural Library thesaurus, and contributed SHACL shapes to GLEIF on the maintainers'
+          invitation. Every one is a public thread you can read.
+        </p>
+        <p>
+          <Link to="/research/open-source" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">
+            Read the contribution ledger
+          </Link>
+        </p>
+      </section>
+
+      <section className="space-y-6">
+        <div className="border-b border-gov-border/30 pb-4">
           <h2 className="text-3xl font-bold text-gov-dark">{CATEGORY_LABELS['open-demo']}</h2>
           <p className="text-sm text-gov-secondary mt-2 max-w-4xl">
             Our self-funded research programme: open standards, evidence bases and reference implementations built on public data, published in full for independent verification and reuse. Each project ships with a complete write-up covering challenge, intervention, assurance and reusable assets. Browse by topic below.

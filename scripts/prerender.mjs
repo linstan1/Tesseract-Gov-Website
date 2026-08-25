@@ -84,7 +84,7 @@ const PAGE_META = {
     title: 'About Tesseract Academy - Team & Credentials | Tesseract Academy for the Public Sector',
     description: 'Dr Stylianos Kampakis (PhD UCL, CStat, FRSS, 40+ publications) and Fabio Rovai MSc (UAL, NeurIPS reviewer). DV-cleared consultant available. Incorporated 2016. CCS frameworks RM6200, RM6094, RM6126.',
   },
-  '/open-source': {
+  '/research/open-source': {
     title: 'The Standards We File Bugs Against | Tesseract Academy for the Public Sector',
     description: 'A public ledger of the defects we report and the fixes we land in the standards, registers and libraries other people build on. No property in the IATA ONE Record data model declares a domain, and 14.3 per cent of the domain information left in comments contradicts the class axioms. FIBO cites a withdrawn ISO 17442 and cannot detect a malformed LEI. Draft SHACL shapes for Level 1 LEI records contributed to GLEIF on the maintainers’ invitation, with the ISO 7064 check digit as SHACL-SPARQL. Also the W3C JSON-LD specification, DCAT-US at the GSA, the USDA National Agricultural Library, the Italian semantic assets repository and OpenSanctions. Every row links the public thread, and there is not a logo on the page.',
   },

@@ -1,14 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowUpRight } from 'lucide-react';
-import { ContributionLedger } from '../components/ContributionLedger';
-import { CONTRIBUTION_TOTALS } from '../data/contributionTotals';
+import { ContributionLedger } from '../../components/ContributionLedger';
+import { CONTRIBUTION_TOTALS } from '../../data/contributionTotals';
 
 const SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'Article',
-  '@id': 'https://gov.tesseract.academy/open-source#article',
-  mainEntityOfPage: 'https://gov.tesseract.academy/open-source',
+  '@id': 'https://gov.tesseract.academy/research/open-source#article',
+  mainEntityOfPage: 'https://gov.tesseract.academy/research/open-source',
   headline: 'Upstream contributions: the standards we file bugs against | Tesseract Academy',
   description:
     'A public ledger of the defects we have reported and the fixes we have landed in the standards, registers and libraries other people build on: IATA ONE Record, EDM Council FIBO, GLEIF, the W3C JSON-LD specification, DCAT-US at the US General Services Administration, the USDA National Agricultural Library, the Italian national semantic assets repository, OpenSanctions and others. Every row links the public thread. No logos, because we are nobody’s partner and will not imply otherwise.',

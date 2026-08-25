@@ -14,7 +14,7 @@ const Partnerships = lazy(() => import('./pages/Partnerships').then(m => ({ defa
 const Compliance = lazy(() => import('./pages/Compliance').then(m => ({ default: m.Compliance })));
 const Feedback = lazy(() => import('./pages/Feedback').then(m => ({ default: m.Feedback })));
 const About = lazy(() => import('./pages/About').then(m => ({ default: m.About })));
-const OpenSource = lazy(() => import('./pages/OpenSource').then(m => ({ default: m.OpenSource })));
+const OpenSource = lazy(() => import('./pages/research/OpenSource').then(m => ({ default: m.OpenSource })));
 const WelshGovernment = lazy(() => import('./pages/research/WelshGovernment').then(m => ({ default: m.WelshGovernment })));
 const NationalDigitalTwin = lazy(() => import('./pages/research/NationalDigitalTwin').then(m => ({ default: m.NationalDigitalTwin })));
 const BridgeAI = lazy(() => import('./pages/research/BridgeAI').then(m => ({ default: m.BridgeAI })));
@@ -174,7 +174,7 @@ const PAGE_META: Record<string, { title: string; description: string }> = {
     title: 'About Us - Team, Credentials & Company Profile | Tesseract Academy for the Public Sector',
     description: 'Meet the Tesseract Academy team: Dr Stylianos Kampakis (PhD UCL, FRSS, CStat) and Fabio Rovai MSc. CCS frameworks RM6200, RM6094, RM6126, RM6219. Cyber Essentials certified. DV-cleared resource available.',
   },
-  '/open-source': {
+  '/research/open-source': {
     title: 'The Standards We File Bugs Against | Tesseract Academy for the Public Sector',
     description: 'A public ledger of the defects we report and the fixes we land in the standards, registers and libraries other people build on. No property in the IATA ONE Record data model declares a domain, and 14.3 per cent of the domain information left in comments contradicts the class axioms. FIBO cites a withdrawn ISO 17442 and cannot detect a malformed LEI. Draft SHACL shapes for Level 1 LEI records contributed to GLEIF on the maintainers’ invitation, with the ISO 7064 check digit as SHACL-SPARQL. Also the W3C JSON-LD specification, DCAT-US at the GSA, the USDA National Agricultural Library, the Italian semantic assets repository and OpenSanctions. Every row links the public thread, and there is not a logo on the page.',
   },
@@ -600,7 +600,7 @@ const App: React.FC = () => {
               <Route path="/compliance" element={<Compliance />} />
               <Route path="/testimonials" element={<Feedback />} />
               <Route path="/about" element={<About />} />
-              <Route path="/open-source" element={<OpenSource />} />
+              <Route path="/research/open-source" element={<OpenSource />} />
               <Route path="/research/welsh-government-land-valuation" element={<WelshGovernment />} />
               <Route path="/research/national-digital-twin-programme" element={<NationalDigitalTwin />} />
               <Route path="/research/bridgeai-creative-industries" element={<BridgeAI />} />
