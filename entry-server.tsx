@@ -21,6 +21,7 @@ import { Partnerships } from './pages/Partnerships';
 import { Compliance } from './pages/Compliance';
 import { Feedback } from './pages/Feedback';
 import { About } from './pages/About';
+import { OpenSource } from './pages/OpenSource';
 import { WelshGovernment } from './pages/research/WelshGovernment';
 import { NationalDigitalTwin } from './pages/research/NationalDigitalTwin';
 import { BridgeAI } from './pages/research/BridgeAI';
@@ -98,6 +99,7 @@ import { SurveillanceReportingIdentifiers } from './pages/research/SurveillanceR
 import { SpaceObjectRegisterOntology } from './pages/research/SpaceObjectRegisterOntology';
 import { SpectralLibraryOntology } from './pages/research/SpectralLibraryOntology';
 import { UkRegisterOntology } from './pages/research/UkRegisterOntology';
+import { NordicHealthDataCatalogues } from './pages/research/NordicHealthDataCatalogues';
 import { OpenDataCatalogAssurance } from './pages/research/OpenDataCatalogAssurance';
 import { DkanPortalCensus } from './pages/research/DkanPortalCensus';
 import { LandRegisterOntology } from './pages/research/LandRegisterOntology';
@@ -133,6 +135,7 @@ const SSRApp: React.FC = () => (
         <Route path="/compliance" element={<Compliance />} />
         <Route path="/testimonials" element={<Feedback />} />
         <Route path="/about" element={<About />} />
+        <Route path="/open-source" element={<OpenSource />} />
         <Route path="/research/welsh-government-land-valuation" element={<WelshGovernment />} />
         <Route path="/research/national-digital-twin-programme" element={<NationalDigitalTwin />} />
         <Route path="/research/bridgeai-creative-industries" element={<BridgeAI />} />
@@ -210,6 +213,7 @@ const SSRApp: React.FC = () => (
         <Route path="/research/space-object-register-ontology" element={<SpaceObjectRegisterOntology />} />
         <Route path="/research/spectral-library-ontology" element={<SpectralLibraryOntology />} />
         <Route path="/research/uk-register-ontology" element={<UkRegisterOntology />} />
+        <Route path="/research/nordic-health-data-catalogues" element={<NordicHealthDataCatalogues />} />
         <Route path="/research/open-data-catalog-assurance" element={<OpenDataCatalogAssurance />} />
         <Route path="/research/dkan-portal-census" element={<DkanPortalCensus />} />
         <Route path="/research/land-register-ontology" element={<LandRegisterOntology />} />

@@ -84,6 +84,10 @@ const PAGE_META = {
     title: 'About Tesseract Academy - Team & Credentials | Tesseract Academy for the Public Sector',
     description: 'Dr Stylianos Kampakis (PhD UCL, CStat, FRSS, 40+ publications) and Fabio Rovai MSc (UAL, NeurIPS reviewer). DV-cleared consultant available. Incorporated 2016. CCS frameworks RM6200, RM6094, RM6126.',
   },
+  '/open-source': {
+    title: 'The Standards We File Bugs Against | Tesseract Academy for the Public Sector',
+    description: 'A public ledger of the defects we report and the fixes we land in the standards, registers and libraries other people build on. No property in the IATA ONE Record data model declares a domain, and 14.3 per cent of the domain information left in comments contradicts the class axioms. FIBO cites a withdrawn ISO 17442 and cannot detect a malformed LEI. Draft SHACL shapes for Level 1 LEI records contributed to GLEIF on the maintainers’ invitation, with the ISO 7064 check digit as SHACL-SPARQL. Also the W3C JSON-LD specification, DCAT-US at the GSA, the USDA National Agricultural Library, the Italian semantic assets repository and OpenSanctions. Every row links the public thread, and there is not a logo on the page.',
+  },
   '/glossary': {
     title: 'AI & Procurement Glossary | Tesseract Academy for the Public Sector',
     description: '60+ definitions of AI, data science, and procurement terms used in UK public sector contracting. From Algorithmic Impact Assessment to Zero-Shot Learning.',
@@ -207,6 +211,10 @@ const PAGE_META = {
   '/research/land-register-ontology': {
     title: 'An open ontology for land register integrity, tested against all 33 Scottish registration counties | Tesseract Academy for the Public Sector',
     description: "An open OWL 2, SKOS and SHACL ontology and reproducible audit of the Registers of Scotland INSPIRE Cadastral Parcels dataset, built from a complete keyless download of all 33 registration counties, 1,564,345 parcels, retrieved on 21 August 2026 under the Open Government Licence. The Land Reform (Scotland) Act 2025 attaches duties to landholdings of 1,000 hectares or more, and the register publishes no areas: the INSPIRE areavalue attribute carries the literal string UNPOPULATED on all 1,564,345 parcels, as do referencepoint, beginlifespanversion, endlifespanversion, validfrom and validto. Area computed from the published geometry depends on the method chosen: summing parcels gives 6,581,717 hectares, the geometric union of the same polygons gives 4,714,673, a difference of 1,867,044 hectares or 28.37 per cent, ranging from 1.33 per cent in Nairn to 95.40 per cent in West Lothian. Zero identifier format violations across all 1,564,345 parcels, a null result reported as one. Every headline computed two independent ways.",
+  },
+  '/research/nordic-health-data-catalogues': {
+    title: 'Nordic health dataset catalogues measured against HealthDCAT-AP Release 7 | Tesseract Academy for the Public Sector',
+    description: "An open OWL 2, SKOS and SHACL ontology and a reproducible census of Nordic health dataset descriptions, built on 25 August 2026 from the data.europa.eu SPARQL endpoint and the Findata Aineistokatalogi public API. Across the eleven Nordic national catalogues harvested by data.europa.eu there are 2,811 dataset descriptions carrying the EU health theme, and none satisfies all eight properties HealthDCAT-AP Release 7 makes mandatory on dcat:Dataset; three of the eight are present on exactly zero. Finland contributes 1,146 themed descriptions and not one uses the EU data theme authority vocabulary, so a European health filter returns zero Finnish datasets while avoindata.fi returns 57. Across the endpoint 36 IRIs are in use inside the EU data theme namespace and the authority defines 14, with 1,238 datasets carrying one of the other 22, including 806 on the literal string undefined. The authority host answers HTTP 200 with an empty graph for terms it never defined. Findata holds 89,368 variable descriptions of which 84.74 per cent carry no English label. Every headline computed two independent ways.",
   },
   '/research/open-data-catalog-assurance': {
     title: 'Fifty-nine federal agencies are validated against the schema that exempts them | Tesseract Academy for the Public Sector',

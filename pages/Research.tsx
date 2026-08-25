@@ -347,7 +347,7 @@ export const Research: React.FC = () => {
            </li>
         </PublicationGroup>
 
-        <PublicationGroup title="Register assurance" count={12}>
+        <PublicationGroup title="Register assurance" count={13}>
           <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
             <Link to="/research/chain-control-ontology"><h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark hover:underline transition-colors">USDC Has a Different Upgrade Key on Every Chain, and Its Own owner() Names None of Them</h3></Link>
             <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Open ontology, cross-chain control census, 2026</p>
@@ -383,6 +383,15 @@ export const Research: React.FC = () => {
              <div className="mt-3 flex flex-wrap gap-3 items-center">
                <Link to="/research/land-carbon-measurement" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">Read the study</Link>
                <a href="https://github.com/fabio-rovai/scotland-land-register-ontology" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">repository on GitHub<span className="sr-only"> (opens in new tab)</span></a>
+             </div>
+           </li>
+           <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
+             <Link to="/research/nordic-health-data-catalogues"><h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark hover:underline transition-colors">Nordic Health Dataset Catalogues Measured Against HealthDCAT-AP Release 7</h3></Link>
+             <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Open ontology, five countries, eleven catalogues, 2026</p>
+             <p className="text-base text-gov-dark/90 leading-relaxed">The European Health Data Space obliges health data access bodies to publish a machine readable national dataset catalogue, and the European Commission publishes HealthDCAT-AP as the profile those descriptions should follow. On 25 August 2026 the eleven Nordic national catalogues harvested by data.europa.eu held 2,811 dataset descriptions carrying the EU health theme, and not one satisfies all eight properties Release 7 makes mandatory on dcat:Dataset. Three of the eight, the identifier of the health data access body, the health category and the structured data flag, are present on exactly zero across all five countries, so the gap is a system change question rather than a data entry one. The generic layer is meanwhile in good order, with title and description on all 2,811 and publisher on 2,785. Finland is a case of its own: it contributes 1,146 themed descriptions and not one uses the European data theme authority vocabulary, so a European health filter returns zero Finnish datasets while avoindata.fi&apos;s own search returns 57. Sitra&apos;s February 2026 proposal for a Finnish Health Data Space names that compatibility gap in prose and its text mentions DCAT zero times. Separately, 36 IRIs are in use inside the EU data theme authority namespace and the authority defines 14, with 1,238 datasets carrying one of the other 22, including 806 on the literal string undefined; the authority host answers HTTP 200 with an empty graph for terms it never defined, so a status code check cannot see any of it. Findata&apos;s catalogue holds 89,368 variable descriptions, the most detailed health metadata in the region, of which 84.74 per cent carry no English label. Four of our own claims were wrong before they were right and all four corrections are published. Every headline computed two independent ways, with SHACL as a third path.</p>
+             <div className="mt-3 flex flex-wrap gap-3 items-center">
+               <Link to="/research/nordic-health-data-catalogues" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">Read the study</Link>
+               <a href="https://github.com/fabio-rovai/health-dataset-catalogue-ontology" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">repository on GitHub<span className="sr-only"> (opens in new tab)</span></a>
              </div>
            </li>
            <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">

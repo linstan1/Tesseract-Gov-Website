@@ -14,6 +14,7 @@ const Partnerships = lazy(() => import('./pages/Partnerships').then(m => ({ defa
 const Compliance = lazy(() => import('./pages/Compliance').then(m => ({ default: m.Compliance })));
 const Feedback = lazy(() => import('./pages/Feedback').then(m => ({ default: m.Feedback })));
 const About = lazy(() => import('./pages/About').then(m => ({ default: m.About })));
+const OpenSource = lazy(() => import('./pages/OpenSource').then(m => ({ default: m.OpenSource })));
 const WelshGovernment = lazy(() => import('./pages/research/WelshGovernment').then(m => ({ default: m.WelshGovernment })));
 const NationalDigitalTwin = lazy(() => import('./pages/research/NationalDigitalTwin').then(m => ({ default: m.NationalDigitalTwin })));
 const BridgeAI = lazy(() => import('./pages/research/BridgeAI').then(m => ({ default: m.BridgeAI })));
@@ -91,6 +92,7 @@ const SurveillanceReportingIdentifiers = lazy(() => import('./pages/research/Sur
 const SpaceObjectRegisterOntology = lazy(() => import('./pages/research/SpaceObjectRegisterOntology').then(m => ({ default: m.SpaceObjectRegisterOntology })));
 const SpectralLibraryOntology = lazy(() => import('./pages/research/SpectralLibraryOntology').then(m => ({ default: m.SpectralLibraryOntology })));
 const UkRegisterOntology = lazy(() => import('./pages/research/UkRegisterOntology').then(m => ({ default: m.UkRegisterOntology })));
+const NordicHealthDataCatalogues = lazy(() => import('./pages/research/NordicHealthDataCatalogues').then(m => ({ default: m.NordicHealthDataCatalogues })));
 const OpenDataCatalogAssurance = lazy(() => import('./pages/research/OpenDataCatalogAssurance').then(m => ({ default: m.OpenDataCatalogAssurance })));
 const DkanPortalCensus = lazy(() => import('./pages/research/DkanPortalCensus').then(m => ({ default: m.DkanPortalCensus })));
 const LandRegisterOntology = lazy(() => import('./pages/research/LandRegisterOntology').then(m => ({ default: m.LandRegisterOntology })));
@@ -171,6 +173,10 @@ const PAGE_META: Record<string, { title: string; description: string }> = {
   '/about': {
     title: 'About Us - Team, Credentials & Company Profile | Tesseract Academy for the Public Sector',
     description: 'Meet the Tesseract Academy team: Dr Stylianos Kampakis (PhD UCL, FRSS, CStat) and Fabio Rovai MSc. CCS frameworks RM6200, RM6094, RM6126, RM6219. Cyber Essentials certified. DV-cleared resource available.',
+  },
+  '/open-source': {
+    title: 'The Standards We File Bugs Against | Tesseract Academy for the Public Sector',
+    description: 'A public ledger of the defects we report and the fixes we land in the standards, registers and libraries other people build on. No property in the IATA ONE Record data model declares a domain, and 14.3 per cent of the domain information left in comments contradicts the class axioms. FIBO cites a withdrawn ISO 17442 and cannot detect a malformed LEI. Draft SHACL shapes for Level 1 LEI records contributed to GLEIF on the maintainers’ invitation, with the ISO 7064 check digit as SHACL-SPARQL. Also the W3C JSON-LD specification, DCAT-US at the GSA, the USDA National Agricultural Library, the Italian semantic assets repository and OpenSanctions. Every row links the public thread, and there is not a logo on the page.',
   },
   '/research/welsh-government-land-valuation': {
     title: 'Welsh Government Land Valuation Research | Tesseract Academy for the Public Sector',
@@ -307,6 +313,10 @@ const PAGE_META: Record<string, { title: string; description: string }> = {
   '/research/land-register-ontology': {
     title: 'An open ontology for land register integrity, tested against all 33 Scottish registration counties | Tesseract Academy for the Public Sector',
     description: "An open OWL 2, SKOS and SHACL ontology and reproducible audit of the Registers of Scotland INSPIRE Cadastral Parcels dataset, built from a complete keyless download of all 33 registration counties, 1,564,345 parcels, retrieved on 21 August 2026 under the Open Government Licence. The Land Reform (Scotland) Act 2025 attaches duties to landholdings of 1,000 hectares or more, and the register publishes no areas: the INSPIRE areavalue attribute carries the literal string UNPOPULATED on all 1,564,345 parcels, as do referencepoint, beginlifespanversion, endlifespanversion, validfrom and validto. Area computed from the published geometry depends on the method chosen: summing parcels gives 6,581,717 hectares, the geometric union of the same polygons gives 4,714,673, a difference of 1,867,044 hectares or 28.37 per cent, ranging from 1.33 per cent in Nairn to 95.40 per cent in West Lothian. Zero identifier format violations across all 1,564,345 parcels, a null result reported as one. Every headline computed two independent ways.",
+  },
+  '/research/nordic-health-data-catalogues': {
+    title: 'Nordic health dataset catalogues measured against HealthDCAT-AP Release 7 | Tesseract Academy for the Public Sector',
+    description: "An open OWL 2, SKOS and SHACL ontology and a reproducible census of Nordic health dataset descriptions, built on 25 August 2026 from the data.europa.eu SPARQL endpoint and the Findata Aineistokatalogi public API. Across the eleven Nordic national catalogues harvested by data.europa.eu there are 2,811 dataset descriptions carrying the EU health theme, and none satisfies all eight properties HealthDCAT-AP Release 7 makes mandatory on dcat:Dataset; three of the eight are present on exactly zero. Finland contributes 1,146 themed descriptions and not one uses the EU data theme authority vocabulary, so a European health filter returns zero Finnish datasets while avoindata.fi returns 57. Across the endpoint 36 IRIs are in use inside the EU data theme namespace and the authority defines 14, with 1,238 datasets carrying one of the other 22, including 806 on the literal string undefined. The authority host answers HTTP 200 with an empty graph for terms it never defined. Findata holds 89,368 variable descriptions of which 84.74 per cent carry no English label. Every headline computed two independent ways.",
   },
   '/research/open-data-catalog-assurance': {
     title: 'Fifty-nine federal agencies are validated against the schema that exempts them | Tesseract Academy for the Public Sector',
@@ -590,6 +600,7 @@ const App: React.FC = () => {
               <Route path="/compliance" element={<Compliance />} />
               <Route path="/testimonials" element={<Feedback />} />
               <Route path="/about" element={<About />} />
+              <Route path="/open-source" element={<OpenSource />} />
               <Route path="/research/welsh-government-land-valuation" element={<WelshGovernment />} />
               <Route path="/research/national-digital-twin-programme" element={<NationalDigitalTwin />} />
               <Route path="/research/bridgeai-creative-industries" element={<BridgeAI />} />
@@ -667,6 +678,7 @@ const App: React.FC = () => {
               <Route path="/research/space-object-register-ontology" element={<SpaceObjectRegisterOntology />} />
               <Route path="/research/spectral-library-ontology" element={<SpectralLibraryOntology />} />
               <Route path="/research/uk-register-ontology" element={<UkRegisterOntology />} />
+              <Route path="/research/nordic-health-data-catalogues" element={<NordicHealthDataCatalogues />} />
               <Route path="/research/open-data-catalog-assurance" element={<OpenDataCatalogAssurance />} />
               <Route path="/research/dkan-portal-census" element={<DkanPortalCensus />} />
               <Route path="/research/land-register-ontology" element={<LandRegisterOntology />} />
