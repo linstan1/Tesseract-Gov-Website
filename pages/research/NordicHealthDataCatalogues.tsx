@@ -78,6 +78,14 @@ const FAQ_SCHEMA = {
     },
     {
       '@type': 'Question',
+      name: 'Do the Nordic health data strategy documents address catalogue metadata?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Not by name. Sitra study 255 of February 2026, proposing a Finnish Health Data Space, names FHIR, openEHR and OMOP and cites Findata regulation 1/2021 on dataset descriptions, and its text mentions DCAT zero times. The Nature Medicine paper of 2026 by Andreassen and colleagues on a Nordic AI-Health infrastructure commits to a Nordic Common Data Model with rigorous schema auditing and FAIR-compliant metadata, and says the project must treat EHDS compliance as a primary design constraint rather than a retrofit, but does not name DCAT, DCAT-AP or HealthDCAT-AP either. Both treat data standardisation as a question about what is inside a dataset. The discovery layer, which decides whether anyone outside the country can find the dataset, is where the measurement reported here finds zero.',
+      },
+    },
+    {
+      '@type': 'Question',
       name: 'When does the European Health Data Space start to apply to secondary use?',
       acceptedAnswer: {
         '@type': 'Answer',
@@ -466,22 +474,31 @@ export const NordicHealthDataCatalogues: React.FC = () => (
         7. Neither piece of work answers the other&apos;s question.
       </p>
       <p className="text-gov-dark leading-relaxed">
-        A second piece of prior art sits alongside this one and is worth naming, because it shares an author with
-        the Finnish proposal. Ole A. Andreassen and colleagues, with Olli Kallioniemi as last author, published
-        &ldquo;An AI-Health infrastructure for the Nordic region: technical foundations, data assets, and a
-        roadmap for deployment&rdquo; in <em>Nature Medicine</em> in 2026 (doi 10.1038/s41591-026-04575-4). It sets
-        out the Nordic AI-Health Initiative: a platform built on the region&apos;s large scale longitudinal and
-        multimodal health datasets, aimed at secure and regulation compliant access and at generalisable models
-        for AI driven discovery. The same person is therefore arguing for a national Finnish health data space and
-        for a Nordic AI health platform, which is a coherent position and the right ambition.
+        A second piece of prior art sits alongside this one and shares an author with the Finnish proposal. Ole A.
+        Andreassen and twenty one colleagues, with Olli Kallioniemi among them, published &ldquo;An AI-Health
+        infrastructure for the Nordic region: technical foundations, data assets, and a roadmap for
+        deployment&rdquo; in <em>Nature Medicine</em> in 2026 (doi 10.1038/s41591-026-04575-4). It proposes a
+        Nordic AI-Health platform over the region&apos;s linked registries and biobanks, a Nordic Common Data
+        Model built on OMOP, federated learning across national trusted research environments, and an integrated
+        high performance computing layer. It cites the Sitra report as reference 15. We read the SSRN preprint
+        rather than the published version, so the two may differ in detail.
       </p>
       <p className="text-gov-dark leading-relaxed">
-        We could not read that paper in full. It sits behind an authentication wall, its SSRN preprint returned
-        HTTP 403, and we are not going to characterise a paper from its abstract and a press release. So we make
-        no claim about whether it addresses catalogue metadata, and a reader should check rather than take our
-        silence either way. What we can say is narrow and verifiable: a platform built on those data assets has to
-        make them findable to the people it is built for, and on the one axis measured here the region currently
-        publishes nothing that a European discovery route can see.
+        Its roadmap is the most useful thing here, because it argues our timing better than we would. Step five
+        says the project must &ldquo;treat EHDS compliance as a primary design constraint rather than a
+        retrofit&rdquo;. Step two commits to a common data model &ldquo;supported by rigorous schema auditing and
+        FAIR-compliant metadata&rdquo;, and the body promises that datasets will undergo &ldquo;schema auditing,
+        ontology mapping, and controlled-access onboarding&rdquo;. We agree with all of it.
+      </p>
+      <p className="text-gov-dark leading-relaxed">
+        The observation to make, carefully, is the same one the Finnish proposal invites. The paper names FAIR,
+        whose first letter is findability, and it names OMOP, ICD, imaging and pathology standards, all of which
+        describe what is inside a dataset. It does not name DCAT, DCAT-AP or HealthDCAT-AP, which is the profile
+        that decides whether anyone outside your own country can find the dataset at all. Two of the most
+        considered documents produced in this region this year both treat data standardisation as a content
+        problem, and the discovery layer is where the measurement above finds zero. If EHDS compliance is to be a
+        primary design constraint rather than a retrofit, the catalogue metadata is part of what that constrains,
+        and it is the part currently at zero across all five countries.
       </p>
       <p className="text-gov-dark leading-relaxed">
         The European Commission also publishes an official HealthDCAT-AP validator, built on the Interoperability
