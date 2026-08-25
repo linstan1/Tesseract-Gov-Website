@@ -48,6 +48,18 @@ export const Research: React.FC = () => {
         </p>
       </section>
 
+      <section className="bg-gov-blue/5 border border-gov-blue/20 p-8 rounded-xl flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+        <div>
+          <h2 className="text-xl font-bold text-gov-dark mb-1">Ontology engineering</h2>
+          <p className="text-sm text-gov-secondary max-w-2xl">
+            The largest single strand of the research below. Register integrity ontologies, standards crosswalks, verification research and language model grounding, indexed in one place with the definitions that go with them.
+          </p>
+        </div>
+        <Link to="/ontology" className="inline-flex items-center gap-1.5 text-sm font-semibold text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors flex-shrink-0">
+          Browse the ontology work <ArrowRight className="w-4 h-4" />
+        </Link>
+      </section>
+
       <section className="space-y-6">
         <div className="border-b border-gov-border/30 pb-4">
           <h2 className="text-3xl font-bold text-gov-dark">{CATEGORY_LABELS['open-demo']}</h2>

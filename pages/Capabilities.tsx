@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { BookOpen, LineChart, Zap, ClipboardList, BarChart3, ArrowRight } from 'lucide-react';
+import { BookOpen, LineChart, Zap, ClipboardList, BarChart3, Network, ArrowRight } from 'lucide-react';
 import { Card } from '../components/ui/Card';
 
 export const Capabilities: React.FC = () => {
@@ -14,6 +14,25 @@ export const Capabilities: React.FC = () => {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <Card className="h-full flex flex-col group">
+          <div className="p-3.5 bg-gov-blue/8 w-fit rounded-md mb-5 group-hover:bg-gov-blue/12 transition-colors duration-300">
+            <Network className="w-6 h-6 text-gov-blue" />
+          </div>
+          <h2 className="text-lg font-semibold text-gov-dark mb-3">Ontology Engineering & Knowledge Graphs</h2>
+          <p className="text-gov-secondary/90 mb-5 leading-relaxed">
+            Domain ontologies in OWL 2, SKOS and SHACL, standards crosswalks, knowledge graph construction, and a closed-world check that rejects ontology terms an AI pipeline invented. <Link to="/services/ontology-engineering" className="text-gov-blue hover:underline">Full service details</Link>, or <Link to="/ontology" className="text-gov-blue hover:underline">browse the published work</Link>.
+          </p>
+          <div className="bg-gov-bg rounded-lg p-4 mt-auto border border-gov-border/30">
+            <p className="text-xs font-semibold text-gov-blue uppercase tracking-wider mb-2">Proof</p>
+            <p className="text-sm text-gov-secondary leading-relaxed mb-3">
+              <strong>IES4, the UK defence information exchange standard</strong>  - fine-tuning an open model against the published ontology cut confabulated terms from <strong>93.7%</strong> to <strong>1.0%</strong> and raised term conformance from <strong>0%</strong> to <strong>88.6%</strong>, verified against the ontology rather than by a judge model.
+            </p>
+            <Link to="/research/fine-tuning-llm-government-data-standard" className="inline-flex items-center gap-1.5 text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline">
+              Read the study <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+        </Card>
+
         <Card className="h-full flex flex-col group">
           <div className="p-3.5 bg-gov-blue/8 w-fit rounded-md mb-5 group-hover:bg-gov-blue/12 transition-colors duration-300">
             <BookOpen className="w-6 h-6 text-gov-blue" />

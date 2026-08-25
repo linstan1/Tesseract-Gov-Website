@@ -1,4 +1,4 @@
-# Tesseract Academy for the Public Sector — Full Content
+# Tesseract Academy for the Public Sector: Full Content
 
 Kampakis and Co Ltd (trading as The Tesseract Academy) is a UK-based AI and data science consultancy. This file contains the complete prose content of all pages for AI model ingestion.
 
@@ -32,10 +32,10 @@ The company is an SME/micro enterprise delivering research-backed AI, data scien
 
 ## Team
 
-**Dr Stylianos Kampakis — Managing Director**
+**Dr Stylianos Kampakis: Managing Director**
 Dr Kampakis holds a PhD in Machine Learning from University College London, is a Chartered Statistician (CStat), and a Fellow of the Royal Statistical Society (FRSS). He is an Honorary Research Fellow at UCL Centre for Blockchain Technologies and a Data Science Advisor at London Business School. He has authored more than 40 peer-reviewed journal articles and three books on AI and data science, including works published by Packt and O'Reilly. In 2025 he delivered three official UK Government Business Academy webinars on AI adoption for growing businesses, in partnership with the Department for Business and Trade.
 
-**Fabio Rovai MSc — Partner and Delivery Lead**
+**Fabio Rovai MSc: Partner and Delivery Lead**
 Fabio Rovai holds an MSc in Data Science and Artificial Intelligence from the University of the Arts London. He served as Associate Lecturer at UAL, teaching more than 1,000 students across five programmes. He is a NeurIPS Ethics Reviewer and is DBS checked (enhanced, children and adults). He leads procurement, delivery, and client management across BridgeAI, National Digital Twin Programme, and Welsh Government contracts.
 
 **DV-cleared Principal Consultant**
@@ -43,18 +43,18 @@ The team includes a DV-cleared (Developed Vetting) principal consultant capable 
 
 ---
 
-## Procurement — How to Buy
+## Procurement: How to Buy
 
 UK public sector organisations can commission Tesseract Academy services through three routes:
 
 
 **Route 1: Crown Commercial Service frameworks (preferred)**
 Tesseract Academy is an appointed supplier on:
-- RM6200 Artificial Intelligence DPS — AI consulting, model development, ethics and governance
-- RM6094 Spark DPS — research, data science, digital transformation
-- RM6126 Research and Insights DPS — survey design, public engagement, qualitative research
-- RM6219 Learning and Training Services DPS — off-the-shelf and bespoke training, learning technologies, education services
-- RM6235 Space-Enabled and Geospatial Services DPS — geospatial, remote sensing and PNT, satellite communication, unmanned autonomous vehicles, upstream professional services
+- RM6200 Artificial Intelligence DPS: AI consulting, model development, ethics and governance
+- RM6094 Spark DPS: research, data science, digital transformation
+- RM6126 Research and Insights DPS: survey design, public engagement, qualitative research
+- RM6219 Learning and Training Services DPS: off-the-shelf and bespoke training, learning technologies, education services
+- RM6235 Space-Enabled and Geospatial Services DPS: geospatial, remote sensing and PNT, satellite communication, unmanned autonomous vehicles, upstream professional services
 
 Framework contracts can be awarded without a full OJEU tender. Buyers must issue a competition to suppliers on the relevant lot, evaluate responses, and award. No minimum value thresholds apply.
 
@@ -67,6 +67,23 @@ Tesseract Academy regularly participates in consortium bids led by prime contrac
 ---
 
 ## Capabilities
+
+### Ontology Engineering and Knowledge Graphs
+The company's most distinctive technical specialism. Domain ontology design in OWL 2 with SKOS controlled vocabularies and SHACL constraints; standards crosswalks where the information loss is measured rather than assumed; knowledge graph construction from full source data with provenance on every assertion; public register and reference data assurance; and closed-world verification of AI-generated RDF. Standards: RDF, RDFS, OWL 2 DL, SKOS, SHACL, SPARQL, JSON-LD, DCAT. Service page: https://gov.tesseract.academy/services/ontology-engineering. Research index: https://gov.tesseract.academy/ontology.
+
+The technical position that distinguishes this work is that SHACL, the W3C validation language, operates under the open-world assumption and silently passes any term it has no shape for. Measured across three real vocabularies (schema.org, IES4, and the OBO Foundry's PATO and RO), open-world SHACL validated as conformant every one of 300 data graphs carrying a fabricated term, drawn from 418 fakes. A closed-world vocabulary gate caught all 300 with zero false positives on clean data. This is the exact failure mode of a language model asked to author RDF, so every engagement ships a check that can fail.
+
+Tooling is the company's own open-source engine, Open Ontologies (https://github.com/fabio-rovai/open-ontologies): a single Rust binary providing an MCP server, an in-memory Oxigraph triple store, a native OWL 2 DL tableaux reasoner, SHACL validation, SPARQL and versioning. No JVM, self-hostable, so data does not leave the client network.
+
+Published evidence: 51 open ontology studies across 29 public repositories, grouped into register integrity ontologies (UK, Italy, US banks, US securities, EU insurance, US funds, Scottish land, space objects, on-chain control, mass spectrometry libraries, biosurveillance, retraction registers, K-12 learning standards, media measurement, US federal vocabularies), standards crosswalks (IES to HQDM, PYRAMID avionics, industrial standards, construction standards, IATA ONE Record, MTConnect and the Asset Administration Shell, Skills England to ESCO, UK waste reporting), verification research, language model grounding, and data catalogue conformance. Every headline is computed at least two independent ways and failed hypotheses are reported rather than dropped.
+
+Named results: fine-tuning Qwen3-Coder-30B on IES4, the UK Information Exchange Standard for defence and national security data sharing, cut confabulated ontology terms from 93.7% to 1.0% and raised term conformance from 0% to 88.6%, verified against the published ontology rather than by a judge model, with the checkpoint published openly on Hugging Face. An audit of the IATA ONE Record data model ontology across six releases found that all 496 properties in the 2022-12 release declare an rdfs:domain, none of the 522 in 2023-12 do, and none of the 534 in 2024-12 do, with lint issues rising from 2 to 650 over the same span, verified independently with rdflib and with Open Ontologies, which agree exactly.
+
+Upstream defect reports have been filed against the IATA ONE Record data model, FIBO, the W3C JSON-LD specification, DCAT-US at the US General Services Administration, and the USDA National Agricultural Library thesaurus. SHACL shapes were contributed to GLEIF on the maintainers' invitation.
+
+Training: a free 15-lesson ontology engineering course covering RDF, RDFS, OWL 2 TBox and ABox modelling, SPARQL, SHACL, triple stores, GraphRAG and ontology governance, at https://tesseract.academy/courses/ontology-foundations-to-advanced-modeling-semantic-standards-rdf-owl-shacl/.
+
+Procurement routes: CCS RM6200 (AI DPS) for build work, RM6126 (Research and Insights DPS) for standards audits and register assurance, RM6219 (Learning and Training Services DPS) for training, and direct award below £10,000 for a scoped audit of an existing ontology or knowledge graph.
 
 ### AI and Data Science
 Custom AI model development, natural language processing, machine learning pipelines, and predictive analytics tailored to public sector operational needs. Delivered under GDS assessment criteria and aligned with the UK Government AI Framework. Tools: Python, R, TensorFlow, PyTorch, scikit-learn, Hugging Face, LangChain.
@@ -90,7 +107,7 @@ Responsible AI frameworks, bias auditing, algorithmic impact assessments, and co
 
 ## Use Cases
 
-### Welsh Government — Testing Land Valuation Methods (2025–2026)
+### Welsh Government: Testing Land Valuation Methods (2025–2026)
 **Challenge:** The Welsh Government needed to evaluate different approaches for assessing land values to support local government finance policy development, comparing traditional and AI-driven methodologies.
 
 **Intervention:** Commissioned by Welsh Government to test five distinct valuation methodologies: market-based statistical valuation, advanced algorithmic and machine-learning applications, formula-based valuation by land area, conventional valuation approaches, and innovative experimental approaches. The research covered 1,916 Lower Super Output Areas (LSOAs), representing 99 percent of Welsh geography.
@@ -101,7 +118,7 @@ Responsible AI frameworks, bias auditing, algorithmic impact assessments, and co
 
 **Reusable assets:** Valuation methodology comparison framework. Published reports available on GOV.WALES.
 
-### National Digital Twin Programme — AI Ontology Extension Generator (2024–2025)
+### National Digital Twin Programme: AI Ontology Extension Generator (2024–2025)
 **Challenge:** The National Digital Twin Programme (NDTP), a UK Government initiative under the Department for Business and Trade, needed to automate ontology development to accelerate the creation of digital twins across UK infrastructure.
 
 **Intervention:** Contributed to the development of an open-source AI-powered tool that automates ontology generation and extension through a web interface. The tool combines data profiling, Named Entity Recognition, and large language models to extract and generate ontology entities from multiple data formats (CSV, JSON, RDF/Turtle).
@@ -112,7 +129,7 @@ Responsible AI frameworks, bias auditing, algorithmic impact assessments, and co
 
 **Reusable assets:** Open-source tool available at github.com/National-Digital-Twin/ndtp-ai-ontology-extension.
 
-### BridgeAI Programme — AI for UK Creatives (Innovate UK, 2025–2026)
+### BridgeAI Programme: AI for UK Creatives (Innovate UK, 2025–2026)
 **Challenge:** Innovate UK's BridgeAI programme needed to support the UK creative industries in adopting AI technologies, bridging the gap between cutting-edge AI research and practical implementation for creative sector SMEs.
 
 **Intervention:** Delivered a programme delivery report for the BridgeAI initiative, providing research-backed guidance on AI adoption for UK creatives. Led by Fabio Rovai and Dr Stylianos Kampakis, the work covered AI readiness assessment, implementation strategies, and practical tooling recommendations. The BridgeAI Skills Hub launch event was held at Ona Studios, London. Co-delivered sector-specific AI readiness sessions with PwC targeting construction, creative industries, and transport. Contract reference: GSS24646.
@@ -121,7 +138,7 @@ Responsible AI frameworks, bias auditing, algorithmic impact assessments, and co
 
 **Reusable assets:** AI adoption framework and readiness assessment methodology for creative industries.
 
-### Kalgera / Fintech Scotland — Financial Vulnerability Research (2024)
+### Kalgera / Fintech Scotland: Financial Vulnerability Research (2024)
 **Challenge:** Kalgera, a fintech specialising in protecting financially vulnerable customers, needed primary qualitative research to validate their AI-driven early warning signal architecture. The research had to capture lived experiences of financial vulnerability in Scotland, including scam victims, people experiencing cognitive decline, and carers managing money on behalf of others.
 
 **Intervention:** Designed and delivered an end-to-end user research programme: paid Facebook/Instagram recruitment campaign targeting financially vulnerable adults across Scotland (50 plus primary, 35–49 secondary), a screening survey collecting quantitative and qualitative data, and in-depth 1:1 interviews (60 minutes each). The interview protocol was mapped directly to Kalgera's signal categories: spending pattern changes, income depletion, credit reliance, new payees, cash patterns, bill changes, account access, and scam indicators.
@@ -137,10 +154,10 @@ Responsible AI frameworks, bias auditing, algorithmic impact assessments, and co
 ### Welsh Government Land Valuation Research Report
 Commissioned by Welsh Government, 2025–2026. Independent research into the feasibility of land value tax models for Wales. Combined statistical analysis of land registry data with international comparator evidence and stakeholder interviews across Welsh local authorities. Findings presented to Welsh Government officials and cited in Senedd committee proceedings. Full report published on GOV.WALES and available at gov.tesseract.academy/papers/testing-land-valuation-methods-tesseract-academy-report.pdf.
 
-### AI Skills for the UK Workforce — Skills England
+### AI Skills for the UK Workforce: Skills England
 Skills England / UK Government Publication, 2025. Tesseract Academy is cited as an AI training provider and consultancy in Skills England's official research into AI skills for the UK workforce. The publication's methodology included stakeholder workshops with 43 organisations, with Tesseract Academy contributing alongside institutions including The Alan Turing Institute and the Surrey AI Centre.
 
-### AI Ontology Extension Generator — National Digital Twin Programme
+### AI Ontology Extension Generator: National Digital Twin Programme
 Collaboration with NDTP (Department for Business and Trade), 2024–2025. Contributed to the development of an open-source AI-powered tool that automates ontology generation and extension for the National Digital Twin Programme. The tool combines data profiling, Named Entity Recognition, and large language models.
 
 ### Proving the Utility of Large Language Models in Cybersecurity Simulations
@@ -149,16 +166,16 @@ Collaboration with The Alan Turing Institute, 2025. Research paper exploring how
 ### BridgeAI Skills Hub Launch and PwC Sector Workshop
 Innovate UK / BridgeAI Programme, 2025–2026. Designed and delivered AI adoption workshops for underserved UK sectors as part of the Innovate UK-funded BridgeAI programme. Led the Skills Hub launch event at Ona Studios, London, and co-delivered sector-specific AI readiness sessions with PwC targeting construction, creative industries, and transport.
 
-### Open Governance — Open-Source AI Governance Server
+### Open Governance: Open-Source AI Governance Server
 Open-Source Tool, ongoing. An open-source AI governance platform helping organisations discover, assess, and monitor AI systems against EU AI Act, NIST AI RMF, and ISO 42001 frameworks. Provides automated risk classification, compliance matrices, bias and hallucination monitoring, policy enforcement gates, and audit-ready reporting through 48 governance tools. Published at github.com/fabio-rovai/open-governance.
 
-### London Data Week 2025 — AI Tools for the Visually Impaired
+### London Data Week 2025: AI Tools for the Visually Impaired
 London Data Week, co-organised with Vision Ability CIC, 2025. Co-organised a public workshop and demonstration on making AI tools accessible to people with visual impairments. Delivered at Chabad Islington Community Centre as part of London Data Week 2025, in partnership with Vision Ability CIC.
 
-### UK Government Business Academy — AI Webinar Series
+### UK Government Business Academy: AI Webinar Series
 Department for Business and Trade, Business Academy, 2025. Delivered a series of three official UK Government Business Academy webinars on AI adoption for growing businesses, led by Dr Stylianos Kampakis. Topics: designing AI roadmaps, choosing the right AI tools using the OCT (Objectives-Capabilities-Tools) methodology, and building internal AI capability including skills-gap analysis and organisational models.
 
-### FCA Consultation — Stablecoins and UK Crypto Regulation
+### FCA Consultation: Stablecoins and UK Crypto Regulation
 Financial Conduct Authority Regulatory Consultation, 2025. Contributed expert analysis to the FCA's consultation on stablecoin regulation and the future of crypto asset oversight in the UK. Provided evidence-based commentary on regulatory frameworks, consumer protection mechanisms, and systemic risk considerations for digital assets.
 
 ### Is Blockchain Part of the Future of Art?

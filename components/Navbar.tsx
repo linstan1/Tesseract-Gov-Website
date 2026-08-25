@@ -5,6 +5,7 @@ import { Menu, X } from 'lucide-react';
 const NAV_ITEMS = [
   { label: 'How to Buy', path: '/how-to-buy' },
   { label: 'Capabilities', path: '/capabilities' },
+  { label: 'Ontology', path: '/ontology' },
   { label: 'Use Cases', path: '/use-cases' },
   { label: 'Industries', path: '/industries' },
   { label: 'Research', path: '/research' },
@@ -33,7 +34,7 @@ export const Navbar: React.FC = () => {
                 to={item.path}
                 aria-current={location.pathname === item.path ? 'page' : undefined}
                 className={({ isActive }) =>
-                  `px-4 py-2 text-sm font-medium transition-colors duration-150 rounded-lg ${
+                  `px-3 py-2 text-sm font-medium whitespace-nowrap transition-colors duration-150 rounded-lg ${
                     isActive
                       ? 'text-gov-dark bg-gov-bg'
                       : 'text-gov-secondary hover:text-gov-dark hover:bg-gov-bg/50'

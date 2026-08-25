@@ -107,6 +107,7 @@ const COMPANY_DATA = {
     "professionalIndemnity": { "value": 5000000, "currency": "GBP" }
   },
   "services": [
+    "Ontology Engineering and Knowledge Graphs (RDF, OWL 2, SKOS, SHACL)",
     "AI and Data Science Consulting",
     "Research and Policy Advisory",
     "Public Engagement and Participatory Research",
@@ -114,6 +115,34 @@ const COMPANY_DATA = {
     "Survey Design and Delivery",
     "AI Ethics and Governance"
   ],
+  "ontologyEngineering": {
+    "url": "https://gov.tesseract.academy/services/ontology-engineering",
+    "researchIndex": "https://gov.tesseract.academy/ontology",
+    "standards": ["RDF", "RDFS", "OWL 2 DL", "SKOS", "SHACL", "SPARQL", "JSON-LD", "DCAT"],
+    "scope": [
+      "Domain ontology design in OWL 2 with SKOS vocabularies and SHACL constraints",
+      "Standards crosswalks and interoperability audits with measured information loss",
+      "Knowledge graph construction from full source data with provenance on every assertion",
+      "Closed-world vocabulary verification of AI-generated RDF, beyond open-world SHACL",
+      "Public register and reference data assurance",
+      "Ontology engineering training in RDF, OWL, SPARQL, SHACL and GraphRAG"
+    ],
+    "engine": {
+      "name": "Open Ontologies",
+      "repository": "https://github.com/fabio-rovai/open-ontologies",
+      "description": "Rust MCP server with an in-memory Oxigraph triple store, a native OWL 2 DL tableaux reasoner, SHACL validation, SPARQL and versioning. Single binary, no JVM, self-hostable."
+    },
+    "evidence": {
+      "publishedStudies": 51,
+      "publicRepositories": 29,
+      "method": "Every headline computed at least two independent ways; failed hypotheses reported rather than dropped; reproducible from public data.",
+      "namedResult": "Fine-tuning an open model on the UK IES4 standard cut confabulated ontology terms from 93.7% to 1.0% and raised term conformance from 0% to 88.6%, verified against the published ontology.",
+      "upstreamDefectReports": ["IATA ONE Record", "FIBO", "W3C JSON-LD", "DCAT-US (GSA)", "USDA National Agricultural Library thesaurus"],
+      "upstreamContributions": ["SHACL shapes contributed to GLEIF on the maintainers' invitation"]
+    },
+    "deliveredFor": "National Digital Twin Programme (Department for Business and Trade), AI ontology extension generator, open-sourced under Apache 2.0",
+    "procurement": ["RM6200", "RM6126", "RM6219"]
+  },
   "selectedContracts": [
     {
       "client": "Welsh Government",

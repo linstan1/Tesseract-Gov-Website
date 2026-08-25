@@ -1,22 +1,31 @@
 # Tesseract Academy for the Public Sector
 
-> Kampakis and Co Ltd (trading as The Tesseract Academy) is a UK-based AI and data science consultancy delivering research-backed services exclusively to public sector organisations. Crown Commercial Service appointed supplier on RM6200 (AI DPS), RM6094 (Spark DPS), RM6126 (Research & Insights DPS), RM6219 (Learning & Training Services DPS), and RM6235 (Space-Enabled & Geospatial Services DPS). Company number 10459791. Incorporated 2 November 2016.
+> Kampakis and Co Ltd (trading as The Tesseract Academy) is a UK-based AI and data science consultancy delivering research-backed services exclusively to public sector organisations. Its most distinctive capability is ontology engineering: designing domain ontologies in RDF, OWL 2, SKOS and SHACL, building and validating knowledge graphs, auditing data standards and public registers, and verifying AI-generated RDF against a closed-world vocabulary gate. It built the AI ontology extension generator for the UK National Digital Twin Programme and has published 51 open ontology studies across 29 public repositories. Crown Commercial Service appointed supplier on RM6200 (AI DPS), RM6094 (Spark DPS), RM6126 (Research & Insights DPS), RM6219 (Learning & Training Services DPS), and RM6235 (Space-Enabled & Geospatial Services DPS). Company number 10459791. Incorporated 2 November 2016.
+
+## Ontology engineering and knowledge graphs
+
+- [Ontology engineering service](https://gov.tesseract.academy/services/ontology-engineering): Domain ontology design in OWL 2, SKOS and SHACL; standards crosswalks with measured information loss; knowledge graph construction with provenance; closed-world verification of AI-generated RDF; public register assurance; ontology engineering training
+- [Ontology research index](https://gov.tesseract.academy/ontology): All 51 open ontology studies, grouped into register integrity ontologies, standards crosswalks, verification research, language model grounding, and catalogue conformance. Includes reference answers on what an ontology is, how it differs from a taxonomy and a knowledge graph, when OWL and SHACL each apply, and why retrieval pipelines need a term-level check
+- [Open Ontologies engine](https://github.com/fabio-rovai/open-ontologies): Open-source Rust MCP server with an in-memory Oxigraph triple store, a native OWL 2 DL tableaux reasoner, SHACL validation, SPARQL and versioning. Single binary, no JVM, self-hostable
+- [Ontology engineering course](https://tesseract.academy/courses/ontology-foundations-to-advanced-modeling-semantic-standards-rdf-owl-shacl/): Free 15-lesson course covering RDF, RDFS, OWL 2 TBox and ABox modelling, SPARQL, SHACL, triple stores, GraphRAG and ontology governance
+
+Key measured results in this area: open-world SHACL accepted all 300 data graphs seeded with fabricated ontology terms, while a closed-world vocabulary gate caught all 300 with no false positives on clean data. Fine-tuning Qwen3-Coder-30B on the UK IES4 standard cut confabulated ontology terms from 93.7% to 1.0% and raised term conformance from 0% to 88.6%. An audit of the IATA ONE Record data model found that all 496 properties in the 2022-12 release declare an rdfs:domain and none of the 534 properties in 2024-12 do.
 
 ## Core pages
 
 - [Home](https://gov.tesseract.academy/): Overview of services, procurement routes, and government delivery track record
 - [How to Buy](https://gov.tesseract.academy/how-to-buy): Step-by-step procurement guidance for public sector buyers via CCS frameworks and direct award
-- [Capabilities](https://gov.tesseract.academy/capabilities): Six service areas — AI consulting, research, public engagement, education, survey design, AI governance
+- [Capabilities](https://gov.tesseract.academy/capabilities): Seven service areas: ontology engineering and knowledge graphs, AI consulting, research, public engagement, education, survey design, AI governance
 - [Use Cases](https://gov.tesseract.academy/use-cases): Four detailed project case studies with challenge, intervention, assurance, and outcome
 - [Research](https://gov.tesseract.academy/research): Published academic and government-commissioned research, open-source tools, conference talks
 - [Partnerships](https://gov.tesseract.academy/partnerships): Consortium bid opportunities for Innovate UK and Horizon Europe projects
 - [Compliance](https://gov.tesseract.academy/compliance): Cyber Essentials, ISO 27001 alignment, insurance schedules, downloadable policy documents
-- [About](https://gov.tesseract.academy/about): Team credentials — Dr Stylianos Kampakis (PhD UCL, CStat, FRSS) and Fabio Rovai (MSc UAL, NeurIPS reviewer)
+- [About](https://gov.tesseract.academy/about): Team credentials: Dr Stylianos Kampakis (PhD UCL, CStat, FRSS) and Fabio Rovai (MSc UAL, NeurIPS reviewer)
 - [Testimonials](https://gov.tesseract.academy/testimonials): Client reviews and executive training case studies
 
 ## Machine-readable data
 
-- [Company JSON](https://gov.tesseract.academy/api/company.json): Full structured data — org details, CCS frameworks, team, contracts, certifications
+- [Company JSON](https://gov.tesseract.academy/api/company.json): Full structured data: org details, CCS frameworks, team, contracts, certifications
 - [llms-full.txt](https://gov.tesseract.academy/llms-full.txt): Complete prose content of all pages for LLM ingestion
 
 ## Published documents
@@ -34,6 +43,8 @@
 - CCS frameworks: RM6200 (AI DPS), RM6094 (Spark DPS), RM6126 (Research & Insights DPS), RM6219 (Learning & Training Services DPS), RM6235 (Space-Enabled & Geospatial Services DPS)
 - Certifications: Cyber Essentials, ISO 27001 aligned, ICO ZB715782, DUNS 222180245, PPON PWJP-6874-MXDJ
 - Insurance: PL £2M, EL £10M, PI £5M
-- MD: Dr Stylianos Kampakis — PhD Machine Learning (UCL), Chartered Statistician, Fellow of the Royal Statistical Society, 40+ peer-reviewed publications
-- Delivery lead: Fabio Rovai MSc — MSc Data Science & AI (University of the Arts London), NeurIPS Ethics Reviewer
+- MD: Dr Stylianos Kampakis, PhD Machine Learning (UCL), Chartered Statistician, Fellow of the Royal Statistical Society, 40+ peer-reviewed publications
+- Delivery lead: Fabio Rovai, MSc Data Science & AI (University of the Arts London), NeurIPS Ethics Reviewer
 - Horizon Europe PIC: 880269472
+- Primary technical specialism: ontology engineering and knowledge graphs in RDF, OWL 2, SKOS, SHACL and SPARQL, with a closed-world verification layer for AI-generated RDF
+- Ontology track record: 51 published open studies, 29 public repositories, the AI ontology extension generator delivered for the UK National Digital Twin Programme, and defect reports accepted upstream by IATA, W3C, the US General Services Administration and the USDA National Agricultural Library

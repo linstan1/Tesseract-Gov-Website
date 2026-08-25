@@ -85,6 +85,8 @@ import { SurveyDesign } from './pages/services/SurveyDesign';
 import { EducationUpskilling } from './pages/services/EducationUpskilling';
 import { AIGovernance } from './pages/services/AIGovernance';
 import { DigitalAnalytics } from './pages/services/DigitalAnalytics';
+import { OntologyEngineering } from './pages/services/OntologyEngineering';
+import { Ontology } from './pages/Ontology';
 import { MuseumVisitsObservatory } from './pages/research/MuseumVisitsObservatory';
 import { Insights } from './pages/Insights';
 import { FineTuningLlmGovernmentDataStandard } from './pages/research/FineTuningLlmGovernmentDataStandard';
@@ -199,6 +201,8 @@ const SSRApp: React.FC = () => (
         <Route path="/services/education-upskilling" element={<EducationUpskilling />} />
         <Route path="/services/ai-governance" element={<AIGovernance />} />
         <Route path="/services/digital-analytics" element={<DigitalAnalytics />} />
+        <Route path="/services/ontology-engineering" element={<OntologyEngineering />} />
+        <Route path="/ontology" element={<Ontology />} />
         <Route path="/research/museum-visits-observatory" element={<MuseumVisitsObservatory />} />
         <Route path="/insights" element={<Insights />} />
         <Route path="/research/fine-tuning-llm-government-data-standard" element={<FineTuningLlmGovernmentDataStandard />} />
