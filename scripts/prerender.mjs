@@ -449,8 +449,8 @@ const PAGE_META = {
     description: 'Ontology engineering, knowledge graph design and semantic data assurance for UK government and regulated industry. Domain ontologies in OWL 2, SKOS and SHACL, standards crosswalks, register assurance, and closed-world verification of AI-generated RDF. Delivered the ontology extension tool for the National Digital Twin Programme. Procurable through CCS RM6200, RM6126 and RM6219.',
   },
   '/ontology': {
-    title: 'Ontology engineering: open research, standards audits and knowledge graphs | Tesseract Academy for the Public Sector',
-    description: 'What an ontology is, how it differs from a taxonomy and a knowledge graph, when OWL and SHACL each apply, and why AI pipelines need a closed-world check. Plus the full index of our open ontology research: register integrity, standards crosswalks, verification, language model grounding and catalogue conformance, all reproducible from public data.',
+    title: 'Safe AI: building AI systems that can be checked | Tesseract Academy for the Public Sector',
+    description: 'Safe AI is a system that cannot serve an answer or take an action nothing was able to check. Open-world SHACL passed all 300 graphs carrying a fabricated term; a closed-world gate caught all 300. A verified action gatekeeper blocks 672 of 672 unsafe actions. Grounding a model in a government standard cut confabulated terms from 93.7 per cent to 1.0 per cent. Plus the full index of our open ontology research: register integrity, standards crosswalks, verification, language model grounding and catalogue conformance, all reproducible from public data.',
   },
   '/insights': {
     title: 'UK Public Sector AI Insights — Research Findings | Tesseract Academy for the Public Sector',

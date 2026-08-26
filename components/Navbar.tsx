@@ -5,7 +5,7 @@ import { Menu, X } from 'lucide-react';
 const NAV_ITEMS = [
   { label: 'How to Buy', path: '/how-to-buy' },
   { label: 'Capabilities', path: '/capabilities' },
-  { label: 'Ontology', path: '/ontology' },
+  { label: 'Safe AI', path: '/ontology' },
   { label: 'Use Cases', path: '/use-cases' },
   { label: 'Industries', path: '/industries' },
   { label: 'Research', path: '/research' },
