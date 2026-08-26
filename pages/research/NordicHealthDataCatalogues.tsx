@@ -17,7 +17,7 @@ const SCHEMA = {
   author: { '@id': 'https://gov.tesseract.academy/#organization' },
   publisher: { '@id': 'https://gov.tesseract.academy/#organization' },
   datePublished: '2026-08-25',
-  dateModified: '2026-08-25',
+  dateModified: '2026-08-26',
   about: { '@type': 'Dataset', name: 'Health Dataset Catalogue Ontology', url: REPO },
   keywords:
     'European Health Data Space, EHDS, HealthDCAT-AP, DCAT-AP, health data access body, secondary use of health data, Findata, Nordic health data, VALO, data.europa.eu, dataset catalogue, metadata quality, SHACL, OWL 2 ontology, SKOS, register assurance, catalogue assurance, cross-border health data discovery',
@@ -219,7 +219,7 @@ export const NordicHealthDataCatalogues: React.FC = () => (
         </table>
       </div>
       <p className="text-gov-dark leading-relaxed">
-        One line in that table is not a finding and we would rather say so than let a reader take it for one. The
+        One line in that table is not a finding. The
         <code className="text-sm bg-gov-bg px-1.5 py-0.5 rounded">dcat:theme</code> figure is 100 per cent by construction,
         because descriptions were selected by carrying the health theme in the first place. It is in the table so
         the table is complete.
@@ -228,17 +228,13 @@ export const NordicHealthDataCatalogues: React.FC = () => (
       <p className="text-gov-dark leading-relaxed">
         The useful shape here is the contrast with the generic layer. <code className="text-sm bg-gov-bg px-1.5 py-0.5 rounded">dct:title</code> is
         on all 2,811. <code className="text-sm bg-gov-bg px-1.5 py-0.5 rounded">dct:description</code> is on all 2,811.
-        <code className="text-sm bg-gov-bg px-1.5 py-0.5 rounded">dct:publisher</code> is on 2,785. These are catalogues run by
-        people who are good at cataloguing. Nothing in the numbers suggests carelessness, and reading them as a
-        scorecard of national diligence would be reading them wrong.
+        <code className="text-sm bg-gov-bg px-1.5 py-0.5 rounded">dct:publisher</code> is on 2,785.
       </p>
       <p className="text-gov-dark leading-relaxed">
-        The operational consequence is narrower and more useful than a scorecard. Three properties sit at zero
+        The operational consequence is narrow and specific. Three properties sit at zero
         across five countries and eleven catalogues, which means no Nordic catalogue can currently express who the
         responsible health data access body is, what category of health data a dataset holds, or whether it has
-        structured data at variable level. Those are not fields anyone forgot to fill in. They are fields that do
-        not exist in the systems doing the publishing, so closing that gap is a procurement and system change
-        question rather than a data entry question. That is worth knowing four years before the obligation bites
+        structured data at variable level. Those fields do not exist in the systems doing the publishing, so closing that gap is a procurement and system change question rather than a data entry question. That is worth knowing four years before the obligation bites
         rather than one.
       </p>
     </section>
@@ -266,9 +262,7 @@ export const NordicHealthDataCatalogues: React.FC = () => (
         is the highest leverage single change available to any organisation in this study.
       </p>
       <p className="text-gov-dark leading-relaxed">
-        A fair objection deserves answering here, because the well informed view in Finland is that the country is
-        about as close to ready for the European Health Data Space as anyone can be at this stage, and on most
-        axes that view is correct. Kanta aggregates primary and secondary care and social care data, every care
+        Finland is strong on the axes this does not measure. Kanta aggregates primary and secondary care and social care data, every care
         provider public and private is mandated to deposit into it, Kanta PHR lets individuals contribute their own
         measurements, and the European electronic health record exchange format is on its roadmap. Findata has run
         a working permit process and a secure processing environment for years. Measured on infrastructure, on
@@ -276,13 +270,12 @@ export const NordicHealthDataCatalogues: React.FC = () => (
         and the comparison is not close.
       </p>
       <p className="text-gov-dark leading-relaxed">
-        Our finding does not contradict any of that, and it would be a misreading to take it as a scorecard on
-        Finnish readiness. It is about one specific obligation on one specific axis: the machine readable dataset
+        This finding is about one specific obligation on one specific axis: the machine readable dataset
         catalogue through which someone in another Member State discovers that a Finnish dataset exists at all.
         Having the data, having the permit process and having the exchange format are necessary and none of them
         makes a dataset findable. On that axis the measured value today is zero, and the distance between zero and
-        a good score is a theme mapping rather than a programme. Being nearly ready everywhere else is precisely
-        what makes the gap worth naming: it is the cheapest remaining item on the list.
+        a good score is a theme mapping rather than a programme. Against everything Finland has already built, it is the
+        cheapest item remaining.
       </p>
     </section>
 
@@ -301,8 +294,7 @@ export const NordicHealthDataCatalogues: React.FC = () => (
         sitting there long enough to be harvested and republished.
       </p>
       <p className="text-gov-dark leading-relaxed">
-        The reason nobody has caught this is worth stating carefully, because it generalises well beyond themes.
-        The authority host answers <strong>HTTP 200 for any IRI in the namespace</strong>. For a term it has never
+        The reason nobody has caught this generalises well beyond themes. The authority host answers <strong>HTTP 200 for any IRI in the namespace</strong>. For a term it has never
         defined it returns a well formed RDF document of 170 bytes containing no concept. For a real term such as
         <code className="text-sm bg-gov-bg px-1.5 py-0.5 rounded">HEAL</code> it returns 16,063 bytes. A validator checking
         that a theme value resolves sees success on a term that does not exist. Membership can only be decided by
@@ -310,9 +302,7 @@ export const NordicHealthDataCatalogues: React.FC = () => (
         repository pins so that a future rewrite cannot quietly reintroduce the status code check.
       </p>
       <p className="text-gov-dark leading-relaxed">
-        Being fair about scope: the health slice of this is three datasets. It is a small finding for health and a
-        large one for the endpoint, and we report it that way rather than inflating it. What it does mean for
-        health is that a theme based count of health datasets is a floor and not a census, which is why the 2,811
+        The health slice of this is three datasets. It is a small finding for health and a large one for the endpoint, and it is reported as both. What it does mean for health is that a theme based count of health datasets is a floor and not a census, which is why the 2,811
         figure above is described as one.
       </p>
     </section>
@@ -326,12 +316,10 @@ export const NordicHealthDataCatalogues: React.FC = () => (
         layer, so none of it appears anywhere in finding one.
       </p>
       <p className="text-gov-dark leading-relaxed">
-        The metadata is substantively complete. Only 2.01 per cent of the 89,368 variables lack a description.
-        People have done a great deal of careful work here. It is also almost entirely closed to anyone who does
+        The metadata is substantively complete. Only 2.01 per cent of the 89,368 variables lack a description. It is also almost entirely closed to anyone who does
         not read Finnish: <strong>84.74 per cent of the variables carry no English label</strong>, and only 7.51
         per cent of the dataset descriptions do. Cross border discovery is the stated purpose of the Regulation,
-        and a description that is complete domestically and monolingual is not a complete description for that
-        purpose however good it is.
+        and a description that is complete domestically and monolingual is not a complete description for that purpose.
       </p>
       <FindataLanguageChart />
       <p className="text-gov-dark leading-relaxed">
@@ -358,8 +346,7 @@ export const NordicHealthDataCatalogues: React.FC = () => (
         In February 2026 Sitra published study 255, <em>Terveystiedon tulevaisuus tekoälyn aikakaudella</em>, by
         Olli Kallioniemi and Kimmo Porkka, proposing a national Finnish Health Data Space on a one, one, one model:
         FHDS-Tieto as a single national data infrastructure, FHDS-Lupa as a single coordinating authorisation
-        authority, and FHDS-TKI as a single national collaboration body. It is a serious document and its
-        diagnosis is blunt. In its own English summary, &ldquo;Finland&apos;s fragmented data production and
+        authority, and FHDS-TKI as a single national collaboration body. Its diagnosis is blunt. In its own English summary, &ldquo;Finland&apos;s fragmented data production and
         governance, along with regional data silos, hinder the full-scale utilisation of AI, the formation of a
         comprehensive national overview, and compatibility with the EHDS.&rdquo;
       </p>
@@ -369,24 +356,20 @@ export const NordicHealthDataCatalogues: React.FC = () => (
         health filter reads.
       </p>
       <p className="text-gov-dark leading-relaxed">
-        There is a second observation worth making carefully, because it is about an absence and absences are easy
-        to overstate. The report is thorough on data content standards. It names HL7 FHIR, openEHR and the OMOP
+        The report is thorough on data content standards. It names HL7 FHIR, openEHR and the OMOP
         Common Data Model repeatedly, it puts the FAIR principles at the centre of what FHDS-Tieto is for, and it
         cites Findata&apos;s own binding regulation 1/2021 on the content, concepts and structures of dataset
-        descriptions, noting that standardisation of metadata is essential for findability. Those are the right
-        instincts and the right instruments.
+        descriptions, noting that standardisation of metadata is essential for findability. Those are the right instruments for the problem they address.
       </p>
       <p className="text-gov-dark leading-relaxed">
         The extracted text of the report mentions DCAT zero times and HealthDCAT-AP zero times. FHIR, openEHR and
         OMOP describe what is inside a dataset. HealthDCAT-AP describes the dataset so that someone in another
         Member State can find it in the first place, and it is the profile the European Commission publishes for
         that purpose. A national programme can get every content model right and still be undiscoverable, which is
-        the position finding two measures. We state this as an observation about the document&apos;s text and not
-        about the authors&apos; knowledge: figures in the report are images, we read the extracted text, and the
-        omission may well be deliberate scoping rather than oversight.
+        the position finding two measures. This is an observation about the document&apos;s text. Figures in the report are images, we read the extracted text, and the omission may be deliberate scoping.
       </p>
       <p className="text-gov-dark leading-relaxed">
-        This is not an abstract gap, and Finland is already paying to close it. On 20 May 2026 Business Finland
+        Finland is already paying to close this gap. On 20 May 2026 Business Finland
         announced funding for <em>Roadmap to Finnish Health Data Space</em>, a joint project with a budget of
         7.7 million euros of which Business Finland funds 4.6 million. It is the first joint project of the
         Finnish wellbeing regions to be funded. The participants are HUS, the Pirkanmaa wellbeing region, the
@@ -403,7 +386,7 @@ export const NordicHealthDataCatalogues: React.FC = () => (
         take at the start of a roadmap than at the end of one.
       </p>
       <p className="text-gov-dark leading-relaxed">
-        The constructive version is short. Finland already has a binding national regulation on dataset
+        Finland already has a binding national regulation on dataset
         descriptions, a permit authority that operates a catalogue, and, in that catalogue, 89,368 variable
         descriptions that would answer the single hardest requirement in the European profile. What is missing
         between those assets and European discoverability is a mapping and a theme binding, both of which are
@@ -491,7 +474,7 @@ export const NordicHealthDataCatalogues: React.FC = () => (
         ontology mapping, and controlled-access onboarding&rdquo;. We agree with all of it.
       </p>
       <p className="text-gov-dark leading-relaxed">
-        The observation to make, carefully, is the same one the Finnish proposal invites. The paper names FAIR,
+        The observation is the same one the Finnish proposal invites. The paper names FAIR,
         whose first letter is findability, and it names OMOP, ICD, imaging and pathology standards, all of which
         describe what is inside a dataset. It does not name DCAT, DCAT-AP or HealthDCAT-AP, which is the profile
         that decides whether anyone outside your own country can find the dataset at all. Two of the most
@@ -539,7 +522,7 @@ export const NordicHealthDataCatalogues: React.FC = () => (
           query that produced it so you can rerun it yourself whenever you like.
         </p>
         <p className="text-gov-dark leading-relaxed">
-          If it is useful, a bounded first engagement is a two week conformance baseline for a single catalogue:
+          A bounded first engagement is a two week conformance baseline for a single catalogue:
           your descriptions measured against HealthDCAT-AP Release 7 property by property, the per record evidence
           rows, a mapping of which mandatory properties your current schema can source and which have no source
           field at all, and a written note on what closing each gap actually requires. Fixed scope, fixed price,
