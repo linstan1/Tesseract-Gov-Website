@@ -96,6 +96,7 @@ const TradeRemedyOntology = lazy(() => import('./pages/research/TradeRemedyOntol
 const SpectralLibraryOntology = lazy(() => import('./pages/research/SpectralLibraryOntology').then(m => ({ default: m.SpectralLibraryOntology })));
 const UkRegisterOntology = lazy(() => import('./pages/research/UkRegisterOntology').then(m => ({ default: m.UkRegisterOntology })));
 const NordicHealthDataCatalogues = lazy(() => import('./pages/research/NordicHealthDataCatalogues').then(m => ({ default: m.NordicHealthDataCatalogues })));
+const UkHealthDataLinkage = lazy(() => import('./pages/research/UkHealthDataLinkage').then(m => ({ default: m.UkHealthDataLinkage })));
 const OpenDataCatalogAssurance = lazy(() => import('./pages/research/OpenDataCatalogAssurance').then(m => ({ default: m.OpenDataCatalogAssurance })));
 const DkanPortalCensus = lazy(() => import('./pages/research/DkanPortalCensus').then(m => ({ default: m.DkanPortalCensus })));
 const LandRegisterOntology = lazy(() => import('./pages/research/LandRegisterOntology').then(m => ({ default: m.LandRegisterOntology })));
@@ -324,6 +325,10 @@ const PAGE_META: Record<string, { title: string; description: string }> = {
   '/research/nordic-health-data-catalogues': {
     title: 'Health data catalogue ontology: 2,811 Nordic datasets measured against HealthDCAT-AP | Tesseract Academy for the Public Sector',
     description: "An open OWL 2, SKOS and SHACL ontology and a reproducible census of Nordic health dataset descriptions, built on 25 August 2026 from the data.europa.eu SPARQL endpoint and the Findata Aineistokatalogi public API. Across the eleven Nordic national catalogues harvested by data.europa.eu there are 2,811 dataset descriptions carrying the EU health theme, and none satisfies all eight properties HealthDCAT-AP Release 7 makes mandatory on dcat:Dataset; three of the eight are present on exactly zero. Finland contributes 1,146 themed descriptions and not one uses the EU data theme authority vocabulary, so a European health filter returns zero Finnish datasets while avoindata.fi returns 57. Across the endpoint 36 IRIs are in use inside the EU data theme namespace and the authority defines 14, with 1,238 datasets carrying one of the other 22, including 806 on the literal string undefined. The authority host answers HTTP 200 with an empty graph for terms it never defined. Findata holds 89,368 variable descriptions of which 84.74 per cent carry no English label. Every headline computed two independent ways.",
+  },
+  '/research/uk-health-data-linkage': {
+    title: 'UK health data linkage registers measured: the Gateway, the NHS Data Uses Register and the layer between them | Tesseract Academy for the Public Sector',
+    description: "An open OWL 2, SKOS and SHACL ontology and a reproducible census of the machine-readable linkage layer of UK health data, built on 28 August 2026 from the HDR UK Gateway API and the NHS England Data Uses Register. The Gateway Data Model field that links a dataset to its data uses is empty on all 1,278 active Gateway datasets, while the Gateway's own relational layer links 1,704 of its 2,565 data use rows to datasets. 101 of 324 published dataset-to-dataset linkage entries resolve to nothing, including 35 descriptors with no identifier, no URL and no title, all of which validate. All 59 pid values inside linkage entries are dataset names rather than identifiers, because the schema types the linkage pid slot as a 150 character string. 133 dataset pids fail the Uuidv4 type the schema declares. The two public registers of UK health data uses share an identifier for 68 of 2,565 rows, so 96.96 per cent of NHS England's 1,942 agreement families have no identifier-joinable Gateway entry, and four agreements are shown active on the Gateway while absent from both current NHS publications. Every headline computed two independent ways.",
   },
   '/research/open-data-catalog-assurance': {
     title: 'Open data catalogue ontology: 59 federal agencies validated against the schema that exempts them | Tesseract Academy for the Public Sector',
@@ -697,6 +702,7 @@ const App: React.FC = () => {
               <Route path="/research/spectral-library-ontology" element={<SpectralLibraryOntology />} />
               <Route path="/research/uk-register-ontology" element={<UkRegisterOntology />} />
               <Route path="/research/nordic-health-data-catalogues" element={<NordicHealthDataCatalogues />} />
+              <Route path="/research/uk-health-data-linkage" element={<UkHealthDataLinkage />} />
               <Route path="/research/open-data-catalog-assurance" element={<OpenDataCatalogAssurance />} />
               <Route path="/research/dkan-portal-census" element={<DkanPortalCensus />} />
               <Route path="/research/land-register-ontology" element={<LandRegisterOntology />} />

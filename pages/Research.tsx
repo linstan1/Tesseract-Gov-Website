@@ -377,7 +377,7 @@ export const Research: React.FC = () => {
            </li>
         </PublicationGroup>
 
-        <PublicationGroup title="Register assurance" count={14}>
+        <PublicationGroup title="Register assurance" count={15}>
           <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
             <Link to="/research/trade-remedy-ontology"><h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark hover:underline transition-colors">An open ontology for UK trade remedy measures, tested against the TRA case register, the UK Trade Tariff and legislation.gov.uk</h3></Link>
             <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Open ontology, full-chain census, 2026</p>
@@ -431,6 +431,15 @@ export const Research: React.FC = () => {
              <div className="mt-3 flex flex-wrap gap-3 items-center">
                <Link to="/research/nordic-health-data-catalogues" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">Read the study</Link>
                <a href="https://github.com/fabio-rovai/health-dataset-catalogue-ontology" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">repository on GitHub<span className="sr-only"> (opens in new tab)</span></a>
+             </div>
+           </li>
+           <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
+             <Link to="/research/uk-health-data-linkage"><h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark hover:underline transition-colors">UK Health Data Linkage Registers, Measured at the Discovery Layer</h3></Link>
+             <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Open ontology, two national registers, 2026</p>
+             <p className="text-base text-gov-dark/90 leading-relaxed">The UK government and Wellcome are investing up to 600 million pounds in a Health Data Research Service on the premise that value comes from linking health datasets together. On 28 August 2026 we measured the machine readable layer that premise stands on, across the HDR UK Gateway and the NHS England Data Uses Register. The Gateway Data Model field that ties a dataset to its data uses is empty on all 1,278 active datasets, while the platform&apos;s own relational layer links 1,704 of 2,565 data use rows to datasets, so the linkage is knowable and the standard&apos;s field for it carries none of it. 101 of 324 published dataset-to-dataset links resolve to nothing, including 35 descriptors with no identifier, no URL and no title, every one of which validates. All 59 pid values inside linkage entries are dataset names rather than identifiers, because the schema types the linkage pid slot as a 150 character string while a dataset&apos;s own identifier is typed Uuidv4. The two registers of UK health data uses share an identifier for 68 of 2,565 rows, leaving 96.96 per cent of NHS England&apos;s 1,942 agreement families with no identifier-joinable Gateway entry, and four agreements sit active on the Gateway while absent from both current NHS publications. The NHS register is itself internally clean, with 100 per cent scheme-conformant references and zero dangling cross-sheet references across 103,706 release rows, which is the point: the failures live between registers, and 1,277 of 1,278 active records validate against the schema that cannot see any of this. Every headline computed two independent ways, with SHACL as a third path.</p>
+             <div className="mt-3 flex flex-wrap gap-3 items-center">
+               <Link to="/research/uk-health-data-linkage" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">Read the study</Link>
+               <a href="https://github.com/fabio-rovai/health-data-linkage-ontology" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">repository on GitHub<span className="sr-only"> (opens in new tab)</span></a>
              </div>
            </li>
            <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">

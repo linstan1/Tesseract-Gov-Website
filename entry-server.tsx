@@ -103,6 +103,7 @@ import { TradeRemedyOntology } from './pages/research/TradeRemedyOntology';
 import { SpectralLibraryOntology } from './pages/research/SpectralLibraryOntology';
 import { UkRegisterOntology } from './pages/research/UkRegisterOntology';
 import { NordicHealthDataCatalogues } from './pages/research/NordicHealthDataCatalogues';
+import { UkHealthDataLinkage } from './pages/research/UkHealthDataLinkage';
 import { OpenDataCatalogAssurance } from './pages/research/OpenDataCatalogAssurance';
 import { DkanPortalCensus } from './pages/research/DkanPortalCensus';
 import { LandRegisterOntology } from './pages/research/LandRegisterOntology';
@@ -220,6 +221,7 @@ const SSRApp: React.FC = () => (
         <Route path="/research/spectral-library-ontology" element={<SpectralLibraryOntology />} />
         <Route path="/research/uk-register-ontology" element={<UkRegisterOntology />} />
         <Route path="/research/nordic-health-data-catalogues" element={<NordicHealthDataCatalogues />} />
+        <Route path="/research/uk-health-data-linkage" element={<UkHealthDataLinkage />} />
         <Route path="/research/open-data-catalog-assurance" element={<OpenDataCatalogAssurance />} />
         <Route path="/research/dkan-portal-census" element={<DkanPortalCensus />} />
         <Route path="/research/land-register-ontology" element={<LandRegisterOntology />} />
