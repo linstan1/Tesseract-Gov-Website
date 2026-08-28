@@ -344,6 +344,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://gov.tesseract.academy/research/biodiversity-register-ontology</loc>
+    <lastmod>2026-08-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://gov.tesseract.academy/research/uk-health-data-linkage</loc>
     <lastmod>2026-08-28</lastmod>
     <changefreq>weekly</changefreq>

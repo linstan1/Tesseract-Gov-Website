@@ -96,6 +96,7 @@ const TradeRemedyOntology = lazy(() => import('./pages/research/TradeRemedyOntol
 const SpectralLibraryOntology = lazy(() => import('./pages/research/SpectralLibraryOntology').then(m => ({ default: m.SpectralLibraryOntology })));
 const UkRegisterOntology = lazy(() => import('./pages/research/UkRegisterOntology').then(m => ({ default: m.UkRegisterOntology })));
 const NordicHealthDataCatalogues = lazy(() => import('./pages/research/NordicHealthDataCatalogues').then(m => ({ default: m.NordicHealthDataCatalogues })));
+const BiodiversityRegisterOntology = lazy(() => import('./pages/research/BiodiversityRegisterOntology').then(m => ({ default: m.BiodiversityRegisterOntology })));
 const UkHealthDataLinkage = lazy(() => import('./pages/research/UkHealthDataLinkage').then(m => ({ default: m.UkHealthDataLinkage })));
 const OpenDataCatalogAssurance = lazy(() => import('./pages/research/OpenDataCatalogAssurance').then(m => ({ default: m.OpenDataCatalogAssurance })));
 const DkanPortalCensus = lazy(() => import('./pages/research/DkanPortalCensus').then(m => ({ default: m.DkanPortalCensus })));
@@ -325,6 +326,10 @@ const PAGE_META: Record<string, { title: string; description: string }> = {
   '/research/nordic-health-data-catalogues': {
     title: 'Health data catalogue ontology: 2,811 Nordic datasets measured against HealthDCAT-AP | Tesseract Academy for the Public Sector',
     description: "An open OWL 2, SKOS and SHACL ontology and a reproducible census of Nordic health dataset descriptions, built on 25 August 2026 from the data.europa.eu SPARQL endpoint and the Findata Aineistokatalogi public API. Across the eleven Nordic national catalogues harvested by data.europa.eu there are 2,811 dataset descriptions carrying the EU health theme, and none satisfies all eight properties HealthDCAT-AP Release 7 makes mandatory on dcat:Dataset; three of the eight are present on exactly zero. Finland contributes 1,146 themed descriptions and not one uses the EU data theme authority vocabulary, so a European health filter returns zero Finnish datasets while avoindata.fi returns 57. Across the endpoint 36 IRIs are in use inside the EU data theme namespace and the authority defines 14, with 1,238 datasets carrying one of the other 22, including 806 on the literal string undefined. The authority host answers HTTP 200 with an empty graph for terms it never defined. Findata holds 89,368 variable descriptions of which 84.74 per cent carry no English label. Every headline computed two independent ways.",
+  },
+  '/research/biodiversity-register-ontology': {
+    title: 'Biodiversity register ontology: BHL, ZooBank and the NHM Data Portal measured | Tesseract Academy for the Public Sector',
+    description: "An open OWL 2, SKOS and SHACL ontology and a reproducible census of the identifier and rights layer of biodiversity registers, built on 28 August 2026 from complete harvests of the Biodiversity Heritage Library bulk export, the Natural History Museum Data Portal, and ZooBank with its public mirrors, with WoRMS and IPNI as controls. On the day of census the Official Register of Zoological Nomenclature had no working machine interface: 50 of 50 sampled canonical act URLs returned HTTP 404, its declared publication endpoint is dead, and its freshest public mirrors are 518 and 1,327 days stale and disagree by 79,420 records. In the BHL export, 86.0 per cent of 329,129 distinct digitised items carry no machine-actionable licence, ten titles carry the literal string Array as their DOI, and the item table's primary key is not unique. The NHM Data Portal mints a resolving DOI for every one of its 294 datasets, best in class among measured catalogues, while eight datasets meet a five-property product-readiness bar. Every headline computed two independent ways.",
   },
   '/research/uk-health-data-linkage': {
     title: 'UK health data linkage registers measured: the Gateway, the NHS Data Uses Register and the layer between them | Tesseract Academy for the Public Sector',
@@ -702,6 +707,7 @@ const App: React.FC = () => {
               <Route path="/research/spectral-library-ontology" element={<SpectralLibraryOntology />} />
               <Route path="/research/uk-register-ontology" element={<UkRegisterOntology />} />
               <Route path="/research/nordic-health-data-catalogues" element={<NordicHealthDataCatalogues />} />
+              <Route path="/research/biodiversity-register-ontology" element={<BiodiversityRegisterOntology />} />
               <Route path="/research/uk-health-data-linkage" element={<UkHealthDataLinkage />} />
               <Route path="/research/open-data-catalog-assurance" element={<OpenDataCatalogAssurance />} />
               <Route path="/research/dkan-portal-census" element={<DkanPortalCensus />} />

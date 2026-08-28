@@ -377,7 +377,16 @@ export const Research: React.FC = () => {
            </li>
         </PublicationGroup>
 
-        <PublicationGroup title="Register assurance" count={15}>
+        <PublicationGroup title="Register assurance" count={16}>
+          <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
+            <Link to="/research/biodiversity-register-ontology"><h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark hover:underline transition-colors">An open ontology for biodiversity registers, tested against the Biodiversity Heritage Library, ZooBank, and the Natural History Museum Data Portal</h3></Link>
+            <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Open ontology, register and rights census, 2026</p>
+            <p className="text-base text-gov-dark/90 leading-relaxed">A measured census of the identifier and rights layer beneath biodiversity AI, run against complete harvests of the Biodiversity Heritage Library bulk export, the NHM Data Portal, and ZooBank with its public mirrors, with WoRMS and IPNI as same-day controls. On the day of census the Official Register of Zoological Nomenclature had no working machine interface: 50 of 50 sampled canonical act URLs returned 404, its declared publication endpoint is dead, and its freshest public mirrors are 518 and 1,327 days stale and disagree with each other by 79,420 records. In the BHL export, 86.0 per cent of 329,129 distinct digitised items carry no machine-actionable licence, 84 of them defeated by a single invisible Unicode character, ten titles carry the literal string Array as their registered DOI, and the item table's primary key is not unique, a defect our verification gate exposed when its two independent computations refused to reconcile. The NHM Data Portal mints a resolving DOI for every one of its 294 datasets, best in class among the catalogues this programme has measured, while eight datasets clear a five-property product-readiness bar. Every headline computed twice, set-based and by SPARQL, with a gate that fails on disagreement.</p>
+            <div className="mt-3 flex flex-wrap gap-3 items-center">
+              <Link to="/research/biodiversity-register-ontology" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">Read the study</Link>
+              <a href="https://github.com/fabio-rovai/biodiversity-register-ontology" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">repository on GitHub<span className="sr-only"> (opens in new tab)</span></a>
+            </div>
+          </li>
           <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
             <Link to="/research/trade-remedy-ontology"><h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark hover:underline transition-colors">An open ontology for UK trade remedy measures, tested against the TRA case register, the UK Trade Tariff and legislation.gov.uk</h3></Link>
             <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Open ontology, full-chain census, 2026</p>
