@@ -377,7 +377,7 @@ export const Research: React.FC = () => {
            </li>
         </PublicationGroup>
 
-        <PublicationGroup title="Register assurance" count={16}>
+        <PublicationGroup title="Register assurance" count={17}>
           <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
             <Link to="/research/biodiversity-register-ontology"><h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark hover:underline transition-colors">An open ontology for biodiversity registers, tested against the Biodiversity Heritage Library, ZooBank, and the Natural History Museum Data Portal</h3></Link>
             <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Open ontology, register and rights census, 2026</p>
@@ -449,6 +449,15 @@ export const Research: React.FC = () => {
              <div className="mt-3 flex flex-wrap gap-3 items-center">
                <Link to="/research/uk-health-data-linkage" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">Read the study</Link>
                <a href="https://github.com/fabio-rovai/health-data-linkage-ontology" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">repository on GitHub<span className="sr-only"> (opens in new tab)</span></a>
+             </div>
+           </li>
+           <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
+             <Link to="/research/medicinal-product-registers"><h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark hover:underline transition-colors">Medicinal Product Registers, Measured for Joinability: EMA, openFDA and GLEIF</h3></Link>
+             <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Open ontology, three registers, two jurisdictions, 2026</p>
+             <p className="text-base text-gov-dark/90 leading-relaxed">ISO IDMP exists so that a medicine, its substance and its holder can be identified the same way everywhere, and industry is staffing data standards roles with posted ranges up to 305,000 dollars to comply. On 28 August 2026 we measured what the public can actually join across the three open surfaces: the EMA medicines report, the openFDA NDC directory and the GLEIF legal entity register. The EMA register publishes its 392 marketing authorisation holders as free text with no organisation identifier; joined to GLEIF by exact legal name, 102 resolve and 290 do not, and the mechanism is spelling, with AbbVie Deutschland GmbH &amp; Co. KG failing solely because GLEIF stores GmbH And Co. KG. Of the joins that succeed, 14 of 102 land on an LEI that is not in good standing, AbbVie Limited among the eleven lapsed. The EU and US registers join by holder name for 8.2 per cent. Internal hygiene is high on both sides and its defects are precise: one malformed product number in 2,732, one truncated ATC code, four prose strings sitting in a code column, zero NDC scheme violations in 137,521 records against 1,904 NDCs listed twice and 1,103 labeler-name variant groups. EMA SPOR, the master data service that should carry the join, answers 401 to anonymous requests, so the measurable public surface is the XLSX shadow. Every headline computed two independent ways, with SHACL as a third path, and the error we nearly made is published as the mechanism finding.</p>
+             <div className="mt-3 flex flex-wrap gap-3 items-center">
+               <Link to="/research/medicinal-product-registers" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">Read the study</Link>
+               <a href="https://github.com/fabio-rovai/medicinal-product-register-ontology" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">repository on GitHub<span className="sr-only"> (opens in new tab)</span></a>
              </div>
            </li>
            <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">

@@ -98,6 +98,7 @@ const UkRegisterOntology = lazy(() => import('./pages/research/UkRegisterOntolog
 const NordicHealthDataCatalogues = lazy(() => import('./pages/research/NordicHealthDataCatalogues').then(m => ({ default: m.NordicHealthDataCatalogues })));
 const BiodiversityRegisterOntology = lazy(() => import('./pages/research/BiodiversityRegisterOntology').then(m => ({ default: m.BiodiversityRegisterOntology })));
 const UkHealthDataLinkage = lazy(() => import('./pages/research/UkHealthDataLinkage').then(m => ({ default: m.UkHealthDataLinkage })));
+const MedicinalProductRegisters = lazy(() => import('./pages/research/MedicinalProductRegisters').then(m => ({ default: m.MedicinalProductRegisters })));
 const OpenDataCatalogAssurance = lazy(() => import('./pages/research/OpenDataCatalogAssurance').then(m => ({ default: m.OpenDataCatalogAssurance })));
 const DkanPortalCensus = lazy(() => import('./pages/research/DkanPortalCensus').then(m => ({ default: m.DkanPortalCensus })));
 const LandRegisterOntology = lazy(() => import('./pages/research/LandRegisterOntology').then(m => ({ default: m.LandRegisterOntology })));
@@ -330,6 +331,10 @@ const PAGE_META: Record<string, { title: string; description: string }> = {
   '/research/biodiversity-register-ontology': {
     title: 'Biodiversity register ontology: BHL, ZooBank and the NHM Data Portal measured | Tesseract Academy for the Public Sector',
     description: "An open OWL 2, SKOS and SHACL ontology and a reproducible census of the identifier and rights layer of biodiversity registers, built on 28 August 2026 from complete harvests of the Biodiversity Heritage Library bulk export, the Natural History Museum Data Portal, and ZooBank with its public mirrors, with WoRMS and IPNI as controls. On the day of census the Official Register of Zoological Nomenclature had no working machine interface: 50 of 50 sampled canonical act URLs returned HTTP 404, its declared publication endpoint is dead, and its freshest public mirrors are 518 and 1,327 days stale and disagree by 79,420 records. In the BHL export, 86.0 per cent of 329,129 distinct digitised items carry no machine-actionable licence, ten titles carry the literal string Array as their DOI, and the item table's primary key is not unique. The NHM Data Portal mints a resolving DOI for every one of its 294 datasets, best in class among measured catalogues, while eight datasets meet a five-property product-readiness bar. Every headline computed two independent ways.",
+  },
+  '/research/medicinal-product-registers': {
+    title: 'Medicinal product registers measured for joinability: EMA, openFDA and GLEIF | Tesseract Academy for the Public Sector',
+    description: "An open OWL 2, SKOS and SHACL ontology and a reproducible census of whether the public medicinal product registers can be joined by machine, built on 28 August 2026 from the EMA medicines report (2,732 products), the openFDA NDC directory (137,521 records) and the GLEIF LEI API. The EMA register publishes no organisation identifier for marketing authorisation holders: joined by exact name, 102 of 392 holders resolve to a GLEIF legal entity, and 14 of those land on an LEI that is not in good standing, AbbVie Limited among the lapsed. AbbVie Deutschland GmbH & Co. KG fails the join solely because GLEIF stores GmbH And Co. KG. The EU and US registers are string-joinable for 8.2 per cent of holders. EMA internal integrity is high: one malformed product number in 2,732, one truncated ATC code, four prose strings in the ATC column, zero date-sanity failures. EMA SPOR answers 401 to anonymous requests, so the public join runs on the XLSX shadow. Every headline computed two independent ways.",
   },
   '/research/uk-health-data-linkage': {
     title: 'UK health data linkage registers measured: the Gateway, the NHS Data Uses Register and the layer between them | Tesseract Academy for the Public Sector',
@@ -709,6 +714,7 @@ const App: React.FC = () => {
               <Route path="/research/nordic-health-data-catalogues" element={<NordicHealthDataCatalogues />} />
               <Route path="/research/biodiversity-register-ontology" element={<BiodiversityRegisterOntology />} />
               <Route path="/research/uk-health-data-linkage" element={<UkHealthDataLinkage />} />
+              <Route path="/research/medicinal-product-registers" element={<MedicinalProductRegisters />} />
               <Route path="/research/open-data-catalog-assurance" element={<OpenDataCatalogAssurance />} />
               <Route path="/research/dkan-portal-census" element={<DkanPortalCensus />} />
               <Route path="/research/land-register-ontology" element={<LandRegisterOntology />} />
