@@ -377,7 +377,16 @@ export const Research: React.FC = () => {
            </li>
         </PublicationGroup>
 
-        <PublicationGroup title="Register assurance" count={13}>
+        <PublicationGroup title="Register assurance" count={14}>
+          <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
+            <Link to="/research/trade-remedy-ontology"><h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark hover:underline transition-colors">An open ontology for UK trade remedy measures, tested against the TRA case register, the UK Trade Tariff and legislation.gov.uk</h3></Link>
+            <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Open ontology, full-chain census, 2026</p>
+            <p className="text-base text-gov-dark/90 leading-relaxed">A complete census of the UK trade remedy chain, from the Trade Remedies Authority case register to the duty charged at the border. All 21,008 commodity codes in the UK Trade Tariff were visited: 405 carry 9,385 distinct measures citing 49 legal instruments, with 990 additional codes assigning duty rates to named exporters. The tariff truncates the legal instrument locator at 200 characters, and all thirteen locators sitting exactly at the cap return 404 while every shorter locator resolves, which leaves 1,477 measures, 15.7 per cent of the live book, publishing a broken link to the instrument that gives them force. The case register separately drops leading zeros from chapter 3 commodity codes, so twelve published codes resolve to nothing until the zero is restored, each then landing on a trout product consistent with its case. Both defect classes are repaired in the repository, with each repair accepted only where it strictly extends what was published. Of 982 named exporters, 955 do not resolve to exactly one entity by name, and both EU regulations still cited as the legal basis of live UK measures are no longer in force in the EU. Every headline computed twice, set-based and by SPARQL, with a gate that fails on disagreement, and the build report records the claims that died under checking alongside the ones that survived.</p>
+            <div className="mt-3 flex flex-wrap gap-3 items-center">
+              <Link to="/research/trade-remedy-ontology" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">Read the study</Link>
+              <a href="https://github.com/fabio-rovai/trade-remedy-ontology" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">repository on GitHub<span className="sr-only"> (opens in new tab)</span></a>
+            </div>
+          </li>
           <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
             <Link to="/research/chain-control-ontology"><h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark hover:underline transition-colors">USDC Has a Different Upgrade Key on Every Chain, and Its Own owner() Names None of Them</h3></Link>
             <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Open ontology, cross-chain control census, 2026</p>

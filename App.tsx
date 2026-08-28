@@ -92,6 +92,7 @@ const SecuritiesRegisterOntology = lazy(() => import('./pages/research/Securitie
 const BiosurveillanceRegisterOntology = lazy(() => import('./pages/research/BiosurveillanceRegisterOntology').then(m => ({ default: m.BiosurveillanceRegisterOntology })));
 const SurveillanceReportingIdentifiers = lazy(() => import('./pages/research/SurveillanceReportingIdentifiers').then(m => ({ default: m.SurveillanceReportingIdentifiers })));
 const SpaceObjectRegisterOntology = lazy(() => import('./pages/research/SpaceObjectRegisterOntology').then(m => ({ default: m.SpaceObjectRegisterOntology })));
+const TradeRemedyOntology = lazy(() => import('./pages/research/TradeRemedyOntology').then(m => ({ default: m.TradeRemedyOntology })));
 const SpectralLibraryOntology = lazy(() => import('./pages/research/SpectralLibraryOntology').then(m => ({ default: m.SpectralLibraryOntology })));
 const UkRegisterOntology = lazy(() => import('./pages/research/UkRegisterOntology').then(m => ({ default: m.UkRegisterOntology })));
 const NordicHealthDataCatalogues = lazy(() => import('./pages/research/NordicHealthDataCatalogues').then(m => ({ default: m.NordicHealthDataCatalogues })));
@@ -303,6 +304,10 @@ const PAGE_META: Record<string, { title: string; description: string }> = {
   '/research/spectral-library-ontology': {
     title: 'Mass spectrometry library ontology: the register that publishes its own contradiction | Tesseract Academy for the Public Sector',
     description: "An open OWL 2, SKOS and SHACL ontology and reproducible audit of the public mass spectrometry reference libraries, built from keyless downloads of 2,091,754 GNPS2 library spectra across 98 libraries, 20,052 MassIVE datasets and 1,065,831 ReDU sample rows, all retrieved on 21 August 2026. GNPS derives an InChIKey from the depositor's SMILES and a second from the depositor's InChI and publishes both, which makes its own internal disagreement countable: on 1,485,480 records carrying both, they diverge 14,012 times, 13,112 at stereochemistry and 662 at connectivity. Independent recomputation with RDKit cuts the connectivity figure to 229 and reclassifies the other 418 as failures in the register's own derivation. The corpus rate of 0.94 per cent hides a range from 1.41 per cent in MONA to 59.44 per cent in BILELIB19. 164,137 InChI strings lack the mandatory prefix and do not parse, 6,710 CAS numbers fail their own check digit, and not one of the 2,091,754 records carries a valid SPLASH. 145 of the 4,418 ProteomeXchange accessions MassIVE publishes resolve nowhere. ReDU, by contrast, is 100.00 per cent conformant on 977,015 taxonomy values. Every headline computed three independent ways.",
+  },
+  '/research/trade-remedy-ontology': {
+    title: 'UK trade remedy ontology: the TRA case register, the tariff and legislation.gov.uk | Tesseract Academy for the Public Sector',
+    description: 'A full census of the UK trade remedy chain, from the Trade Remedies Authority case register to the duty charged at the border, retrieved on 28 August 2026. All 21,008 commodity codes in the UK Trade Tariff visited: 405 carry 9,385 distinct measures citing 49 legal instruments, with 990 additional codes naming exporters. The tariff truncates the legal instrument locator at 200 characters and all thirteen truncated locators return 404, reaching 1,477 measures, 15.7 per cent of the live book; all thirteen are repaired in the repository. The TRA case register drops leading zeros from chapter 3 commodity codes, so twelve published codes resolve to nothing until the zero is restored. Of 982 named exporters, 955 do not resolve to exactly one entity, and both EU regulations still cited as the legal basis of live UK measures are no longer in force in the EU. Every headline computed twice, set-based and by SPARQL, with a gate that fails on disagreement.',
   },
   '/research/space-object-register-ontology': {
     title: 'Space object ontology: CelesTrak and GCAT modelled in OWL, SKOS and SHACL | Tesseract Academy for the Public Sector',
@@ -688,6 +693,7 @@ const App: React.FC = () => {
               <Route path="/research/biosurveillance-register-ontology" element={<BiosurveillanceRegisterOntology />} />
               <Route path="/research/surveillance-reporting-identifiers" element={<SurveillanceReportingIdentifiers />} />
               <Route path="/research/space-object-register-ontology" element={<SpaceObjectRegisterOntology />} />
+              <Route path="/research/trade-remedy-ontology" element={<TradeRemedyOntology />} />
               <Route path="/research/spectral-library-ontology" element={<SpectralLibraryOntology />} />
               <Route path="/research/uk-register-ontology" element={<UkRegisterOntology />} />
               <Route path="/research/nordic-health-data-catalogues" element={<NordicHealthDataCatalogues />} />

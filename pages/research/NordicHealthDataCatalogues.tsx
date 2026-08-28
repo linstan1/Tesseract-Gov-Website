@@ -182,11 +182,7 @@ export const NordicHealthDataCatalogues: React.FC = () => (
         a diff rather than as a silent divergence between our claims and the standard.
       </p>
       <p className="text-gov-dark leading-relaxed">
-        That matters more than it sounds, because the profile has moved and its own signposting has not kept up.
-        HealthDCAT-AP used to live at healthdcat-ap.github.io. That page was decommissioned on 22 September 2025
-        and its README still directs readers to Release 5 as the current and authoritative version. Release 5 is
-        not current. Release 6 was deprecated on 24 April 2026 and Release 7 is the live one. Several national and
-        institutional implementations on GitHub still point at the decommissioned location.
+        That matters more than it sounds, because the profile has moved and the old address is still standing. HealthDCAT-AP used to live at healthdcat-ap.github.io. That page states that it has been decommissioned and still presents Release 5 as the current and authoritative version. Release 5 is not current. Release 6 was deprecated on 24 April 2026 and Release 7 is the live one, published on code.europa.eu, and Release 7 links correctly to its own issue tracker there even though the sentence doing it calls a GitLab instance a GitHub repository. Several national and institutional implementations on GitHub still point at the decommissioned location, and anyone arriving from one of those lands two releases behind.
       </p>
     </section>
 
@@ -455,6 +451,25 @@ export const NordicHealthDataCatalogues: React.FC = () => (
         Our claim is narrower and does not overlap theirs. They designed the profile and validated it against
         curated examples. We measured the installed base of live national catalogues against the shipped Release
         7. Neither piece of work answers the other&apos;s question.
+      </p>
+      <p className="text-gov-dark leading-relaxed">
+        The catalogues measured here have also described themselves. In November 2025 the VALO project published
+        its <em>Final metadata catalogues report</em>, report 2.8, written by twelve authors from THL and Findata
+        in Finland, the Danish Health Data Authority, the Norwegian Institute of Public Health, the Swedish
+        eHealth Agency, the National Board of Health and Welfare and the Swedish Research Council in Sweden, and
+        the Directorate of Health in Iceland. It sets out what each national catalogue currently is, how each
+        country plans to implement HealthDCAT-AP, and the four difficulties the Nordic bodies see in the draft
+        profile: no shared understanding of the information model, no hierarchy in it, ambiguity about how a
+        dataset should be defined, and technical complexity with inconsistent terminology.
+      </p>
+      <p className="text-gov-dark leading-relaxed">
+        It is the inside account of the same catalogues and it does not overlap this one either. They describe
+        what their systems hold and what they intend to publish. We measured what those systems currently emit
+        into the layer data.europa.eu harvests. One line of their report does explain a finding we could only
+        observe from outside: the Finland table gives Aineistokatalogi&apos;s metadata standard as the Generic
+        Statistical Information Model mapped to DDI-L, and names THL and Findata as its joint owners. A catalogue
+        built on GSIM and DDI-L does not emit DCAT, which is why 89,368 variable descriptions that would answer
+        the hardest property in HealthDCAT-AP appear nowhere in finding one.
       </p>
       <p className="text-gov-dark leading-relaxed">
         A second piece of prior art sits alongside this one and shares an author with the Finnish proposal. Ole A.
