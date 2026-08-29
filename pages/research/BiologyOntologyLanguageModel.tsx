@@ -38,11 +38,11 @@ const RESULTS = [
 ];
 
 const BUILD = [
-  { item: 'Three conformant tasks', detail: 'Biolink knowledge-graph construction, GO-CAM causal activity models, and OBO term grounding (GO, MONDO, HP, ChEBI, Cell Ontology) — the structuring, mechanism and normalisation work every biomedical data programme needs.' },
+  { item: 'Three conformant tasks', detail: 'Biolink knowledge-graph construction, GO-CAM causal activity models, and OBO term grounding (GO, MONDO, HP, ChEBI, Cell Ontology): the structuring, mechanism and normalisation work every biomedical data programme needs.' },
   { item: 'Correct-by-construction data', detail: 'Every training target is generated programmatically from real ontology releases with the Biolink Model Toolkit and the GO-CAM data model, never hand-authored, so the gold standard is valid by construction.' },
-  { item: 'Real, verified entities', detail: 'Identifiers drawn from real OBO releases — GO (38,245), MONDO (32,095), HP (19,836), ChEBI (218,253), Cell Ontology (3,335) — and gene/protein IDs verified against mygene.info. No invented CURIEs enter the data.' },
+  { item: 'Real, verified entities', detail: 'Identifiers drawn from real OBO releases, GO (38,245), MONDO (32,095), HP (19,836), ChEBI (218,253) and Cell Ontology (3,335), and gene/protein IDs verified against mygene.info. No invented CURIEs enter the data.' },
   { item: 'Double validation', detail: 'Each example passes both the official toolkit (bmt category/predicate membership and subject/object range closure; the GO-CAM schema) and an independent membership check before training.' },
-  { item: 'Generalisation holdout', detail: '90 multi-association graphs held out entirely — a composition the model never trains on — to test conformance on genuinely unseen structure.' },
+  { item: 'Generalisation holdout', detail: '90 multi-association graphs held out entirely, a composition the model never trains on, to test conformance on genuinely unseen structure.' },
   { item: 'Open release', detail: 'Model, LoRA adapter, the full dataset and the generators and validators that produced every number above, published for independent reproduction.' },
 ];
 
@@ -92,7 +92,7 @@ export const BiologyOntologyLanguageModel: React.FC = () => {
         <div className="border-l-2 border-l-gov-blue pl-6">
           <h2 className="text-2xl font-bold text-gov-dark font-serif mb-3">Why biology ontology conformance</h2>
           <p className="text-gov-dark leading-relaxed">
-            Biomedical knowledge is scattered across hundreds of incompatible databases. The open ontologies — the <a href="https://biolink.github.io/biolink-model/" target="_blank" rel="noopener noreferrer" className="text-gov-blue underline hover:text-gov-blue-dark">Biolink Model</a> (the schema behind the Monarch Initiative and the NCATS Biomedical Data Translator), the <a href="https://geneontology.org/docs/gocam-overview/" target="_blank" rel="noopener noreferrer" className="text-gov-blue underline hover:text-gov-blue-dark">Gene Ontology and GO-CAM</a>, and the <a href="https://obofoundry.org/" target="_blank" rel="noopener noreferrer" className="text-gov-blue underline hover:text-gov-blue-dark">OBO Foundry</a> — are the interoperability backbone that makes that knowledge FAIR: findable, accessible, interoperable, reusable.
+            Biomedical knowledge is scattered across hundreds of incompatible databases. The open ontologies, the <a href="https://biolink.github.io/biolink-model/" target="_blank" rel="noopener noreferrer" className="text-gov-blue underline hover:text-gov-blue-dark">Biolink Model</a> (the schema behind the Monarch Initiative and the NCATS Biomedical Data Translator), the <a href="https://geneontology.org/docs/gocam-overview/" target="_blank" rel="noopener noreferrer" className="text-gov-blue underline hover:text-gov-blue-dark">Gene Ontology and GO-CAM</a>, and the <a href="https://obofoundry.org/" target="_blank" rel="noopener noreferrer" className="text-gov-blue underline hover:text-gov-blue-dark">OBO Foundry</a>, are the interoperability backbone that makes that knowledge FAIR: findable, accessible, interoperable, reusable.
           </p>
           <p className="text-gov-dark leading-relaxed mt-3">
             Language models are becoming the default interface to that knowledge. Off the shelf, they hallucinate ontology terms: asked to write a Biolink graph, a strong 30B code model invents roughly 42% of the terms it uses and produces a fully conformant graph 0% of the time. In a knowledge graph that is worse than no help at all. A single fabricated predicate or non-resolvable identifier silently breaks interoperability, poisons every downstream query, and is indistinguishable from a real edge until something fails.
@@ -163,10 +163,10 @@ export const BiologyOntologyLanguageModel: React.FC = () => {
         <div className="border-l-2 border-l-gov-blue pl-6">
           <h2 className="text-2xl font-bold text-gov-dark font-serif mb-3">The conformance gate is the validator, not the model</h2>
           <p className="text-gov-dark leading-relaxed">
-            The right architecture for standards work is neuro-symbolic: the model drafts, and a symbolic layer verifies. Conformance here is not hoped for, it is enforced by a validator in the loop that rejects 100% of out-of-ontology terms — invalid predicates, non-existent CURIEs, categories that violate the schema. The model proposes; the validator disposes.
+            The right architecture for standards work is neuro-symbolic: the model drafts, and a symbolic layer verifies. Conformance here is not hoped for, it is enforced by a validator in the loop that rejects 100% of out-of-ontology terms: invalid predicates, non-existent CURIEs, categories that violate the schema. The model proposes; the validator disposes.
           </p>
           <p className="text-gov-dark leading-relaxed mt-3">
-            This division of labour is also where we are honest about the model's limits. On its own it does not reliably refuse a malformed request — asked to encode a nonsensical relationship, it will still try to structure it. That does not compromise the guarantee, because safety lives in the symbolic validator that catches every invalid term, not in the model's self-restraint. A language model should never be the last line of defence in front of a scientific knowledge graph; the validator is.
+            The model on its own does not reliably refuse a malformed request: asked to encode a nonsensical relationship, it will still try to structure it. That does not compromise the guarantee, because safety lives in the symbolic validator that catches every invalid term, not in the model's self-restraint. A language model should never be the last line of defence in front of a scientific knowledge graph; the validator is.
           </p>
         </div>
       </section>
@@ -178,7 +178,7 @@ export const BiologyOntologyLanguageModel: React.FC = () => {
             This is the biology counterpart of our <Link to="/research/ies4-turtle-language-model" className="text-gov-blue underline hover:text-gov-blue-dark">open language model for IES4 defence data</Link>: the same correct-by-construction method, pointed at a new family of standards. Both pair a fine-tuned drafter with the <a href="https://github.com/fabio-rovai/open-ontologies" target="_blank" rel="noopener noreferrer" className="text-gov-blue underline hover:text-gov-blue-dark">open-ontologies</a> validation engine that checks conformance deterministically. The language model removes the blank-page problem; the validators guarantee correctness. Neither is asked to do the other's job.
           </p>
           <p className="text-gov-dark leading-relaxed mt-3">
-            The practical uses are the unglamorous, load-bearing ones: harmonising heterogeneous multi-omic and clinical data into one FAIR knowledge graph, normalising free-text mentions to the correct ontology identifier, and building the mechanism graphs that large biomedical programmes query at scale. It is a structuring and interoperability tool, not a source of biomedical truth — every output is meant to be validated before use.
+            The practical uses are the unglamorous, load-bearing ones: harmonising heterogeneous multi-omic and clinical data into one FAIR knowledge graph, normalising free-text mentions to the correct ontology identifier, and building the mechanism graphs that large biomedical programmes query at scale. It is a structuring and interoperability tool, not a source of biomedical truth, and every output is designed to be validated before use.
           </p>
         </div>
 

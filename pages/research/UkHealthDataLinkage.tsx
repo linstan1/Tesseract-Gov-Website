@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { CHART, HBars } from '../../components/ChartKit';
 import { ArrowLeft } from 'lucide-react';
 
 const REPO = 'https://github.com/fabio-rovai/health-data-linkage-ontology';
@@ -220,6 +221,17 @@ export const UkHealthDataLinkage: React.FC = () => (
           </tbody>
         </table>
       </div>
+      <HBars
+        title="Linkage entries that resolve to nothing, of 324 examined"
+        note="101 of 324 entries (31.2%) give a downstream system nothing to join on."
+        max={324}
+        rows={[
+          { label: 'All linkage entries examined', value: 324, display: '324', color: CHART.gray },
+          { label: 'No pid and no URL, title only', value: 50, display: '50', color: CHART.amber },
+          { label: 'Empty descriptor: no pid, URL or title', value: 35, display: '35', color: CHART.amber },
+          { label: 'Pid or URL present but dangling', value: 16, display: '16', color: CHART.amber },
+        ]}
+      />
       <p className="text-gov-dark leading-relaxed">
         What sits in the title slot is often not a title. 81 of the 288 published titles run past 80 characters,
         and the register&apos;s most repeated linkage entry reads, verbatim: &quot;Each patient will be identified
@@ -287,17 +299,17 @@ export const UkHealthDataLinkage: React.FC = () => (
     </section>
 
     <section className="space-y-4">
-      <h2 className="text-2xl font-bold text-gov-dark font-serif">What this is not</h2>
+      <h2 className="text-2xl font-bold text-gov-dark font-serif">Where this sits among existing instruments</h2>
       <p className="text-gov-dark leading-relaxed">
-        This is not a data quality scandal, and it is worth being precise about why. The NHS England register is
-        internally disciplined to a degree worth stating: all 5,577 agreement references conform to the DARS-NIC
+        The NHS England register is
+        internally disciplined: all 5,577 agreement references conform to the DARS-NIC
         pattern, there are zero duplicates, and across 38,650 dataset rows and 103,706 release rows there is not
         one dangling cross-sheet reference. Its residual defects are seven agreements with no dataset rows and
         one agreement whose end date precedes its start date. HDR UK, for its part, publishes its schemas in the
         open under Apache 2.0, computes a metadata quality score per dataset, and published the data utility
         framework behind it (Gordon and colleagues, BMJ Health and Care Informatics, 2021). GUILD (Gilbert and
         colleagues, Journal of Public Health, 2018) set out years ago what researchers need to know about linkage
-        processing. None of that ground is claimed here.
+        processing. This study stands on different ground.
       </p>
       <p className="text-gov-dark leading-relaxed">
         What this study adds is the layer none of those instruments look at: whether linkage claims resolve by

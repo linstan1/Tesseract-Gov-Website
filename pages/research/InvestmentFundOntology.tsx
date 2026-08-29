@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { CHART, HBars } from '../../components/ChartKit';
 import { ArrowLeft, ExternalLink } from 'lucide-react';
 import { Mermaid } from '../../components/Mermaid';
 
@@ -183,6 +184,17 @@ export const InvestmentFundOntology: React.FC = () => (
           <li><strong>One quarter of N-PORT attests 235,327 (LEI, ISIN) pairs. 185,894 of them (79%) are absent from GLEIF&apos;s open file, and 2,055 contradict it.</strong> The open map is not merely thinner than the licensed one; it is missing four fifths of what regulatory filings themselves attest, and the filings are public.</li>
           <li>The same pass surfaced four more ISINs in SEC filings that fail their own check digit, extending the v0.1 defect family.</li>
         </ul>
+        <HBars
+          title="What the v0.2 open map lifts, against the v0.1 public-data baseline"
+          note="Exact-class resolution: 259 of 19,803 funds (1.3%) at baseline against 2,186 of 5,176 fund-ISIN rows (42.2%) with the open map. ETF open-ISIN coverage rises from 12.3% to 35.4% from a single quarter of N-PORT."
+          max={100}
+          rows={[
+            { label: 'Exact-class resolution, baseline', value: 1.3, display: '1.3%', color: CHART.gray },
+            { label: 'Exact-class resolution, v0.2 open map', value: 42.2, display: '42.2%' },
+            { label: 'ETF open-ISIN coverage, baseline', value: 12.3, display: '12.3%', color: CHART.gray },
+            { label: 'ETF open-ISIN coverage, v0.2 open map', value: 35.4, display: '35.4%' },
+          ]}
+        />
         <p className="text-sm text-gov-secondary/90 leading-relaxed">
           The map ships in the repository as <code className="text-sm bg-gov-bg px-1.5 py-0.5 rounded">open-map/fund_identifier_map.csv</code> under the v0.2.1 release, together with the resumable OpenFIGI harvester, an offline test suite and CI. The v0.1 figures above stand as the dated baseline they always were; this update is what changes when you stop measuring the gap and start closing it.
         </p>

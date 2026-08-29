@@ -172,9 +172,9 @@ export const XbrlPdfHtmlAiBenchmark: React.FC = () => {
 
       <section className="space-y-4">
         <div className="border-l-2 border-l-gov-blue pl-6">
-          <h2 className="text-2xl font-bold text-gov-dark font-serif mb-3">Limitations, stated plainly</h2>
+          <h2 className="text-2xl font-bold text-gov-dark font-serif mb-3">Pilot scope, and the full study it defines</h2>
           <p className="text-gov-dark leading-relaxed">
-            This is a pilot: three companies, one model, and small cells, particularly on the accounting and narrative tasks. The findings are directional, not definitive. A full study needs more companies, multiple models, contamination controls to rule out the model having memorised the filings, and arms that vary tagging quality, since the value of structured facts presumably depends on how well they were tagged in the first place. What the pilot does establish is that the comparison can be run like for like from real filed reports, and that the differences it surfaces, signed values, units, abstention, are mechanistic and explainable rather than noise.
+            This is a pilot: three companies, one model, and small cells, particularly on the accounting and narrative tasks. What it establishes is that the comparison can be run like for like from real filed reports, and that the differences it surfaces, signed values, units, abstention, are mechanistic and explainable rather than noise. The full study it defines needs more companies, multiple models, contamination controls to rule out the model having memorised the filings, and arms that vary tagging quality, since the value of structured facts depends on how well they were tagged in the first place.
           </p>
         </div>
       </section>

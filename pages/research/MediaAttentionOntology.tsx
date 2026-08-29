@@ -284,7 +284,7 @@ export const MediaAttentionOntology: React.FC = () => (
         The practical consequence is a quiet one. A validator built on a stock ISO 7064 library rejects 6,252 identifiers in this corpus, 2.78 per cent, as corrupt. Every one is perfectly valid. That is a one-in-thirty-six false positive rate inside a data quality gate, which is exactly the sort of defect that gets absorbed as background noise, blamed on upstream partners, and never traced.
       </p>
       <p className="text-gov-dark leading-relaxed">
-        Worth stating the null result alongside it, because it cuts against the pattern we have found in other registers. Across all 224,577 identifiers, <strong>zero</strong> fail their check character. In company and fund registers the equivalent measurement reliably turns up hand-keyed values that cannot exist, including transpositions and letter-for-digit slips sitting in official records. This data has none of that, which is consistent with its having been machine-imported rather than typed. We report it as a null result rather than quietly dropping a finding that did not appear.
+        The null result belongs alongside it, because it cuts against the pattern we have found in other registers. Across all 224,577 identifiers, <strong>zero</strong> fail their check character. In company and fund registers the equivalent measurement reliably turns up hand-keyed values that cannot exist, including transpositions and letter-for-digit slips sitting in official records. This data has none of that, which is consistent with its having been machine-imported rather than typed. We report it as a null result rather than quietly dropping a finding that did not appear.
       </p>
     </section>
 

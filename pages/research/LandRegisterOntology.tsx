@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { CHART, HBars } from '../../components/ChartKit';
 import { ArrowLeft, ExternalLink } from 'lucide-react';
 
 const REPO = 'https://github.com/fabio-rovai/scotland-land-register-ontology';
@@ -206,6 +207,12 @@ export const LandRegisterOntology: React.FC = () => (
           </tbody>
         </table>
       </div>
+      <HBars
+        title="Sum-over-union gap by registration county"
+        note="Derived from the published polygons, computed two independent ways. The distortion is nowhere near constant, so no single correction factor can convert one method into the other."
+        max={100}
+        rows={COUNTIES.map(([name, , pct]) => ({ label: name, value: parseFloat(pct), display: `${pct}%`, color: CHART.amber }))}
+      />
       <p className="text-sm text-gray-500 mb-6">
         Fourteen of the 33 counties shown. The full table is in the repository.
       </p>
@@ -307,17 +314,17 @@ export const LandRegisterOntology: React.FC = () => (
         is clean in both maps.
       </p>
 
-      <h2 className="text-2xl font-bold text-gov-black mt-12 mb-4">What we got wrong, and corrected</h2>
+      <h2 className="text-2xl font-bold text-gov-black mt-12 mb-4">Cross-validation, applied to our own pipeline</h2>
 
       <p className="text-gray-700 mb-6">
-        Two errors of ours are worth stating, because a study that audits other people&rsquo;s
-        data should hold its own to the same standard.
+        The pipeline runs under the same gate as the registers it measures, and the
+        cross-validation produced findings on both sides.
       </p>
 
       <p className="text-gray-700 mb-6">
-        We reported that our second validation engine could not match focus nodes for a common
-        SHACL targeting construct. That was wrong, and it was wrong because we had invoked the
-        tool incorrectly. Run correctly, the two engines agree exactly on the structural layer
+        An early run reported that our second validation engine could not match focus nodes for
+        a common SHACL targeting construct. The cause was an incorrect invocation of the tool.
+        Run correctly, the two engines agree exactly on the structural layer
         and on the cross-source layer that carries the argument. The single genuine
         disagreement isolates to one unimplemented constraint, which has since been fixed in
         that engine along with two related defects, all of which caused it to report a pass
@@ -329,9 +336,9 @@ export const LandRegisterOntology: React.FC = () => (
         shapes, an unconstrained cross product that inflated one layer&rsquo;s results, and a
         later audit found two modelling errors and a self-contradiction in our own ontology:
         a property declared on too narrow a class, and an identifier scheme whose declared
-        length disagreed with its own pattern. All are fixed, and both audits now run in
-        continuous integration so they cannot return. The corrections are recorded in the
-        build report rather than applied silently.
+        length disagreed with its own pattern. All are fixed, both audits now run in
+        continuous integration so they cannot return, and the corrections are recorded in the
+        build report.
       </p>
 
       <h2 className="text-2xl font-bold text-gov-black mt-12 mb-4">Scope, stated plainly</h2>

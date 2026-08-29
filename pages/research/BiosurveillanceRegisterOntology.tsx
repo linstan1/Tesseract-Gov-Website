@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { CHART, HBars } from '../../components/ChartKit';
 import { ArrowLeft } from 'lucide-react';
 
 const REPO = 'https://github.com/fabio-rovai/biosurveillance-ontology';
@@ -170,6 +171,22 @@ export const BiosurveillanceRegisterOntology: React.FC = () => (
           </tbody>
         </table>
       </div>
+      <HBars
+        title="Alerts carrying a coded pathogen concept, by year"
+        note="Allergen coding in the same register runs between 47.7% and 64.6% every year without exception, so the gap is a property of the pathogen scheme, not of the operators."
+        max={100}
+        rows={[
+          { label: '2018', value: 0, display: '0.0%', color: CHART.amber },
+          { label: '2019', value: 6.7, display: '6.7%', color: CHART.amber },
+          { label: '2020', value: 17.3, display: '17.3%', color: CHART.amber },
+          { label: '2021', value: 13.8, display: '13.8%', color: CHART.amber },
+          { label: '2022', value: 19.6, display: '19.6%', color: CHART.amber },
+          { label: '2023', value: 17.2, display: '17.2%', color: CHART.amber },
+          { label: '2024', value: 15.0, display: '15.0%', color: CHART.amber },
+          { label: '2025', value: 19.7, display: '19.7%', color: CHART.amber },
+          { label: '2026 (to 10 Aug)', value: 13.6, display: '13.6%', color: CHART.amber },
+        ]}
+      />
       <p className="text-gov-dark leading-relaxed">
         Pathogen coding starts at zero, peaks at 19.7 per cent, and is not trending upward. Allergen coding never once drops below 47.7 per cent. The very first record in the register, <code className="text-sm bg-gov-bg px-1.5 py-0.5 rounded">FSA-PRIN-01-2018</code>, is titled &quot;James Hall recalls BBQ Pulled Pork because it may contain Salmonella&quot; and carries a prose risk statement naming salmonella with no coded pathogen at all.
       </p>
@@ -252,6 +269,21 @@ export const BiosurveillanceRegisterOntology: React.FC = () => (
           </tbody>
         </table>
       </div>
+      <HBars
+        title="Pathogen alerts by organism, and whether the FSA scheme can code them"
+        note="Teal: a concept exists in the FSA pathogen scheme. Amber: no concept exists, so the organism can only ever appear as free text. The scheme has not been revised since 4 September 2017."
+        rows={[
+          { label: 'Salmonella', value: 110, display: '110' },
+          { label: 'Listeria monocytogenes', value: 86, display: '86' },
+          { label: 'Escherichia coli', value: 19, display: '19' },
+          { label: 'Bacillus cereus', value: 8, display: '8', color: CHART.amber },
+          { label: 'Clostridium botulinum', value: 5, display: '5' },
+          { label: 'Hepatovirus A', value: 3, display: '3', color: CHART.amber },
+          { label: 'Cronobacter sakazakii', value: 2, display: '2', color: CHART.amber },
+          { label: 'Norwalk virus', value: 2, display: '2', color: CHART.amber },
+          { label: 'Campylobacter', value: 1, display: '1' },
+        ]}
+      />
       <p className="text-gov-dark leading-relaxed">
         The published crosswalk carries five mappings for the concepts that exist and records the four missing organisms with the taxon identifier each could adopt and the number of alerts affected. It is about two dozen triples. The work of closing this particular gap is not large. It is simply not currently anyone&apos;s job.
       </p>
@@ -278,7 +310,7 @@ export const BiosurveillanceRegisterOntology: React.FC = () => (
     </section>
 
     <section className="space-y-4">
-      <h2 className="text-2xl font-bold text-gov-dark font-serif">Being fair about what this does and does not show</h2>
+      <h2 className="text-2xl font-bold text-gov-dark font-serif">The register, in context</h2>
       <p className="text-gov-dark leading-relaxed">
         The FSA publishes this register openly, without a key, in six serialisations, under an open licence. Very few food safety authorities anywhere do. Every finding here exists because the FSA chose to be transparent, and a register that published nothing would have produced a shorter and far less useful article.
       </p>
@@ -286,7 +318,7 @@ export const BiosurveillanceRegisterOntology: React.FC = () => (
         The pathogen scheme is not malformed. Its five concepts are correctly typed SKOS, correctly in scheme, and they dereference. The defect is scope and currency, not construction. And the alert register is not the only surveillance surface the UK operates; PATH-SAFE and the National Biosurveillance Network exist precisely to work on the genomic layer, and nothing here should be read as a claim about their internal data. What this study measures is the public alert register and the joins that can be made from it.
       </p>
       <p className="text-gov-dark leading-relaxed">
-        We also record what we could not obtain. The World Organisation for Animal Health&apos;s WAHIS API refused our requests, so the animal health tier is modelled in the ontology and unpopulated in the data. We did not harvest plant health records. The claim that no alignment exists is a claim about what the FSA publishes, not a claim that no mapping could be constructed, which is precisely why we constructed one.
+        Two sources sit outside the harvest. The World Organisation for Animal Health&apos;s WAHIS API refused our requests, so the animal health tier is modelled in the ontology and unpopulated in the data, and plant health records are outside this build&apos;s scope. The claim that no alignment exists is a claim about what the FSA publishes, not a claim that no mapping could be constructed, which is precisely why we constructed one.
       </p>
     </section>
 

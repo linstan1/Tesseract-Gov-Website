@@ -43,7 +43,7 @@ export const Insights: React.FC = () => {
         </p>
         <div className="bg-gov-bg border border-gov-border/50 rounded-xl p-6 max-w-4xl">
           <p className="text-base text-gov-dark/90 leading-relaxed">
-            Land valuation analysis covering <strong>1,916 Lower Super Output Areas</strong> — 99% of Welsh geography —
+            Land valuation analysis covering <strong>1,916 Lower Super Output Areas</strong>, 99% of Welsh geography,
             provided the first comparative empirical basis for land value tax design in Wales. AI adoption programmes under the{' '}
             <a
               href="https://iuk.ktn-uk.org/programme/bridgeai/"
@@ -130,7 +130,7 @@ export const Insights: React.FC = () => {
               <time className="text-xs text-gov-secondary/70" dateTime="2026-06-10">June 2026</time>
             </div>
             <h3 className="text-lg font-bold text-gov-dark mb-2">
-              Imperial War Museums — Digital Transformation Support Framework (Lot 1: Data Consultancy)
+              Imperial War Museums: Digital Transformation Support Framework (Lot 1: Data Consultancy)
             </h3>
             <p className="text-base text-gov-dark/80 leading-relaxed mb-3">
               Tesseract Academy has been appointed to the{' '}
@@ -198,7 +198,7 @@ export const Insights: React.FC = () => {
             <div className="flex items-start gap-4 mb-4">
               <span className="flex-shrink-0 w-9 h-9 rounded-full bg-gov-blue text-white text-sm font-bold flex items-center justify-center">1</span>
               <div>
-                <h3 className="text-xl font-bold text-gov-dark">Land Valuation Methodology Comparison — Welsh Government</h3>
+                <h3 className="text-xl font-bold text-gov-dark">Land Valuation Methodology Comparison: Welsh Government</h3>
                 <p className="text-sm text-gov-secondary/70 mt-1">
                   Source:{' '}
                   <a
@@ -253,7 +253,7 @@ export const Insights: React.FC = () => {
             <div className="flex items-start gap-4 mb-4">
               <span className="flex-shrink-0 w-9 h-9 rounded-full bg-gov-blue text-white text-sm font-bold flex items-center justify-center">2</span>
               <div>
-                <h3 className="text-xl font-bold text-gov-dark">Ontology Automation — National Digital Twin Programme</h3>
+                <h3 className="text-xl font-bold text-gov-dark">Ontology Automation: National Digital Twin Programme</h3>
                 <p className="text-sm text-gov-secondary/70 mt-1">
                   Source: Tesseract Academy delivery data, 2024–2025. Commissioned by the Department for Business and Trade
                   for the National Digital Twin Programme.
@@ -292,7 +292,7 @@ export const Insights: React.FC = () => {
             <div className="flex items-start gap-4 mb-4">
               <span className="flex-shrink-0 w-9 h-9 rounded-full bg-gov-blue text-white text-sm font-bold flex items-center justify-center">3</span>
               <div>
-                <h3 className="text-xl font-bold text-gov-dark">Public Engagement Registration Demand — BridgeAI Creative Industries</h3>
+                <h3 className="text-xl font-bold text-gov-dark">Public Engagement Registration Demand: BridgeAI Creative Industries</h3>
                 <p className="text-sm text-gov-secondary/70 mt-1">
                   Source: Tesseract Academy delivery data, 2025–2026.{' '}
                   <a
@@ -309,7 +309,7 @@ export const Insights: React.FC = () => {
             </div>
             <p className="text-base text-gov-dark/90 leading-relaxed">
               AI adoption support for the UK creative industries attracted <strong>1,100 registrations against a
-              programme capacity of 200</strong> — a 450% oversubscription rate — when delivered under the{' '}
+              programme capacity of 200</strong>, a 450% oversubscription rate, when delivered under the{' '}
               <a
                 href="https://iuk.ktn-uk.org/programme/bridgeai/"
                 target="_blank"
@@ -320,7 +320,7 @@ export const Insights: React.FC = () => {
               </a>{' '}
               (contract GSS24646). Post-programme satisfaction: <strong>4.6 out of 5</strong>. This oversubscription
               rate indicates significantly unmet demand for accessible, sector-specific AI adoption guidance among
-              UK SMEs — consistent with{' '}
+              UK SMEs, consistent with{' '}
               <a
                 href="https://www.nesta.org.uk/report/ai-and-the-economy/"
                 target="_blank"
@@ -338,7 +338,7 @@ export const Insights: React.FC = () => {
             <div className="flex items-start gap-4 mb-4">
               <span className="flex-shrink-0 w-9 h-9 rounded-full bg-gov-blue text-white text-sm font-bold flex items-center justify-center">4</span>
               <div>
-                <h3 className="text-xl font-bold text-gov-dark">Financial Vulnerability Signal Accuracy — Kalgera / Fintech Scotland</h3>
+                <h3 className="text-xl font-bold text-gov-dark">Financial Vulnerability Signal Accuracy: Kalgera / Fintech Scotland</h3>
                 <p className="text-sm text-gov-secondary/70 mt-1">
                   Source: Tesseract Academy qualitative research, 2023–2024. Ethical framework: Adult Support and
                   Protection (Scotland) Act 2007.
@@ -346,8 +346,8 @@ export const Insights: React.FC = () => {
               </div>
             </div>
             <p className="text-base text-gov-dark/90 leading-relaxed">
-              Eight behavioural transaction markers — including spending pattern changes, income depletion velocity,
-              new payee introduction, and cash withdrawal patterns — were validated as observable in retail banking
+              Eight behavioural transaction markers, including spending pattern changes, income depletion velocity,
+              new payee introduction, and cash withdrawal patterns, were validated as observable in retail banking
               transaction data through qualitative research with financially vulnerable adults in Scotland.{' '}
               <strong>Six of eight markers are reliably detectable before a financial harm event</strong>. The
               research was conducted under the ethical framework of the Adult Support and Protection (Scotland) Act
@@ -379,7 +379,7 @@ export const Insights: React.FC = () => {
             <div className="flex items-start gap-4 mb-4">
               <span className="flex-shrink-0 w-9 h-9 rounded-full bg-gov-blue text-white text-sm font-bold flex items-center justify-center">5</span>
               <div>
-                <h3 className="text-xl font-bold text-gov-dark">Procurement Route Effectiveness — Crown Commercial Service Frameworks</h3>
+                <h3 className="text-xl font-bold text-gov-dark">Procurement Route Effectiveness: Crown Commercial Service Frameworks</h3>
                 <p className="text-sm text-gov-secondary/70 mt-1">
                   Source: Tesseract Academy procurement experience, 2022–2026. Frameworks:{' '}
                   <a
@@ -557,7 +557,7 @@ export const Insights: React.FC = () => {
         <blockquote className="border-l-4 border-gov-blue pl-8 py-2">
           <p className="text-xl text-gov-dark/90 leading-relaxed italic max-w-4xl">
             "The gap between UK public sector AI ambition and delivery capability is not primarily a technology
-            gap — it is a methodology gap. Organisations that invest in research-backed implementation, ethical
+            gap; it is a methodology gap. Organisations that invest in research-backed implementation, ethical
             frameworks, and staff capability build sustainable AI programmes. Those that prioritise speed over
             rigour typically find themselves repeating Discovery phases."
           </p>
@@ -639,11 +639,11 @@ export const Insights: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <Link to="/research/welsh-government-land-valuation" className="block p-5 bg-white border border-gov-border/50 rounded-lg hover:border-gov-blue transition-colors">
             <p className="text-xs font-semibold text-gov-blue uppercase tracking-wider mb-1">Welsh Government</p>
-            <p className="text-sm font-semibold text-gov-dark">Land valuation methodologies — five approaches tested</p>
+            <p className="text-sm font-semibold text-gov-dark">Land valuation methodologies: five approaches tested</p>
           </Link>
           <Link to="/research/national-digital-twin-programme" className="block p-5 bg-white border border-gov-border/50 rounded-lg hover:border-gov-blue transition-colors">
             <p className="text-xs font-semibold text-gov-blue uppercase tracking-wider mb-1">National Digital Twin Programme</p>
-            <p className="text-sm font-semibold text-gov-dark">AI Ontology Extension Generator — open source on GitHub</p>
+            <p className="text-sm font-semibold text-gov-dark">AI Ontology Extension Generator: open source on GitHub</p>
           </Link>
           <Link to="/research/bridgeai-creative-industries" className="block p-5 bg-white border border-gov-border/50 rounded-lg hover:border-gov-blue transition-colors">
             <p className="text-xs font-semibold text-gov-blue uppercase tracking-wider mb-1">BridgeAI / Innovate UK</p>

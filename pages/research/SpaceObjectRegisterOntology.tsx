@@ -289,15 +289,15 @@ export const SpaceObjectRegisterOntology: React.FC = () => (
     </section>
 
     <section className="space-y-4">
-      <h2 className="text-2xl font-bold text-gov-dark font-serif">Finding five: what we got wrong, and how we found out</h2>
+      <h2 className="text-2xl font-bold text-gov-dark font-serif">Finding five: agreement between two pipelines is not verification</h2>
       <p className="text-gov-dark leading-relaxed">
-        The first version of this measurement reported 932 objects on which the catalogues disagree about disposition. The true figure is 261. We publish the error because the cause generalises.
+        {"The catalogues disagree on the disposition of 261 objects. An earlier run of this measurement reported 932, and the difference is a finding in its own right concerning how register measurement fails, which is why it is published with the rest."}
       </p>
       <p className="text-gov-dark leading-relaxed">
         GCAT entries are phases in an object&apos;s flight history, not the object itself, and the status code describes the event that ends the phase. Our first classification treated the reentry codes as meaning the object was gone and everything else as meaning it was still in orbit. That was wrong twice. <code className="text-sm bg-gov-bg px-1.5 py-0.5 rounded">E</code> for exploded and <code className="text-sm bg-gov-bg px-1.5 py-0.5 rounded">C</code> for collided destroy the object and were being counted as still in orbit. More seriously, codes such as docked, attached, transferred and grappled end a phase because the object joined another object, so GCAT is making no claim about current disposition at all, and 998 such objects were being scored as disagreements. Gemini 8 is the clearest case: GCAT ends the phase at docking with the Agena, CelesTrak records the landing, and the two records are consistent with each other.
       </p>
       <p className="text-gov-dark leading-relaxed">
-        The measurement pipeline computes every headline two independent ways and fails its own build if the two disagree. It passed on all of the wrong numbers, because both paths consumed the same misreading of the source vocabulary. Agreement between two implementations of the same misunderstanding is not verification. What caught it was reading the publishers&apos; own field documentation, and decomposing every unexplained residue until nothing was left unaccounted for. Both are now standing steps, and the corrected figures above are what survived them.
+        {"The measurement pipeline calculates each headline metric using two independent methods and aborts the build if the results diverge. It accepted the earlier figure because both processes interpreted the source vocabulary in the same incorrect manner. Consistency between two implementations of the same error does not constitute verification. The corrected figure emerged from reviewing the publishers' field documentation and breaking down all unexplained residuals until every element was accounted for. These actions are now permanent stages in the pipeline, and the figures presented above reflect the results that passed through them."}
       </p>
     </section>
 
@@ -336,7 +336,7 @@ export const SpaceObjectRegisterOntology: React.FC = () => (
     <section className="space-y-4">
       <h2 className="text-2xl font-bold text-gov-dark font-serif">What we have not done</h2>
       <p className="text-gov-dark leading-relaxed">
-        Two further catalogues exist and are gated behind free accounts rather than closed: the European Space Agency&apos;s DISCOS and the United States Space Force&apos;s Space-Track. A four-way reconciliation is the obvious next version and would settle several of the disagreements above by majority rather than by pairwise comparison. We have also not established whether CelesTrak&apos;s data model has a legitimate reason to retain the 216 entries that GCAT records as destroyed, and we would rather be told than assume.
+        Two further catalogues exist and are gated behind free accounts rather than closed: the European Space Agency&apos;s DISCOS and the United States Space Force&apos;s Space-Track. A four-way reconciliation is the obvious next version and would settle several of the disagreements above by majority rather than by pairwise comparison. Whether CelesTrak&apos;s data model has a legitimate reason to retain the 216 entries that GCAT records as destroyed is a question for its maintainers, and the discrepancy table in the repository is the place to answer it.
       </p>
       <p className="text-gov-dark leading-relaxed">
         Both catalogues change daily. Every figure here is a claim about two snapshots taken on 18 August 2026, which is exactly why the model dates every assertion instead of storing status as a property of an object.

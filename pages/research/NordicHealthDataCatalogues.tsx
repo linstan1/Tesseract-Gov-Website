@@ -255,7 +255,7 @@ export const NordicHealthDataCatalogues: React.FC = () => (
         zero Finnish datasets. Finland has them, and avoindata.fi&apos;s own search returns 57 results for health
         against the same corpus. The data is published, it is indexed at home, and it is invisible on the route
         the European Health Data Space is being built on. This is a one property fix in a harvest mapping and it
-        is the highest leverage single change available to any organisation in this study.
+        is the single change with the largest effect available to any organisation in this study.
       </p>
       <p className="text-gov-dark leading-relaxed">
         Finland is strong on the axes this does not measure. Kanta aggregates primary and secondary care and social care data, every care

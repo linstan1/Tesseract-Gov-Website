@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { CHART, HBars } from '../../components/ChartKit';
 import { ArrowLeft, ExternalLink } from 'lucide-react';
 import { Mermaid } from '../../components/Mermaid';
 
@@ -289,6 +290,16 @@ export const UkRegisterOntology: React.FC = () => (
           </tbody>
         </table>
       </div>
+      <HBars
+        title="Charitable companies against the Companies House live file, 31,612 joined records"
+        note="Every one of the 32 placeholder numbers passes the 8-digit format rule; only a referential check against the live register catches them."
+        rows={[
+          { label: 'Company number resolves to nothing', value: 1268, display: '1,268 (4.01%)', color: CHART.amber },
+          { label: 'Name disagrees with Companies House', value: 1082, display: '1,082 (3.57%)', color: CHART.amber },
+          { label: 'Company in distress while charity Registered', value: 662, display: '662', color: CHART.amber },
+          { label: 'Placeholder numbers (00000000, 01234567, 12345678)', value: 32, display: '32', color: CHART.amber },
+        ]}
+      />
       <p className="text-sm text-gov-secondary/90 leading-relaxed">
         All figures are computed from register snapshots pinned to their dates: the Companies House bulk file of 1 August 2026, and the Charity Commission extract, PSC snapshot and GLEIF golden copy of 17 August 2026. The 16-day skew between the bulk file and the other sources is quantified where it matters. All are living systems, so a later run produces different totals while the method reproduces exactly.
       </p>

@@ -101,7 +101,7 @@ const DIVERGENCES = [
   {
     kind: 'Gap',
     pair: 'Uniclass Co Complexes vs IFC4',
-    detail: 'IFC4 has no class for a campus or estate; IfcFacility only arrives in IFC 4.3. The Complexes table anchors to IfcSite composition conventions at 0.6 confidence, and the gap is recorded rather than papered over.',
+    detail: 'IFC4 has no class for a campus or estate; IfcFacility only arrives in IFC 4.3. The Complexes table anchors to IfcSite composition conventions at 0.6 confidence, and the gap is recorded explicitly.',
   },
 ];
 

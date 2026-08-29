@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { CHART, HBars } from '../../components/ChartKit';
 import { ArrowLeft } from 'lucide-react';
 import { Mermaid } from '../../components/Mermaid';
 
@@ -186,6 +187,15 @@ export const ChainControlOntology: React.FC = () => (
           </tbody>
         </table>
       </div>
+      <HBars
+        title="Upgrade or mint authority across the eight deployments measured"
+        note="Six of eight authorities are a single externally owned key with no verifiable quorum. The two Solana authorities are 2-of-4 SPL multisigs with disjoint signer sets."
+        max={8}
+        rows={[
+          { label: 'Single key, no verifiable quorum', value: 6, display: '6 of 8', color: CHART.amber },
+          { label: 'Verifiable 2-of-4 multisig', value: 2, display: '2 of 8' },
+        ]}
+      />
       <p className="text-gov-dark leading-relaxed">
         The asymmetry is the point. On Solana the issuer&apos;s control structure is enforced and published by the chain, and mint authority and freeze authority are separated across two different multisigs with different signers, which is a real separation of duties that anyone can check. On the EVM chains that separation cannot exist, because the account that can replace the code can mint and freeze and anything else it writes into the new implementation. Same issuer, same asset, two entirely different assurance postures, and you can only see it if both chains are one queryable world.
       </p>
@@ -208,15 +218,15 @@ export const ChainControlOntology: React.FC = () => (
     </section>
 
     <section className="space-y-4">
-      <h2 className="text-2xl font-bold text-gov-dark font-serif">What we are not claiming</h2>
+      <h2 className="text-2xl font-bold text-gov-dark font-serif">Prior art, and what this adds</h2>
       <p className="text-gov-dark leading-relaxed">
         L2BEAT resolves contract permission graphs and did so before this work. Its discovery tooling is open source under MIT, it is careful and curated, and for deep analysis of a rollup or a bridge it is the right instrument. This study does not duplicate it. EthOn is the incumbent Ethereum ontology, published under CC BY 4.0 and archived since October 2018. Measured by grep over its Turtle file it contains zero occurrences of proxy, upgrade, admin, owner, multisig and timelock, because it predates EIP-1967 entirely. Our Account class is declared a subclass of EthOn&apos;s, and the alignment is deliberately weak. GraphSense does open clustering on UTXO chains, which is a different problem.
       </p>
       <p className="text-gov-dark leading-relaxed">
-        We also removed a number from an earlier draft. It totalled the reported value of every protocol whose contract resolves to a single key and produced a headline figure above two billion dollars. That number is not defensible, because the value figure is protocol-level while the contract measured is usually a token contract, and controlling a token contract is not the same as controlling a protocol&apos;s deposits. Where the two genuinely coincide, as with a gold-backed token whose proxy is the token itself, the case is stated individually instead. The build report explains why it was cut.
+        {"A headline figure was removed during internal verification before publication. A draft calculated the reported value of every protocol whose contract resolves to a single key, yielding a total exceeding two billion dollars. This metric conflated protocol-level value with control of what is typically a token contract. Controlling a token contract does not equate to controlling a protocol's deposits, so the figure was excluded. In instances where the two genuinely coincide, such as with a gold-backed token whose proxy is the token itself, the case is stated individually."}
       </p>
       <p className="text-gov-dark leading-relaxed">
-        The same build report lists four bugs this pipeline had. A SHACL layer that reported a clean pass while 390 real violations sat in the data, because the SKOS hierarchy was supplied through a parameter that does not expose it to constraint queries. An address decoder that invented a controller out of a function return that was not an address. A decoder change that then labelled 5,691 ordinary contracts as having renounced ownership when their storage slot was merely empty. And an account carrying two different canonical addresses, caught by SHACL and not by a regular expression. Each is documented because a repository that reports only its successes is not evidence of anything.
+        {"The build report also records four defects that the verification layer identified within our own pipeline. These include a SHACL layer that reported a clean pass while 390 real violations remained in the data, because the SKOS hierarchy was supplied through a parameter that does not expose it to constraint queries. Another defect involved an address decoder that interpreted a function return, which was not an address, as a controller. A subsequent decoder change then labelled 5,691 ordinary contracts as having renounced ownership when their storage slot was merely empty. Finally, the system detected an account carrying two different canonical addresses, a discrepancy caught by SHACL rather than by a regular expression."}
       </p>
     </section>
 

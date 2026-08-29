@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { CHART, HBars } from '../../components/ChartKit';
 import { ArrowLeft } from 'lucide-react';
 
 const REPO = "https://github.com/fabio-rovai/machinery-semantics";
@@ -50,13 +51,31 @@ export const MachineryTaiwan: React.FC = () => (
             <p className="text-base text-gov-dark/90 leading-relaxed mb-4">{"MTConnect releases every version as both an XSD and a JSON Schema, which makes the two mutually checkable. We compared 2.0, 2.1 and 2.2."}</p>
             <p className="text-base text-gov-dark/90 leading-relaxed mb-4">{"The JSON Schema defines AlarmStateEnum with INSTANT, ACTIVE and CLEARED. The XSD defines AlarmStateType with only ACTIVE and CLEARED. The string INSTANT does not appear anywhere in either XSD. The discrepancy is identical across all three released versions."}</p>
             <p className="text-base text-gov-dark/90 leading-relaxed mb-4">{"The consequence is narrow and real. A JSON-side implementation may legitimately emit INSTANT and an XSD-validating consumer will reject it. If your integration crosses that boundary, neither document tells you which side is correct."}</p>
-            <h2 className="text-2xl font-semibold text-gov-blue mt-10 mb-4">{"The finding we retracted"}</h2>
+            <h2 className="text-2xl font-semibold text-gov-blue mt-10 mb-4">{"111 divergences, reduced to one under verification"}</h2>
             <p className="text-base text-gov-dark/90 leading-relaxed mb-4">{"Our first pass reported 111 divergences between the two representations. That number was wrong, and the correction matters more than the original claim."}</p>
             <p className="text-base text-gov-dark/90 leading-relaxed mb-4">{"Of the 111, 105 were the UNAVAILABLE sentinel present in the XSD enumerations but absent from the JSON ones. The JSON Schema handles unavailability structurally through an isUnavailable flag and a separate value constraint, so this is a deliberate design difference and not a defect. Another three were an artefact of our own name normalisation, which collapsed two genuinely distinct XSD types, CoordinateSystemEnumType and CoordinateSystemTypeEnumType, onto one key across a file boundary."}</p>
-            <p className="text-base text-gov-dark/90 leading-relaxed mb-4">{"One real defect remains, present in three releases. We would rather publish one verified finding than a hundred impressive ones."}</p>
+            <HBars
+              title="111 first-pass divergences between the XSD and JSON Schema, decomposed"
+              note="Verification reduced the raw count to a single real defect: AlarmStateEnum permits INSTANT in the JSON Schema and not in the XSD, identically in versions 2.0, 2.1 and 2.2."
+              rows={[
+                { label: 'UNAVAILABLE sentinel: deliberate design difference', value: 105, display: '105', color: CHART.gray },
+                { label: 'Artefact of our own name normalisation', value: 3, display: '3', color: CHART.gray },
+                { label: 'Real defect, one per release', value: 3, display: '3', color: CHART.amber },
+              ]}
+            />
+            <p className="text-base text-gov-dark/90 leading-relaxed mb-4">{"One real defect remains, present in three releases."}</p>
             <h2 className="text-2xl font-semibold text-gov-blue mt-10 mb-4">{"The Asset Administration Shell is open, and a widespread assumption about it is false"}</h2>
             <p className="text-base text-gov-dark/90 leading-relaxed mb-4">{"The IDTA publishes 54 submodel templates under CC BY 4.0, including those a Taiwanese exporter will need: Digital Nameplate, Functional Safety, Handover Documentation, Intelligent Information for Use, Carbon Footprint and Digital Product Passport."}</p>
-            <p className="text-base text-gov-dark/90 leading-relaxed mb-4">{"We expected these open templates to depend on paywalled semantic dictionaries, which would have meant compliance quietly requires a commercial ECLASS or IEC CDD subscription. That expectation was wrong. Across the published templates we counted 1,529 references to IDTA's own IRIs against 18 ECLASS and 9 IEC CDD references. The templates are overwhelmingly self-referential. If a vendor tells you compliance requires buying a dictionary, ask them for their counts."}</p>
+            <p className="text-base text-gov-dark/90 leading-relaxed mb-4">{"We expected these open templates to depend on paywalled semantic dictionaries, which would have meant compliance quietly requires a commercial ECLASS or IEC CDD subscription. That expectation was wrong. Across the published templates we counted 1,529 references to IDTA's own IRIs against 18 ECLASS and 9 IEC CDD references. The templates are overwhelmingly self-referential. The counts do not support the claim that compliance requires buying a dictionary subscription."}</p>
+            <HBars
+              title="Semantic references across the published AAS submodel templates"
+              note="The templates are overwhelmingly self-referential. The counts do not support the claim that implementing them requires a commercial dictionary subscription."
+              rows={[
+                { label: "IDTA's own IRIs", value: 1529, display: '1,529' },
+                { label: 'ECLASS references', value: 18, display: '18', color: CHART.gray },
+                { label: 'IEC CDD references', value: 9, display: '9', color: CHART.gray },
+              ]}
+            />
             <h2 className="text-2xl font-semibold text-gov-blue mt-10 mb-4">{"What this means in Taichung"}</h2>
             <p className="text-base text-gov-dark/90 leading-relaxed mb-4">{"Your compliance evidence is becoming machine-readable, so it inherits the defects of the schemas beneath it. Those schemas are open, so you can audit them yourself instead of trusting an assurance. And where two published representations of one standard disagree, resolving that disagreement falls to you at integration time unless someone raises it upstream first."}</p>
             <p className="text-base text-gov-dark/90 leading-relaxed mb-4">{"We have raised the MTConnect discrepancy with the standard's maintainers."}</p>
@@ -78,7 +97,7 @@ export const MachineryTaiwan: React.FC = () => (
             <p className="text-base text-gov-dark/90 leading-relaxed mb-4">{"MTConnect 將每個版本同時以 XSD 與 JSON Schema 發行，使兩者可以互相對照。我們比對了 2.0、2.1 與 2.2。"}</p>
             <p className="text-base text-gov-dark/90 leading-relaxed mb-4">{"JSON Schema 將 AlarmStateEnum 定義為 INSTANT、ACTIVE 與 CLEARED。XSD 則將 AlarmStateType 僅定義為 ACTIVE 與 CLEARED。字串 INSTANT 未曾出現在任何一份 XSD 之中。此項不一致在三個已發行版本中完全相同。"}</p>
             <p className="text-base text-gov-dark/90 leading-relaxed mb-4">{"後果範圍有限但真實存在。JSON 側的實作可以正當地送出 INSTANT，而以 XSD 進行驗證的接收端會拒絕該訊息。若貴公司的整合跨越了這個邊界，兩份文件都不會告訴您哪一側才是正確的。"}</p>
-            <h2 className="text-2xl font-semibold text-gov-blue mt-10 mb-4">{"我們撤回的那項發現"}</h2>
+            <h2 className="text-2xl font-semibold text-gov-blue mt-10 mb-4">{"驗證後：111 項分歧化約為一項"}</h2>
             <p className="text-base text-gov-dark/90 leading-relaxed mb-4">{"初次分析得出兩種表示之間有 111 項分歧。該數字是錯的，而這項更正比原本的主張更值得說明。"}</p>
             <p className="text-base text-gov-dark/90 leading-relaxed mb-4">{"111 項之中，有 105 項是出現在 XSD 列舉但未出現在 JSON 列舉中的 UNAVAILABLE 哨兵值。JSON Schema 透過 isUnavailable 旗標與獨立的值約束，以結構方式處理不可用狀態，因此這是刻意的設計差異而非缺陷。另有 3 項是我們自身名稱正規化所產生的假象，把兩個確實不同的 XSD 型別 CoordinateSystemEnumType 與 CoordinateSystemTypeEnumType 跨檔案邊界合併成同一個鍵。"}</p>
             <p className="text-base text-gov-dark/90 leading-relaxed mb-4">{"最後剩下一項真實缺陷，存在於三個版本之中。我們寧可發表一項經過驗證的發現，也不願發表一百項看起來可觀的發現。"}</p>

@@ -336,7 +336,7 @@ export const ParametricPayoutAssurance: React.FC = () => (
         <p className="text-sm font-semibold uppercase tracking-wider text-rose-800">The computed result</p>
         <p className="text-gov-dark leading-relaxed">
           Run a wind-indexed product whose trigger fires at typhoon strength against Nalgae and it pays
-          nothing. Not a reduced amount. Nothing. The storm that destroyed the crop was, by the
+          nothing at all. The storm that destroyed the crop was, by the
           instrument's own definition, not the kind of event the instrument covers.
         </p>
       </div>
@@ -384,7 +384,7 @@ export const ParametricPayoutAssurance: React.FC = () => (
         before the event, in the register, and it is the only kind you can still fix.
       </p>
       <p className="text-gov-dark leading-relaxed">
-        A great deal of climate cover in the Philippines is not bought. It is conferred. Cover for
+        A great deal of climate cover in the Philippines is conferred rather than bought. Cover for
         register-listed subsistence farmers and fisherfolk is premium-subsidised, and in the flagship
         parametric scheme for small-scale fishers the premium is donor-paid and the cover is offered as
         a benefit of registration. Enrolment is frequently done in bulk by a municipal agriculture
@@ -527,11 +527,11 @@ export const ParametricPayoutAssurance: React.FC = () => (
         agricultural insurance in Vietnam, examine how households actually value these products rather
         than assuming they value them at actuarial worth. If valuation is behavioural and contextual,
         then the experience of the process is part of the product, and a scheme that pays eventually
-        after four signatures is not a slower version of one that pays in three days. It is a different
-        good. Extend that and assurance is not overhead on the product; it is a feature of it.
+        after four signatures is a different good from one that pays in three days, and by the same
+        logic assurance is a feature of the product rather than overhead on it.
       </p>
       <p className="text-gov-dark leading-relaxed">
-        Three design constraints follow, and we hold ourselves to them rather than advertising them.
+        Three design constraints follow.
         Nothing new is asked of the household: no app, no smartphone, no identity document, no form.
         Checking is machine-checkable rather than clerical, because verification became a burden in the
         first place when it was performed by people one claim at a time. And an honest unknown conforms,

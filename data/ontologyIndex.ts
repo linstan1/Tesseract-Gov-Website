@@ -299,7 +299,7 @@ export const ONTOLOGY_GROUPS: OntologyGroup[] = [
       },
       {
         slug: '/research/enterprise-knowledge-ontology',
-        title: 'Your search index and your AI pipeline are reading different corpora',
+        title: 'The Corpus Readiness Index: is your knowledge base fit to feed an AI?',
         note: 'The enterprise knowledge case, which is where most buyers first meet this problem.',
         repo: 'https://github.com/fabio-rovai/enterprise-knowledge-ontology',
       },

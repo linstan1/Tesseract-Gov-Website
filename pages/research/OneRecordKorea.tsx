@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { CHART, HBars } from '../../components/ChartKit';
 import { ArrowLeft } from 'lucide-react';
 
 const REPO = "https://github.com/fabio-rovai/cargo-semantics";
@@ -47,6 +48,17 @@ export const OneRecordKorea: React.FC = () => (
             <h2 className="text-2xl font-semibold text-gov-blue mt-10 mb-4">{"What we measured"}</h2>
             <p className="text-base text-gov-dark/90 leading-relaxed mb-4">{"We validated every published version of the ONE Record data model ontology with two independent engines, our own open-source Open Ontologies engine and rdflib. They agree exactly."}</p>
             <div className="overflow-x-auto my-6"><table className="w-full text-sm border border-gov-blue/20 rounded"><thead className="bg-gov-blue/5"><tr><th className="text-left py-2 px-3 font-semibold">{"Release"}</th><th className="text-left py-2 px-3 font-semibold">{"Properties"}</th><th className="text-left py-2 px-3 font-semibold">{"Missing rdfs:domain"}</th><th className="text-left py-2 px-3 font-semibold">{"Classes missing a label"}</th><th className="text-left py-2 px-3 font-semibold">{"Total lint issues"}</th></tr></thead><tbody><tr className="border-t border-gov-blue/15"><td className="py-2 px-3">{"2021-06"}</td><td className="py-2 px-3">{""}</td><td className="py-2 px-3">{""}</td><td className="py-2 px-3">{"9"}</td><td className="py-2 px-3">{"20"}</td></tr><tr className="border-t border-gov-blue/15"><td className="py-2 px-3">{"2022-05"}</td><td className="py-2 px-3">{""}</td><td className="py-2 px-3">{""}</td><td className="py-2 px-3">{"10"}</td><td className="py-2 px-3">{"23"}</td></tr><tr className="border-t border-gov-blue/15"><td className="py-2 px-3">{"2022-12"}</td><td className="py-2 px-3">{"496"}</td><td className="py-2 px-3">{"0"}</td><td className="py-2 px-3">{"1"}</td><td className="py-2 px-3">{"2"}</td></tr><tr className="border-t border-gov-blue/15"><td className="py-2 px-3">{"2023-12"}</td><td className="py-2 px-3">{"522"}</td><td className="py-2 px-3">{"522 (100 per cent)"}</td><td className="py-2 px-3">{"57"}</td><td className="py-2 px-3">{"636"}</td></tr><tr className="border-t border-gov-blue/15"><td className="py-2 px-3">{"2024-12"}</td><td className="py-2 px-3">{"534"}</td><td className="py-2 px-3">{"534 (100 per cent)"}</td><td className="py-2 px-3">{"58"}</td><td className="py-2 px-3">{"650"}</td></tr></tbody></table></div>
+            <HBars
+              title="Total lint issues by release, dual-engine audit"
+              note="rdflib and the Open Ontologies engine agree exactly. The step change is the disappearance of every rdfs:domain axiom between 2022-12 and 2023-12."
+              rows={[
+                { label: '2021-06', value: 20, display: '20' },
+                { label: '2022-05', value: 23, display: '23' },
+                { label: '2022-12', value: 2, display: '2' },
+                { label: '2023-12', value: 636, display: '636', color: CHART.amber },
+                { label: '2024-12', value: 650, display: '650', color: CHART.amber },
+              ]}
+            />
             <p className="text-base text-gov-dark/90 leading-relaxed mb-4">{"The December 2022 release was in good shape. Every one of its 496 object and datatype properties declared an rdfs:domain. The December 2023 release introduced 522 properties and not one of them declares a domain. The December 2024 release grew the model to 534 properties and the situation is unchanged."}</p>
             <p className="text-base text-gov-dark/90 leading-relaxed mb-4">{"This is not gradual erosion. It is a categorical change that happened in a single release and has now persisted through two."}</p>
             <h2 className="text-2xl font-semibold text-gov-blue mt-10 mb-4">{"Why a Korean cargo carrier should care"}</h2>
@@ -55,9 +67,8 @@ export const OneRecordKorea: React.FC = () => (
             <p className="text-base text-gov-dark/90 leading-relaxed mb-4">{"Validation loses its grip. Teams that generate SHACL shapes or JSON Schema from the ontology will generate weaker constraints, because the constraint generator has less to work with. Data that should fail validation will pass."}</p>
             <p className="text-base text-gov-dark/90 leading-relaxed mb-4">{"Tooling degrades silently. Ontology-driven editors, form generators and mapping tools use domain declarations to decide which properties apply to which class. With no domains, every property appears applicable to everything."}</p>
             <p className="text-base text-gov-dark/90 leading-relaxed mb-4">{"The 57 classes with no rdfs:label compound this, because human-facing tools fall back to displaying raw IRIs."}</p>
-            <h2 className="text-2xl font-semibold text-gov-blue mt-10 mb-4">{"What we are not claiming"}</h2>
-            <p className="text-base text-gov-dark/90 leading-relaxed mb-4">{"We have not found evidence that this was accidental, and we are not asserting it was. There are legitimate modelling reasons to omit rdfs:domain, most commonly to avoid unintended inference in an open world. What we are asserting is narrower and verifiable: the axioms were present in 2022-12, they are absent in 2023-12 and 2024-12, no migration note accompanies the change, and any implementer who upgraded across that boundary inherited the difference without being told."}</p>
-            <p className="text-base text-gov-dark/90 leading-relaxed mb-4">{"We have raised this with IATA through the repository's own public channel before publishing, because a reproducible defect report is worth more than commentary."}</p>
+            <h2 className="text-2xl font-semibold text-gov-blue mt-10 mb-4">{"The claim, precisely"}</h2>
+            <p className="text-base text-gov-dark/90 leading-relaxed mb-4">{"The claim is precise and verifiable: the axioms were present in 2022-12, they are absent in 2023-12 and 2024-12, no migration note accompanies the change, and any implementer who upgraded across that boundary inherited the difference without being told. There are legitimate modelling reasons to omit rdfs:domain, most commonly to avoid unintended inference in an open world, and whether this change was intended is for IATA to say. We raised it through the repository's own public channel before publishing, because a reproducible defect report is worth more than commentary."}</p>
             <h2 className="text-2xl font-semibold text-gov-blue mt-10 mb-4">{"How we checked, so you can repeat it"}</h2>
             <p className="text-base text-gov-dark/90 leading-relaxed mb-4">{"Clone IATA-Cargo/ONE-Record. Take the data model ontology from the 2022-12 and 2024-12 standard folders. Count properties typed owl:ObjectProperty or owl:DatatypeProperty, then count how many of those are the subject of an rdfs:domain triple. The gap is the finding. The whole check runs in under a minute and needs no licence, because the repository is MIT."}</p>
             <p className="text-base text-gov-dark/90 leading-relaxed mb-4">{"This is the method we apply to registers and standards generally. Identity and conformance are claims made by a named source on a date, not properties of a thing, so we record who asserted what and when, and we verify every number two ways before we publish it."}</p>

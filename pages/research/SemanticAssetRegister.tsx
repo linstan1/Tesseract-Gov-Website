@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { CHART, HBars } from '../../components/ChartKit';
 import { ArrowLeft } from 'lucide-react';
 
 const REPO = 'https://github.com/fabio-rovai/semantic-asset-register';
@@ -190,7 +191,7 @@ export const SemanticAssetRegister: React.FC = () => (
         The remaining specification violations are few and concrete. Four NASA GCMD concept scheme endpoints return <code className="text-sm bg-gov-bg px-1.5 py-0.5 rounded">application/xml</code> rather than <code className="text-sm bg-gov-bg px-1.5 py-0.5 rounded">application/rdf+xml</code>, so a client negotiating content properly cannot tell it has been handed RDF, although the payload is well formed and parses. Three assets carry pairs of concepts asserted both associatively and hierarchically, which SKOS condition S27 makes disjoint: 4,700 of roughly 246,000 pairs in the USGS Common Geographic Areas file, which at that scale reads as a generation artefact rather than editorial slips, 6 of 32 in GCMD Platforms, and 1 of 1,106 in the USGS Thesaurus. Two assets breach S14 on a small proportion of concepts.
       </p>
       <p className="text-gov-dark leading-relaxed">
-        What is absent from that column is worth stating with the same precision. There were no failures on retrievability: every asset was obtainable at the address its publisher advertises. There were no failures on transport security: every plain HTTP request either redirected to HTTPS or, in the EPA&apos;s case, was refused outright, which is stronger than the policy requires. There were no inconsistent ontologies, no unsatisfiable classes, and no violations of SKOS conditions S9, S13, S37 or S46 anywhere in the sample. Federal publishers are not shipping broken logic. They are shipping unlabelled artefacts.
+        There were no failures on retrievability: every asset was obtainable at the address its publisher advertises. There were no failures on transport security: every plain HTTP request either redirected to HTTPS or, in the EPA&apos;s case, was refused outright, which is stronger than the policy requires. There were no inconsistent ontologies, no unsatisfiable classes, and no violations of SKOS conditions S9, S13, S37 or S46 anywhere in the sample. Federal publishers are not shipping broken logic. They are shipping unlabelled artefacts.
       </p>
     </section>
 
@@ -277,6 +278,16 @@ export const SemanticAssetRegister: React.FC = () => (
           </tbody>
         </table>
       </div>
+      <HBars
+        title="Normative check failures across the sample"
+        note="Ten failures across ten normative checks. Retrievability, transport security and logical consistency failed nowhere; the failures concentrate in serialisation labelling and SKOS label discipline."
+        rows={[
+          { label: 'SAR-P02 media type matches serialisation', value: 4, display: '4', color: CHART.amber },
+          { label: 'SAR-L07 related vs broaderTransitive disjointness', value: 3, display: '3', color: CHART.amber },
+          { label: 'SAR-L06 one preferred label per language', value: 2, display: '2', color: CHART.amber },
+          { label: 'SAR-P01 parses as RDF', value: 1, display: '1', color: CHART.amber },
+        ]}
+      />
       <p className="text-gov-dark leading-relaxed">
         Reading down the conventional block is the fastest way to see the shape of the estate. The five largest counts are licence, publisher, version, definitions and content negotiation, in that order, and none of them is a logic problem.
       </p>

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { CHART, HBars } from '../../components/ChartKit';
 import { ArrowLeft } from 'lucide-react';
 
 const REPO = "https://github.com/fabio-rovai/machinery-semantics";
@@ -50,13 +51,31 @@ export const MachineryKorea: React.FC = () => (
             <p className="text-base text-gov-dark/90 leading-relaxed mb-4">{"MTConnect publishes each version as both an XSD and a JSON Schema. That makes them checkable against each other, which is unusual and to the standard's credit. We compared versions 2.0, 2.1 and 2.2."}</p>
             <p className="text-base text-gov-dark/90 leading-relaxed mb-4">{"The JSON Schema defines AlarmStateEnum with the values INSTANT, ACTIVE and CLEARED. The XSD defines AlarmStateType with only ACTIVE and CLEARED. The string INSTANT appears nowhere in either XSD document. The discrepancy is present identically in all three released versions."}</p>
             <p className="text-base text-gov-dark/90 leading-relaxed mb-4">{"The practical consequence is narrow but real. A JSON-side implementation may legitimately emit INSTANT, and an XSD-validating consumer will reject the message. If your integration crosses that boundary, you have a conformance question that neither document answers."}</p>
-            <h2 className="text-2xl font-semibold text-gov-blue mt-10 mb-4">{"The number we had to throw away"}</h2>
-            <p className="text-base text-gov-dark/90 leading-relaxed mb-4">{"Our first pass reported 111 divergences between the two representations. That number was wrong and we are publishing it because the correction is more instructive than the finding."}</p>
+            <h2 className="text-2xl font-semibold text-gov-blue mt-10 mb-4">{"111 divergences, decomposed under verification"}</h2>
+            <p className="text-base text-gov-dark/90 leading-relaxed mb-4">{"Our first pass reported 111 divergences between the two representations. The decomposition is more instructive than the raw count."}</p>
             <p className="text-base text-gov-dark/90 leading-relaxed mb-4">{"Of the 111, 105 were the UNAVAILABLE sentinel appearing in the XSD enumerations but not the JSON ones. The JSON Schema handles unavailability structurally, through an isUnavailable flag and a separate value constraint, so this is a deliberate design difference rather than a defect. A further three were an artefact of our own name matching, which collapsed two genuinely distinct XSD types, CoordinateSystemEnumType and CoordinateSystemTypeEnumType, onto a single key across a file boundary."}</p>
-            <p className="text-base text-gov-dark/90 leading-relaxed mb-4">{"That leaves one real defect, appearing in three releases. We would rather publish one verified finding than a hundred impressive ones."}</p>
+            <p className="text-base text-gov-dark/90 leading-relaxed mb-4">{"That leaves one real defect, appearing in three releases."}</p>
+            <HBars
+              title="111 first-pass divergences between the XSD and JSON Schema, decomposed"
+              note="Verification reduced the raw count to a single real defect: AlarmStateEnum permits INSTANT in the JSON Schema and not in the XSD, identically in versions 2.0, 2.1 and 2.2."
+              rows={[
+                { label: 'UNAVAILABLE sentinel: deliberate design difference', value: 105, display: '105', color: CHART.gray },
+                { label: 'Artefact of our own name matching', value: 3, display: '3', color: CHART.gray },
+                { label: 'Real defect, one per release', value: 3, display: '3', color: CHART.amber },
+              ]}
+            />
             <h2 className="text-2xl font-semibold text-gov-blue mt-10 mb-4">{"The Asset Administration Shell is genuinely open, and a common assumption about it is false"}</h2>
             <p className="text-base text-gov-dark/90 leading-relaxed mb-4">{"The IDTA publishes 54 submodel templates under CC BY 4.0, including the ones a machine builder exporting to the EU will actually need: Digital Nameplate, Functional Safety, Handover Documentation, Intelligent Information for Use, Carbon Footprint and Digital Product Passport."}</p>
-            <p className="text-base text-gov-dark/90 leading-relaxed mb-4">{"We expected to find that these open templates depend on paywalled semantic dictionaries, which would have meant every implementer needs a commercial ECLASS or IEC CDD subscription to resolve the meaning of the fields. That expectation was wrong. Across the published templates we counted 1,529 references to IDTA's own IRIs against only 18 ECLASS and 9 IEC CDD references. The templates are overwhelmingly self-referential. Anyone telling you that compliance requires buying a dictionary subscription should be asked to show their counts."}</p>
+            <p className="text-base text-gov-dark/90 leading-relaxed mb-4">{"We expected to find that these open templates depend on paywalled semantic dictionaries, which would have meant every implementer needs a commercial ECLASS or IEC CDD subscription to resolve the meaning of the fields. That expectation was wrong. Across the published templates we counted 1,529 references to IDTA's own IRIs against only 18 ECLASS and 9 IEC CDD references. The templates are overwhelmingly self-referential. The counts do not support the common claim that compliance requires a commercial dictionary subscription."}</p>
+            <HBars
+              title="Semantic references across the 54 published AAS submodel templates"
+              note="The templates are overwhelmingly self-referential. The counts do not support the common claim that implementing them requires a commercial dictionary subscription."
+              rows={[
+                { label: "IDTA's own IRIs", value: 1529, display: '1,529' },
+                { label: 'ECLASS references', value: 18, display: '18', color: CHART.gray },
+                { label: 'IEC CDD references', value: 9, display: '9', color: CHART.gray },
+              ]}
+            />
             <h2 className="text-2xl font-semibold text-gov-blue mt-10 mb-4">{"What this means for a Korean exporter"}</h2>
             <p className="text-base text-gov-dark/90 leading-relaxed mb-4">{"Three things follow. Your compliance evidence is becoming machine-readable, so it inherits the defects of the schemas you build on. The schemas are open, which means you can audit them yourself rather than trusting a vendor's assurance. And where two published representations of the same standard disagree, the disagreement is yours to resolve at integration time unless somebody raises it upstream first."}</p>
             <p className="text-base text-gov-dark/90 leading-relaxed mb-4">{"We have raised the MTConnect discrepancy with the standard's maintainers."}</p>

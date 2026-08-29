@@ -28,6 +28,51 @@ const SCHEMA = {
     'SHACL, closed-world, open-world assumption, RDF, OWL, ontology, knowledge graph, LLM hallucination, vocabulary validation, schema.org, IES4, OBO Foundry, neuro-symbolic, AI assurance',
 };
 
+const CHART = { teal: '#00897b', amber: '#b45309', gray: '#5c6670' };
+
+type BarRow = { label: string; value: number; display: string; color?: string };
+
+const HBars: React.FC<{ title: string; note?: string; max?: number; rows: BarRow[] }> = ({ title, note, max, rows }) => {
+  const m = max ?? Math.max(...rows.map((r) => r.value));
+  return (
+    <figure className="rounded-lg border border-gov-border bg-white p-5">
+      <figcaption className="text-sm font-semibold text-gov-dark mb-3">{title}</figcaption>
+      <div className="space-y-2">
+        {rows.map((r) => (
+          <div key={r.label} className="flex items-center gap-3" title={`${r.label}: ${r.display}`}>
+            <span className="w-56 shrink-0 text-right text-xs text-gov-secondary leading-tight">{r.label}</span>
+            <div className="flex-1 h-[18px]">
+              <div
+                className="h-full rounded-r"
+                style={{ width: `${Math.max((r.value / m) * 100, 0.5)}%`, backgroundColor: r.color ?? CHART.teal }}
+              />
+            </div>
+            <span className="w-20 shrink-0 text-xs font-semibold text-gov-dark tabular-nums">{r.display}</span>
+          </div>
+        ))}
+      </div>
+      {note && <p className="text-xs text-gov-secondary mt-3">{note}</p>}
+    </figure>
+  );
+};
+
+const DETECT_ROWS: BarRow[] = [
+  { label: 'Hallucinated graphs flagged by open-world SHACL', value: 0, display: '0 / 300', color: CHART.amber },
+  { label: 'Hallucinated graphs flagged by the closed-world gate', value: 300, display: '300 / 300' },
+  { label: 'False alarms on clean graphs (gate)', value: 0, display: '0 / 300', color: CHART.gray },
+];
+
+const SCALE_ROWS: BarRow[] = [
+  { label: 'OBO (PATO+RO)', value: 270126, display: '270,126' },
+  { label: 'schema.org', value: 17949, display: '17,949' },
+  { label: 'IES4', value: 3976, display: '3,976' },
+];
+
+const FINETUNE_ROWS: BarRow[] = [
+  { label: 'Base model', value: 0.937, display: '0.937', color: CHART.amber },
+  { label: 'IES4 fine-tune', value: 0.010, display: '0.010' },
+];
+
 const RESULTS = [
   { vocab: 'schema.org', triples: '17,949', decl: '933 / 1,521', fabricated: '136', shacl: '100%', cw: '100%', fp: '0%' },
   { vocab: 'IES4', triples: '3,976', decl: '510 / 204', fabricated: '134', shacl: '100%', cw: '100%', fp: '0%' },
@@ -54,7 +99,7 @@ export const OntologyCorrectnessBench: React.FC = () => {
           The open-world hole: why SHACL cannot catch a hallucinated ontology term
         </h1>
         <p className="text-xl text-gov-secondary/90 leading-relaxed">
-          Ask a language model to write RDF and it will, some of the time, give you a term that does not exist: a <code className="text-base bg-gov-bg px-1.5 py-0.5 rounded">schema:priceBracket</code> where it meant <code className="text-base bg-gov-bg px-1.5 py-0.5 rounded">schema:priceRange</code>, an OBO id off by a digit. The triple parses. It reads correctly. And it is referentially fake. The reflex is to reach for SHACL. Measured on three real vocabularies, SHACL does not catch this. Not some of the time. None of the time.
+          Ask a language model to write RDF and it will, some of the time, give you a term that does not exist: a <code className="text-base bg-gov-bg px-1.5 py-0.5 rounded">schema:priceBracket</code> where it meant <code className="text-base bg-gov-bg px-1.5 py-0.5 rounded">schema:priceRange</code>, an OBO id off by a digit. The triple parses, it reads correctly, and it is referentially fake. The reflex is to reach for SHACL. Measured on three real vocabularies, SHACL does not catch this. Not some of the time. None of the time.
         </p>
       </header>
 
@@ -123,6 +168,17 @@ export const OntologyCorrectnessBench: React.FC = () => {
         <p className="text-gov-dark leading-relaxed">
           Across 418 fabricated terms in 300 graphs, open-world SHACL reported <code className="text-sm bg-gov-bg px-1.5 py-0.5 rounded">conforms=true</code> on every single graph that contained a fabricated term. The closed-world gate flagged one in all 300, and raised zero false alarms on the 300 clean graphs.
         </p>
+        <HBars
+          title="Detection outcome over 300 hallucinated and 300 clean graphs"
+          note="The empty first bar is the finding: ordinary SHACL practice flags none of the graphs containing a fabricated term."
+          max={300}
+          rows={DETECT_ROWS}
+        />
+        <HBars
+          title="Benchmark scale: triples per vocabulary"
+          note="418 fabricated terms across the three vocabularies: 136 for schema.org, 134 for IES4, 148 for OBO."
+          rows={SCALE_ROWS}
+        />
       </section>
 
       <section className="space-y-6">
@@ -176,13 +232,19 @@ export const OntologyCorrectnessBench: React.FC = () => {
             The obvious worry about a stricter checker is false positives. The benchmark answers it directly. The gate polices only IRIs whose namespace belongs to the ontology under test, plus namespaces you explicitly name. Standard <code className="text-sm bg-gov-bg px-1.5 py-0.5 rounded">rdf</code>, <code className="text-sm bg-gov-bg px-1.5 py-0.5 rounded">rdfs</code>, <code className="text-sm bg-gov-bg px-1.5 py-0.5 rounded">owl</code>, <code className="text-sm bg-gov-bg px-1.5 py-0.5 rounded">xsd</code> and <code className="text-sm bg-gov-bg px-1.5 py-0.5 rounded">sh</code> vocabulary is never flagged, and your own instance identifiers are never flagged, because they are not in a policed namespace. The result is a 0% false-positive rate on 300 clean graphs. It is strict about exactly one thing, whether you used a term the ontology does not define, and silent about everything else. This is the check that ships as a native tool, <code className="text-sm bg-gov-bg px-1.5 py-0.5 rounded">onto_vocab_check</code>, in our <a href={REPO} target="_blank" rel="noopener noreferrer" className="text-gov-blue underline hover:text-gov-blue-dark">open-ontologies</a> engine, and pairs with our <Link to="/research/ies4-turtle-language-model" className="text-gov-blue underline hover:text-gov-blue-dark">IES4 language model</Link>, whose fine-tune cuts hallucinated terms from 0.937 to 0.010 under exactly this kind of closed-world check.
           </p>
         </div>
+        <HBars
+          title="Hallucinated-term rate under the closed-world check, IES4 language model"
+          note="The same gate used as a training signal: fine-tuning against it cuts the rate from 0.937 to 0.010."
+          max={1}
+          rows={FINETUNE_ROWS}
+        />
       </section>
 
       <section className="space-y-4">
         <div className="border-l-2 border-l-gov-blue pl-6">
-          <h2 className="text-2xl font-bold text-gov-dark font-serif mb-3">What this does and does not prove</h2>
+          <h2 className="text-2xl font-bold text-gov-dark font-serif mb-3">What the benchmark establishes</h2>
           <p className="text-gov-dark leading-relaxed">
-            Being honest about scope is the point of publishing the build report alongside the numbers. Three caveats matter. First, the 100%s are a structural property, not a leaderboard score: the gate is defined to catch undeclared terms and the fabricated terms are undeclared, so the contribution is the measurement, at scale, on real vocabularies, that ordinary SHACL practice catches none of them and the gate catches all of them cleanly. Second, this checks term <em>existence</em>, not term <em>appropriateness</em>: a model that uses a real term in a semantically impossible place is a harder problem, and the next gate, certified denotation against a world model, is where that lives. Third, the corpus is generated, not harvested; the natural follow-up is to replay real LLM output through the same gate.
+            {"The purpose of the gate is to identify undeclared terms, making the measurement itself the primary contribution. When applied at scale to three real vocabularies, standard SHACL practice fails to detect any of the fabricated terms, whereas the closed-world gate identifies all 300 instances with zero false alarms across 300 clean graphs. This check verifies existence rather than appropriateness. A model that uses a real term in a semantically impossible location belongs to the next gate, certified denotation against a world model, which is where our current work sits. The corpus for this study is generated by construction, with each fabricated term confirmed to be absent from its specific vocabulary, and the follow-up study will replay harvested LLM output through the same gate."}
           </p>
         </div>
 

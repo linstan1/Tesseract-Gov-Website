@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { CHART, HBars } from '../../components/ChartKit';
 import { ArrowLeft, ExternalLink } from 'lucide-react';
 import { Mermaid } from '../../components/Mermaid';
 
@@ -107,7 +108,7 @@ const FINDINGS = [
     f: "CIKs for which the operator demonstrably holds a valid LEI on one publication surface (Forms N-PORT and N-CEN, 1,973 registrants in one quarter) while the entity register's field for the same CIK is empty",
     n: '1,954',
     sev: 'defect',
-    means: 'Silence is not missing data. It is a published position of the register, and it is wrong: the crosswalk the SEC does not publish already sits inside its own filings.',
+    means: 'The crosswalk the SEC does not publish already sits inside its own filings.',
   },
   {
     f: "Entity register asserting the wrong entity's identity: CIK 892538, SunAmerica Series Trust, carries the LEI of SunAmerica Asset Management, LLC, its investment adviser, while the trust's own N-PORT filings report the LEI GLEIF registers against exactly this CIK",
@@ -137,7 +138,7 @@ const FINDINGS = [
     f: 'US LEI records in the golden copy that are LAPSED, materially worse than the global lapse rate',
     n: '202,698 of 358,294 (56.6%)',
     sev: 'signal',
-    means: 'Adoption without renewal is not identification. It is an inventory of expired claims.',
+    means: 'A lapsed identifier no longer attests anything current.',
   },
 ];
 
@@ -240,7 +241,7 @@ export const SecuritiesRegisterOntology: React.FC = () => (
     <section className="space-y-4">
       <h2 className="text-2xl font-bold text-gov-dark font-serif">Finding six: most US LEIs are not current anyway</h2>
       <p className="text-gov-dark leading-relaxed">
-        Of 358,294 US LEI records, 202,698 are LAPSED: 56.6 per cent, materially worse than the global lapse rate. Among the LEIs asserted on SEC surfaces the status distribution is better but not clean, and the full breakdown is in the repository&apos;s governance summary. Adoption without renewal is not identification; it is an inventory of expired claims.
+        Of 358,294 US LEI records, 202,698 are LAPSED: 56.6 per cent, materially worse than the global lapse rate. Among the LEIs asserted on SEC surfaces the status distribution is better but not clean, and the full breakdown is in the repository&apos;s governance summary. Adoption without renewal leaves an inventory of expired claims.
       </p>
     </section>
 
@@ -268,6 +269,22 @@ export const SecuritiesRegisterOntology: React.FC = () => (
           </tbody>
         </table>
       </div>
+      <HBars
+        title="One quarter of fund filings against the entity register's lei field"
+        note="1,973 registrants stated their LEI to the SEC on Forms N-PORT and N-CEN in a single quarter. The entity register publishes an LEI for 12 of them."
+        rows={[
+          { label: 'Registrants stating an LEI to the SEC', value: 1973, display: '1,973', color: CHART.gray },
+          { label: 'Surfaced by the entity register', value: 12, display: '12', color: CHART.amber },
+        ]}
+      />
+      <HBars
+        title="US LEI records in the GLEIF golden copy, by renewal state"
+        note="202,698 of 358,294 (56.6%) are lapsed, materially worse than the global lapse rate. Adoption without renewal is an inventory of expired claims."
+        rows={[
+          { label: 'Lapsed', value: 202698, display: '202,698', color: CHART.amber },
+          { label: 'Not lapsed', value: 155596, display: '155,596' },
+        ]}
+      />
       <p className="text-sm text-gov-secondary/90 leading-relaxed">
         All figures are computed from register surfaces fetched on 17 August 2026: the EDGAR bulk submissions file, the GLEIF golden copy published at 08:00 that day, the GLEIF ISIN-LEI mapping, and the SEC structured form datasets for 2026 Q2. All are living systems, so a later run produces different totals while the method reproduces exactly.
       </p>

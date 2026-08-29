@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { CHART, HBars } from '../../components/ChartKit';
 import { ArrowLeft, ExternalLink } from 'lucide-react';
 import { Mermaid } from '../../components/Mermaid';
 
@@ -268,7 +269,7 @@ export const InsuranceRegisterOntology: React.FC = () => (
       </p>
       <Mermaid chart={LAYERS} />
       <p className="text-gov-dark leading-relaxed">
-        Two problems in the source data would have silently corrupted every number on this page, and both are worth stating because they are the kind of thing that survives into production systems unnoticed.
+        Two problems in the source data would have silently corrupted every number on this page, and both are the kind of thing that survives into production systems unnoticed.
       </p>
       <p className="text-gov-dark leading-relaxed">
         <strong>The date format.</strong> Every date in the export is formatted as day, month, year followed by a time component. A parser expecting a bare date silently discards all 41,920 date values rather than failing loudly. The consequence is that every registration appears to have no end date, so every undertaking appears active, and the rules that depend on activity inflate roughly threefold: 348 lapsed identifiers instead of the true 118, and 680 contradictions instead of the true 42. We caught it because the graph queries and the independent set-based pipeline disagreed, and the disagreement had to be explained. A single implementation would have published inflated numbers with total confidence.
@@ -302,6 +303,18 @@ export const InsuranceRegisterOntology: React.FC = () => (
           </tbody>
         </table>
       </div>
+      <HBars
+        title="Status at GLEIF of every distinct LEI filed in the register"
+        note="A register is not a snapshot of live entities. Nearly a fifth of the identifiers in it name entities that have been retired, and four match nothing in the global system at all."
+        rows={[
+          { label: 'Issued', value: 2590, display: '2,590' },
+          { label: 'Retired', value: 680, display: '680', color: CHART.amber },
+          { label: 'Lapsed', value: 351, display: '351', color: CHART.amber },
+          { label: 'Duplicate', value: 3, display: '3', color: CHART.amber },
+          { label: 'Annulled', value: 1, display: '1', color: CHART.amber },
+          { label: 'Absent from GLEIF', value: 4, display: '4', color: CHART.amber },
+        ]}
+      />
       <p className="text-sm text-gov-secondary/90 leading-relaxed">
         All figures are computed from the 14 August 2026 export and same-day harvest. Both sources are live systems, so a later run produces different totals while the method reproduces exactly.
       </p>

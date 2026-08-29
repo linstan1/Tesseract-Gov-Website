@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { CHART, HBars } from '../../components/ChartKit';
 import { ArrowLeft } from 'lucide-react';
 import { Mermaid } from '../../components/Mermaid';
 
@@ -144,7 +145,7 @@ export const ScholarlyRecordOntology: React.FC = () => (
         That idea became the citator. A lawyer today runs a citation through Shepard&apos;s and gets a status signal before reading a word of the opinion. Citing overturned authority is not merely embarrassing, it is malpractice, and the tooling exists precisely so that it cannot happen by accident.
       </p>
       <p className="text-gov-dark leading-relaxed">
-        Science has no citator. It has registers instead, and the registers do not agree with each other. We measured how much, using only open sources, and published the ontology, pipeline and data. What follows is not an argument that the scholarly record is in poor shape. It is a set of counts.
+        Science has no citator. It has registers instead, and the registers do not agree with each other. We measured how much, using only open sources, and published the ontology, pipeline and data. What follows is a set of counts.
       </p>
     </section>
 
@@ -200,14 +201,25 @@ export const ScholarlyRecordOntology: React.FC = () => (
           </tbody>
         </table>
       </div>
+      <HBars
+        title="Share of retraction notices each register flags as retracted research"
+        note="Notice DOIs identified through Europe PMC's MEDLINE publication types. OpenAlex flags essentially every notice it holds; the other registers keep the notice and the retracted work apart."
+        max={100}
+        rows={[
+          { label: 'OpenAlex', value: 95.95, display: '95.95%', color: CHART.amber },
+          { label: 'Crossref', value: 0.91, display: '0.91%' },
+          { label: 'Retraction Watch', value: 0.35, display: '0.35%' },
+          { label: 'Europe PMC itself', value: 0.32, display: '0.32%' },
+        ]}
+      />
       <p className="text-gov-dark leading-relaxed">
         Two independent measurements, one against Retraction Watch&apos;s notice column at 94.5 per cent and one against Europe PMC&apos;s publication types at 95.95 per cent, agree. This is not a partial defect at the margins. OpenAlex flags essentially every retraction notice it holds as retracted research, which is the signature of a join performed on the wrong key.
       </p>
       <p className="text-gov-dark leading-relaxed">
-        Three registers keep the categories apart and one does not. That settles the question of whether this is hard. It is not hard. It is a design defect, and a fixable one. The consequence is not academic: anything filtering on the retracted flag, whether an integrity dashboard, a bibliometric study or a language model retrieving evidence, receives the corrective apparatus of science mixed into the corrupted literature with no way to separate them.
+        Three registers keep the categories apart and one does not. The distinction is therefore achievable, and the failure is a design defect, a fixable one. The consequence is not academic: anything filtering on the retracted flag, whether an integrity dashboard, a bibliometric study or a language model retrieving evidence, receives the corrective apparatus of science mixed into the corrupted literature with no way to separate them.
       </p>
       <p className="text-gov-dark leading-relaxed">
-        We should also report a hypothesis that failed. We expected the opposite problem, that OpenAlex would frequently hold a retracted paper without flagging it. It does not. Of 20,779 Retraction Watch DOIs probed and found in OpenAlex, only 22 were unflagged, a rate of 0.11 per cent. Where OpenAlex has the paper it almost always knows. The failure runs the other way.
+        One expected failure mode did not materialise. We anticipated that OpenAlex would frequently hold a retracted paper without flagging it, and of 20,779 Retraction Watch DOIs probed and found in OpenAlex, only 22 were unflagged, a rate of 0.11 per cent. Where OpenAlex has the paper it almost always knows. The failure runs the other way.
       </p>
       <p className="text-gov-dark leading-relaxed">
         Adding Europe PMC makes the overall disagreement worse rather than better. Across all four registers, 137,243 DOIs are asserted retracted by at least one. Only 19.24 per cent are asserted by all four, and 43.09 per cent rest on a single register&apos;s say-so.
@@ -258,6 +270,16 @@ export const ScholarlyRecordOntology: React.FC = () => (
           </tbody>
         </table>
       </div>
+      <HBars
+        title="Citations arriving after retraction, four most-cited cases"
+        note="From 43,683 post-retraction citations across the 400 most-cited retracted works, measured with OpenCitations. None carries a machine-readable warning."
+        rows={[
+          { label: 'PREDIMED trial, NEJM (2018)', value: 1251, display: '1,251', color: CHART.amber },
+          { label: 'Wakefield, Lancet (2010)', value: 1171, display: '1,171', color: CHART.amber },
+          { label: 'Visfatin, Science (2007)', value: 1120, display: '1,120', color: CHART.amber },
+          { label: 'Surgisphere COVID-19, NEJM (2020)', value: 833, display: '833', color: CHART.amber },
+        ]}
+      />
       <p className="text-gov-dark leading-relaxed">
         The second row is the paper that launched the modern anti-vaccination movement, retracted in February 2010 for falsification of data. It has been cited 1,171 times since, and not one of those citations carries a machine-readable warning, because no layer of the open scholarly record emits one. This is a sample of the most-cited works rather than a census, and the sampling is biased in ways documented in the repository: the largest citation lists were also the ones most likely to fail to download, so the true figure is higher.
       </p>
@@ -309,7 +331,7 @@ export const ScholarlyRecordOntology: React.FC = () => (
     </section>
 
     <section className="space-y-4">
-      <h2 className="text-2xl font-bold text-gov-dark font-serif">A methodological lesson worth stating</h2>
+      <h2 className="text-2xl font-bold text-gov-dark font-serif">A methodological lesson</h2>
       <p className="text-gov-dark leading-relaxed">
         Partway through harvesting, OpenAlex began returning HTTP 429 with the message &quot;Insufficient budget. This request costs $0.0001 but you only have $0 remaining.&quot; OpenAlex now meters its API at roughly 1,000 requests, or ten cents, per day free. The harvest stopped at 107,200 of 134,094 records and was completed the following day. That is worth knowing on its own, because the argument that OpenAlex is the open replacement for Scopus is weaker when the open replacement is metered.
       </p>
@@ -324,7 +346,7 @@ export const ScholarlyRecordOntology: React.FC = () => (
     <section className="space-y-4">
       <h2 className="text-2xl font-bold text-gov-dark font-serif">The corporate symmetry</h2>
       <p className="text-gov-dark leading-relaxed">
-        There is a fact about the ownership of all this worth stating plainly, because it makes the gap concrete rather than abstract. Reed Elsevier acquired Shepard&apos;s in 1996 and took full ownership in 1998. Reed Elsevier is now RELX, which also owns Elsevier, the largest publisher of scientific literature, and Scopus, one of the two dominant citation databases. Its LexisNexis Risk Solutions division sells entity resolution, the discipline of deciding when two records refer to the same real-world thing, to banks and governments.
+        One fact about the ownership of all this makes the gap concrete rather than abstract. Reed Elsevier acquired Shepard&apos;s in 1996 and took full ownership in 1998. Reed Elsevier is now RELX, which also owns Elsevier, the largest publisher of scientific literature, and Scopus, one of the two dominant citation databases. Its LexisNexis Risk Solutions division sells entity resolution, the discipline of deciding when two records refer to the same real-world thing, to banks and governments.
       </p>
       <p className="text-gov-dark leading-relaxed">
         RELX has already taken the citator idea further than most people outside legal publishing realise. Its 2024 Annual Report describes Lexis+ AI as using &quot;the LexisNexis proprietary Retrieval Augmented Generation platform, integrated with advanced Shepard&apos;s Knowledge Graph&quot;, so that customers can harness Shepard&apos;s case law relationship information for &quot;authoritative, complete, and final AI-generated responses&quot;.
@@ -336,10 +358,10 @@ export const ScholarlyRecordOntology: React.FC = () => (
         Set against that, one absence is striking. The word &quot;retract&quot; does not appear anywhere in the 252 pages of the RELX 2025 Annual Report, nor anywhere in its Form 20-F for the same year. Research integrity is disclosed as a formal risk factor, and the detection tooling is described in some detail, but no retraction count, no paper-mill interception figure and no research-integrity metric is published. For a group whose case for its AI products rests on the trustworthiness of its content, that is a conspicuous gap in the reporting rather than in the work.
       </p>
       <p className="text-gov-dark leading-relaxed">
-        Read that with the scholarly record in mind. RELX has concluded that grounding a language model on legal content is not sufficient on its own, and that the model must also be wired into a knowledge graph of citation treatment so that it does not confidently cite authority that has been overturned. That is exactly the architecture the scientific record lacks, built by the same company, and shipped as a product. If citation-treatment grounding is necessary to stop a legal AI relying on overturned authority, it is necessary for the same reason to stop a scientific AI relying on retracted findings. The difference is not technical. It is that one market pays for the assurance and the other has never been asked to.
+        Read that with the scholarly record in mind. RELX has concluded that grounding a language model on legal content is not sufficient on its own, and that the model must also be wired into a knowledge graph of citation treatment so that it does not confidently cite authority that has been overturned. That is exactly the architecture the scientific record lacks, built by the same company, and shipped as a product. If citation-treatment grounding is necessary to stop a legal AI relying on overturned authority, it is necessary for the same reason to stop a scientific AI relying on retracted findings. The difference is that one market pays for the assurance and the other has never been asked to.
       </p>
       <p className="text-gov-dark leading-relaxed">
-        This is not hypocrisy and we are not accusing anyone of it. In law the citator is the product, because clients pay for the assurance that authority still stands. In science the citation database is the product, and the assurance layer has never been the thing anyone was buying. It is also worth recording that on the propagation measure Elsevier performs well: 98.9 per cent of Elsevier-published retracted papers carry a corresponding Crossref assertion. The worst performers in the league table are elsewhere, including publishers with zero per cent coverage across hundreds of retracted papers. The problem is not that any one publisher is negligent. It is that no layer above them reconciles anything, and no vocabulary in use can describe the reconciliation.
+        In law the citator is the product, because clients pay for the assurance that authority still stands. In science the citation database is the product, and the assurance layer has never been the thing anyone was buying. It is also worth recording that on the propagation measure Elsevier performs well: 98.9 per cent of Elsevier-published retracted papers carry a corresponding Crossref assertion. The worst performers in the league table are elsewhere, including publishers with zero per cent coverage across hundreds of retracted papers. No single publisher is negligent here. The gap is that no layer above them reconciles anything, and no vocabulary in use can describe the reconciliation.
       </p>
     </section>
 
@@ -367,12 +389,12 @@ export const ScholarlyRecordOntology: React.FC = () => (
         A note on reading Elsevier&apos;s low retraction rate. It is equally consistent with a cleaner corpus and with a more conservative retraction practice, and the pairing with the highest reinstatement share is what makes it interesting rather than settled. Our own propagation measurement is the narrower and more defensible claim: where Elsevier does retract, 98.9 per cent of those papers carry a corresponding Crossref assertion.
       </p>
 
-      <h2 className="text-2xl font-bold text-gov-dark font-serif">What we are not claiming</h2>
+      <h2 className="text-2xl font-bold text-gov-dark font-serif">Scope and sources</h2>
       <p className="text-gov-dark leading-relaxed">
-        We cannot compare any of this against Scopus or Web of Science, because both are licensed products with no open API for the purpose. That limitation is itself part of the point: the open record is what most downstream tooling actually consumes, and increasingly what language models are trained and grounded on.
+        {"By design, the comparison set is the open record. This is because Scopus and Web of Science are licensed products that lack an open API for this purpose. Furthermore, the open record is what most downstream tooling actually consumes and, increasingly, what language models are trained and grounded on."}
       </p>
       <p className="text-gov-dark leading-relaxed">
-        The propagation layer is a deliberate sample of the 400 most-cited retracted works, not a census, and its selection is biased. The licence under which the Retraction Watch data is redistributed is not stated on Crossref&apos;s documentation page, so the raw data is not committed to the repository, only the code that fetches it. Every caveat of this kind is written up in the repository&apos;s build report rather than left for a reader to discover.
+        {"The propagation layer represents a deliberate sample of the 400 most-cited retracted works, not a census. This selection is biased towards prominence by design, because prominence is where propagation failure does the most damage. The licence under which the Retraction Watch data is redistributed is not stated on Crossref's documentation page. Consequently, the repository commits the code that fetches the data rather than the data itself. The build report records each of these decisions."}
       </p>
     </section>
 

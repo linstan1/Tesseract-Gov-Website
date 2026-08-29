@@ -41,6 +41,43 @@ const SYNONYMS = [
   { p: 'polyamide', s: 'PA (428) + polyamide (431) + nylon (426)' },
 ];
 
+const CHART = { teal: '#00897b' };
+
+const FRAG_GROUPS: { polymer: string; rows: { label: string; value: number }[] }[] = [
+  { polymer: 'polypropylene', rows: [{ label: 'PP', value: 941 }, { label: 'polypropylene', value: 940 }] },
+  { polymer: 'polyethylene', rows: [{ label: 'polyethylene', value: 831 }, { label: 'PE', value: 790 }, { label: 'polythene', value: 767 }] },
+  { polymer: 'phenol formaldehyde', rows: [{ label: 'phenol formaldehyde', value: 517 }, { label: 'PF', value: 516 }, { label: 'bakelite', value: 490 }] },
+  { polymer: 'polyamide', rows: [{ label: 'polyamide', value: 431 }, { label: 'PA', value: 428 }, { label: 'nylon', value: 426 }] },
+  { polymer: 'acrylic (PMMA)', rows: [{ label: 'PMMA', value: 355 }, { label: 'polymethyl methacrylate', value: 352 }, { label: 'acrylic', value: 352 }] },
+];
+
+const FRAG_MAX = 941;
+
+const FragChart: React.FC = () => (
+  <figure className="rounded-lg border border-gov-border bg-white p-5">
+    <figcaption className="text-sm font-semibold text-gov-dark mb-3">One polymer, several unrelated strings: material-tag counts in the raw records</figcaption>
+    <div className="space-y-4">
+      {FRAG_GROUPS.map((g) => (
+        <div key={g.polymer}>
+          <p className="text-xs font-semibold text-gov-dark mb-1">{g.polymer}</p>
+          <div className="space-y-1">
+            {g.rows.map((r) => (
+              <div key={r.label} className="flex items-center gap-3" title={`${r.label}: ${r.value} records`}>
+                <span className="w-44 shrink-0 text-right text-xs text-gov-secondary leading-tight">{r.label}</span>
+                <div className="flex-1 h-[14px]">
+                  <div className="h-full rounded-r" style={{ width: `${(r.value / FRAG_MAX) * 100}%`, backgroundColor: CHART.teal }} />
+                </div>
+                <span className="w-12 shrink-0 text-xs font-semibold text-gov-dark tabular-nums">{r.value}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+    <p className="text-xs text-gov-secondary mt-3">A search for any one spelling silently misses the others. The taxonomy folds every string into one concept with alternate labels, so all of them return together.</p>
+  </figure>
+);
+
 export const ModipPlasticsGraph: React.FC = () => {
   return (
     <article className="max-w-4xl mx-auto px-6 lg:px-8 py-20 space-y-12">
@@ -101,6 +138,7 @@ export const ModipPlasticsGraph: React.FC = () => {
             </tbody>
           </table>
         </div>
+        <FragChart />
       </section>
 
       <section className="space-y-4">
@@ -120,9 +158,9 @@ export const ModipPlasticsGraph: React.FC = () => {
 
       <section className="space-y-4">
         <div className="border-l-2 border-l-gov-blue pl-6">
-          <h2 className="text-2xl font-bold text-gov-dark font-serif mb-3">The honesty commitment</h2>
+          <h2 className="text-2xl font-bold text-gov-dark font-serif mb-3">Validation: zero violations, zero dangling references</h2>
           <p className="text-gov-dark leading-relaxed">
-            The build is a gate, not a claim. <strong>SHACL validates at zero violations</strong>, and a closed-world vocabulary check confirms every material, process and domain concept referenced by an object is actually defined, with <strong>zero dangling references</strong> (the check that open-world validation silently passes). What could not be done is written down, not smoothed over: 49 obscure single-occurrence trade names remain unresolved and are listed by name; Getty alignment is partial by design; noisy dates yield only a year. The whole thing regenerates from the committed data with one command and revalidates.
+            {"SHACL validation of the full graph returns zero violations, while a closed-world vocabulary check confirms that every material, process and domain concept referenced by an object is defined, with zero dangling references. This specific check is significant because open-world validation permits dangling references to pass silently. The build report states coverage precisely: 49 single-occurrence trade names remain unresolved and are listed by name, Getty alignment is scoped by design, and noisy dates resolve to a year. The entire graph regenerates from the committed data with one command and revalidates."}
           </p>
         </div>
       </section>

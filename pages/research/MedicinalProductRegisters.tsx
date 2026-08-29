@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { CHART, HBars } from '../../components/ChartKit';
 import { ArrowLeft } from 'lucide-react';
 
 const REPO = 'https://github.com/fabio-rovai/medicinal-product-register-ontology';
@@ -204,6 +205,16 @@ export const MedicinalProductRegisters: React.FC = () => (
           </tbody>
         </table>
       </div>
+      <HBars
+        title="392 EMA marketing-authorisation holder names, joined to the Global LEI System"
+        note="102 resolve by exact or trivially normalised legal name; 88 of those LEIs are in good standing. 290 names, 74% of the register, do not resolve by exact match at all."
+        rows={[
+          { label: 'Exact or trivially normalised match', value: 102, display: '102' },
+          { label: 'Matched LEI in good standing (ISSUED)', value: 88, display: '88' },
+          { label: 'Matched LEI lapsed, duplicate or retired', value: 14, display: '14', color: CHART.amber },
+          { label: 'No exact match', value: 290, display: '290', color: CHART.amber },
+        ]}
+      />
       <p className="text-gov-dark leading-relaxed">
         The near miss is the mechanism in miniature. AbbVie Deutschland GmbH &amp; Co. KG, as the EMA register
         spells it, has a perfectly good LEI, 549300FI0P3XDOCBXJ78. The join fails because GLEIF stores the legal

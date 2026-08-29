@@ -98,7 +98,7 @@ export const BridgeAI: React.FC = () => {
             UK creative industries (music, film, design, advertising, games) were under-served by mainstream AI adoption programmes. Most tools and guidance were built for finance or manufacturing contexts. The creative economy contributes over £115 billion annually to UK GDP, yet featured minimally in the AI adoption strategies published by the <strong>Department for Science Innovation and Technology</strong> (DSIT) and <a href="https://iuk-business-connect.org.uk/programme/bridgeai/" target="_blank" rel="noopener noreferrer" className="text-gov-blue underline hover:text-gov-blue-dark">Innovate UK's BridgeAI programme</a>.
           </p>
           <p className="text-gov-dark leading-relaxed mt-3">
-            <strong>Innovate UK</strong>'s BridgeAI programme needed a delivery partner to bridge the gap between cutting-edge AI research and practical implementation for creative sector SMEs. The sector required accessible, sector-relevant content, not generic AI hype: diagnostics, tooling and skills matched to how creative businesses actually work rather than to finance or manufacturing archetypes.
+            <strong>Innovate UK</strong>'s BridgeAI programme needed a delivery partner to bridge the gap between current AI research and practical implementation for creative sector SMEs. The sector required accessible, sector-relevant content, not generic AI hype: diagnostics, tooling and skills matched to how creative businesses actually work rather than to finance or manufacturing archetypes.
           </p>
         </div>
       </section>

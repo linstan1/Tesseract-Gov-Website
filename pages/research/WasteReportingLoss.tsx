@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { CHART, HBars } from '../../components/ChartKit';
 import { ArrowLeft, ExternalLink } from 'lucide-react';
 import { Mermaid } from '../../components/Mermaid';
 
@@ -162,6 +163,17 @@ export const WasteReportingLoss: React.FC = () => (
           </tbody>
         </table>
       </div>
+      <HBars
+        title="Information retained when 60 source materials pass through each reporting channel"
+        note="Bits of the source distinction that survive the channel's category structure, as a share of the source entropy."
+        max={100}
+        rows={[
+          { label: 'EWC / List of Waste', value: 53.8, display: '53.8%' },
+          { label: 'pEPR categories', value: 52.1, display: '52.1%' },
+          { label: 'RAM 2027 groups', value: 49.5, display: '49.5%' },
+          { label: 'Simpler Recycling', value: 38.4, display: '38.4%', color: CHART.amber },
+        ]}
+      />
       <p className="text-sm text-gov-secondary/90 leading-relaxed">
         Read the EWC row carefully. The catalogue offers 47 six-digit codes for municipal and packaging waste and the crosswalk reaches only 13 of them. Granularity that exists in a standard but is never addressed benefits nobody. These figures are also an upper bound, because a class whose value is undetermined is credited with its whole candidate set.
       </p>
@@ -220,7 +232,7 @@ export const WasteReportingLoss: React.FC = () => (
         </table>
       </div>
       <p className="text-gov-dark leading-relaxed">
-        Two of ten questions are answerable in every channel. Four are answerable in none. Three results are worth stating plainly.
+        Two of ten questions are answerable in every channel. Four are answerable in none. Three results stand out.
       </p>
       <ul className="list-disc pl-5 space-y-2 text-gov-dark leading-relaxed">
         <li><strong>The metal split is the expensive one.</strong> pEPR sets separate base fees for aluminium and steel. The List of Waste offers a single code, <code>15 01 04 metallic packaging</code>, and no aluminium or steel split exists anywhere in the catalogue. So the distinction that determines the fee cannot be carried by the code that the mandatory waste tracking schema requires.</li>

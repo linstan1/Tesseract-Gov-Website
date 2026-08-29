@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { CHART, HBars } from '../../components/ChartKit';
 import { ArrowLeft, ExternalLink } from 'lucide-react';
 import { Mermaid } from '../../components/Mermaid';
 
@@ -174,7 +175,7 @@ export function BiodiversityRegisterOntology() {
           a mirror without recording which snapshot they pinned to.
         </p>
         <p className="text-gray-700 mb-8">
-          Fairness requires the controls and the caveat. The World Register of
+          The controls put the failure in context. The World Register of
           Marine Species resolved 10 of 10 sampled records the same day, and
           IPNI, the botanical names index at Kew, resolved 5 of 5, so this is a
           register-specific failure, not a property of biodiversity
@@ -184,6 +185,16 @@ export function BiodiversityRegisterOntology() {
           crawls and the dead publication endpoint survive any recovery. We
           found no announcement of the outage anywhere, and we looked.
         </p>
+        <HBars
+          title="Same-day resolution of sampled canonical records, 28 August 2026"
+          note="A register-specific failure: the botanical and marine name registers resolved everything sampled on the same day ZooBank resolved nothing."
+          max={100}
+          rows={[
+            { label: 'ZooBank canonical act URLs', value: 0, display: '0 / 50', color: CHART.amber },
+            { label: 'World Register of Marine Species', value: 100, display: '10 / 10' },
+            { label: 'IPNI (Kew)', value: 100, display: '5 / 5' },
+          ]}
+        />
 
         <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">
           Finding two: 86.0 per cent of the world&apos;s largest biodiversity
@@ -206,6 +217,16 @@ export function BiodiversityRegisterOntology() {
           licence IRI exists it appears in http, https, and trailing-slash
           variants of the same licence.
         </p>
+        <HBars
+          title="Licence and rights metadata across the BHL bulk export, 1 August 2026"
+          note="86.0% of the corpus carries no machine-actionable licence, and 84 items carry a Creative Commons IRI defeated by an invisible Unicode character."
+          rows={[
+            { label: 'All distinct digitised items', value: 329129, display: '329,129', color: CHART.gray },
+            { label: 'No machine-actionable licence', value: 283090, display: '283,090', color: CHART.amber },
+            { label: 'Copyright status "Not provided"', value: 108509, display: '108,509', color: CHART.amber },
+            { label: 'CC IRI with invisible Unicode appended', value: 84, display: '84', color: CHART.amber },
+          ]}
+        />
         <p className="text-gray-700 mb-8">
           The consequence lands on anyone trying to license content or train
           models at corpus scale. A platform that needs to answer &quot;which of

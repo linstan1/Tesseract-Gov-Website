@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { CHART, HBars } from '../../components/ChartKit';
 import { ArrowLeft, ExternalLink } from 'lucide-react';
 
 const REPO = 'https://github.com/fabio-rovai/spectral-library-ontology';
@@ -190,8 +191,24 @@ export const SpectralLibraryOntology: React.FC = () => (
           </tbody>
         </table>
       </div>
+      <HBars
+        title="Records where the two structure claims diverge, by library"
+        note="A forty-twofold spread between the cleanest and the dirtiest library. The corpus average of 0.94% describes none of them."
+        max={100}
+        labelWidth="w-64"
+        rows={[
+          { label: 'BILELIB19', value: 59.44, display: '59.44%', color: CHART.amber },
+          { label: 'GNPS-NUTRI-METAB-FEM-POS', value: 37.91, display: '37.91%', color: CHART.amber },
+          { label: 'GNPS-NUTRI-METAB-FEM-NEG', value: 28.81, display: '28.81%', color: CHART.amber },
+          { label: 'GNPS-COLLECTIONS-PESTICIDES-POSITIVE', value: 24.81, display: '24.81%', color: CHART.amber },
+          { label: 'RESPECT', value: 13.55, display: '13.55%', color: CHART.amber },
+          { label: 'MASSBANK', value: 8.53, display: '8.53%', color: CHART.amber },
+          { label: 'GNPS-LIBRARY', value: 6.9, display: '6.90%', color: CHART.amber },
+          { label: 'MONA', value: 1.41, display: '1.41%', color: CHART.amber },
+        ]}
+      />
       <p className="text-gov-dark leading-relaxed">
-        A forty-twofold spread between the cleanest and the dirtiest library means the corpus figure describes nobody&apos;s actual situation. If you are building a bile acid reference set, your number is 59.44 per cent. If you are training on MONA, it is 1.41 per cent. We know how badly the average misleads because an early version of this study extrapolated from BILELIB19 alone and produced a headline that was wrong by two orders of magnitude. That error is written up in the build report rather than quietly deleted.
+        A forty-twofold spread between the cleanest and the dirtiest library means the corpus figure describes nobody&apos;s actual situation. If you are building a bile acid reference set, your number is 59.44 per cent. If you are training on MONA, it is 1.41 per cent. We know how badly the average misleads because an early version of this study extrapolated from BILELIB19 alone and produced a headline that was wrong by two orders of magnitude. The error and its correction are recorded in the build report.
       </p>
       <p className="text-gov-dark leading-relaxed">
         The operational consequence is for anyone assembling training data. Public benchmarks in this area draw from GNPS, MoNA and MassBank precisely because they are the largest labelled collections available. The label for a spectrum comes from one of two structure fields, and in the libraries above the two fields disagree at rates from one in seventy to three in five. Nobody has published what that does to a retrieval benchmark, because nobody had the per-library number.
@@ -207,7 +224,7 @@ export const SpectralLibraryOntology: React.FC = () => (
         A standard InChI begins with the literal prefix <code className="text-sm bg-gov-bg px-1.5 py-0.5 rounded">InChI=1S/</code>. 164,137 of the 1,672,597 populated InChI values, 9.81 per cent, do not. Passed straight to RDKit, they return nothing at all rather than a molecule. Nearly one in ten populated InChI values in the largest public spectral library corpus fails to parse in the most widely used chemistry toolkit, for the want of six characters.
       </p>
       <p className="text-gov-dark leading-relaxed">
-        113,458 records, 7.21 per cent of the 1,573,871 where the arithmetic is possible, declare a precursor mass to charge ratio that cannot be reconciled with their own declared neutral exact mass and adduct within 0.05 daltons. That tolerance is deliberately loose, roughly a hundred times the precision the instruments involved actually achieve, because we would rather understate this than manufacture it. Where an adduct string could not be read with confidence, no discrepancy was computed at all: only 6,806 records, 0.33 per cent, fall in that category.
+        113,458 records, 7.21 per cent of the 1,573,871 where the arithmetic is possible, declare a precursor mass to charge ratio that cannot be reconciled with their own declared neutral exact mass and adduct within 0.05 daltons. That tolerance is deliberately loose, roughly a hundred times the precision the instruments involved actually achieve, so the count understates the discrepancy rather than manufacturing it. Where an adduct string could not be read with confidence, no discrepancy was computed at all: only 6,806 records, 0.33 per cent, fall in that category.
       </p>
     </section>
 
@@ -287,7 +304,7 @@ export const SpectralLibraryOntology: React.FC = () => (
         We have not published a resolution rate for Universal Spectrum Identifiers. A 500-accession sample run at six concurrent connections failed 94 per cent of the time, which would have been the largest number in this study and was entirely an artefact of our own request rate. Asked sequentially, the same population resolves 85 per cent of the time. We cannot separate throttling from genuine non-resolution at any rate we are willing to impose on somebody else&apos;s server, so we report it as not measured rather than as zero.
       </p>
       <p className="text-gov-dark leading-relaxed">
-        We have not established why 418 records defeat RDKit&apos;s reproduction of the published SMILES-derived key, only that they do and that the effect is five thousandfold enriched in the divergent subset. That is a question for whoever maintains the derivation step, and we would rather be told than assume.
+        We have not established why 418 records defeat RDKit&apos;s reproduction of the published SMILES-derived key, only that they do and that the effect is five thousandfold enriched in the divergent subset. That is a question for whoever maintains the derivation step.
       </p>
       <p className="text-gov-dark leading-relaxed">
         Every figure here is a claim about snapshots taken on 21 August 2026, which is exactly why the model dates every assertion instead of storing identity as a property of a spectrum.

@@ -261,7 +261,7 @@ export const JsonLdEscapingConformance: React.FC = () => (
         A bounded first engagement looks like this. We run the census over your own estate rather than your homepage alone, because product, article and listing pages carry far more JSON-LD than homepages do and the figures in this study are a lower bound for any individual site. You get the affected URLs, the exact values as each class of consumer reads them, the template or plugin each defect traces back to, and a fix that is usually a single change at the output layer. Two weeks, fixed price, and the pipeline is open source so nothing about the method is a black box.
       </p>
       <p className="text-gov-dark leading-relaxed">
-        Everything on this page is reproducible from the repository, including the parts where we were wrong. If a number here is incorrect we would rather be told, and the repository is the place to do it.
+        Everything on this page is reproducible from the repository, and corrections are welcome as issues there.
       </p>
       <div className="rounded-lg border border-gov-border bg-gov-bg/40 p-6 space-y-3">
         <p className="text-gov-dark leading-relaxed">

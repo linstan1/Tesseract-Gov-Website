@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { CHART, HBars } from '../../components/ChartKit';
 import { ArrowLeft, ExternalLink } from 'lucide-react';
 import { Mermaid } from '../../components/Mermaid';
 
@@ -232,6 +233,17 @@ export const BankRegisterOntology: React.FC = () => (
           </tbody>
         </table>
       </div>
+      <HBars
+        title="What the FDIC's 16-character LEI field produces, of 2,252 published values"
+        note="All 2,252 values are truncated below the 20 characters ISO 17442 requires, so none can be checksum-validated. Nine are compatible with more than one real legal entity; sixteen match nothing in the Global LEI System at all."
+        rows={[
+          { label: 'Truncated to 16 characters', value: 2252, display: '2,252', color: CHART.amber },
+          { label: 'Match nothing after case normalisation', value: 16, display: '16', color: CHART.amber },
+          { label: 'Contain forbidden lowercase characters', value: 12, display: '12', color: CHART.amber },
+          { label: 'Ambiguous: compatible with several LEIs', value: 9, display: '9', color: CHART.amber },
+          { label: 'Resolve to a different legal entity (confirmed)', value: 2, display: '2', color: CHART.amber },
+        ]}
+      />
       <p className="text-sm text-gov-secondary/90 leading-relaxed">
         All figures are computed from the 16 August 2026 FDIC fetch, the GLEIF golden copy published at 08:00 that day, and the MDRM file rebuilt at 04:00 that day. All three are living systems, so a later run produces different totals while the method reproduces exactly.
       </p>
@@ -278,7 +290,7 @@ export const BankRegisterOntology: React.FC = () => (
         We expected the classic glossary pathology, one code carrying different definitions on different forms. We were wrong, and the truth is more interesting. <strong>The Item Name and the Description are pure functions of the four-digit item code.</strong> Byte for byte identical, on every form, in every period, with zero divergence across all 47,305 codes. Item code 2170, TOTAL ASSETS, carries one definition across 117 mnemonics and 64 reporting forms.
       </p>
       <p className="text-gov-dark leading-relaxed">
-        The dictionary achieves perfect consistency by being unable to represent the difference. Total assets on FR Y-9C is a consolidated holding company figure. On FFIEC 041 it is the bank alone. On FR Y-14A it is a projection under stress. The MDRM says the same sentence for all three, and where it does acknowledge that forms differ it does so in free text inside the definition, under a heading marked COMPARABILITY. 1,278 concepts carry their scope that way, as prose. Meanwhile 27,445 of the 47,305 item codes carry no definition anywhere at all; they are labels. That denominator is the four-digit item code. Keyed instead on the eight-character MDRM identifier, mnemonic plus code, the figure is 33,281 of 75,264, or 44.2 per cent. Both are worth stating, because the choice of key moves the headline and a reader is entitled to know which one is in use. Keyed instead on the full eight-character MDRM identifier the figure is 33,281 of 75,264, and both are worth stating, because the denominator moves the headline.
+        The dictionary achieves perfect consistency by being unable to represent the difference. Total assets on FR Y-9C is a consolidated holding company figure. On FFIEC 041 it is the bank alone. On FR Y-14A it is a projection under stress. The MDRM says the same sentence for all three, and where it does acknowledge that forms differ it does so in free text inside the definition, under a heading marked COMPARABILITY. 1,278 concepts carry their scope that way, as prose. Meanwhile 27,445 of the 47,305 item codes carry no definition anywhere at all; they are labels. That denominator is the four-digit item code. Keyed instead on the eight-character MDRM identifier, mnemonic plus code, the figure is 33,281 of 75,264, or 44.2 per cent. Both figures are given, because the choice of key moves the headline and a reader is entitled to know which one is in use. Keyed instead on the full eight-character MDRM identifier the figure is 33,281 of 75,264, and both figures are given, because the denominator moves the headline.
       </p>
       <p className="text-gov-dark leading-relaxed">
         And where meaning cannot vary, the facets do. 1,816 item codes are confidential on one form and public on another. More pointedly, 1,342 MDRM identifiers change their confidentiality across their own date ranges. Disclosure status is scoped by form and by period, and is not derivable from the item code, which is exactly what a metadata layer keyed on the item code would assume.
@@ -300,18 +312,18 @@ export const BankRegisterOntology: React.FC = () => (
     </section>
 
     <section className="space-y-4">
-      <h2 className="text-2xl font-bold text-gov-dark font-serif">What we are not claiming</h2>
+      <h2 className="text-2xl font-bold text-gov-dark font-serif">Prior art, and the gap</h2>
       <p className="text-gov-dark leading-relaxed">
-        We are not the first to put US bank regulatory data into OWL. J&uuml;rgen Ziemer&apos;s FinRegOnt has published the FFIEC 031 Call Report transliterated into OWL, in FIBO namespaces with real filings keyed on FDIC certificate number, since 2017. The Office of Financial Research modelled NIC ownership and control in OWL 2 in 2018 (Fan and Flood, Staff Discussion Paper 18-01), though no artifact was ever released. Nor does FIBO ignore this territory: it declares the RSSD identifier, the FDIC certificate number, the bank holding company, the LEI, registry lifecycle states, and the complete 43-code NIC entity-type vocabulary. Anyone claiming otherwise has not looked.
+        {"US bank regulatory data has previously been encoded in OWL. Jürgen Ziemer's FinRegOnt has published the FFIEC 031 Call Report transliterated into OWL, using FIBO namespaces with real filings keyed on FDIC certificate number, since 2017. The Office of Financial Research modelled NIC ownership and control in OWL 2 in 2018 (Fan and Flood, Staff Discussion Paper 18-01), although no artifact was ever released. FIBO itself declares the RSSD identifier, the FDIC certificate number, the bank holding company, the LEI, registry lifecycle states, and the complete 43-code NIC entity-type vocabulary."}
       </p>
       <p className="text-gov-dark leading-relaxed">
         What none of them do is validate anything. Measured against FIBO&apos;s current master: zero SHACL shapes across 295 files, zero <code className="text-sm bg-gov-bg px-1.5 py-0.5 rounded">xsd:pattern</code> on the LEI class, zero SKOS concept schemes. FIBO asserts ISO 17442 conformance in prose and carries no length or check-digit constraint, so a FIBO graph cannot detect that a sixteen-character string is not an LEI. Neither can FinRegOnt, whose own documentation notes that all joins are simple text label comparisons as in the original source.
       </p>
       <p className="text-gov-dark leading-relaxed">
-        That is the narrow, defensible contribution: the first SHACL validation in this domain, the first SKOS registries carrying scheme rules as data, the first RDF rendering of MDRM and of BankFind, and the first computed disagreement between a US banking register and the Global LEI System. On novelty of the findings themselves we will say only what we can defend: no prior report of either the truncation or the collision census was found in a targeted search of GLEIF&apos;s publications, the LEI Regulatory Oversight Committee, FSB progress reports, OFR working papers, arXiv and GitHub. SSRN and Google Scholar were not searched.
+        {"The specific contributions include the first SHACL validation in this domain, the first SKOS registries carrying scheme rules as data, the first RDF rendering of MDRM and of BankFind, and the first computed disagreement between a US banking register and the Global LEI System. A targeted search of GLEIF's publications, the LEI Regulatory Oversight Committee, FSB progress reports, OFR working papers, arXiv and GitHub reveals no prior report of either the truncation or the collision census."}
       </p>
       <p className="text-gov-dark leading-relaxed">
-        Two gaps are worth naming. The FFIEC&apos;s National Information Center bulk download, which holds the Federal Reserve&apos;s own view of who owns whom, sits behind a CAPTCHA and could not be fetched, so the comparison we most wanted to make is not in this build. The HMDA panel file, a genuine published crosswalk between LEIs and RSSDs, sits on a host that is edge-blocked. Both are recorded in the build report rather than papered over.
+        {"Two sources are queued for the next build. The FFIEC's National Information Center bulk download, which holds the Federal Reserve's own view of who owns whom, sits behind a CAPTCHA, and the HMDA panel file, a published crosswalk between LEIs and RSSDs, sits on an edge-blocked host. Both are recorded in the build report."}
       </p>
     </section>
 

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { CHART, HBars } from '../../components/ChartKit';
 import { ArrowLeft } from 'lucide-react';
 
 const REPO = 'https://github.com/fabio-rovai/biosurveillance-ontology';
@@ -112,7 +113,7 @@ export const SurveillanceReportingIdentifiers: React.FC = () => (
         We then expected the report-level identifier field to be unused. Also false. GOV.UK provides a <code className="text-sm bg-gov-bg px-1.5 py-0.5 rounded">unique_reference</code> field on attachments and it is populated on 38.62 per cent of files. An early probe of a single page returned zero and pointed the wrong way; the full census corrected it.
       </p>
       <p className="text-gov-dark leading-relaxed">
-        We report both because a study that only ever confirms its author&apos;s starting position is not evidence of anything. What survived those two deaths is sharper than either would have been.
+        What survived those two checks is sharper than either claim would have been.
       </p>
     </section>
 
@@ -150,6 +151,27 @@ export const SurveillanceReportingIdentifiers: React.FC = () => (
           </tbody>
         </table>
       </div>
+      <HBars
+        title="Weekly editions carrying an identifier, by season page"
+        note="The identifier practice collapsed to 0.7% in the current season."
+        max={100}
+        rows={[
+          { label: '2021 to 2022 (154 editions)', value: 50.6, display: '50.6%' },
+          { label: '2022 to 2023 (147)', value: 93.9, display: '93.9%' },
+          { label: '2023 to 2024 (126)', value: 99.2, display: '99.2%' },
+          { label: '2024 to 2025 (130)', value: 73.1, display: '73.1%' },
+          { label: '2025 to 2026 (151)', value: 0.7, display: '0.7%', color: CHART.amber },
+        ]}
+      />
+      <HBars
+        title="Published files carrying a report-level identifier, by organisation"
+        max={100}
+        rows={[
+          { label: 'APHA (3,566 files)', value: 42.4, display: '42.4%' },
+          { label: 'UKHSA (8,824 files)', value: 38.5, display: '38.5%' },
+          { label: 'Cefas (379 files)', value: 6.3, display: '6.3%', color: CHART.amber },
+        ]}
+      />
     </section>
 
     <section className="space-y-4">
