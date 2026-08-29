@@ -86,6 +86,7 @@ const FineTuningLlmGovernmentDataStandard = lazy(() => import('./pages/research/
 const MachineValidatedOpenOntologies = lazy(() => import('./pages/research/MachineValidatedOpenOntologies').then(m => ({ default: m.MachineValidatedOpenOntologies })));
 const BankRegisterOntology = lazy(() => import('./pages/research/BankRegisterOntology').then(m => ({ default: m.BankRegisterOntology })));
 const ChainControlOntology = lazy(() => import('./pages/research/ChainControlOntology').then(m => ({ default: m.ChainControlOntology })));
+const QuantumCollateralBenchmark = lazy(() => import('./pages/research/QuantumCollateralBenchmark').then(m => ({ default: m.QuantumCollateralBenchmark })));
 const JsonLdEscapingConformance = lazy(() => import('./pages/research/JsonLdEscapingConformance').then(m => ({ default: m.JsonLdEscapingConformance })));
 const VerifyingExtractionPipelineRdf = lazy(() => import('./pages/research/VerifyingExtractionPipelineRdf').then(m => ({ default: m.VerifyingExtractionPipelineRdf })));
 const SecuritiesRegisterOntology = lazy(() => import('./pages/research/SecuritiesRegisterOntology').then(m => ({ default: m.SecuritiesRegisterOntology })));
@@ -267,6 +268,10 @@ const PAGE_META: Record<string, { title: string; description: string }> = {
   '/research/bank-register-ontology': {
     title: 'Bank register ontology: an OWL and SHACL model of the FDIC, the Federal Reserve and the Global LEI System | Tesseract Academy for the Public Sector',
     description: 'An open OWL 2, SKOS and SHACL ontology for the entity and regulatory-reporting fabric of US banking, measured against the FDIC BankFind register, the Federal Reserve MDRM dictionary, and the complete GLEIF golden copy of 3,403,760 LEI records. The measurement finds every one of the 2,252 LEI values in the FDIC register truncated to 16 of the 20 characters ISO 17442 requires, discarding both check digits. Sixteen characters puts 6.37 per cent of the global LEI population into a collision, nine FDIC values are ambiguous across up to six unrelated companies, and two resolve to the wrong legal entity, including Associated Bank carrying its parent holding company’s identifier. The MDRM dictionary shows the mirror-image defect: one definition per item code across forms with different consolidation bases, and 58 per cent of item codes with no definition at all. The artefact comprises 1,123,634 triples, reproducible from public data.',
+  },
+  '/research/quantum-collateral-benchmark': {
+    title: 'Quantum collateral optimisation: an open ontology-grounded benchmark with every allocation certified twice | Tesseract Academy for the Public Sector',
+    description: 'Hybrid quantum optimisation pipelines encode business constraints twice, once as QUBO penalties and once in the classical checker, so both can share a misunderstanding while the check still passes. Qollateral makes the collateral rule book machine readable in OWL 2 and SKOS, declares per rule whether it admits an exact quadratic encoding, and compiles that one source to both a CP-SAT integer model and a QUBO. Every solver run is certified twice, once in Python and once by SHACL shapes over reified allocation assertions. On a seeded grid of 8 instances between 8 and 20 binary variables, CP-SAT proved every optimum within 0.0034 seconds while QAOA at depth 1 to 3 on a noiseless simulator returned a certified feasible sample in 20 of 24 runs and the exact optimum in 11. An agreement battery of 120 cells across two rule books found zero disagreements on the 98 feasible instances.',
   },
   '/research/chain-control-ontology': {
     title: 'Blockchain control ontology: USDC has a different upgrade key on every chain | Tesseract Academy for the Public Sector',
@@ -702,6 +707,7 @@ const App: React.FC = () => {
               <Route path="/research/machine-validated-open-ontologies" element={<MachineValidatedOpenOntologies />} />
               <Route path="/research/bank-register-ontology" element={<BankRegisterOntology />} />
               <Route path="/research/chain-control-ontology" element={<ChainControlOntology />} />
+              <Route path="/research/quantum-collateral-benchmark" element={<QuantumCollateralBenchmark />} />
               <Route path="/research/jsonld-escaping-conformance" element={<JsonLdEscapingConformance />} />
               <Route path="/research/verifying-extraction-pipeline-rdf" element={<VerifyingExtractionPipelineRdf />} />
               <Route path="/research/securities-register-ontology" element={<SecuritiesRegisterOntology />} />

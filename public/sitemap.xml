@@ -392,6 +392,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://gov.tesseract.academy/research/quantum-collateral-benchmark</loc>
+    <lastmod>2026-08-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://gov.tesseract.academy/research/chain-control-ontology</loc>
     <lastmod>2026-08-29</lastmod>
     <changefreq>weekly</changefreq>

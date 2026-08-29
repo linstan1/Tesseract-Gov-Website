@@ -377,7 +377,7 @@ export const Research: React.FC = () => {
            </li>
         </PublicationGroup>
 
-        <PublicationGroup title="Register assurance" count={17}>
+        <PublicationGroup title="Register assurance" count={18}>
           <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
             <Link to="/research/biodiversity-register-ontology"><h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark hover:underline transition-colors">An open ontology for biodiversity registers, tested against the Biodiversity Heritage Library, ZooBank, and the Natural History Museum Data Portal</h3></Link>
             <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Open ontology, register and rights census, 2026</p>
@@ -394,6 +394,15 @@ export const Research: React.FC = () => {
             <div className="mt-3 flex flex-wrap gap-3 items-center">
               <Link to="/research/trade-remedy-ontology" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">Read the study</Link>
               <a href="https://github.com/fabio-rovai/trade-remedy-ontology" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">repository on GitHub<span className="sr-only"> (opens in new tab)</span></a>
+            </div>
+          </li>
+          <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
+            <Link to="/research/quantum-collateral-benchmark"><h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark hover:underline transition-colors">The Quantum Pipeline That Checks Its Own Homework Twice: An Open Benchmark for Collateral Optimisation</h3></Link>
+            <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Open ontology, quantum optimisation benchmark, 2026</p>
+            <p className="text-base text-gov-dark/90 leading-relaxed">A hybrid quantum optimisation pipeline encodes its business constraints twice, once as penalty terms in the QUBO the quantum routine consumes and once in the classical checker that validates the results, so when both are written by hand from the same prose rule book they can share a misunderstanding and the check still passes. Qollateral removes that failure mode by construction. The collateral rule book is data, written in Turtle under an OWL 2 and SKOS ontology in which every rule declares whether it admits an exact quadratic encoding and which algebraic form that encoding takes, and one compiler produces the CP-SAT integer model while a second produces the QUBO from the same source. A concentration bound of one unit per issuer compiles exactly to a pairwise penalty and a bound of two is refused at load time rather than approximated. Every solver run is then certified twice, once by a Python certifier working from raw attributes and once by SHACL shapes re-deriving feasibility from reified allocation assertions, with eligibility itself derived three ways. On a seeded grid of eight instances between 8 and 20 binary variables, CP-SAT proved every optimum in at most 0.0034 seconds while QAOA at depths one to three on a noiseless simulator returned a certified feasible best sample in 20 of 24 runs and the exact optimum in 11, with sampled feasibility mass falling from 0.19 at 8 variables to 0.0002 at 19 as routed depth grew from 43 to 663. An agreement battery of 120 cells across two rule books, four sizes and fifteen seeds found zero disagreements on all 98 feasible instances. The classical routes dominate at these sizes, which is reported plainly: the contribution is the frozen protocol and the resource accounting that any later hardware claim must clear.</p>
+            <div className="mt-3 flex flex-wrap gap-3 items-center">
+              <Link to="/research/quantum-collateral-benchmark" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">Read the study</Link>
+              <a href="https://github.com/fabio-rovai/qollateral" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">repository on GitHub<span className="sr-only"> (opens in new tab)</span></a>
             </div>
           </li>
           <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
