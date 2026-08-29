@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { CHART, HBars } from '../../components/ChartKit';
 import { ArrowLeft, ExternalLink } from 'lucide-react';
 
 const MODEL = 'https://huggingface.co/fabsssss/qwen3-coder-30b-a3b-ies4';
@@ -196,6 +197,22 @@ export const Ies4TurtleLanguageModel: React.FC = () => {
             </tbody>
           </table>
         </div>
+        <HBars
+          title="IES4 term conformance: the repair loop lifts the fine-tuned model but changes nothing on the untuned base."
+          note="On the untuned base the repair loop leaves conformance at 0%. On the fine-tuned model it lifts in-distribution conformance to 100% and pushes the out-of-distribution case from 30% to 50%."
+          max={100}
+          labelWidth="w-64"
+          rows={[
+            { label: 'Untuned base, single-shot (in-distribution)', value: 0, display: '0%', color: CHART.amber },
+            { label: 'Untuned base, repair loop (in-distribution)', value: 0, display: '0%', color: CHART.amber },
+            { label: 'Fine-tuned, single-shot (in-distribution)', value: 95, display: '95%' },
+            { label: 'Fine-tuned, repair loop (in-distribution)', value: 100, display: '100%' },
+            { label: 'Untuned base, single-shot (out-of-distribution)', value: 0, display: '0%', color: CHART.amber },
+            { label: 'Untuned base, repair loop (out-of-distribution)', value: 0, display: '0%', color: CHART.amber },
+            { label: 'Fine-tuned, single-shot (out-of-distribution)', value: 30, display: '30%' },
+            { label: 'Fine-tuned, repair loop (out-of-distribution)', value: 50, display: '50%' },
+          ]}
+        />
         <div className="border-l-2 border-l-gov-blue pl-6">
           <p className="text-gov-dark leading-relaxed">
             The result is clean, and it refutes two tempting shortcuts at once. First, the repair loop cannot replace the fine-tune: on the untuned base it changes nothing (0% stays 0%), because a model that does not know the vocabulary cannot act on the feedback "that term does not exist", it simply invents a different wrong one. Second, the failure mode of the fine-tuned model is coverage, not capacity: its lower out-of-distribution score reflects IES patterns it has not seen, which a larger model would not fix but broader training data would. What the loop does earn is real: on a model that already holds the knowledge it lifts in-distribution conformance to a perfect 100% and pushes the hard out-of-distribution case from 30% to 50%, halving the hallucination rate along the way.
@@ -231,6 +248,17 @@ export const Ies4TurtleLanguageModel: React.FC = () => {
             </tbody>
           </table>
         </div>
+        <HBars
+          title="Out-of-distribution IES4 term conformance rises as the validator supplies the correct term (v1.3 pipeline)."
+          note='A plain repair loop that only says "that term is invalid" lifts conformance from 27% to 45%. A term-suggesting validator that returns the nearest real IES term reaches 82%.'
+          max={100}
+          labelWidth="w-64"
+          rows={[
+            { label: 'Single forward pass', value: 27, display: '27%' },
+            { label: '+ repair loop ("term is invalid")', value: 45, display: '45%' },
+            { label: '+ term-suggesting validator ("use X")', value: 82, display: '82%' },
+          ]}
+        />
         <div className="border-l-2 border-l-gov-blue pl-6">
           <p className="text-gov-dark leading-relaxed">
             The lesson is precise and, we think, general: for niche-format generation the binding constraint is not scale or diversity but term-exactness on novel compositions, and the fix is a validator that supplies the correct term, not merely flags the wrong one. The fine-tune drafts; the symbolic layer perfects. This is a small-scale result (tens of held-out prompts, one ontology), reported as a finding to build on.

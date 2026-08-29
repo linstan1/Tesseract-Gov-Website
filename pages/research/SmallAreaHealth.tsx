@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { CHART, HBars } from '../../components/ChartKit';
 import { ArrowLeft, ExternalLink } from 'lucide-react';
 
 const REPO = 'https://github.com/fabio-rovai/uk-small-area-health';
@@ -70,6 +71,18 @@ export const SmallAreaHealth: React.FC = () => (
           The gradient is stark and familiar. Self-reported bad or very-bad health runs from <strong>2.7%</strong> in the healthiest authorities to <strong>9.6%</strong> in Blaenau Gwent, with Merthyr Tydfil (9.4%) and Blackpool (9.1%) close behind, the geography of health inequality, made measurable and comparable per authority alongside disability and unpaid-care prevalence.
         </p>
       </div>
+      <HBars
+        title="Self-reported bad or very-bad health runs from 2.7% in the healthiest authorities to 9.6% in Blaenau Gwent."
+        note="Merthyr Tydfil (9.4%) and Blackpool (9.1%) are close behind. Because it is the census, these figures cover the whole population, not a sample."
+        max={100}
+        labelWidth="w-56"
+        rows={[
+          { label: 'Blaenau Gwent', value: 9.6, display: '9.6%' },
+          { label: 'Merthyr Tydfil', value: 9.4, display: '9.4%' },
+          { label: 'Blackpool', value: 9.1, display: '9.1%' },
+          { label: 'Healthiest authorities', value: 2.7, display: '2.7%', color: CHART.gray },
+        ]}
+      />
     </section>
 
     <section className="space-y-4">

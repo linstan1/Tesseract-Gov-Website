@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { CHART, HBars } from '../../components/ChartKit';
 import { ArrowLeft, ExternalLink } from 'lucide-react';
 
 const REPO = 'https://github.com/fabio-rovai/uk-local-labour-market';
@@ -69,6 +70,19 @@ export const LocalLabourMarket: React.FC = () => (
         <p className="text-gov-dark leading-relaxed mt-3">
           The spread is wide: from <strong>1.1%</strong> in the tightest local markets to <strong>10.1%</strong> in Birmingham, against a national mean of <strong>3.5%</strong>, with Barking and Dagenham and Haringey next at 7.7%. That range is exactly what a place-based programme needs to see before it decides where to act.
         </p>
+        <HBars
+          title="The claimant rate ranges from 1.1% in the tightest local markets to 10.1% in Birmingham."
+          note="Barking and Dagenham and Haringey are next at 7.7%, against a national mean of 3.5%."
+          max={100}
+          labelWidth="w-56"
+          rows={[
+            { label: 'Birmingham', value: 10.1, display: '10.1%' },
+            { label: 'Barking and Dagenham', value: 7.7, display: '7.7%' },
+            { label: 'Haringey', value: 7.7, display: '7.7%' },
+            { label: 'National mean', value: 3.5, display: '3.5%', color: CHART.gray },
+            { label: 'Tightest local markets', value: 1.1, display: '1.1%' },
+          ]}
+        />
       </div>
     </section>
 

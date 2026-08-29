@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { CHART, HBars } from '../../components/ChartKit';
 import { ArrowLeft } from 'lucide-react';
 
 const SCHEMA = {
@@ -164,6 +165,16 @@ export const XbrlPdfHtmlAiBenchmark: React.FC = () => {
           <p className="text-gov-dark leading-relaxed">
             Structure is not free. Full-facts XBRL prompting used <strong>2.9 times</strong> the tokens of document text: a median of 51,148 tokens per call against 17,249 to 18,945 for the document conditions. Anyone budgeting an AI pipeline over structured filings should price that in, or invest in fact selection rather than full-facts prompting.
           </p>
+          <HBars
+            title="Full-facts XBRL prompting used 2.9 times the tokens of document text."
+            note="The medians were 51,148 tokens per call for full-facts XBRL against 17,249 to 18,945 for the document conditions."
+            labelWidth="w-56"
+            rows={[
+              { label: 'Full-facts XBRL prompting', value: 51148, display: '51,148', color: CHART.amber },
+              { label: 'Document conditions (higher)', value: 18945, display: '18,945' },
+              { label: 'Document conditions (lower)', value: 17249, display: '17,249' },
+            ]}
+          />
           <p className="text-gov-dark leading-relaxed mt-3">
             And no format was reliably consistent with itself. Across repeated runs of identical prompts, exact agreement ranged from <strong>27.8% to 66.7%</strong> depending on condition. That is a finding about the model as much as the formats, and it matters to anyone deploying AI on company data: a single run of any pipeline, structured or not, is not a measurement.
           </p>

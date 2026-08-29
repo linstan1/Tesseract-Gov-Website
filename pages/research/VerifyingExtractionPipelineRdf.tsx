@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { CHART, HBars } from '../../components/ChartKit';
 import { ArrowLeft } from 'lucide-react';
 
 const HARNESS = 'https://github.com/fabio-rovai/semantica-contrib';
@@ -204,6 +205,16 @@ export const VerifyingExtractionPipelineRdf: React.FC = () => (
       <p className="text-gov-dark leading-relaxed">
         Measured on version 0.6.6, a knowledge graph of two entities and one relationship exported to JSON-LD parsed as 2 triples through <code className="text-sm bg-gov-bg px-1.5 py-0.5 rounded">rdflib.Graph.parse()</code> and 21 quads through <code className="text-sm bg-gov-bg px-1.5 py-0.5 rounded">Dataset()</code>. The 19 statements in the gap were the content. There is no error, no warning, and no count that looks wrong unless you already know what the right count was.
       </p>
+      <HBars
+        title="The same two-entity JSON-LD export parsed as 2 triples through Graph() and 21 quads through Dataset()."
+        note="The 19 statements in the gap were the content. There is no error and no warning on either path."
+        labelWidth="w-56"
+        rows={[
+          { label: 'Quads through Dataset()', value: 21, display: '21 quads', color: CHART.gray },
+          { label: 'Triples through Graph()', value: 2, display: '2 triples', color: CHART.amber },
+          { label: 'Statements in the gap', value: 19, display: '19 statements', color: CHART.amber },
+        ]}
+      />
       <p className="text-gov-dark leading-relaxed">
         This is the argument for all-or-nothing loading. A partial load that reports success is worse than a refusal, because every dashboard, every query and every downstream model then computes over a fragment and looks entirely healthy doing it.
       </p>
@@ -227,6 +238,16 @@ export const VerifyingExtractionPipelineRdf: React.FC = () => (
       <p className="text-gov-dark leading-relaxed">
         Across the codebase there were 106 timestamps written with <code className="text-sm bg-gov-bg px-1.5 py-0.5 rounded">datetime.now()</code>, spread over 41 files, and 70 written with the deprecated <code className="text-sm bg-gov-bg px-1.5 py-0.5 rounded">datetime.utcnow()</code> over 23 more. The first means local time. The second means UTC. Once either has been written into an RDF literal, nothing distinguishes them, and eighteen of the first group were in the export module.
       </p>
+      <HBars
+        title="Timezone-naive timestamp call sites across the codebase, in two idioms that mean different things."
+        note="datetime.now() means local time and datetime.utcnow() means UTC. Once either has been written into an RDF literal, nothing distinguishes them."
+        labelWidth="w-64"
+        rows={[
+          { label: 'Written with datetime.now(), local time', value: 106, display: '106 call sites', color: CHART.amber },
+          { label: 'Written with datetime.utcnow(), UTC', value: 70, display: '70 call sites', color: CHART.amber },
+          { label: 'datetime.now() calls in the export module', value: 18, display: '18 of the 106', color: CHART.amber },
+        ]}
+      />
       <p className="text-gov-dark leading-relaxed">
         Now run an audit query with a proper bound:
       </p>

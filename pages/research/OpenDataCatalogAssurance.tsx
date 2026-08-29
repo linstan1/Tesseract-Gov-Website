@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { CHART, HBars } from '../../components/ChartKit';
 import { ArrowLeft, ExternalLink } from 'lucide-react';
 
 const REPO = 'https://github.com/fabio-rovai/open-data-catalog-ontology';
@@ -117,6 +118,17 @@ export const OpenDataCatalogAssurance: React.FC = () => (
           <li>data.gov publishes 4,176,301 validation error rows through a keyless API. We could find no aggregation of it anywhere.</li>
         </ul>
       </div>
+      <HBars
+        title="Schema binding of the 130 DCAT-US harvest sources on 21 August 2026"
+        note="76 harvest sources, covering 59 distinct federal organizations, belong to bodies whose type is Federal Government and are bound to the non-federal schema. Zero federal-typed organizations are bound to the federal schema."
+        labelWidth="w-64"
+        rows={[
+          { label: 'All DCAT-US harvest sources', value: 130, display: '130', color: CHART.gray },
+          { label: 'Bound to the non-federal schema', value: 128, display: '128' },
+          { label: 'Federal-typed, bound to non-federal', value: 76, display: '76', color: CHART.amber },
+          { label: 'Federal-typed, bound to federal', value: 0, display: '0', color: CHART.amber },
+        ]}
+      />
     </section>
 
     <section className="space-y-4">
@@ -204,6 +216,17 @@ export const OpenDataCatalogAssurance: React.FC = () => (
         present in the OMB register. The federal estate is not in ruins. But 2,246 fail an anchored read of the
         pattern, and 669 are well formed while naming nothing in the register that issues them.
       </p>
+      <HBars
+        title="Bureau code values on 79,404 datasets from 49 federal catalogues"
+        note="Of 79,413 bureau code values, 76,498 are well formed and present in the OMB register. A further 2,246 fail an anchored read of the pattern, and 669 are well formed while naming nothing in the register."
+        labelWidth="w-64"
+        rows={[
+          { label: 'All bureau code values', value: 79413, display: '79,413', color: CHART.gray },
+          { label: 'Well formed and in the OMB register', value: 76498, display: '76,498' },
+          { label: 'Fail an anchored read of the pattern', value: 2246, display: '2,246', color: CHART.amber },
+          { label: 'Well formed, naming nothing in the register', value: 669, display: '669', color: CHART.amber },
+        ]}
+      />
       <p className="text-gov-dark leading-relaxed">
         The clearest single case is the Department of Energy, which publishes bureau code
         <code className="text-sm bg-gov-bg px-1.5 py-0.5 rounded">018:001</code> on 997 datasets. Agency 018 in the OMB register is

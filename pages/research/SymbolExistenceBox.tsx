@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { CHART, HBars } from '../../components/ChartKit';
 import { ArrowLeft, ExternalLink } from 'lucide-react';
 
 const REPO = 'https://github.com/fabio-rovai/open-ontologies';
@@ -56,6 +57,16 @@ export const SymbolExistenceBox: React.FC = () => {
           <p className="text-gov-dark leading-relaxed">
             It is tempting to push grounding back into the generator: fine-tune it hard enough and it will stop inventing terms. This helps, and we have measured how much. Our <Link to="/research/ies4-turtle-language-model" className="text-gov-blue underline hover:text-gov-blue-dark">IES4 language model</Link> cut the hallucinated-term rate from 0.937 to 0.010, and a validate-and-repair loop lifted in-distribution conformance to 100%. But the same experiments showed the ceiling: on scenarios it had not seen, the model kept inventing plausible-but-wrong spellings, and a repair loop that only says "that term is invalid" stalled where the model could not guess the correction. The generator, however good, is a probabilistic box. It cannot offer a guarantee about the closed set of real terms, because guarantees about closed sets are not what neural boxes produce. That is precisely the work a symbolic box exists to do.
           </p>
+          <HBars
+            title="The IES4 language model cut the hallucinated-term rate from 0.937 to 0.010."
+            note="A validate-and-repair loop lifted in-distribution conformance to 100%."
+            max={1}
+            labelWidth="w-56"
+            rows={[
+              { label: 'Before fine-tuning', value: 0.937, display: '0.937', color: CHART.amber },
+              { label: 'IES4 language model', value: 0.010, display: '0.010' },
+            ]}
+          />
         </div>
       </section>
 
@@ -65,6 +76,15 @@ export const SymbolExistenceBox: React.FC = () => {
           <p className="text-gov-dark leading-relaxed">
             The symbol-existence box is small and deterministic. It sits on the arrow from generator to store, and it asks one closed-world question of every triple: is each predicate, and each <code className="text-sm bg-gov-bg px-1.5 py-0.5 rounded">rdf:type</code> value, a term the loaded ontology declares? It polices only the namespaces the ontology owns, so it never touches standard vocabulary or your instance data, and its false-positive rate on clean graphs is zero. In our <Link to="/research/ontology-correctness-benchmark" className="text-gov-blue underline hover:text-gov-blue-dark">benchmark</Link> this box caught every fabricated term across three real vocabularies, 300 graphs, 418 fakes, where open-world SHACL caught none. The lesson is not that SHACL is wrong; SHACL is a different box doing a different job. The lesson is that a hybrid system with a hole where its grounding box should be will look, from the outside, exactly like a system that works, right up until the fabricated data is load-bearing.
           </p>
+          <HBars
+            title="The symbol-existence box caught every fabricated term where open-world SHACL caught none."
+            note="The benchmark spans three real vocabularies, 300 graphs and 418 fakes. The box's false-positive rate on clean graphs is zero."
+            labelWidth="w-56"
+            rows={[
+              { label: 'Symbol-existence box', value: 418, display: '418 of 418' },
+              { label: 'Open-world SHACL', value: 0, display: '0 of 418', color: CHART.amber },
+            ]}
+          />
         </div>
 
         <blockquote className="border-l-4 border-l-gov-blue pl-6 py-2 my-6 bg-gov-bg rounded-r-lg">

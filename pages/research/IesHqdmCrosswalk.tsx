@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { CHART, HBars } from '../../components/ChartKit';
 import { ArrowLeft, ExternalLink } from 'lucide-react';
 
 const REPO = 'https://github.com/fabio-rovai/ies-hqdm-crosswalk';
@@ -233,6 +234,16 @@ export const IesHqdmCrosswalk: React.FC = () => {
               <span><strong>The fix is a certified bridge, not a bigger table.</strong> Rather than delete mappings, we let the reasoner decide, pair by pair, how strong each correspondence can safely be. The result is a small <strong>21-axiom bridge with zero new incoherences and zero unintended entailments</strong>: full equivalences where the two 4D models genuinely agree, and one-directional links where they do not, each weakening carrying the reasoner's own counterexample as its justification.</span>
             </li>
           </ul>
+          <HBars
+            title="What the HermiT reasoner finds at each stage of the analysis."
+            note="Published HQDM reasoned in isolation has 39 classes that can never have a member; promoting the matches to hard equalities leaves around 140 classes empty; the certified 21-axiom bridge introduces zero new incoherences."
+            labelWidth="w-64"
+            rows={[
+              { label: 'Published HQDM on its own', value: 39, display: '39 classes', color: CHART.amber },
+              { label: 'Matches promoted to hard equalities', value: 140, display: 'around 140', color: CHART.amber },
+              { label: 'Certified 21-axiom bridge, new incoherences', value: 0, display: '0', color: CHART.teal },
+            ]}
+          />
           <p className="text-gov-dark leading-relaxed mt-4">
             The same method settles the harder IES-to-BFO question raised by the emerging US and NATO defence-ontology foundry. The obvious mapping, treating an IES Entity as a BFO material entity, is refuted by BFO's own axioms: a whole-life 4D individual is not a persisting object, it is that object's <em>history</em>, and BFO already ships a class for exactly that. The corrected bridge points there and is certified clean.
           </p>

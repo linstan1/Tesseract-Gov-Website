@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { CHART, HBars } from '../../components/ChartKit';
 import { ArrowLeft, ExternalLink } from 'lucide-react';
 
 const REPO = 'https://github.com/fabio-rovai/industrial-ontology-crosswalks';
@@ -211,6 +212,21 @@ export const IndustrialOntologyCrosswalks: React.FC = () => (
           </tbody>
         </table>
       </div>
+      <HBars
+        title="The falsifiability rate is the fraction of possible mis-groundings a vocabulary can reject."
+        note="Four of the seven standards score exactly zero: none of them asserts a single disjointness axiom, so no mis-mapping into them can ever be rejected by a reasoner."
+        max={100}
+        labelWidth="w-56"
+        rows={[
+          { label: 'ISO 15926-14 (IDO)', value: 75.94, display: '75.94%' },
+          { label: 'ISO 15926-2:2003', value: 46.81, display: '46.81%' },
+          { label: 'IFC4 ADD2', value: 11.45, display: '11.45%' },
+          { label: 'SAREF core', value: 0, display: '0.00%', color: CHART.amber },
+          { label: 'Asset Administration Shell', value: 0, display: '0.00%', color: CHART.amber },
+          { label: 'CFIHOS V2.0 (IDO-aligned)', value: 0, display: '0.00%', color: CHART.amber },
+          { label: 'OPC UA Device Information', value: 0, display: '0.00%', color: CHART.amber },
+        ]}
+      />
       <p className="text-gov-dark leading-relaxed">
         Four of the seven score exactly zero. No mis-mapping into CFIHOS, SAREF, the Asset Administration Shell or OPC UA Device Information can ever be rejected by a reasoner, because none of them asserts a single disjointness axiom. Running a reasoner over such an alignment and reporting that it is consistent measures the vocabulary, not the alignment. It would return the same answer for a deliberately absurd mapping.
       </p>
@@ -232,6 +248,17 @@ export const IndustrialOntologyCrosswalks: React.FC = () => (
           The failure is emergent, and it needs at least two correspondences to interact. That has a direct consequence for assurance: reviewing a crosswalk correspondence by correspondence, which is what mapping review and most alignment tooling do, <strong>cannot detect this class of fault by construction</strong>. The smallest unit of failure is a pair of mappings, not a mapping.
         </p>
       </div>
+      <HBars
+        title="Every one of the 24 correspondences is harmless in isolation, while asserting the same 24 together collapses classes and invents subsumptions."
+        note="Each correspondence added on its own produces zero unsatisfiable classes and zero invented subsumptions. Asserted together, 29 IFC classes lose all possible instances and the merge invents 91 subsumptions that neither standard states."
+        labelWidth="w-64"
+        rows={[
+          { label: 'Each of the 24 alone: unsatisfiable classes', value: 0, display: '0' },
+          { label: 'Each of the 24 alone: invented subsumptions', value: 0, display: '0' },
+          { label: 'All 24 together: IFC classes losing all possible instances', value: 29, display: '29', color: CHART.amber },
+          { label: 'All 24 together: invented subsumptions', value: 91, display: '91', color: CHART.amber },
+        ]}
+      />
     </section>
 
     <section className="space-y-6">

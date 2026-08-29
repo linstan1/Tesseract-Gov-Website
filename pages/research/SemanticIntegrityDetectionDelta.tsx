@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { CHART, HBars } from '../../components/ChartKit';
 import { ArrowLeft, ExternalLink } from 'lucide-react';
 
 const REPO = 'https://github.com/fabio-rovai/open-ontologies';
@@ -140,6 +141,16 @@ export const SemanticIntegrityDetectionDelta: React.FC = () => {
           <p className="text-gov-dark leading-relaxed">
             Across the four defects, the mainstream tool appropriate to each layer flagged none. The static analyzers passed the serialization and parsing defects clean, including the injection, because the dangerous sink is defined in the data model rather than in the program, so no amount of code-level analysis reaches it. The reference validator certified the vacuous-shape artifact as conformant. Open Ontologies caught all four.
           </p>
+          <HBars
+            title="The mainstream tool appropriate to each layer flagged none of the four defects, while Open Ontologies caught all four."
+            note="For each defect, the tool and Open Ontologies ran against the same artifact, produced by the library's own code."
+            max={4}
+            labelWidth="w-56"
+            rows={[
+              { label: 'Mainstream tool for each layer', value: 0, display: '0 of 4', color: CHART.amber },
+              { label: 'Open Ontologies', value: 4, display: '4 of 4', color: CHART.teal },
+            ]}
+          />
         </div>
       </section>
 

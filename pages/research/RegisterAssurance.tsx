@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { CHART, HBars } from '../../components/ChartKit';
 import { ArrowLeft, ExternalLink } from 'lucide-react';
 
 const RII_REPO = 'https://github.com/fabio-rovai/register-integrity-index';
@@ -255,6 +256,18 @@ export const RegisterAssurance: React.FC = () => (
       <p className="text-gov-dark leading-relaxed">
         Now look one step past the boundary. The FDIC embeds LEIs in its register of insured banks: all 2,252 of them are truncated and invalid. EIOPA embeds LEIs in its register of insurers: four are arithmetically impossible and 42 point at entities GLEIF says have ceased to exist. The SEC receives LEIs in structured filings: 19 fail the same one-line arithmetic that GLEIF passes nine million times in a row. None of this is GLEIF&apos;s fault, and that is precisely the point. GLEIF&apos;s conformance checks are scoped, correctly, to what LEI issuers submit into the system. No check anywhere in the world measures what a register publishes back out when it embeds somebody else&apos;s scheme.
       </p>
+      <HBars
+        title="Invalid LEI values published by registers that embed the scheme"
+        note="All 2,252 LEI values in the FDIC register are truncated and invalid, EIOPA carries four arithmetically impossible values and BaFin carries five, and 19 LEIs in SEC N-CEN filings fail the same check-digit arithmetic that all 9,119,948 pairs in GLEIF's open ISIN-to-LEI file pass with zero failures."
+        labelWidth="w-56"
+        rows={[
+          { label: 'FDIC BankFind, truncated LEIs', value: 2252, display: '2,252 (all)', color: CHART.amber },
+          { label: 'SEC N-CEN filings, failing check digits', value: 19, display: '19', color: CHART.amber },
+          { label: 'BaFin register, invalid values', value: 5, display: '5', color: CHART.amber },
+          { label: 'EIOPA register, impossible values', value: 4, display: '4', color: CHART.amber },
+          { label: 'GLEIF ISIN-to-LEI file, check-digit failures', value: 0, display: '0 of 9,119,948', color: CHART.teal },
+        ]}
+      />
       <p className="text-gov-dark leading-relaxed">
         Each register assures its own records. No one assures the seams. The seams are where registers cite each other, embed each other&apos;s identifiers, and make overlapping claims about the same entities, and the seams are exactly where automated systems, retrieval pipelines and AI agents now read. A defect inside a register gets caught by its operator eventually. A defect at the boundary has no operator, so it survives indefinitely, producing values that still look like identifiers and claims that still look like facts.
       </p>

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { CHART, HBars } from '../../components/ChartKit';
 import { ArrowLeft } from 'lucide-react';
 
 const REPO = 'https://github.com/fabio-rovai/jsonld-escaping-conformance';
@@ -184,6 +185,16 @@ export const JsonLdEscapingConformance: React.FC = () => (
           </tbody>
         </table>
       </div>
+      <HBars
+        title="Domains in each census population, of the 2,969 domains publishing JSON-LD"
+        note="Of 2,969 domains publishing JSON-LD, 199 (6.70 per cent) carry a value that Googlebot and every conformant parser read differently, 10 (0.34 per cent) are affected by the change Google announced, and 36 (1.21 per cent) are invalid JSON for every parser including Googlebot."
+        labelWidth="w-64"
+        rows={[
+          { label: 'Googlebot reads differently from every conformant parser', value: 199, display: '199', color: CHART.amber },
+          { label: 'Affected by the change Google announced', value: 10, display: '10', color: CHART.amber },
+          { label: 'JSON invalid for every parser including Googlebot', value: 36, display: '36', color: CHART.amber },
+        ]}
+      />
       <p className="text-gov-dark leading-relaxed">
         The ratio is 19.9 to one, and it is converged rather than an artefact of where we stopped. At 3,121 domains it was 21 to one, at 3,372 it was 23 to one, and at the full 10,000 it settled at 19.9. Google shipped a breaking, publisher-facing change for a third of a per cent of sites and left seven per cent exactly where they were.
       </p>
@@ -247,6 +258,19 @@ export const JsonLdEscapingConformance: React.FC = () => (
       <p className="text-gov-dark leading-relaxed">
         A second hypothesis died in the same pass, and it is the more interesting failure. We expected a small number of platforms to emit most of the defective markup, so that a few upstream bug reports would fix the bulk of it. Detecting platform signatures across the 199 diverging domains appeared to confirm it, putting WordPress on 58 per cent, Yoast on 30 per cent and Rank Math on 18 per cent. That table is misleading and we very nearly acted on it. Detecting a plugin somewhere on a page is not evidence that the plugin emitted the defective block. Both Yoast and Rank Math wrap their output in distinctive HTML comments, so each block can be attributed by position. Doing that gives Yoast 8.4 per cent, Rank Math 8.0 per cent, and 83.5 per cent attributable to neither. Page-level detection overstates vendor responsibility by about three and a half times, and filing bugs on the strength of it would have been wrong four times in five, against two open source projects that had done nothing wrong. The owner of most of this defect is the site, not a vendor.
       </p>
+      <HBars
+        title="Vendor attribution across the 199 diverging domains, page-level detection against block-level attribution"
+        note="Detecting a plugin somewhere on a page is not evidence that the plugin emitted the defective block. Attributing each block by position gives Yoast 8.4 per cent and Rank Math 8.0 per cent, with 83.5 per cent attributable to neither, so page-level detection overstates vendor responsibility by about three and a half times."
+        max={100}
+        labelWidth="w-64"
+        rows={[
+          { label: 'Yoast detected anywhere on the page', value: 30, display: '30%', color: CHART.gray },
+          { label: 'Yoast attributed by block position', value: 8.4, display: '8.4%', color: CHART.teal },
+          { label: 'Rank Math detected anywhere on the page', value: 18, display: '18%', color: CHART.gray },
+          { label: 'Rank Math attributed by block position', value: 8.0, display: '8.0%', color: CHART.teal },
+          { label: 'Attributable to neither, by block position', value: 83.5, display: '83.5%', color: CHART.teal },
+        ]}
+      />
       <p className="text-gov-dark leading-relaxed">
         Finally, the homepage figure was described above as a lower bound, and it is, by roughly a factor of two. A seeded random sample of 400 of the JSON-LD publishing domains, taking up to three deeper pages each, finds that 81.8 per cent of deeper pages publish JSON-LD against 45.6 per cent of homepages, and that divergence across those same 400 domains rises from 7.75 per cent on the homepage to 15.75 per cent once you look past it. Forty-nine domains diverge only on a deeper page and are invisible to a homepage census, among them Asus, Anker, Clarivate and 20minutos. The corrected headline is that roughly one domain in six publishing JSON-LD, rather than one in fifteen, carries a value that Googlebot and every conformant parser read differently. The ratio against the population Google&apos;s change addressed narrows from about twenty to one to about eleven to one, because the double-escaped population grows too. It remains an order of magnitude.
       </p>

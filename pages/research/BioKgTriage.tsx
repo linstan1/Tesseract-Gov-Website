@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { CHART, HBars } from '../../components/ChartKit';
 import { ArrowLeft, ExternalLink } from 'lucide-react';
 
 const REPO = 'https://github.com/fabio-rovai/open-ontologies/tree/main/case-studies/bio-kg-triage';
@@ -171,6 +172,17 @@ export const BioKgTriage: React.FC = () => {
             </tbody>
           </table>
         </div>
+        <HBars
+          title="Grounded triples in each validated layer"
+          note="Each layer is built from a different real source and validated the same way. The pathogen linkage layer also flags 17 retired taxon identifiers in CARD as no longer current."
+          labelWidth="w-64"
+          rows={[
+            { label: 'Structured (Open Targets + Biolink)', value: 284, display: '284', color: CHART.teal },
+            { label: 'Literature (PubTator3 + Biolink)', value: 169, display: '169', color: CHART.teal },
+            { label: 'AMR resistance-to-drug (CARD / ARO)', value: 1283, display: '1,283', color: CHART.teal },
+            { label: 'AMR pathogen linkage (CARD + NCBI taxonomy)', value: 20692, display: '20,692', color: CHART.teal },
+          ]}
+        />
         <p className="text-gov-dark leading-relaxed">
           The literature layer keeps only the gene-disease relations PubTator3 machine-extracts from 40 real PubMed abstracts, 57 across the eight target genes, and grounds each in Biolink. The resistance-to-drug layer takes 800 of the 5,053 real "confers resistance to" relationships in CARD's Antibiotic Resistance Ontology and polices the ARO namespace, so the gate is shown working on a third ontology and a different domain.
         </p>

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { CHART, HBars } from '../../components/ChartKit';
 import { ArrowLeft, ExternalLink, Github } from 'lucide-react';
 
 const SCHEMA = {
@@ -114,6 +115,14 @@ export const NatureSecurityRisk: React.FC = () => {
         <p className="text-gov-secondary leading-relaxed">
           The cases span food-price shocks and unrest (2007-2008 and 2010-2011), the contested Syria drought-displacement chain, Lake Chad Basin degradation and Boko Haram fragility, the 2011-2012 Somalia famine, the 2019-2022 East Africa locust upsurge, Somali fisheries collapse and piracy, Nile transboundary water tension over the Grand Ethiopian Renaissance Dam, zoonotic spillover and COVID-19, pollinator decline, the Amazon and AMOC tipping points, Sahel farmer-herder conflict, and South-East Asian reef and mangrove loss. Each record is traced to authoritative sources, classified by transmission channel and security outcome, carries a named intervention point, and is graded with the assessment&apos;s own <strong>High / Moderate / Low analytical confidence ratings</strong>. Six of the fourteen are flagged as contested, because their causal chains are genuinely disputed.
         </p>
+        <HBars
+          title="Six of the fourteen documented cascades are flagged as contested."
+          note="Contested chains carry both the claim and its rebuttal, because their causal chains are genuinely disputed."
+          rows={[
+            { label: 'Documented cascades', value: 14, display: '14', color: CHART.gray },
+            { label: 'Flagged as contested', value: 6, display: '6', color: CHART.amber },
+          ]}
+        />
         <p className="text-gov-secondary leading-relaxed">
           Around the dataset sits the <strong>Nature-Related Security Risk Ontology (NSRO)</strong>: an OWL model whose classes are driver, ecosystem-service loss, transmission channel, security outcome, strategic ecosystem, indicator and intervention point, with the four systems constructs the assessment names, tipping points, feedback loops, risk cascades and compounding shocks, as first-class objects rather than figures in a report. A SKOS taxonomy cross-walks the drivers and services to the IPBES framework, and SHACL shapes define what a valid cascade record must contain: a driver, a service loss, at least one channel, an outcome, a confidence grade, a source, and, for any contested chain, both sides of the argument.
         </p>

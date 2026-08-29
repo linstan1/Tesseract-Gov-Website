@@ -1,5 +1,6 @@
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { CHART, HBars } from '../../components/ChartKit';
 import {
   ArrowLeft,
   Search,
@@ -728,6 +729,24 @@ export const SkillsEnglandOccupationalMaps: React.FC = () => {
           </table>
         </div>
 
+        <HBars
+          title="The graph contains 1,269 occupational standards, 1,313 technical education products and 2,717 progression edges."
+          note="Routes, pathways and clusters number 15, 35 and 172. The full graph totals 51,355 triples and validates against a formal SHACL schema with zero violations."
+          labelWidth="w-64"
+          rows={[
+            { label: 'Occupational standards', value: 1269, display: '1,269' },
+            { label: 'Routes', value: 15, display: '15' },
+            { label: 'Pathways', value: 35, display: '35' },
+            { label: 'Clusters', value: 172, display: '172' },
+            { label: 'SOC 2020 concepts (crosswalk)', value: 278, display: '278' },
+            { label: 'SOC 2010 concepts (crosswalk)', value: 246, display: '246' },
+            { label: 'Technical education products', value: 1313, display: '1,313' },
+            { label: 'Green themes', value: 8, display: '8' },
+            { label: 'Occupation links to green themes', value: 231, display: '231' },
+            { label: 'Progression edges', value: 2717, display: '2,717' },
+          ]}
+        />
+
         <div className="space-y-4">
           <h3 className="text-xl font-bold text-gov-dark font-serif">The challenge</h3>
           <p className="text-gov-dark/90 leading-relaxed">
@@ -767,6 +786,16 @@ export const SkillsEnglandOccupationalMaps: React.FC = () => {
             2020 mapping. The whole pipeline is reproducible: one script rebuilds the graph from the snapshot, another
             re-runs validation and the coverage report.
           </p>
+          <HBars
+            title="Every one of the 1,269 standards is fully placed in the map, and 1,079 (85%) carry a SOC 2020 mapping."
+            note="The graph conforms to the SHACL shapes with zero violations across all 51,355 triples and passes four referential-integrity checks."
+            labelWidth="w-64"
+            rows={[
+              { label: 'Fully placed in the map', value: 1269, display: '1,269' },
+              { label: 'Carry a SOC 2020 mapping', value: 1079, display: '1,079 (85%)' },
+              { label: 'All occupational standards', value: 1269, display: '1,269', color: CHART.gray },
+            ]}
+          />
         </div>
 
         <div className="space-y-4">

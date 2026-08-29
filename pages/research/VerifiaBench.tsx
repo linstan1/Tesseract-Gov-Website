@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { CHART, HBars } from '../../components/ChartKit';
 import { ArrowLeft, ExternalLink } from 'lucide-react';
 
 const REPO = 'https://github.com/fabio-rovai/open-ontologies/tree/main/case-studies/verifiabench';
@@ -115,6 +116,23 @@ export const VerifiaBench: React.FC = () => {
             </tbody>
           </table>
         </div>
+        <HBars
+          title="Verified capability spans the full range while raw fluency saturates at 1.00 for seven of nine models."
+          note="Values are the verified column of the table above. The oracle checks that every Biolink term a model emits actually exists in the Biolink Model."
+          max={1}
+          labelWidth="w-56"
+          rows={[
+            { label: 'Qwen3-Coder-30B-A3B (8bit)', value: 1.0, display: '1.00' },
+            { label: 'Claude Opus', value: 1.0, display: '1.00' },
+            { label: 'Claude Haiku', value: 0.93, display: '0.93' },
+            { label: 'Qwen3.6-35B-A3B (8bit)', value: 0.77, display: '0.77' },
+            { label: 'Claude Sonnet', value: 0.73, display: '0.73' },
+            { label: 'Llama-3.2-3B', value: 0.0, display: '0.00', color: CHART.amber },
+            { label: 'Qwen2.5-3B', value: 0.0, display: '0.00', color: CHART.amber },
+            { label: 'gemma-2-2b', value: 0.0, display: '0.00', color: CHART.amber },
+            { label: 'Qwen2.5-0.5B', value: 0.0, display: '0.00', color: CHART.amber },
+          ]}
+        />
         <p className="text-gov-dark leading-relaxed">
           Seven of nine models produce structured Biolink RDF on every task (raw 1.00), so fluency tells you almost nothing. Verified capability spans the full range. Two models tie at the top with perfect verified correctness and zero fabricated terms, one local (Qwen3-Coder-30B) and one frontier (Claude Opus). At the bottom, Qwen2.5-3B and Llama-3.2-3B look identical to the leaders on fluency yet score 0.00 verified, inventing roughly half of every term they emit. The oracle also separates two failure modes fluency grading cannot see: hallucination (the small local models, 49 to 65 fabricated terms) and structural incompleteness (Claude Sonnet, 0.73 verified with zero fabricated terms, its misses are a missing typed disease, not an invented term). You cannot lift the score by writing more fluent RDF, only by using terms that are real.
         </p>
@@ -147,6 +165,19 @@ export const VerifiaBench: React.FC = () => {
             </tbody>
           </table>
         </div>
+        <HBars
+          title="With two authorities and three task families, Claude Opus scores 1.00 overall while Qwen3-Coder-30B collapses to 0.48."
+          note="Values are the overall verified column of the table above. On the single-authority task the local Qwen3-Coder-30B tied Claude Opus at 1.00."
+          max={1}
+          labelWidth="w-56"
+          rows={[
+            { label: 'Claude Opus', value: 1.0, display: '1.00' },
+            { label: 'Claude Sonnet', value: 0.75, display: '0.75' },
+            { label: 'Qwen3-Coder-30B', value: 0.48, display: '0.48' },
+            { label: 'Claude Haiku', value: 0.43, display: '0.43' },
+            { label: 'Llama-3.2-3B / Qwen2.5-3B', value: 0.0, display: '0.00', color: CHART.amber },
+          ]}
+        />
         <p className="text-gov-dark leading-relaxed">
           On the single-authority task the local Qwen3-Coder-30B tied Claude Opus at 1.00. Add a second ontology and multi-hop, and the tie breaks: <strong>Opus scores 1.00 across all three families, the 30B collapses to 0.48</strong>, perfect on Biolink but zero on GO annotation, where it fluently emits fabricated 7-digit GO identifiers, and near zero on multi-hop. GO annotation is the discriminator; multi-hop is the hardest. A single family called several models equal; the multi-domain version re-separates them and exposes the cross-ontology hallucination the single family hid.
         </p>

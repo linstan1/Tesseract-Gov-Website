@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { CHART, HBars } from '../../components/ChartKit';
 import { ArrowLeft, ExternalLink } from 'lucide-react';
 
 const REPO = 'https://github.com/fabio-rovai/scotland-land-register-ontology';
@@ -137,6 +138,16 @@ export const LandCarbonMeasurement: React.FC = () => (
         </table>
       </div>
 
+      <HBars
+        title="Summing parcel areas exceeds the geometric union by 1,867,044 hectares, or 28.37 per cent."
+        note="Overlapping and stacked polygons are a valid part of the Registers of Scotland data model, so adding parcels up counts some ground twice and taking the geometric union counts it once. Figures are hectares."
+        rows={[
+          { label: 'Sum of parcel areas', value: 6581717, display: '6,581,717' },
+          { label: 'Geometric union', value: 4714673, display: '4,714,673' },
+          { label: 'Difference', value: 1867044, display: '1,867,044', color: CHART.amber },
+        ]}
+      />
+
       <p className="text-gray-700 mb-6">
         The gap runs from 1.33 per cent in Nairn to 95.40 per cent in West Lothian, so there
         is no single correction factor to apply. Of 270 connected parcel groups that reach
@@ -222,6 +233,18 @@ export const LandCarbonMeasurement: React.FC = () => (
           </tbody>
         </table>
       </div>
+
+      <HBars
+        title="Q1, raised and blanket bogs, covers 14.88 per cent of the classified extent of the habitat map."
+        note="Roughly one hectare in seven of classified Scotland is raised or blanket bog. Q4 occupies 84 pixels in the whole country, under a single hectare."
+        max={100}
+        labelWidth="w-64"
+        rows={[
+          { label: 'Q1, raised and blanket bogs', value: 14.88, display: '14.88%' },
+          { label: 'Q2, valley mires, poor fens, transition mires', value: 0.21, display: '0.21%' },
+          { label: 'Q4, base-rich fens and calcareous spring mires', value: 0, display: '0.00%' },
+        ]}
+      />
 
       <p className="text-gray-700 mb-6">
         Roughly one hectare in seven of classified Scotland is raised or blanket bog. Q4

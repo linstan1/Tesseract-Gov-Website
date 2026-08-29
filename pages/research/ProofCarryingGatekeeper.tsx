@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { CHART, HBars } from '../../components/ChartKit';
 import { ArrowLeft, ExternalLink } from 'lucide-react';
 
 const REPO = 'https://github.com/fabio-rovai/open-ontologies/tree/main/case-studies/tardygrada-gatekeeper';
@@ -100,6 +101,16 @@ export const ProofCarryingGatekeeper: React.FC = () => {
             </tbody>
           </table>
         </div>
+        <HBars
+          title="Exhaustive verification of the warehouse gate"
+          note="The checker enumerates all 1,176 transitions across the 96 reachable states. Every one of the 672 unsafe actions is blocked and every one of the 504 safe actions is admitted."
+          labelWidth="w-56"
+          rows={[
+            { label: 'Unsafe actions blocked', value: 672, display: '672 / 672' },
+            { label: 'Safe actions admitted', value: 504, display: '504 / 504' },
+            { label: 'Reachable transitions', value: 1176, display: '1,176', color: CHART.gray },
+          ]}
+        />
         <p className="text-gov-dark leading-relaxed">
           Because the model is bounded, the checker enumerates the entire reachable state space and, for every state and every action, confirms it admits the action if and only if the resulting state is safe. That is a complete soundness-and-completeness result over the reachable space, not a passing test suite. An adversarial proposer that simply asserts "this is safe" is blocked on every one of its unsafe proposals, and without the gate 57% of transitions would land in an unsafe state, so the gate is load-bearing, not decorative.
         </p>
@@ -133,6 +144,16 @@ export const ProofCarryingGatekeeper: React.FC = () => {
             </tbody>
           </table>
         </div>
+        <HBars
+          title="Dead commons cells after 200 steps"
+          note="Mean of 20 runs of the dynamic episode with four greedy agents. Ungated agents leave all 36 cells dead and irrecoverable; the same agents behind the sustainability gate leave 0 of 36 dead."
+          max={36}
+          labelWidth="w-56"
+          rows={[
+            { label: 'Ungated: dead cells', value: 36, display: '36 / 36', color: CHART.amber },
+            { label: 'Gated: dead cells', value: 0, display: '0 / 36' },
+          ]}
+        />
         <p className="text-gov-dark leading-relaxed">
           Ungated greedy agents collapse the commons completely; the same agents behind the sustainability gate never kill a patch, and the resource persists. Same 31-line trusted core, three different systems.
         </p>

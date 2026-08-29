@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { CHART, HBars } from '../../components/ChartKit';
 import { ArrowLeft, ExternalLink } from 'lucide-react';
 
 const REPO = 'https://github.com/fabio-rovai/open-ontologies';
@@ -75,6 +76,17 @@ export const ShaclShapesNotVocabulary: React.FC = () => {
             The question SHACL answers is "do the terms I was told to check satisfy their constraints?". The question generated data forces is a different one: "does every term in this graph denote something the ontology actually defines?". That is a closed-world membership test, and it belongs beside SHACL, not inside it. Run it as its own pass: collect every predicate and every <code className="text-sm bg-gov-bg px-1.5 py-0.5 rounded">rdf:type</code> value, and flag any whose IRI sits in a namespace the ontology owns but that the ontology never declares. It leaves SHACL to do the structural job it is good at, and it leaves the extensibility intact, because it polices only the namespaces you name and never the standard <code className="text-sm bg-gov-bg px-1.5 py-0.5 rounded">rdf</code>, <code className="text-sm bg-gov-bg px-1.5 py-0.5 rounded">rdfs</code>, <code className="text-sm bg-gov-bg px-1.5 py-0.5 rounded">owl</code> vocabulary or your own instance IRIs. On 300 clean graphs it raised zero false alarms. This is the <code className="text-sm bg-gov-bg px-1.5 py-0.5 rounded">onto_vocab_check</code> tool in our <a href={REPO} target="_blank" rel="noopener noreferrer" className="text-gov-blue underline hover:text-gov-blue-dark">open-ontologies</a> engine: not a replacement for SHACL, a companion constraint SHACL Core cannot express.
           </p>
         </div>
+
+        <HBars
+          title="SHACL Core passed every hallucinated graph, while the closed-world vocabulary check raised no false alarms."
+          max={100}
+          labelWidth="w-64"
+          rows={[
+            { label: 'SHACL Core false-pass rate, 300 hallucinated graphs', value: 100, display: '100%', color: CHART.amber },
+            { label: 'Vocabulary check false alarms, 300 clean graphs', value: 0, display: '0', color: CHART.teal },
+          ]}
+          note="Across 300 hallucinated graphs on three real vocabularies, the fabricated term was passed every single time, the 100% false-pass rate measured in the benchmark. On 300 clean graphs the closed-world vocabulary check raised zero false alarms."
+        />
 
         <blockquote className="border-l-4 border-l-gov-blue pl-6 py-2 my-6 bg-gov-bg rounded-r-lg">
           <p className="text-gov-dark italic leading-relaxed">"SHACL is not failing when it passes a hallucinated term. It is answering the question it was asked. The mistake is asking it the wrong question and calling the answer trust."</p>

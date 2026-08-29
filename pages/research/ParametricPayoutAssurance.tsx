@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { CHART, HBars } from '../../components/ChartKit';
 import { ArrowLeft, ExternalLink } from 'lucide-react';
 
 const REPO = 'https://github.com/fabio-rovai/payout-assurance-standard';
@@ -324,6 +325,19 @@ export const ParametricPayoutAssurance: React.FC = () => (
           </tbody>
         </table>
       </div>
+      <HBars
+        title="Reported landfall winds for the five encoded Philippine events, set against the 118 km/h boundary at which PAGASA's current scale puts a typhoon."
+        note="Nalgae's reported ten-minute maximum sustained winds at landfall were 110 km/h, eight kilometres per hour short of being a typhoon, so a wind-indexed product whose trigger fires at typhoon strength pays nothing at all."
+        labelWidth="w-56"
+        rows={[
+          { label: 'Haiyan (Yolanda), Nov 2013', value: 235, display: '235 km/h' },
+          { label: 'Mangkhut (Ompong), Sep 2018', value: 205, display: '205 km/h' },
+          { label: 'Rai (Odette), Dec 2021', value: 195, display: '195 km/h' },
+          { label: 'Doksuri (Egay), Jul 2023', value: 175, display: '175 km/h' },
+          { label: 'Typhoon boundary, PAGASA scale', value: 118, display: '118 km/h', color: CHART.gray },
+          { label: 'Nalgae (Paeng), Oct 2022', value: 110, display: '110 km/h', color: CHART.amber },
+        ]}
+      />
       <p className="text-gov-dark leading-relaxed">
         Severe Tropical Storm Nalgae, locally Paeng, made landfall at Virac in Catanduanes on 29
         October 2022. Reported ten-minute maximum sustained winds at landfall were 110 km/h. PAGASA's

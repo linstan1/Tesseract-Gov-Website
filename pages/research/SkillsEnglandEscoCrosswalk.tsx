@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { CHART, HBars } from '../../components/ChartKit';
 import { ArrowLeft, ExternalLink } from 'lucide-react';
 
 const REPO = 'https://github.com/fabio-rovai/open-ontologies/tree/main/case-studies/skills-england-esco-crosswalk';
@@ -77,6 +78,18 @@ export const SkillsEnglandEscoCrosswalk: React.FC = () => {
             </div>
           ))}
         </div>
+        <HBars
+          title="Each of the 1,269 Skills England occupations is banded by its best lexical similarity to ESCO."
+          note="Just over half of England's occupational standards (52%) find any lexical match to ESCO, and only 31% match strongly. The 604 unmatched occupations measure how far England's occupational language sits from ESCO's."
+          labelWidth="w-64"
+          rows={[
+            { label: 'exactMatch: label identity (similarity ≥ 0.95)', value: 114, display: '114' },
+            { label: 'closeMatch: strong lexical match (≥ 0.82)', value: 281, display: '281' },
+            { label: 'relatedMatch: partial lexical match (≥ 0.62)', value: 270, display: '270' },
+            { label: 'unmatched: no lexical match ≥ 0.62', value: 604, display: '604', color: CHART.amber },
+            { label: 'All Skills England occupations', value: 1269, display: '1,269', color: CHART.gray },
+          ]}
+        />
       </section>
 
       <section className="space-y-4">

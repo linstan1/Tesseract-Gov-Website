@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { CHART, HBars } from '../../components/ChartKit';
 import { ArrowUpRight } from 'lucide-react';
 import { ContributionLedger } from '../../components/ContributionLedger';
 import { CONTRIBUTION_TOTALS } from '../../data/contributionTotals';
@@ -84,6 +85,16 @@ export const OpenSource: React.FC = () => (
           an outside contributor base that has landed 16 merged pull requests, including native Windows
           support and the bi-temporal conformance corpus.
         </p>
+        <HBars
+          title="Open Ontologies has 442 stars, 56 forks and 16 merged pull requests from an outside contributor base."
+          note="The merged outside contributions include native Windows support and the bi-temporal conformance corpus."
+          labelWidth="w-64"
+          rows={[
+            { label: 'GitHub stars', value: 442, display: '442', color: CHART.teal },
+            { label: 'Forks', value: 56, display: '56', color: CHART.teal },
+            { label: 'Merged pull requests from outside contributors', value: 16, display: '16', color: CHART.teal },
+          ]}
+        />
         <p>
           Underneath the research programme sits a family of published register-integrity ontologies in OWL 2,
           SKOS and SHACL, covering banking, investment funds, insurance, securities, the scholarly record,
