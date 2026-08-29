@@ -86,6 +86,7 @@ const FineTuningLlmGovernmentDataStandard = lazy(() => import('./pages/research/
 const MachineValidatedOpenOntologies = lazy(() => import('./pages/research/MachineValidatedOpenOntologies').then(m => ({ default: m.MachineValidatedOpenOntologies })));
 const BankRegisterOntology = lazy(() => import('./pages/research/BankRegisterOntology').then(m => ({ default: m.BankRegisterOntology })));
 const ChainControlOntology = lazy(() => import('./pages/research/ChainControlOntology').then(m => ({ default: m.ChainControlOntology })));
+const CertificationRegisterOntology = lazy(() => import('./pages/research/CertificationRegisterOntology').then(m => ({ default: m.CertificationRegisterOntology })));
 const QuantumCollateralBenchmark = lazy(() => import('./pages/research/QuantumCollateralBenchmark').then(m => ({ default: m.QuantumCollateralBenchmark })));
 const JsonLdEscapingConformance = lazy(() => import('./pages/research/JsonLdEscapingConformance').then(m => ({ default: m.JsonLdEscapingConformance })));
 const VerifyingExtractionPipelineRdf = lazy(() => import('./pages/research/VerifyingExtractionPipelineRdf').then(m => ({ default: m.VerifyingExtractionPipelineRdf })));
@@ -276,6 +277,10 @@ const PAGE_META: Record<string, { title: string; description: string }> = {
   '/research/chain-control-ontology': {
     title: 'Blockchain control ontology: USDC has a different upgrade key on every chain | Tesseract Academy for the Public Sector',
     description: 'An open OWL 2, SKOS and SHACL ontology for on-chain control, measured across 6,316 contracts on seven EVM chains plus Solana. Of 656 upgradeable contracts with a resolvable upgrade authority, 390 report a different account through owner() than the one that can replace their code, and for 556 the proxy admin slot is not the real controller. Walking every path to its end, 132 resolve to a single private key and 335 to a multisig, eight of which have a threshold of one.',
+  },
+  '/research/certification-register-ontology': {
+    title: 'Certification register ontology: nobody can check an ISO 27001 certificate | Tesseract Academy for the Public Sector',
+    description: 'An open OWL 2, SKOS and SHACL ontology for management system certification, built so that it reproduces no ISO text at all and with a SHACL layer that mechanically proves it. IAF CertSearch, the global register of roughly two million accredited certificates, states that no user may view or download a list of certificates issued by a certification body, so absence cannot be observed. 0 of 2,921 UKAS-accredited organisations declare a standard in the public register and ISO/IEC 27001 is absent from the UKAS standard taxonomy entirely. 21.6 per cent of the UKAS scope vocabulary is duplication. NIST has withdrawn its SP 800-53 to ISO/IEC 27001 mapping, which last addressed the superseded 2013 edition. 70 of the 93 Annex A controls have a CSF 2.0 informative reference and 23 do not, and five identifier defects survive in the live crosswalk including two clause addresses that name nothing in the standard.',
   },
   '/research/surveillance-reporting-identifiers': {
     title: 'Surveillance reporting identifiers: an open census of what UK operational reporting denotes | Tesseract Academy for the Public Sector',
@@ -707,6 +712,7 @@ const App: React.FC = () => {
               <Route path="/research/machine-validated-open-ontologies" element={<MachineValidatedOpenOntologies />} />
               <Route path="/research/bank-register-ontology" element={<BankRegisterOntology />} />
               <Route path="/research/chain-control-ontology" element={<ChainControlOntology />} />
+              <Route path="/research/certification-register-ontology" element={<CertificationRegisterOntology />} />
               <Route path="/research/quantum-collateral-benchmark" element={<QuantumCollateralBenchmark />} />
               <Route path="/research/jsonld-escaping-conformance" element={<JsonLdEscapingConformance />} />
               <Route path="/research/verifying-extraction-pipeline-rdf" element={<VerifyingExtractionPipelineRdf />} />

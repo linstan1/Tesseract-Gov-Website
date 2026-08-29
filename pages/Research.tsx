@@ -377,7 +377,7 @@ export const Research: React.FC = () => {
            </li>
         </PublicationGroup>
 
-        <PublicationGroup title="Register assurance" count={18}>
+        <PublicationGroup title="Register assurance" count={19}>
           <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
             <Link to="/research/biodiversity-register-ontology"><h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark hover:underline transition-colors">An open ontology for biodiversity registers, tested against the Biodiversity Heritage Library, ZooBank, and the Natural History Museum Data Portal</h3></Link>
             <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Open ontology, register and rights census, 2026</p>
@@ -403,6 +403,15 @@ export const Research: React.FC = () => {
             <div className="mt-3 flex flex-wrap gap-3 items-center">
               <Link to="/research/quantum-collateral-benchmark" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">Read the study</Link>
               <a href="https://github.com/fabio-rovai/qollateral" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">repository on GitHub<span className="sr-only"> (opens in new tab)</span></a>
+            </div>
+          </li>
+          <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
+            <Link to="/research/certification-register-ontology"><h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark hover:underline transition-colors">Nobody Can Check an ISO 27001 Certificate, and the Registers Are Built That Way</h3></Link>
+            <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Open ontology, certification register measurement, 2026</p>
+            <p className="text-base text-gov-dark/90 leading-relaxed">An open OWL 2, SKOS and SHACL vocabulary for management system certification, built so that it reproduces no ISO text at all: standards are modelled as reference addresses rather than as text, and a SHACL layer rejects any graph in which a standard element carries a label, definition, note, comment or any literal longer than 24 characters, so the absence of protected expression is demonstrated rather than asserted. The measurement behind it is that every link in the chain a buyer would use to check a certification claim is broken. IAF CertSearch, the global register of roughly two million accredited certificates, states that no user may view or download a list of certificates issued by a certification body and that all verification must be of known entities, so a certificate can be confirmed and never discovered and absence cannot be observed. UKAS publishes 2,921 accredited organisations openly and separately publishes a taxonomy of standards, but 0 of the 2,921 records carry a standard term and ISO/IEC 27001 does not appear in that taxonomy at all, because it holds conformity assessment standards that govern the assessor. 21.6 per cent of the UKAS scope vocabulary is duplication, with 3,336 terms carrying 2,617 distinct names and sampling existing as 15 separate terms. The public domain NIST SP 800-53 to ISO/IEC 27001 mapping returns 404 and last addressed the superseded 2013 edition, while the maintained CSF 2.0 references cover 70 of the 93 Annex A controls and carry five identifier defects, two of which name clauses that do not exist in the standard. The licences that actually constrained the build belonged to the Secure Controls Framework and CIS Controls rather than to ISO. Every headline computed twice, with five dead hypotheses and three of our own bugs recorded in the build report.</p>
+            <div className="mt-3 flex flex-wrap gap-3 items-center">
+              <Link to="/research/certification-register-ontology" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">Read the study</Link>
+              <a href="https://github.com/fabio-rovai/certification-register-ontology" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">repository on GitHub<span className="sr-only"> (opens in new tab)</span></a>
             </div>
           </li>
           <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
