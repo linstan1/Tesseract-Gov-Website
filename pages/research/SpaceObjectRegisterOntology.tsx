@@ -6,6 +6,125 @@ const REPO = 'https://github.com/fabio-rovai/space-object-register-ontology';
 
 const DESC = "An open OWL 2, SKOS and SHACL ontology and reproducible audit of the boundary between the two open catalogues of objects in Earth orbit, built from keyless downloads of CelesTrak's SATCAT (70,292 objects) and Jonathan McDowell's General Catalog of Artificial Space Objects (69,391 numbered objects across four catalogues), both retrieved on 18 August 2026. GCAT marks 22 entries as corresponding to no real object, giving reasons such as radar error and cataloging error, and CelesTrak carries all 22, one of them with no decay date and therefore as a tracked object still in orbit. 1,094 objects GCAT records as no longer tracked carry no data status code in CelesTrak, which maintains that field and applies it to 1,292 others. 20,198 of 34,814 on-orbit objects, 58.0 per cent, have no published radar cross section. CelesTrak's owner code collapses the Soviet Union and the Russian Federation into one value where GCAT separates 16,142 objects from 9,016. Every headline computed two independent ways.";
 
+
+const FIGC = { teal: '#2c7773', tealDark: '#24615e', tealLight: '#5ac3be', gray: '#aab4b2', ink: '#313b45', muted: '#5c6670', grid: '#e2e6e9' };
+
+function FigShell({ title, caption, label, children }) {
+  return (
+    <figure className="my-6 rounded-lg border border-gov-border bg-white p-4">
+      <p className="text-sm font-semibold text-gov-dark mb-3">{title}</p>
+      {children}
+      <figcaption className="text-xs text-gov-secondary mt-2">{caption}</figcaption>
+      <span className="sr-only">{label}</span>
+    </figure>
+  );
+}
+
+function PhantomFigure() {
+  const counts = [[1972,1],[1975,1],[1976,2],[1977,1],[1978,2],[1980,1],[1981,1],[1982,3],[1983,3],[1990,3],[1991,1],[1992,1],[2025,1]];
+  const x = (yr) => 8 + ((yr - 1970) * 704) / 58;
+  const dots = [];
+  counts.forEach(([yr, n]) => {
+    for (let i = 0; i < n; i++) dots.push({ yr, cy: 112 - 9 - i * 16 });
+  });
+  return (
+    <FigShell
+      title="The 22 phantom entries: 21 recorded as decayed, one carried as on orbit"
+      caption="Each dot is one entry GCAT marks ERR (no corresponding object), placed at the decay year CelesTrak records. Snapshot of 18 August 2026."
+      label="Dot strip of 22 phantom entries by recorded decay year, 1972 to 2025, with catalog number 11006 highlighted as having no decay date."
+    >
+      <svg viewBox="0 0 720 140" className="w-full h-auto" role="img" aria-label="Phantom entries by recorded decay year">
+        <line x1="8" y1="112" x2="712" y2="112" stroke={FIGC.grid} strokeWidth="1" />
+        {[1970, 1980, 1990, 2000, 2010, 2020].map((yr) => (
+          <g key={yr}>
+            <line x1={x(yr)} y1="112" x2={x(yr)} y2="117" stroke={FIGC.grid} strokeWidth="1" />
+            <text x={x(yr)} y="131" textAnchor="middle" fontSize="11" fill={FIGC.muted}>{yr}</text>
+          </g>
+        ))}
+        {dots.map((d, i) => (
+          <circle key={i} cx={x(d.yr)} cy={d.cy} r="6.5" fill={FIGC.gray} stroke="#ffffff" strokeWidth="2">
+            <title>{`Decay recorded ${d.yr}`}</title>
+          </circle>
+        ))}
+        <rect x={x(2026) - 6} y={112 - 9 - 6} width="12" height="12" rx="2" transform={`rotate(45 ${x(2026)} ${112 - 9})`} fill={FIGC.teal}>
+          <title>NORAD 11006: no decay date, carried as a tracked on-orbit object</title>
+        </rect>
+        <line x1={x(2026)} y1={112 - 24} x2={x(2026)} y2="34" stroke={FIGC.grid} strokeWidth="1" />
+        <text x="712" y="16" textAnchor="end" fontSize="12" fontWeight="600" fill={FIGC.ink}>11006: no decay date,</text>
+        <text x="712" y="30" textAnchor="end" fontSize="12" fontWeight="600" fill={FIGC.ink}>carried as on orbit</text>
+      </svg>
+    </FigShell>
+  );
+}
+
+function LostFigure() {
+  return (
+    <FigShell
+      title="Of the 1,104 lost objects CelesTrak still carries, 10 are flagged"
+      caption="Objects GCAT records as in orbit but no longer tracked, carried by CelesTrak with no decay date, by data status code. The bar is to scale."
+      label="Single bar of 1,104 objects: 10 flagged with a data status code, 1,094 with none."
+    >
+      <svg viewBox="0 0 720 78" className="w-full h-auto" role="img" aria-label="Lost objects by data status code">
+        <rect x="0" y="30" width="6.5" height="32" rx="2" fill={FIGC.teal}>
+          <title>Flagged with a data status code: 10</title>
+        </rect>
+        <rect x="8.5" y="30" width="711.5" height="32" rx="4" fill={FIGC.gray}>
+          <title>No data status code: 1,094</title>
+        </rect>
+        <line x1="3" y1="28" x2="3" y2="18" stroke={FIGC.muted} strokeWidth="1" />
+        <text x="0" y="13" fontSize="12" fontWeight="600" fill={FIGC.ink}>Flagged: 10</text>
+        <text x="24" y="51" fontSize="13" fontWeight="600" fill={FIGC.ink}>No data status code: 1,094</text>
+      </svg>
+    </FigShell>
+  );
+}
+
+function RcsFigure() {
+  return (
+    <FigShell
+      title="58 per cent of on-orbit objects have no published radar cross section"
+      caption="The 34,814 objects CelesTrak carries with no decay date, by presence of a radar cross section value. Snapshot of 18 August 2026."
+      label="Single bar of 34,814 on-orbit objects: 14,616 with a radar cross section, 20,198 without."
+    >
+      <svg viewBox="0 0 720 52" className="w-full h-auto" role="img" aria-label="On-orbit objects by radar cross section presence">
+        <rect x="0" y="10" width="301" height="32" rx="4" fill={FIGC.teal}>
+          <title>Radar cross section published: 14,616 (42.0%)</title>
+        </rect>
+        <rect x="303" y="10" width="417" height="32" rx="4" fill={FIGC.gray}>
+          <title>No radar cross section: 20,198 (58.0%)</title>
+        </rect>
+        <text x="12" y="31" fontSize="13" fontWeight="600" fill="#ffffff">RCS published: 14,616</text>
+        <text x="315" y="31" fontSize="13" fontWeight="600" fill={FIGC.ink}>No radar cross section: 20,198 (58.0%)</text>
+      </svg>
+    </FigShell>
+  );
+}
+
+function CisFigure() {
+  return (
+    <FigShell
+      title="One CelesTrak owner code, two GCAT states"
+      caption="The same 25,158 objects on the same scale. CelesTrak records one owner code, CIS; GCAT divides them between the Soviet Union and the Russian Federation."
+      label="Two bars at the same scale: CelesTrak CIS 25,158 objects; GCAT Soviet Union 16,142 and Russian Federation 9,016."
+    >
+      <svg viewBox="0 0 720 92" className="w-full h-auto" role="img" aria-label="Owner attribution: CelesTrak CIS against GCAT Soviet Union and Russian Federation">
+        <rect x="0" y="8" width="720" height="30" rx="4" fill={FIGC.teal}>
+          <title>CelesTrak: CIS, 25,158 objects</title>
+        </rect>
+        <text x="12" y="28" fontSize="13" fontWeight="600" fill="#ffffff">CelesTrak: CIS &middot; 25,158 objects</text>
+        <rect x="0" y="50" width="461" height="30" rx="4" fill={FIGC.tealDark}>
+          <title>GCAT: Soviet Union, 16,142 objects</title>
+        </rect>
+        <text x="12" y="70" fontSize="13" fontWeight="600" fill="#ffffff">GCAT: Soviet Union &middot; 16,142</text>
+        <rect x="463" y="50" width="257" height="30" rx="4" fill={FIGC.tealLight}>
+          <title>GCAT: Russian Federation, 9,016 objects</title>
+        </rect>
+        <text x="475" y="70" fontSize="13" fontWeight="600" fill={FIGC.ink}>Russian Federation &middot; 9,016</text>
+      </svg>
+    </FigShell>
+  );
+}
+
 const SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'Article',
@@ -124,6 +243,7 @@ export const SpaceObjectRegisterOntology: React.FC = () => (
       <p className="text-gov-dark leading-relaxed">
         Twenty-one of the 22 carry a decay date in CelesTrak, so they are at least recorded as gone. One does not. Catalog number 11006, which GCAT identifies as a duplicate of another Delta rocket body, appears in the CelesTrak SATCAT with no decay date. An entry that the leading independent catalogue says corresponds to no physical object is carried, today, as a tracked object still in orbit.
       </p>
+      <PhantomFigure />
       <p className="text-gov-dark leading-relaxed">
         This is the argument for cross-catalogue assurance in a single case. Neither the NORAD catalog number nor the COSPAR designator can express nonexistence. There is no field in the identifier, and no check inside one catalogue, that distinguishes an erroneous entry from a real object. Only another catalogue, maintained independently, can tell you.
       </p>
@@ -137,6 +257,7 @@ export const SpaceObjectRegisterOntology: React.FC = () => (
       <p className="text-gov-dark leading-relaxed">
         The important part is what makes this a finding rather than a difference in scope. CelesTrak does have a field for exactly this. Its data status code takes the values <em>No Current Elements</em>, <em>No Initial Elements</em> and <em>No Elements Available</em>, and CelesTrak applies it to 1,292 objects: 1,041 as no elements available and 251 as no initial elements. Ten of the GCAT-lost objects are flagged. The other 1,094 are not, and appear in the register as ordinary on-orbit objects. 1,097 of them also carry a blank operational status.
       </p>
+      <LostFigure />
       <p className="text-gov-dark leading-relaxed">
         The operational consequence is that anyone counting the on-orbit population from the open catalogue, or screening it for conjunction risk, is including more than a thousand objects whose position is a propagation from data that stopped arriving at an unstated time in the past, with nothing in the record to say so.
       </p>
@@ -147,6 +268,7 @@ export const SpaceObjectRegisterOntology: React.FC = () => (
       <p className="text-gov-dark leading-relaxed">
         Of the 34,814 objects CelesTrak carries with no decay date, 20,198 have no published radar cross section. That is 58.0 per cent. A further 618 have no orbital period at all. Nothing about size, mass or construction can be derived from the open catalogue for those objects.
       </p>
+      <RcsFigure />
       <p className="text-gov-dark leading-relaxed">
         Two smaller gaps sit alongside it, and they are open identifications rather than clerical omissions. 180 on-orbit objects have an owner recorded as <code className="text-sm bg-gov-bg px-1.5 py-0.5 rounded">TBD</code>, and 53 have an object type of <code className="text-sm bg-gov-bg px-1.5 py-0.5 rounded">UNK</code>. The catalogue is stating, correctly and usefully, that it does not know whose these are or what they are.
       </p>
@@ -160,6 +282,7 @@ export const SpaceObjectRegisterOntology: React.FC = () => (
       <p className="text-gov-dark leading-relaxed">
         One difference is not vocabulary. CelesTrak uses a single owner code, CIS, for 25,158 objects that GCAT divides into 16,142 attributed to the Soviet Union and 9,016 attributed to the Russian Federation. The distinction between a Soviet-era object and a Russian one cannot be recovered from CelesTrak at all, at any level of care, because the register does not carry it.
       </p>
+      <CisFigure />
       <p className="text-gov-dark leading-relaxed">
         A second difference is a genuine disagreement about a fact with legal weight. 157 objects are attributed to the United States by CelesTrak and to New Zealand by GCAT. That is the difference between the state of the operator and the state from whose territory the launch occurred, and under the Registration Convention it is the question that determines which state carries liability.
       </p>
