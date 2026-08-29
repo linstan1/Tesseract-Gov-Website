@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { CHART, HBars } from '../../components/ChartKit';
 import { ArrowLeft, ExternalLink } from 'lucide-react';
 
 const REPO = 'https://github.com/fabio-rovai/dkan-portal-profile';
@@ -130,6 +131,16 @@ export const DkanPortalCensus: React.FC = () => (
         HTML single-page shell at the DKAN API path; the probe now requires a parsed JSON object carrying a
         recognisable schema key, and that false positive falls out.
       </p>
+      <HBars
+        title="Hostnames probed in each census frame"
+        note="The first frame asked all 16,535 registrable .gov domains and found zero DKAN portals. The second frame probed the 3,600 open data subdomains that resolved in DNS, and three DKAN portals answered. In total 20,135 hostnames were probed."
+        labelWidth="w-64"
+        rows={[
+          { label: 'Frame one: registrable .gov domains (found zero)', value: 16535, display: '16,535', color: CHART.amber },
+          { label: 'Frame two: DNS-resolving subdomains (found three)', value: 3600, display: '3,600', color: CHART.teal },
+          { label: 'Total hostnames probed', value: 20135, display: '20,135', color: CHART.gray },
+        ]}
+      />
       <p className="text-gov-dark leading-relaxed">
         Both frames are in the published record. A census that shows only the frame that worked is not a census.
       </p>
@@ -172,6 +183,15 @@ http://dkan/data.json`}</code></pre>
         <code className="text-sm bg-gov-bg px-1.5 py-0.5 rounded">dcat:_update</code> 7 times. We checked both against the
         authoritative vocabulary at w3.org/ns/dcat.ttl. Neither exists.
       </p>
+      <HBars
+        title="Phantom terms minted into the W3C DCAT namespace"
+        note="Across the three portals the federal context mints dcat:references 368 times and dcat:_update 7 times. Neither term exists in the W3C DCAT vocabulary."
+        labelWidth="w-56"
+        rows={[
+          { label: 'dcat:references occurrences', value: 368, display: '368', color: CHART.amber },
+          { label: 'dcat:_update occurrences', value: 7, display: '7', color: CHART.amber },
+        ]}
+      />
       <p className="text-gov-dark leading-relaxed">
         <code className="text-sm bg-gov-bg px-1.5 py-0.5 rounded">references</code> is a legitimate Project Open Data field that the
         context simply forgets to map. <code className="text-sm bg-gov-bg px-1.5 py-0.5 rounded">_update</code> is an internal field

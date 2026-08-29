@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { CHART, HBars } from '../../components/ChartKit';
 import { ArrowLeft, ExternalLink } from 'lucide-react';
 
 const REPO = 'https://github.com/fabio-rovai/construction-standards-crosswalks';
@@ -212,6 +213,18 @@ export const ConstructionStandardsCrosswalks: React.FC = () => (
           </tbody>
         </table>
       </div>
+      <HBars
+        title="Falsifiability rate: the fraction of class pairs a machine could ever prove incompatible"
+        max={100}
+        labelWidth="w-64"
+        rows={[
+          { label: 'BOT (W3C Building Topology Ontology)', value: 80.95, display: '80.95%' },
+          { label: 'IFC4 ADD2 (ISO 16739-1)', value: 11.45, display: '11.45%' },
+          { label: 'COBie 2.4 (BS 1192-4, lifted)', value: 0, display: '0.00%', color: CHART.amber },
+          { label: 'Uniclass 2015 (verified codes, lifted)', value: 0, display: '0.00%', color: CHART.amber },
+        ]}
+        note="COBie and Uniclass score exactly zero, so no wrong mapping into them can ever be rejected by a machine. BOT reaches 80.95% from nine rules while IFC4 reaches 11.45% from 2,443 disjointness axioms."
+      />
       <p className="text-gov-dark leading-relaxed">
         COBie and Uniclass score exactly zero. Not because they are bad standards, but because they are classifications: labelled pigeonholes without rules. The consequence is unavoidable: <strong>when an AI tool writes a wrong code into Uniclass or a wrong row into COBie, nothing in the target standard can reject it.</strong> The error is stored, inherited by cost plans, carbon calculations and asset registers, and found by a human, late, if at all. Any vendor claim that such output &quot;passed validation&quot; refers to formats and shapes, never to meanings.
       </p>

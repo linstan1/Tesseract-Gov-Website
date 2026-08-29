@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { CHART, HBars } from '../../components/ChartKit';
 import { ArrowLeft, ExternalLink } from 'lucide-react';
 
 const REPO = 'https://github.com/fabio-rovai/uk-consultation-corpus';
@@ -109,6 +110,16 @@ export const ConsultationCorpus: React.FC = () => {
             Every consultation here has a published outcome page, yet only <strong>77%</strong> attach response documents to it. Nearly a quarter close with an outcome that carries no published response analysis at all. Defra, the Department for Transport and MHCLG are the most prolific consulting bodies; the busiest subjects are the UK economy, access to the countryside, and low-carbon energy. Whether a consultation publishes its response is now a measurable property, not an impression.
           </p>
         </div>
+        <HBars
+          title="98 percent of consultations are coded by policy area, but only 77 percent attach response documents to their outcome."
+          note="Every consultation in the corpus has a published outcome page. Nearly a quarter close with no published response analysis attached."
+          max={100}
+          labelWidth="w-56"
+          rows={[
+            { label: 'Coded by policy area', value: 98, display: '98%', color: CHART.teal },
+            { label: 'Attach response documents to the outcome', value: 77, display: '77%', color: CHART.amber },
+          ]}
+        />
       </section>
 
       <section className="space-y-4">

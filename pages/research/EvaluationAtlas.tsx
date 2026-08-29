@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { CHART, HBars } from '../../components/ChartKit';
 import { ArrowLeft, ExternalLink } from 'lucide-react';
 
 const REPO = 'https://github.com/fabio-rovai/uk-evaluation-atlas';
@@ -107,6 +108,15 @@ export const EvaluationAtlas: React.FC = () => {
             Impact evaluations dominate the record, which is what the Magenta Book agenda would predict. But only <strong>11%</strong> of these publications declare a recognisable method in their title or description. Where a method is named, qualitative and survey/monitoring designs lead; a randomised design is named in just nineteen. That is not a claim that the methods are absent from the reports, they are surely inside the PDFs, but it is a claim that the catalogue itself is largely method-blind: an automated reader, or a hurried human, cannot tell a robust impact study from a light-touch one without opening every file. The largest commissioners are DfID, the Department for Education and the Department for Work and Pensions.
           </p>
         </div>
+        <HBars
+          title="A randomised design is named in the metadata of just nineteen publications."
+          note="Only 11% of these publications declare a recognisable method in their title or description; the catalogue itself is largely method-blind."
+          labelWidth="w-56"
+          rows={[
+            { label: 'All evaluation publications', value: 1770, display: '1,770', color: CHART.gray },
+            { label: 'Name a randomised design', value: 19, display: '19', color: CHART.amber },
+          ]}
+        />
       </section>
 
       <section className="space-y-4">

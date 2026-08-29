@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { CHART, HBars } from '../../components/ChartKit';
 import { ArrowLeft, ExternalLink } from 'lucide-react';
 
 const SCHEMA = {
@@ -152,6 +153,14 @@ export const BridgeAI: React.FC = () => {
           <p className="text-gov-dark leading-relaxed">
             The BridgeAI Skills Hub at Ona Studios, London, became the highest-demand AI adoption event in the programme's creative industries strand. Registrations reached 1,100, which is 5.5 times the capacity target of 200. The result validates the demand thesis articulated in the <strong>Innovate UK</strong> BridgeAI strategy, which flags creative sector SMEs as underserved by existing AI support infrastructure.
           </p>
+          <HBars
+            title="Skills Hub registrations against the capacity target"
+            note="Registrations reached 1,100, which is 5.5 times the capacity target of 200."
+            rows={[
+              { label: 'Registrations', value: 1100, display: '1,100' },
+              { label: 'Capacity target', value: 200, display: '200', color: CHART.gray },
+            ]}
+          />
           <p className="text-gov-dark leading-relaxed mt-3">
             Satisfaction rated 4.6 out of 5. AI adoption pathways were established for creative sector organisations across the UK, and the programme delivery report provides a replicable framework for future AI adoption initiatives in underserved creative sectors.
           </p>

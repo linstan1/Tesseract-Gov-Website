@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { CHART, HBars } from '../../components/ChartKit';
 import { ArrowLeft, ExternalLink, Github } from 'lucide-react';
 
 const SCHEMA = {
@@ -95,6 +96,16 @@ export const ConnectiveProductCyberIncidents: React.FC = () => {
           <p className="text-gov-dark leading-relaxed">
             The edge and networking layer is now the systemically exploited layer. The Verizon 2025 Data Breach Investigations Report found vulnerability exploitation rose to 20 per cent of breaches (a 34 per cent year-on-year increase), and that edge devices and VPNs jumped to <strong>22 per cent of vulnerability-exploitation targeting from 3 per cent the prior year</strong>. Only around 54 per cent of edge-device vulnerabilities were fully remediated over the year, at a median of 32 days. Mandiant&apos;s M-Trends 2025 found that three of the top four exploited 2024 CVEs were edge-device zero-days, and that 44 per cent of all zero-days hit enterprise networking and security products. NCSC handled a record 204 nationally significant incidents in the year to September 2025, up from 89 (a 130 per cent rise). The installed base reached 21.1 billion active IoT devices by end-2025 (IoT Analytics). This is a research theme with real public regulatory context: the Product Security and Telecommunications Infrastructure Act 2022 (PSTI) brought baseline security requirements into force for consumer connectable products.
           </p>
+          <HBars
+            title="Edge devices and VPNs jumped to 22 per cent of vulnerability-exploitation targeting in 2025, from 3 per cent the prior year."
+            note="The figures are from the Verizon 2025 Data Breach Investigations Report."
+            max={100}
+            labelWidth="w-56"
+            rows={[
+              { label: 'Prior year', value: 3, display: '3%', color: CHART.amber },
+              { label: '2025', value: 22, display: '22%', color: CHART.amber },
+            ]}
+          />
         </div>
       </section>
 
@@ -103,6 +114,19 @@ export const ConnectiveProductCyberIncidents: React.FC = () => {
         <p className="text-gov-secondary leading-relaxed">
           We assembled <strong>16 incidents (2022 to 2025)</strong> mapped to the five technology groups: networking equipment (4), software and firmware (4), IoT (3), operational technology (3), and computing devices (2). Each incident is traced to an authoritative primary source (CISA, NCSC, Unit 42, Cisco Talos, Red Hat, Binarly), CVE-referenced where a CVE genuinely exists, and carries a confidence flag. The set is published as CSV and JSON-LD, with a SKOS taxonomy of the five product classes and seven vulnerability types.
         </p>
+        <HBars
+          title="The 16 documented incidents (2022 to 2025) are mapped to the five technology groups."
+          note="Each incident is traced to an authoritative primary source and carries a confidence flag."
+          labelWidth="w-56"
+          rows={[
+            { label: 'Networking equipment', value: 4, display: '4' },
+            { label: 'Software and firmware', value: 4, display: '4' },
+            { label: 'IoT', value: 3, display: '3' },
+            { label: 'Operational technology', value: 3, display: '3' },
+            { label: 'Computing devices', value: 2, display: '2' },
+            { label: 'All incidents, 2022 to 2025', value: 16, display: '16', color: CHART.gray },
+          ]}
+        />
         <p className="text-gov-secondary leading-relaxed">
           Verified examples in the set include the Ivanti Connect Secure mass exploitation (CVE-2023-46805, CVE-2024-21887), the MOVEit and Cl0p supply-chain compromise (CVE-2023-34362), the XZ Utils backdoor (CVE-2024-3094), and Unitronics PLC attacks on water utilities (via default credentials, no CVE). These span nation-state edge-device campaigns, a mass supply-chain data-theft event, a near-miss open-source backdoor, and low-sophistication attacks on exposed operational technology.
         </p>

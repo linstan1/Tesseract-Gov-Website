@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { CHART, HBars } from '../../components/ChartKit';
 import { ArrowLeft, ExternalLink } from 'lucide-react';
 
 const REPO = 'https://github.com/fabio-rovai/open-ontologies/tree/main/case-studies/certicoupla';
@@ -110,6 +111,18 @@ export const CopulaCoupledUncertainty: React.FC = () => {
             </tbody>
           </table>
         </div>
+        <HBars
+          title="Every certificate is calibrated to a nominal 90% joint coverage; this is the joint coverage each delivers on the test split."
+          max={1}
+          labelWidth="w-64"
+          rows={[
+            { label: 'Independent conformal (90%/target)', value: 0.792, display: '0.792', color: CHART.amber },
+            { label: 'Bonferroni conformal', value: 0.907, display: '0.907' },
+            { label: 'Coupled conformal (max-score box)', value: 0.897, display: '0.897' },
+            { label: 'Gaussian-copula region', value: 0.892, display: '0.892' },
+          ]}
+          note="Independent conformal is marginally correct (90.2% per target) and jointly wrong (79.2%). The coupled certificate hits 89.7% joint coverage at 22% less volume than Bonferroni, and the Gaussian copula matches the joint coverage in a region 57% smaller than the coupled box."
+        />
         <p className="text-gov-dark leading-relaxed">
           Independent conformal is marginally correct (90.2% per target) and jointly wrong (79.2%). Bonferroni restores joint validity but at 6.18x the volume, intervals too wide to act on. The coupled certificate hits 89.7% joint coverage at 22% less volume than Bonferroni, and the Gaussian copula, using the dependence rather than ignoring it, matches the joint coverage in a region 57% smaller than the coupled box.
         </p>

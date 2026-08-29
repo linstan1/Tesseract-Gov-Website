@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { CHART, HBars } from '../../components/ChartKit';
 import { ArrowLeft, ExternalLink } from 'lucide-react';
 
 const MODEL = 'https://huggingface.co/fabsssss/qwen3-coder-30b-a3b-ies4';
@@ -182,6 +183,18 @@ export const FineTuningLlmGovernmentDataStandard: React.FC = () => {
             </tbody>
           </table>
         </div>
+        <HBars
+          title="Term confabulation fell from 93.7% to 1.0%, and IES4 term conformance rose from 0% to 88.6%."
+          note="Both numbers are computed by the closed-world vocabulary verifier, which checks every generated term against the standard's actual vocabulary."
+          max={100}
+          labelWidth="w-64"
+          rows={[
+            { label: 'Term confabulation, base model', value: 93.7, display: '93.7%', color: CHART.amber },
+            { label: 'Term confabulation, fine-tuned', value: 1.0, display: '1.0%', color: CHART.amber },
+            { label: 'IES4 term conformance, base model', value: 0, display: '0%' },
+            { label: 'IES4 term conformance, fine-tuned', value: 88.6, display: '88.6%' },
+          ]}
+        />
         <p className="text-sm text-gov-secondary/90 leading-relaxed">
           A fuller technical account, including the training-data construction and further conformance metrics, is in
           our research write-up:{' '}

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { CHART, HBars } from '../../components/ChartKit';
 import { ArrowLeft, ExternalLink } from 'lucide-react';
 
 const MODEL = 'https://huggingface.co/fabsssss/qwen3-coder-30b-a3b-bio';
@@ -123,6 +124,18 @@ export const BiologyOntologyLanguageModel: React.FC = () => {
             </tbody>
           </table>
         </div>
+        <HBars
+          title="Identifiers in the training data are drawn from real OBO releases."
+          labelWidth="w-56"
+          rows={[
+            { label: 'GO', value: 38245, display: '38,245' },
+            { label: 'MONDO', value: 32095, display: '32,095' },
+            { label: 'HP', value: 19836, display: '19,836' },
+            { label: 'ChEBI', value: 218253, display: '218,253' },
+            { label: 'Cell Ontology', value: 3335, display: '3,335' },
+          ]}
+          note="Gene and protein identifiers are verified against mygene.info, so no invented CURIEs enter the data."
+        />
       </section>
 
       <section className="space-y-6">
@@ -154,6 +167,22 @@ export const BiologyOntologyLanguageModel: React.FC = () => {
             </tbody>
           </table>
         </div>
+        <HBars
+          title="Conformance rises against the untuned base model, measured on held-out prompts."
+          max={100}
+          labelWidth="w-64"
+          rows={[
+            { label: 'Biolink term conformance, base', value: 0, display: '0%', color: CHART.amber },
+            { label: 'Biolink term conformance, fine-tuned', value: 100, display: '100%' },
+            { label: 'GO-CAM schema validity, base', value: 0, display: '0%', color: CHART.amber },
+            { label: 'GO-CAM schema validity, fine-tuned', value: 100, display: '100%' },
+            { label: 'OBO grounding accuracy, base', value: 0, display: '0%', color: CHART.amber },
+            { label: 'OBO grounding accuracy, fine-tuned', value: 100, display: '100%' },
+            { label: 'Out-of-distribution conformance, base', value: 0, display: '0%', color: CHART.amber },
+            { label: 'Out-of-distribution conformance, fine-tuned', value: 89, display: '89%' },
+          ]}
+          note="The hallucinated-term rate falls from 0.42 to 0.00, and structural conformance for the fine-tuned model is 1.000. Out-of-distribution conformance is measured on multi-association graphs never seen in training."
+        />
         <p className="text-sm text-gov-secondary/90 leading-relaxed">
           The out-of-distribution number is the honest one to watch: 89% term conformance on multi-association graphs the model never trained on, a composition strictly harder than anything in its training set. We report it, and the model's weaker properties, openly in the model card rather than hide them.
         </p>

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { CHART, HBars } from '../../components/ChartKit';
 import { ArrowLeft, ExternalLink } from 'lucide-react';
 
 const REPO = 'https://github.com/fabio-rovai/fca-warnings-observatory';
@@ -64,6 +65,16 @@ export const FcaWarningsObservatory: React.FC = () => {
           </div>
         ))}
       </section>
+
+      <HBars
+        title="The reconstruction is built from 18,224 live warning pages, of which 15,437 are dated warnings."
+        note="Every record is a warning currently on the FCA site. Warnings the FCA has since removed are not captured."
+        labelWidth="w-44"
+        rows={[
+          { label: 'Live warning pages', value: 18224, display: '18,224', color: CHART.gray },
+          { label: 'Dated warnings', value: 15437, display: '15,437', color: CHART.teal },
+        ]}
+      />
 
       <section className="space-y-4">
         <div className="border-l-2 border-l-gov-blue pl-6">

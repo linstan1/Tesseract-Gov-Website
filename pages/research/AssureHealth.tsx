@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { CHART, HBars } from '../../components/ChartKit';
 import { ArrowLeft, ExternalLink } from 'lucide-react';
 
 const REPO = 'https://github.com/fabio-rovai/open-ontologies/tree/main/case-studies/assure-health';
@@ -113,6 +114,16 @@ export const AssureHealth: React.FC = () => {
         <p className="text-gov-dark leading-relaxed">
           At the tightest privacy (epsilon = 0.25) the accuracy cost is not shared evenly. Ordered by subgroup size, the drop is 2.5 points for Caucasians (n=6,150), 4.4 for African Americans (n=1,520), and 8.5 for Hispanics (n=153): a <strong>2.6x disparate impact</strong> on the minority groups, growing monotonically as privacy tightens. The smaller the group, the more the privacy fix costs it.
         </p>
+        <HBars
+          title="At the tightest privacy setting (epsilon 0.25), the accuracy cost falls hardest on the smallest subgroups."
+          note="Ordered by subgroup size, the drop is 2.5 points for Caucasians, 4.4 for African Americans and 8.5 for Hispanics, a 2.6x disparate impact on the minority groups. Every number is averaged over 40 noise draws."
+          labelWidth="w-56"
+          rows={[
+            { label: 'Caucasian (n=6,150)', value: 2.5, display: '2.5 points', color: CHART.amber },
+            { label: 'African American (n=1,520)', value: 4.4, display: '4.4 points', color: CHART.amber },
+            { label: 'Hispanic (n=153)', value: 8.5, display: '8.5 points', color: CHART.amber },
+          ]}
+        />
       </section>
 
       <section className="space-y-4">

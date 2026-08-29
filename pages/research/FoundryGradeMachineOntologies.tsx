@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { CHART, HBars } from '../../components/ChartKit';
 import { ArrowLeft, ExternalLink } from 'lucide-react';
 
 const REPO = 'https://github.com/fabio-rovai/open-ontologies';
@@ -56,6 +57,17 @@ export const FoundryGradeMachineOntologies: React.FC = () => {
           <p className="text-gov-dark leading-relaxed">
             We ran the test on real Foundry material: PATO, the Phenotype and Trait Ontology, and RO, the Relation Ontology, 270,126 triples and 2,889 declared classes between them, with instances typed as PATO qualities linked by RO relations, which is how OBO instance data is actually shaped. Then we injected fabricated but well-formed ids in the Foundry's own prefixes, the "LLM cites a real-looking but wrong id" failure mode, and validated. Open-world SHACL reported conformance on 100% of the graphs carrying a fabricated id. A closed-world vocabulary gate, asking only "is this id declared in the loaded ontology?", caught 100% of them, with zero false positives on the clean graphs. The Foundry's discipline is enforceable on machine output. It is just not enforceable by the validator most pipelines rely on.
           </p>
+          <HBars
+            title="Open-world SHACL reported conformance on every graph carrying a fabricated id; the closed-world gate caught 100% of them."
+            note="Measured on PATO and RO, 270,126 triples and 2,889 declared classes between them."
+            max={100}
+            labelWidth="w-64"
+            rows={[
+              { label: 'Fabricated-id graphs open-world SHACL reported conformant', value: 100, display: '100%', color: CHART.amber },
+              { label: 'Fabricated ids caught by the closed-world gate', value: 100, display: '100%' },
+              { label: 'False positives on clean graphs (closed-world gate)', value: 0, display: 'Zero' },
+            ]}
+          />
         </div>
       </section>
 
