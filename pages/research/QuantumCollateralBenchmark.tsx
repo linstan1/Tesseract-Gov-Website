@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
+import { CHART, HBars, Tile, type BarRow } from '../../components/ChartKit';
 
 const REPO = "https://github.com/fabio-rovai/qollateral";
 
@@ -61,41 +62,6 @@ const FAQ = {
       }
     }
   ]
-};
-
-const CHART = { teal: '#00897b', amber: '#b45309', gray: '#5c6670' };
-
-type BarRow = { label: string; value: number; display: string; color?: string };
-
-const Tile: React.FC<{ kpi: string; label: string }> = ({ kpi, label }) => (
-  <div className="bg-gov-bg border border-gov-border/50 rounded-xl p-6">
-    <p className="text-3xl font-extrabold text-gov-dark">{kpi}</p>
-    <p className="text-sm text-gov-secondary mt-1">{label}</p>
-  </div>
-);
-
-const HBars: React.FC<{ title: string; note?: string; max?: number; rows: BarRow[] }> = ({ title, note, max, rows }) => {
-  const m = max ?? Math.max(...rows.map((r) => r.value));
-  return (
-    <figure className="rounded-lg border border-gov-border bg-white p-5 my-6">
-      <figcaption className="text-sm font-semibold text-gov-dark mb-3">{title}</figcaption>
-      <div className="space-y-2">
-        {rows.map((r) => (
-          <div key={r.label} className="flex items-center gap-3" title={`${r.label}: ${r.display}`}>
-            <span className="w-52 shrink-0 text-right text-xs text-gov-secondary leading-tight">{r.label}</span>
-            <div className="flex-1 h-[18px]">
-              <div
-                className="h-full rounded-r"
-                style={{ width: `${Math.max((r.value / m) * 100, 0.5)}%`, backgroundColor: r.color ?? CHART.teal }}
-              />
-            </div>
-            <span className="w-28 shrink-0 text-xs font-semibold text-gov-dark tabular-nums">{r.display}</span>
-          </div>
-        ))}
-      </div>
-      {note && <p className="text-xs text-gov-secondary mt-3">{note}</p>}
-    </figure>
-  );
 };
 
 const FEASIBILITY_ROWS: BarRow[] = [
@@ -161,17 +127,17 @@ export const QuantumCollateralBenchmark: React.FC = () => (
         <h2 className="text-2xl font-semibold text-gov-blue mt-10 mb-4">{"The agreement battery"}</h2>
         <p className="text-base text-gov-dark/90 leading-relaxed mb-4">{"Beyond the grid, an agreement battery swept 120 cells across two rule books, four sizes and fifteen seeds. On the 98 cells where a feasible instance exists, it found zero disagreements on any of four properties: the unconstrained QUBO ground state equals the constrained optimum, CP-SAT equals exhaustive enumeration, the CP-SAT solution passes the independent certifier, and the lowest infeasible QUBO energy sits strictly above the highest feasible objective, with a minimum observed separation of 27 cost units. The remaining 22 cells admit no feasible instance at that combination of size and seed, which is recorded rather than quietly dropped. The second rule book differs from the first in exactly one Turtle value, requiring a currency match in eligibility, and both compilers pick that change up together with no code edit."}</p>
 
-        <h2 className="text-2xl font-semibold text-gov-blue mt-10 mb-4">{"Reading the result honestly"}</h2>
-        <p className="text-base text-gov-dark/90 leading-relaxed mb-4">{"The classical routes dominate on every measure at these sizes, and that is the useful result. Advantage, parity, non-competitiveness and uncertainty are all valid outcomes of a fair comparison. What the benchmark contributes is the frozen protocol: exact compilation of both routes from one rule book, doubled certification, and per-run resource accounting covering qubits, routed depth, two-qubit gates, shots, optimiser evaluations and wall clock. Any future hardware claim on this workload now has a stated baseline to beat and a stated cost to beat it at."}</p>
+        <h2 className="text-2xl font-semibold text-gov-blue mt-10 mb-4">{"The baseline a hardware claim now has to clear"}</h2>
+        <p className="text-base text-gov-dark/90 leading-relaxed mb-4">{"The classical routes dominate on every measure at these sizes, and that is the useful result. Advantage, parity, non-competitiveness and uncertainty are all valid outcomes of a fair comparison, and a benchmark that can only report the first of those is not a benchmark. What this one contributes is the frozen protocol: exact compilation of both routes from one rule book, doubled certification, and per-run resource accounting covering qubits, routed depth, two-qubit gates, shots, optimiser evaluations and wall clock. Any future hardware claim on this workload now has a stated baseline to beat and a stated cost to beat it at."}</p>
 
-        <h2 className="text-2xl font-semibold text-gov-blue mt-10 mb-4">{"Prior art"}</h2>
+        <h2 className="text-2xl font-semibold text-gov-blue mt-10 mb-4">{"Prior art, and the gap"}</h2>
         <p className="text-base text-gov-dark/90 leading-relaxed mb-4">{"The prior art is real and credited. Giron, Korpas, Parvaiz, Malik and Aspman formulated collateral optimisation as MILP and QUBO for NISQ and quantum-inspired computing in IEEE Transactions on Quantum Engineering in 2023. Jin and Florescu published a higher-order QAOA framework for CSA and margin-aware collateral in 2026, with a deterministic CP-SAT solver certifying candidate actions before recommendation, and the idea of a classical arbiter over quantum candidates is theirs. What is new in Qollateral, to the best of our knowledge, is the combination: the rule book as ontology data with per-rule declared encodability, one source compiled to both solver routes, an independent SHACL certification path over reified allocation assertions, and a fully open seeded benchmark whose every headline is computed two ways. Corrections to that claim are welcome as repository issues."}</p>
 
         <h2 className="text-2xl font-semibold text-gov-blue mt-10 mb-4">{"Where the method transfers"}</h2>
         <p className="text-base text-gov-dark/90 leading-relaxed mb-4">{"Any hybrid optimisation pipeline whose constraints originate in a governed document faces the same double-encoding failure mode. Network capacity rules, rostering agreements and grid dispatch limits all have the same shape, and the same medicine applies: make the rule book machine readable, declare encodability rule by rule, compile every route from the one source, and certify results through a path that consulted none of the compilers. The ontology, the shapes, the compilers and the battery are in the repository under open licences, and the entire result set regenerates from seeds with two commands."}</p>
 
-        <h2 className="text-2xl font-semibold text-gov-blue mt-10 mb-4">{"What version 0.1 does not claim"}</h2>
-        <p className="text-base text-gov-dark/90 leading-relaxed mb-4">{"Everything runs on a simulator, and no statement in the repository is a hardware result. Parameter optimisation is noiseless, so the benchmark makes no claim about behaviour under device noise. Instances are synthetic and small enough for exhaustive ground truth, which is the design decision that turns route agreement from an assertion into a tested property, and simultaneously the limit on any scale claim. The cost model is a simplified cheapest-to-deliver proxy rather than a calibrated funding curve. The next steps are hardware execution of the smallest instances under the same doubled certification, constraint-preserving mixers and warm starts on the quantum side, auxiliary-variable encodings for concentration bounds above one, and an anonymised historical workload with a named data owner."}</p>
+        <h2 className="text-2xl font-semibold text-gov-blue mt-10 mb-4">{"Scope and method"}</h2>
+        <p className="text-base text-gov-dark/90 leading-relaxed mb-4">{"Version 0.1 runs on a simulator with noiseless parameter optimisation, and every figure above is a simulator figure. Instances are synthetic and sized for exhaustive ground truth, which is the design decision that turns route agreement from an assertion into a tested property: with every assignment enumerable, the claim that the QUBO ground state is the constrained optimum is checked rather than argued. The cost model is a cheapest-to-deliver proxy built from liquidity band, currency mismatch and issuer spread. The roadmap from here is hardware execution of the smallest instances under the same doubled certification, constraint-preserving mixers and warm starts on the quantum side, auxiliary-variable encodings for concentration bounds above one, and an anonymised historical workload with a named data owner."}</p>
 
         <h2 className="text-2xl font-semibold text-gov-blue mt-10 mb-4">{"A bounded first engagement"}</h2>
         <p className="text-base text-gov-dark/90 leading-relaxed mb-4">{"For a treasury, clearing or collateral technology team, the bounded exercise is two weeks: formalise one eligibility schedule as a CERO rule book, compile it to your existing optimiser and to a QUBO, and run the agreement battery against your current allocations. The output is a machine-readable rule book you own, a defect list wherever the encodings disagree with practice, and a frozen benchmark protocol that any later quantum claim has to clear. Enquiries to fabio@thetesseractacademy.com."}</p>
