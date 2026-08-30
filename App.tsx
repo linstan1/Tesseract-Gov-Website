@@ -88,6 +88,7 @@ const BankRegisterOntology = lazy(() => import('./pages/research/BankRegisterOnt
 const ChainControlOntology = lazy(() => import('./pages/research/ChainControlOntology').then(m => ({ default: m.ChainControlOntology })));
 const CertificationRegisterOntology = lazy(() => import('./pages/research/CertificationRegisterOntology').then(m => ({ default: m.CertificationRegisterOntology })));
 const Iso42001AssuranceGap = lazy(() => import('./pages/research/Iso42001AssuranceGap').then(m => ({ default: m.Iso42001AssuranceGap })));
+const EuLawCitationGraph = lazy(() => import('./pages/research/EuLawCitationGraph').then(m => ({ default: m.EuLawCitationGraph })));
 const QuantumCollateralBenchmark = lazy(() => import('./pages/research/QuantumCollateralBenchmark').then(m => ({ default: m.QuantumCollateralBenchmark })));
 const JsonLdEscapingConformance = lazy(() => import('./pages/research/JsonLdEscapingConformance').then(m => ({ default: m.JsonLdEscapingConformance })));
 const VerifyingExtractionPipelineRdf = lazy(() => import('./pages/research/VerifyingExtractionPipelineRdf').then(m => ({ default: m.VerifyingExtractionPipelineRdf })));
@@ -286,6 +287,10 @@ const PAGE_META: Record<string, { title: string; description: string }> = {
   '/research/iso-42001-assurance-gap': {
     title: 'ISO 42001 assurance gap: the only public crosswalk names zero of its controls | Tesseract Academy for the Public Sector',
     description: 'A measured audit of what can be established about an ISO/IEC 42001 certificate from public evidence. The NIST AI RMF crosswalk to ISO/IEC 42001 holds 281 pairs across 72 AI RMF subcategories and 66 distinct ISO addresses, of which 202 are Annex B implementation guidance and 79 are mandatory clauses, and zero are Annex A controls, the very things a Statement of Applicability declares. The document is titled ISO/IEC FDIS 42001, targeting the Final Draft rather than the published 42001:2023. ISO/IEC 42001 published December 2023 while ISO/IEC 42006, which makes accreditation possible, published 7 July 2025, leaving roughly nineteen months in which certificates were sold under no published scheme for certifying the certifiers. The UKAS public register contains zero occurrences of 42001 across 9,278 harvested records, nine months after it granted the world first UKAS accreditation for that standard.',
+  },
+  '/research/eu-law-citation-graph': {
+    title: 'EU law cites more than its own citation graph records | Tesseract Academy for the Public Sector',
+    description: "EUR-Lex publishes WORK_CITES_WORK, the only structured source of the dependency graph between EU legal instruments, and it is what compliance tooling is built on. Measured against the instruments actually named in the operative texts of GDPR, NIS2, DORA, MiFID II and the AI Act it records 63.4 per cent: 78 of 213 citations are absent. The gap is concentrated, with NIS2 at 38.0 per cent and the AI Act at 51.5 per cent against GDPR at 93.8 per cent. NIS2's missing citations sit in Annexes I and II, the scope-defining references that determine which entities the Directive binds. Three corrections are published in full, because each produced a more dramatic and wrong answer first.",
   },
   '/research/surveillance-reporting-identifiers': {
     title: 'Surveillance reporting identifiers: an open census of what UK operational reporting denotes | Tesseract Academy for the Public Sector',
@@ -719,6 +724,7 @@ const App: React.FC = () => {
               <Route path="/research/chain-control-ontology" element={<ChainControlOntology />} />
               <Route path="/research/certification-register-ontology" element={<CertificationRegisterOntology />} />
               <Route path="/research/iso-42001-assurance-gap" element={<Iso42001AssuranceGap />} />
+              <Route path="/research/eu-law-citation-graph" element={<EuLawCitationGraph />} />
               <Route path="/research/quantum-collateral-benchmark" element={<QuantumCollateralBenchmark />} />
               <Route path="/research/jsonld-escaping-conformance" element={<JsonLdEscapingConformance />} />
               <Route path="/research/verifying-extraction-pipeline-rdf" element={<VerifyingExtractionPipelineRdf />} />

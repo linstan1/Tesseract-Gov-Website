@@ -377,7 +377,7 @@ export const Research: React.FC = () => {
            </li>
         </PublicationGroup>
 
-        <PublicationGroup title="Register assurance" count={20}>
+        <PublicationGroup title="Register assurance" count={21}>
           <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
             <Link to="/research/biodiversity-register-ontology"><h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark hover:underline transition-colors">An open ontology for biodiversity registers, tested against the Biodiversity Heritage Library, ZooBank, and the Natural History Museum Data Portal</h3></Link>
             <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Open ontology, register and rights census, 2026</p>
@@ -403,6 +403,15 @@ export const Research: React.FC = () => {
             <div className="mt-3 flex flex-wrap gap-3 items-center">
               <Link to="/research/quantum-collateral-benchmark" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">Read the study</Link>
               <a href="https://github.com/fabio-rovai/qollateral" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">repository on GitHub<span className="sr-only"> (opens in new tab)</span></a>
+            </div>
+          </li>
+          <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
+            <Link to="/research/eu-law-citation-graph"><h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark hover:underline transition-colors">EU Law Cites More Than Its Own Citation Graph Records</h3></Link>
+            <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Open research, EU regulatory dependency graph, 2026</p>
+            <p className="text-base text-gov-dark/90 leading-relaxed">EUR-Lex embeds a machine-readable citation relation, WORK_CITES_WORK, inside every instrument's Common Data Model notice, carrying CELEX, ELI and Official Journal identifiers. It is the only structured source of the dependency graph between EU legal instruments, which makes it what regulatory compliance tooling is built on. Measured against the instruments actually named in the operative text of GDPR, NIS2, DORA, MiFID II and the AI Act, it records 63.4 per cent: 78 of 213 citations appear in the text and not in the graph. The shortfall is concentrated rather than general, with GDPR at 93.8 per cent, DORA 85.3 and MiFID II 80.9, against the AI Act at 51.5 and NIS2 at 38.0. NIS2 matters most because of where its gap sits: the Directive defines its own scope through Annexes I and II by pointing at other legislation, and those pointers are what is missing, so a tool built on the structured metadata rather than the text may not surface the legislation a company must read to establish whether it is in scope at all. Because EU legal documents are reusable commercially under Commission Decision 2011/833/EU, this dataset holds full text rather than addresses, unlike our ISO work. Three corrections are published in full, each of which produced a more dramatic and wrong answer first, and all three are covered by regression tests.</p>
+            <div className="mt-3 flex flex-wrap gap-3 items-center">
+              <Link to="/research/eu-law-citation-graph" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">Read the study</Link>
+              <a href="https://github.com/fabio-rovai/regulatory-instrument-register" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">repository on GitHub<span className="sr-only"> (opens in new tab)</span></a>
             </div>
           </li>
           <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
