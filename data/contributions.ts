@@ -15,6 +15,7 @@
 //   - no claim about private correspondence, and no named individuals
 
 export type ContributionStatus =
+  | 'fixed'         // the body changed the thing itself after we reported it
   | 'merged'        // landed in the upstream repository
   | 'invited'       // the maintainers asked for the contribution
   | 'open'          // filed, thread live
@@ -37,6 +38,7 @@ export interface Contribution {
 }
 
 export const STATUS_LABEL: Record<ContributionStatus, string> = {
+  fixed: 'Fixed upstream',
   merged: 'Merged upstream',
   invited: 'Invited by maintainers',
   open: 'Open',
@@ -44,6 +46,75 @@ export const STATUS_LABEL: Record<ContributionStatus, string> = {
 };
 
 export const CONTRIBUTIONS: Contribution[] = [
+  {
+    body: 'GBIF',
+    context: 'the Global Biodiversity Information Facility',
+    finding:
+      'Both endpoints serving the ZooBank checklist returned 404 and five consecutive crawls had failed since 21 July, with nothing on the dataset page to say so. The registrar rebuilt the archive the day after the issue was filed. It now publishes 527,127 rows against the 478,746 names GBIF is still serving from March 2025, so 48,381 names are waiting on the next crawl.',
+    status: 'fixed',
+    refs: [
+      { label: 'Feedback 6838', url: 'https://github.com/gbif/portal-feedback/issues/6838' },
+      { label: 'Biodiversity register ontology', url: '/research/biodiversity-register-ontology' },
+    ],
+  },
+  {
+    body: 'Catalogue of Life',
+    context: 'ChecklistBank, the infrastructure behind the annual checklist',
+    finding:
+      'Imports from the ZooBank source have been failing for three years, and the source page carries no staleness signal, so a reader has no way to tell that the copy is old. The rebuilt archive holds 127,801 more names than the copy ChecklistBank serves.',
+    status: 'open',
+    refs: [
+      { label: 'ChecklistBank 1721', url: 'https://github.com/CatalogueOfLife/checklistbank/issues/1721' },
+      { label: 'Biodiversity register ontology', url: '/research/biodiversity-register-ontology' },
+    ],
+  },
+  {
+    body: 'Defra Digital Waste Tracking',
+    context: 'the receipt API for the mandatory waste tracking service',
+    finding:
+      'Six worked examples in the published specification are rejected by the specification\u2019s own schema. One of them drops the leading zero from a European Waste Catalogue code, which teaches an integrator to submit a code that is invalid and looks correct. Five reference vocabularies are bound only in prose, and nine cross-field rules appear nowhere in the schema.',
+    status: 'open',
+    refs: [
+      { label: 'Issue 278', url: 'https://github.com/DEFRA/waste-tracking-service/issues/278' },
+      { label: 'Issue 279', url: 'https://github.com/DEFRA/waste-tracking-service/issues/279' },
+      { label: 'Issue 280', url: 'https://github.com/DEFRA/waste-tracking-service/issues/280' },
+      { label: 'Our OpenAPI checker', url: 'https://github.com/fabio-rovai/oascheck' },
+    ],
+  },
+  {
+    body: 'HDR UK',
+    context: 'the Gateway schemas for UK health dataset metadata',
+    finding:
+      'The DOI pattern leaves the dot unescaped in three schema versions, so 10X1234/abcd validates as a DOI. The linkage identifier slots are typed as free text, and all 59 live values are prose rather than identifiers. The daily dataset extract also stopped in June 2025 and serves 898 records against 1,707 on the live Gateway.',
+    status: 'open',
+    refs: [
+      { label: 'Schemata 135', url: 'https://github.com/HDRUK/schemata/issues/135' },
+      { label: 'Schemata 137', url: 'https://github.com/HDRUK/schemata/issues/137' },
+      { label: 'Datasets 35', url: 'https://github.com/HDRUK/datasets/issues/35' },
+      { label: 'UK health data linkage', url: '/research/uk-health-data-linkage' },
+    ],
+  },
+  {
+    body: 'openFDA',
+    context: 'the US Food and Drug Administration public drug data service',
+    finding:
+      'The product National Drug Code appears under more than one Structured Product Label for 1,904 products, and in 1,151 of those the duplicate documents carry the same finished-product flag, so the code does not identify a single product.',
+    status: 'open',
+    refs: [
+      { label: 'Issue 317', url: 'https://github.com/FDA/open.fda.gov/issues/317' },
+      { label: 'Medicinal product registers', url: '/research/medicinal-product-registers' },
+    ],
+  },
+  {
+    body: 'Avoindata.fi',
+    context: 'the Finnish national open data portal',
+    finding:
+      'The DCAT export publishes each dataset theme as a local group identifier instead of the EU data theme authority that DCAT-AP specifies, so an EU-level theme filter returns no Finnish datasets.',
+    status: 'open',
+    refs: [
+      { label: 'Opendata 3296', url: 'https://github.com/vrk-kpa/opendata/issues/3296' },
+    ],
+  },
   {
     body: 'IATA ONE Record',
     context: 'the global data standard for air cargo',

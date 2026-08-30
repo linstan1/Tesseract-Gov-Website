@@ -9,6 +9,7 @@ import { CONTRIBUTION_TOTALS } from '../data/contributionTotals';
 // click instead of asserted by a borrowed trademark.
 
 const STATUS_CLASS: Record<ContributionStatus, string> = {
+  fixed: 'bg-gov-dark text-white border-gov-dark',
   merged: 'bg-gov-blue-dark text-white border-gov-blue-dark',
   invited: 'bg-gov-blue/10 text-gov-blue-dark border-gov-blue/30',
   open: 'bg-gov-border/60 text-gov-text border-gov-border',

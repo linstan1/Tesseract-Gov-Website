@@ -14,9 +14,9 @@ export interface ContributionTotals {
 
 export const CONTRIBUTION_TOTALS: ContributionTotals = {
   "mergedPullRequests": 20,
-  "openPullRequests": 5,
-  "issuesFiled": 42,
-  "projects": 26,
-  "organisations": 24,
-  "generatedOn": "2026-08-25"
+  "openPullRequests": 8,
+  "issuesFiled": 57,
+  "projects": 41,
+  "organisations": 37,
+  "generatedOn": "2026-08-30"
 };
