@@ -13,7 +13,7 @@ const SCHEMA = {
   headline:
     'Nobody Can Check an ISO 27001 Certificate, and the Registers Are Built That Way | Tesseract Academy',
   description:
-    'An open OWL 2, SKOS and SHACL ontology for management system certification, built so that it reproduces no ISO text at all, with a SHACL layer that proves it. Measured: the global IAF CertSearch register cannot be enumerated by operator policy, so certificate absence is unobservable. 0 of 2,921 UKAS-accredited organisations declare a standard in the public register, and ISO/IEC 27001 does not appear in the UKAS standard taxonomy at all. 21.6 per cent of the UKAS scope vocabulary is duplication. NIST has withdrawn its SP 800-53 to ISO/IEC 27001 mapping, which in its last archived form addressed the superseded 2013 edition. 70 of the 93 Annex A controls have a CSF 2.0 informative reference and 23 do not. Contracts Finder silently ignores keyword filters and silently truncates its OCDS cursor.',
+    'An open OWL 2, SKOS and SHACL ontology for management system certification, built so that it reproduces no ISO text at all, with a SHACL layer that proves it. Measured: the global IAF CertSearch register cannot be enumerated by operator policy, so certificate absence is unobservable. 0 of 2,921 UKAS-accredited organisations declare a standard in the public register, and ISO/IEC 27001 does not appear in the UKAS standard taxonomy at all. 21.6 per cent of the UKAS scope vocabulary is duplication. NIST has withdrawn its SP 800-53 to ISO/IEC 27001 mapping, which in its last archived form addressed the superseded 2013 edition. 70 of the 93 Annex A controls have a CSF 2.0 informative reference and 23 do not. Contracts Finder silently ignores keyword filters, and its OCDS cursor deterministically drops the early end of any window, recovering only 56.7 per cent of the notices that month-by-month harvesting finds.',
   author: { '@id': 'https://gov.tesseract.academy/#organization' },
   publisher: { '@id': 'https://gov.tesseract.academy/#organization' },
   datePublished: '2026-08-30',
@@ -262,17 +262,23 @@ export const CertificationRegisterOntology: React.FC = () => (
         A silently ignored filter is worse than a rejected one, because the pipeline that trusts it concludes there are no matching notices while looking at an unfiltered feed. That 694 was very nearly a headline in this write up, and the only thing that killed it was running the same query with a deliberately meaningless keyword.
       </p>
       <p className="text-gov-dark leading-relaxed">
-        The cursor truncates silently too. Requesting January to August and paging to exhaustion yields 13,271 releases, the earliest dated 20 April, with the cursor chain ending normally. Requesting January alone yields 3,364 releases, all in January, all of them inside the first request's window and absent from its results. A caller who pages the long window loses at least 3,364 records and cannot detect it from the response.
+        The cursor also drops the early end of whatever window you ask for. Request the whole of April and page to exhaustion and you get 1,432 releases, the earliest dated 20 April, with the chain ending normally and no error. Run it again from scratch and you get the identical count and the identical boundary, so it is deterministic rather than flaky. Then request 1 to 10 April directly and the first page comes back full of releases dated 9 April, inside the window the previous request claimed to have exhausted.
       </p>
       <p className="text-gov-dark leading-relaxed">
-        Both of these are reproducible in a browser in under a minute, and both are being reported to the publisher.
+        At scale this halves the corpus. January to August as a single window yields 13,271 distinct notices spanning 20 April to 29 August. The same period run as eight separate one-month windows yields 22,678, of which 9,819 are absent from the single-window result. The long walk recovers 56.7 per cent of what the month walks find.
+      </p>
+      <p className="text-gov-dark leading-relaxed">
+        Neither strategy is complete, which is the part worth dwelling on. The month walks in turn miss 412 notices that the long walk found, so one-month windows truncate as well, just less. The union of both is the best retrieval we could achieve, there is no reason to think even that is exhaustive, and the API offers no completeness signal to check against. Every Contracts Finder count in this work is therefore stated as a lower bound.
+      </p>
+      <p className="text-gov-dark leading-relaxed">
+        Both defects reproduce in a browser in under a minute, and both are being reported to the publisher.
       </p>
     </section>
 
     <section className="space-y-4">
       <h2 className="text-2xl font-bold text-gov-dark font-serif">The measurement we could not make</h2>
       <p className="text-gov-dark leading-relaxed">
-        The number we wanted was the proportion of public buyers requiring ISO 27001 who also require the certificate to be accredited. We did not get it. Of 13,271 harvested releases, exactly two mention ISO 27001 in the notice title or description, a rate of 0.02 per cent, and neither requires accreditation. Certification requirements live in attached tender documents, not in notice text, so this source cannot answer the question. No figure for it appears anywhere in the repository, and the hypothesis is recorded as dead in the build report alongside four others.
+        The number we wanted was the proportion of public buyers requiring ISO 27001 who also require the certificate to be accredited. We did not get it. Of the 13,271 releases in the first harvest, exactly two mention ISO 27001 in the notice title or description, a rate of 0.02 per cent, and neither requires accreditation. Certification requirements live in attached tender documents, not in notice text, so this source cannot answer the question. No figure for it appears anywhere in the repository, and the hypothesis is recorded as dead in the build report alongside four others.
       </p>
       <p className="text-gov-dark leading-relaxed">
         We mention it because a null result is a result, and because the alternative was to quietly compute the number on n equals two and present it as a finding.
