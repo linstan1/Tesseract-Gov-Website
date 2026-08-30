@@ -18,7 +18,7 @@ const SCHEMA = {
   author: { '@id': 'https://gov.tesseract.academy/#organization' },
   publisher: { '@id': 'https://gov.tesseract.academy/#organization' },
   datePublished: '2026-08-28',
-  dateModified: '2026-08-28',
+  dateModified: '2026-08-30',
   about: {
     '@type': 'Dataset',
     name: 'Biodiversity Register Ontology (BDRO)',
@@ -38,7 +38,7 @@ const FAQ_SCHEMA = {
       name: 'Is ZooBank machine-readable today?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'On 28 August 2026 it was not. Every route on zoobank.org except the homepage returned HTTP 404 at two observation times, including the About and Api pages linked from its own navigation, the documented JSON API, the urn:lsid URN form, and all 50 canonical act URLs we sampled from the register content, which are the exact URLs the GBIF copy of the register publishes as references. The register’s declared publication endpoint, an IPT at the Bishop Museum, also returned 404, and GBIF’s crawl of 23 August 2026 ended in ABORT. We found no outage announcement. The observations are two timestamps on one day, so the outage may yet prove transient; the staleness of the mirrors is not transient.',
+        text: 'Partly, as of 30 August 2026. On 28 August it was not machine-readable at all: every route on zoobank.org except the homepage returned HTTP 404 at two observation times, including the About and Api pages linked from its own navigation, the documented JSON API, the urn:lsid URN form, and all 50 canonical act URLs we sampled, which are the exact URLs the GBIF copy publishes as references. The declared publication endpoint, an IPT at the Bishop Museum, also returned 404, and GBIF’s crawl of 23 August 2026 ended in ABORT. The IPT was rebuilt on 29 August and we re-measured on 30 August: all three IPT endpoints now return 200 and serve 527,127 records, 48,381 more than GBIF holds. The resolution layer did not recover. All 50 sampled canonical act URLs still return 404, as do the Api, About and Search routes, and GBIF has not re-crawled. The register’s content is reachable again; the identifiers it publishes still resolve to nothing.',
       },
     },
     {
@@ -47,6 +47,14 @@ const FAQ_SCHEMA = {
       acceptedAnswer: {
         '@type': 'Answer',
         text: 'The freshest copy GBIF holds was published on 28 March 2025, which was 518 days old on the day of census. ChecklistBank’s copy is dated 9 January 2023, which is 1,327 days old. The two mirrors also disagree with each other on record count, 478,746 against 399,326, a difference of 79,420 records that reflects different snapshot dates and transformations rather than register truth. Any pipeline that normalises taxon names against these copies cannot see any name registered since March 2025.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Did ZooBank recover, and what changed?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Partly. The Bishop Museum IPT, ZooBank\u2019s declared publication endpoint, was rebuilt from scratch on 29 August 2026, one day after we wrote to the registrar and after the outage was raised on GBIF\u2019s tracker. Measured on 30 August 2026 at 09:12 UTC, the resource page, archive and EML all return HTTP 200, and the republished Darwin Core archive carries 527,127 records dated to 23 August 2026, which is 48,381 more than the 478,746 GBIF serves and 127,801 more than ChecklistBank\u2019s 399,326. The resolution layer did not recover: all 50 sampled canonical act URLs still return 404. Re-running the census over the recovered archive found the identity layer clean, with 527,127 distinct identifiers, no duplicates, no self-parenting, no cycles and no malformed UUIDs, alongside three new defects: 347 internal references naming a record absent from the archive, 41,274 records carrying author and year inside the name string while the atomised fields are empty, and five records with no scientific name.',
       },
     },
     {
@@ -195,6 +203,59 @@ export function BiodiversityRegisterOntology() {
             { label: 'IPNI (Kew)', value: 100, display: '5 / 5' },
           ]}
         />
+
+        <div className="rounded-lg border border-gov-blue/30 bg-gov-blue/5 p-6 space-y-4 mt-8">
+          <h2 className="text-2xl font-bold text-gray-900">
+            Update, 30 August 2026: the publication endpoint recovered, the
+            resolution layer did not
+          </h2>
+          <p className="text-gray-700">
+            On 29 August 2026, one day after we wrote to the ZooBank registrar
+            and after the outage was raised on GBIF&apos;s tracker, the Bishop
+            Museum IPT was rebuilt from scratch. We re-ran the census against
+            the recovered archive on 30 August at 09:12 UTC rather than take
+            the recovery on trust, and the paragraphs above now need reading in
+            two halves.
+          </p>
+          <p className="text-gray-700">
+            The half that recovered: all three IPT endpoints return 200, and
+            the republished archive carries 527,127 records against the 478,746
+            GBIF still serves and the 399,326 in ChecklistBank&apos;s copy. It
+            is 48,381 records ahead of the freshest copy that existed anywhere
+            when we published, and its content runs to 23 August 2026.
+          </p>
+          <p className="text-gray-700">
+            The half that did not: all 50 sampled canonical act URLs still
+            return 404, as do the Api, About and Search routes. Every one of
+            those 527,127 records publishes such a URL in its own{' '}
+            <code>references</code> field. GBIF has not re-crawled, so the API
+            still serves the March 2025 copy. The register&apos;s content is
+            back and its identity layer is not, which is a narrower failure
+            than the one we reported and the same failure in kind.
+          </p>
+          <p className="text-gray-700">
+            Re-running the census also let us measure the register&apos;s
+            content properly for the first time, and the result cuts both ways.
+            The identity layer is clean: 527,127 distinct identifiers with no
+            duplicates, no self-parenting, no cycles in the parent chain, every
+            identifier a well-formed UUID, and CC0 asserted on every row with
+            no variant spellings. The 50 malformed identifiers we found in the
+            ChecklistBank snapshot are gone. Against that, 347 internal
+            references name a record absent from the same archive, 41,274
+            records carry the author and year inside the name string while the
+            atomised authorship and year fields sit empty, and five records
+            have no scientific name at all. All three were reported to the
+            registrar the day we found them, and the row-level lists are in the
+            repository.
+          </p>
+          <p className="text-gray-700">
+            We said above that if zoobank.org recovered the resolution finding
+            would shrink to an outage report while the staleness and the dead
+            publication endpoint survived. That prediction was half right and
+            it is worth saying which half. The publication endpoint recovered.
+            The resolution failure is the part that survived.
+          </p>
+        </div>
 
         <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">
           Finding two: 86.0 per cent of the world&apos;s largest biodiversity
