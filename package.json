@@ -8,7 +8,8 @@
     "build": "vite build && vite build --ssr entry-server.tsx --outDir dist-ssr && node scripts/prerender.mjs",
     "preview": "vite preview",
     "indexnow": "node scripts/indexnow.mjs",
-    "contributions": "node scripts/fetch-contributions.mjs"
+    "contributions": "node scripts/fetch-contributions.mjs",
+    "stats": "node scripts/fetch-repo-stats.mjs"
   },
   "dependencies": {
     "@neondatabase/serverless": "^1.0.2",

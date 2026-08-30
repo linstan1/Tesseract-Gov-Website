@@ -2,8 +2,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { CHART, HBars } from '../../components/ChartKit';
 import { ArrowUpRight } from 'lucide-react';
-import { ContributionLedger } from '../../components/ContributionLedger';
+import { ContributionLedger, longDate } from '../../components/ContributionLedger';
 import { CONTRIBUTION_TOTALS } from '../../data/contributionTotals';
+import { OPEN_ONTOLOGIES_STATS as OO } from '../../data/repoStats';
 
 const SCHEMA = {
   '@context': 'https://schema.org',
@@ -81,18 +82,23 @@ export const OpenSource: React.FC = () => (
             <ArrowUpRight className="w-3.5 h-3.5" aria-hidden="true" />
           </a>{' '}
           is a Rust server that exposes OWL and RDF taxonomies to language models as tools, with an OWL 2 DL
-          reasoner, SHACL validation, SPARQL and versioning in a single binary. It has 442 stars, 56 forks and
-          an outside contributor base that has landed 16 merged pull requests, including native Windows
-          support and the bi-temporal conformance corpus.
+          reasoner, SHACL validation, SPARQL and versioning in a single binary. It has {OO.stars} stars,{' '}
+          {OO.forks} forks and an outside contributor base that has landed {OO.outsideMergedPullRequests} merged
+          pull requests, including native Windows support and the bi-temporal conformance corpus.
         </p>
         <HBars
-          title="Open Ontologies has 442 stars, 56 forks and 16 merged pull requests from an outside contributor base."
-          note="The merged outside contributions include native Windows support and the bi-temporal conformance corpus."
+          title={`Open Ontologies has ${OO.stars} stars, ${OO.forks} forks and ${OO.outsideMergedPullRequests} merged pull requests from an outside contributor base.`}
+          note={`Counted from the GitHub API on ${longDate(OO.generatedOn)}. The merged outside contributions include native Windows support and the bi-temporal conformance corpus.`}
           labelWidth="w-64"
           rows={[
-            { label: 'GitHub stars', value: 442, display: '442', color: CHART.teal },
-            { label: 'Forks', value: 56, display: '56', color: CHART.teal },
-            { label: 'Merged pull requests from outside contributors', value: 16, display: '16', color: CHART.teal },
+            { label: 'GitHub stars', value: OO.stars, display: String(OO.stars), color: CHART.teal },
+            { label: 'Forks', value: OO.forks, display: String(OO.forks), color: CHART.teal },
+            {
+              label: 'Merged pull requests from outside contributors',
+              value: OO.outsideMergedPullRequests,
+              display: String(OO.outsideMergedPullRequests),
+              color: CHART.teal,
+            },
           ]}
         />
         <p>

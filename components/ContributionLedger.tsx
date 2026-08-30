@@ -32,7 +32,7 @@ const MONTHS = [
   'January', 'February', 'March', 'April', 'May', 'June',
   'July', 'August', 'September', 'October', 'November', 'December',
 ];
-const longDate = (iso: string) => {
+export const longDate = (iso: string) => {
   const [year, month, day] = iso.split('-');
   return `${Number(day)} ${MONTHS[Number(month) - 1]} ${year}`;
 };
