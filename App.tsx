@@ -87,6 +87,7 @@ const MachineValidatedOpenOntologies = lazy(() => import('./pages/research/Machi
 const BankRegisterOntology = lazy(() => import('./pages/research/BankRegisterOntology').then(m => ({ default: m.BankRegisterOntology })));
 const ChainControlOntology = lazy(() => import('./pages/research/ChainControlOntology').then(m => ({ default: m.ChainControlOntology })));
 const CertificationRegisterOntology = lazy(() => import('./pages/research/CertificationRegisterOntology').then(m => ({ default: m.CertificationRegisterOntology })));
+const Iso42001AssuranceGap = lazy(() => import('./pages/research/Iso42001AssuranceGap').then(m => ({ default: m.Iso42001AssuranceGap })));
 const QuantumCollateralBenchmark = lazy(() => import('./pages/research/QuantumCollateralBenchmark').then(m => ({ default: m.QuantumCollateralBenchmark })));
 const JsonLdEscapingConformance = lazy(() => import('./pages/research/JsonLdEscapingConformance').then(m => ({ default: m.JsonLdEscapingConformance })));
 const VerifyingExtractionPipelineRdf = lazy(() => import('./pages/research/VerifyingExtractionPipelineRdf').then(m => ({ default: m.VerifyingExtractionPipelineRdf })));
@@ -281,6 +282,10 @@ const PAGE_META: Record<string, { title: string; description: string }> = {
   '/research/certification-register-ontology': {
     title: 'Certification register ontology: nobody can check an ISO 27001 certificate | Tesseract Academy for the Public Sector',
     description: 'An open OWL 2, SKOS and SHACL ontology for management system certification, built so that it reproduces no ISO text at all and with a SHACL layer that mechanically proves it. IAF CertSearch, the global register of roughly two million accredited certificates, states that no user may view or download a list of certificates issued by a certification body, so absence cannot be observed. 0 of 2,921 UKAS-accredited organisations declare a standard in the public register and ISO/IEC 27001 is absent from the UKAS standard taxonomy entirely. 21.6 per cent of the UKAS scope vocabulary is duplication. NIST has withdrawn its SP 800-53 to ISO/IEC 27001 mapping, which last addressed the superseded 2013 edition. 70 of the 93 Annex A controls have a CSF 2.0 informative reference and 23 do not, and five identifier defects survive in the live crosswalk including two clause addresses that name nothing in the standard.',
+  },
+  '/research/iso-42001-assurance-gap': {
+    title: 'ISO 42001 assurance gap: the only public crosswalk names zero of its controls | Tesseract Academy for the Public Sector',
+    description: 'A measured audit of what can be established about an ISO/IEC 42001 certificate from public evidence. The NIST AI RMF crosswalk to ISO/IEC 42001 holds 281 pairs across 72 AI RMF subcategories and 66 distinct ISO addresses, of which 202 are Annex B implementation guidance and 79 are mandatory clauses, and zero are Annex A controls, the very things a Statement of Applicability declares. The document is titled ISO/IEC FDIS 42001, targeting the Final Draft rather than the published 42001:2023. ISO/IEC 42001 published December 2023 while ISO/IEC 42006, which makes accreditation possible, published 7 July 2025, leaving roughly nineteen months in which certificates were sold under no published scheme for certifying the certifiers. The UKAS public register contains zero occurrences of 42001 across 9,278 harvested records, nine months after it granted the world first UKAS accreditation for that standard.',
   },
   '/research/surveillance-reporting-identifiers': {
     title: 'Surveillance reporting identifiers: an open census of what UK operational reporting denotes | Tesseract Academy for the Public Sector',
@@ -713,6 +718,7 @@ const App: React.FC = () => {
               <Route path="/research/bank-register-ontology" element={<BankRegisterOntology />} />
               <Route path="/research/chain-control-ontology" element={<ChainControlOntology />} />
               <Route path="/research/certification-register-ontology" element={<CertificationRegisterOntology />} />
+              <Route path="/research/iso-42001-assurance-gap" element={<Iso42001AssuranceGap />} />
               <Route path="/research/quantum-collateral-benchmark" element={<QuantumCollateralBenchmark />} />
               <Route path="/research/jsonld-escaping-conformance" element={<JsonLdEscapingConformance />} />
               <Route path="/research/verifying-extraction-pipeline-rdf" element={<VerifyingExtractionPipelineRdf />} />

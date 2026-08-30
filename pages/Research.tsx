@@ -377,7 +377,7 @@ export const Research: React.FC = () => {
            </li>
         </PublicationGroup>
 
-        <PublicationGroup title="Register assurance" count={19}>
+        <PublicationGroup title="Register assurance" count={20}>
           <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
             <Link to="/research/biodiversity-register-ontology"><h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark hover:underline transition-colors">An open ontology for biodiversity registers, tested against the Biodiversity Heritage Library, ZooBank, and the Natural History Museum Data Portal</h3></Link>
             <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Open ontology, register and rights census, 2026</p>
@@ -403,6 +403,15 @@ export const Research: React.FC = () => {
             <div className="mt-3 flex flex-wrap gap-3 items-center">
               <Link to="/research/quantum-collateral-benchmark" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">Read the study</Link>
               <a href="https://github.com/fabio-rovai/qollateral" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">repository on GitHub<span className="sr-only"> (opens in new tab)</span></a>
+            </div>
+          </li>
+          <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
+            <Link to="/research/iso-42001-assurance-gap"><h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark hover:underline transition-colors">The Only Public Crosswalk to ISO 42001 Names Zero of Its Controls</h3></Link>
+            <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Open research, AI management system assurance, 2026</p>
+            <p className="text-base text-gov-dark/90 leading-relaxed">A measured audit of what a buyer can actually establish about an ISO/IEC 42001 certificate from public evidence, built with the same address-not-text discipline as our ISO/IEC 27001 work so that no ISO text is reproduced anywhere. NIST publishes the only public domain crosswalk into the standard, and it holds 281 pairs across 72 AI RMF subcategories and 66 distinct ISO addresses, of which 202 point at Annex B implementation guidance and 79 at mandatory clauses. Annex A control references: zero. Annex A is the normative control catalogue and the Statement of Applicability is a declaration about it, so any tool ingesting that crosswalk to build an SoA is inferring the critical hop without showing its work. The same document is titled ISO/IEC FDIS 42001, targeting the Final Draft rather than the published 42001:2023, which is the second NIST crosswalk into an ISO management system standard we have found addressing something other than the current edition. Separately, ISO/IEC 42001 published in December 2023 while ISO/IEC 42006, which sets out what a competent certification body must demonstrate, published on 7 July 2025, leaving roughly nineteen months in which certificates were bought and sold under no published scheme for certifying the certifiers. The complete UKAS public register contains zero occurrences of 42001 across 9,278 records, nine months after BSI announced the world first UKAS accreditation for exactly that standard. One per objective breakdown was deliberately not published because secondary sources disagree and do not reconcile to 38.</p>
+            <div className="mt-3 flex flex-wrap gap-3 items-center">
+              <Link to="/research/iso-42001-assurance-gap" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">Read the study</Link>
+              <a href="https://github.com/fabio-rovai/ai-management-system-assurance" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">repository on GitHub<span className="sr-only"> (opens in new tab)</span></a>
             </div>
           </li>
           <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">

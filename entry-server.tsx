@@ -94,6 +94,7 @@ import { MachineValidatedOpenOntologies } from './pages/research/MachineValidate
 import { BankRegisterOntology } from './pages/research/BankRegisterOntology';
 import { ChainControlOntology } from './pages/research/ChainControlOntology';
 import { CertificationRegisterOntology } from './pages/research/CertificationRegisterOntology';
+import { Iso42001AssuranceGap } from './pages/research/Iso42001AssuranceGap';
 import { QuantumCollateralBenchmark } from './pages/research/QuantumCollateralBenchmark';
 import { JsonLdEscapingConformance } from './pages/research/JsonLdEscapingConformance';
 import { VerifyingExtractionPipelineRdf } from './pages/research/VerifyingExtractionPipelineRdf';
@@ -216,6 +217,7 @@ const SSRApp: React.FC = () => (
         <Route path="/research/bank-register-ontology" element={<BankRegisterOntology />} />
         <Route path="/research/chain-control-ontology" element={<ChainControlOntology />} />
         <Route path="/research/certification-register-ontology" element={<CertificationRegisterOntology />} />
+        <Route path="/research/iso-42001-assurance-gap" element={<Iso42001AssuranceGap />} />
         <Route path="/research/quantum-collateral-benchmark" element={<QuantumCollateralBenchmark />} />
         <Route path="/research/jsonld-escaping-conformance" element={<JsonLdEscapingConformance />} />
         <Route path="/research/verifying-extraction-pipeline-rdf" element={<VerifyingExtractionPipelineRdf />} />

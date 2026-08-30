@@ -410,6 +410,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://gov.tesseract.academy/research/iso-42001-assurance-gap</loc>
+    <lastmod>2026-08-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://gov.tesseract.academy/research/investment-fund-ontology</loc>
     <lastmod>2026-08-14</lastmod>
     <changefreq>weekly</changefreq>
