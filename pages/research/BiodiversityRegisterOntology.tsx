@@ -14,11 +14,11 @@ const SCHEMA = {
   headline:
     'An open ontology for biodiversity registers, tested against the Biodiversity Heritage Library, ZooBank, and the Natural History Museum Data Portal | Tesseract Academy',
   description:
-    'A measured census of the identifier and rights layer under biodiversity AI. On the day of census the Official Register of Zoological Nomenclature had no working machine interface: 50 of 50 sampled canonical act URLs returned 404 and its freshest public mirrors are 518 and 1,327 days stale. In the Biodiversity Heritage Library export, 86.0 per cent of 329,129 distinct digitised items carry no machine-actionable licence and ten titles carry the literal string Array as their DOI. The NHM Data Portal mints a resolving DOI for every dataset, which is best in class, while eight of 294 datasets meet a five-property product-readiness bar. Shipped as an open OWL 2, SKOS and SHACL ontology with every headline computed two ways.',
+    'A measured census of the identifier and rights layer under biodiversity AI. The Official Register of Zoological Nomenclature refuses machine clients whose address is not on its anti-DDoS whitelist, and it refuses them with HTTP 404, the same status it returns for a name that was never registered. We established that by probing the same 50 canonical act URLs before and after the registrar whitelisted us: 50 of 50 returned 404, then 50 of 50 returned 200. Its two public mirrors were 518 and 1,327 days stale at census; GBIF re-crawled successfully on 30 August 2026 and now serves 527,163 usages against 478,746 before, while ChecklistBank still serves its January 2023 copy. In the Biodiversity Heritage Library export, 86.0 per cent of 329,129 distinct digitised items carry no machine-actionable licence and ten titles carry the literal string Array as their DOI. The NHM Data Portal mints a resolving DOI for every dataset, which is best in class, while eight of 294 datasets meet a five-property product-readiness bar. Shipped as an open OWL 2, SKOS and SHACL ontology with every headline computed two ways.',
   author: { '@id': 'https://gov.tesseract.academy/#organization' },
   publisher: { '@id': 'https://gov.tesseract.academy/#organization' },
   datePublished: '2026-08-28',
-  dateModified: '2026-08-30',
+  dateModified: '2026-08-31',
   about: {
     '@type': 'Dataset',
     name: 'Biodiversity Register Ontology (BDRO)',
@@ -38,7 +38,7 @@ const FAQ_SCHEMA = {
       name: 'Is ZooBank machine-readable today?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Partly, as of 30 August 2026. On 28 August it was not machine-readable at all: every route on zoobank.org except the homepage returned HTTP 404 at two observation times, including the About and Api pages linked from its own navigation, the documented JSON API, the urn:lsid URN form, and all 50 canonical act URLs we sampled, which are the exact URLs the GBIF copy publishes as references. The declared publication endpoint, an IPT at the Bishop Museum, also returned 404, and GBIF’s crawl of 23 August 2026 ended in ABORT. The IPT was rebuilt on 29 August and we re-measured on 30 August: all three IPT endpoints now return 200 and serve 527,127 records, 48,381 more than GBIF holds. The resolution layer did not recover. All 50 sampled canonical act URLs still return 404, as do the Api, About and Search routes, and GBIF has not re-crawled. The register’s content is reachable again; the identifiers it publishes still resolve to nothing.',
+        text: 'Yes to a whitelisted client and no to anyone else, as of 30 August 2026. zoobank.org sits behind an anti-DDoS system that combines a reCAPTCHA challenge with an IP whitelist, and it refuses clients that are not on the whitelist with HTTP 404 rather than 403. On 28 August every route except the homepage returned 404 to us, including the About and Api pages linked from its own navigation, the documented JSON API, the urn:lsid URN form, and all 50 canonical act URLs we sampled, which are the exact URLs the GBIF copy publishes as references. We read that as a broken resolver and we were wrong. After the registrar added our address to the whitelist on 30 August, the identical 50 URLs probed from the same machine with the same command all returned 200, and every one of them resolved to its canonical act page. Separately, the Bishop Museum IPT was rebuilt on 29 August and serves 527,127 records, and GBIF re-crawled it successfully on 30 August after five consecutive aborted attempts, lifting the count it serves from 478,746 to 527,163. What remains defective is that every one of those 527,127 records publishes a zoobank.org URL that an un-whitelisted client cannot distinguish from a name that was never registered, because the register answers both with 404.',
       },
     },
     {
@@ -46,7 +46,7 @@ const FAQ_SCHEMA = {
       name: 'How stale are the public mirrors of ZooBank?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'The freshest copy GBIF holds was published on 28 March 2025, which was 518 days old on the day of census. ChecklistBank’s copy is dated 9 January 2023, which is 1,327 days old. The two mirrors also disagree with each other on record count, 478,746 against 399,326, a difference of 79,420 records that reflects different snapshot dates and transformations rather than register truth. Any pipeline that normalises taxon names against these copies cannot see any name registered since March 2025.',
+        text: 'These are the figures as at the 28 August 2026 census, and the GBIF half of them was overtaken on 30 August, when GBIF re-crawled successfully and moved to 527,163 usages. On census day the freshest copy GBIF held was published on 28 March 2025, which was 518 days old. ChecklistBank’s copy is dated 9 January 2023, which is 1,327 days old. The two mirrors also disagree with each other on record count, 478,746 against 399,326, a difference of 79,420 records that reflects different snapshot dates and transformations rather than register truth. Any pipeline that normalises taxon names against these copies cannot see any name registered since March 2025.',
       },
     },
     {
@@ -54,7 +54,7 @@ const FAQ_SCHEMA = {
       name: 'Did ZooBank recover, and what changed?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Partly. The Bishop Museum IPT, ZooBank\u2019s declared publication endpoint, was rebuilt from scratch on 29 August 2026, one day after we wrote to the registrar and after the outage was raised on GBIF\u2019s tracker. Measured on 30 August 2026 at 09:12 UTC, the resource page, archive and EML all return HTTP 200, and the republished Darwin Core archive carries 527,127 records dated to 23 August 2026, which is 48,381 more than the 478,746 GBIF serves and 127,801 more than ChecklistBank\u2019s 399,326. The resolution layer did not recover: all 50 sampled canonical act URLs still return 404. Re-running the census over the recovered archive found the identity layer clean, with 527,127 distinct identifiers, no duplicates, no self-parenting, no cycles and no malformed UUIDs, alongside three new defects: 347 internal references naming a record absent from the archive, 41,274 records carrying author and year inside the name string while the atomised fields are empty, and five records with no scientific name.',
+        text: 'Yes, and our first account of how it recovered was wrong. The Bishop Museum IPT, ZooBank\u2019s declared publication endpoint, was rebuilt from scratch on 29 August 2026, one day after we wrote to the registrar and after the outage was raised on GBIF\u2019s tracker. Measured on 30 August 2026 at 09:12 UTC, the resource page, archive and EML all return HTTP 200, and the republished Darwin Core archive carries 527,127 records dated to 23 August 2026, which was then 48,381 more than the 478,746 GBIF served and 127,801 more than ChecklistBank\u2019s 399,326. GBIF has since re-crawled, on 30 August 2026, and now serves 527,163 usages; ChecklistBank has not moved. We then reported that the resolution layer had not recovered, because all 50 sampled act URLs still returned 404. The registrar explained the real mechanism: those 404s were an IP whitelist refusing our client, not a resolver failing. He whitelisted our address the same day and the identical 50 URLs returned 200, so the resolver was never broken. Re-running the census over the recovered archive found the identity layer clean, with 527,127 distinct identifiers, no duplicates, no self-parenting, no cycles and no malformed UUIDs, alongside three new defects: 347 internal references naming a record absent from the archive, 41,274 records carrying author and year inside the name string while the atomised fields are empty, and five records with no scientific name.',
       },
     },
     {
@@ -150,8 +150,8 @@ export function BiodiversityRegisterOntology() {
         </p>
 
         <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">
-          Finding one: the register of record for animal names has no working
-          machine interface
+          Finding one: the register of record for animal names refuses
+          un-whitelisted machine clients with a 404
         </h2>
         <p className="text-gray-700 mb-4">
           Since the 2012 amendment to the International Code of Zoological
@@ -195,7 +195,7 @@ export function BiodiversityRegisterOntology() {
         </p>
         <HBars
           title="Same-day resolution of sampled canonical records, 28 August 2026"
-          note="A register-specific failure: the botanical and marine name registers resolved everything sampled on the same day ZooBank resolved nothing."
+          note="Measured from an address ZooBank had not whitelisted. The zero is an access refusal served as a 404, not an absent record, and the correction below sets out how we established that. The marine and botanical registers operate no equivalent gate."
           max={100}
           rows={[
             { label: 'ZooBank canonical act URLs', value: 0, display: '0 / 50', color: CHART.amber },
@@ -206,8 +206,7 @@ export function BiodiversityRegisterOntology() {
 
         <div className="rounded-lg border border-gov-blue/30 bg-gov-blue/5 p-6 space-y-4 mt-8">
           <h2 className="text-2xl font-bold text-gray-900">
-            Update, 30 August 2026: the publication endpoint recovered, the
-            resolution layer did not
+            Update, 30 August 2026: the publication endpoint recovered
           </h2>
           <p className="text-gray-700">
             On 29 August 2026, one day after we wrote to the ZooBank registrar
@@ -225,13 +224,16 @@ export function BiodiversityRegisterOntology() {
             when we published, and its content runs to 23 August 2026.
           </p>
           <p className="text-gray-700">
-            The half that did not: all 50 sampled canonical act URLs still
-            return 404, as do the Api, About and Search routes. Every one of
-            those 527,127 records publishes such a URL in its own{' '}
-            <code>references</code> field. GBIF has not re-crawled, so the API
-            still serves the March 2025 copy. The register&apos;s content is
-            back and its identity layer is not, which is a narrower failure
-            than the one we reported and the same failure in kind.
+            The half we thought had not: all 50 sampled canonical act URLs
+            still returned 404 at 09:12 UTC, as did the Api, About and Search
+            routes. Every one of those 527,127 records publishes such a URL in
+            its own <code>references</code> field. GBIF had not re-crawled at
+            that point, so its API still served the March 2025 copy, which it
+            no longer does. We concluded from this
+            that the register&apos;s content was back and its identity layer
+            was not. That conclusion was wrong, and the correction below
+            explains what those 404s actually were. The measurements in this
+            box stand; the inference drawn from them does not.
           </p>
           <p className="text-gray-700">
             Re-running the census also let us measure the register&apos;s
@@ -251,9 +253,155 @@ export function BiodiversityRegisterOntology() {
           <p className="text-gray-700">
             We said above that if zoobank.org recovered the resolution finding
             would shrink to an outage report while the staleness and the dead
-            publication endpoint survived. That prediction was half right and
-            it is worth saying which half. The publication endpoint recovered.
-            The resolution failure is the part that survived.
+            publication endpoint survived. The publication endpoint recovered.
+            What we then called a surviving resolution failure turned out to be
+            something else, which the next section sets out.
+          </p>
+        </div>
+
+        <div className="rounded-lg border border-gov-blue/30 bg-gov-blue/5 p-6 space-y-4 mt-8">
+          <h2 className="text-2xl font-bold text-gray-900">
+            Correction, 30 August 2026: the 404s were an access gate, not a
+            broken resolver
+          </h2>
+          <p className="text-gray-700">
+            Hours after we published the update above, the ZooBank registrar
+            told us the mechanism behind the 404s, and it is not the one we
+            assumed. zoobank.org sits behind an anti-DDoS system that combines
+            a reCAPTCHA challenge with an IP whitelist, built in response to
+            what he described as years of semi-DDoS attacks. A client whose
+            address is not on the whitelist is refused, and the refusal is
+            served as HTTP 404. That is the same status the register returns
+            for a name that was never registered.
+          </p>
+          <p className="text-gray-700">
+            He added this machine&apos;s address to the whitelist at
+            approximately 20:45 UTC the same day, which turned the question
+            into a controlled test. The 50 canonical act URLs sampled at 09:12
+            that morning were on file, the register&apos;s content had not
+            changed in between, and the only thing that differed was whether
+            our address was on the list. We re-probed the identical 50 URLs
+            from the same machine using the same command as the original
+            census, a plain <code>curl</code> with redirects followed and no
+            browser user agent.
+          </p>
+          <HBars
+            title="The same 50 canonical act URLs, same machine, same command, 30 August 2026"
+            note="One variable changed between the two observations, and it was a property of our client rather than anything about the register."
+            max={100}
+            rows={[
+              { label: 'Before the whitelist entry, 09:12 UTC', value: 0, display: '0 / 50', color: CHART.amber },
+              { label: 'After the whitelist entry, 22:52 UTC', value: 100, display: '50 / 50' },
+            ]}
+          />
+          <p className="text-gray-700">
+            All 50 returned 404 before, all 50 return 200 after, and every one
+            of them lands on the canonical{' '}
+            <code>/NomenclaturalActs/</code> path for its UUID. Two of the
+            fifty stopped on the redirect from http to https on the first pass
+            and returned 200 on an immediate re-probe; the report records both
+            statuses rather than smoothing the first one away. The resolver was
+            never broken. We reported a resolution failure and what we had
+            measured was an access refusal wearing a resolution failure&apos;s
+            status code. Our first correction, written before we knew this,
+            compounded the error by treating the persistence of the 404s as
+            confirmation.
+          </p>
+          <p className="text-gray-700">
+            What survives is narrower than the finding we published. All
+            527,127 records publish a zoobank.org URL in their{' '}
+            <code>references</code> field. A citation checker, a crawler or an
+            entity-normalisation pipeline that follows one of those URLs
+            without being whitelisted receives a 404, and 404 is also the
+            status the register returns for a name that was never registered.
+            A client that branches on the status code, which is what link
+            checkers and crawlers do, therefore records a live identifier as
+            dead. A 403 would carry the information a 404 destroys.
+          </p>
+          <p className="text-gray-700">
+            ZooBank does communicate the gate, which is worth stating plainly.
+            A notice on every page we checked, the 404 page included, says the
+            site is testing a system to block high-volume robot traffic, that
+            first-time users are asked once per internet connection to confirm
+            they are not a robot, and that anyone having trouble should write
+            to the address it gives. The 404 page for an unregistered
+            identifier also names that identifier and says in words that it
+            does not exist in ZooBank. The gap is not that the register keeps
+            any of this quiet. It is that the status code carries none of it,
+            and automated clients read status codes. What we cannot tell you is
+            whether the 404 an un-whitelisted client received carried the same
+            notice, because we recorded status codes rather than response
+            bodies before we were whitelisted, and we can no longer issue a
+            request from an address the list does not cover.
+          </p>
+          <p className="text-gray-700">
+            The inverse error is confirmed. A well-formed UUID that was never
+            registered returns 200 to a whitelisted client in the published
+            bare form, because the site redirects an unrecognised UUID to a
+            search page rather than answering 404, so a link checker following
+            a <code>references</code> value records a dead identifier as
+            healthy. The registrar has confirmed that behaviour as a known
+            defect he intends to repair.
+          </p>
+          <p className="text-gray-700">
+            One limit on this result is worth stating. We could not reproduce
+            the refusal from a second, un-whitelisted address ourselves.
+            zoobank.org publishes no AAAA record, so our only other egress, an
+            IPv6 address the whitelist does not cover, cannot reach the host at
+            all. The mechanism therefore rests on the registrar&apos;s account
+            of his own system together with the before-and-after measurement
+            above, rather than on our having seen the gate refuse a second
+            client. The measurement itself is in{' '}
+            <code>reports/zoobank_whitelist_retest.json</code> in the
+            repository, with the status of all 50 URLs on both dates.
+          </p>
+        </div>
+
+        <div className="rounded-lg border border-gov-blue/30 bg-gov-blue/5 p-6 space-y-4 mt-8">
+          <h2 className="text-2xl font-bold text-gray-900">
+            Update, 31 August 2026: the recovery reached GBIF
+          </h2>
+          <p className="text-gray-700">
+            GBIF re-crawled the ZooBank dataset on 30 August 2026 at 22:39 UTC
+            and the attempt finished NORMAL. It is the first crawl to complete
+            since 11 July, after five consecutive attempts ending in ABORT on
+            21 and 28 July and 4, 11 and 23 August. The count GBIF serves has
+            moved from 478,746 usages to 527,163, so 48,417 names that were
+            reachable only through a stale mirror when we published are now in
+            the index most downstream biodiversity pipelines actually read.
+          </p>
+          <HBars
+            title="Names served by GBIF for the ZooBank dataset"
+            note="The archive itself was rebuilt on 29 August. The figures here are what GBIF served before and after its 30 August crawl."
+            max={527163}
+            rows={[
+              { label: 'Before, the 28 March 2025 snapshot', value: 478746, display: '478,746', color: CHART.amber },
+              { label: 'After the 30 August 2026 crawl', value: 527163, display: '527,163' },
+            ]}
+          />
+          <p className="text-gray-700">
+            Two things about that number are worth stating rather than
+            rounding off. GBIF serves 527,163 while the source archive contains
+            527,127, and the Bishop Museum IPT still declares 527,127 records
+            with an EML datestamp of 29 August, so the archive has not been
+            republished in the interval. The 36 record excess is therefore
+            something GBIF&apos;s own processing produces and we have not
+            established what. And ChecklistBank has not moved at all: it still
+            serves version 2023-01-09 with 399,326 records and its most recent
+            import finished on 17 August, which now leaves it 127,837 records
+            behind the register it mirrors.
+          </p>
+          <p className="text-gray-700">
+            On who caused what, the sequence is worth setting out plainly
+            because it is easy to overclaim. We raised the aborted crawls and
+            the dead endpoints on GBIF&apos;s tracker on 28 August. A GBIF
+            developer brought the ZooBank registrar into that thread on 29
+            August. The registrar rebuilt the IPT from scratch the same day and
+            has said the rebuild was already in train and not prompted by the
+            ticket. GBIF&apos;s crawler then ran on its ordinary weekly
+            schedule and succeeded because the endpoint it had been failing
+            against was back. We reported a problem and the people who own the
+            infrastructure fixed it, which is the whole of what we are claiming.
           </p>
         </div>
 
