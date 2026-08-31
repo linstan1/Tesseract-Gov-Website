@@ -363,9 +363,14 @@ export function BiodiversityRegisterOntology() {
           </h2>
           <p className="text-gray-700">
             GBIF re-crawled the ZooBank dataset on 30 August 2026 at 22:39 UTC
-            and the attempt finished NORMAL. It is the first crawl to complete
-            since 11 July, after five consecutive attempts ending in ABORT on
-            21 and 28 July and 4, 11 and 23 August. The count GBIF serves has
+            and the attempt finished NORMAL. That ended a run of 64 consecutive
+            crawls finishing in ABORT, going back to 26 April 2025. The last
+            crawl to ingest data ran on 29 March 2025, which is where the 28
+            March 2025 snapshot we measured at census came from, and the three
+            attempts after it reported NOT_MODIFIED before the aborts began. So
+            GBIF&apos;s crawler had been failing against this dataset roughly
+            once a week for sixteen months, and the dataset page carried no
+            staleness signal through any of it. The count GBIF serves has
             moved from 478,746 usages to 527,163, so 48,417 names that were
             reachable only through a stale mirror when we published are now in
             the index most downstream biodiversity pipelines actually read.
