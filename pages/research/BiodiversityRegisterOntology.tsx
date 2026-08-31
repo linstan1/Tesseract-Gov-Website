@@ -353,7 +353,16 @@ export function BiodiversityRegisterOntology() {
             above, rather than on our having seen the gate refuse a second
             client. The measurement itself is in{' '}
             <code>reports/zoobank_whitelist_retest.json</code> in the
-            repository, with the status of all 50 URLs on both dates.
+            repository, with the status of all 50 URLs on both
+            observations, and it is emitted as a graph and recomputed over that
+            graph in SPARQL, so this correction meets the same two-ways bar as
+            every other headline here. Representing it required an additive
+            change to the ontology. The model had assumed an observation date
+            was enough to identify a dereference, and the same URL returning
+            404 and 200 on one date with only the client differing falsified
+            that. Resolution is a property of the pair rather than of the
+            resource, so version 0.3.0 makes the client&apos;s whitelist status
+            part of observation identity.
           </p>
         </div>
 
@@ -389,12 +398,33 @@ export function BiodiversityRegisterOntology() {
             rounding off. GBIF serves 527,163 while the source archive contains
             527,127, and the Bishop Museum IPT still declares 527,127 records
             with an EML datestamp of 29 August, so the archive has not been
-            republished in the interval. The 36 record excess is therefore
-            something GBIF&apos;s own processing produces and we have not
-            established what. And ChecklistBank has not moved at all: it still
-            serves version 2023-01-09 with 399,326 records and its most recent
-            import finished on 17 August, which now leaves it 127,837 records
-            behind the register it mirrors.
+            republished in the interval. We first published that 36 record
+            excess as unexplained. It is now explained, and the explanation
+            reaches back into our own defect list. GBIF&apos;s origin facet
+            splits its count into 527,124 usages taken from the source and 39
+            it synthesised from classification fields naming higher taxa that
+            are not present as rows. The source figure is three short of the
+            archive&apos;s 527,127 because GBIF rejected three records, and
+            those three are among the five blank scientific name records we
+            reported as finding R3. So 527,127 minus 3 rejected plus 39
+            synthesised is 527,163 exactly, with no residual.
+          </p>
+          <p className="text-gray-700">
+            The two R3 records GBIF did not reject are worth a look. Both are
+            in the index now as accepted genera whose scientific name is a
+            single full stop, GBIF keys 208757575 and 337071860, flagged
+            SCIENTIFIC_NAME_ASSEMBLED and BACKBONE_MATCH_NONE. GBIF&apos;s
+            parser took the genus field, which contains a full stop, assembled
+            a name from it and typed the result SCIENTIFIC. A record with no
+            name in the source is therefore an accepted genus in the
+            aggregator, which is a smaller defect than the ones above but the
+            same kind: a validation step that answers rather than refuses.
+          </p>
+          <p className="text-gray-700">
+            ChecklistBank has not moved at all: it still serves version
+            2023-01-09 with 399,326 records and its most recent import finished
+            on 17 August, which now leaves it 127,837 records behind the
+            register it mirrors.
           </p>
           <p className="text-gray-700">
             On who caused what, the sequence is worth setting out plainly
