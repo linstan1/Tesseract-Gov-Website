@@ -57,6 +57,12 @@ export const Home: React.FC = () => {
           <div className="flex items-center gap-3">
             <Award className="w-5 h-5 text-gov-blue flex-shrink-0" />
             <p className="text-sm text-gov-dark">
+              <strong className="text-gov-blue">Innovate UK Award</strong>  - Funded through the Frontier AI Discovery competition to build Tardygrada, a formally verified runtime for trustworthy AI agents. Phase 1 feasibility study, October to December 2026. <Link to="/news/tardygrada-innovate-uk-award" className="text-gov-blue font-semibold hover:underline">Read the announcement</Link>
+            </p>
+          </div>
+          <div className="flex items-center gap-3">
+            <Award className="w-5 h-5 text-gov-blue flex-shrink-0" />
+            <p className="text-sm text-gov-dark">
               <strong className="text-gov-blue">New Contract Award</strong>  - Appointed to the Imperial War Museums Digital Transformation Support Framework (Lot 1  - Data Consultancy) as one of three suppliers. June 2026, running to 2028 with an option to 2029.
             </p>
           </div>
