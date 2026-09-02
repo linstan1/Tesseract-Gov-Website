@@ -250,7 +250,7 @@ export const Iso42001AssuranceGap: React.FC = () => (
           A bounded first engagement is a two week AI assurance claim audit on one supplier population. We take your supplier list, extract every AI governance and certification claim, classify each by whether it can be checked at all, run the checks that can be run, and hand back the evidence with the method. The deliverable is a defensible statement of what you can and cannot establish, which is more useful than a dashboard implying you can establish everything.
         </p>
         <p className="text-gov-dark leading-relaxed">
-          There is also a free course covering this material in depth, including the accreditation timeline and the checks above, on <a className="text-gov-blue hover:underline" href="https://tesseract.academy">tesseract.academy</a>.
+          The training side of this work lives on our academy: the <a className="text-gov-blue hover:underline" href="https://tesseract.academy/iso-42001-training/">ISO 42001 training</a> guide, the <a className="text-gov-blue hover:underline" href="https://tesseract.academy/iso-42001-gap-analysis/">ISO 42001 gap analysis</a> explainer, and the free <a className="text-gov-blue hover:underline" href="https://tesseract.academy/courses/ai-literacy-training/">AI Literacy Training course</a>, all indexed on the <a className="text-gov-blue hover:underline" href="https://tesseract.academy/safe-ai/">Safe AI hub</a>.
         </p>
         <p className="text-gov-dark leading-relaxed">
           Fabio Rovai, <a className="text-gov-blue hover:underline" href="mailto:fabio@thetesseractacademy.com">fabio@thetesseractacademy.com</a>. Corrections are published on this page rather than applied silently.

@@ -407,7 +407,7 @@ export const RegisterAssurance: React.FC = () => (
         </p>
       </div>
       <p className="text-sm text-gov-secondary/90 leading-relaxed">
-        Related work: the methodological foundations are in our <Link to="/research/machine-validated-open-ontologies" className="text-gov-blue underline hover:text-gov-blue-dark">machine-validated open ontologies</Link> study and the <Link to="/research/ontology-correctness-benchmark" className="text-gov-blue underline hover:text-gov-blue-dark">open-world hole benchmark</Link>, which measure when an ontology can actually reject a wrong statement.
+        Related work: the methodological foundations are in our <Link to="/research/machine-validated-open-ontologies" className="text-gov-blue underline hover:text-gov-blue-dark">machine-validated open ontologies</Link> study and the <Link to="/research/ontology-correctness-benchmark" className="text-gov-blue underline hover:text-gov-blue-dark">open-world hole benchmark</Link>, which measure when an ontology can actually reject a wrong statement. The training counterpart of this programme is the <a className="text-gov-blue underline hover:text-gov-blue-dark" href="https://tesseract.academy/safe-ai/">Safe AI hub</a> on our academy, where the <a className="text-gov-blue underline hover:text-gov-blue-dark" href="https://tesseract.academy/ai-assurance/">AI assurance guide</a> and the free <a className="text-gov-blue underline hover:text-gov-blue-dark" href="https://tesseract.academy/courses/ai-literacy-training/">AI Literacy Training course</a> apply the same verification-first method for working teams.
       </p>
     </section>
   </article>
