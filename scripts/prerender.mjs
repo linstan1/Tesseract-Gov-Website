@@ -496,6 +496,10 @@ const PAGE_META = {
     title: 'Machine-validated open ontologies: publishing RDF the public sector can trust | Tesseract Academy for the Public Sector',
     description: 'Three delivered examples of open, machine-validated data structures: the Skills England occupational maps as a formal ontology (51,355 triples, 0 SHACL violations), the open-ontologies validation toolkit, and a computation-ready heritage aerial-photography archive (292 frames, 0 SHACL violations). Data, rules and checker published together.',
   },
+  '/news/tardygrada-innovate-uk-award': {
+    title: 'Tesseract Academy awarded Innovate UK Frontier AI Discovery funding for Tardygrada | Tesseract Academy for the Public Sector',
+    description: 'Kampakis and Co Ltd, trading as The Tesseract Academy, has been awarded Innovate UK funding through the Frontier AI Discovery competition (Theme 4, Fundamental AI) for project 10207012, A Formally Verified Runtime for Trustworthy AI Agents (Tardygrada). Phase 1 feasibility study, 1 October 2026 to 31 December 2026.',
+  },
 };
 
 function escapeHtmlAttr(str) {

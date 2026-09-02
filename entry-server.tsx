@@ -121,6 +121,7 @@ import { MachineryTaiwan } from './pages/research/MachineryTaiwan';
 import { ItalyRegisterOntology } from './pages/research/ItalyRegisterOntology';
 import { SemanticAssetRegister } from './pages/research/SemanticAssetRegister';
 import { RegisterAssurance } from './pages/research/RegisterAssurance';
+import { TardygradaInnovateUkAward } from './pages/news/TardygradaInnovateUkAward';
 
 const SSRApp: React.FC = () => (
   <div className="flex flex-col min-h-screen">
@@ -245,6 +246,7 @@ const SSRApp: React.FC = () => (
         <Route path="/research/italy-register-ontology" element={<ItalyRegisterOntology />} />
         <Route path="/research/semantic-asset-register" element={<SemanticAssetRegister />} />
         <Route path="/research/register-assurance" element={<RegisterAssurance />} />
+        <Route path="/news/tardygrada-innovate-uk-award" element={<TardygradaInnovateUkAward />} />
       </Routes>
     </main>
     <Footer />
