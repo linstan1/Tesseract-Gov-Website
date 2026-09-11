@@ -88,6 +88,7 @@ const BankRegisterOntology = lazy(() => import('./pages/research/BankRegisterOnt
 const ChainControlOntology = lazy(() => import('./pages/research/ChainControlOntology').then(m => ({ default: m.ChainControlOntology })));
 const CertificationRegisterOntology = lazy(() => import('./pages/research/CertificationRegisterOntology').then(m => ({ default: m.CertificationRegisterOntology })));
 const Iso42001AssuranceGap = lazy(() => import('./pages/research/Iso42001AssuranceGap').then(m => ({ default: m.Iso42001AssuranceGap })));
+const SociotechnicalMatrixEvidence = lazy(() => import('./pages/research/SociotechnicalMatrixEvidence').then(m => ({ default: m.SociotechnicalMatrixEvidence })));
 const EuLawCitationGraph = lazy(() => import('./pages/research/EuLawCitationGraph').then(m => ({ default: m.EuLawCitationGraph })));
 const QuantumCollateralBenchmark = lazy(() => import('./pages/research/QuantumCollateralBenchmark').then(m => ({ default: m.QuantumCollateralBenchmark })));
 const JsonLdEscapingConformance = lazy(() => import('./pages/research/JsonLdEscapingConformance').then(m => ({ default: m.JsonLdEscapingConformance })));
@@ -284,6 +285,10 @@ const PAGE_META: Record<string, { title: string; description: string }> = {
   '/research/certification-register-ontology': {
     title: 'Certification register ontology: nobody can check an ISO 27001 certificate | Tesseract Academy for the Public Sector',
     description: 'An open OWL 2, SKOS and SHACL ontology for management system certification, built so that it reproduces no ISO text at all and with a SHACL layer that mechanically proves it. IAF CertSearch, the global register of roughly two million accredited certificates, states that no user may view or download a list of certificates issued by a certification body, so absence cannot be observed. 0 of 2,921 UKAS-accredited organisations declare a standard in the public register and ISO/IEC 27001 is absent from the UKAS standard taxonomy entirely. 21.6 per cent of the UKAS scope vocabulary is duplication. NIST has withdrawn its SP 800-53 to ISO/IEC 27001 mapping, which last addressed the superseded 2013 edition. 70 of the 93 Annex A controls have a CSF 2.0 informative reference and 23 do not, and five identifier defects survive in the live crosswalk including two clause addresses that name nothing in the standard.',
+  },
+  '/research/sociotechnical-matrix-evidence': {
+    title: 'Which cells of a sociotechnical AI evaluation matrix can anyone check? | Tesseract Academy for the Public Sector',
+    description: 'This is a partition of the Ada Lovelace Institute and NICE sociotechnical evaluation matrix into the 39 of 120 cells a published evaluation can settle, the 75 that rest on organisational records and the 6 that are judgements, run against 13 open-access evaluations of large language models for title and abstract screening. A study evidences a median of 20 of the 39 checkable cells. 11 of 13 publish the prompt, 2 of 13 report confidence intervals, 1 of 13 measures performance by language, and 0 of 13 pin an exact model version with a run date.',
   },
   '/research/iso-42001-assurance-gap': {
     title: 'ISO 42001 assurance gap: the only public crosswalk names zero of its controls | Tesseract Academy for the Public Sector',
@@ -729,6 +734,7 @@ const App: React.FC = () => {
               <Route path="/research/chain-control-ontology" element={<ChainControlOntology />} />
               <Route path="/research/certification-register-ontology" element={<CertificationRegisterOntology />} />
               <Route path="/research/iso-42001-assurance-gap" element={<Iso42001AssuranceGap />} />
+              <Route path="/research/sociotechnical-matrix-evidence" element={<SociotechnicalMatrixEvidence />} />
               <Route path="/research/eu-law-citation-graph" element={<EuLawCitationGraph />} />
               <Route path="/research/quantum-collateral-benchmark" element={<QuantumCollateralBenchmark />} />
               <Route path="/research/jsonld-escaping-conformance" element={<JsonLdEscapingConformance />} />

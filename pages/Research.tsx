@@ -103,7 +103,16 @@ export const Research: React.FC = () => {
         </div>
         <div className="space-y-4">
 
-        <PublicationGroup title="Safe & verifiable AI" count={15}>
+        <PublicationGroup title="Safe & verifiable AI" count={16}>
+          <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
+            <Link to="/research/sociotechnical-matrix-evidence"><h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark hover:underline transition-colors">Which cells of a sociotechnical AI evaluation matrix can anyone check?</h3></Link>
+            <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Open research, AI evaluation assurance, 2026</p>
+            <p className="text-base text-gov-dark/90 leading-relaxed">This is a partition of the Ada Lovelace Institute and NICE sociotechnical evaluation matrix into the 39 of 120 cells a published evaluation can settle, the 75 that rest on organisational records and the 6 that are judgements, run against 13 open-access evaluations of large language models for title and abstract screening. A study evidences a median of 20 of the 39 checkable cells. 11 of 13 publish the prompt, 2 of 13 report confidence intervals, 1 of 13 measures performance by language, and 0 of 13 pin an exact model version with a run date.</p>
+            <div className="mt-3 flex flex-wrap gap-3 items-center">
+              <Link to="/research/sociotechnical-matrix-evidence" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">Read the study</Link>
+              <a href="https://github.com/fabio-rovai/sociotechnical-matrix-assurance" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">repository on GitHub<span className="sr-only"> (opens in new tab)</span></a>
+            </div>
+          </li>
            <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
              <Link to="/research/jsonld-escaping-conformance"><h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark hover:underline transition-colors">How Many Passes of HTML Unescaping Should a JSON-LD Parser Do? A Census of the Tranco Top 10,000</h3></Link>
              <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Open census, measured against Google&apos;s own parser, 2026</p>
