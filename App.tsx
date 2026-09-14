@@ -183,7 +183,7 @@ const PAGE_META: Record<string, { title: string; description: string }> = {
     description: 'Client reviews and executive AI training case studies. Workshops delivered for US Navy (40+ participants), Vodafone, and Philips leadership teams. Verified Clutch reviews.',
   },
   '/about': {
-    title: 'About Tesseract Academy - Team & Credentials | Tesseract Academy for the Public Sector',
+    title: 'About Tesseract Academy - Company Credentials | Tesseract Academy for the Public Sector',
     description: 'Meet the Tesseract Academy team: Dr Stylianos Kampakis (PhD UCL, FRSS, CStat) and Fabio Rovai MSc. CCS frameworks RM6200, RM6094, RM6126, RM6219. Cyber Essentials certified. DV-cleared resource available.',
   },
   '/research/open-source': {
