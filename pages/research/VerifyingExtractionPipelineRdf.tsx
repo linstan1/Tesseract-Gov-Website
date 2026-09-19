@@ -15,7 +15,7 @@ const SCHEMA = {
   headline:
     'Checking the knowledge graph your pipeline just built | Tesseract Academy',
   description:
-    'A document-to-graph pipeline that emits RDF is making a formal claim, and it cannot check its own claim. This study runs that check against Semantica 0.6.5 and 0.6.6, an MIT-licensed Python pipeline with about 9,300 stars, using two independent RDF readers to adjudicate every output. Seventeen defects were found and reported, four fixes are merged upstream, and six pull requests are open as of 21 August 2026. The failures share a shape: the export succeeds, a lenient reader accepts it, and the data is wrong or missing anyway. A two-entity JSON-LD export parsed as 2 triples through one reader and 21 quads through another with no error either way. pySHACL reported conformance on data that violated every constraint, because the generated shapes targeted a namespace the generated data never used. Timestamps written without a UTC offset caused a timezone-qualified SPARQL filter to silently drop every affected row.',
+    'A document-to-graph pipeline that emits RDF is making a formal claim, and it cannot check its own claim. This study runs that check against Semantica 0.6.5 and 0.6.6, an MIT-licensed Python pipeline with about 9,300 stars, using two independent RDF readers to adjudicate every output. Seventeen defects were found and reported, and as of 19 September 2026 all seventeen are fixed and closed upstream. The failures share a shape: the export succeeds, a lenient reader accepts it, and the data is wrong or missing anyway. A two-entity JSON-LD export parsed as 2 triples through one reader and 21 quads through another with no error either way. pySHACL reported conformance on data that violated every constraint, because the generated shapes targeted a namespace the generated data never used. Timestamps written without a UTC offset caused a timezone-qualified SPARQL filter to silently drop every affected row.',
   author: { '@id': 'https://gov.tesseract.academy/#organization' },
   publisher: { '@id': 'https://gov.tesseract.academy/#organization' },
   datePublished: '2026-08-21',
@@ -78,7 +78,7 @@ const FINDINGS = [
     n: '17 issues',
     sev: 'signal',
     means:
-      'Four fixes are merged upstream and six pull requests are open. The pipeline is actively maintained and the reports were accepted, which is why this reads as a method rather than an audit.',
+      'All seventeen are now fixed and closed upstream: twelve by pull requests from this work and five by other contributors. The pipeline is actively maintained and the reports were accepted, which is why this reads as a method rather than an audit.',
   },
   {
     f: 'Triples recovered from a two-entity JSON-LD export by a plain graph reader, against the quads the same bytes yield to a dataset reader',
@@ -154,7 +154,7 @@ export const VerifyingExtractionPipelineRdf: React.FC = () => (
       </h1>
       <p className="text-xl text-gov-secondary/90 leading-relaxed">
         A pipeline that turns documents into RDF is making a claim in a formal language, and it has no way to check its own claim. We ran that check against{' '}
-        <a href={SUBJECT} target="_blank" rel="noopener noreferrer" className="text-gov-blue hover:text-gov-blue-dark underline">Semantica</a>, an MIT-licensed Python pipeline with about 9,300 stars, at versions 0.6.5 and 0.6.6, by reading every output back through two independent RDF engines and comparing what each one saw. Seventeen defects came out of it. Four of the fixes are merged upstream and six pull requests are open as of 21 August 2026. The failures share a shape worth knowing about before you buy one of these systems: the export succeeds, a lenient reader accepts it, and the graph is wrong or largely absent anyway.
+        <a href={SUBJECT} target="_blank" rel="noopener noreferrer" className="text-gov-blue hover:text-gov-blue-dark underline">Semantica</a>, an MIT-licensed Python pipeline with about 9,300 stars, at versions 0.6.5 and 0.6.6, by reading every output back through two independent RDF engines and comparing what each one saw. Seventeen defects came out of it. All seventeen are now fixed and closed upstream: twelve by pull requests from this work and five by other contributors. The failures share a shape worth knowing about before you buy one of these systems: the export succeeds, a lenient reader accepts it, and the graph is wrong or largely absent anyway.
       </p>
     </header>
 
@@ -183,7 +183,7 @@ export const VerifyingExtractionPipelineRdf: React.FC = () => (
     <section className="space-y-4">
       <h2 className="text-2xl font-bold text-gov-dark font-serif">Two readers, one file, two different answers</h2>
       <p className="text-gov-dark leading-relaxed">
-        The pipeline’s graph builder defaults an entity’s identifier to its surface text and its type to whatever label the extractor produced. On the documented path, that produces Turtle like this:
+        At the versions examined, the pipeline’s graph builder defaulted an entity’s identifier to its surface text and its type to whatever label the extractor produced, and nothing validated either before writing it between angle brackets. On the documented path, that produced Turtle like this:
       </p>
       <pre className="bg-gov-dark text-gray-100 rounded-lg p-4 overflow-x-auto text-sm"><code>{`<Acme Corp> a <ORG> ;
     semantica:text "Acme Corp" ;
@@ -194,6 +194,9 @@ export const VerifyingExtractionPipelineRdf: React.FC = () => (
       </p>
       <p className="text-gov-dark leading-relaxed">
         Both behaviours are defensible readings of the standard’s tolerance rules. Only one of them tells you that your entity identifiers now depend on which directory the batch job happened to run in. If you have ever wondered why two loads of the same corpus produced graphs that would not join, this is a candidate explanation.
+      </p>
+      <p className="text-gov-dark leading-relaxed">
+        That particular defect has since been fixed. It was reported upstream, and at version 0.7.0 a bare identifier is percent-encoded into the declared namespace, so the same input now produces <code className="text-sm bg-gov-bg px-1.5 py-0.5 rounded">&lt;https://semantica.dev/ns#Acme%20Corp&gt;</code> and both readers accept it. The disagreement it illustrates did not go away. An identifier that already looks like an absolute IRI is still written through without validation, so an identifier of <code className="text-sm bg-gov-bg px-1.5 py-0.5 rounded">http://example.com/##</code> is emitted verbatim: rdflib returns three triples carrying that malformed subject, and Oxigraph refuses the file. The fixture had to be replaced. The reason for running a second reader did not.
       </p>
     </section>
 
