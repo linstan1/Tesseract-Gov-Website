@@ -9,7 +9,7 @@ const POLICIES = [
   { title: 'Carbon Reduction Plan', version: 'v1.2', date: 'Feb 2025', size: '10KB', href: '/policies/carbon-reduction-plan.pdf' },
   { title: 'Business Continuity Plan', version: 'v1.0', date: 'Jun 2026', size: '58KB', href: '/policies/business-continuity-plan.pdf' },
   { title: 'Equal Opportunities and Diversity Policy', version: 'v1.0', date: 'Jun 2026', size: '57KB', href: '/policies/equal-opportunities-policy.pdf' },
-  { title: 'Accessibility Statement', version: 'v1.0', date: 'Mar 2025', size: '9KB', href: '/policies/accessibility-statement.pdf' },
+  { title: 'Accessibility Statement', version: 'v2.0', date: 'Oct 2026', size: 'Web page', href: '/accessibility' },
 ];
 
 export const Compliance: React.FC = () => {
@@ -36,8 +36,8 @@ export const Compliance: React.FC = () => {
                    <p className="text-xs text-gov-secondary">Updated: {p.date} • {p.version} • {p.size}</p>
                  </div>
               </div>
-              <a href={p.href} target="_blank" rel="noopener noreferrer">
-                <Button variant="outline" className="text-sm py-2 px-4 hover:scale-100">Download<span className="sr-only"> (opens in new tab)</span></Button>
+              <a href={p.href} {...(p.href.endsWith('.pdf') ? { target: '_blank', rel: 'noopener noreferrer' } : {})}>
+                <Button variant="outline" className="text-sm py-2 px-4 hover:scale-100">{p.href.endsWith('.pdf') ? 'Download' : 'View'}{p.href.endsWith('.pdf') ? <span className="sr-only"> (opens in new tab)</span> : null}</Button>
               </a>
             </div>
           ))}
@@ -45,28 +45,20 @@ export const Compliance: React.FC = () => {
       </section>
 
       <section className="grid grid-cols-1 md:grid-cols-3 gap-10">
-        {/* Accessibility Commitment */}
+        {/* Accessibility */}
         <aside className="bg-gov-bg border border-gov-border/50 p-6 rounded-lg">
-          <h3 className="text-sm font-bold text-gov-dark mb-3">Accessibility Commitment</h3>
+          <h3 className="text-sm font-bold text-gov-dark mb-3">Accessibility</h3>
           <p className="text-xs text-gov-dark/80 leading-relaxed mb-3">
-            We aim for WCAG 2.1 AA compliance across all digital services.
+            We test our websites and every learning package we produce against WCAG 2.2 level AA. Our websites are partially compliant today. Our accessibility statements list what fails, what we are fixing and by when:
           </p>
           <ul className="space-y-2 text-xs text-gov-dark/80">
             <li className="flex items-start gap-2">
               <span className="w-1 h-1 bg-gov-blue rounded-full mt-1.5 flex-shrink-0"></span>
-              <span>Semantic HTML for screen readers</span>
+              <a href="/accessibility" className="text-gov-blue underline hover:text-gov-blue-dark">gov.tesseract.academy accessibility statement</a>
             </li>
             <li className="flex items-start gap-2">
               <span className="w-1 h-1 bg-gov-blue rounded-full mt-1.5 flex-shrink-0"></span>
-              <span>Keyboard navigation support</span>
-            </li>
-            <li className="flex items-start gap-2">
-              <span className="w-1 h-1 bg-gov-blue rounded-full mt-1.5 flex-shrink-0"></span>
-              <span>High contrast ratios</span>
-            </li>
-            <li className="flex items-start gap-2">
-              <span className="w-1 h-1 bg-gov-blue rounded-full mt-1.5 flex-shrink-0"></span>
-              <span>No flashing content</span>
+              <a href="https://tesseract.academy/accessibility/" className="text-gov-blue underline hover:text-gov-blue-dark">tesseract.academy accessibility statement</a>
             </li>
           </ul>
         </aside>
@@ -77,10 +69,10 @@ export const Compliance: React.FC = () => {
         <aside className="bg-gov-bg border border-gov-border/50 p-6 rounded-lg">
           <div className="flex items-center gap-3 mb-3">
             <img src="/logos/visiona-ability.png" alt="Vision Ability CIC" width="400" height="400" loading="lazy" decoding="async" className="h-10 object-contain rounded" />
-            <h3 className="text-sm font-bold text-gov-dark">Accessibility Partner</h3>
+            <h3 className="text-sm font-bold text-gov-dark">Testing partner</h3>
           </div>
           <p className="text-xs text-gov-dark/80 leading-relaxed">
-            We work with <a href="https://www.visionability.org.uk/" target="_blank" rel="noopener noreferrer" className="font-semibold text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">Vision Ability CIC<span className="sr-only"> (opens in new tab)</span></a> to audit our digital services for WCAG 2.1 AA compliance.
+            Our proposed disabled-user testing partner is <a href="https://www.visionability.org.uk/" target="_blank" rel="noopener noreferrer" className="font-semibold text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">Vision Ability CIC<span className="sr-only"> (opens in new tab)</span></a>. We have worked together on public events about accessible AI. Vision Ability CIC is a community organisation of visually impaired people, and its members would test our new learning pathways using screen readers and magnification. They test usability; they are not accessibility auditors.
           </p>
         </aside>
       </section>

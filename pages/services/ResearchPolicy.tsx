@@ -60,8 +60,7 @@ export const ResearchPolicy: React.FC = () => {
           specialist audiences. HM Treasury Green Book appraisal standards and MHCLG evaluation frameworks inform our programme evaluation designs.
         </p>
         <p className="text-gov-dark leading-relaxed text-base">
-          We have contributed expert regulatory analysis to the Financial Conduct Authority's
-          consultation on stablecoin regulation, provided AI skills data to the <a href="https://www.gov.uk/government/organisations/skills-england" target="_blank" rel="noopener noreferrer" className="text-gov-blue hover:underline">Skills England</a> report
+          We have provided AI skills data to the <a href="https://www.gov.uk/government/organisations/skills-england" target="_blank" rel="noopener noreferrer" className="text-gov-blue hover:underline">Skills England</a> report
           alongside the Alan Turing Institute, and produced <a href="https://www.gov.wales/testing-land-valuation-methods" target="_blank" rel="noopener noreferrer" className="text-gov-blue hover:underline">land valuation research for Welsh Government</a>
           that was cited in Senedd committee proceedings. Our research has also been used by NESTA and Innovate UK to inform technology adoption policy. These outputs demonstrate our ability to
           operate at the intersection of technical depth and policy relevance.
@@ -69,7 +68,7 @@ export const ResearchPolicy: React.FC = () => {
         <p className="text-gov-dark leading-relaxed text-base">
           Our research team holds professional indemnity insurance of £5 million and operates under
           a robust data governance framework compliant with UK GDPR and the Data Protection Act 2018.
-          We hold an ICO registration (ZB715782) and are experienced in processing sensitive and
+          We hold an Information Commission registration (ZB715782) and are experienced in processing sensitive and
           special category research data under appropriate legal bases. Procurement is available through the <a href="https://www.crowncommercial.gov.uk/agreements/RM6200" target="_blank" rel="noopener noreferrer" className="text-gov-blue hover:underline">Crown Commercial Service (CCS) RM6200</a> framework, with the National Audit Office's value-for-money criteria informing our cost-effectiveness reporting.
         </p>
       </section>
@@ -95,7 +94,7 @@ export const ResearchPolicy: React.FC = () => {
               </tr>
               <tr className="hover:bg-gov-bg/60 transition-colors">
                 <td className="px-6 py-4 text-gov-dark font-medium">Regulatory consultation input</td>
-                <td className="px-6 py-4 text-gov-dark">FCA, Senedd, Skills England</td>
+                <td className="px-6 py-4 text-gov-dark">Senedd, Skills England</td>
                 <td className="px-6 py-4 text-gov-secondary">Occasional — depends on institution</td>
                 <td className="px-6 py-4 text-gov-secondary">Rare — not core capability</td>
               </tr>
@@ -203,7 +202,7 @@ export const ResearchPolicy: React.FC = () => {
               1
             </span>
             <div>
-              <p className="font-semibold text-gov-dark">CCS RM6200 — Management Consultancy Three</p>
+              <p className="font-semibold text-gov-dark">CCS RM6200, Artificial Intelligence DPS</p>
               <p className="text-gov-secondary text-sm mt-1">
                 The recommended route for research and policy analysis engagements. Covers systematic
                 reviews, feasibility studies, policy evaluation, and regulatory consultation input.
@@ -215,7 +214,7 @@ export const ResearchPolicy: React.FC = () => {
               2
             </span>
             <div>
-              <p className="font-semibold text-gov-dark">CCS RM6094 — Research and Insights</p>
+              <p className="font-semibold text-gov-dark">CCS RM6126, Research and Insights DPS</p>
               <p className="text-gov-secondary text-sm mt-1">
                 Suitable for primary research, survey-led evidence gathering, and stakeholder
                 consultation projects. Includes market research and user insight services.

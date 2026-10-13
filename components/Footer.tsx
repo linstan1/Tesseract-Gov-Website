@@ -20,7 +20,7 @@ export const Footer: React.FC = () => {
           <div>
             <h4 className="text-xs font-bold uppercase tracking-widest text-gov-dark mb-4">Compliance</h4>
             <ul className="space-y-2.5 text-sm text-gov-secondary">
-              <li><a href="/policies/accessibility-statement.pdf" className="hover:text-gov-dark transition-colors">Accessibility Statement</a></li>
+              <li><Link to="/accessibility" className="hover:text-gov-dark transition-colors">Accessibility Statement</Link></li>
               <li><a href="/policies/data-protection-policy.pdf" className="hover:text-gov-dark transition-colors">Privacy Notice</a></li>
               <li><a href="/policies/modern-slavery-statement.pdf" className="hover:text-gov-dark transition-colors">Modern Slavery Statement</a></li>
               <li><Link to="/compliance" className="hover:text-gov-dark transition-colors">All Policies</Link></li>
@@ -30,7 +30,7 @@ export const Footer: React.FC = () => {
             <h4 className="text-xs font-bold uppercase tracking-widest text-gov-dark mb-4">Contact</h4>
             <ul className="space-y-2.5 text-sm text-gov-secondary">
               <li>
-                <span className="block text-xs text-gov-secondary mb-0.5">Head of Procurement & Delivery</span>
+                <span className="block text-xs text-gov-secondary mb-0.5">Fabio Rovai, Deputy Director</span>
                 <a href="mailto:fabio@thetesseractacademy.com" className="hover:text-gov-dark transition-colors font-medium">
                   fabio@thetesseractacademy.com
                 </a>
@@ -53,7 +53,7 @@ export const Footer: React.FC = () => {
             &copy; {new Date().getFullYear()} Tesseract Academy. All rights reserved.
           </p>
           <p className="text-xs text-gov-secondary">
-             Aligned to WCAG 2.1 AA Standards.
+             <Link to="/accessibility" className="underline hover:text-gov-dark">Accessibility statement</Link> (WCAG 2.2 AA, partially compliant)
           </p>
         </div>
       </div>

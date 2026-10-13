@@ -89,7 +89,7 @@ export const DigitalAnalytics: React.FC = () => {
           drew 1,100 registrations against a 200-place target.
         </p>
         <p className="text-gov-dark leading-relaxed text-base">
-          We work under UK GDPR with ICO registration (ZB715782), hold Cyber Essentials
+          We work under UK GDPR with Information Commission registration (ZB715782), hold Cyber Essentials
           certification, and are an appointed supplier on{' '}
           <a href="https://www.crowncommercial.gov.uk/agreements/RM6126" target="_blank" rel="noopener noreferrer" className="text-gov-blue hover:underline">CCS RM6126</a>{' '}
           (Research and Insights) and the Imperial War Museums Digital Transformation Support

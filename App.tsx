@@ -14,6 +14,7 @@ const Partnerships = lazy(() => import('./pages/Partnerships').then(m => ({ defa
 const Compliance = lazy(() => import('./pages/Compliance').then(m => ({ default: m.Compliance })));
 const Feedback = lazy(() => import('./pages/Feedback').then(m => ({ default: m.Feedback })));
 const About = lazy(() => import('./pages/About').then(m => ({ default: m.About })));
+const Accessibility = lazy(() => import('./pages/Accessibility').then(m => ({ default: m.Accessibility })));
 const OpenSource = lazy(() => import('./pages/research/OpenSource').then(m => ({ default: m.OpenSource })));
 const WelshGovernment = lazy(() => import('./pages/research/WelshGovernment').then(m => ({ default: m.WelshGovernment })));
 const NationalDigitalTwin = lazy(() => import('./pages/research/NationalDigitalTwin').then(m => ({ default: m.NationalDigitalTwin })));
@@ -124,7 +125,7 @@ const PAGE_META: Record<string, { title: string; description: string }> = {
   },
   '/industries/government-public-services': {
     title: 'Government and Public Services | Tesseract Academy for the Public Sector',
-    description: 'Delivered for the Welsh Government, the National Digital Twin Programme, Qualifications Wales and Imperial War Museums. Appointed on five Crown Commercial Service frameworks. Open research on public registers, consultations and government evaluation.',
+    description: 'Delivered for the Welsh Government, the National Digital Twin Programme, Qualifications Wales and Imperial War Museums. Supplier on four Crown Commercial Service dynamic purchasing systems. Open research on public registers, consultations and government evaluation.',
   },
   '/industries/financial-services-insurance': {
     title: 'Financial Services and Insurance | Tesseract Academy for the Public Sector',
@@ -156,7 +157,7 @@ const PAGE_META: Record<string, { title: string; description: string }> = {
   },
   '/how-to-buy': {
     title: 'How to Buy - Procurement Routes | Tesseract Academy for the Public Sector',
-    description: 'Commission Tesseract Academy through Crown Commercial Service frameworks (RM6200, RM6094, RM6126, RM6219) or direct award. SME supplier for AI, research, training, and digital services.',
+    description: 'Commission Tesseract Academy through Crown Commercial Service dynamic purchasing systems RM6200 (AI DPS), RM6126 (Research & Insights DPS), RM6219 (Learning & Training Services DPS) or RM6235 (Space-Enabled & Geospatial Services DPS), or by direct award below the threshold.',
   },
   '/capabilities': {
     title: 'Capabilities: ontology engineering, AI, research, education and survey services | Tesseract Academy for the Public Sector',
@@ -174,6 +175,10 @@ const PAGE_META: Record<string, { title: string; description: string }> = {
     title: 'Consortium Partnerships - Innovate UK & Horizon Europe | Tesseract Academy for the Public Sector',
     description: 'Partner with Tesseract Academy on Innovate UK and Horizon Europe bids. Focus areas: trustworthy AI, digital twins, HealthTech, and sustainable technology.',
   },
+  '/accessibility': {
+    title: 'Accessibility Statement | Tesseract Academy for the Public Sector',
+    description: 'Accessibility statement for gov.tesseract.academy. The site is partially compliant with WCAG 2.2 level AA. What does not yet work, when we will fix it, and how to ask for another format.',
+  },
   '/compliance': {
     title: 'Compliance & Policies | Tesseract Academy for the Public Sector',
     description: 'Cyber Essentials certified, ISO 27001 aligned. Download our data protection, information security, modern slavery, carbon reduction, and accessibility policies.',
@@ -184,7 +189,7 @@ const PAGE_META: Record<string, { title: string; description: string }> = {
   },
   '/about': {
     title: 'About Tesseract Academy - Company Credentials | Tesseract Academy for the Public Sector',
-    description: 'Meet the Tesseract Academy team: Dr Stylianos Kampakis (PhD UCL, FRSS, CStat) and Fabio Rovai MSc. CCS frameworks RM6200, RM6094, RM6126, RM6219. Cyber Essentials certified. DV-cleared resource available.',
+    description: 'Dr Stylianos Kampakis (PhD UCL) and Fabio Rovai MSc. Kampakis and Co Ltd, incorporated 2016. CCS supplier on RM6200, RM6126, RM6219 and RM6235. Cyber Essentials certified. DV-cleared consultant available.',
   },
   '/research/open-source': {
     title: 'Open source contributions: the data standards we file bugs against | Tesseract Academy for the Public Sector',
@@ -658,6 +663,7 @@ const App: React.FC = () => {
               <Route path="/industries/education-skills" element={<IndustryPage slug="education-skills" />} />
               <Route path="/partnerships" element={<Partnerships />} />
               <Route path="/compliance" element={<Compliance />} />
+              <Route path="/accessibility" element={<Accessibility />} />
               <Route path="/testimonials" element={<Feedback />} />
               <Route path="/about" element={<About />} />
               <Route path="/research/open-source" element={<OpenSource />} />

@@ -1,6 +1,6 @@
 # Tesseract Academy for the Public Sector
 
-> Kampakis and Co Ltd (trading as The Tesseract Academy) is a UK-based AI and data science consultancy delivering research-backed services exclusively to public sector organisations. Its most distinctive capability is ontology engineering: designing domain ontologies in RDF, OWL 2, SKOS and SHACL, building and validating knowledge graphs, auditing data standards and public registers, and verifying AI-generated RDF against a closed-world vocabulary gate. It built the AI ontology extension generator for the UK National Digital Twin Programme and has published 51 open ontology studies across 29 public repositories. Crown Commercial Service appointed supplier on RM6200 (AI DPS), RM6094 (Spark DPS), RM6126 (Research & Insights DPS), RM6219 (Learning & Training Services DPS), and RM6235 (Space-Enabled & Geospatial Services DPS). Company number 10459791. Incorporated 2 November 2016.
+> Kampakis and Co Ltd (trading as The Tesseract Academy) is a UK-based AI and data science consultancy delivering research-backed services exclusively to public sector organisations. Its most distinctive capability is ontology engineering: designing domain ontologies in RDF, OWL 2, SKOS and SHACL, building and validating knowledge graphs, auditing data standards and public registers, and verifying AI-generated RDF against a closed-world vocabulary gate. It built the AI ontology extension generator for the UK National Digital Twin Programme and has published 51 open ontology studies across 29 public repositories. Crown Commercial Service supplier on RM6200 (AI DPS), RM6126 (Research & Insights DPS), RM6219 (Learning & Training Services DPS) and RM6235 (Space-Enabled & Geospatial Services DPS). Company number 10459791. Incorporated 2 November 2016.
 
 ## Ontology engineering and knowledge graphs
 
@@ -20,7 +20,7 @@ Key measured results in this area: open-world SHACL accepted all 300 data graphs
 - [Research](https://gov.tesseract.academy/research): Published academic and government-commissioned research, open-source tools, conference talks
 - [Partnerships](https://gov.tesseract.academy/partnerships): Consortium bid opportunities for Innovate UK and Horizon Europe projects
 - [Compliance](https://gov.tesseract.academy/compliance): Cyber Essentials, ISO 27001 alignment, insurance schedules, downloadable policy documents
-- [About](https://gov.tesseract.academy/about): Team credentials: Dr Stylianos Kampakis (PhD UCL, CStat, FRSS) and Fabio Rovai (MSc UAL, NeurIPS reviewer)
+- [About](https://gov.tesseract.academy/about): Team credentials: Dr Stylianos Kampakis (PhD UCL) and Fabio Rovai (MSc UAL, NeurIPS reviewer)
 - [Testimonials](https://gov.tesseract.academy/testimonials): Client reviews and executive training case studies
 
 ## Machine-readable data
@@ -40,11 +40,11 @@ Key measured results in this area: open-world SHACL accepted all 300 data graphs
 - Trading name: The Tesseract Academy
 - Founded: 2 November 2016
 - Address: 5 Brunswick Park Gardens, London, England, N11 1EJ
-- CCS frameworks: RM6200 (AI DPS), RM6094 (Spark DPS), RM6126 (Research & Insights DPS), RM6219 (Learning & Training Services DPS), RM6235 (Space-Enabled & Geospatial Services DPS)
-- Certifications: Cyber Essentials, ISO 27001 aligned, ICO ZB715782, DUNS 222180245, PPON PWJP-6874-MXDJ
-- Insurance: PL £2M, EL £10M, PI £5M
-- MD: Dr Stylianos Kampakis, PhD Machine Learning (UCL), Chartered Statistician, Fellow of the Royal Statistical Society, 40+ peer-reviewed publications
-- Delivery lead: Fabio Rovai, MSc Data Science & AI (University of the Arts London), NeurIPS Ethics Reviewer
+- CCS dynamic purchasing systems: RM6200 (AI DPS), RM6126 (Research & Insights DPS), RM6219 (Learning & Training Services DPS), RM6235 (Space-Enabled & Geospatial Services DPS)
+- Certifications: Cyber Essentials, ISO 27001 aligned, Information Commission registration ZB715782, DUNS 222180245, PPON PWJP-6874-MXDJ
+- Insurance: public liability £5M, employer's liability £10M, professional indemnity £5M
+- MD: Dr Stylianos Kampakis, PhD Machine Learning (UCL), Member of the Royal Statistical Society, 40+ peer-reviewed publications
+- Deputy Director: Fabio Rovai, MSc Data Science & AI (University of the Arts London), NeurIPS Ethics Reviewer
 - Horizon Europe PIC: 880269472
 - Primary technical specialism: ontology engineering and knowledge graphs in RDF, OWL 2, SKOS, SHACL and SPARQL, with a closed-world verification layer for AI-generated RDF
 - Ontology track record: 51 published open studies, 29 public repositories, the AI ontology extension generator delivered for the UK National Digital Twin Programme, and defect reports accepted upstream by IATA, W3C, the US General Services Administration and the USDA National Agricultural Library

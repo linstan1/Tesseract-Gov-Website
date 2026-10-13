@@ -22,7 +22,7 @@ const PAGE_META = {
   },
   '/industries/government-public-services': {
     title: 'Government and Public Services | Tesseract Academy for the Public Sector',
-    description: 'Delivered for the Welsh Government, the National Digital Twin Programme, Qualifications Wales and Imperial War Museums. Appointed on five Crown Commercial Service frameworks. Open research on public registers, consultations and government evaluation.',
+    description: 'Delivered for the Welsh Government, the National Digital Twin Programme, Qualifications Wales and Imperial War Museums. Supplier on four Crown Commercial Service dynamic purchasing systems. Open research on public registers, consultations and government evaluation.',
   },
   '/industries/financial-services-insurance': {
     title: 'Financial Services and Insurance | Tesseract Academy for the Public Sector',
@@ -50,11 +50,11 @@ const PAGE_META = {
   },
   '/': {
     title: 'Tesseract Academy for the Public Sector - Research, AI & Public Sector Delivery Partner',
-    description: 'Tesseract Academy delivers research-backed AI, data science, public engagement, survey design, and policy advisory services for UK and EU public sector organisations. Crown Commercial Service appointed supplier on RM6200, RM6094, RM6126.',
+    description: 'Tesseract Academy delivers research-backed AI, data science, public engagement, survey design, and policy advisory services for UK and EU public sector organisations. Crown Commercial Service supplier on RM6200, RM6126, RM6219 and RM6235.',
   },
   '/how-to-buy': {
     title: 'How to Buy - Procurement Routes | Tesseract Academy for the Public Sector',
-    description: 'Commission Tesseract Academy through Crown Commercial Service frameworks RM6200 (AI DPS), RM6094 (Spark DPS), or RM6126 (Research & Insights DPS). Direct award available under Procurement Act 2023 threshold.',
+    description: 'Commission Tesseract Academy through Crown Commercial Service dynamic purchasing systems RM6200 (AI DPS), RM6126 (Research & Insights DPS), RM6219 (Learning & Training Services DPS) or RM6235 (Space-Enabled & Geospatial Services DPS), or by direct award below the threshold.',
   },
   '/capabilities': {
     title: 'Capabilities: ontology engineering, AI, research, education and survey services | Tesseract Academy for the Public Sector',
@@ -72,9 +72,13 @@ const PAGE_META = {
     title: 'Consortium Partnerships - Innovate UK & Horizon Europe | Tesseract Academy for the Public Sector',
     description: 'Partner with Tesseract Academy on Innovate UK and Horizon Europe bids. Horizon Europe PIC: 880269472. Focus areas: trustworthy AI, digital twins, HealthTech, sustainable technology.',
   },
+  '/accessibility': {
+    title: 'Accessibility Statement | Tesseract Academy for the Public Sector',
+    description: 'Accessibility statement for gov.tesseract.academy. The site is partially compliant with WCAG 2.2 level AA. What does not yet work, when we will fix it, and how to ask for another format.',
+  },
   '/compliance': {
     title: 'Compliance & Policies | Tesseract Academy for the Public Sector',
-    description: 'Cyber Essentials certified, ISO 27001 aligned. PL £2M, EL £10M, PI £5M insurance. ICO ZB715782. DUNS 222180245. PPON PWJP-6874-MXDJ. Download all policy documents.',
+    description: 'Cyber Essentials certified, ISO 27001 aligned. Public liability £5M, employer\'s liability £10M, professional indemnity £5M. Information Commission ZB715782. DUNS 222180245. PPON PWJP-6874-MXDJ. Policy documents.',
   },
   '/testimonials': {
     title: 'Testimonials & Executive Training | Tesseract Academy for the Public Sector',
@@ -82,7 +86,7 @@ const PAGE_META = {
   },
   '/about': {
     title: 'About Tesseract Academy - Company Credentials | Tesseract Academy for the Public Sector',
-    description: 'Dr Stylianos Kampakis (PhD UCL, CStat, FRSS, 40+ publications) and Fabio Rovai MSc (UAL, NeurIPS reviewer). DV-cleared consultant available. Incorporated 2016. CCS frameworks RM6200, RM6094, RM6126.',
+    description: 'Dr Stylianos Kampakis (PhD UCL) and Fabio Rovai MSc. Kampakis and Co Ltd, incorporated 2016. CCS supplier on RM6200, RM6126, RM6219 and RM6235. Cyber Essentials certified. DV-cleared consultant available.',
   },
   '/research/open-source': {
     title: 'Open source contributions: the data standards we file bugs against | Tesseract Academy for the Public Sector',
@@ -478,7 +482,7 @@ const PAGE_META = {
   },
   '/services/ai-governance': {
     title: 'AI Ethics & Governance | Tesseract Academy for the Public Sector',
-    description: 'EU AI Act, NIST AI RMF, ISO 42001 compliance. Bias auditing, algorithmic impact assessments. Open-source governance platform (48 tools). Cyber Essentials certified. FCA stablecoin consultation.',
+    description: 'EU AI Act, NIST AI RMF, ISO 42001 compliance. Bias auditing, algorithmic impact assessments. Open-source governance platform (48 tools). Cyber Essentials certified.',
   },
   '/services/ontology-engineering': {
     title: 'Ontology engineering consultancy: RDF, OWL 2 and SHACL | Tesseract Academy for the Public Sector',

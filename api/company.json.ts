@@ -25,7 +25,7 @@ const COMPANY_DATA = {
   },
   "contact": {
     "name": "Fabio Rovai",
-    "role": "Partner and Delivery Lead",
+    "role": "Deputy Director",
     "email": "fabio@thetesseractacademy.com",
     "phone": "07398771664"
   },
@@ -37,8 +37,7 @@ const COMPANY_DATA = {
       "honorificPrefix": "Dr",
       "credentials": [
         "PhD in Machine Learning, University College London",
-        "Chartered Statistician (CStat)",
-        "Fellow of the Royal Statistical Society (FRSS)",
+        "Member of the Royal Statistical Society",
         "Honorary Research Fellow, UCL Centre for Blockchain Technologies",
         "Data Science Advisor, London Business School"
       ],
@@ -47,7 +46,7 @@ const COMPANY_DATA = {
     {
       "@type": "Person",
       "name": "Fabio Rovai",
-      "jobTitle": "Partner and Delivery Lead",
+      "jobTitle": "Deputy Director",
       "credentials": [
         "MSc Data Science and AI, University of the Arts London",
         "Associate Lecturer (1000+ students across 5 programmes)",
@@ -62,12 +61,6 @@ const COMPANY_DATA = {
       "name": "Artificial Intelligence Dynamic Purchasing System",
       "shortName": "AI DPS",
       "scope": "AI consulting, model development, ethics and governance"
-    },
-    {
-      "id": "RM6094",
-      "name": "Spark Dynamic Purchasing System",
-      "shortName": "Spark DPS",
-      "scope": "Research, data science, digital transformation"
     },
     {
       "id": "RM6126",
@@ -91,7 +84,7 @@ const COMPANY_DATA = {
   "certifications": [
     { "name": "Cyber Essentials", "status": "certified" },
     { "name": "ISO 27001", "status": "aligned" },
-    { "name": "ICO Registration", "reference": "ZB715782" }
+    { "name": "Information Commission registration", "reference": "ZB715782" }
   ],
   "identifiers": {
     "companiesHouse": "10459791",
@@ -102,7 +95,7 @@ const COMPANY_DATA = {
     "horizonEuropePic": "880269472"
   },
   "insurance": {
-    "publicLiability": { "value": 2000000, "currency": "GBP" },
+    "publicLiability": { "value": 5000000, "currency": "GBP" },
     "employerLiability": { "value": 10000000, "currency": "GBP" },
     "professionalIndemnity": { "value": 5000000, "currency": "GBP" }
   },

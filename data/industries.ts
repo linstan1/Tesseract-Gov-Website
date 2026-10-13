@@ -23,9 +23,9 @@ export const INDUSTRIES: Industry[] = [
     slug: 'government-public-services',
     name: 'Government and public services',
     metaTitle: 'Government and Public Services | Tesseract Academy for the Public Sector',
-    metaDesc: 'Delivered for the Welsh Government, the National Digital Twin Programme, Qualifications Wales and Imperial War Museums. Appointed on five Crown Commercial Service frameworks. Open research on public registers, consultations and government evaluation.',
+    metaDesc: 'Delivered for the Welsh Government, the National Digital Twin Programme, Qualifications Wales and Imperial War Museums. Supplier on four Crown Commercial Service dynamic purchasing systems. Open research on public registers, consultations and government evaluation.',
     lede: 'The Welsh Government commissioned us to test five land valuation methods across 1,916 LSOAs, covering 99 per cent of Welsh geography. The report was published on GOV.WALES in March 2026.',
-    body: 'Public sector work reaches us when a register, a standard or an evaluation has to survive scrutiny. That means figures that reconcile, methods a reviewer can re-run without asking us for anything, and findings that report the dissenting view instead of a tidied consensus. A public body can commission us through RM6200, RM6094, RM6126, RM6219 or RM6235, or by direct award below the Procurement Act 2023 threshold.',
+    body: 'Public sector work reaches us when a register, a standard or an evaluation has to survive scrutiny. That means figures that reconcile, methods a reviewer can re-run without asking us for anything, and findings that report the dissenting view instead of a tidied consensus. A public body can commission us through RM6200, RM6126, RM6219 or RM6235, or by direct award below the Procurement Act 2023 threshold.',
     delivered: [
       'Welsh Government. Five land valuation methods tested across 1,916 LSOAs, published on GOV.WALES in March 2026.',
       'National Digital Twin Programme and the Department for Business and Trade. An open-source AI ontology extension tool, released under Apache License 2.0 in 2025.',
@@ -63,7 +63,6 @@ export const INDUSTRIES: Industry[] = [
     body: 'Reference data in this sector fails quietly at the boundary between one register and the next, and the failure only shows up when something has to reconcile. We build the identifier fabric, run the validation, and hand back a graded report that separates what is impossible from what is merely missing, with the queries attached so your own team can re-run it.',
     delivered: [
       'Kalgera and Fintech Scotland. Research on identifying financial vulnerability.',
-      'Financial Conduct Authority. Represented the British Blockchain Association at an FCA roundtable on stablecoin regulation.',
       'IOSCO TechSprint 2026. Selected cohort participant with Aegis, on AI-enabled investment fraud. Demo Day at the IOSCO C8 Plenary in Madrid on 8 October 2026.',
       '2nd Future Payments Innovation Challenge. Finalist with the Edinburgh Protocol, pitched in Edinburgh in May 2026.',
     ],

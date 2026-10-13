@@ -68,7 +68,7 @@ export const PublicEngagement: React.FC = () => {
           that is documented and justified in our methodology sections to enable reproducibility. Outputs are formatted to meet the Office for Statistics Regulation's quality assurance standards and Government Digital Service (GDS) accessibility requirements.
         </p>
         <p className="text-gov-dark leading-relaxed text-base">
-          We are registered with the ICO (ZB715782) and process personal data collected during
+          We are registered with the Information Commission (ZB715782) and process personal data collected during
           engagement activities under UK GDPR Article 6(1)(e) (public task) or Article 9(2)(j)
           (research purposes), with all processing documented in a Data Protection Impact Assessment
           (DPIA) before fieldwork begins. Services are available via <a href="https://www.crowncommercial.gov.uk/agreements/RM6126" target="_blank" rel="noopener noreferrer" className="text-gov-blue hover:underline">Crown Commercial Service (CCS) RM6126</a>, and our social value commitments are aligned with the <a href="https://www.legislation.gov.uk/ukpga/2012/3/contents" target="_blank" rel="noopener noreferrer" className="text-gov-blue hover:underline">Social Value Act 2012</a> requirements applied by the UK AI Safety Institute and DSIT-funded programmes.
@@ -145,8 +145,8 @@ export const PublicEngagement: React.FC = () => {
             vulnerability as defined by the FCA Consumer Duty. The research protocol was developed
             to comply with the Adult Support and Protection Act 2007 duty-of-care requirements,
             ensuring appropriate safeguarding measures were in place throughout fieldwork. Findings
-            directly informed Kalgera's product development and contributed to their FCA engagement
-            on consumer vulnerability frameworks. The research sampling methodology followed Office for National Statistics (ONS) harmonised question standards and HM Treasury Green Book guidance on evaluation design. The Alan Turing Institute and NESTA have both identified participatory research with financially vulnerable populations as a priority area for public sector evidence development. Innovate UK's BridgeAI programme has cited this kind of community-rooted research as a model for responsible AI adoption. The National Audit Office considers participant representativeness a key criterion for evaluating public engagement research quality.
+            directly informed Kalgera's product development and its work on consumer vulnerability
+            frameworks. The research sampling methodology followed Office for National Statistics (ONS) harmonised question standards and HM Treasury Green Book guidance on evaluation design. The Alan Turing Institute and NESTA have both identified participatory research with financially vulnerable populations as a priority area for public sector evidence development. Innovate UK's BridgeAI programme has cited this kind of community-rooted research as a model for responsible AI adoption. The National Audit Office considers participant representativeness a key criterion for evaluating public engagement research quality.
           </p>
           <div className="grid grid-cols-3 gap-4 mt-6">
             <div className="text-center p-4 bg-white rounded-lg border border-gov-border/30">
@@ -154,8 +154,8 @@ export const PublicEngagement: React.FC = () => {
               <p className="text-sm text-gov-secondary mt-1">2007 compliant safeguarding protocol</p>
             </div>
             <div className="text-center p-4 bg-white rounded-lg border border-gov-border/30">
-              <p className="text-2xl font-extrabold text-gov-blue">FCA</p>
-              <p className="text-sm text-gov-secondary mt-1">Consumer Duty aligned methodology</p>
+              <p className="text-2xl font-extrabold text-gov-blue">Consumer Duty</p>
+              <p className="text-sm text-gov-secondary mt-1">Vulnerability definitions applied in the method</p>
             </div>
             <div className="text-center p-4 bg-white rounded-lg border border-gov-border/30">
               <p className="text-2xl font-extrabold text-gov-blue">DPIA</p>
@@ -239,7 +239,7 @@ export const PublicEngagement: React.FC = () => {
               1
             </span>
             <div>
-              <p className="font-semibold text-gov-dark">CCS RM6094 — Research and Insights</p>
+              <p className="font-semibold text-gov-dark">CCS RM6126, Research and Insights DPS</p>
               <p className="text-gov-secondary text-sm mt-1">
                 The primary route for public engagement, citizen panel delivery, deliberative research,
                 and participatory action research. Covers all aspects of community consultation and
@@ -252,7 +252,7 @@ export const PublicEngagement: React.FC = () => {
               2
             </span>
             <div>
-              <p className="font-semibold text-gov-dark">CCS RM6200 — Management Consultancy Three</p>
+              <p className="font-semibold text-gov-dark">CCS RM6200, Artificial Intelligence DPS</p>
               <p className="text-gov-secondary text-sm mt-1">
                 Suitable for engagement work embedded within wider policy advisory or digital
                 transformation projects.

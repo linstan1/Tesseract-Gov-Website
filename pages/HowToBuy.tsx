@@ -5,7 +5,6 @@ import { Card } from '../components/ui/Card';
 
 const FRAMEWORKS = [
   { name: 'Artificial Intelligence DPS', ref: 'RM6200', lots: ['AI Discovery & Consultancy', 'AI Licensing & Customisation', 'AI End-to-End Partnerships'], status: 'Live', url: 'https://www.crowncommercial.gov.uk/agreements/RM6200' },
-  { name: 'Spark DPS', ref: 'RM6094', lots: ['AI & Automation', 'Data', 'Internet of Things (IoT)'], status: 'Live', url: 'https://www.crowncommercial.gov.uk/agreements/RM6094' },
   { name: 'Research & Insights DPS', ref: 'RM6126', lots: ['Research Services', 'Insight & Evidence'], status: 'Live', url: 'https://www.crowncommercial.gov.uk/agreements/RM6126' },
   { name: 'Learning & Training Services DPS', ref: 'RM6219', lots: ['Standard Off-the-Shelf Training', 'Bespoke Training', 'Learning Technologies', 'Education Services'], status: 'Live', url: 'https://www.crowncommercial.gov.uk/agreements/RM6219' },
   { name: 'Space-Enabled & Geospatial Services DPS', ref: 'RM6235', lots: ['Satellite Communication & Broadcasting', 'Geospatial, Remote Sensing & PNT', 'Unmanned Autonomous Vehicles', 'Upstream Professional Services'], status: 'Live', url: 'https://www.crowncommercial.gov.uk/agreements/RM6235' },
@@ -81,7 +80,7 @@ export const HowToBuy: React.FC = () => {
             <p><span className="font-semibold text-gov-text">Address:</span> 5 Brunswick Park Gardens, London, England, N11 1EJ, Barnet</p>
             <p><span className="font-semibold text-gov-text">DUNS:</span> 222180245</p>
             <p><span className="font-semibold text-gov-text">PPON:</span> PWJP-6874-MXDJ</p>
-            <p><span className="font-semibold text-gov-text">ICO:</span> ZB715782</p>
+            <p><span className="font-semibold text-gov-text">Information Commission:</span> ZB715782</p>
             <p><span className="font-semibold text-gov-text">PIC:</span> 880269472</p>
             <p><span className="font-semibold text-gov-text">Size:</span> SME / Micro</p>
           </div>

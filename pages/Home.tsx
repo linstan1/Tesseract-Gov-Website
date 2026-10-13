@@ -18,7 +18,7 @@ export const Home: React.FC = () => {
             Research-backed AI and data services for <span className="text-gov-blue">UK public sector</span>
           </h1>
           <p className="text-xl text-gov-secondary/90 mb-6 max-w-3xl leading-relaxed">
-            Tesseract Academy delivers AI consulting, research, public engagement, and survey design for UK government bodies. Crown Commercial Service appointed supplier on RM6200 (AI DPS), RM6094 (Spark DPS), RM6126 (Research &amp; Insights DPS), RM6219 (Learning &amp; Training Services DPS), and RM6235 (Space-Enabled &amp; Geospatial Services DPS).
+            Tesseract Academy delivers AI consulting, research, public engagement, and survey design for UK government bodies. Crown Commercial Service supplier on RM6200 (AI DPS), RM6126 (Research &amp; Insights DPS), RM6219 (Learning &amp; Training Services DPS), and RM6235 (Space-Enabled &amp; Geospatial Services DPS).
           </p>
           <p className="text-base text-gov-secondary/80 mb-10 max-w-3xl leading-relaxed">
             Delivered for Welsh Government, Innovate UK, National Digital Twin Programme, Qualifications Wales, and Fintech Scotland.
@@ -40,7 +40,7 @@ export const Home: React.FC = () => {
           {[
             { value: "1,916", label: "Welsh LSOAs analysed", sub: "99% of Welsh geography" },
             { value: "1,100", label: "BridgeAI registrations", sub: "vs 200 capacity target" },
-            { value: "5", label: "CCS frameworks", sub: "RM6200 · RM6094 · RM6126 · RM6219 · RM6235" },
+            { value: "4", label: "CCS frameworks", sub: "RM6200 · RM6126 · RM6219 · RM6235" },
           ].map((m, i) => (
             <div key={i}>
               <div className="text-3xl font-extrabold text-white mb-1 font-mono tabular-nums">{m.value}</div>
@@ -96,7 +96,7 @@ export const Home: React.FC = () => {
              </div>
              <h3 className="font-semibold text-lg mb-3 text-gov-dark">Compliance First</h3>
              <p className="text-base text-gov-secondary/90 leading-relaxed">
-               Cyber Essentials certified and ISO 27001 aligned. PL £2M, EL £10M, PI £5M insurance. ICO registered (ZB715782). WCAG 2.1 AA accessibility standard.
+               Cyber Essentials certified and ISO 27001 aligned. Public liability £5M, employer&apos;s liability £10M, professional indemnity £5M. Registered with the Information Commission (ZB715782). <a href="/accessibility" className="text-gov-blue underline hover:text-gov-blue-dark">Accessibility statement</a>.
              </p>
            </div>
            <div className="flex flex-col items-start p-8 bg-white border border-gov-border/50 rounded-xl hover:border-gov-blue/30 transition-all duration-200 group">
@@ -114,7 +114,7 @@ export const Home: React.FC = () => {
              </div>
              <h3 className="font-semibold text-lg mb-3 text-gov-dark">UK &amp; EU Ready</h3>
              <p className="text-base text-gov-secondary/90 leading-relaxed">
-               5 CCS frameworks. Horizon Europe PIC: 880269472. DV-cleared consultant available for classified programmes. DUNS: 222180245. PPON: PWJP-6874-MXDJ.
+               4 CCS frameworks. Horizon Europe PIC: 880269472. DV-cleared consultant available for classified programmes. DUNS: 222180245. PPON: PWJP-6874-MXDJ.
              </p>
            </div>
         </div>
@@ -235,10 +235,6 @@ export const Home: React.FC = () => {
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-gov-blue flex-shrink-0 mt-0.5" />
                   <span><strong>BridgeAI / Innovate UK  - Creative Industries AI Training</strong>  - Awarded contract GSS24646 to deliver AI training and support for creative industries professionals, funded by Innovate UK BridgeAI. Bridging the gap between AI technology and creative applications across the sector.</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-gov-blue flex-shrink-0 mt-0.5" />
-                  <span><strong>FCA Cryptoasset Regulation</strong>  - Represented the British Blockchain Association at an FCA roundtable on stablecoin regulation, providing expert input on the UK's cryptoasset regulatory framework.</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-gov-blue flex-shrink-0 mt-0.5" />

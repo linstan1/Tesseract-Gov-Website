@@ -15,8 +15,7 @@ const SCHEMAS = [
     },
     hasCredential: [
       { '@type': 'EducationalOccupationalCredential', credentialCategory: 'degree', name: 'PhD Machine Learning, UCL' },
-      { '@type': 'EducationalOccupationalCredential', credentialCategory: 'certification', name: 'Chartered Statistician (CStat), Royal Statistical Society' },
-      { '@type': 'EducationalOccupationalCredential', credentialCategory: 'membership', name: 'Fellow, Royal Statistical Society (FRSS)' },
+      { '@type': 'EducationalOccupationalCredential', credentialCategory: 'membership', name: 'Member, Royal Statistical Society' },
     ],
     affiliation: [
       { '@type': 'Organization', name: 'UCL Centre for Blockchain Technologies', roleName: 'Honorary Research Fellow' },
@@ -30,7 +29,7 @@ const SCHEMAS = [
     '@id': 'https://gov.tesseract.academy/#rovai',
     name: 'Fabio Rovai',
     honorificSuffix: 'MSc',
-    jobTitle: 'Associate Lecturer and Delivery Lead',
+    jobTitle: 'Deputy Director',
     worksFor: { '@id': 'https://gov.tesseract.academy/#organization' },
     alumniOf: {
       '@type': 'CollegeOrUniversity',
@@ -53,7 +52,7 @@ export const About: React.FC = () => {
       <header className="border-b border-gov-border/30 pb-10">
         <h1 className="text-5xl font-extrabold text-gov-dark mb-6 tracking-tight leading-tight">About Tesseract Academy</h1>
         <p className="text-xl text-gov-secondary/90 leading-relaxed max-w-4xl">
-          Kampakis and Co Ltd (trading as Tesseract Academy) is a research-backed AI and data science consultancy incorporated in <time dateTime="2016-11">November 2016</time>. We deliver evidence-based AI governance, public sector analytics, and procurement-ready advisory services to UK central government, devolved administrations, and Horizon Europe consortia. Our team holds active Crown Commercial Service (CCS) framework appointments across three lots and is published in peer-reviewed journals cited by UK government policy.
+          Kampakis and Co Ltd (trading as Tesseract Academy) is a research-backed AI and data science consultancy incorporated in <time dateTime="2016-11">November 2016</time>. We deliver evidence-based AI governance, public sector analytics, and procurement-ready advisory services to UK central government, devolved administrations, and Horizon Europe consortia. We are a supplier on four Crown Commercial Service (CCS) dynamic purchasing systems, and our work is published in peer-reviewed journals cited by UK government policy.
         </p>
       </header>
 
@@ -70,7 +69,7 @@ export const About: React.FC = () => {
       <section className="space-y-6">
         <h2 className="text-3xl font-bold text-gov-dark">Company Credentials</h2>
         <p className="text-gov-dark leading-relaxed text-base max-w-4xl">
-          Kampakis and Co Ltd is a registered UK company (company number 10459791), incorporated on 2 November 2016 and registered for VAT (GB 371 4744 89). We hold three active Crown Commercial Service framework appointments, giving public bodies a direct, compliant procurement route without a further competition where regulations permit. All credentials below are verifiable through the named public registries.
+          Kampakis and Co Ltd is a registered UK company (company number 10459791), incorporated on 2 November 2016 and registered for VAT (GB 371 4744 89). We are a supplier on four Crown Commercial Service dynamic purchasing systems, listed below. Public bodies buy through a competition among the suppliers admitted to each system, or by direct award where the value is below the threshold. All credentials below are verifiable through the named public registries.
         </p>
 
         <div className="overflow-x-auto rounded-xl border border-gov-border/50">
@@ -96,11 +95,6 @@ export const About: React.FC = () => {
               <tr className="bg-white hover:bg-gov-bg/50 transition-colors">
                 <td className="px-6 py-4 font-medium text-gov-dark">CCS Framework: AI</td>
                 <td className="px-6 py-4 text-gov-dark">RM6200 — Artificial Intelligence Dynamic Purchasing System</td>
-                <td className="px-6 py-4 text-gov-dark">Crown Commercial Service</td>
-              </tr>
-              <tr className="bg-white hover:bg-gov-bg/50 transition-colors">
-                <td className="px-6 py-4 font-medium text-gov-dark">CCS Framework: Digital</td>
-                <td className="px-6 py-4 text-gov-dark">RM6094 — Spark Dynamic Purchasing System</td>
                 <td className="px-6 py-4 text-gov-dark">Crown Commercial Service</td>
               </tr>
               <tr className="bg-white hover:bg-gov-bg/50 transition-colors">
@@ -130,7 +124,7 @@ export const About: React.FC = () => {
               </tr>
               <tr className="bg-white hover:bg-gov-bg/50 transition-colors">
                 <td className="px-6 py-4 font-medium text-gov-dark">Public Liability</td>
-                <td className="px-6 py-4 text-gov-dark">£2,000,000</td>
+                <td className="px-6 py-4 text-gov-dark">£5,000,000</td>
                 <td className="px-6 py-4 text-gov-secondary">Certificate available on request</td>
               </tr>
               <tr className="bg-white hover:bg-gov-bg/50 transition-colors">
@@ -139,9 +133,9 @@ export const About: React.FC = () => {
                 <td className="px-6 py-4 text-gov-secondary">Certificate available on request</td>
               </tr>
               <tr className="bg-white hover:bg-gov-bg/50 transition-colors">
-                <td className="px-6 py-4 font-medium text-gov-dark">ICO Registration</td>
+                <td className="px-6 py-4 font-medium text-gov-dark">Data protection registration</td>
                 <td className="px-6 py-4 text-gov-dark">ZB715782</td>
-                <td className="px-6 py-4 text-gov-dark">Information Commissioner's Office</td>
+                <td className="px-6 py-4 text-gov-dark">Information Commission</td>
               </tr>
               <tr className="bg-white hover:bg-gov-bg/50 transition-colors">
                 <td className="px-6 py-4 font-medium text-gov-dark">DUNS Number</td>

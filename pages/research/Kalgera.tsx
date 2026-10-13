@@ -197,7 +197,7 @@ export const Kalgera: React.FC = () => {
             </li>
             <li className="flex items-start gap-2">
               <span className="text-gov-blue font-bold mt-0.5">•</span>
-              <span>All data encrypted, UK-hosted, and anonymised within 7 days of collection.</span>
+              <span>Interview data was anonymised within 7 days of collection and handled under the agreed research ethics protocol.</span>
             </li>
             <li className="flex items-start gap-2">
               <span className="text-gov-blue font-bold mt-0.5">•</span>

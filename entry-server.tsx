@@ -19,6 +19,7 @@ import { Industries } from './pages/Industries';
 import { IndustryPage } from './pages/industries/IndustryPage';
 import { Partnerships } from './pages/Partnerships';
 import { Compliance } from './pages/Compliance';
+import { Accessibility } from './pages/Accessibility';
 import { Feedback } from './pages/Feedback';
 import { About } from './pages/About';
 import { OpenSource } from './pages/research/OpenSource';
@@ -145,6 +146,7 @@ const SSRApp: React.FC = () => (
         <Route path="/industries/education-skills" element={<IndustryPage slug="education-skills" />} />
         <Route path="/partnerships" element={<Partnerships />} />
         <Route path="/compliance" element={<Compliance />} />
+        <Route path="/accessibility" element={<Accessibility />} />
         <Route path="/testimonials" element={<Feedback />} />
         <Route path="/about" element={<About />} />
         <Route path="/research/open-source" element={<OpenSource />} />

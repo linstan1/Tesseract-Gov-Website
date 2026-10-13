@@ -67,12 +67,12 @@ export const Partnerships: React.FC = () => {
           </div>
           <h2 className="text-xl font-bold text-gov-dark mb-3">Get in Touch</h2>
           <p className="text-gov-secondary mb-6 leading-relaxed max-w-sm">
-            Interested in partnering with us? Contact our Head of Procurement & Delivery directly.
+            Interested in partnering with us? Contact Fabio Rovai, our Deputy Director, directly.
           </p>
           <a href="mailto:fabio@thetesseractacademy.com" className="text-lg font-semibold text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">
             fabio@thetesseractacademy.com
           </a>
-          <p className="text-sm text-gov-secondary mt-2">Fabio Rovai, Head of Procurement & Delivery</p>
+          <p className="text-sm text-gov-secondary mt-2">Fabio Rovai, Deputy Director</p>
         </Card>
       </div>
     </div>

@@ -95,7 +95,7 @@ export const Insights: React.FC = () => {
           <p className="text-base text-gov-dark/80 leading-relaxed mb-5">
             A big thank you to all our brilliant speakers: <strong>Owais Niaz</strong>, <strong>Jack Oat</strong>{' '}
             and <strong>Luqmaan Shafique</strong> from Vision Ability CIC; <strong>Dr Tatia Codreanu</strong> from
-            Imperial; our CEO <strong>Dr Stylianos Kampakis</strong>, CStat; <strong>Jeremiah Johnson</strong>;{' '}
+            Imperial; our CEO <strong>Dr Stylianos Kampakis</strong>; <strong>Jeremiah Johnson</strong>;{' '}
             <strong>Rafie Cecilia</strong> from King's College London; and <strong>Hui Gong</strong> from UCL. And a
             special thank you to <strong>Tejasva Gupta</strong> for leading all the communications.
           </p>
@@ -392,15 +392,6 @@ export const Insights: React.FC = () => {
                   </a>
                   ,{' '}
                   <a
-                    href="https://www.crowncommercial.gov.uk/agreements/RM6094"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-gov-blue hover:underline"
-                  >
-                    RM6094
-                  </a>
-                  ,{' '}
-                  <a
                     href="https://www.crowncommercial.gov.uk/agreements/RM6126"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -417,6 +408,15 @@ export const Insights: React.FC = () => {
                   >
                     RM6219
                   </a>
+                  ,{' '}
+                  <a
+                    href="https://www.crowncommercial.gov.uk/agreements/RM6235"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gov-blue hover:underline"
+                  >
+                    RM6235
+                  </a>
                   .
                 </p>
               </div>
@@ -430,7 +430,7 @@ export const Insights: React.FC = () => {
               >
                 Crown Commercial Service
               </a>{' '}
-              Dynamic Purchasing System frameworks (RM6200, RM6094, RM6126, RM6219, RM6235) reduce procurement lead times by{' '}
+              dynamic purchasing systems (RM6200, RM6126, RM6219, RM6235) reduce procurement lead times by{' '}
               <strong>60–75% compared to full OJEU-equivalent tender processes</strong> for SME-scale AI and research
               contracts. For contracts under the £213,477{' '}
               <a

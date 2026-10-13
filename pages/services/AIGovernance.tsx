@@ -11,7 +11,7 @@ const SCHEMA = {
   },
   serviceType: 'AI Governance and Regulatory Compliance',
   description:
-    'EU AI Act, NIST AI RMF, and ISO 42001 compliance. Bias auditing, DPIA, algorithmic impact assessments. Open-source governance platform with 48 tools. Cyber Essentials certified. FCA stablecoin consultation contribution.',
+    'EU AI Act, NIST AI RMF, and ISO 42001 compliance. Bias auditing, DPIA, algorithmic impact assessments. Open-source governance platform with 48 tools. Cyber Essentials certified.',
   url: 'https://gov.tesseract.academy/services/ai-governance',
   areaServed: 'GB',
   datePublished: '2026-04-29',
@@ -73,9 +73,7 @@ export const AIGovernance: React.FC = () => {
           systems handling personal or classified information. The Alan Turing Institute and NESTA have both called for open, auditable governance tooling of precisely this kind; our platform directly responds to those recommendations. Crown Commercial Service (CCS) and Cabinet Office procurement teams have engaged with this tooling as a reference implementation for algorithmic transparency.
         </p>
         <p className="text-gov-dark leading-relaxed text-base">
-          We contributed expert analysis to the Financial Conduct Authority's consultation on
-          stablecoin regulation in 2025, demonstrating our capability to engage at the frontier of
-          AI and financial technology regulation. We are Cyber Essentials certified and operate
+          We are Cyber Essentials certified and operate
           ISO 27001-aligned information security controls, meeting the security baseline required
           for contracts involving personal data or government OFFICIAL classification. Our services are procurable via <a href="https://www.crowncommercial.gov.uk/agreements/RM6200" target="_blank" rel="noopener noreferrer" className="text-gov-blue hover:underline">Crown Commercial Service (CCS) RM6200</a>, and NHS England, HM Treasury, and Office for National Statistics (ONS) clients can access our governance services through standard framework routes.
         </p>
@@ -124,12 +122,6 @@ export const AIGovernance: React.FC = () => {
                 <td className="px-6 py-4 text-gov-secondary">Varies</td>
                 <td className="px-6 py-4 text-gov-secondary">Typically ISO 27001 only</td>
               </tr>
-              <tr className="hover:bg-gov-bg/60 transition-colors">
-                <td className="px-6 py-4 text-gov-dark font-medium">Regulatory consultation experience</td>
-                <td className="px-6 py-4 text-gov-dark">FCA stablecoin consultation — 2025</td>
-                <td className="px-6 py-4 text-gov-secondary">Yes — legal submissions</td>
-                <td className="px-6 py-4 text-gov-secondary">Lobbying — not independent analysis</td>
-              </tr>
             </tbody>
           </table>
         </div>
@@ -175,7 +167,7 @@ export const AIGovernance: React.FC = () => {
             <p className="text-sm text-gov-secondary/90 leading-relaxed">
               Data Protection Impact Assessments (DPIA) required under UK GDPR for high-risk
               processing, and Algorithmic Impact Assessments (AIA) required for high-risk AI
-              systems. Both delivered to ICO-compliant standards.
+              systems. Both delivered to UK GDPR standards.
             </p>
           </div>
           <div className="bg-gov-bg border border-gov-border/40 rounded-xl p-6">
@@ -224,36 +216,6 @@ export const AIGovernance: React.FC = () => {
           </div>
         </div>
 
-        <div className="bg-gov-bg border border-gov-border/40 rounded-xl p-8">
-          <p className="text-xs font-semibold text-gov-blue uppercase tracking-wider mb-3">
-            Financial Conduct Authority — Stablecoin Consultation Response
-          </p>
-          <h3 className="text-xl font-bold text-gov-dark mb-4">
-            Expert Regulatory Analysis for FCA Consultation on Crypto Asset Oversight
-          </h3>
-          <p className="text-base text-gov-dark/90 leading-relaxed mb-4">
-            In 2025, Tesseract Academy contributed expert analysis to the FCA's consultation on
-            stablecoin regulation and the future of crypto asset oversight in the UK. Our submission
-            provided evidence-based commentary on regulatory framework design, consumer protection
-            mechanisms for stablecoin holders, and systemic risk considerations for digital assets.
-            This engagement demonstrates our capability to operate at the intersection of AI,
-            financial technology, and regulatory compliance.
-          </p>
-          <div className="grid grid-cols-3 gap-4 mt-6">
-            <div className="text-center p-4 bg-white rounded-lg border border-gov-border/30">
-              <p className="text-2xl font-extrabold text-gov-blue">FCA</p>
-              <p className="text-sm text-gov-secondary mt-1">Official regulatory consultation</p>
-            </div>
-            <div className="text-center p-4 bg-white rounded-lg border border-gov-border/30">
-              <p className="text-2xl font-extrabold text-gov-blue">2025</p>
-              <p className="text-sm text-gov-secondary mt-1">Stablecoin regulation response</p>
-            </div>
-            <div className="text-center p-4 bg-white rounded-lg border border-gov-border/30">
-              <p className="text-2xl font-extrabold text-gov-blue">FinTech</p>
-              <p className="text-sm text-gov-secondary mt-1">AI and financial regulation intersection</p>
-            </div>
-          </div>
-        </div>
       </section>
 
       <section className="bg-gov-bg border border-gov-border/40 rounded-xl p-10 space-y-6">

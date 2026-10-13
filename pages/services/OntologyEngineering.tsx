@@ -164,7 +164,7 @@ export const OntologyEngineering: React.FC = () => {
               </tr>
               <tr className="hover:bg-gov-bg/60 transition-colors">
                 <td className="px-6 py-4 text-gov-dark font-medium">Public sector procurement</td>
-                <td className="px-6 py-4 text-gov-dark">CCS RM6200, RM6094, RM6126, RM6219 and RM6235</td>
+                <td className="px-6 py-4 text-gov-dark">CCS RM6200, RM6126, RM6219 and RM6235</td>
                 <td className="px-6 py-4 text-gov-secondary">Varies</td>
                 <td className="px-6 py-4 text-gov-secondary">Software licence, not a service route</td>
               </tr>

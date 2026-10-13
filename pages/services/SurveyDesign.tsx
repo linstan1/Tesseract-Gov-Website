@@ -71,7 +71,7 @@ export const SurveyDesign: React.FC = () => {
         <p className="text-gov-dark leading-relaxed text-base">
           We are a <a href="https://www.crowncommercial.gov.uk/agreements/RM6126" target="_blank" rel="noopener noreferrer" className="text-gov-blue hover:underline">Crown Commercial Service (CCS) RM6126</a> (Research and Insights) appointed supplier, with experience managing
           survey programmes under contract for national qualification bodies, devolved government,
-          and arm's-length bodies. All survey data is processed under UK GDPR with an ICO
+          and arm's-length bodies. All survey data is processed under UK GDPR with an Information Commission
           registration (ZB715782) and a documented data retention and destruction schedule. The Department for Science Innovation and Technology (DSIT) and Cabinet Office procurement guidelines inform our contract management approach.
         </p>
       </section>
@@ -120,7 +120,7 @@ export const SurveyDesign: React.FC = () => {
                 <td className="px-6 py-4 text-gov-secondary">Difficult to sustain</td>
               </tr>
               <tr className="hover:bg-gov-bg/60 transition-colors">
-                <td className="px-6 py-4 text-gov-dark font-medium">UK GDPR / ICO compliance</td>
+                <td className="px-6 py-4 text-gov-dark font-medium">UK GDPR / Information Commission registration</td>
                 <td className="px-6 py-4 text-gov-dark">Registered — ZB715782</td>
                 <td className="px-6 py-4 text-gov-secondary">Yes — standard compliance</td>
                 <td className="px-6 py-4 text-gov-secondary">Covered by authority DPO</td>

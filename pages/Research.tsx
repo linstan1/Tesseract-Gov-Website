@@ -671,11 +671,6 @@ export const Research: React.FC = () => {
              </div>
            </li>
            <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
-             <a href="https://thedatascientist.com/fca-stablecoins-and-the-future-of-uk-crypto-regulation/" target="_blank" rel="noopener noreferrer"><h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark hover:underline transition-colors">FCA Consultation: Stablecoins and UK Crypto Regulation<span className="sr-only"> (opens in new tab)</span></h3></a>
-             <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Financial Conduct Authority Regulatory Consultation, 2025</p>
-             <p className="text-base text-gov-dark/90 leading-relaxed">Contributed expert analysis to the FCA's consultation on stablecoin regulation and the future of crypto asset oversight in the UK. Provided evidence-based commentary on regulatory frameworks, consumer protection mechanisms, and systemic risk considerations for digital assets.</p>
-           </li>
-           <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">
              <a href="https://jbba.scholasticahq.com/article/10237-is-blockchain-part-of-the-future-of-art" target="_blank" rel="noopener noreferrer"><h3 className="font-semibold text-lg text-gov-blue mb-2 hover:text-gov-blue-dark hover:underline transition-colors">Is Blockchain Part of the Future of Art?<span className="sr-only"> (opens in new tab)</span></h3></a>
              <p className="text-sm text-gov-secondary/80 mb-3 font-medium">Journal of the British Blockchain Association (JBBA), Peer-Reviewed</p>
              <p className="text-base text-gov-dark/90 leading-relaxed">Peer-reviewed research exploring the intersection of distributed ledger technology and the creative industries. Examined provenance tracking, digital ownership, and the implications of blockchain for cultural asset management and intellectual property governance.</p>
