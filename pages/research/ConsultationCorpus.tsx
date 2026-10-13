@@ -59,7 +59,7 @@ export const ConsultationCorpus: React.FC = () => {
         <h1 className="text-4xl font-extrabold text-gov-dark mb-6 tracking-tight leading-tight font-serif">
           Every government consultation that reached an outcome, as one corpus
         </h1>
-        <p className="text-xl text-gov-secondary/90 leading-relaxed">
+        <p className="text-xl text-gov-secondary leading-relaxed">
           Government runs thousands of public consultations and publishes their outcomes, but the estate has never been assembled as a single, queryable corpus: who consults, on what, and whether they publish what they heard back. This builds that corpus from open data, and finds that closing the loop is less universal than the outcome pages suggest.
         </p>
       </header>
@@ -100,7 +100,7 @@ export const ConsultationCorpus: React.FC = () => {
             </div>
           ))}
         </div>
-        <p className="text-sm text-gov-secondary/90">Most consulted-on policy areas across the corpus.</p>
+        <p className="text-sm text-gov-secondary">Most consulted-on policy areas across the corpus.</p>
       </section>
 
       <section className="space-y-4">
@@ -128,7 +128,7 @@ export const ConsultationCorpus: React.FC = () => {
           <p className="text-gov-dark leading-relaxed">
             As a corpus frame it is the sampling and benchmarking base for consultation-response coding and automated summarisation: pick a policy area, draw a stratified sample, and test a coding approach against a known population rather than an ad-hoc handful. It sits alongside our applied public-engagement work and our <Link to="/research/nature-governance-graph" className="text-gov-blue underline hover:text-gov-blue-dark">nature-governance graph</Link>, both built on the same conviction that the machinery of government should be legible as open, structured data.
           </p>
-          <p className="text-sm text-gov-secondary/90 leading-relaxed mt-4">
+          <p className="text-sm text-gov-secondary leading-relaxed mt-4">
             Independent, self-initiated open research. Contains public sector information licensed under the Open Government Licence v3.0.
           </p>
         </div>

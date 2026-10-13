@@ -37,7 +37,7 @@ export const SymbolExistenceBox: React.FC = () => {
         <h1 className="text-4xl font-extrabold text-gov-dark mb-6 tracking-tight leading-tight font-serif">
           The missing box: where symbol-existence checking belongs
         </h1>
-        <p className="text-xl text-gov-secondary/90 leading-relaxed">
+        <p className="text-xl text-gov-secondary leading-relaxed">
           When a large language model writes RDF, it is one component in a hybrid system: a neural generator feeding a symbolic store. The value of thinking about these systems as explicit assemblies of boxes, as Frank van Harmelen and colleagues argue in their boxology of hybrid learning-and-reasoning, is that it makes you name the box you left out. Most LLM-to-knowledge-graph pipelines left out the same one.
         </p>
       </header>

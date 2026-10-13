@@ -38,7 +38,7 @@ export const LocalLabourMarket: React.FC = () => (
       </Link>
       <p className="text-sm font-semibold uppercase tracking-wider text-gov-blue mb-3">Tesseract Foundational Research: Skills &amp; Labour Market</p>
       <h1 className="text-4xl font-extrabold text-gov-dark mb-6 tracking-tight leading-tight font-serif">The most timely local labour-market signal, tidied for every authority</h1>
-      <p className="text-xl text-gov-secondary/90 leading-relaxed">
+      <p className="text-xl text-gov-secondary leading-relaxed">
         Employability programmes, skills bootcamps and local growth plans all have to target the right places, and the question &ldquo;where is the labour market tightest right now&rdquo; has a monthly answer in the claimant count. It is open, but it is delivered through a query builder few outside statistics teams use. This tidies it into one comparable indicator per authority.
       </p>
     </header>
@@ -92,7 +92,7 @@ export const LocalLabourMarket: React.FC = () => (
         <p className="text-gov-dark leading-relaxed">
           The same NOMIS pipeline extends to employment and economic-activity rates, to a monthly time series for trend, and to a join with our <Link to="/research/skills-england-esco-crosswalk" className="text-gov-blue underline hover:text-gov-blue-dark">skills and occupation work</Link> to connect where the labour market is slack to which skills pathways could relieve it. It is the labour-market half of a picture whose other half is skills supply.
         </p>
-        <p className="text-sm text-gov-secondary/90 leading-relaxed mt-4">
+        <p className="text-sm text-gov-secondary leading-relaxed mt-4">
           Independent, self-initiated open research. Contains ONS data &copy; Crown copyright, via NOMIS, licensed under the Open Government Licence v3.0.
         </p>
       </div>

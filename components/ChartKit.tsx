@@ -37,14 +37,14 @@ export const HBars: React.FC<{ title: string; note?: string; max?: number; rows:
       <div className="space-y-2">
         {rows.map((r) => (
           <div key={r.label} className="flex items-center gap-3" title={`${r.label}: ${r.display}`}>
-            <span className={`${labelWidth} shrink-0 text-right text-xs text-gov-secondary leading-tight`}>{r.label}</span>
+            <span className={`${labelWidth} max-w-[40%] shrink-0 text-right text-xs text-gov-secondary leading-tight`}>{r.label}</span>
             <div className="flex-1 h-[18px]">
               <div
                 className="h-full rounded-r"
                 style={{ width: `${Math.max((r.value / m) * 100, 0.5)}%`, backgroundColor: r.color ?? CHART.teal }}
               />
             </div>
-            <span className="w-24 shrink-0 text-xs font-semibold text-gov-dark tabular-nums">{r.display}</span>
+            <span className="w-16 sm:w-24 shrink-0 text-xs font-semibold text-gov-dark tabular-nums">{r.display}</span>
           </div>
         ))}
       </div>

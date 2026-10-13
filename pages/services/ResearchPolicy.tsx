@@ -29,10 +29,10 @@ export const ResearchPolicy: React.FC = () => {
         <h1 className="text-5xl font-extrabold text-gov-dark mb-6 tracking-tight leading-tight">
           Research Design and Policy Analysis
         </h1>
-        <p className="text-xl text-gov-secondary/90 leading-relaxed max-w-4xl">
+        <p className="text-xl text-gov-secondary leading-relaxed max-w-4xl">
           We produce rigorous, publication-quality research for UK and devolved government bodies.
           Our outputs have been published on GOV.WALES, cited in Senedd committee proceedings, and
-          referenced alongside The Alan Turing Institute and <a href="https://www.gov.uk/government/organisations/skills-england" target="_blank" rel="noopener noreferrer" className="text-gov-blue hover:underline">Skills England</a> in official UK Government publications.
+          referenced alongside The Alan Turing Institute and <a href="https://www.gov.uk/government/organisations/skills-england" target="_blank" rel="noopener noreferrer" className="text-gov-blue underline underline-offset-2 hover:text-gov-blue-dark">Skills England</a> in official UK Government publications.
         </p>
       </header>
 
@@ -60,8 +60,8 @@ export const ResearchPolicy: React.FC = () => {
           specialist audiences. HM Treasury Green Book appraisal standards and MHCLG evaluation frameworks inform our programme evaluation designs.
         </p>
         <p className="text-gov-dark leading-relaxed text-base">
-          We have provided AI skills data to the <a href="https://www.gov.uk/government/organisations/skills-england" target="_blank" rel="noopener noreferrer" className="text-gov-blue hover:underline">Skills England</a> report
-          alongside the Alan Turing Institute, and produced <a href="https://www.gov.wales/testing-land-valuation-methods" target="_blank" rel="noopener noreferrer" className="text-gov-blue hover:underline">land valuation research for Welsh Government</a>
+          We have provided AI skills data to the <a href="https://www.gov.uk/government/organisations/skills-england" target="_blank" rel="noopener noreferrer" className="text-gov-blue underline underline-offset-2 hover:text-gov-blue-dark">Skills England</a> report
+          alongside the Alan Turing Institute, and produced <a href="https://www.gov.wales/testing-land-valuation-methods" target="_blank" rel="noopener noreferrer" className="text-gov-blue underline underline-offset-2 hover:text-gov-blue-dark">land valuation research for Welsh Government</a>
           that was cited in Senedd committee proceedings. Our research has also been used by NESTA and Innovate UK to inform technology adoption policy. These outputs demonstrate our ability to
           operate at the intersection of technical depth and policy relevance.
         </p>
@@ -69,13 +69,13 @@ export const ResearchPolicy: React.FC = () => {
           Our research team holds professional indemnity insurance of £5 million and operates under
           a robust data governance framework compliant with UK GDPR and the Data Protection Act 2018.
           We hold an Information Commission registration (ZB715782) and are experienced in processing sensitive and
-          special category research data under appropriate legal bases. Procurement is available through the <a href="https://www.crowncommercial.gov.uk/agreements/RM6200" target="_blank" rel="noopener noreferrer" className="text-gov-blue hover:underline">Crown Commercial Service (CCS) RM6200</a> framework, with the National Audit Office's value-for-money criteria informing our cost-effectiveness reporting.
+          special category research data under appropriate legal bases. Procurement is available through the <a href="https://www.crowncommercial.gov.uk/agreements/RM6200" target="_blank" rel="noopener noreferrer" className="text-gov-blue underline underline-offset-2 hover:text-gov-blue-dark">Crown Commercial Service (CCS) RM6200</a> framework, with the National Audit Office's value-for-money criteria informing our cost-effectiveness reporting.
         </p>
       </section>
 
       <section>
         <h2 className="text-3xl font-bold text-gov-dark mb-8">Service Comparison</h2>
-        <div className="overflow-x-auto rounded-xl border border-gov-border/40">
+        <div tabIndex={0} role="region" aria-label="Table, scrolls sideways on small screens" className="overflow-x-auto rounded-xl border border-gov-border/40">
           <table className="w-full text-sm text-left">
             <thead className="bg-gov-bg border-b border-gov-border/40">
               <tr>

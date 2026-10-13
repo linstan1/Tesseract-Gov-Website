@@ -80,7 +80,7 @@ export const FineTuningLlmGovernmentDataStandard: React.FC = () => {
         <h1 className="text-4xl font-extrabold text-gov-dark mb-6 tracking-tight leading-tight font-serif">
           Teaching an open-source LLM a government information standard: from 94% hallucination to 1%
         </h1>
-        <p className="text-xl text-gov-secondary/90 leading-relaxed">
+        <p className="text-xl text-gov-secondary leading-relaxed">
           We fine-tuned Qwen3-Coder-30B, an Apache-2.0 licensed 30-billion-parameter mixture-of-experts model, on IES4,
           the UK government's Information Exchange Standard used across defence and national security data sharing. The
           result, published openly on Hugging Face, shows what it takes to make a language model respect a controlled
@@ -133,7 +133,7 @@ export const FineTuningLlmGovernmentDataStandard: React.FC = () => {
           verification discipline around it: every quality claim is backed by a deterministic, machine-run check against
           the published standard.
         </p>
-        <div className="overflow-x-auto">
+        <div tabIndex={0} role="region" aria-label="Table, scrolls sideways on small screens" className="overflow-x-auto">
           <table className="w-full text-sm border-collapse">
             <thead>
               <tr className="bg-gov-bg border-b border-gov-border">
@@ -161,7 +161,7 @@ export const FineTuningLlmGovernmentDataStandard: React.FC = () => {
             against the standard's actual vocabulary. They are measured, not estimated.
           </p>
         </div>
-        <div className="overflow-x-auto">
+        <div tabIndex={0} role="region" aria-label="Table, scrolls sideways on small screens" className="overflow-x-auto">
           <table className="w-full text-sm border-collapse">
             <thead>
               <tr className="bg-gov-bg border-b border-gov-border">
@@ -195,7 +195,7 @@ export const FineTuningLlmGovernmentDataStandard: React.FC = () => {
             { label: 'IES4 term conformance, fine-tuned', value: 88.6, display: '88.6%' },
           ]}
         />
-        <p className="text-sm text-gov-secondary/90 leading-relaxed">
+        <p className="text-sm text-gov-secondary leading-relaxed">
           A fuller technical account, including the training-data construction and further conformance metrics, is in
           our research write-up:{' '}
           <Link to="/research/ies4-turtle-language-model" className="text-gov-blue underline hover:text-gov-blue-dark">

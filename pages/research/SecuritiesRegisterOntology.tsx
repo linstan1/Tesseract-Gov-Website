@@ -162,7 +162,7 @@ export const SecuritiesRegisterOntology: React.FC = () => (
       <h1 className="text-4xl font-extrabold text-gov-dark mb-6 tracking-tight leading-tight font-serif">
         The missing CIK-to-LEI crosswalk: an open ontology for US securities entity registers
       </h1>
-      <p className="text-xl text-gov-secondary/90 leading-relaxed">
+      <p className="text-xl text-gov-secondary leading-relaxed">
         On 1 October 2026, the joint data standards rule under the Financial Data Transparency Act takes effect. Nine federal financial agencies, the SEC among them, adopted the ISO 17442 Legal Entity Identifier as their common legal entity identifier, and the rule&apos;s operative text requires data schemas with semantics documented in machine-readable taxonomy or ontology models. We took that requirement literally. On 17 August 2026 we downloaded the SEC&apos;s entire entity register and every open register that embeds or is embedded by it, and we measured what the public record actually says. This is a case study in register assurance: the practice of auditing what a register publishes against the rules its identifiers declare for themselves and against the other registers that carry the same identity. Everything below is reproducible from the open repository, every headline is computed two independent ways, and the pipeline fails its own build if the two ever disagree.
       </p>
     </header>
@@ -247,7 +247,7 @@ export const SecuritiesRegisterOntology: React.FC = () => (
 
     <section className="space-y-4">
       <h2 className="text-2xl font-bold text-gov-dark font-serif">The findings, graded</h2>
-      <div className="overflow-x-auto rounded-lg border border-gov-border">
+      <div tabIndex={0} role="region" aria-label="Table, scrolls sideways on small screens" className="overflow-x-auto rounded-lg border border-gov-border">
         <table className="min-w-full text-sm">
           <thead>
             <tr className="bg-gov-bg text-left">
@@ -285,7 +285,7 @@ export const SecuritiesRegisterOntology: React.FC = () => (
           { label: 'Not lapsed', value: 155596, display: '155,596' },
         ]}
       />
-      <p className="text-sm text-gov-secondary/90 leading-relaxed">
+      <p className="text-sm text-gov-secondary leading-relaxed">
         All figures are computed from register surfaces fetched on 17 August 2026: the EDGAR bulk submissions file, the GLEIF golden copy published at 08:00 that day, the GLEIF ISIN-LEI mapping, and the SEC structured form datasets for 2026 Q2. All are living systems, so a later run produces different totals while the method reproduces exactly.
       </p>
     </section>
@@ -298,7 +298,7 @@ export const SecuritiesRegisterOntology: React.FC = () => (
       <p className="text-gov-dark leading-relaxed">
         First, model identity honestly. An identifier in a register is not a property of an entity; it is a dated claim by a named register. Our OWL model reifies every published value as an IdentifierAssertion carrying the value exactly as published, the scheme the field claims, whether the value conforms to the rules that scheme declares for itself, and, for LEIs, whether the value resolves at GLEIF and with what status.
       </p>
-      <Mermaid chart={MODEL} />
+      <Mermaid chart={MODEL} ariaLabel="Ontology model: an EDGAR entity record makes a reified, dated identifier assertion, checked by a SKOS scheme registry, that resolves to a GLEIF legal entity and yields reconciliation and coverage observations." />
       <p className="text-gov-dark leading-relaxed">
         Second, make the schemes self-describing. A SKOS registry declares each scheme&apos;s length, character set, and check-digit algorithm as data, so the validator has no hard-coded rules and adding a register means adding data, not code.
       </p>
@@ -358,7 +358,7 @@ export const SecuritiesRegisterOntology: React.FC = () => (
           Write to <a href="mailto:fabio@thetesseractacademy.com" className="text-gov-blue underline hover:text-gov-blue-dark">fabio@thetesseractacademy.com</a> with the register name.
         </p>
       </div>
-      <p className="text-sm text-gov-secondary/90 leading-relaxed">
+      <p className="text-sm text-gov-secondary leading-relaxed">
         Related work: the same register-boundary discipline found the mirror-image defect at the FDIC in <Link to="/research/bank-register-ontology" className="text-gov-blue underline hover:text-gov-blue-dark">the US bank register</Link>, was proved on the <Link to="/research/investment-fund-ontology" className="text-gov-blue underline hover:text-gov-blue-dark">US fund universe</Link>, and the category it belongs to is set out in <Link to="/research/register-assurance" className="text-gov-blue underline hover:text-gov-blue-dark">Register assurance: why every public register fails at its boundary</Link>.
       </p>
     </section>

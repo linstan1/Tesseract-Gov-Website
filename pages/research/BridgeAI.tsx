@@ -77,7 +77,7 @@ export const BridgeAI: React.FC = () => {
         <h1 className="text-4xl font-extrabold text-gov-dark mb-6 tracking-tight leading-tight font-serif">
           BridgeAI: AI Adoption for UK Creative Industries
         </h1>
-        <p className="text-xl text-gov-secondary/90 leading-relaxed">
+        <p className="text-xl text-gov-secondary leading-relaxed">
           1,100 registrations against a capacity target of 200. Satisfaction rating 4.6 out of 5. Delivered under Innovate UK contract GSS24646.
         </p>
       </header>
@@ -106,7 +106,7 @@ export const BridgeAI: React.FC = () => {
 
       <section className="space-y-6">
         <h2 className="text-2xl font-bold text-gov-dark font-serif">What We Delivered</h2>
-        <div className="overflow-x-auto">
+        <div tabIndex={0} role="region" aria-label="Table, scrolls sideways on small screens" className="overflow-x-auto">
           <table className="w-full text-sm border-collapse">
             <thead>
               <tr className="bg-gov-bg border-b border-gov-border">

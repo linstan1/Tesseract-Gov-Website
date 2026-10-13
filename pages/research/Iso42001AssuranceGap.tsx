@@ -93,7 +93,7 @@ export const Iso42001AssuranceGap: React.FC = () => (
       <h1 className="text-4xl font-extrabold text-gov-dark mb-6 tracking-tight leading-tight font-serif">
         The Only Public Crosswalk to ISO 42001 Names Zero of Its Controls
       </h1>
-      <p className="text-xl text-gov-secondary/90 leading-relaxed">
+      <p className="text-xl text-gov-secondary leading-relaxed">
         Organisations are being asked to prove their AI governance with an ISO/IEC 42001 certificate. We measured what a buyer can actually establish about one from public evidence. The single public domain crosswalk into the standard never references a control from the annex that certification audits examine, and it maps to the draft rather than the published edition. The standard was certifiable for roughly nineteen months before the rules for certifying the certifiers existed. And the national register that granted the world's first accreditation for it does not record that accreditation anywhere.
       </p>
     </header>
@@ -165,7 +165,7 @@ export const Iso42001AssuranceGap: React.FC = () => (
       <p className="text-gov-dark leading-relaxed">
         Two standards are in play, and conflating them is the most common error in this area. ISO/IEC 42001 tells your organisation what an AI management system must do. ISO/IEC 42006 tells the certification body what it must demonstrate in order to audit and certify you competently. Accreditation bodies assess certification bodies against the second, never against the first.
       </p>
-      <div className="overflow-x-auto">
+      <div tabIndex={0} role="region" aria-label="Table, scrolls sideways on small screens" className="overflow-x-auto">
         <table className="w-full text-sm border border-gov-border">
           <thead className="bg-gov-bg">
             <tr><th className="text-left p-3 border-b border-gov-border">Date</th><th className="text-left p-3 border-b border-gov-border">Event</th></tr>
@@ -239,7 +239,7 @@ export const Iso42001AssuranceGap: React.FC = () => (
     <section className="space-y-4">
       <h2 className="text-2xl font-bold text-gov-dark font-serif">The artefact</h2>
       <p className="text-gov-dark leading-relaxed">
-        The repository is at <a className="text-gov-blue hover:underline" href={REPO}>github.com/fabio-rovai/ai-management-system-assurance</a>. It holds the extractor, the extracted crosswalk as JSON, the granular report with the full per subcategory table, offline known answer tests including the assertion that no ISO title survives ingest, and continuous integration that re-extracts from the source PDF on every push. Code MIT, report CC BY 4.0. The companion repository <a className="text-gov-blue hover:underline" href="https://github.com/fabio-rovai/certification-register-ontology">certification-register-ontology</a> applies the same method to ISO/IEC 27001, and proves the no standard text property with a SHACL layer.
+        The repository is at <a className="text-gov-blue underline underline-offset-2 hover:text-gov-blue-dark" href={REPO}>github.com/fabio-rovai/ai-management-system-assurance</a>. It holds the extractor, the extracted crosswalk as JSON, the granular report with the full per subcategory table, offline known answer tests including the assertion that no ISO title survives ingest, and continuous integration that re-extracts from the source PDF on every push. Code MIT, report CC BY 4.0. The companion repository <a className="text-gov-blue underline underline-offset-2 hover:text-gov-blue-dark" href="https://github.com/fabio-rovai/certification-register-ontology">certification-register-ontology</a> applies the same method to ISO/IEC 27001, and proves the no standard text property with a SHACL layer.
       </p>
     </section>
 
@@ -250,10 +250,10 @@ export const Iso42001AssuranceGap: React.FC = () => (
           A bounded first engagement is a two week AI assurance claim audit on one supplier population. We take your supplier list, extract every AI governance and certification claim, classify each by whether it can be checked at all, run the checks that can be run, and hand back the evidence with the method. The deliverable is a defensible statement of what you can and cannot establish, which is more useful than a dashboard implying you can establish everything.
         </p>
         <p className="text-gov-dark leading-relaxed">
-          The training side of this work lives on our academy: the <a className="text-gov-blue hover:underline" href="https://tesseract.academy/iso-42001-training/">ISO 42001 training</a> guide, the <a className="text-gov-blue hover:underline" href="https://tesseract.academy/iso-42001-gap-analysis/">ISO 42001 gap analysis</a> explainer, and the free <a className="text-gov-blue hover:underline" href="https://tesseract.academy/courses/ai-literacy-training/">AI Literacy Training course</a>, all indexed on the <a className="text-gov-blue hover:underline" href="https://tesseract.academy/safe-ai/">Safe AI hub</a>.
+          The training side of this work lives on our academy: the <a className="text-gov-blue underline underline-offset-2 hover:text-gov-blue-dark" href="https://tesseract.academy/iso-42001-training/">ISO 42001 training</a> guide, the <a className="text-gov-blue underline underline-offset-2 hover:text-gov-blue-dark" href="https://tesseract.academy/iso-42001-gap-analysis/">ISO 42001 gap analysis</a> explainer, and the free <a className="text-gov-blue underline underline-offset-2 hover:text-gov-blue-dark" href="https://tesseract.academy/courses/ai-literacy-training/">AI Literacy Training course</a>, all indexed on the <a className="text-gov-blue underline underline-offset-2 hover:text-gov-blue-dark" href="https://tesseract.academy/safe-ai/">Safe AI hub</a>.
         </p>
         <p className="text-gov-dark leading-relaxed">
-          Fabio Rovai, <a className="text-gov-blue hover:underline" href="mailto:fabio@thetesseractacademy.com">fabio@thetesseractacademy.com</a>. Corrections are published on this page rather than applied silently.
+          Fabio Rovai, <a className="text-gov-blue underline underline-offset-2 hover:text-gov-blue-dark" href="mailto:fabio@thetesseractacademy.com">fabio@thetesseractacademy.com</a>. Corrections are published on this page rather than applied silently.
         </p>
       </div>
     </section>

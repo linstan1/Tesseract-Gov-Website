@@ -8,7 +8,7 @@ export const Capabilities: React.FC = () => {
     <div className="max-w-7xl mx-auto px-6 lg:px-8 py-20 space-y-16">
       <div className="max-w-4xl">
         <h1 className="text-5xl font-extrabold text-gov-dark mb-6 tracking-tight leading-tight">Capabilities</h1>
-        <p className="text-xl text-gov-secondary/90 leading-relaxed">
+        <p className="text-xl text-gov-secondary leading-relaxed">
           We deliver value through rigorous research and agile execution, designed to de-risk complex public-sector projects. Every capability below is backed by a delivered contract: the numbers, and a link to the full case study.
         </p>
       </div>
@@ -19,8 +19,8 @@ export const Capabilities: React.FC = () => {
             <Network className="w-6 h-6 text-gov-blue" />
           </div>
           <h2 className="text-lg font-semibold text-gov-dark mb-3">Ontology Engineering & Knowledge Graphs</h2>
-          <p className="text-gov-secondary/90 mb-5 leading-relaxed">
-            Domain ontologies in OWL 2, SKOS and SHACL, standards crosswalks, knowledge graph construction, and a closed-world check that rejects ontology terms an AI pipeline invented. <Link to="/services/ontology-engineering" className="text-gov-blue hover:underline">Full service details</Link>, or <Link to="/ontology" className="text-gov-blue hover:underline">browse the published work</Link>.
+          <p className="text-gov-secondary mb-5 leading-relaxed">
+            Domain ontologies in OWL 2, SKOS and SHACL, standards crosswalks, knowledge graph construction, and a closed-world check that rejects ontology terms an AI pipeline invented. <Link to="/services/ontology-engineering" className="text-gov-blue underline underline-offset-2 hover:text-gov-blue-dark">Full service details</Link>, or <Link to="/ontology" className="text-gov-blue underline underline-offset-2 hover:text-gov-blue-dark">browse the published work</Link>.
           </p>
           <div className="bg-gov-bg rounded-lg p-4 mt-auto border border-gov-border/30">
             <p className="text-xs font-semibold text-gov-blue uppercase tracking-wider mb-2">Proof</p>
@@ -57,7 +57,7 @@ export const Capabilities: React.FC = () => {
             <Zap className="w-7 h-7 text-gov-blue" />
           </div>
           <h2 className="text-lg font-semibold text-gov-dark mb-3">Rapid Delivery</h2>
-          <p className="text-gov-secondary/90 mb-5 leading-relaxed">
+          <p className="text-gov-secondary mb-5 leading-relaxed">
             From Discovery to Live. We deploy multidisciplinary teams to build Alpha prototypes and scale Beta services using GDS-aligned agile standards.
           </p>
           <div className="bg-gov-bg rounded-lg p-4 mt-auto border border-gov-border/30">
@@ -76,7 +76,7 @@ export const Capabilities: React.FC = () => {
             <LineChart className="w-6 h-6 text-gov-blue" />
           </div>
           <h2 className="text-lg font-semibold text-gov-dark mb-3">Data & AI Upskilling</h2>
-          <p className="text-gov-secondary/90 mb-5 leading-relaxed">
+          <p className="text-gov-secondary mb-5 leading-relaxed">
              Building internal capability. We train civil servants and public sector leaders on data literacy, AI ethics, and strategic implementation of emerging tech.
           </p>
           <div className="bg-gov-bg rounded-lg p-4 mt-auto border border-gov-border/30">
@@ -95,7 +95,7 @@ export const Capabilities: React.FC = () => {
             <ClipboardList className="w-6 h-6 text-gov-blue" />
           </div>
           <h2 className="text-lg font-semibold text-gov-dark mb-3">Survey Design & Delivery</h2>
-          <p className="text-gov-secondary/90 mb-5 leading-relaxed">
+          <p className="text-gov-secondary mb-5 leading-relaxed">
             End-to-end survey services: questionnaire design, stakeholder consultation, data collection, and statistical analysis. Supporting needs assessments, user research, and policy evaluation.
           </p>
           <div className="bg-gov-bg rounded-lg p-4 mt-auto border border-gov-border/30">
@@ -114,8 +114,8 @@ export const Capabilities: React.FC = () => {
             <BarChart3 className="w-6 h-6 text-gov-blue" />
           </div>
           <h2 className="text-lg font-semibold text-gov-dark mb-3">Digital Analytics & Audience Measurement</h2>
-          <p className="text-gov-secondary/90 mb-5 leading-relaxed">
-            Turning web, marketing and audience data into decisions. GA4 and Google Tag Manager, consent-aware measurement, Power BI and Looker Studio dashboards, KPI frameworks, and analytics capability building. <Link to="/services/digital-analytics" className="text-gov-blue hover:underline">Full service details</Link>.
+          <p className="text-gov-secondary mb-5 leading-relaxed">
+            Turning web, marketing and audience data into decisions. GA4 and Google Tag Manager, consent-aware measurement, Power BI and Looker Studio dashboards, KPI frameworks, and analytics capability building. <Link to="/services/digital-analytics" className="text-gov-blue underline underline-offset-2 hover:text-gov-blue-dark">Full service details</Link>.
           </p>
           <div className="bg-gov-bg rounded-lg p-4 mt-auto border border-gov-border/30">
             <p className="text-xs font-semibold text-gov-blue uppercase tracking-wider mb-2">Proof</p>
@@ -133,7 +133,7 @@ export const Capabilities: React.FC = () => {
             <LineChart className="w-6 h-6 text-gov-blue" />
           </div>
           <h2 className="text-lg font-semibold text-gov-dark mb-3">Data Quality & Assurance</h2>
-          <p className="text-gov-secondary/90 mb-5 leading-relaxed">
+          <p className="text-gov-secondary mb-5 leading-relaxed">
             Making data trustworthy enough for regulators to act on. We combine statistical quality analysis with declarative, machine-checkable validation rules that encode domain physics.
           </p>
           <div className="bg-gov-bg rounded-lg p-4 mt-auto border border-gov-border/30">
@@ -154,22 +154,22 @@ export const Capabilities: React.FC = () => {
           <div className="relative pl-6 sm:pl-0 sm:pt-8 border-l-2 sm:border-l-0 sm:border-t-2 border-gov-blue">
             <div className="absolute left-[-5px] top-0 sm:top-[-5px] sm:left-0 w-2.5 h-2.5 bg-gov-blue rounded-full ring-4 ring-gov-bg"></div>
             <h3 className="font-semibold text-base text-gov-blue mb-2">Discovery</h3>
-            <p className="text-sm text-gov-secondary/90 leading-relaxed">Understanding user needs and technical feasibility.</p>
+            <p className="text-sm text-gov-secondary leading-relaxed">Understanding user needs and technical feasibility.</p>
           </div>
           <div className="relative pl-6 sm:pl-0 sm:pt-8 border-l-2 sm:border-l-0 sm:border-t-2 border-gov-blue">
              <div className="absolute left-[-5px] top-0 sm:top-[-5px] sm:left-0 w-2.5 h-2.5 bg-gov-blue rounded-full ring-4 ring-gov-bg"></div>
             <h3 className="font-semibold text-base text-gov-blue mb-2">Alpha</h3>
-            <p className="text-sm text-gov-secondary/90 leading-relaxed">Prototyping solutions and testing hypotheses.</p>
+            <p className="text-sm text-gov-secondary leading-relaxed">Prototyping solutions and testing hypotheses.</p>
           </div>
           <div className="relative pl-6 sm:pl-0 sm:pt-8 border-l-2 sm:border-l-0 sm:border-t-2 border-gov-blue">
              <div className="absolute left-[-5px] top-0 sm:top-[-5px] sm:left-0 w-2.5 h-2.5 bg-gov-blue rounded-full ring-4 ring-gov-bg"></div>
             <h3 className="font-semibold text-base text-gov-blue mb-2">Beta</h3>
-            <p className="text-sm text-gov-secondary/90 leading-relaxed">Building working services for public trial.</p>
+            <p className="text-sm text-gov-secondary leading-relaxed">Building working services for public trial.</p>
           </div>
           <div className="relative pl-6 sm:pl-0 sm:pt-8 border-l-2 sm:border-l-0 sm:border-t-2 border-gov-blue">
              <div className="absolute left-[-5px] top-0 sm:top-[-5px] sm:left-0 w-2.5 h-2.5 bg-gov-blue rounded-full ring-4 ring-gov-bg"></div>
             <h3 className="font-semibold text-base text-gov-blue mb-2">Live</h3>
-            <p className="text-sm text-gov-secondary/90 leading-relaxed">Continuous improvement and ongoing assurance.</p>
+            <p className="text-sm text-gov-secondary leading-relaxed">Continuous improvement and ongoing assurance.</p>
           </div>
         </div>
       </section>

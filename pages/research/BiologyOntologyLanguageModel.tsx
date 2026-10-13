@@ -66,7 +66,7 @@ export const BiologyOntologyLanguageModel: React.FC = () => {
         <h1 className="text-4xl font-extrabold text-gov-dark mb-6 tracking-tight leading-tight font-serif">
           An open, conformant language model for biomedical knowledge graphs
         </h1>
-        <p className="text-xl text-gov-secondary/90 leading-relaxed">
+        <p className="text-xl text-gov-secondary leading-relaxed">
           To our knowledge the first openly published language model fine-tuned for the Biolink Model and GO-CAM, the open standards that make biomedical knowledge interoperable. It turns a grounded biomedical statement into a schema-conformant knowledge graph, and it is released as a research prototype with its dataset and evaluation harness so the field can check the work.
         </p>
       </header>
@@ -106,7 +106,7 @@ export const BiologyOntologyLanguageModel: React.FC = () => {
         <p className="text-gov-dark leading-relaxed">
           The core idea is to never trust the model to invent structure. Instead we generate the structure correctly from real ontology releases, then teach the model to reproduce it. Every training target was built programmatically with the <a href="https://github.com/biolink/biolink-model-toolkit" target="_blank" rel="noopener noreferrer" className="text-gov-blue underline hover:text-gov-blue-dark">Biolink Model Toolkit</a> and the GO-CAM data model, and validated twice before training.
         </p>
-        <div className="overflow-x-auto">
+        <div tabIndex={0} role="region" aria-label="Table, scrolls sideways on small screens" className="overflow-x-auto">
           <table className="w-full text-sm border-collapse">
             <thead>
               <tr className="bg-gov-bg border-b border-gov-border">
@@ -145,7 +145,7 @@ export const BiologyOntologyLanguageModel: React.FC = () => {
             Measured on held-out prompts against the untuned base model. The point of the fine-tune is not fluency, which the base model already has, but conformance: using real ontology terms, in structurally valid ways, and doing so on graph shapes it never saw in training.
           </p>
         </div>
-        <div className="overflow-x-auto">
+        <div tabIndex={0} role="region" aria-label="Table, scrolls sideways on small screens" className="overflow-x-auto">
           <table className="w-full text-sm border-collapse">
             <thead>
               <tr className="bg-gov-bg border-b border-gov-border">
@@ -183,7 +183,7 @@ export const BiologyOntologyLanguageModel: React.FC = () => {
           ]}
           note="The hallucinated-term rate falls from 0.42 to 0.00, and structural conformance for the fine-tuned model is 1.000. Out-of-distribution conformance is measured on multi-association graphs never seen in training."
         />
-        <p className="text-sm text-gov-secondary/90 leading-relaxed">
+        <p className="text-sm text-gov-secondary leading-relaxed">
           The out-of-distribution number is the honest one to watch: 89% term conformance on multi-association graphs the model never trained on, a composition strictly harder than anything in its training set. We report it, and the model's weaker properties, openly in the model card rather than hide them.
         </p>
       </section>
@@ -216,7 +216,7 @@ export const BiologyOntologyLanguageModel: React.FC = () => {
           <cite className="text-sm text-gov-secondary font-semibold not-italic mt-2 block">Fabio Rovai, Tesseract Academy</cite>
         </blockquote>
 
-        <p className="text-sm text-gov-secondary/90 leading-relaxed">
+        <p className="text-sm text-gov-secondary leading-relaxed">
           This is an independent, self-initiated demonstration built entirely on published open standards and open tools. It is not affiliated with, or endorsed by, the Monarch Initiative, the Gene Ontology Consortium, the OBO Foundry or the Biolink Model project. Model weights and dataset are Apache-2.0; the ontology terms remain under their source licences. Associations in the training data are schema-correct but synthetic, not curated biological assertions.
         </p>
       </section>

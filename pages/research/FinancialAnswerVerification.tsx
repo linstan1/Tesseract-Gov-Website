@@ -76,7 +76,7 @@ export const FinancialAnswerVerification: React.FC = () => (
       <h1 className="text-4xl font-extrabold text-gov-dark mb-6 tracking-tight leading-tight font-serif">
         Provenance beats plausibility, but only if you scope it
       </h1>
-      <p className="text-xl text-gov-secondary/90 leading-relaxed">
+      <p className="text-xl text-gov-secondary leading-relaxed">
         The failure that matters when a language model reads a financial filing is not a refusal. It is a confidently wrong number wearing plausible provenance. We built a check that catches those without ever seeing the right answer, scored it against 2,400 human-labelled answers the benchmark already ships, and found two things that do not work as well as the one that does.
       </p>
     </header>
@@ -121,11 +121,11 @@ export const FinancialAnswerVerification: React.FC = () => (
       <p className="text-gov-dark leading-relaxed">
         The verifier sees the question, the model answer and the source filing. It never sees the gold answer, because in production there is no gold answer. It is fully deterministic: no model is called anywhere in this study.
       </p>
-      <Mermaid chart={PIPELINE} />
+      <Mermaid chart={PIPELINE} ariaLabel="Verifier pipeline: the question, model answer and source filing go to the verifier, which never sees the gold answer, and applies three checks (provenance, derivation, scale and unit) before flagging the answer for review or serving it." />
       <p className="text-gov-dark leading-relaxed">
         Results below are on the 1,617 answers that attempted a figure, where 31.2% are labelled incorrect. Served accuracy is the share of unflagged answers a human marked correct, against a 68.8% baseline for serving everything.
       </p>
-      <div className="overflow-x-auto border border-gov-border rounded-xl">
+      <div tabIndex={0} role="region" aria-label="Table, scrolls sideways on small screens" className="overflow-x-auto border border-gov-border rounded-xl">
         <table className="w-full text-sm border-collapse">
           <thead>
             <tr className="bg-gov-bg border-b border-gov-border">
@@ -185,7 +185,7 @@ export const FinancialAnswerVerification: React.FC = () => (
           Every evaluation inherits its ground truth. So we checked the 150 open cases against their own artefacts, deterministically.
         </p>
       </div>
-      <div className="overflow-x-auto border border-gov-border rounded-xl">
+      <div tabIndex={0} role="region" aria-label="Table, scrolls sideways on small screens" className="overflow-x-auto border border-gov-border rounded-xl">
         <table className="w-full text-sm border-collapse">
           <thead>
             <tr className="bg-gov-bg border-b border-gov-border">
@@ -211,7 +211,7 @@ export const FinancialAnswerVerification: React.FC = () => (
       <p className="text-gov-dark leading-relaxed">
         The second is worse. The release carries a gold answer in two places, and for <strong>15 of the 51 numerically comparable cases they disagree, every one by a factor of exactly 100</strong>. The dataset file gives a percentage, such as &quot;1.9%&quot;; the results files give the ratio, 0.019. All fifteen are percentage questions. Anyone auto-scoring against the results field inherits a hundredfold unit error on 10% of the subset. The sixteen results files never disagree among themselves, which is what makes the pattern unambiguous rather than noise.
       </p>
-      <p className="text-sm text-gov-secondary/90 leading-relaxed">
+      <p className="text-sm text-gov-secondary leading-relaxed">
         One result is deliberately <em>not</em> filed as a defect. 32 of 51 numeric gold answers do not appear in the cited evidence at any scale, because they are derived metrics: days payable outstanding, fixed asset turnover, multi-year averages. Those cannot appear in a filing by construction. It is a property of the benchmark that bounds what any provenance check can score, and it explains the false positives in ours.
       </p>
     </section>
@@ -241,10 +241,10 @@ export const FinancialAnswerVerification: React.FC = () => (
           the upstream benchmark <ExternalLink className="w-4 h-4" />
         </a>
       </div>
-      <p className="text-sm text-gov-secondary/90 leading-relaxed">
+      <p className="text-sm text-gov-secondary leading-relaxed">
         The repository ships code and aggregate results only. It does not redistribute FinanceBench questions, gold answers, model answers or filing PDFs: the upstream release carries no licence file, so no redistribution permission can be assumed, and audit findings cite case identifiers instead so every claim stays checkable. FinanceBench is by Islam and colleagues at Patronus AI, 2023.
       </p>
-      <p className="text-sm text-gov-secondary/90 leading-relaxed">
+      <p className="text-sm text-gov-secondary leading-relaxed">
         Related work: our <Link to="/research/ixbrl-disclosure-benchmark" className="text-gov-blue underline hover:text-gov-blue-dark">iXBRL disclosure benchmark</Link> measures machine-readable disclosure at scale across UK filings, and the <Link to="/research/machine-validated-open-ontologies" className="text-gov-blue underline hover:text-gov-blue-dark">machine-validated ontologies</Link> study applies the same evidence-before-assertion discipline to knowledge representation.
       </p>
     </section>

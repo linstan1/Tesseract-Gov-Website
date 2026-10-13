@@ -84,7 +84,7 @@ export const NeurosymbolicSpaceKg: React.FC = () => (
       <h1 className="text-4xl font-extrabold text-gov-dark mb-6 tracking-tight leading-tight font-serif">
         Silence is not assent: what actually catches a wrong AI classification in orbit
       </h1>
-      <p className="text-xl text-gov-secondary/90 leading-relaxed">
+      <p className="text-xl text-gov-secondary leading-relaxed">
         AI systems are beginning to file space data under ontology terms automatically. We measured what would catch their mistakes. The domain&apos;s best-known ontology can reject almost nothing; the public catalogue can reject almost everything. This is the full study, with the code, the numbers, and the error our own sensitivity analysis caught in it.
       </p>
     </header>
@@ -138,7 +138,7 @@ export const NeurosymbolicSpaceKg: React.FC = () => (
       <p className="text-gov-dark leading-relaxed">
         To compare the channels we authored four correspondences that are wrong but lexically plausible, the characteristic failure mode of lexical, embedding and LLM matchers. Each was scored twice: can any reasoning path reach a contradiction, and how many catalogue-native counter-instances exist.
       </p>
-      <div className="overflow-x-auto">
+      <div tabIndex={0} role="region" aria-label="Table, scrolls sideways on small screens" className="overflow-x-auto">
         <table className="w-full text-sm border-collapse">
           <thead>
             <tr className="bg-gov-bg border-b border-gov-border">
@@ -172,7 +172,7 @@ export const NeurosymbolicSpaceKg: React.FC = () => (
       <p className="text-gov-dark leading-relaxed">
         Authored mutants only model matcher failure, so we ran <strong>LogMap 4.0</strong> on the same pair and collected not just its final alignment but its complete candidate pool: the discarded and hard-discarded layers of its lexical index, the high-recall stratum every matcher builds before selection. Twenty distinct candidates.
       </p>
-      <div className="overflow-x-auto">
+      <div tabIndex={0} role="region" aria-label="Table, scrolls sideways on small screens" className="overflow-x-auto">
         <table className="w-full text-sm border-collapse">
           <thead>
             <tr className="bg-gov-bg border-b border-gov-border">
@@ -211,7 +211,7 @@ export const NeurosymbolicSpaceKg: React.FC = () => (
           The threshold sweep caught it: an independent recomputation over all band residents returned 58 percent where the graph returned 99.6. The vocabulary was corrected so the geostationary class <em>nests</em> inside the band, and every number in this study was regenerated. We report it prominently because it is evidence for the thesis at the meta level: <strong>extensional measurement is falsifiable in a way that reasoner silence is not, and it falsified us.</strong>
         </p>
       </div>
-      <div className="overflow-x-auto">
+      <div tabIndex={0} role="region" aria-label="Table, scrolls sideways on small screens" className="overflow-x-auto">
         <table className="w-full text-sm border-collapse">
           <thead>
             <tr className="bg-gov-bg border-b border-gov-border">
@@ -245,7 +245,7 @@ export const NeurosymbolicSpaceKg: React.FC = () => (
           The baseline behaviour is the study&apos;s thesis in miniature. Asked for SSAO Turtle, the untuned model invents <strong>13.81 non-existent ontology terms per output</strong>, and what it invents is telling: <code>ssao:SpaceObject</code>, <code>ssao:launchDate</code>, <code>ssao:OrbitalElements</code>, fluent camelCase that SSAO never defines. It also declares no prefixes, so nothing it writes parses. Confident, well-formed, unusable, and in this domain nothing would reject it.
         </p>
       </div>
-      <div className="overflow-x-auto">
+      <div tabIndex={0} role="region" aria-label="Table, scrolls sideways on small screens" className="overflow-x-auto">
         <table className="w-full text-sm border-collapse">
           <thead>
             <tr className="bg-gov-bg border-b border-gov-border">
@@ -324,7 +324,7 @@ export const NeurosymbolicSpaceKg: React.FC = () => (
           Free 15-lesson course on the method <ExternalLink className="w-4 h-4" />
         </a>
       </div>
-      <p className="text-sm text-gov-secondary/90 leading-relaxed">
+      <p className="text-sm text-gov-secondary leading-relaxed">
         Related work: the <Link to="/research/space-metrics-crosswalk" className="text-gov-blue underline hover:text-gov-blue-dark">space debris metrics composition checker</Link> measures which orbital-debris indices may legitimately be combined; the <Link to="/research/industrial-ontology-crosswalks" className="text-gov-blue underline hover:text-gov-blue-dark">industrial</Link> and <Link to="/research/construction-standards-crosswalks" className="text-gov-blue underline hover:text-gov-blue-dark">construction</Link> crosswalks apply the same falsifiability method to other standards families.
       </p>
     </section>

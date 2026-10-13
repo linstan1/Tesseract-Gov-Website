@@ -38,7 +38,7 @@ export const SmallAreaHealth: React.FC = () => (
       </Link>
       <p className="text-sm font-semibold uppercase tracking-wider text-gov-blue mb-3">Tesseract Foundational Research: Population Health</p>
       <h1 className="text-4xl font-extrabold text-gov-dark mb-6 tracking-tight leading-tight font-serif">The baseline a local health survey should be read against</h1>
-      <p className="text-xl text-gov-secondary/90 leading-relaxed">
+      <p className="text-xl text-gov-secondary leading-relaxed">
         When a council commissions a health-and-wellbeing survey, it asks residents to rate their own health, the same question the Census already asks the whole population. A survey read on its own is a number in a vacuum; read against the census baseline for that authority, it becomes a comparison. This assembles that baseline for every local authority.
       </p>
     </header>
@@ -91,7 +91,7 @@ export const SmallAreaHealth: React.FC = () => (
         <p className="text-gov-dark leading-relaxed">
           Held next to a commissioned survey, the census baseline turns a raw local figure into a finding: better or worse than the population, and by how much. Extended, the same profile joins to deprivation and to our <Link to="/research/property-market-indicators" className="text-gov-blue underline hover:text-gov-blue-dark">local property-market indicators</Link> to place health need in its economic context, the kind of combined evidence base a needs assessment or a targeting decision actually runs on.
         </p>
-        <p className="text-sm text-gov-secondary/90 leading-relaxed mt-4">
+        <p className="text-sm text-gov-secondary leading-relaxed mt-4">
           Independent, self-initiated open research. Contains ONS data &copy; Crown copyright and database right 2023, via NOMIS, licensed under the Open Government Licence v3.0.
         </p>
       </div>

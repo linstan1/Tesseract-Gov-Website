@@ -8,6 +8,7 @@ const FRAMEWORKS = [
   { name: 'Research & Insights DPS', ref: 'RM6126', lots: ['Research Services', 'Insight & Evidence'], status: 'Live', url: 'https://www.crowncommercial.gov.uk/agreements/RM6126' },
   { name: 'Learning & Training Services DPS', ref: 'RM6219', lots: ['Standard Off-the-Shelf Training', 'Bespoke Training', 'Learning Technologies', 'Education Services'], status: 'Live', url: 'https://www.crowncommercial.gov.uk/agreements/RM6219' },
   { name: 'Space-Enabled & Geospatial Services DPS', ref: 'RM6235', lots: ['Satellite Communication & Broadcasting', 'Geospatial, Remote Sensing & PNT', 'Unmanned Autonomous Vehicles', 'Upstream Professional Services'], status: 'Live', url: 'https://www.crowncommercial.gov.uk/agreements/RM6235' },
+  { name: 'Spark DPS (appointed August 2026)', ref: 'RM6094', lots: ['AI & Automation', 'Data', 'Internet of Things (IoT)'], status: 'Live', url: 'https://www.crowncommercial.gov.uk/agreements/RM6094' },
 ];
 
 export const HowToBuy: React.FC = () => {
@@ -15,14 +16,14 @@ export const HowToBuy: React.FC = () => {
     <div className="max-w-6xl mx-auto px-6 lg:px-8 py-20 space-y-16">
       <header className="border-b border-gov-border/30 pb-10">
         <h1 className="text-5xl font-extrabold text-gov-dark mb-6 tracking-tight leading-tight">How to Buy</h1>
-        <p className="text-xl text-gov-secondary/90 leading-relaxed max-w-4xl">
+        <p className="text-xl text-gov-secondary leading-relaxed max-w-4xl">
           Streamlined routes to market for UK and EU public bodies. We are committed to transparent, compliant procurement.
         </p>
       </header>
 
       <section>
         <h2 className="text-3xl font-bold text-gov-dark mb-8">Routes to Market</h2>
-        <div className="overflow-x-auto rounded-lg border border-gov-border shadow-soft">
+        <div tabIndex={0} role="region" aria-label="Table, scrolls sideways on small screens" className="overflow-x-auto rounded-lg border border-gov-border shadow-soft">
           <table className="min-w-full text-left text-sm whitespace-nowrap">
             <thead className="uppercase tracking-wider border-b border-gov-border bg-gov-bg">
               <tr>
@@ -56,7 +57,7 @@ export const HowToBuy: React.FC = () => {
                         View Listing<span className="sr-only"> (opens in new tab)</span> <ExternalLink className="w-3 h-3" aria-hidden="true" />
                       </a>
                     ) : (
-                      <span className="text-gray-400">N/A</span>
+                      <span className="text-gov-secondary">N/A</span>
                     )}
                   </td>
                 </tr>

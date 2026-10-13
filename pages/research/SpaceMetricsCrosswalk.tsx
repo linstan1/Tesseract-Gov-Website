@@ -76,7 +76,7 @@ export const SpaceMetricsCrosswalk: React.FC = () => {
         <h1 className="text-4xl font-extrabold text-gov-dark mb-6 tracking-tight leading-tight font-serif">
           Space debris metrics that cannot be added up
         </h1>
-        <p className="text-xl text-gov-secondary/90 leading-relaxed">
+        <p className="text-xl text-gov-secondary leading-relaxed">
           The world's two premier orbital debris models disagree by a factor of 2.3 to 3.0 at the diameter where collision-avoidance decisions are made. Neither is wrong. They divide the same physical population along axes that do not align, and nothing in either model's output records that fact. We built an open checker that catches it.
         </p>
       </header>
@@ -119,7 +119,7 @@ export const SpaceMetricsCrosswalk: React.FC = () => {
           ))}
         </div>
 
-        <p className="text-sm text-gov-secondary/90 leading-relaxed">
+        <p className="text-sm text-gov-secondary leading-relaxed">
           The 1 cm row is the one that matters operationally. The comparison paper calls it "a critical diameter threshold for collision risk estimations", and it is where collision-avoidance thresholds, shielding specification and post-mission disposal requirements are set.
         </p>
       </section>
@@ -152,14 +152,14 @@ export const SpaceMetricsCrosswalk: React.FC = () => {
             </div>
           ))}
         </div>
-        <p className="text-sm text-gov-secondary/90 leading-relaxed">
+        <p className="text-sm text-gov-secondary leading-relaxed">
           The decision is symbolic. There is no statistical component and no language model anywhere in the decision path, so the same inputs always produce the same, inspectable answer.
         </p>
       </section>
 
       <section className="space-y-6">
         <h2 className="text-2xl font-bold text-gov-dark font-serif">Four verdicts, not one refusal</h2>
-        <div className="overflow-x-auto">
+        <div tabIndex={0} role="region" aria-label="Table, scrolls sideways on small screens" className="overflow-x-auto">
           <table className="w-full text-sm border-collapse">
             <thead>
               <tr className="bg-gov-bg border-b border-gov-border">
@@ -229,7 +229,7 @@ export const SpaceMetricsCrosswalk: React.FC = () => {
         <p className="text-gov-dark leading-relaxed">
           The repository is public and MIT licensed. One of the tests asserts that the factor 2.3 to 3.0 divergence appears in the refusal reason, so if a future change ever caused the tool to quietly average the two models instead of refusing them, that test fails.
         </p>
-        <pre className="bg-white border border-gov-border/50 rounded-lg p-4 text-sm overflow-x-auto text-gov-dark"><code>{`git clone ${REPO}
+        <pre tabIndex={0} role="region" aria-label="Code sample" className="bg-white border border-gov-border/50 rounded-lg p-4 text-sm overflow-x-auto text-gov-dark"><code>{`git clone ${REPO}
 cd space-metrics-crosswalk
 pip install -r requirements.txt
 python examples/master_ordem_1cm.py

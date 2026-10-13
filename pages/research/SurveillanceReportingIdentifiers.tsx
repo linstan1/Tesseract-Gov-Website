@@ -85,7 +85,7 @@ export const SurveillanceReportingIdentifiers: React.FC = () => (
       <h1 className="text-4xl font-extrabold text-gov-dark mb-6 tracking-tight leading-tight font-serif">
         An open census of UK operational surveillance reporting, and what its identifiers actually denote
       </h1>
-      <p className="text-xl text-gov-secondary/90 leading-relaxed">
+      <p className="text-xl text-gov-secondary leading-relaxed">
         A companion study to our census of the Food Standards Agency&apos;s alert register. That one asked whether a hazard could be joined across the One Health boundary. This one asks a prior question, which turns out to be the harder one: whether the report that carries a surveillance finding can be cited at all. On 18 August 2026 we censused every publication held by APHA, UKHSA and Cefas on GOV.UK. Two of our own hypotheses died along the way and both are reported below, because the finding that survived is only credible if the discarded ones are visible.
       </p>
     </header>
@@ -135,7 +135,7 @@ export const SurveillanceReportingIdentifiers: React.FC = () => (
       <p className="text-gov-dark leading-relaxed">
         8,758 files announce a date or a period in their own title, which is the evidence that they are editions rather than undated annexes. <strong>5,212 of them, 59.5 per cent, carry no report-level identifier</strong>, a worse rate than the corpus as a whole. 242 recurring series carry none on any edition at all.
       </p>
-      <div className="overflow-x-auto">
+      <div tabIndex={0} role="region" aria-label="Table, scrolls sideways on small screens" className="overflow-x-auto">
         <table className="min-w-full text-sm border border-gov-border">
           <thead className="bg-gov-bg/60">
             <tr>
@@ -182,7 +182,7 @@ export const SurveillanceReportingIdentifiers: React.FC = () => (
       <p className="text-gov-dark leading-relaxed">
         The UKHSA National flu and COVID-19 surveillance reports are the weekly national respiratory surveillance output. Each season gets its own page, and the weekly editions accumulate on it. Report-level identifier coverage across consecutive seasons:
       </p>
-      <div className="overflow-x-auto">
+      <div tabIndex={0} role="region" aria-label="Table, scrolls sideways on small screens" className="overflow-x-auto">
         <table className="min-w-full text-sm border border-gov-border">
           <thead className="bg-gov-bg/60">
             <tr>

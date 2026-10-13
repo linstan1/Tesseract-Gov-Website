@@ -29,7 +29,7 @@ export const AIGovernance: React.FC = () => {
         <h1 className="text-5xl font-extrabold text-gov-dark mb-6 tracking-tight leading-tight">
           AI Governance and Regulatory Compliance
         </h1>
-        <p className="text-xl text-gov-secondary/90 leading-relaxed max-w-4xl">
+        <p className="text-xl text-gov-secondary leading-relaxed max-w-4xl">
           We help public sector organisations implement robust AI governance frameworks aligned
           to EU AI Act, NIST AI RMF, and ISO 42001. Our open-source governance platform provides
           48 tools for risk classification, bias auditing, compliance monitoring, and audit-ready
@@ -47,21 +47,21 @@ export const AIGovernance: React.FC = () => {
         </blockquote>
 
         <p className="text-gov-dark leading-relaxed text-base">
-          AI governance is now a legal obligation, not an optional enhancement. <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689" target="_blank" rel="noopener noreferrer" className="text-gov-blue hover:underline">Regulation (EU)
+          AI governance is now a legal obligation, not an optional enhancement. <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689" target="_blank" rel="noopener noreferrer" className="text-gov-blue underline underline-offset-2 hover:text-gov-blue-dark">Regulation (EU)
           2024/1689 (the EU AI Act)</a> — the world's first comprehensive AI law — classifies AI systems
           by risk level and imposes mandatory requirements for high-risk systems, including algorithmic
           impact assessments, human-in-the-loop controls, bias monitoring, and technical documentation.
           For UK public sector bodies procuring or developing AI systems that interact with EU citizens
-          or are placed in EU markets, compliance is mandatory. <a href="https://www.gov.uk/government/publications/ai-regulation-a-pro-innovation-approach" target="_blank" rel="noopener noreferrer" className="text-gov-blue hover:underline">UK government guidance on algorithmic
+          or are placed in EU markets, compliance is mandatory. <a href="https://www.gov.uk/government/publications/ai-regulation-a-pro-innovation-approach" target="_blank" rel="noopener noreferrer" className="text-gov-blue underline underline-offset-2 hover:text-gov-blue-dark">UK government guidance on algorithmic
           transparency</a> and the ICO's Explaining Decisions Made with AI create parallel obligations
           under UK law.
         </p>
         <p className="text-gov-dark leading-relaxed text-base">
           Tesseract Academy delivers end-to-end AI governance programmes covering the full compliance
-          lifecycle. We begin with a risk classification assessment — mapping AI systems against <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689" target="_blank" rel="noopener noreferrer" className="text-gov-blue hover:underline">EU AI
-          Act Annex III</a> categories and <a href="https://www.nist.gov/system/files/documents/2023/01/26/AI%20RMF%201.0.pdf" target="_blank" rel="noopener noreferrer" className="text-gov-blue hover:underline">NIST AI RMF</a> risk dimensions — and produce a governance roadmap
+          lifecycle. We begin with a risk classification assessment — mapping AI systems against <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689" target="_blank" rel="noopener noreferrer" className="text-gov-blue underline underline-offset-2 hover:text-gov-blue-dark">EU AI
+          Act Annex III</a> categories and <a href="https://www.nist.gov/system/files/documents/2023/01/26/AI%20RMF%201.0.pdf" target="_blank" rel="noopener noreferrer" className="text-gov-blue underline underline-offset-2 hover:text-gov-blue-dark">NIST AI RMF</a> risk dimensions — and produce a governance roadmap
           with prioritised remediation actions. We then support implementation of algorithmic
-          transparency disclosures aligned to the <a href="https://www.gov.uk/government/publications/ai-regulation-a-pro-innovation-approach" target="_blank" rel="noopener noreferrer" className="text-gov-blue hover:underline">UK AI Framework</a>, bias audit protocols, Data Protection Impact Assessments (DPIAs),
+          transparency disclosures aligned to the <a href="https://www.gov.uk/government/publications/ai-regulation-a-pro-innovation-approach" target="_blank" rel="noopener noreferrer" className="text-gov-blue underline underline-offset-2 hover:text-gov-blue-dark">UK AI Framework</a>, bias audit protocols, Data Protection Impact Assessments (DPIAs),
           and human-in-the-loop control design. The Department for Science Innovation and Technology (DSIT) and the UK AI Safety Institute set the policy context within which our governance programmes operate.
         </p>
         <p className="text-gov-dark leading-relaxed text-base">
@@ -75,13 +75,13 @@ export const AIGovernance: React.FC = () => {
         <p className="text-gov-dark leading-relaxed text-base">
           We are Cyber Essentials certified and operate
           ISO 27001-aligned information security controls, meeting the security baseline required
-          for contracts involving personal data or government OFFICIAL classification. Our services are procurable via <a href="https://www.crowncommercial.gov.uk/agreements/RM6200" target="_blank" rel="noopener noreferrer" className="text-gov-blue hover:underline">Crown Commercial Service (CCS) RM6200</a>, and NHS England, HM Treasury, and Office for National Statistics (ONS) clients can access our governance services through standard framework routes.
+          for contracts involving personal data or government OFFICIAL classification. Our services are procurable via <a href="https://www.crowncommercial.gov.uk/agreements/RM6200" target="_blank" rel="noopener noreferrer" className="text-gov-blue underline underline-offset-2 hover:text-gov-blue-dark">Crown Commercial Service (CCS) RM6200</a>, and NHS England, HM Treasury, and Office for National Statistics (ONS) clients can access our governance services through standard framework routes.
         </p>
       </section>
 
       <section>
         <h2 className="text-3xl font-bold text-gov-dark mb-8">Service Comparison</h2>
-        <div className="overflow-x-auto rounded-xl border border-gov-border/40">
+        <div tabIndex={0} role="region" aria-label="Table, scrolls sideways on small screens" className="overflow-x-auto rounded-xl border border-gov-border/40">
           <table className="w-full text-sm text-left">
             <thead className="bg-gov-bg border-b border-gov-border/40">
               <tr>
@@ -132,7 +132,7 @@ export const AIGovernance: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="bg-gov-bg border border-gov-border/40 rounded-xl p-6">
             <h3 className="font-bold text-gov-dark mb-3">EU AI Act</h3>
-            <p className="text-sm text-gov-secondary/90 leading-relaxed">
+            <p className="text-sm text-gov-secondary leading-relaxed">
               Risk classification, Annex III high-risk assessment, conformity assessment preparation,
               technical documentation, algorithmic transparency disclosures, and human oversight
               design under Regulation (EU) 2024/1689.
@@ -140,7 +140,7 @@ export const AIGovernance: React.FC = () => {
           </div>
           <div className="bg-gov-bg border border-gov-border/40 rounded-xl p-6">
             <h3 className="font-bold text-gov-dark mb-3">NIST AI RMF</h3>
-            <p className="text-sm text-gov-secondary/90 leading-relaxed">
+            <p className="text-sm text-gov-secondary leading-relaxed">
               Full implementation across all four functions: Govern (policies, culture, accountability),
               Map (risk identification), Measure (testing, monitoring), and Manage (risk response,
               continual improvement).
@@ -148,7 +148,7 @@ export const AIGovernance: React.FC = () => {
           </div>
           <div className="bg-gov-bg border border-gov-border/40 rounded-xl p-6">
             <h3 className="font-bold text-gov-dark mb-3">ISO 42001</h3>
-            <p className="text-sm text-gov-secondary/90 leading-relaxed">
+            <p className="text-sm text-gov-secondary leading-relaxed">
               AI management system design, gap analysis against the 2023 standard, implementation
               roadmap, internal audit preparation, and integration with existing ISO 27001
               information security management systems.
@@ -156,7 +156,7 @@ export const AIGovernance: React.FC = () => {
           </div>
           <div className="bg-gov-bg border border-gov-border/40 rounded-xl p-6">
             <h3 className="font-bold text-gov-dark mb-3">Bias Auditing</h3>
-            <p className="text-sm text-gov-secondary/90 leading-relaxed">
+            <p className="text-sm text-gov-secondary leading-relaxed">
               Systematic statistical testing of AI model performance across demographic groups
               (age, gender, ethnicity, disability status). Bias audit reports suitable for
               submission to public sector clients and inclusion in algorithmic transparency returns.
@@ -164,7 +164,7 @@ export const AIGovernance: React.FC = () => {
           </div>
           <div className="bg-gov-bg border border-gov-border/40 rounded-xl p-6">
             <h3 className="font-bold text-gov-dark mb-3">DPIA and AIA</h3>
-            <p className="text-sm text-gov-secondary/90 leading-relaxed">
+            <p className="text-sm text-gov-secondary leading-relaxed">
               Data Protection Impact Assessments (DPIA) required under UK GDPR for high-risk
               processing, and Algorithmic Impact Assessments (AIA) required for high-risk AI
               systems. Both delivered to UK GDPR standards.
@@ -172,7 +172,7 @@ export const AIGovernance: React.FC = () => {
           </div>
           <div className="bg-gov-bg border border-gov-border/40 rounded-xl p-6">
             <h3 className="font-bold text-gov-dark mb-3">Cyber Essentials</h3>
-            <p className="text-sm text-gov-secondary/90 leading-relaxed">
+            <p className="text-sm text-gov-secondary leading-relaxed">
               Tesseract Academy is Cyber Essentials certified, meeting the UK government baseline
               for information security. We can advise public sector bodies and suppliers on
               achieving Cyber Essentials or Cyber Essentials Plus certification.
@@ -229,7 +229,7 @@ export const AIGovernance: React.FC = () => {
               1
             </span>
             <div>
-              <p className="font-semibold text-gov-dark">CCS RM6200 — Management Consultancy Three</p>
+              <p className="font-semibold text-gov-dark">CCS RM6200, Artificial Intelligence DPS</p>
               <p className="text-gov-secondary text-sm mt-1">
                 The primary route for AI governance strategy, compliance programme design, and
                 regulatory advisory. Covers EU AI Act compliance assessments, NIST AI RMF

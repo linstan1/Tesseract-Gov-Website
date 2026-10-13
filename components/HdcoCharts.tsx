@@ -65,7 +65,7 @@ const BarChart: React.FC<BarChartProps> = ({
     <figure className="my-8">
       <figcaption className="mb-1 text-base font-semibold text-gov-dark font-serif">{title}</figcaption>
       {subtitle && <p className="mb-3 text-sm text-gov-secondary">{subtitle}</p>}
-      <div className="overflow-x-auto">
+      <div tabIndex={0} role="region" aria-label="Scrollable content" className="overflow-x-auto">
         <svg
           viewBox={`0 0 ${width} ${height}`}
           width="100%"

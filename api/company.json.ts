@@ -37,7 +37,7 @@ const COMPANY_DATA = {
       "honorificPrefix": "Dr",
       "credentials": [
         "PhD in Machine Learning, University College London",
-        "Member of the Royal Statistical Society",
+        "Chartered Statistician (CStat), Royal Statistical Society",
         "Honorary Research Fellow, UCL Centre for Blockchain Technologies",
         "Data Science Advisor, London Business School"
       ],
@@ -79,6 +79,13 @@ const COMPANY_DATA = {
       "name": "Space-Enabled and Geospatial Services Dynamic Purchasing System",
       "shortName": "Space-Enabled & Geospatial Services DPS",
       "scope": "Geospatial, remote sensing and PNT, satellite communication, unmanned autonomous vehicles, upstream professional services"
+    },
+    {
+      "id": "RM6094",
+      "name": "Spark Dynamic Purchasing System",
+      "shortName": "Spark DPS",
+      "scope": "Emerging technology: AI and automation, data, Internet of Things",
+      "appointed": "2026-08"
     }
   ],
   "certifications": [

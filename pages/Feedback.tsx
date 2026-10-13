@@ -82,7 +82,7 @@ export const Feedback: React.FC = () => {
     <div className="max-w-7xl mx-auto px-6 lg:px-8 py-20 space-y-20">
       <div>
         <h1 className="text-5xl font-extrabold text-gov-dark mb-6 tracking-tight leading-tight">Testimonials & Executive Training</h1>
-        <p className="text-xl text-gov-secondary/90 leading-relaxed max-w-4xl">
+        <p className="text-xl text-gov-secondary leading-relaxed max-w-4xl">
           Verified reviews from Clutch and our training programmes, alongside executive AI and data science workshops delivered for global organisations.
         </p>
       </div>

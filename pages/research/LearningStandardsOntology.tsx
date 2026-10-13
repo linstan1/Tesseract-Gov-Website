@@ -183,7 +183,7 @@ export const LearningStandardsOntology: React.FC = () => (
       <h1 className="text-4xl font-extrabold text-gov-dark mb-6 tracking-tight leading-tight font-serif">
         The identifiers underneath American academic standards are all dead, and the redirect still works
       </h1>
-      <p className="text-xl text-gov-secondary/90 leading-relaxed">
+      <p className="text-xl text-gov-secondary leading-relaxed">
         We dereferenced 67,141 Achievement Standards Network identifiers, the names that American K-12 academic standards were published under and that learning-resource metadata across the open education web still carries. Every single one returns 404. The vocabulary that describes them still resolves, cheerfully, from a static object store, so a system checking whether the scheme is alive gets a reassuring answer. Alongside that census we measured what the surviving standards can actually reject, and built the open ontology that records identifier resolvability as data rather than assuming it. This page explains what we found, how, and what it means if you align content to standards for a living.
       </p>
     </header>
@@ -213,7 +213,7 @@ export const LearningStandardsOntology: React.FC = () => (
       <p className="text-gov-dark leading-relaxed">
         The sharpest instance is 1EdTech. The organisation that publishes CASE, the specification the sector migrated to precisely because ASN was fading, ships a QTI version 3 example package whose curriculum-standard references are ASN URIs. All nine of them are dead. That is not a criticism of 1EdTech specifically; it is evidence of how deep the dependency runs, that even the successor&apos;s reference material still points at the predecessor.
       </p>
-      <Mermaid chart={CENSUS} />
+      <Mermaid chart={CENSUS} ariaLabel="Census: 44,084 canonical ASN identifiers from public code search and 770,861 statement ids plus 3,057 document ids from the Common Standards Project, 67,141 dereferenced in total, of which none resolve; the purl.org ASN schema namespace still returns 200 OK." />
       <p className="text-gov-dark leading-relaxed">
         We measured three populations. Identifiers still cited in public code: all 44,084 dereferenced, a complete census. Standards-document identifiers carried by the live standards corpus: all 3,057, a complete census. Statement identifiers in that corpus: a random sample of 20,000 drawn from 770,861, which at zero successes puts the 95 per cent upper bound on the resolving proportion below 0.02 per cent. A full census of the third population would have taken about eleven hours at a polite request rate, and sampling is stated rather than hidden.
       </p>
@@ -275,7 +275,7 @@ export const LearningStandardsOntology: React.FC = () => (
 
     <section className="space-y-4">
       <h2 className="text-2xl font-bold text-gov-dark font-serif">Ten findings, and what each one costs</h2>
-      <div className="overflow-x-auto rounded-lg border border-gov-border">
+      <div tabIndex={0} role="region" aria-label="Table, scrolls sideways on small screens" className="overflow-x-auto rounded-lg border border-gov-border">
         <table className="min-w-full text-sm">
           <thead>
             <tr className="bg-gov-bg text-left">
@@ -297,14 +297,14 @@ export const LearningStandardsOntology: React.FC = () => (
           </tbody>
         </table>
       </div>
-      <p className="text-sm text-gov-secondary/90 leading-relaxed">
+      <p className="text-sm text-gov-secondary leading-relaxed">
         All figures computed on 16 August 2026. Only the CEDS measurement is pinned and byte-for-byte reproducible, from the <code>V14.0.0.0</code> tag. The standards corpus, the CASE server and the citation population are live systems, so a later run gives different totals while the method reproduces exactly.
       </p>
     </section>
 
     <section className="space-y-4">
       <h2 className="text-2xl font-bold text-gov-dark font-serif">What the ontology does about it</h2>
-      <Mermaid chart={MODEL} />
+      <Mermaid chart={MODEL} ariaLabel="Ontology model: a jurisdiction publishes a standards document containing standard statements; adoption is reified with its own status and dates; identifier assertions carry scheme, source and value and link to dated resolution observations; alignment assertions carry their own falsifiability grade." />
       <p className="text-gov-dark leading-relaxed">
         <strong>Resolvability is recorded data, not an assumption.</strong> An identifier assertion carries its scheme, the source that asserted it, and a dated resolution observation holding the HTTP status, the media type and the final URL after redirects. That last field is what distinguishes a live indirection layer over dead data from a healthy scheme, and it is the distinction that made this whole study possible. No incumbent artefact in this space has anywhere to put that fact, which is why the failure went unmeasured for years.
       </p>
@@ -317,7 +317,7 @@ export const LearningStandardsOntology: React.FC = () => (
       <p className="text-gov-dark leading-relaxed">
         The test suite enforces on this ontology the properties whose absence it measures in others: every property declares exactly one domain and one range, the ontology declares disjointness, and no term is typed as both a class and a concept scheme. A pull request breaking any of those fails CI, deliberately. It would be embarrassing to publish this study and repeat the defects.
       </p>
-      <p className="text-sm text-gov-secondary/90 leading-relaxed">
+      <p className="text-sm text-gov-secondary leading-relaxed">
         The identifier discipline here was first proved on the United States fund universe in our <Link to="/research/investment-fund-ontology" className="text-gov-blue underline hover:text-gov-blue-dark">Investment Fund Ontology</Link> and then on European insurance in the <Link to="/research/insurance-register-ontology" className="text-gov-blue underline hover:text-gov-blue-dark">Insurance Register Ontology</Link>. Education is its third instantiation, and the transfer without redesign is itself the finding: regulated register fabrics fail the same way whatever they name.
       </p>
     </section>
@@ -378,7 +378,7 @@ export const LearningStandardsOntology: React.FC = () => (
           If you run curriculum alignment, standards migration, item banking or an education knowledge graph, write to <a href="mailto:fabio@thetesseractacademy.com" className="text-gov-blue underline hover:text-gov-blue-dark">fabio@thetesseractacademy.com</a>. Send a sample of the identifiers you store and we will tell you what proportion of them still resolve, before any commitment.
         </p>
       </div>
-      <p className="text-sm text-gov-secondary/90 leading-relaxed">
+      <p className="text-sm text-gov-secondary leading-relaxed">
         Related work: our <Link to="/research/machine-validated-open-ontologies" className="text-gov-blue underline hover:text-gov-blue-dark">machine-validated ontologies</Link> study measures when an ontology can reject a wrong statement, the <Link to="/research/skills-england-occupational-maps" className="text-gov-blue underline hover:text-gov-blue-dark">Skills England occupational maps</Link> apply the same discipline to the UK skills system, and the <Link to="/research/industrial-ontology-crosswalks" className="text-gov-blue underline hover:text-gov-blue-dark">industrial ontology crosswalks</Link> measure how often standards crosswalks can detect a wrong mapping at all.
       </p>
     </section>

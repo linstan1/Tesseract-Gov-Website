@@ -107,7 +107,7 @@ export const LandCarbonMeasurement: React.FC = () => (
         the literal value <code className="bg-gray-100 px-1 rounded">UNPOPULATED</code>. It is
         the only value the field takes anywhere in Scotland. Five further attributes behave
         identically. The detail is in our{' '}
-        <Link to="/research/land-register-ontology" className="text-gov-blue hover:underline">
+        <Link to="/research/land-register-ontology" className="text-gov-blue underline underline-offset-2 hover:text-gov-blue-dark">
           study of the cadastre itself
         </Link>.
       </p>
@@ -124,7 +124,7 @@ export const LandCarbonMeasurement: React.FC = () => (
         therefore counts some ground twice. Taking the geometric union counts it once.
       </p>
 
-      <div className="overflow-x-auto mb-6">
+      <div tabIndex={0} role="region" aria-label="Table, scrolls sideways on small screens" className="overflow-x-auto mb-6">
         <table className="min-w-full border border-gray-200 text-sm">
           <thead className="bg-gray-50"><tr>
             <th className="text-left px-4 py-2 border-b font-semibold">Method</th>
@@ -186,7 +186,7 @@ export const LandCarbonMeasurement: React.FC = () => (
         table because the two encode classes with different integers.
       </p>
 
-      <div className="overflow-x-auto mb-6">
+      <div tabIndex={0} role="region" aria-label="Table, scrolls sideways on small screens" className="overflow-x-auto mb-6">
         <table className="min-w-full border border-gray-200 text-sm">
           <thead className="bg-gray-50"><tr>
             <th className="text-left px-4 py-2 border-b font-semibold">Result</th>
@@ -219,7 +219,7 @@ export const LandCarbonMeasurement: React.FC = () => (
 
       <h2 className="text-2xl font-bold text-gov-black mt-12 mb-4">How much bog there is</h2>
 
-      <div className="overflow-x-auto mb-6">
+      <div tabIndex={0} role="region" aria-label="Table, scrolls sideways on small screens" className="overflow-x-auto mb-6">
         <table className="min-w-full border border-gray-200 text-sm">
           <thead className="bg-gray-50"><tr>
             <th className="text-left px-4 py-2 border-b font-semibold">EUNIS class</th>
@@ -307,7 +307,7 @@ export const LandCarbonMeasurement: React.FC = () => (
         </p>
         <p className="text-gray-700">
           Fabio Rovai, The Tesseract Academy:{' '}
-          <a href="mailto:fabio@thetesseractacademy.com" className="text-gov-blue hover:underline">fabio@thetesseractacademy.com</a>
+          <a href="mailto:fabio@thetesseractacademy.com" className="text-gov-blue underline underline-offset-2 hover:text-gov-blue-dark">fabio@thetesseractacademy.com</a>
         </p>
       </div>
 

@@ -116,7 +116,7 @@ export const VictimWitnessEvaluation: React.FC = () => {
         <h1 className="text-4xl font-extrabold text-gov-dark mb-6 tracking-tight leading-tight font-serif">
           When a Theory of Change has to hold up
         </h1>
-        <p className="text-xl text-gov-secondary/90 leading-relaxed">
+        <p className="text-xl text-gov-secondary leading-relaxed">
           Government is being pulled towards proving that what it funds works. The workhorse of that proof, where trials are not feasible, is the Theory of Change - and as a prose diagram it hides its own weakest links. This is a reflection on where the evaluation agenda is heading, and a small, open method for building a Theory of Change that can actually be checked. We work it on victim and witness support.
         </p>
       </header>
@@ -183,7 +183,7 @@ export const VictimWitnessEvaluation: React.FC = () => {
 
       <section className="space-y-6">
         <h2 className="text-2xl font-bold text-gov-dark font-serif">What the method produces</h2>
-        <div className="overflow-x-auto">
+        <div tabIndex={0} role="region" aria-label="Table, scrolls sideways on small screens" className="overflow-x-auto">
           <table className="w-full text-sm border-collapse">
             <thead>
               <tr className="bg-gov-bg border-b border-gov-border">
@@ -210,7 +210,7 @@ export const VictimWitnessEvaluation: React.FC = () => {
             Because the pathways are typed, SHACL shapes check the graph the way a spell-checker checks prose: no outcome without a published anchor, no causal claim without an evidence grade, no pathway without its declared assumptions. Running the validator on this graph returns <strong>SHACL conforms: true</strong>, then surfaces the evidence-gap map by query - <strong>two genuine gaps across seven pathways</strong>. Structure is guaranteed; the gaps are recorded, not hidden. That is what turns “name the weak links” from a hope into a mechanical result - and it is precisely what a feasibility assessment or an Evaluation Task Force reviewer is looking for.
           </p>
         </div>
-        <div className="overflow-x-auto rounded-xl border border-gov-border/50">
+        <div tabIndex={0} role="region" aria-label="Table, scrolls sideways on small screens" className="overflow-x-auto rounded-xl border border-gov-border/50">
           <table className="w-full text-sm border-collapse min-w-[640px]">
             <thead>
               <tr className="bg-gov-bg border-b border-gov-border">
@@ -236,7 +236,7 @@ export const VictimWitnessEvaluation: React.FC = () => {
             </tbody>
           </table>
         </div>
-        <p className="text-sm text-gov-secondary/90 leading-relaxed">
+        <p className="text-sm text-gov-secondary leading-relaxed">
           Effect directions and grades shown here are illustrative of the extraction structure, not asserted findings. The two rows marked <em>gap</em> reflect a real state of the field: these links are widely assumed but not yet robustly evidenced.
         </p>
       </section>
@@ -247,7 +247,7 @@ export const VictimWitnessEvaluation: React.FC = () => {
           <p className="text-gov-dark leading-relaxed">
             An open, machine-readable Theory of Change and evidence schema released under CC-BY-4.0, built on Tesseract’s <a href="https://github.com/fabio-rovai/open-ontologies" target="_blank" rel="noopener noreferrer" className="text-gov-blue underline hover:text-gov-blue-dark">open-ontologies</a> approach and validated with SHACL. As evaluation moves to the centre of spending decisions, a Theory of Change stops being a document produced once and filed. It becomes standing infrastructure - auditable, internally consistent, and carried forward into the full evaluation rather than redrawn from scratch. The products a commissioner sees are still the familiar ones - the diagram, the narrative, the monitoring-and-evaluation framework; the structured graph underneath is what makes them hold up.
           </p>
-          <p className="text-sm text-gov-secondary/90 leading-relaxed mt-4">
+          <p className="text-sm text-gov-secondary leading-relaxed mt-4">
             This is an independent, self-initiated reflection on method. It is built entirely from public information and open standards, uses no confidential or commissioned data, and represents no organisation’s findings but our own.
           </p>
         </div>

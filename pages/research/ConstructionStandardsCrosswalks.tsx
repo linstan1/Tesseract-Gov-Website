@@ -125,7 +125,7 @@ export const ConstructionStandardsCrosswalks: React.FC = () => (
       <h1 className="text-4xl font-extrabold text-gov-dark mb-6 tracking-tight leading-tight font-serif">
         Construction data standards cannot check your AI, measured across IFC, COBie, Uniclass and BOT
       </h1>
-      <p className="text-xl text-gov-secondary/90 leading-relaxed">
+      <p className="text-xl text-gov-secondary leading-relaxed">
         Open, argued crosswalks between the standards a building actually passes through, and the measurement that matters for anyone buying AI classification or COBie extraction: the classification layer of construction is 0% falsifiable, so no wrong mapping into it can ever be rejected by a machine.
       </p>
     </header>
@@ -162,7 +162,7 @@ export const ConstructionStandardsCrosswalks: React.FC = () => (
 
     <section className="space-y-6">
       <h2 className="text-2xl font-bold text-gov-dark font-serif">What we built</h2>
-      <div className="overflow-x-auto">
+      <div tabIndex={0} role="region" aria-label="Table, scrolls sideways on small screens" className="overflow-x-auto">
         <table className="w-full text-sm border-collapse">
           <thead>
             <tr className="bg-gov-bg border-b border-gov-border">
@@ -189,7 +189,7 @@ export const ConstructionStandardsCrosswalks: React.FC = () => (
           A standard can only prove a mapping impossible if it contains a rule capable of producing a contradiction. Count, for each standard, the fraction of class pairs that provably cannot share an instance. That is its <strong>falsifiability rate</strong>: the ceiling on what any automated check of an alignment into it can ever catch.
         </p>
       </div>
-      <div className="overflow-x-auto">
+      <div tabIndex={0} role="region" aria-label="Table, scrolls sideways on small screens" className="overflow-x-auto">
         <table className="w-full text-sm border-collapse">
           <thead>
             <tr className="bg-gov-bg border-b border-gov-border">
@@ -246,7 +246,7 @@ export const ConstructionStandardsCrosswalks: React.FC = () => (
           </div>
         ))}
       </div>
-      <p className="text-sm text-gov-secondary/90 leading-relaxed">
+      <p className="text-sm text-gov-secondary leading-relaxed">
         Each refusal is published as a machine-readable asserted non-mapping, so a tool consuming the crosswalk is told not to make the join rather than left to discover the problem in production.
       </p>
     </section>
@@ -277,7 +277,7 @@ export const ConstructionStandardsCrosswalks: React.FC = () => (
           The whole subject is taught as a free course on the Tesseract Academy platform, written for construction professionals rather than ontologists: project managers, quantity surveyors, BIM leads and information managers. Every figure quoted in the lessons is produced by the repository, so the course and the crosswalks check each other. Fifteen lessons, each with a structural diagram and a graded quiz.
         </p>
       </div>
-      <div className="overflow-x-auto">
+      <div tabIndex={0} role="region" aria-label="Table, scrolls sideways on small screens" className="overflow-x-auto">
         <table className="w-full text-sm border-collapse">
           <thead>
             <tr className="bg-gov-bg border-b border-gov-border">
@@ -315,7 +315,7 @@ export const ConstructionStandardsCrosswalks: React.FC = () => (
       <a href={REPO} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-gov-blue underline hover:text-gov-blue-dark font-medium">
         construction-standards-crosswalks on GitHub <ExternalLink className="w-4 h-4" />
       </a>
-      <p className="text-sm text-gov-secondary/90 leading-relaxed">
+      <p className="text-sm text-gov-secondary leading-relaxed">
         Released CC BY 4.0. Related work: the <Link to="/research/industrial-ontology-crosswalks" className="text-gov-blue underline hover:text-gov-blue-dark">industrial ontology crosswalks</Link> apply the identical method to ISO 15926, ISA-95, CFIHOS, OPC UA, SAREF and the Asset Administration Shell, and the <Link to="/research/ies-hqdm-defence-interoperability" className="text-gov-blue underline hover:text-gov-blue-dark">IES to HQDM crosswalk</Link> extends the certification method to defence data.
       </p>
     </section>

@@ -84,7 +84,7 @@ export const SpectralLibraryOntology: React.FC = () => (
       <h1 className="text-4xl font-extrabold text-gov-dark mb-6 tracking-tight leading-tight font-serif">
         The register that publishes its own contradiction: an open ontology for mass spectrometry reference libraries
       </h1>
-      <p className="text-xl text-gov-secondary/90 leading-relaxed">
+      <p className="text-xl text-gov-secondary leading-relaxed">
         Every compound identification in untargeted metabolomics rests on a reference spectrum being correctly labelled with a structure. GNPS is unusual among registers in that it derives that structure twice, from two different fields the depositor supplied, and publishes both derivations. Almost nobody does this. It means GNPS is the one place where a register&apos;s internal disagreement with itself can be counted rather than guessed at. On 21 August 2026 we downloaded all of it, 2,091,754 spectra across 98 libraries, and counted.
       </p>
     </header>
@@ -125,7 +125,7 @@ export const SpectralLibraryOntology: React.FC = () => (
       <p className="text-gov-dark leading-relaxed">
         An InChIKey is layered, which is what makes this measurable rather than merely observable. The first fourteen characters hash molecular connectivity alone. The next eight hash the remaining layers, where stereochemistry lives. The final character records protonation. Two keys can therefore be compared to say precisely where two structure claims stop agreeing, rather than only that they do.
       </p>
-      <div className="overflow-x-auto">
+      <div tabIndex={0} role="region" aria-label="Table, scrolls sideways on small screens" className="overflow-x-auto">
         <table className="min-w-full text-sm border border-gov-border">
           <thead className="bg-gov-bg/60">
             <tr>
@@ -169,7 +169,7 @@ export const SpectralLibraryOntology: React.FC = () => (
       <p className="text-gov-dark leading-relaxed">
         0.94 per cent across the corpus sounds like a rounding error. It is not distributed like one.
       </p>
-      <div className="overflow-x-auto">
+      <div tabIndex={0} role="region" aria-label="Table, scrolls sideways on small screens" className="overflow-x-auto">
         <table className="min-w-full text-sm border border-gov-border">
           <thead className="bg-gov-bg/60">
             <tr>
@@ -324,7 +324,7 @@ export const SpectralLibraryOntology: React.FC = () => (
           Write to <a href="mailto:fabio@thetesseractacademy.com" className="text-gov-blue underline hover:text-gov-blue-dark">fabio@thetesseractacademy.com</a> with the library or registry name.
         </p>
       </div>
-      <p className="text-sm text-gov-secondary/90 leading-relaxed">
+      <p className="text-sm text-gov-secondary leading-relaxed">
         Related work: the same register-boundary discipline found every FDIC LEI truncated in <Link to="/research/bank-register-ontology" className="text-gov-blue underline hover:text-gov-blue-dark">the US bank register</Link>, catalogue entries that correspond to no real object in <Link to="/research/space-object-register-ontology" className="text-gov-blue underline hover:text-gov-blue-dark">the space object catalogues</Link>, and the category all of them belong to is set out in <Link to="/research/register-assurance" className="text-gov-blue underline hover:text-gov-blue-dark">Register assurance: why every public register fails at its boundary</Link>.
       </p>
     </section>

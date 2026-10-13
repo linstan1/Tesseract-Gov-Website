@@ -110,7 +110,7 @@ export const UkHealthDataLinkage: React.FC = () => (
         UK health data linkage registers, measured at the discovery layer
       </h1>
       <p className="text-sm text-gov-secondary">28 August 2026</p>
-      <p className="text-xl text-gov-secondary/90 leading-relaxed">
+      <p className="text-xl text-gov-secondary leading-relaxed">
         The UK government and Wellcome are investing up to 600 million pounds in a Health Data Research Service on
         the strength of one idea: the most powerful insights come from linking health datasets together. On 28
         August 2026 we measured the machine readable layer that idea currently stands on, across the two public
@@ -205,7 +205,7 @@ export const UkHealthDataLinkage: React.FC = () => (
         three slots: pid, url and title. 223 of the 324 resolve to a Gateway record through at least one slot.
         The other 101 resolve to nothing:
       </p>
-      <div className="overflow-x-auto">
+      <div tabIndex={0} role="region" aria-label="Table, scrolls sideways on small screens" className="overflow-x-auto">
         <table className="w-full text-sm border border-gov-border">
           <thead className="bg-gov-bg/60">
             <tr>
@@ -371,7 +371,7 @@ export const UkHealthDataLinkage: React.FC = () => (
       <h2 className="text-2xl font-bold text-gov-dark font-serif">Method, reproducibility, and the offer</h2>
       <p className="text-gov-dark leading-relaxed">
         Everything is public and reproducible from two open sources with no credentials. The repository at{' '}
-        <a href={REPO} className="text-gov-blue hover:underline">github.com/fabio-rovai/health-data-linkage-ontology</a>{' '}
+        <a href={REPO} className="text-gov-blue underline underline-offset-2 hover:text-gov-blue-dark">github.com/fabio-rovai/health-data-linkage-ontology</a>{' '}
         holds the resumable harvest pipeline, the ontology, the SKOS scheme registry, the SHACL layers, the
         verified SPARQL queries, the tests, and a build report that states populations, methods, the errors made
         during the build, and the claims that died on verification. One did: an early version of finding three
@@ -389,7 +389,7 @@ export const UkHealthDataLinkage: React.FC = () => (
         Health Data Research Service and wants its linkage layer to resolve, the first engagement is a fixed
         scope review of your register&apos;s linkage metadata against these shapes, with a findings table your
         data architecture team can act on. Write to{' '}
-        <a href="mailto:fabio@thetesseractacademy.com" className="text-gov-blue hover:underline">fabio@thetesseractacademy.com</a>.
+        <a href="mailto:fabio@thetesseractacademy.com" className="text-gov-blue underline underline-offset-2 hover:text-gov-blue-dark">fabio@thetesseractacademy.com</a>.
       </p>
     </section>
   </div>

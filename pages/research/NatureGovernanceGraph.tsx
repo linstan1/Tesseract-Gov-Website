@@ -54,7 +54,7 @@ export const NatureGovernanceGraph: React.FC = () => {
         <h1 className="text-4xl font-extrabold text-gov-dark mb-6 tracking-tight leading-tight font-serif">
           The UK nature-governance landscape, as a graph you can cite
         </h1>
-        <p className="text-xl text-gov-secondary/90 leading-relaxed">
+        <p className="text-xl text-gov-secondary leading-relaxed">
           Stakeholder mapping for the environment sector is usually a slide: boxes and arrows, no provenance, out of date the day it is drawn. The relationships that matter, who sponsors whom, who advises government internationally, whose data flows into the national record, which duties are statutory, are exactly the ones a diagram cannot defend. This treats the landscape as data instead, and makes an unsourced link impossible by construction.
         </p>
       </header>
@@ -84,7 +84,7 @@ export const NatureGovernanceGraph: React.FC = () => {
             Every relationship in the graph is <strong>reified</strong> as its own node carrying a typed predicate (sponsors, advises, supplies-data-to, funds, partners-with, regulates, designated-under), a plain-language basis, and a <code className="text-sm">prov:wasDerivedFrom</code> link to a cited source with a resolvable URL. This is not a convention; it is enforced. The SHACL shapes fail the build if any relationship lacks a source, or any source lacks a URL. A relationship you cannot cite cannot enter the graph. The build validates at <strong>zero SHACL violations</strong> with full referential integrity.
           </p>
         </div>
-        <div className="overflow-x-auto">
+        <div tabIndex={0} role="region" aria-label="Table, scrolls sideways on small screens" className="overflow-x-auto">
           <table className="w-full text-sm border-collapse">
             <thead>
               <tr className="bg-gov-bg border-b border-gov-border">
@@ -119,7 +119,7 @@ export const NatureGovernanceGraph: React.FC = () => {
           <p className="text-gov-dark leading-relaxed">
             The graph answers competency questions directly: which bodies Defra sponsors, who supplies data to the NBN Atlas, which relationships rest on legislation. It extends to the devolved landscapes in more depth, to funding flows, and to specific programmes. It is part of Tesseract's <a href="https://github.com/fabio-rovai/open-ontologies" target="_blank" rel="noopener noreferrer" className="text-gov-blue underline hover:text-gov-blue-dark">Open Ontologies</a> work, and shares its method with our <Link to="/research/nature-related-security-risk" className="text-gov-blue underline hover:text-gov-blue-dark">nature-related security-risk evidence base</Link>: model the domain as a sourced, validated graph so its claims can be queried and checked, not just drawn.
           </p>
-          <p className="text-sm text-gov-secondary/90 leading-relaxed mt-4">
+          <p className="text-sm text-gov-secondary leading-relaxed mt-4">
             Independent, self-initiated open research built entirely from public sources, each cited per relationship. Released under CC BY 4.0; endorsed by none of the bodies named within it.
           </p>
         </div>

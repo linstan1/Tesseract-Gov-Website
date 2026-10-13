@@ -78,7 +78,7 @@ export const SociotechnicalMatrixEvidence: React.FC = () => (
       <h1 className="text-4xl font-extrabold text-gov-dark mb-6 tracking-tight leading-tight font-serif">
         Which cells of a sociotechnical AI evaluation matrix can anyone check?
       </h1>
-      <p className="text-xl text-gov-secondary/90 leading-relaxed">
+      <p className="text-xl text-gov-secondary leading-relaxed">
         The Ada Lovelace Institute and NICE have published the best-constructed instrument we have seen for assessing internal AI use in a public body. It is a matrix of 120 questions an organisation answers as fully, partially or not addressed. We asked one question of it. Which of those 120 answers could anyone outside the organisation check, and how often does the published evidence base for the task NICE studied actually carry the evidence. The answer is 39 cells, and about half the time.
       </p>
     </header>
@@ -212,7 +212,7 @@ export const SociotechnicalMatrixEvidence: React.FC = () => (
     <section className="space-y-4">
       <h2 className="text-2xl font-bold text-gov-dark font-serif">The artefact</h2>
       <p className="text-gov-dark leading-relaxed">
-        The repository is at <a className="text-gov-blue hover:underline" href={REPO}>github.com/fabio-rovai/sociotechnical-matrix-assurance</a>. It holds the 120 cells with their class and rationale, the 37 evidence-field definitions, the OWL vocabulary and two SHACL layers, the PubMed query and every screening decision, the 13 evidence records with a verbatim quote and location per field, the three-way verdict script, the generated report, and the tests. The matrix text is CC BY-NC 4.0 and the work is non-commercial research; our own vocabulary, classification and reports are CC BY 4.0 and the code is MIT. The matrix itself is at the <a className="text-gov-blue hover:underline" href={MATRIX}>Ada Lovelace Institute</a>, and the report is <a className="text-gov-blue hover:underline" href={REPORT}>Care and consideration</a>.
+        The repository is at <a className="text-gov-blue underline underline-offset-2 hover:text-gov-blue-dark" href={REPO}>github.com/fabio-rovai/sociotechnical-matrix-assurance</a>. It holds the 120 cells with their class and rationale, the 37 evidence-field definitions, the OWL vocabulary and two SHACL layers, the PubMed query and every screening decision, the 13 evidence records with a verbatim quote and location per field, the three-way verdict script, the generated report, and the tests. The matrix text is CC BY-NC 4.0 and the work is non-commercial research; our own vocabulary, classification and reports are CC BY 4.0 and the code is MIT. The matrix itself is at the <a className="text-gov-blue underline underline-offset-2 hover:text-gov-blue-dark" href={MATRIX}>Ada Lovelace Institute</a>, and the report is <a className="text-gov-blue underline underline-offset-2 hover:text-gov-blue-dark" href={REPORT}>Care and consideration</a>.
       </p>
     </section>
 
@@ -223,7 +223,7 @@ export const SociotechnicalMatrixEvidence: React.FC = () => (
           A bounded first engagement is a two-week evidence audit of one completed matrix, or of any self-scored AI evaluation framework applied to an internal use case. We partition it into the cells that inspectable evidence can settle and the cells that rest on records or judgement, run the checks that can be run against the evaluation artefacts, and hand back the evidence together with the method, so that the next pilot moves to shadow testing on a documented basis rather than a coloured grid.
         </p>
         <p className="text-gov-dark leading-relaxed">
-          What is not validated is eventually wrong, and what is never measured is never fixed. Fabio Rovai, <a className="text-gov-blue hover:underline" href="mailto:fabio@thetesseractacademy.com">fabio@thetesseractacademy.com</a>. Corrections are published on this page rather than applied silently.
+          What is not validated is eventually wrong, and what is never measured is never fixed. Fabio Rovai, <a className="text-gov-blue underline underline-offset-2 hover:text-gov-blue-dark" href="mailto:fabio@thetesseractacademy.com">fabio@thetesseractacademy.com</a>. Corrections are published on this page rather than applied silently.
         </p>
       </div>
     </section>

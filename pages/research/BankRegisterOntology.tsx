@@ -162,7 +162,7 @@ export const BankRegisterOntology: React.FC = () => (
       <h1 className="text-4xl font-extrabold text-gov-dark mb-6 tracking-tight leading-tight font-serif">
         An open ontology for US bank registers, tested against the FDIC, the Federal Reserve, and the Global LEI System
       </h1>
-      <p className="text-xl text-gov-secondary/90 leading-relaxed">
+      <p className="text-xl text-gov-secondary leading-relaxed">
         Every figure on this page is from a build of 16 August 2026 and is reproducible from the open repository. We pulled all 27,836 institution records from the FDIC&apos;s BankFind register and measured the length of every LEI in it. The histogram has exactly one bucket: 16 characters, 2,252 times, without a single exception, truncated by four characters from the twenty the standard requires. We then resolved every value against the complete Global LEI System, found nine that denote up to six unrelated companies each, and found two, confirmed by GLEIF&apos;s own consolidation records, that identify the wrong legal entity entirely. This page explains what was measured, why the four missing characters are the four that matter, and what the same census says about the global identifier system itself.
       </p>
     </header>
@@ -211,7 +211,7 @@ export const BankRegisterOntology: React.FC = () => (
 
     <section className="space-y-4">
       <h2 className="text-2xl font-bold text-gov-dark font-serif">The findings, graded</h2>
-      <div className="overflow-x-auto rounded-lg border border-gov-border">
+      <div tabIndex={0} role="region" aria-label="Table, scrolls sideways on small screens" className="overflow-x-auto rounded-lg border border-gov-border">
         <table className="min-w-full text-sm">
           <thead>
             <tr className="bg-gov-bg text-left">
@@ -244,7 +244,7 @@ export const BankRegisterOntology: React.FC = () => (
           { label: 'Resolve to a different legal entity (confirmed)', value: 2, display: '2', color: CHART.amber },
         ]}
       />
-      <p className="text-sm text-gov-secondary/90 leading-relaxed">
+      <p className="text-sm text-gov-secondary leading-relaxed">
         All figures are computed from the 16 August 2026 FDIC fetch, the GLEIF golden copy published at 08:00 that day, and the MDRM file rebuilt at 04:00 that day. All three are living systems, so a later run produces different totals while the method reproduces exactly.
       </p>
     </section>
@@ -302,7 +302,7 @@ export const BankRegisterOntology: React.FC = () => (
       <p className="text-gov-dark leading-relaxed">
         Put the two halves together and they are the same sentence. In the entity fabric, scope was thrown away when the identifier was truncated, then attached to the wrong level of the corporate hierarchy. In the concept fabric, scope was never encoded, because the dictionary attaches meaning to a code spanning sixty-four forms with different consolidation bases. <strong>Scope is never in the identifier.</strong> Both public registers embody it.
       </p>
-      <Mermaid chart={MODEL} />
+      <Mermaid chart={MODEL} ariaLabel="Ontology model: an FDIC-insured institution carries a reified identifier assertion that resolves to a GLEIF legal entity and its Level 2 parent; MDRM concept usage is scoped by reporting form and period." />
       <p className="text-gov-dark leading-relaxed">
         So the ontology is shaped by that rather than around it. Identifiers are reified assertions, not designators, which is the only way to state that a published value is truncated, ambiguous, or belongs to somebody else. Resolution is data: an assertion records what it resolved to and how many candidates it resolved to. The insured institution and the legal entity are separate classes, which is what makes the Associated Bank case statable rather than merely wrong. On the reporting side, confidentiality and item type hang off a reified usage of a concept on a form in a period, because that is where the source data shows them varying.
       </p>
@@ -371,7 +371,7 @@ export const BankRegisterOntology: React.FC = () => (
           A typical first engagement is bounded and diagnostic: take your entity and reference data as it is, build the identifier fabric, run the validation layers, and return a graded findings report that separates the impossible from the missing from the merely stale, with the queries attached so your team can re-run it. For the applied version on your own data, write to <a href="mailto:fabio@thetesseractacademy.com" className="text-gov-blue underline hover:text-gov-blue-dark">fabio@thetesseractacademy.com</a>.
         </p>
       </div>
-      <p className="text-sm text-gov-secondary/90 leading-relaxed">
+      <p className="text-sm text-gov-secondary leading-relaxed">
         Related work: this is the same register-boundary discipline proved on the <Link to="/research/investment-fund-ontology" className="text-gov-blue underline hover:text-gov-blue-dark">US fund universe</Link> and on <Link to="/research/insurance-register-ontology" className="text-gov-blue underline hover:text-gov-blue-dark">every insurer in Europe</Link>, and the category it belongs to is set out in <Link to="/research/register-assurance" className="text-gov-blue underline hover:text-gov-blue-dark">Register assurance: why every public register fails at its boundary</Link>.
       </p>
     </section>

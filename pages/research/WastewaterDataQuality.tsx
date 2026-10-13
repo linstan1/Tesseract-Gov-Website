@@ -74,7 +74,7 @@ export const WastewaterDataQuality: React.FC = () => {
         <h1 className="text-4xl font-extrabold text-gov-dark mb-6 tracking-tight leading-tight font-serif">
           Wastewater Effluent Data Quality
         </h1>
-        <p className="text-xl text-gov-secondary/90 leading-relaxed">
+        <p className="text-xl text-gov-secondary leading-relaxed">
           Continuous effluent monitoring is only as useful as the data is trustworthy. This is a worked, fully open demonstration of how we make it trustworthy: statistics to find the anomalies, and declarative rules to encode the physics so impossible records can never pass.
         </p>
       </header>
@@ -120,7 +120,7 @@ export const WastewaterDataQuality: React.FC = () => {
             QA pass over five years of effluent determinands. The series is complete and internally consistent, yet the battery still surfaces dozens of statistical outliers and a multi-year COD baseline drift of +115 mg/L that no single-point check would catch.
           </figcaption>
         </figure>
-        <div className="overflow-x-auto">
+        <div tabIndex={0} role="region" aria-label="Table, scrolls sideways on small screens" className="overflow-x-auto">
           <table className="w-full text-sm border-collapse">
             <thead>
               <tr className="bg-gov-bg border-b border-gov-border">

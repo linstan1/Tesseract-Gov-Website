@@ -105,10 +105,10 @@ export const SemanticAssetRegister: React.FC = () => (
       <h1 className="text-4xl font-extrabold text-gov-dark mb-6 tracking-tight leading-tight font-serif">
         What 13 Million Triples Reveal About the Quality of US Federal Vocabularies
       </h1>
-      <p className="text-xl text-gov-secondary/90 leading-relaxed">
+      <p className="text-xl text-gov-secondary leading-relaxed">
         Consultancies sell ontology assessment. Job descriptions ask for the ability to assess existing ontologies and recommend improvements. Almost nobody who sells that service has published an assessment of a single named, real-world ontology. So we built one and pointed it at the vocabularies the US federal government actually publishes: 28 assets from 10 publishers, retrieved on 16 August 2026, hashed, and put through 26 checks that each name the authority they derive from.
       </p>
-      <p className="text-xl text-gov-secondary/90 leading-relaxed">
+      <p className="text-xl text-gov-secondary leading-relaxed">
         The logic holds up. The governance does not. Ten findings break a published rule, and the other 120 sit in the fields that decide whether anyone downstream can lawfully use the artefact, tell which version they ingested, or notice that it stopped changing two years ago.
       </p>
     </header>
@@ -235,7 +235,7 @@ export const SemanticAssetRegister: React.FC = () => (
       <p className="text-gov-dark leading-relaxed">
         Every check ran against all 28 assets, which is where the 728 results come from. The table below is the whole instrument, with the authority each check derives from, its severity, and the number of assets that failed it in this run. The two blocks are the distinction the register is built around, and the totals are 10 against 120.
       </p>
-      <div className="overflow-x-auto rounded-lg border border-gov-border">
+      <div tabIndex={0} role="region" aria-label="Table, scrolls sideways on small screens" className="overflow-x-auto rounded-lg border border-gov-border">
         <table className="min-w-full text-sm text-gov-dark">
           <thead>
             <tr className="border-b border-gov-border text-left">

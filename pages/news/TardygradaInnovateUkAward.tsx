@@ -30,15 +30,15 @@ export const TardygradaInnovateUkAward: React.FC = () => {
       {/* Hero */}
       <header className="border-b border-gov-border/30 pb-10">
         <div className="flex items-center gap-3 mb-4">
-          <span className="text-xs font-semibold uppercase tracking-widest text-gov-blue bg-gov-blue/10 px-2.5 py-1 rounded-full">
+          <span className="text-xs font-semibold uppercase tracking-widest text-gov-blue-dark bg-gov-blue/10 px-2.5 py-1 rounded-full">
             Funding Award
           </span>
-          <time className="text-xs text-gov-secondary/70" dateTime="2026-09-02">2 September 2026</time>
+          <time className="text-xs text-gov-secondary" dateTime="2026-09-02">2 September 2026</time>
         </div>
         <h1 className="text-4xl sm:text-5xl font-extrabold text-gov-dark mb-6 tracking-tight leading-tight">
           Tesseract Academy awarded Innovate UK Frontier AI Discovery funding for Tardygrada
         </h1>
-        <p className="text-xl text-gov-secondary/90 leading-relaxed max-w-4xl mb-8">
+        <p className="text-xl text-gov-secondary leading-relaxed max-w-4xl mb-8">
           Kampakis and Co Ltd, trading as The Tesseract Academy, has been awarded funding from Innovate UK
           through the Frontier AI Discovery competition. The award supports project 10207012,{' '}
           <span className="font-semibold text-gov-dark">A Formally Verified Runtime for Trustworthy AI Agents (Tardygrada)</span>,
@@ -62,27 +62,27 @@ export const TardygradaInnovateUkAward: React.FC = () => {
       <section className="bg-gov-bg border border-gov-border/50 rounded-xl p-8" aria-label="Project facts">
         <dl className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-4">
           <div>
-            <dt className="text-xs font-semibold uppercase tracking-widest text-gov-secondary/70">Project number</dt>
+            <dt className="text-xs font-semibold uppercase tracking-widest text-gov-secondary">Project number</dt>
             <dd className="text-base font-semibold text-gov-dark">10207012</dd>
           </div>
           <div>
-            <dt className="text-xs font-semibold uppercase tracking-widest text-gov-secondary/70">Competition</dt>
+            <dt className="text-xs font-semibold uppercase tracking-widest text-gov-secondary">Competition</dt>
             <dd className="text-base font-semibold text-gov-dark">Frontier AI Discovery, Theme 4 (Fundamental AI)</dd>
           </div>
           <div>
-            <dt className="text-xs font-semibold uppercase tracking-widest text-gov-secondary/70">Phase</dt>
+            <dt className="text-xs font-semibold uppercase tracking-widest text-gov-secondary">Phase</dt>
             <dd className="text-base font-semibold text-gov-dark">Phase 1 feasibility study</dd>
           </div>
           <div>
-            <dt className="text-xs font-semibold uppercase tracking-widest text-gov-secondary/70">Duration</dt>
+            <dt className="text-xs font-semibold uppercase tracking-widest text-gov-secondary">Duration</dt>
             <dd className="text-base font-semibold text-gov-dark">1 October 2026 to 31 December 2026</dd>
           </div>
           <div>
-            <dt className="text-xs font-semibold uppercase tracking-widest text-gov-secondary/70">Principal Investigator</dt>
+            <dt className="text-xs font-semibold uppercase tracking-widest text-gov-secondary">Principal Investigator</dt>
             <dd className="text-base font-semibold text-gov-dark">Dr Stylianos Kampakis</dd>
           </div>
           <div>
-            <dt className="text-xs font-semibold uppercase tracking-widest text-gov-secondary/70">Co-Investigator and project manager</dt>
+            <dt className="text-xs font-semibold uppercase tracking-widest text-gov-secondary">Co-Investigator and project manager</dt>
             <dd className="text-base font-semibold text-gov-dark">Fabio Rovai</dd>
           </div>
         </dl>
@@ -135,7 +135,7 @@ export const TardygradaInnovateUkAward: React.FC = () => {
       {/* About Innovate UK */}
       <section className="border-t border-gov-border/30 pt-10 max-w-4xl" aria-label="About Innovate UK">
         <h2 className="text-2xl font-bold text-gov-dark mb-4">About Innovate UK</h2>
-        <p className="text-sm text-gov-secondary/80 leading-relaxed">
+        <p className="text-sm text-gov-secondary leading-relaxed">
           Innovate UK, part of UK Research and Innovation, is creating a better future by inspiring, involving and investing in businesses developing life-changing innovations. We provide targeted sectors with expertise, facilities and funding to test, demonstrate and evolve their ideas, driving UK productivity and economic growth. Join our network and communities of innovators to realise the potential of your ideas and accelerate business growth. Innovate UK: inspiring business innovation.
         </p>
       </section>

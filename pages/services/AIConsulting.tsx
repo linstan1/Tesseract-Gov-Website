@@ -30,7 +30,7 @@ const SCHEMA = {
     '@type': 'HowTo',
     name: 'How to Commission AI Consulting Services from Tesseract Academy',
     step: [
-      { '@type': 'HowToStep', position: 1, name: 'Identify the correct CCS framework', text: 'AI consulting can be commissioned through CCS RM6200 (Management Consultancy Three) or directly for contracts below £10,000.' },
+      { '@type': 'HowToStep', position: 1, name: 'Identify the correct CCS framework', text: 'AI consulting can be commissioned through CCS RM6200 (Artificial Intelligence DPS) or directly for contracts below £10,000.' },
       { '@type': 'HowToStep', position: 2, name: 'Issue a Statement of Requirements', text: 'Prepare a Statement of Requirements or Invitation to Tender detailing the problem, data environment, and expected outputs.' },
       { '@type': 'HowToStep', position: 3, name: 'Run a further competition or direct award', text: 'For contracts above £10,000, run a further competition among framework suppliers. For contracts below threshold, a direct award is permitted.' },
       { '@type': 'HowToStep', position: 4, name: 'Evaluate quality and price', text: 'Evaluate submissions on a quality-price ratio, typically 60/40 or 70/30 in favour of quality for AI services.' },
@@ -50,10 +50,10 @@ export const AIConsulting: React.FC = () => {
         <h1 className="text-5xl font-extrabold text-gov-dark mb-6 tracking-tight leading-tight">
           AI Consulting for Public Sector
         </h1>
-        <p className="text-xl text-gov-secondary/90 leading-relaxed max-w-4xl">
+        <p className="text-xl text-gov-secondary leading-relaxed max-w-4xl">
           We design, build, and validate AI systems for UK central government, devolved administrations,
           and arm's-length bodies. Our delivery teams combine academic rigour with production-grade
-          engineering — all aligned to <a href="https://www.gov.uk/service-manual/service-standard" target="_blank" rel="noopener noreferrer" className="text-gov-blue hover:underline">GDS Service Standard</a> and available via <a href="https://www.crowncommercial.gov.uk/agreements/RM6200" target="_blank" rel="noopener noreferrer" className="text-gov-blue hover:underline">Crown Commercial Service framework RM6200</a>.
+          engineering — all aligned to <a href="https://www.gov.uk/service-manual/service-standard" target="_blank" rel="noopener noreferrer" className="text-gov-blue underline underline-offset-2 hover:text-gov-blue-dark">GDS Service Standard</a> and available via <a href="https://www.crowncommercial.gov.uk/agreements/RM6200" target="_blank" rel="noopener noreferrer" className="text-gov-blue underline underline-offset-2 hover:text-gov-blue-dark">Crown Commercial Service framework RM6200</a>.
         </p>
       </header>
 
@@ -76,27 +76,27 @@ export const AIConsulting: React.FC = () => {
           Our core capabilities span supervised and unsupervised machine learning, large language model
           (LLM) integration, retrieval-augmented generation (RAG) pipelines, named entity recognition
           (NER), ontology generation, and digital twin development. We have delivered production ML
-          systems for <a href="https://www.gov.wales/testing-land-valuation-methods" target="_blank" rel="noopener noreferrer" className="text-gov-blue hover:underline">land valuation</a>, ontology extension for the <a href="https://www.gov.uk/government/groups/national-digital-twin-programme" target="_blank" rel="noopener noreferrer" className="text-gov-blue hover:underline">National Digital Twin Programme</a>, and
+          systems for <a href="https://www.gov.wales/testing-land-valuation-methods" target="_blank" rel="noopener noreferrer" className="text-gov-blue underline underline-offset-2 hover:text-gov-blue-dark">land valuation</a>, ontology extension for the <a href="https://www.gov.uk/government/groups/national-digital-twin-programme" target="_blank" rel="noopener noreferrer" className="text-gov-blue underline underline-offset-2 hover:text-gov-blue-dark">National Digital Twin Programme</a>, and
           cybersecurity simulation research in collaboration with the Alan Turing Institute. Our work informs Office for National Statistics (ONS) data interoperability initiatives and NHS England digital infrastructure programmes.
         </p>
         <p className="text-gov-dark leading-relaxed text-base">
           All AI systems we develop are accompanied by bias auditing, Data Protection Impact
           Assessments (DPIA), and where required, Algorithmic Impact Assessments (AIA) in line with
-          <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689" target="_blank" rel="noopener noreferrer" className="text-gov-blue hover:underline">EU AI Act</a> obligations and <a href="https://www.gov.uk/government/publications/ai-regulation-a-pro-innovation-approach" target="_blank" rel="noopener noreferrer" className="text-gov-blue hover:underline">UK government guidance on algorithmic transparency</a>. In 2024, our
-          open-source AI governance platform catalogued 48 governance tools covering EU AI Act, <a href="https://www.nist.gov/system/files/documents/2023/01/26/AI%20RMF%201.0.pdf" target="_blank" rel="noopener noreferrer" className="text-gov-blue hover:underline">NIST
+          <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689" target="_blank" rel="noopener noreferrer" className="text-gov-blue underline underline-offset-2 hover:text-gov-blue-dark">EU AI Act</a> obligations and <a href="https://www.gov.uk/government/publications/ai-regulation-a-pro-innovation-approach" target="_blank" rel="noopener noreferrer" className="text-gov-blue underline underline-offset-2 hover:text-gov-blue-dark">UK government guidance on algorithmic transparency</a>. In 2024, our
+          open-source AI governance platform catalogued 48 governance tools covering EU AI Act, <a href="https://www.nist.gov/system/files/documents/2023/01/26/AI%20RMF%201.0.pdf" target="_blank" rel="noopener noreferrer" className="text-gov-blue underline underline-offset-2 hover:text-gov-blue-dark">NIST
           AI RMF</a>, and ISO 42001 compliance requirements reviewed against Department for Science Innovation and Technology (DSIT) standards.
         </p>
         <p className="text-gov-dark leading-relaxed text-base">
           We are a Cyber Essentials certified micro-enterprise with public liability insurance of
           £2 million, employers' liability of £10 million, and professional indemnity of £5 million.
-          Our PPON is PWJP-6874-MXDJ. We operate as an SME under <a href="https://www.crowncommercial.gov.uk/agreements/RM6200" target="_blank" rel="noopener noreferrer" className="text-gov-blue hover:underline">Crown Commercial Service (CCS) RM6200</a> (Management
+          Our PPON is PWJP-6874-MXDJ. We operate as an SME under <a href="https://www.crowncommercial.gov.uk/agreements/RM6200" target="_blank" rel="noopener noreferrer" className="text-gov-blue underline underline-offset-2 hover:text-gov-blue-dark">Crown Commercial Service (CCS) RM6200</a> (Management
           Consultancy Three) and are eligible for direct award for contracts below £10,000. Our procurement credentials are registered with the Cabinet Office supplier register.
         </p>
       </section>
 
       <section>
         <h2 className="text-3xl font-bold text-gov-dark mb-8">Service Comparison</h2>
-        <div className="overflow-x-auto rounded-xl border border-gov-border/40">
+        <div tabIndex={0} role="region" aria-label="Table, scrolls sideways on small screens" className="overflow-x-auto rounded-xl border border-gov-border/40">
           <table className="w-full text-sm text-left">
             <thead className="bg-gov-bg border-b border-gov-border/40">
               <tr>
@@ -164,7 +164,7 @@ export const AIConsulting: React.FC = () => {
             data across Welsh local authorities, benchmarked against conventional valuation and
             formula-based approaches. Statistical outputs were validated against international
             comparators and presented to Welsh Government officials. Findings were subsequently cited
-            in Senedd committee proceedings and published on <a href="https://www.gov.wales/testing-land-valuation-methods" target="_blank" rel="noopener noreferrer" className="text-gov-blue hover:underline">GOV.WALES</a>. The methodology received commendation from HM Treasury evaluators and is referenced in MHCLG guidance on land data standards.
+            in Senedd committee proceedings and published on <a href="https://www.gov.wales/testing-land-valuation-methods" target="_blank" rel="noopener noreferrer" className="text-gov-blue underline underline-offset-2 hover:text-gov-blue-dark">GOV.WALES</a>. The methodology received commendation from HM Treasury evaluators and is referenced in MHCLG guidance on land data standards.
           </p>
           <div className="grid grid-cols-3 gap-4 mt-6">
             <div className="text-center p-4 bg-white rounded-lg border border-gov-border/30">
@@ -225,7 +225,7 @@ export const AIConsulting: React.FC = () => {
               1
             </span>
             <div>
-              <p className="font-semibold text-gov-dark">CCS RM6200 — Management Consultancy Three</p>
+              <p className="font-semibold text-gov-dark">CCS RM6200, Artificial Intelligence DPS</p>
               <p className="text-gov-secondary text-sm mt-1">
                 The primary route for AI strategy, model development, and technical assurance. Suitable
                 for engagements from Discovery through to Live phase. Further competition required for

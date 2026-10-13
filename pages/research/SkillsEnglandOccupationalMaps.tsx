@@ -275,20 +275,20 @@ export const SkillsEnglandOccupationalMaps: React.FC = () => {
         <h1 className="text-4xl font-extrabold text-gov-dark mb-6 tracking-tight leading-tight font-serif">
           The Skills England occupational maps, as an ontology
         </h1>
-        <p className="text-xl text-gov-secondary/90 leading-relaxed">
+        <p className="text-xl text-gov-secondary leading-relaxed">
           Skills England publishes the national occupational maps through a public API. We turned the whole thing into
           what it already is: a single connected graph. Every occupational standard is a node; its route, pathway and
           cluster, its Standard Occupational Classification (SOC) codes, its apprenticeship and technical education
           products, its green-jobs themes and the occupations it progresses to are typed edges. The result is an open,
           machine-readable ontology, and the searchable explorer below.
         </p>
-        <p className="mt-4 text-base text-gov-secondary/80 leading-relaxed">
+        <p className="mt-4 text-base text-gov-secondary leading-relaxed">
           It is the operational companion to our open research on{' '}
           <a
             href="https://github.com/fabio-rovai/open-ontologies/blob/main/case-studies/skills-mobility/case-study.md"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gov-blue hover:underline"
+            className="text-gov-blue underline underline-offset-2 hover:text-gov-blue-dark"
           >
             skills and social mobility in England
           </a>
@@ -304,7 +304,7 @@ export const SkillsEnglandOccupationalMaps: React.FC = () => {
             <Network className="w-4 h-4 text-gov-blue" />
             Open snapshot of the Skills England Occupational Maps
           </span>
-          {snapshotDate && <span className="text-gov-secondary/80">· harvested {snapshotDate}</span>}
+          {snapshotDate && <span className="text-gov-secondary">· harvested {snapshotDate}</span>}
         </div>
 
         {loadError ? (
@@ -342,20 +342,20 @@ export const SkillsEnglandOccupationalMaps: React.FC = () => {
 
         <div className="flex flex-col sm:flex-row gap-3 mb-4">
           <div className="relative flex-1">
-            <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gov-secondary/60" />
+            <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gov-secondary" />
             <input
               type="text"
               value={query}
               onChange={(e) => setQuery(e.target.value)}
               placeholder="Search 1,200+ occupations (e.g. data, nuclear, nurse, welder)"
-              className="w-full pl-11 pr-4 py-3 rounded-xl border border-gov-border focus:border-gov-blue focus:ring-2 focus:ring-gov-blue/20 outline-none text-gov-dark"
+              className="w-full pl-11 pr-4 py-3 rounded-xl border border-gov-secondary-light focus:border-gov-blue focus:ring-2 focus:ring-gov-focus outline-none text-gov-dark"
               aria-label="Search occupations by name or standard code"
             />
           </div>
           <select
             value={levelFilter}
             onChange={(e) => setLevelFilter(e.target.value)}
-            className="py-3 px-4 rounded-xl border border-gov-border focus:border-gov-blue focus:ring-2 focus:ring-gov-blue/20 outline-none text-gov-dark bg-gov-bg-alt"
+            className="py-3 px-4 rounded-xl border border-gov-secondary-light focus:border-gov-blue focus:ring-2 focus:ring-gov-focus outline-none text-gov-dark bg-gov-bg-alt"
             aria-label="Filter by level"
           >
             <option value="all">All levels</option>
@@ -406,7 +406,7 @@ export const SkillsEnglandOccupationalMaps: React.FC = () => {
                           {o.stdCode} · Level {o.level} · {o.statusName}
                         </span>
                       </span>
-                      <ChevronRight className="w-5 h-5 text-gov-secondary/50 flex-shrink-0" />
+                      <ChevronRight className="w-5 h-5 text-gov-secondary flex-shrink-0" />
                     </button>
                   </li>
                 ))}
@@ -415,7 +415,7 @@ export const SkillsEnglandOccupationalMaps: React.FC = () => {
                 )}
               </ul>
               {filtered.length > visible.length && (
-                <p className="text-xs text-gov-secondary/80 mt-3">
+                <p className="text-xs text-gov-secondary mt-3">
                   Refine your search to narrow these {filtered.length.toLocaleString('en-GB')} results.
                 </p>
               )}
@@ -466,7 +466,7 @@ export const SkillsEnglandOccupationalMaps: React.FC = () => {
                     .map((part, i, arr) => (
                       <React.Fragment key={i}>
                         <span className={i === 0 ? 'font-semibold text-gov-dark' : 'text-gov-secondary'}>{part}</span>
-                        {i < arr.length - 1 && <ChevronRight className="w-4 h-4 text-gov-secondary/40" />}
+                        {i < arr.length - 1 && <ChevronRight className="w-4 h-4 text-gov-secondary" />}
                       </React.Fragment>
                     ))}
                   {detail.mapHierarchy.technicalLevelName && (
@@ -684,7 +684,7 @@ export const SkillsEnglandOccupationalMaps: React.FC = () => {
       <section aria-label="About the ontology" className="max-w-4xl space-y-10">
         <div className="space-y-4">
           <h2 className="text-3xl font-bold text-gov-dark font-serif">The occupational maps, as a graph</h2>
-          <p className="text-lg text-gov-secondary/90 leading-relaxed">
+          <p className="text-lg text-gov-secondary leading-relaxed">
             Skills England publishes the national occupational maps through a public API: occupational standards
             arranged into routes, pathways and clusters, each carrying a Standard Occupational Classification mapping,
             apprenticeship and technical education products, and a green-jobs classification, with progression
@@ -692,7 +692,7 @@ export const SkillsEnglandOccupationalMaps: React.FC = () => {
             documents, and consumed the usual way a slice of it ends up flattened into a spreadsheet where the
             relationships that make it valuable are lost.
           </p>
-          <p className="text-lg text-gov-secondary/90 leading-relaxed">
+          <p className="text-lg text-gov-secondary leading-relaxed">
             We turned the whole thing into what it already is: a single, connected, machine-readable graph. Every
             occupational standard is a node; its route, pathway, cluster, technical level, status, SOC codes, products,
             green themes and progression targets are typed edges. The result is 51,355 statements that validate against
@@ -700,7 +700,7 @@ export const SkillsEnglandOccupationalMaps: React.FC = () => {
           </p>
         </div>
 
-        <div className="overflow-x-auto">
+        <div tabIndex={0} role="region" aria-label="Table, scrolls sideways on small screens" className="overflow-x-auto">
           <table className="w-full text-sm border border-gov-border/60 rounded-xl overflow-hidden">
             <thead className="bg-gov-bg">
               <tr>
@@ -866,7 +866,7 @@ export const SkillsEnglandOccupationalMaps: React.FC = () => {
               href="https://occupational-maps.skillsengland.education.gov.uk/public-api/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gov-blue hover:underline"
+              className="text-gov-blue underline underline-offset-2 hover:text-gov-blue-dark"
             >
               Skills England Occupational Maps Public API
             </a>
@@ -875,13 +875,13 @@ export const SkillsEnglandOccupationalMaps: React.FC = () => {
               href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gov-blue hover:underline"
+              className="text-gov-blue underline underline-offset-2 hover:text-gov-blue-dark"
             >
               Open Government Licence v3.0
             </a>
             .
           </p>
-          <p className="mt-2 text-gov-secondary/80">
+          <p className="mt-2 text-gov-secondary">
             © Crown copyright. Skills England data is used under licence; use is subject to the Skills England Licence and
             Terms of Use. This explorer and ontology are an independent Tesseract Academy demonstration and are not
             endorsed by Skills England.

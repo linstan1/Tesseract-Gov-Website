@@ -28,7 +28,10 @@
   --color-gov-bg-alt: #ffffff;
   --color-gov-border: #e2e6e9;
   --color-gov-border-light: #f0f3f4;
-  --color-gov-focus: #ffdd00;
+  /* Focus ring: the old yellow #ffdd00 sat at 1.3:1 against the white ring
+     offset and light page background, under the 3:1 that WCAG 1.4.11 asks of
+     a focus indicator. Dark ink gives 11:1 on white and 10.5:1 on gov-bg. */
+  --color-gov-focus: #313b45;
   --color-gov-accent: #2c7773;
 
   --shadow-subtle: 0 1px 2px 0 rgba(0, 0, 0, 0.02);
@@ -36,6 +39,23 @@
   --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.03);
   --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.06), 0 4px 6px -4px rgba(0, 0, 0, 0.03);
   --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.06), 0 8px 10px -6px rgba(0, 0, 0, 0.03);
+}
+
+/* WCAG 1.4.1 Use of Color: the teal link colour sits at only 1.1:1 to 2.2:1
+   against body text, so a link inside running text is underlined rather than
+   told apart by colour alone. Inline-block children (buttons) are unaffected. */
+@layer base {
+  /* Horizontally scrolling wrappers contain their absolutely positioned
+     descendants (the sr-only "opens in new tab" spans), which otherwise
+     escape the scroll box and widen the page at 320 px (WCAG 1.4.10). */
+  :where(.overflow-x-auto) {
+    position: relative;
+  }
+
+  :where(p, dd, figcaption, blockquote, td) a {
+    text-decoration-line: underline;
+    text-underline-offset: 0.15em;
+  }
 }
 
 @layer utilities {
@@ -123,6 +143,8 @@ html {
 
 body {
   text-rendering: optimizeLegibility;
+  /* WCAG 1.4.10 Reflow: long tokens such as domain names and URLs wrap at 320 px. */
+  overflow-wrap: break-word;
   font-size: 1rem;
   line-height: 1.6;
 }

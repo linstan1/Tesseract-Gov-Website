@@ -63,7 +63,7 @@ const FragChart: React.FC = () => (
           <div className="space-y-1">
             {g.rows.map((r) => (
               <div key={r.label} className="flex items-center gap-3" title={`${r.label}: ${r.value} records`}>
-                <span className="w-44 shrink-0 text-right text-xs text-gov-secondary leading-tight">{r.label}</span>
+                <span className="w-44 max-w-[40%] shrink-0 text-right text-xs text-gov-secondary leading-tight">{r.label}</span>
                 <div className="flex-1 h-[14px]">
                   <div className="h-full rounded-r" style={{ width: `${(r.value / FRAG_MAX) * 100}%`, backgroundColor: CHART.teal }} />
                 </div>
@@ -90,7 +90,7 @@ export const ModipPlasticsGraph: React.FC = () => {
         <h1 className="text-4xl font-extrabold text-gov-dark mb-6 tracking-tight leading-tight font-serif">
           From raw museum records to a knowledge graph
         </h1>
-        <p className="text-xl text-gov-secondary/90 leading-relaxed">
+        <p className="text-xl text-gov-secondary leading-relaxed">
           UK museums are opening their collections as data faster than the data can be made usable. The records come out as flat, free-text rows: the same polymer written four different ways, relationships between objects trapped inside caption prose, no links to anything. We took one small museum's open catalogue and did the full job end to end, on the real records, so the gap between "published" and "computable" is visible and measurable, and so the pipeline that closes it is reusable by any collection.
         </p>
       </header>
@@ -120,7 +120,7 @@ export const ModipPlasticsGraph: React.FC = () => {
             Across the set there are <strong>476 distinct material strings</strong> for what is really a much smaller set of polymers. The same material is recorded under an abbreviation, a full chemical name and one or more trade names, as unrelated free text. A curator or researcher searching for one spelling silently misses the others. These are not edge cases; they are the most common materials in the collection.
           </p>
         </div>
-        <div className="overflow-x-auto">
+        <div tabIndex={0} role="region" aria-label="Table, scrolls sideways on small screens" className="overflow-x-auto">
           <table className="w-full text-sm border-collapse">
             <thead>
               <tr className="bg-gov-bg border-b border-gov-border">
@@ -171,7 +171,7 @@ export const ModipPlasticsGraph: React.FC = () => {
           <p className="text-gov-dark leading-relaxed">
             This is one worked example of a pipeline that applies to any of the 250-plus collections already in the Museum Data Service, and to any museum sitting on a Spectrum or CSV export. It is part of Tesseract's <a href="https://github.com/fabio-rovai/open-ontologies" target="_blank" rel="noopener noreferrer" className="text-gov-blue underline hover:text-gov-blue-dark">Open Ontologies</a> work and shares its method with our <Link to="/research/computation-ready-aerial-heritage" className="text-gov-blue underline hover:text-gov-blue-dark">heritage aerial-photography</Link> and <Link to="/research/nature-governance-graph" className="text-gov-blue underline hover:text-gov-blue-dark">nature-governance</Link> graphs: model the domain as a sourced, validated graph so its data can be queried and checked, not just published as a download. If you run a collection, or fund one, and want your catalogue made this queryable, we would like to hear from you.
           </p>
-          <p className="text-sm text-gov-secondary/90 leading-relaxed mt-4">
+          <p className="text-sm text-gov-secondary leading-relaxed mt-4">
             Independent, self-initiated open research. Source records &copy; the Museum of Design in Plastics / Arts University Bournemouth, published CC BY 4.0 via the Museum Data Service; this transformation released under CC BY 4.0. Endorsed by neither MoDiP nor the Museum Data Service.
           </p>
         </div>

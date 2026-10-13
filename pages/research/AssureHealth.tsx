@@ -50,7 +50,7 @@ export const AssureHealth: React.FC = () => {
         <h1 className="text-4xl font-extrabold text-gov-dark mb-6 tracking-tight leading-tight font-serif">
           The privacy fix that quietly breaks fairness
         </h1>
-        <p className="text-xl text-gov-secondary/90 leading-relaxed">
+        <p className="text-xl text-gov-secondary leading-relaxed">
           Privacy and fairness are audited on separate benches, by separate teams, with separate sign-offs. But they interact. The standard privacy defence, differential privacy, degrades the accuracy of the smallest subgroups the fastest. So a clinical model can pass a privacy audit and a fairness audit run independently, while the very act of making it private is what broke equity for the patients with the least data. Here is that trade, measured on one model and one report card.
         </p>
       </header>
@@ -89,7 +89,7 @@ export const AssureHealth: React.FC = () => {
             On the real, public <a href="https://archive.ics.uci.edu/dataset/296/diabetes+130-us+hospitals+for+years+1999-2008" target="_blank" rel="noopener noreferrer" className="text-gov-blue underline hover:text-gov-blue-dark">UCI Diabetes readmission dataset</a> (predict 30-day readmission; race as the protected attribute), we freeze one logistic model and run both assurance planes on it as we tighten differential privacy: a loss-based membership-inference attack per subgroup, and per-subgroup accuracy. Because differential privacy is randomised, every number is averaged over 40 noise draws.
           </p>
         </div>
-        <div className="overflow-x-auto">
+        <div tabIndex={0} role="region" aria-label="Table, scrolls sideways on small screens" className="overflow-x-auto">
           <table className="w-full text-sm border-collapse">
             <thead>
               <tr className="bg-gov-bg border-b border-gov-border">
@@ -139,7 +139,7 @@ export const AssureHealth: React.FC = () => {
           <cite className="text-sm text-gov-secondary font-semibold not-italic mt-2 block">Fabio Rovai, Tesseract Academy</cite>
         </blockquote>
 
-        <p className="text-sm text-gov-secondary/90 leading-relaxed">
+        <p className="text-sm text-gov-secondary leading-relaxed">
           An independent, self-initiated study on open data and open tools. The model is a regularised linear classifier, which by nature leaks little to membership inference; higher-capacity or overfit models leak substantially more, and the same card applies to them with a larger privacy side to the trade. Differential privacy is applied by output perturbation, a rigorous closed-form mechanism and the convex analogue of DP-SGD. The dataset is real but specific (US hospital readmission, race); MIMIC-IV, credentialed under a data-use agreement, is the clinical scale-up, including a mental-health arm. Numbers are reported as measured, not inflated, and the disparate-impact trend is monotone across the whole privacy sweep.
         </p>
       </section>

@@ -154,7 +154,7 @@ export const LandRegisterOntology: React.FC = () => (
         to do it, both defensible, and they do not agree.
       </p>
 
-      <div className="overflow-x-auto mb-6">
+      <div tabIndex={0} role="region" aria-label="Table, scrolls sideways on small screens" className="overflow-x-auto mb-6">
         <table className="min-w-full border border-gray-200 text-sm">
           <thead className="bg-gray-50">
             <tr>
@@ -187,7 +187,7 @@ export const LandRegisterOntology: React.FC = () => (
         to 95.40 per cent, a spread of about seventy to one.
       </p>
 
-      <div className="overflow-x-auto mb-6">
+      <div tabIndex={0} role="region" aria-label="Table, scrolls sideways on small screens" className="overflow-x-auto mb-6">
         <table className="min-w-full border border-gray-200 text-sm">
           <thead className="bg-gray-50">
             <tr>
@@ -276,7 +276,7 @@ export const LandRegisterOntology: React.FC = () => (
         specification, across all 1,564,345 parcels. It passes all three.
       </p>
 
-      <div className="overflow-x-auto mb-6">
+      <div tabIndex={0} role="region" aria-label="Table, scrolls sideways on small screens" className="overflow-x-auto mb-6">
         <table className="min-w-full border border-gray-200 text-sm">
           <thead className="bg-gray-50"><tr>
             <th className="text-left px-4 py-2 border-b font-semibold">Measure</th>
@@ -307,7 +307,7 @@ export const LandRegisterOntology: React.FC = () => (
         mostly means peat. Sizing peat on a holding means overlaying it on the national
         habitat map, and that calculation inherits every problem on this page before it meets
         problems of its own. We measured that separately in{' '}
-        <Link to="/research/land-carbon-measurement" className="text-gov-blue hover:underline">
+        <Link to="/research/land-carbon-measurement" className="text-gov-blue underline underline-offset-2 hover:text-gov-blue-dark">
           measuring peat on a Scottish landholding
         </Link>, which compares all 8.1 billion pixel pairs of the two national habitat maps.
         Scotland&rsquo;s raised and blanket bog covers 1,330,616 hectares, and the peat class
@@ -391,7 +391,7 @@ export const LandRegisterOntology: React.FC = () => (
         </p>
         <p className="text-gray-700">
           Fabio Rovai, The Tesseract Academy:{' '}
-          <a href="mailto:fabio@thetesseractacademy.com" className="text-gov-blue hover:underline">
+          <a href="mailto:fabio@thetesseractacademy.com" className="text-gov-blue underline underline-offset-2 hover:text-gov-blue-dark">
             fabio@thetesseractacademy.com
           </a>
         </p>

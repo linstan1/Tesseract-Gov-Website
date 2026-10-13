@@ -76,7 +76,7 @@ export const InvestmentFundOntology: React.FC = () => (
       <h1 className="text-4xl font-extrabold text-gov-dark mb-6 tracking-tight leading-tight font-serif">
         The largest index fund is missing from the open identifier map
       </h1>
-      <p className="text-xl text-gov-secondary/90 leading-relaxed">
+      <p className="text-xl text-gov-secondary leading-relaxed">
         Fund data is an identifier problem before it is anything else. We built an open ontology and SHACL governance layer for the registered fund product hierarchy and ran it against the entire public US fund universe: every registrant, fund and share class the SEC lists, four quarters of Form N-CEN annual reports, and all 9,119,948 ISIN-to-LEI pairs GLEIF publishes. The graph that comes out holds 1.29 million triples, and it disagrees with itself in exactly the ways fund data teams will recognise. The Vanguard 500 Index Fund, the largest index fund there is, has an issued LEI and not one ISIN against it in the open mapping.
       </p>
     </header>
@@ -86,15 +86,15 @@ export const InvestmentFundOntology: React.FC = () => (
       <p className="text-gov-dark leading-relaxed">
         The model is deliberately small: a product hierarchy of four levels, and identifiers as first-class nodes rather than string properties. Every identifier assertion carries three things a bare literal cannot: the scheme it belongs to, the source system that asserted it, and its computed check-digit state. The SKOS registry behind it declares each of twenty schemes across six markets (US, UK, Ireland, Australia, Canada, Mexico) as entity-scoped, issue-scoped or venue-scoped, and SHACL enforces the attachment: an LEI names a legal entity, an ISIN names an issue, a ticker names an admission to one venue. Most of what goes wrong in fund data is an identifier sitting at the wrong level of this diagram.
       </p>
-      <Mermaid chart={HIERARCHY} />
-      <p className="text-sm text-gov-secondary/90 leading-relaxed">
+      <Mermaid chart={HIERARCHY} ariaLabel="Hierarchy: fund registrant, fund, share class, listing and trading venue; LEI, CIK and file number are entity-scoped, ISIN and CUSIP are issue-scoped, and ticker and SEDOL are venue-scoped." />
+      <p className="text-sm text-gov-secondary leading-relaxed">
         The same class listed on two venues has two listings, two tickers, possibly two SEDOLs, and one ISIN. Put the ticker on the share class, as most spreadsheets do, and the model cannot even represent the dual listing, let alone govern it.
       </p>
     </section>
 
     <section className="space-y-4">
       <h2 className="text-2xl font-bold text-gov-dark font-serif">Three sources that must agree, measured where they do not</h2>
-      <div className="overflow-x-auto rounded-lg border border-gov-border">
+      <div tabIndex={0} role="region" aria-label="Table, scrolls sideways on small screens" className="overflow-x-auto rounded-lg border border-gov-border">
         <table className="min-w-full text-sm">
           <thead>
             <tr className="bg-gov-bg text-left">
@@ -121,7 +121,7 @@ export const InvestmentFundOntology: React.FC = () => (
 
     <section className="space-y-4">
       <h2 className="text-2xl font-bold text-gov-dark font-serif">Nine findings, all reproducible</h2>
-      <div className="overflow-x-auto rounded-lg border border-gov-border">
+      <div tabIndex={0} role="region" aria-label="Table, scrolls sideways on small screens" className="overflow-x-auto rounded-lg border border-gov-border">
         <table className="min-w-full text-sm">
           <thead>
             <tr className="bg-gov-bg text-left">
@@ -141,7 +141,7 @@ export const InvestmentFundOntology: React.FC = () => (
           </tbody>
         </table>
       </div>
-      <p className="text-sm text-gov-secondary/90 leading-relaxed">
+      <p className="text-sm text-gov-secondary leading-relaxed">
         Figures throughout this page are dated to the 14 August 2026 build, run against the GLEIF file dated 8 August 2026 and four pinned quarters of Form N-CEN. The SEC series/class register and the GLEIF file are fetched as latest, not pinned, so a rerun today will not reproduce these exact totals; see &quot;Open, aligned, and reproducible&quot; below.
       </p>
     </section>
@@ -167,7 +167,7 @@ export const InvestmentFundOntology: React.FC = () => (
       <p className="text-gov-dark leading-relaxed">
         The enclosure goes deeper. GLEIF maps ISINs to the fund&apos;s legal entity, but which share class an ISIN names is knowledge that lives in the CUSIP registry, which is licensed. From public data alone, 259 of the 19,803 funds in the graph, 1.3 percent, resolve their ISIN to a class, and only because they have one class and one ISIN so the pairing is forced. For everything else, the last hop of the join between the world&apos;s two great open identifier systems runs through a paywall. A separate, structural gap sits beside it: the SEC&apos;s own series/class register carries no trading-venue field at all, for any listing; the only venue source is Form N-CEN&apos;s ETF-only exchange table (Item E.1), which non-ETF funds never complete because it does not apply to them. Only 980 of 30,238 listings, 3.2 percent, resolve a venue; the other 29,258 (96.8 percent) are mostly ordinary open-end mutual fund share classes that transact at NAV and were never going to have a venue to report. The ontology&apos;s own SHACL shape grades this Warning and says so explicitly: not an error in the record, a scope limit of the public schema.
       </p>
-      <p className="text-sm text-gov-secondary/90 leading-relaxed">
+      <p className="text-sm text-gov-secondary leading-relaxed">
         We say this precisely because the model refuses to fudge it: fund-level ISIN assertions attach through a dedicated property that says &quot;this entity issued this security, class unresolved&quot;, and promotion to class level happens only when the data earns it. An ontology that silently guessed the attachment would demo better and govern worse.
       </p>
     </section>
@@ -195,7 +195,7 @@ export const InvestmentFundOntology: React.FC = () => (
             { label: 'ETF open-ISIN coverage, v0.2 open map', value: 35.4, display: '35.4%' },
           ]}
         />
-        <p className="text-sm text-gov-secondary/90 leading-relaxed">
+        <p className="text-sm text-gov-secondary leading-relaxed">
           The map ships in the repository as <code className="text-sm bg-gov-bg px-1.5 py-0.5 rounded">open-map/fund_identifier_map.csv</code> under the v0.2.1 release, together with the resumable OpenFIGI harvester, an offline test suite and CI. The v0.1 figures above stand as the dated baseline they always were; this update is what changes when you stop measuring the gap and start closing it.
         </p>
       </div>
@@ -235,7 +235,7 @@ export const InvestmentFundOntology: React.FC = () => (
           investment-fund-ontology on GitHub <ExternalLink className="w-4 h-4" />
         </a>
       </div>
-      <p className="text-sm text-gov-secondary/90 leading-relaxed">
+      <p className="text-sm text-gov-secondary leading-relaxed">
         Related work: our <Link to="/research/financial-answer-verification" className="text-gov-blue underline hover:text-gov-blue-dark">FinanceBench verification study</Link> applies the same evidence-before-assertion discipline to financial question answering, and the <Link to="/research/machine-validated-open-ontologies" className="text-gov-blue underline hover:text-gov-blue-dark">machine-validated ontologies</Link> study measures when an ontology can actually reject a wrong statement. Working on fund data, identifier governance or semantic data foundations in financial services? Write to <a href="mailto:fabio@thetesseractacademy.com" className="text-gov-blue underline hover:text-gov-blue-dark">fabio@thetesseractacademy.com</a>.
       </p>
     </section>

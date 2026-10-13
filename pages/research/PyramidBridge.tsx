@@ -54,7 +54,7 @@ export const PyramidBridge: React.FC = () => {
         <h1 className="text-4xl font-extrabold text-gov-dark mb-6 tracking-tight leading-tight font-serif">
           Grounding a PYRAMID avionics bridge in IES and HQDM
         </h1>
-        <p className="text-xl text-gov-secondary/90 leading-relaxed">
+        <p className="text-xl text-gov-secondary leading-relaxed">
           PYRAMID is the UK Ministry of Defence's open reference architecture for avionics and mission systems. It standardises how software components plug together and deliberately leaves what the data means across them to per-deployment bridges. This is a worked, open example that fills that gap with a shared 4D ontology, using standards the UK government already owns.
         </p>
       </header>
@@ -94,7 +94,7 @@ export const PyramidBridge: React.FC = () => {
         <p className="text-gov-dark leading-relaxed">
           A reference semantics for one PYRAMID bridge, between the <strong>Geography</strong> component and the <strong>Tactical Objects</strong> component, extended up the sensing chain to <strong>Data Fusion</strong>. Every entity is taken verbatim from the public Technical Standard and grounded in an IES or HQDM term.
         </p>
-        <div className="overflow-x-auto">
+        <div tabIndex={0} role="region" aria-label="Table, scrolls sideways on small screens" className="overflow-x-auto">
           <table className="w-full text-sm border-collapse">
             <thead>
               <tr className="bg-gov-bg border-b border-gov-border">

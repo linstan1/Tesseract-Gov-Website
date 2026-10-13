@@ -89,7 +89,7 @@ export const JsonLdEscapingConformance: React.FC = () => (
       <h1 className="text-4xl font-extrabold text-gov-dark mb-6 tracking-tight leading-tight font-serif">
         How many passes of HTML unescaping should a JSON-LD parser do? A census of the Tranco top 10,000
       </h1>
-      <p className="text-xl text-gov-secondary/90 leading-relaxed">
+      <p className="text-xl text-gov-secondary leading-relaxed">
         On 20 August 2026 Google announced that it had changed its JSON-LD extraction to apply only a single pass of HTML unescaping, in its own words to bring the parser up to JSON and other standards. Every commentary we could find restated the advice. Nobody measured it. We did, using Google&apos;s own validator as the oracle rather than trusting the announcement, and then censused the homepages of the Tranco top 10,000. The change affects ten domains in our census. It leaves one hundred and ninety-nine untouched, and those one hundred and ninety-nine are publishing structured data that reads correctly only inside Google.
       </p>
     </header>
@@ -126,7 +126,7 @@ export const JsonLdEscapingConformance: React.FC = () => (
       <p className="text-gov-dark leading-relaxed">
         Google runs the validator at validator.schema.org, and it accepts an HTML payload over a keyless POST and returns every property value it extracted. That makes Googlebot&apos;s parsing behaviour empirically measurable rather than a matter of trust. Feeding it a ladder of escaping depths returns exactly one pass applied to each parsed string value, which confirms Google&apos;s description independently.
       </p>
-      <div className="overflow-x-auto">
+      <div tabIndex={0} role="region" aria-label="Table, scrolls sideways on small screens" className="overflow-x-auto">
         <table className="min-w-full text-sm border border-gov-border">
           <thead className="bg-gov-bg/60">
             <tr>
@@ -169,7 +169,7 @@ export const JsonLdEscapingConformance: React.FC = () => (
       <p className="text-gov-dark leading-relaxed">
         We took the Tranco daily list generated on 20 August 2026, fetched the homepage of the top 10,000 domains once each over HTTPS with a self-identifying user agent, and extracted every JSON-LD script block from the rendered response body. Of the 10,000 domains, 6,509 returned a body and 2,969 of those publish JSON-LD, giving 5,020 blocks. Every value in every block was then read three ways: at zero passes, at one pass, and at two.
       </p>
-      <div className="overflow-x-auto">
+      <div tabIndex={0} role="region" aria-label="Table, scrolls sideways on small screens" className="overflow-x-auto">
         <table className="min-w-full text-sm border border-gov-border">
           <thead className="bg-gov-bg/60">
             <tr>

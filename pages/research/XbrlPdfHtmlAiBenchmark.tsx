@@ -68,7 +68,7 @@ export const XbrlPdfHtmlAiBenchmark: React.FC = () => {
         <h1 className="text-4xl font-extrabold text-gov-dark mb-6 tracking-tight leading-tight font-serif">
           Does structured data actually help AI read company accounts? A controlled pilot
         </h1>
-        <p className="text-xl text-gov-secondary/90 leading-relaxed">
+        <p className="text-xl text-gov-secondary leading-relaxed">
           The claim that structured digital reporting makes company accounts easier for machines to read is usually asserted, not tested. In July 2026 we ran a self-funded pilot that tests it directly: the same filed annual reports, presented to the same AI model as structured XBRL facts, as HTML text and as PDF text, on the same questions, with ground truth anchored to the filed data. Structured facts won, but not everywhere, not by a landslide, and not for free.
         </p>
       </header>
@@ -129,7 +129,7 @@ export const XbrlPdfHtmlAiBenchmark: React.FC = () => {
             ))}
           </div>
         </div>
-        <p className="text-sm text-gov-secondary/90">Accuracy against ground truth anchored to the filed XBRL facts and manually verified. Small cells; treat as directional.</p>
+        <p className="text-sm text-gov-secondary">Accuracy against ground truth anchored to the filed XBRL facts and manually verified. Small cells; treat as directional.</p>
       </section>
 
       <section className="space-y-6">
@@ -139,7 +139,7 @@ export const XbrlPdfHtmlAiBenchmark: React.FC = () => {
             Averages hide the interesting failures. The sharpest single result in the pilot concerns a signed figure, and it is exactly the kind of error a spot check would miss.
           </p>
         </div>
-        <div className="overflow-x-auto">
+        <div tabIndex={0} role="region" aria-label="Table, scrolls sideways on small screens" className="overflow-x-auto">
           <table className="w-full text-sm border-collapse">
             <thead>
               <tr className="bg-gov-bg border-b border-gov-border">
@@ -196,7 +196,7 @@ export const XbrlPdfHtmlAiBenchmark: React.FC = () => {
           <p className="text-gov-dark leading-relaxed">
             This pilot is the demand-side companion to our supply-side benchmark of <Link to="/research/ixbrl-disclosure-benchmark" className="text-gov-blue underline hover:text-gov-blue-dark">how machine-readable UK company accounts actually are</Link>: that work measures how much structure the filed population exposes; this one measures what an AI reader gains when it consumes that structure instead of the rendered document. Together they replace an article of faith about digital reporting with two measured quantities, and both are designed to scale to larger samples.
           </p>
-          <p className="text-sm text-gov-secondary/90 leading-relaxed mt-4">
+          <p className="text-sm text-gov-secondary leading-relaxed mt-4">
             Independent, self-funded pilot by Kampakis and Co, trading as Tesseract Academy, July 2026. Filed reports sourced from the public filings.xbrl.org repository.
           </p>
         </div>

@@ -65,7 +65,7 @@ export const OntologyEngineering: React.FC = () => {
         <h1 className="text-5xl font-extrabold text-gov-dark mb-6 tracking-tight leading-tight">
           Ontology engineering in RDF, OWL 2 and SHACL
         </h1>
-        <p className="text-xl text-gov-secondary/90 leading-relaxed max-w-4xl">
+        <p className="text-xl text-gov-secondary leading-relaxed max-w-4xl">
           We design domain ontologies, build knowledge graphs, and prove they are correct rather than
           merely well formed. Semantic web work in the full stack: RDF and linked data, OWL 2 and SKOS
           modelling, SHACL constraints, SPARQL and triple stores, taxonomy design and GraphRAG retrieval.
@@ -82,7 +82,7 @@ export const OntologyEngineering: React.FC = () => {
         <p className="text-gov-dark leading-relaxed text-base">
           Most ontology projects fail in the same place. The model is built, it loads, a validator
           reports zero violations, and the programme concludes the data is trustworthy. It is not.{' '}
-          <a href="https://www.w3.org/TR/shacl/" target="_blank" rel="noopener noreferrer" className="text-gov-blue hover:underline">SHACL</a>,
+          <a href="https://www.w3.org/TR/shacl/" target="_blank" rel="noopener noreferrer" className="text-gov-blue underline underline-offset-2 hover:text-gov-blue-dark">SHACL</a>,
           the W3C validation language everyone reaches for, operates under the open-world assumption: it
           silently passes any term it has no shape for. We measured this. Across three real vocabularies,
           open-world SHACL validated as conformant every one of 300 data graphs carrying a term that does
@@ -92,12 +92,12 @@ export const OntologyEngineering: React.FC = () => {
         </p>
         <p className="text-gov-dark leading-relaxed text-base">
           So our engagements ship a check that can fail. We work in{' '}
-          <a href="https://www.w3.org/TR/owl2-overview/" target="_blank" rel="noopener noreferrer" className="text-gov-blue hover:underline">OWL 2</a>,{' '}
-          <a href="https://www.w3.org/TR/skos-reference/" target="_blank" rel="noopener noreferrer" className="text-gov-blue hover:underline">SKOS</a> and SHACL,
+          <a href="https://www.w3.org/TR/owl2-overview/" target="_blank" rel="noopener noreferrer" className="text-gov-blue underline underline-offset-2 hover:text-gov-blue-dark">OWL 2</a>,{' '}
+          <a href="https://www.w3.org/TR/skos-reference/" target="_blank" rel="noopener noreferrer" className="text-gov-blue underline underline-offset-2 hover:text-gov-blue-dark">SKOS</a> and SHACL,
           on top of standard triple stores, and we add a closed-world gate over the vocabulary so a
           hallucinated or drifted term is rejected instead of accepted in silence. The tooling is our own
           open-source engine,{' '}
-          <a href="https://github.com/fabio-rovai/open-ontologies" target="_blank" rel="noopener noreferrer" className="text-gov-blue hover:underline">Open Ontologies</a>,
+          <a href="https://github.com/fabio-rovai/open-ontologies" target="_blank" rel="noopener noreferrer" className="text-gov-blue underline underline-offset-2 hover:text-gov-blue-dark">Open Ontologies</a>,
           a single Rust binary with an in-memory Oxigraph store, a native OWL 2 DL tableaux reasoner,
           SHACL validation and SPARQL. There is no JVM to operate and nothing leaves your network.
         </p>
@@ -115,13 +115,13 @@ export const OntologyEngineering: React.FC = () => {
           We also train teams to do this themselves. Our ontology engineering course covers RDF, RDFS,
           OWL 2 TBox and ABox modelling, SPARQL, SHACL, triple stores, GraphRAG and ontology governance
           across 15 lessons, and it is free. Public sector training is procurable through{' '}
-          <a href="https://www.crowncommercial.gov.uk/agreements/RM6219" target="_blank" rel="noopener noreferrer" className="text-gov-blue hover:underline">CCS RM6219</a>.
+          <a href="https://www.crowncommercial.gov.uk/agreements/RM6219" target="_blank" rel="noopener noreferrer" className="text-gov-blue underline underline-offset-2 hover:text-gov-blue-dark">CCS RM6219</a>.
         </p>
       </section>
 
       <section>
         <h2 className="text-3xl font-bold text-gov-dark mb-8">How this differs from the usual options</h2>
-        <div className="overflow-x-auto rounded-xl border border-gov-border/40">
+        <div tabIndex={0} role="region" aria-label="Table, scrolls sideways on small screens" className="overflow-x-auto rounded-xl border border-gov-border/40">
           <table className="w-full text-sm text-left">
             <thead className="bg-gov-bg border-b border-gov-border/40">
               <tr>
@@ -164,7 +164,7 @@ export const OntologyEngineering: React.FC = () => {
               </tr>
               <tr className="hover:bg-gov-bg/60 transition-colors">
                 <td className="px-6 py-4 text-gov-dark font-medium">Public sector procurement</td>
-                <td className="px-6 py-4 text-gov-dark">CCS RM6200, RM6126, RM6219 and RM6235</td>
+                <td className="px-6 py-4 text-gov-dark">CCS RM6200, RM6126, RM6219, RM6235 and RM6094</td>
                 <td className="px-6 py-4 text-gov-secondary">Varies</td>
                 <td className="px-6 py-4 text-gov-secondary">Software licence, not a service route</td>
               </tr>
@@ -178,7 +178,7 @@ export const OntologyEngineering: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="bg-gov-bg border border-gov-border/40 rounded-xl p-6">
             <h3 className="font-bold text-gov-dark mb-3">Domain ontologies</h3>
-            <p className="text-sm text-gov-secondary/90 leading-relaxed">
+            <p className="text-sm text-gov-secondary leading-relaxed">
               OWL 2 class and property models with a SKOS controlled vocabulary and SHACL shapes for the
               constraints that have to hold. Reified assertions where a fact needs a source and a date
               rather than being asserted flat.
@@ -186,7 +186,7 @@ export const OntologyEngineering: React.FC = () => {
           </div>
           <div className="bg-gov-bg border border-gov-border/40 rounded-xl p-6">
             <h3 className="font-bold text-gov-dark mb-3">Standards crosswalks</h3>
-            <p className="text-sm text-gov-secondary/90 leading-relaxed">
+            <p className="text-sm text-gov-secondary leading-relaxed">
               Mappings between two or more published standards, with the loss measured rather than
               assumed. Our waste study quantified it in bits: of 5.907 bits of composition detail, the
               Simpler Recycling channel retains 38.4 per cent.
@@ -194,14 +194,14 @@ export const OntologyEngineering: React.FC = () => {
           </div>
           <div className="bg-gov-bg border border-gov-border/40 rounded-xl p-6">
             <h3 className="font-bold text-gov-dark mb-3">Knowledge graphs</h3>
-            <p className="text-sm text-gov-secondary/90 leading-relaxed">
+            <p className="text-sm text-gov-secondary leading-relaxed">
               Instance graphs built from the whole source, with provenance on every assertion. Our space
               object graph carries 833,403 triples over all 70,122 catalogued objects in Earth orbit.
             </p>
           </div>
           <div className="bg-gov-bg border border-gov-border/40 rounded-xl p-6">
             <h3 className="font-bold text-gov-dark mb-3">Verification for AI pipelines</h3>
-            <p className="text-sm text-gov-secondary/90 leading-relaxed">
+            <p className="text-sm text-gov-secondary leading-relaxed">
               A closed-world gate that rejects ontology terms your model invented. This is the layer that
               stops a plausible, fluent, wrong triple from entering the graph, and it is the part almost
               no RAG or agent stack currently has.
@@ -209,7 +209,7 @@ export const OntologyEngineering: React.FC = () => {
           </div>
           <div className="bg-gov-bg border border-gov-border/40 rounded-xl p-6">
             <h3 className="font-bold text-gov-dark mb-3">Register and reference data assurance</h3>
-            <p className="text-sm text-gov-secondary/90 leading-relaxed">
+            <p className="text-sm text-gov-secondary leading-relaxed">
               Auditing the registers your systems join against. We have measured Companies House, the
               Global LEI System, the FDIC, EIOPA, ISTAT, CelesTrak and others, and found identifier
               failures in all of them.
@@ -217,7 +217,7 @@ export const OntologyEngineering: React.FC = () => {
           </div>
           <div className="bg-gov-bg border border-gov-border/40 rounded-xl p-6">
             <h3 className="font-bold text-gov-dark mb-3">Training and capability transfer</h3>
-            <p className="text-sm text-gov-secondary/90 leading-relaxed">
+            <p className="text-sm text-gov-secondary leading-relaxed">
               A 15-lesson ontology engineering course covering RDF, RDFS, OWL 2, SPARQL, SHACL, triple
               stores, GraphRAG and governance, plus in-house workshops for teams taking over a model we
               built with them.

@@ -180,7 +180,7 @@ export const UkRegisterOntology: React.FC = () => (
       <h1 className="text-4xl font-extrabold text-gov-dark mb-6 tracking-tight leading-tight font-serif">
         An open ontology for UK public registers, tested against Companies House, the Charity Commission and the Global LEI System
       </h1>
-      <p className="text-xl text-gov-secondary/90 leading-relaxed">
+      <p className="text-xl text-gov-secondary leading-relaxed">
         From 18 November 2026 the Economic Crime and Corporate Transparency Act requires verification of who runs a company. Identity verification for the people is arriving; verification of the identifiers that link the registers to each other exists nowhere. On 17 August 2026 we downloaded the complete open UK register fabric, every source keyless: the Companies House bulk file of 5,695,465 live companies, the full Charity Commission register, the 12.9&nbsp;GB PSC snapshot, and the GLEIF LEI golden copy of 3,403,856 records. Then we measured what happens at every boundary where one register embeds another&apos;s identifiers. This is a case study in register assurance for the UK: the practice of auditing what a register publishes against the rules its identifiers declare for themselves and against the other registers that carry the same identity. Everything below is reproducible from the open repository, every headline is computed two independent ways, and the pipeline fails its own build if the two ever disagree.
       </p>
     </header>
@@ -268,7 +268,7 @@ export const UkRegisterOntology: React.FC = () => (
 
     <section className="space-y-4">
       <h2 className="text-2xl font-bold text-gov-dark font-serif">The findings, graded</h2>
-      <div className="overflow-x-auto rounded-lg border border-gov-border">
+      <div tabIndex={0} role="region" aria-label="Table, scrolls sideways on small screens" className="overflow-x-auto rounded-lg border border-gov-border">
         <table className="min-w-full text-sm">
           <thead>
             <tr className="bg-gov-bg text-left">
@@ -300,7 +300,7 @@ export const UkRegisterOntology: React.FC = () => (
           { label: 'Placeholder numbers (00000000, 01234567, 12345678)', value: 32, display: '32', color: CHART.amber },
         ]}
       />
-      <p className="text-sm text-gov-secondary/90 leading-relaxed">
+      <p className="text-sm text-gov-secondary leading-relaxed">
         All figures are computed from register snapshots pinned to their dates: the Companies House bulk file of 1 August 2026, and the Charity Commission extract, PSC snapshot and GLEIF golden copy of 17 August 2026. The 16-day skew between the bulk file and the other sources is quantified where it matters. All are living systems, so a later run produces different totals while the method reproduces exactly.
       </p>
     </section>
@@ -313,7 +313,7 @@ export const UkRegisterOntology: React.FC = () => (
       <p className="text-gov-dark leading-relaxed">
         First, model identity honestly. An identifier in a register is not a property of an entity; it is a dated claim by a named register. Our OWL model reifies every published value as an IdentifierAssertion carrying the value exactly as published, the scheme the field claims, whether the value conforms to the rules that scheme declares for itself, and whether it resolves in the target register. Each observed failure mode is a class: DanglingIdentifier, PlaceholderIdentifier, CrossSchemeIdentifier, FormatInvalidIdentifier, SeriesOutOfScope, NameDisagreement.
       </p>
-      <Mermaid chart={MODEL} />
+      <Mermaid chart={MODEL} ariaLabel="Ontology model: a Charity Commission or GLEIF record makes a reified, dated identifier assertion, checked against the Companies House live file of 5,695,465 companies and a SKOS scheme registry, producing dangling, placeholder or cross-scheme identifier findings and name disagreements." />
       <p className="text-gov-dark leading-relaxed">
         Second, make the schemes self-describing. A SKOS registry declares each scheme&apos;s shapes and canonicalisation as data, including the two documented Companies House shapes, the BR branch series the bulk product excludes, the legacy shapes the register itself contains, and the schemes whose values were found squatting in the company-number field.
       </p>
@@ -373,7 +373,7 @@ export const UkRegisterOntology: React.FC = () => (
           Write to <a href="mailto:fabio@thetesseractacademy.com" className="text-gov-blue underline hover:text-gov-blue-dark">fabio@thetesseractacademy.com</a> with the register name.
         </p>
       </div>
-      <p className="text-sm text-gov-secondary/90 leading-relaxed">
+      <p className="text-sm text-gov-secondary leading-relaxed">
         Related work: the same register-boundary discipline found every FDIC LEI truncated in <Link to="/research/bank-register-ontology" className="text-gov-blue underline hover:text-gov-blue-dark">the US bank register</Link>, the missing CIK-to-LEI crosswalk in <Link to="/research/securities-register-ontology" className="text-gov-blue underline hover:text-gov-blue-dark">the US securities register</Link>, and the category both belong to is set out in <Link to="/research/register-assurance" className="text-gov-blue underline hover:text-gov-blue-dark">Register assurance: why every public register fails at its boundary</Link>.
       </p>
     </section>

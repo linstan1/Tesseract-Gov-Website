@@ -40,7 +40,7 @@ const HBars: React.FC<{ title: string; note?: string; max?: number; rows: BarRow
       <div className="space-y-2">
         {rows.map((r) => (
           <div key={r.label} className="flex items-center gap-3" title={`${r.label}: ${r.display}`}>
-            <span className="w-56 shrink-0 text-right text-xs text-gov-secondary leading-tight">{r.label}</span>
+            <span className="w-56 max-w-[40%] shrink-0 text-right text-xs text-gov-secondary leading-tight">{r.label}</span>
             <div className="flex-1 h-[18px]">
               <div
                 className="h-full rounded-r"
@@ -98,7 +98,7 @@ export const OntologyCorrectnessBench: React.FC = () => {
         <h1 className="text-4xl font-extrabold text-gov-dark mb-6 tracking-tight leading-tight font-serif">
           The open-world hole: why SHACL cannot catch a hallucinated ontology term
         </h1>
-        <p className="text-xl text-gov-secondary/90 leading-relaxed">
+        <p className="text-xl text-gov-secondary leading-relaxed">
           Ask a language model to write RDF and it will, some of the time, give you a term that does not exist: a <code className="text-base bg-gov-bg px-1.5 py-0.5 rounded">schema:priceBracket</code> where it meant <code className="text-base bg-gov-bg px-1.5 py-0.5 rounded">schema:priceRange</code>, an OBO id off by a digit. The triple parses, it reads correctly, and it is referentially fake. The reflex is to reach for SHACL. Measured on three real vocabularies, SHACL does not catch this. Not some of the time. None of the time.
         </p>
       </header>
@@ -137,7 +137,7 @@ export const OntologyCorrectnessBench: React.FC = () => {
             We took three real, public vocabularies of very different shapes. For each we generated 100 clean record graphs using only declared terms, and 100 hallucinated graphs identical except for one or two extra fabricated terms, each confirmed absent from the vocabulary but named plausibly enough that a model would emit it. Every graph was validated two ways: with ordinary hand-authored SHACL shapes, and with a closed-world vocabulary gate. The run is deterministic and reproducible in one command.
           </p>
         </div>
-        <div className="overflow-x-auto">
+        <div tabIndex={0} role="region" aria-label="Table, scrolls sideways on small screens" className="overflow-x-auto">
           <table className="w-full text-sm border-collapse">
             <thead>
               <tr className="bg-gov-bg border-b border-gov-border">
@@ -188,7 +188,7 @@ export const OntologyCorrectnessBench: React.FC = () => {
             A valid-looking <code className="text-sm bg-gov-bg px-1.5 py-0.5 rounded">schema:Offer</code> with two terms that do not exist in schema.org, the class <code className="text-sm bg-gov-bg px-1.5 py-0.5 rounded">schema:MerchandiseOffer</code> and the predicate <code className="text-sm bg-gov-bg px-1.5 py-0.5 rounded">schema:priceBracket</code>:
           </p>
         </div>
-        <div className="overflow-x-auto">
+        <div tabIndex={0} role="region" aria-label="Table, scrolls sideways on small screens" className="overflow-x-auto">
           <table className="w-full text-sm border-collapse">
             <thead>
               <tr className="bg-gov-bg border-b border-gov-border">
@@ -253,7 +253,7 @@ export const OntologyCorrectnessBench: React.FC = () => {
           <cite className="text-sm text-gov-secondary font-semibold not-italic mt-2 block">Fabio Rovai, Tesseract Academy</cite>
         </blockquote>
 
-        <p className="text-sm text-gov-secondary/90 leading-relaxed">
+        <p className="text-sm text-gov-secondary leading-relaxed">
           This is an independent, self-initiated study built entirely on published open standards and open tools. schema.org, IES4 (Crown Copyright, MIT-licensed), and the OBO Foundry ontologies PATO and RO are used under their open licences. The benchmark, its data and every number above are released open for independent reproduction. Prepared in response to the Encode AI-for-Science Challengescape, backed by ARIA and Pillar VC UK.
         </p>
       </section>

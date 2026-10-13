@@ -55,6 +55,7 @@ export const Mermaid: React.FC<MermaidProps> = ({ chart, id = 'mmd', ariaLabel }
   return (
     <div
       ref={ref}
+      tabIndex={0}
       role="img"
       aria-label={ariaLabel}
       className="mermaid-diagram w-full overflow-x-auto flex justify-center"

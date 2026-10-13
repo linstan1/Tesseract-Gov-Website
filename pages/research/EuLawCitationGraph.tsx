@@ -92,7 +92,7 @@ export const EuLawCitationGraph: React.FC = () => (
       <h1 className="text-4xl font-extrabold text-gov-dark mb-6 tracking-tight leading-tight font-serif">
         EU Law Cites More Than Its Own Citation Graph Records
       </h1>
-      <p className="text-xl text-gov-secondary/90 leading-relaxed">
+      <p className="text-xl text-gov-secondary leading-relaxed">
         The European Union publishes a machine-readable record of which legal instruments cite which. It is the only structured source of that dependency graph, so it is what compliance tooling is built on. We measured it against what the texts actually say. It records 63 per cent, and the shortfall is concentrated in the one place it hurts most: the annex references that decide who a directive applies to.
       </p>
     </header>
@@ -211,10 +211,10 @@ export const EuLawCitationGraph: React.FC = () => (
     <section className="space-y-4">
       <h2 className="text-2xl font-bold text-gov-dark font-serif">The artefact</h2>
       <p className="text-gov-dark leading-relaxed">
-        The repository is at <a className="text-gov-blue hover:underline" href={REPO}>github.com/fabio-rovai/regulatory-instrument-register</a>. It contains a resumable harvester keyed by CELEX, the citation audit, the generated report, and offline known-answer tests including regression tests for all three corrections. Adding an instrument is a data edit. Code MIT, report CC BY 4.0, source material CC BY 4.0 under Decision 2011/833/EU.
+        The repository is at <a className="text-gov-blue underline underline-offset-2 hover:text-gov-blue-dark" href={REPO}>github.com/fabio-rovai/regulatory-instrument-register</a>. It contains a resumable harvester keyed by CELEX, the citation audit, the generated report, and offline known-answer tests including regression tests for all three corrections. Adding an instrument is a data edit. Code MIT, report CC BY 4.0, source material CC BY 4.0 under Decision 2011/833/EU.
       </p>
       <p className="text-gov-dark leading-relaxed">
-        Companion studies: <a className="text-gov-blue hover:underline" href="https://gov.tesseract.academy/research/iso-42001-assurance-gap">the ISO/IEC 42001 assurance gap</a> and <a className="text-gov-blue hover:underline" href="https://gov.tesseract.academy/research/certification-register-ontology">why nobody can check an ISO 27001 certificate</a>.
+        Companion studies: <a className="text-gov-blue underline underline-offset-2 hover:text-gov-blue-dark" href="https://gov.tesseract.academy/research/iso-42001-assurance-gap">the ISO/IEC 42001 assurance gap</a> and <a className="text-gov-blue underline underline-offset-2 hover:text-gov-blue-dark" href="https://gov.tesseract.academy/research/certification-register-ontology">why nobody can check an ISO 27001 certificate</a>.
       </p>
     </section>
 
@@ -225,10 +225,10 @@ export const EuLawCitationGraph: React.FC = () => (
           A bounded first engagement is a two week regulatory dependency audit for one instrument that matters to you. We take the text, extract every citation, resolve it, compare against whatever your current tooling believes, and hand back the difference with the method. If the two agree, you have evidence your tooling is sound, which is worth having. If they do not, you have found it before an auditor did.
         </p>
         <p className="text-gov-dark leading-relaxed">
-          There is also a free course covering ISO/IEC 42001 alongside the EU AI Act, GDPR, NIS2, DORA and MiFID II on <a className="text-gov-blue hover:underline" href="https://tesseract.academy">tesseract.academy</a>.
+          There is also a free course covering ISO/IEC 42001 alongside the EU AI Act, GDPR, NIS2, DORA and MiFID II on <a className="text-gov-blue underline underline-offset-2 hover:text-gov-blue-dark" href="https://tesseract.academy">tesseract.academy</a>.
         </p>
         <p className="text-gov-dark leading-relaxed">
-          Fabio Rovai, <a className="text-gov-blue hover:underline" href="mailto:fabio@thetesseractacademy.com">fabio@thetesseractacademy.com</a>. Corrections are published on this page rather than applied silently, as the three above demonstrate.
+          Fabio Rovai, <a className="text-gov-blue underline underline-offset-2 hover:text-gov-blue-dark" href="mailto:fabio@thetesseractacademy.com">fabio@thetesseractacademy.com</a>. Corrections are published on this page rather than applied silently, as the three above demonstrate.
         </p>
       </div>
     </section>

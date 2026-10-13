@@ -30,7 +30,7 @@ export const DigitalAnalytics: React.FC = () => {
         <h1 className="text-5xl font-extrabold text-gov-dark mb-6 tracking-tight leading-tight">
           Digital Analytics and Audience Measurement
         </h1>
-        <p className="text-xl text-gov-secondary/90 leading-relaxed max-w-4xl">
+        <p className="text-xl text-gov-secondary leading-relaxed max-w-4xl">
           We help public-sector and cultural organisations turn web, marketing and audience data
           into decisions: Google Analytics 4 and Google Tag Manager done properly, consent-aware
           measurement that survives privacy-first browsers, dashboards leadership actually uses,
@@ -61,7 +61,7 @@ export const DigitalAnalytics: React.FC = () => {
           and e-commerce tracking, tagging QA, and the recurring hygiene work (broken tags,
           duplicate events, untracked journeys) that silently corrupts reporting when neglected.
           We audit cookie banners and consent management platforms against{' '}
-          <a href="https://ico.org.uk/for-organisations/direct-marketing-and-privacy-and-electronic-communications/" target="_blank" rel="noopener noreferrer" className="text-gov-blue hover:underline">ICO guidance on PECR</a>{' '}
+          <a href="https://ico.org.uk/for-organisations/direct-marketing-and-privacy-and-electronic-communications/" target="_blank" rel="noopener noreferrer" className="text-gov-blue underline underline-offset-2 hover:text-gov-blue-dark">ICO guidance on PECR</a>{' '}
           and UK GDPR, and we advise on consent mode, conversion APIs and first-party or
           server-side tagging where the benefit justifies the infrastructure - and say plainly
           when it does not.
@@ -83,7 +83,7 @@ export const DigitalAnalytics: React.FC = () => {
           engagement includes <strong>capability building</strong>: structured mentoring for
           in-house analysts, refresher training for marketing and content teams, and documentation
           your team owns. Our training pedigree is a matter of record - our{' '}
-          <Link to="/research/bridgeai-creative-industries" className="text-gov-blue hover:underline">
+          <Link to="/research/bridgeai-creative-industries" className="text-gov-blue underline underline-offset-2 hover:text-gov-blue-dark">
             Innovate UK BridgeAI programme
           </Link>{' '}
           drew 1,100 registrations against a 200-place target.
@@ -91,7 +91,7 @@ export const DigitalAnalytics: React.FC = () => {
         <p className="text-gov-dark leading-relaxed text-base">
           We work under UK GDPR with Information Commission registration (ZB715782), hold Cyber Essentials
           certification, and are an appointed supplier on{' '}
-          <a href="https://www.crowncommercial.gov.uk/agreements/RM6126" target="_blank" rel="noopener noreferrer" className="text-gov-blue hover:underline">CCS RM6126</a>{' '}
+          <a href="https://www.crowncommercial.gov.uk/agreements/RM6126" target="_blank" rel="noopener noreferrer" className="text-gov-blue underline underline-offset-2 hover:text-gov-blue-dark">CCS RM6126</a>{' '}
           (Research and Insights) and the Imperial War Museums Digital Transformation Support
           Framework (Lot 1 - Data Consultancy).
         </p>
@@ -99,7 +99,7 @@ export const DigitalAnalytics: React.FC = () => {
 
       <section>
         <h2 className="text-3xl font-bold text-gov-dark mb-8">Service Comparison</h2>
-        <div className="overflow-x-auto rounded-xl border border-gov-border/40">
+        <div tabIndex={0} role="region" aria-label="Table, scrolls sideways on small screens" className="overflow-x-auto rounded-xl border border-gov-border/40">
           <table className="w-full text-sm text-left">
             <thead className="bg-gov-bg border-b border-gov-border/40">
               <tr>

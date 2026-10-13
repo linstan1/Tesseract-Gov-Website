@@ -54,7 +54,7 @@ export const PropertyMarketIndicators: React.FC = () => {
         <h1 className="text-4xl font-extrabold text-gov-dark mb-6 tracking-tight leading-tight font-serif">
           What a year of transactions says about every local housing market
         </h1>
-        <p className="text-xl text-gov-secondary/90 leading-relaxed">
+        <p className="text-xl text-gov-secondary leading-relaxed">
           Local authorities are asked, again and again, to evidence their housing market: for a local plan, a strategic housing market assessment, a stock-condition programme, a viability study. The raw material is open and national, but it arrives as fourteen unlabelled columns and nine hundred thousand rows. This is a small, reproducible step that turns that raw material into a comparable indicator per authority, and is honest about what it can and cannot say.
         </p>
       </header>
@@ -87,7 +87,7 @@ export const PropertyMarketIndicators: React.FC = () => {
             Every standard transaction in the 2025 Price Paid file carries a local-authority district, so each sale is attributed to its authority directly, with no postcode lookup to introduce error. We count only <strong>standard price-paid transactions</strong> (the category that excludes repossessions and bulk or non-market transfers), then compute ten indicators per authority. The build is a single script over the open CSV; anyone can re-run it and get the same numbers.
           </p>
         </div>
-        <div className="overflow-x-auto">
+        <div tabIndex={0} role="region" aria-label="Table, scrolls sideways on small screens" className="overflow-x-auto">
           <table className="w-full text-sm border-collapse">
             <thead>
               <tr className="bg-gov-bg border-b border-gov-border">
@@ -122,7 +122,7 @@ export const PropertyMarketIndicators: React.FC = () => {
           <p className="text-gov-dark leading-relaxed">
             The same pipeline extends cleanly: multiple years for a time series, lower-quartile-price-to-earnings for an affordability ratio, or a join to deprivation and stock data for a fuller market picture. It is the property-market companion to our <Link to="/research/welsh-government-land-valuation" className="text-gov-blue underline hover:text-gov-blue-dark">Welsh Government land-valuation research</Link>, which tested valuation methods across 1,916 Welsh geographies; both start from the same conviction that land and property questions should be answered from open data, reproducibly.
           </p>
-          <p className="text-sm text-gov-secondary/90 leading-relaxed mt-4">
+          <p className="text-sm text-gov-secondary leading-relaxed mt-4">
             Independent, self-initiated open research built entirely from public data. Contains HM Land Registry data &copy; Crown copyright and database right 2026, licensed under the Open Government Licence v3.0. Not endorsed by HM Land Registry.
           </p>
         </div>

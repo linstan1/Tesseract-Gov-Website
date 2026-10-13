@@ -52,7 +52,7 @@ export const FcaWarningsObservatory: React.FC = () => {
         <h1 className="text-4xl font-extrabold text-gov-dark mb-6 tracking-tight leading-tight font-serif">
           A live list with no memory
         </h1>
-        <p className="text-xl text-gov-secondary/90 leading-relaxed">
+        <p className="text-xl text-gov-secondary leading-relaxed">
           The FCA warns the public about unauthorised and scam firms through a warning list. It is a genuinely useful public safety tool, and it has one structural blind spot: it shows only the firms flagged right now. There is no history, so the trend, the very thing that tells you whether the scam problem is growing, is invisible. This reconstructs that trend from the list itself.
         </p>
       </header>
@@ -93,7 +93,8 @@ export const FcaWarningsObservatory: React.FC = () => {
           </p>
         </div>
         <div className="bg-white border border-gov-border/50 rounded-xl p-5 sm:p-6">
-          <div className="flex items-end gap-2 h-52" role="img" aria-label="FCA warnings published per year, rising from a few hundred in 2017-2019 to around 1,900 in 2022-2025.">
+          <div className="overflow-x-auto" tabIndex={0} role="region" aria-label="Chart, scrolls sideways on small screens">
+          <div className="flex items-end gap-2 h-52 min-w-[20rem]" role="img" aria-label="FCA warnings published per year, rising from a few hundred in 2017-2019 to around 1,900 in 2022-2025.">
             {YEARS.map(([y, n]) => (
               <div key={y} className="flex-1 flex flex-col items-center justify-end h-full">
                 <span className="text-[10px] text-gov-secondary tabular-nums mb-1">{n}</span>
@@ -102,7 +103,8 @@ export const FcaWarningsObservatory: React.FC = () => {
               </div>
             ))}
           </div>
-          <p className="text-xs text-gov-secondary/90 mt-3">FCA warnings published per year (live pages, dated from page metadata).</p>
+          </div>
+          <p className="text-xs text-gov-secondary mt-3">FCA warnings published per year (live pages, dated from page metadata).</p>
         </div>
       </section>
 
@@ -130,7 +132,7 @@ export const FcaWarningsObservatory: React.FC = () => {
           <p className="text-gov-dark leading-relaxed">
             Captured on a schedule, the observatory becomes a genuine longitudinal record rather than a one-off snapshot, and supports emerging-threat detection: spikes in clone activity, or in a named sector, as they happen. It complements our applied work on financial vulnerability, including the <Link to="/research/kalgera-financial-vulnerability" className="text-gov-blue underline hover:text-gov-blue-dark">Kalgera early-warning research</Link>, where the same instinct applies: harm signals are far more useful as a series than as a snapshot.
           </p>
-          <p className="text-sm text-gov-secondary/90 leading-relaxed mt-4">
+          <p className="text-sm text-gov-secondary leading-relaxed mt-4">
             Independent, self-initiated open research reconstructed from public FCA warning-list pages. Not affiliated with or endorsed by the FCA.
           </p>
         </div>

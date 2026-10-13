@@ -112,7 +112,7 @@ export const IesHqdmCrosswalk: React.FC = () => {
         <h1 className="text-4xl font-extrabold text-gov-dark mb-6 tracking-tight leading-tight font-serif">
           IES to HQDM: an open 4D ontology crosswalk for defence data
         </h1>
-        <p className="text-xl text-gov-secondary/90 leading-relaxed">
+        <p className="text-xl text-gov-secondary leading-relaxed">
           The first public crosswalk between the UK Information Exchange Standard (IES), the 4D ontology behind UK defence and security data, and HQDM, the model underpinning the National Digital Twin. Open, validated, and released so that suppliers building across the two can start from something concrete.
         </p>
       </header>
@@ -168,7 +168,7 @@ export const IesHqdmCrosswalk: React.FC = () => {
 
       <section className="space-y-6">
         <h2 className="text-2xl font-bold text-gov-dark font-serif">What we built</h2>
-        <div className="overflow-x-auto">
+        <div tabIndex={0} role="region" aria-label="Table, scrolls sideways on small screens" className="overflow-x-auto">
           <table className="w-full text-sm border-collapse">
             <thead>
               <tr className="bg-gov-bg border-b border-gov-border">
@@ -209,7 +209,7 @@ export const IesHqdmCrosswalk: React.FC = () => {
             </div>
           ))}
         </div>
-        <p className="text-sm text-gov-secondary/90 leading-relaxed">
+        <p className="text-sm text-gov-secondary leading-relaxed">
           Three of these are traps a label matcher falls into, one is a convergence worth exploiting, and two mark where the hand-curated backbone ends and the automated alignment work begins. A clean crosswalk is not one with no divergences; it is one where the divergences are named.
         </p>
       </section>
@@ -247,7 +247,7 @@ export const IesHqdmCrosswalk: React.FC = () => {
           <p className="text-gov-dark leading-relaxed mt-4">
             The same method settles the harder IES-to-BFO question raised by the emerging US and NATO defence-ontology foundry. The obvious mapping, treating an IES Entity as a BFO material entity, is refuted by BFO's own axioms: a whole-life 4D individual is not a persisting object, it is that object's <em>history</em>, and BFO already ships a class for exactly that. The corrected bridge points there and is certified clean.
           </p>
-          <p className="text-sm text-gov-secondary/90 leading-relaxed mt-4">
+          <p className="text-sm text-gov-secondary leading-relaxed mt-4">
             Every step is reproducible: the <code className="text-sm bg-gov-bg px-1.5 py-0.5 rounded">reasoning/</code> directory in the repository re-runs the whole analysis in about two minutes, and the result was independently re-checked with the HermiT command-line tool.
           </p>
         </div>
@@ -273,7 +273,7 @@ export const IesHqdmCrosswalk: React.FC = () => {
               <span>Candidate-for-review, and open to correction: the most welcome contribution is a new divergence.</span>
             </li>
           </ul>
-          <p className="text-sm text-gov-secondary/90 leading-relaxed mt-4">
+          <p className="text-sm text-gov-secondary leading-relaxed mt-4">
             This is an independent, self-initiated demonstration. It is not affiliated with, or endorsed by, the Ministry of Defence, the IES Working Group or the National Digital Twin programme. It is built entirely on published open standards and open ontologies.
           </p>
         </div>

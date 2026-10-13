@@ -93,7 +93,7 @@ export const OpenDataCatalogAssurance: React.FC = () => (
       <h1 className="text-4xl font-extrabold text-gov-dark mb-6 tracking-tight leading-tight font-serif">
         Fifty-nine federal agencies are validated against the schema that exempts them
       </h1>
-      <p className="text-xl text-gov-secondary/90 leading-relaxed">
+      <p className="text-xl text-gov-secondary leading-relaxed">
         Federal agencies publishing open data are required to tag every dataset with an OMB bureau code and a
         program code. data.gov validates what agencies publish. On 21 August 2026 we asked a narrower question:
         which rules does it validate them against? The answer is that 76 harvest sources covering 59 federal
@@ -334,7 +334,7 @@ export const OpenDataCatalogAssurance: React.FC = () => (
           If you operate one of the catalogues measured here, we will send you the rows that name your agency,
           together with the queries that produced them, at no charge and with no obligation. If you want the check
           to keep running rather than to be a snapshot, that is a small, fixed-scope piece of work and we are happy
-          to quote it. Write to <a className="text-gov-blue hover:underline" href="mailto:fabio@thetesseractacademy.com">fabio@thetesseractacademy.com</a>.
+          to quote it. Write to <a className="text-gov-blue underline underline-offset-2 hover:text-gov-blue-dark" href="mailto:fabio@thetesseractacademy.com">fabio@thetesseractacademy.com</a>.
         </p>
       </div>
     </section>

@@ -185,7 +185,7 @@ export const MediaAttentionOntology: React.FC = () => (
       <h1 className="text-4xl font-extrabold text-gov-dark mb-6 tracking-tight leading-tight font-serif">
         The content registry that television measurement runs on covers 1.84 per cent of television
       </h1>
-      <p className="text-xl text-gov-secondary/90 leading-relaxed">
+      <p className="text-xl text-gov-secondary leading-relaxed">
         EIDR is the audiovisual industry&apos;s own content registry, and it does content identity properly, including the distinction between a title, a cut and an encoding that measurement depends on. In the open graph it reaches 53.44 per cent of films and 1.84 per cent of television series. We harvested 224,710 EIDR identifier assertions, resolved 1,179 of them against EIDR&apos;s public registry to learn what each one actually denotes, and found 285 works carrying identifiers at two different levels of abstraction at once. This page explains what we measured, why a stock checksum library quietly rejects one valid identifier in thirty-six, and what an ontology of measured attention has to do that nothing open currently does.
       </p>
     </header>
@@ -212,7 +212,7 @@ export const MediaAttentionOntology: React.FC = () => (
       <p className="text-gov-dark leading-relaxed">
         This matters for measurement in a way it does not matter for a catalogue. A viewing event attaches to a manifestation on a service. It never attaches to an abstraction, because an abstraction has no duration, and duration is what completion, frequency and reach are computed from. Resolve an event only to title level and the loss is invisible the moment the rows are aggregated.
       </p>
-      <Mermaid chart={HIERARCHY} />
+      <Mermaid chart={HIERARCHY} ariaLabel="Hierarchy: abstract work, edit, manifestation and attention event, where attention attaches only to the manifestation; 285 works in the open graph hold identifiers at two of these levels at once." />
       <p className="text-gov-dark leading-relaxed">
         EIDR encodes this correctly. Every EIDR record declares a <code>StructuralType</code>: Abstraction, Performance, Digital, Composite. The difficulty is that the identifier does not carry its level in its syntax. <code>10.5240/</code> followed by twenty hexadecimal characters and a check character looks identical whether it names a title or a cut, and Wikidata&apos;s own property definition says so plainly: EIDR content ID is an &quot;identifier for a film or television work, edit or manifestation&quot;. One property, three levels, and no way to tell which you have without asking the registry.
       </p>
@@ -229,7 +229,7 @@ export const MediaAttentionOntology: React.FC = () => (
       <p className="text-gov-dark leading-relaxed">
         The larger finding is simpler and harder to design around. We counted, for each kind of work in the open graph, how many carry an EIDR identifier at all.
       </p>
-      <div className="overflow-x-auto rounded-lg border border-gov-border">
+      <div tabIndex={0} role="region" aria-label="Table, scrolls sideways on small screens" className="overflow-x-auto rounded-lg border border-gov-border">
         <table className="min-w-full text-sm">
           <thead>
             <tr className="bg-gov-bg text-left">
@@ -309,7 +309,7 @@ export const MediaAttentionOntology: React.FC = () => (
 
     <section className="space-y-4">
       <h2 className="text-2xl font-bold text-gov-dark font-serif">Nine findings, and what each one costs</h2>
-      <div className="overflow-x-auto rounded-lg border border-gov-border">
+      <div tabIndex={0} role="region" aria-label="Table, scrolls sideways on small screens" className="overflow-x-auto rounded-lg border border-gov-border">
         <table className="min-w-full text-sm">
           <thead>
             <tr className="bg-gov-bg text-left">
@@ -327,20 +327,20 @@ export const MediaAttentionOntology: React.FC = () => (
                 <td className="px-4 py-3">
                   <span className={`inline-block rounded px-2 py-1 text-xs font-semibold ${SEV_STYLE[r.sev]}`}>{r.sev}</span>
                 </td>
-                <td className="px-4 py-3 text-gov-secondary/90">{r.means}</td>
+                <td className="px-4 py-3 text-gov-secondary">{r.means}</td>
               </tr>
             ))}
           </tbody>
         </table>
       </div>
-      <p className="text-sm text-gov-secondary/90 leading-relaxed">
+      <p className="text-sm text-gov-secondary leading-relaxed">
         All figures computed on 16 August 2026 from a live Wikidata harvest and same-day EIDR resolution. Both are living systems, so a later run gives different totals while the method reproduces exactly. The findings are computed twice, once set-based and once as SPARQL over the built graph, and agree exactly.
       </p>
     </section>
 
     <section className="space-y-4">
       <h2 className="text-2xl font-bold text-gov-dark font-serif">What the ontology does about it</h2>
-      <Mermaid chart={OBSERVATION} />
+      <Mermaid chart={OBSERVATION} ariaLabel="Ontology model: four kinds of observation (automatic content recognition, panel meter, return path data and server-side ad log) point to one attention event, from which derived attributes are computed." />
       <p className="text-gov-dark leading-relaxed">
         <strong>An observation is not the thing observed.</strong> An <code>AttentionEvent</code> is something that happened in the world. An <code>Observation</code> is a record produced by a measurement method that purports to be evidence of it. Automatic content recognition, a panel meter, return path data and a server-side ad log watching the same household in the same hour produce four observations that will disagree about duration, about attribution and sometimes about what was on screen. The ontology holds all four, with their method, their operator and how the content was identified, rather than forcing a single number that erases the disagreement at ingestion. Each method has a specific blind spot worth recording: fingerprint matching recognises only what its reference library contains, so a non-match is evidence of absence from the library rather than absence of viewing, and a programme guide lookup resolves what was scheduled rather than what was transmitted, which makes it systematically wrong precisely during live sport and breaking news.
       </p>
@@ -356,7 +356,7 @@ export const MediaAttentionOntology: React.FC = () => (
       <p className="text-gov-dark leading-relaxed">
         The shapes are not decorative. A probe graph contains exactly one violation of each of the eight rules and a test fails if any rule stops firing, because a SHACL rule that silently stops matching is worse than no rule: the run still passes and the gate still looks green. One rule genuinely did not fire on first run, because <code>rdf:type</code> inside a SPARQL constraint matches only direct types rather than walking the subclass hierarchy the way <code>sh:targetClass</code> does. It is fixed, and a regression test guards it.
       </p>
-      <p className="text-sm text-gov-secondary/90 leading-relaxed">
+      <p className="text-sm text-gov-secondary leading-relaxed">
         The identifier discipline here was first proved on the United States fund universe in our <Link to="/research/investment-fund-ontology" className="text-gov-blue underline hover:text-gov-blue-dark">Investment Fund Ontology</Link>, then on European insurance in the <Link to="/research/insurance-register-ontology" className="text-gov-blue underline hover:text-gov-blue-dark">Insurance Register Ontology</Link>, and then on American academic standards in the <Link to="/research/learning-standards-ontology" className="text-gov-blue underline hover:text-gov-blue-dark">Learning Standards Ontology</Link>. Media is its fourth instantiation, and the transfer without redesign is itself the finding: identifier fabrics fail the same way whatever they name.
       </p>
     </section>
@@ -420,7 +420,7 @@ export const MediaAttentionOntology: React.FC = () => (
           If you run content metadata, cross-screen measurement, identity resolution or an audience knowledge graph, write to <a href="mailto:fabio@thetesseractacademy.com" className="text-gov-blue underline hover:text-gov-blue-dark">fabio@thetesseractacademy.com</a>. Send a sample of the content identifiers you store and we will tell you what proportion resolve, and at which level they were minted, before any commitment.
         </p>
       </div>
-      <p className="text-sm text-gov-secondary/90 leading-relaxed">
+      <p className="text-sm text-gov-secondary leading-relaxed">
         Related work: our <Link to="/research/machine-validated-open-ontologies" className="text-gov-blue underline hover:text-gov-blue-dark">machine-validated ontologies</Link> study measures when an ontology can reject a wrong statement, and the <Link to="/research/industrial-ontology-crosswalks" className="text-gov-blue underline hover:text-gov-blue-dark">industrial ontology crosswalks</Link> measure how often standards crosswalks can detect a wrong mapping at all.
       </p>
     </section>

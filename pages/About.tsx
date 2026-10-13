@@ -15,7 +15,7 @@ const SCHEMAS = [
     },
     hasCredential: [
       { '@type': 'EducationalOccupationalCredential', credentialCategory: 'degree', name: 'PhD Machine Learning, UCL' },
-      { '@type': 'EducationalOccupationalCredential', credentialCategory: 'membership', name: 'Member, Royal Statistical Society' },
+      { '@type': 'EducationalOccupationalCredential', credentialCategory: 'certification', name: 'Chartered Statistician (CStat), Royal Statistical Society' },
     ],
     affiliation: [
       { '@type': 'Organization', name: 'UCL Centre for Blockchain Technologies', roleName: 'Honorary Research Fellow' },
@@ -51,8 +51,8 @@ export const About: React.FC = () => {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SCHEMAS) }} />
       <header className="border-b border-gov-border/30 pb-10">
         <h1 className="text-5xl font-extrabold text-gov-dark mb-6 tracking-tight leading-tight">About Tesseract Academy</h1>
-        <p className="text-xl text-gov-secondary/90 leading-relaxed max-w-4xl">
-          Kampakis and Co Ltd (trading as Tesseract Academy) is a research-backed AI and data science consultancy incorporated in <time dateTime="2016-11">November 2016</time>. We deliver evidence-based AI governance, public sector analytics, and procurement-ready advisory services to UK central government, devolved administrations, and Horizon Europe consortia. We are a supplier on four Crown Commercial Service (CCS) dynamic purchasing systems, and our work is published in peer-reviewed journals cited by UK government policy.
+        <p className="text-xl text-gov-secondary leading-relaxed max-w-4xl">
+          Kampakis and Co Ltd (trading as Tesseract Academy) is a research-backed AI and data science consultancy incorporated in <time dateTime="2016-11">November 2016</time>. We deliver evidence-based AI governance, public sector analytics, and procurement-ready advisory services to UK central government, devolved administrations, and Horizon Europe consortia. We are a supplier on five Crown Commercial Service (CCS) dynamic purchasing systems, and our work is published in peer-reviewed journals cited by UK government policy.
         </p>
       </header>
 
@@ -69,10 +69,10 @@ export const About: React.FC = () => {
       <section className="space-y-6">
         <h2 className="text-3xl font-bold text-gov-dark">Company Credentials</h2>
         <p className="text-gov-dark leading-relaxed text-base max-w-4xl">
-          Kampakis and Co Ltd is a registered UK company (company number 10459791), incorporated on 2 November 2016 and registered for VAT (GB 371 4744 89). We are a supplier on four Crown Commercial Service dynamic purchasing systems, listed below. Public bodies buy through a competition among the suppliers admitted to each system, or by direct award where the value is below the threshold. All credentials below are verifiable through the named public registries.
+          Kampakis and Co Ltd is a registered UK company (company number 10459791), incorporated on 2 November 2016 and registered for VAT (GB 371 4744 89). We are a supplier on five Crown Commercial Service dynamic purchasing systems, listed below. Public bodies buy through a competition among the suppliers admitted to each system, or by direct award where the value is below the threshold. All credentials below are verifiable through the named public registries.
         </p>
 
-        <div className="overflow-x-auto rounded-xl border border-gov-border/50">
+        <div tabIndex={0} role="region" aria-label="Table, scrolls sideways on small screens" className="overflow-x-auto rounded-xl border border-gov-border/50">
           <table className="w-full text-sm text-left">
             <thead className="bg-gov-bg border-b border-gov-border/50">
               <tr>
@@ -110,6 +110,11 @@ export const About: React.FC = () => {
               <tr className="bg-white hover:bg-gov-bg/50 transition-colors">
                 <td className="px-6 py-4 font-medium text-gov-dark">CCS Framework: Space &amp; Geospatial</td>
                 <td className="px-6 py-4 text-gov-dark">RM6235 — Space-Enabled and Geospatial Services Dynamic Purchasing System</td>
+                <td className="px-6 py-4 text-gov-dark">Crown Commercial Service</td>
+              </tr>
+              <tr className="bg-white hover:bg-gov-bg/50 transition-colors">
+                <td className="px-6 py-4 font-medium text-gov-dark">CCS Framework: Emerging Technology</td>
+                <td className="px-6 py-4 text-gov-dark">RM6094 — Spark Dynamic Purchasing System (appointed August 2026)</td>
                 <td className="px-6 py-4 text-gov-dark">Crown Commercial Service</td>
               </tr>
               <tr className="bg-white hover:bg-gov-bg/50 transition-colors">
@@ -167,7 +172,7 @@ export const About: React.FC = () => {
         <p className="text-gov-dark leading-relaxed text-base max-w-4xl">
           Our AI governance practice is evidence-based and aligned with the principal international standards. We apply these frameworks operationally — not as checklists — using our open-source governance tooling to produce audit-ready compliance matrices, automated risk classifications, and bias monitoring reports. All 48 governance tools in our platform are mapped to the frameworks below.
         </p>
-        <div className="overflow-x-auto rounded-xl border border-gov-border/50">
+        <div tabIndex={0} role="region" aria-label="Table, scrolls sideways on small screens" className="overflow-x-auto rounded-xl border border-gov-border/50">
           <table className="w-full text-sm text-left">
             <thead className="bg-white border-b border-gov-border/50">
               <tr>

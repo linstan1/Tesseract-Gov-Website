@@ -15,6 +15,7 @@ The company is an SME/micro enterprise delivering research-backed AI, data scien
 - RM6126: Research and Insights Dynamic Purchasing System
 - RM6219: Learning and Training Services Dynamic Purchasing System
 - RM6235: Space-Enabled and Geospatial Services Dynamic Purchasing System
+- RM6094: Spark Dynamic Purchasing System (Spark DPS), appointed August 2026
 
 **Certifications and compliance:**
 - Cyber Essentials certified
@@ -32,7 +33,7 @@ The company is an SME/micro enterprise delivering research-backed AI, data scien
 ## Team
 
 **Dr Stylianos Kampakis: Managing Director**
-Dr Kampakis holds a PhD in Machine Learning from University College London, and is a member of the Royal Statistical Society. He is an Honorary Research Fellow at UCL Centre for Blockchain Technologies and a Data Science Advisor at London Business School. He has authored more than 40 peer-reviewed journal articles and three books on AI and data science, including works published by Packt and O'Reilly. In 2025 he delivered three official UK Government Business Academy webinars on AI adoption for growing businesses, in partnership with the Department for Business and Trade.
+Dr Kampakis holds a PhD in Machine Learning from University College London and is a Chartered Statistician (CStat) of the Royal Statistical Society. He is an Honorary Research Fellow at UCL Centre for Blockchain Technologies and a Data Science Advisor at London Business School. He has authored more than 40 peer-reviewed journal articles and three books on AI and data science, including works published by Packt and O'Reilly. In 2025 he delivered three official UK Government Business Academy webinars on AI adoption for growing businesses, in partnership with the Department for Business and Trade.
 
 **Fabio Rovai MSc: Deputy Director**
 Fabio Rovai holds an MSc in Data Science and Artificial Intelligence from the University of the Arts London. He served as Associate Lecturer at UAL, teaching more than 1,000 students across five programmes. He is a NeurIPS Ethics Reviewer and is DBS checked (enhanced, children and adults). He leads procurement, delivery, and client management across BridgeAI, National Digital Twin Programme, and Welsh Government contracts.
@@ -53,6 +54,7 @@ Tesseract Academy is a supplier on these CCS dynamic purchasing systems:
 - RM6126 Research and Insights DPS: survey design, public engagement, qualitative research
 - RM6219 Learning and Training Services DPS: off-the-shelf and bespoke training, learning technologies, education services
 - RM6235 Space-Enabled and Geospatial Services DPS: geospatial, remote sensing and PNT, satellite communication, unmanned autonomous vehicles, upstream professional services
+- RM6094 Spark DPS (appointed August 2026): emerging technology, including AI and automation, data and the Internet of Things
 
 A Dynamic Purchasing System (DPS) lets new suppliers join at any time during its life, unlike a framework agreement, whose supplier list is fixed at the start. Every DPS contract is awarded through a competition open to the admitted suppliers in the relevant category: the buyer issues the competition, evaluates the responses and awards.
 

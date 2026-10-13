@@ -37,7 +37,7 @@ export const ShaclShapesNotVocabulary: React.FC = () => {
         <h1 className="text-4xl font-extrabold text-gov-dark mb-6 tracking-tight leading-tight font-serif">
           SHACL validates shapes, not vocabulary
         </h1>
-        <p className="text-xl text-gov-secondary/90 leading-relaxed">
+        <p className="text-xl text-gov-secondary leading-relaxed">
           A companion to <Link to="/research/ontology-correctness-benchmark" className="text-gov-blue underline hover:text-gov-blue-dark">our benchmark</Link>, for the people who build with SHACL. The 100% false-pass rate we measured comes from the open-world semantics of SHACL Core doing exactly what the specification says, and no validator is at fault. Understanding why is the difference between trusting SHACL for something it was never meant to do and putting the right check in the right place.
         </p>
       </header>

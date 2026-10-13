@@ -117,7 +117,7 @@ export const ScholarlyRecordOntology: React.FC = () => (
       <h1 className="text-4xl font-extrabold text-gov-dark mb-6 tracking-tight leading-tight font-serif">
         Science has no Shepard&apos;s: what happens when the registers of retraction disagree
       </h1>
-      <p className="text-xl text-gov-secondary/90 leading-relaxed">
+      <p className="text-xl text-gov-secondary leading-relaxed">
         Legal research has known since 1873 whether an authority still stands. Scientific research does not. We built an open ontology for the integrity status of the scholarly record and measured it against four public registers of retraction. They disagree with each other about 80 per cent of the time, one of them systematically records the announcement of a retraction as retracted research, and the field&apos;s central metadata vocabulary contains two different misspellings of the word retraction. Every number below is computed from public data and regenerable.
       </p>
     </header>
@@ -157,7 +157,7 @@ export const ScholarlyRecordOntology: React.FC = () => (
       <p className="text-gov-dark leading-relaxed">
         So Crossref now publishes two authoritative statements about which papers have been retracted. They are the same organisation&apos;s data. Here is how far they overlap.
       </p>
-      <div className="overflow-x-auto">
+      <div tabIndex={0} role="region" aria-label="Table, scrolls sideways on small screens" className="overflow-x-auto">
         <table className="w-full text-sm border border-gov-border">
           <tbody className="divide-y divide-gov-border">
             <tr><td className="p-3">Asserted retracted by Retraction Watch</td><td className="p-3 text-right font-semibold">60,247</td></tr>
@@ -190,7 +190,7 @@ export const ScholarlyRecordOntology: React.FC = () => (
       <p className="text-gov-dark leading-relaxed">
         It would be unfair to rest that on Retraction Watch&apos;s own notice column, so we added a fourth register that identifies notices independently. Europe PMC carries two distinct MEDLINE publication types: &quot;Retracted Publication&quot; for the withdrawn paper, and &quot;Retraction of Publication&quot; for the notice announcing it. Taking Europe PMC&apos;s 19,803 notice DOIs and asking each register what it says about them:
       </p>
-      <div className="overflow-x-auto">
+      <div tabIndex={0} role="region" aria-label="Table, scrolls sideways on small screens" className="overflow-x-auto">
         <table className="w-full text-sm border border-gov-border">
           <thead className="bg-gov-bg/40"><tr><th className="p-3 text-left">Register</th><th className="p-3 text-right">Notices it treats as retracted research</th></tr></thead>
           <tbody className="divide-y divide-gov-border">
@@ -234,7 +234,7 @@ export const ScholarlyRecordOntology: React.FC = () => (
       <p className="text-gov-dark leading-relaxed">
         The argument here is not about prevalence. 365 records out of 475,593 is 0.077 per cent, and anyone who objects &quot;so what&quot; to that number is right to. The finding is about governance: the schema declares a closed list on a required attribute, and a string reading <code>this_is_some_update_23</code> is in the production index regardless. Validation is not enforced at deposit time on this path.
       </p>
-      <p className="text-sm text-gov-secondary/90 leading-relaxed">
+      <p className="text-sm text-gov-secondary leading-relaxed">
         An earlier version of this page reported 19 distinct values. That figure was wrong and is withdrawn. Our pipeline harvests by querying 13 named update-types, so it could only ever observe values co-occurring on records those queries returned; strings like <code>this_is_some_update_23</code> were unreachable. Crossref&apos;s facets enumerate values more completely than a seeded harvest but undercount volumes badly, and the two need to be used for opposite purposes. The correction is recorded in the repository&apos;s build report rather than quietly applied.
       </p>
       <p className="text-gov-dark leading-relaxed">
@@ -259,7 +259,7 @@ export const ScholarlyRecordOntology: React.FC = () => (
       <p className="text-gov-dark leading-relaxed">
         Of 176,623 citations across 391 works, 43,683 post-date the retraction. That is 29.28 per cent of all dated citations, spread across 42,784 distinct citing works, every one of which would carry a warning in any system built the way Shepard&apos;s is built. The works generating the most severe signals are not marginal.
       </p>
-      <div className="overflow-x-auto">
+      <div tabIndex={0} role="region" aria-label="Table, scrolls sideways on small screens" className="overflow-x-auto">
         <table className="w-full text-sm border border-gov-border">
           <thead className="bg-gov-bg/40"><tr><th className="p-3 text-left">Retracted work</th><th className="p-3 text-left">Retracted</th><th className="p-3 text-right">Citations after</th></tr></thead>
           <tbody className="divide-y divide-gov-border">
@@ -309,7 +309,7 @@ export const ScholarlyRecordOntology: React.FC = () => (
       <p className="text-gov-dark leading-relaxed">
         The Scholarly Record Ontology starts from a different commitment. <strong>Retraction status is not a property of a work. It is a dated claim, made by a named register, retaining that register&apos;s own words.</strong>
       </p>
-      <Mermaid chart={MODEL} />
+      <Mermaid chart={MODEL} ariaLabel="Ontology model: a scholarly work receives integrity assertions from Crossref, OpenAlex and Retraction Watch; disagreements between registers are recorded; citation events dated after an assertion produce severe or caution propagation signals." />
       <p className="text-gov-dark leading-relaxed">
         <strong>Every claim is reified and attributed.</strong> An IntegrityAssertion names exactly one Register, one work, one status and, where available, one date. Two assertions about the same work may carry different statuses without contradiction at the data layer, because each is attributed to its own source. An unattributed integrity claim is not usable evidence, and the SHACL layer enforces that.
       </p>
@@ -325,7 +325,7 @@ export const ScholarlyRecordOntology: React.FC = () => (
       <p className="text-gov-dark leading-relaxed">
         <strong>Signals propagate, and carry provenance.</strong> A PropagationSignal grades a citing work by the status of what it cites and by whether the citation post-dates the assertion, and must name the assertion it derives from. A signal that cannot be traced to a named assertion must not be shown to a reader.
       </p>
-      <p className="text-sm text-gov-secondary/90 leading-relaxed">
+      <p className="text-sm text-gov-secondary leading-relaxed">
         The same discipline was proved first on the United States fund universe in our <Link to="/research/investment-fund-ontology" className="text-gov-blue underline hover:text-gov-blue-dark">Investment Fund Ontology</Link> and then on European insurers in the <Link to="/research/insurance-register-ontology" className="text-gov-blue underline hover:text-gov-blue-dark">Insurance Register Ontology</Link>. The scholarly record is its third instantiation, which is itself the finding: reified, source-attributed identifier and status assertions transfer across entirely unrelated register fabrics without redesign.
       </p>
     </section>

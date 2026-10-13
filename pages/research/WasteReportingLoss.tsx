@@ -88,7 +88,7 @@ export const WasteReportingLoss: React.FC = () => (
       <h1 className="text-4xl font-extrabold text-gov-dark mb-6 tracking-tight leading-tight font-serif">
         Half the detail dies on the way to the return
       </h1>
-      <p className="text-xl text-gov-secondary/90 leading-relaxed">
+      <p className="text-xl text-gov-secondary leading-relaxed">
         AI waste analytics now classify material at the belt in over a hundred categories, and the industry sells that granularity as regulatory reporting. Every UK channel that consumes composition data accepts between 7 and 47 values. We built the crosswalk, measured the loss, and found that the mapping cannot be a function in either direction.
       </p>
     </header>
@@ -133,7 +133,7 @@ export const WasteReportingLoss: React.FC = () => (
       <p className="text-gov-dark leading-relaxed">
         We measure retained detail as the mutual information between the perception class and the value the channel records, as a share of perception-class entropy. A channel that preserved every distinction would score 100%.
       </p>
-      <div className="overflow-x-auto border border-gov-border rounded-xl">
+      <div tabIndex={0} role="region" aria-label="Table, scrolls sideways on small screens" className="overflow-x-auto border border-gov-border rounded-xl">
         <table className="w-full text-sm border-collapse">
           <thead>
             <tr className="bg-gov-bg border-b border-gov-border">
@@ -174,7 +174,7 @@ export const WasteReportingLoss: React.FC = () => (
           { label: 'Simpler Recycling', value: 38.4, display: '38.4%', color: CHART.amber },
         ]}
       />
-      <p className="text-sm text-gov-secondary/90 leading-relaxed">
+      <p className="text-sm text-gov-secondary leading-relaxed">
         Read the EWC row carefully. The catalogue offers 47 six-digit codes for municipal and packaging waste and the crosswalk reaches only 13 of them. Granularity that exists in a standard but is never addressed benefits nobody. These figures are also an upper bound, because a class whose value is undetermined is credited with its whole candidate set.
       </p>
     </section>
@@ -195,7 +195,7 @@ export const WasteReportingLoss: React.FC = () => (
           Standard ontology-matching evaluation scores an alignment on precision and recall against a roughly one-to-one reference alignment. None of these three phenomena is expressible that way, which is why the loss has gone unmeasured.
         </p>
       </div>
-      <Mermaid chart={FLOW_CHART} />
+      <Mermaid chart={FLOW_CHART} ariaLabel="Belt classification of 60 to 111 material classes passes through a crosswalk that is not a function into EWC (13 of 47 codes reached), pEPR (8 categories plus 2 subcategories), RAM 2027 (10 groups) and Simpler Recycling (7 concepts), with up to 23 classes collapsing into one value, 7 classes fixing no value and 19 to 22 classes unrecordable." />
     </section>
 
     <section className="space-y-4">
@@ -203,7 +203,7 @@ export const WasteReportingLoss: React.FC = () => (
       <p className="text-gov-dark leading-relaxed">
         Retained bits are abstract, so we also asked ten concrete questions an operator, a reprocessor or a regulator would want answered. Each needs two groups of belt classes to stay distinguishable. <strong>Collapsed</strong> means the channel gives them the same value. <strong>Undetermined</strong> means a class does not fix its own value, so the distinction survives only if whoever completes the return guesses consistently. <strong>Partial</strong> means one group is not recorded at all.
       </p>
-      <div className="overflow-x-auto border border-gov-border rounded-xl">
+      <div tabIndex={0} role="region" aria-label="Table, scrolls sideways on small screens" className="overflow-x-auto border border-gov-border rounded-xl">
         <table className="w-full text-sm border-collapse">
           <thead>
             <tr className="bg-gov-bg border-b border-gov-border">
@@ -251,7 +251,7 @@ export const WasteReportingLoss: React.FC = () => (
           Put a composition through the pEPR categories and the aluminium line spans a factor of three. Aluminium carries its own base fee.
         </p>
       </div>
-      <div className="overflow-x-auto border border-gov-border rounded-xl">
+      <div tabIndex={0} role="region" aria-label="Table, scrolls sideways on small screens" className="overflow-x-auto border border-gov-border rounded-xl">
         <table className="w-full text-sm border-collapse">
           <thead>
             <tr className="bg-gov-bg border-b border-gov-border">
@@ -271,7 +271,7 @@ export const WasteReportingLoss: React.FC = () => (
           </tbody>
         </table>
       </div>
-      <p className="text-sm text-gov-secondary/90 leading-relaxed">
+      <p className="text-sm text-gov-secondary leading-relaxed">
         On the same composition, <strong>39.3%</strong> of the material cannot be represented in pEPR at all and <strong>45.6%</strong> cannot be represented in RAM 2027. The engine reports that mass separately rather than absorbing it into &quot;other&quot;, which is what makes a return look complete when it is not. Every line carries the mapping rows responsible, with their justification and confidence, so any figure can be audited back to the regulator&apos;s own text. The demonstration composition is built from annotation counts in open litter photography, which are item counts and not belt tonnages, and it is labelled as such throughout.
       </p>
     </section>
@@ -317,10 +317,10 @@ export const WasteReportingLoss: React.FC = () => (
           waste-vocab-crosswalk on GitHub <ExternalLink className="w-4 h-4" />
         </a>
       </div>
-      <p className="text-sm text-gov-secondary/90 leading-relaxed">
+      <p className="text-sm text-gov-secondary leading-relaxed">
         Source vocabulary: TACO, 60 annotated classes and 4,784 annotations, MIT licensed. Targets under Open Government Licence v3.0; the List of Waste ontology under CC BY 4.0. A note on data we deliberately did not use: the Environment Agency&apos;s Waste Data Interrogator would be the natural tonnage weighting, and it is unusable for a published artefact because it carries the Environment Agency Conditional Licence, which permits internal or personal use only, for one year, without sublicensing. Mass weighting needs an Open Government Licence source instead.
       </p>
-      <p className="text-sm text-gov-secondary/90 leading-relaxed">
+      <p className="text-sm text-gov-secondary leading-relaxed">
         Related work: we are working with WRAP on a <Link to="/research/wrap-food-loss-waste-taxonomy" className="text-gov-blue underline hover:text-gov-blue-dark">food loss and waste data taxonomy</Link> for the Food Programme and global Food Pact Network; the <Link to="/research/industrial-ontology-crosswalks" className="text-gov-blue underline hover:text-gov-blue-dark">industrial</Link> and <Link to="/research/construction-standards-crosswalks" className="text-gov-blue underline hover:text-gov-blue-dark">construction</Link> crosswalks apply falsifiability measurement to other standards families.
       </p>
     </section>

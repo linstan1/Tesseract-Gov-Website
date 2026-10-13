@@ -53,7 +53,7 @@ export const ConnectiveProductCyberIncidents: React.FC = () => {
         <h1 className="text-4xl font-extrabold text-gov-dark mb-6 tracking-tight leading-tight font-serif">
           Cyber Incidents affecting Connective Products: an open evidence base
         </h1>
-        <p className="text-xl text-gov-secondary/90 leading-relaxed">
+        <p className="text-xl text-gov-secondary leading-relaxed">
           Connective products (IoT, operational technology, computing devices, networking equipment, and software and firmware) now dominate the attack surface, yet the incident evidence is fragmented across vendors, agencies and insurers. This is Tesseract&apos;s self-initiated, open, machine-readable evidence base, built on real public sources, with the gaps named honestly.
         </p>
       </header>
@@ -193,7 +193,7 @@ export const ConnectiveProductCyberIncidents: React.FC = () => {
           <h2 className="text-2xl font-bold text-gov-dark font-serif mb-3">How we grade the evidence</h2>
           <p className="text-gov-dark leading-relaxed">
             The source-quality rubric operationalises the six dimensions of the UK{' '}
-            <a href="https://www.gov.uk/government/publications/the-government-data-quality-framework/the-government-data-quality-framework" target="_blank" rel="noopener noreferrer" className="text-gov-blue hover:underline">Government Data Quality Framework</a>
+            <a href="https://www.gov.uk/government/publications/the-government-data-quality-framework/the-government-data-quality-framework" target="_blank" rel="noopener noreferrer" className="text-gov-blue underline underline-offset-2 hover:text-gov-blue-dark">Government Data Quality Framework</a>
             {' '}(completeness, uniqueness, validity, accuracy, consistency, timeliness) into a tiered evidence hierarchy: peer-reviewed, official NCSC/CISA/ENISA, vendor threat report, grey literature, and news. Each incident record is graded against that hierarchy so a reader can see, for every figure, how strong the underlying source is and how much weight it can carry.
           </p>
         </div>
@@ -226,17 +226,17 @@ export const ConnectiveProductCyberIncidents: React.FC = () => {
           {REFERENCES.map((r, i) => (
             <li key={i}>
               {r.t}{' '}
-              <a href={r.u} target="_blank" rel="noopener noreferrer" className="text-gov-blue hover:underline">Link<span className="sr-only"> (opens in new tab)</span></a>
+              <a href={r.u} target="_blank" rel="noopener noreferrer" className="text-gov-blue underline underline-offset-2 hover:text-gov-blue-dark">Link<span className="sr-only"> (opens in new tab)</span></a>
             </li>
           ))}
         </ol>
-        <p className="text-xs text-gov-secondary/80">Method note: figures are drawn from the primary sources above; every incident record in the dataset carries its own source and confidence grade. We publish the working, not just the conclusion.</p>
+        <p className="text-xs text-gov-secondary">Method note: figures are drawn from the primary sources above; every incident record in the dataset carries its own source and confidence grade. We publish the working, not just the conclusion.</p>
       </section>
 
       <div className="bg-gov-bg border border-gov-border/50 rounded-xl p-8 flex flex-col sm:flex-row gap-4 sm:items-center sm:justify-between">
         <div>
           <p className="font-semibold text-gov-dark">The evidence base is open</p>
-          <p className="text-sm text-gov-secondary mt-1">Dataset, SKOS taxonomy and grading rubric on GitHub under CC-BY-4.0. Contributions and corrections are welcome: contact <a href="mailto:fabio@thetesseractacademy.com" className="text-gov-blue hover:underline">fabio@thetesseractacademy.com</a>.</p>
+          <p className="text-sm text-gov-secondary mt-1">Dataset, SKOS taxonomy and grading rubric on GitHub under CC-BY-4.0. Contributions and corrections are welcome: contact <a href="mailto:fabio@thetesseractacademy.com" className="text-gov-blue underline underline-offset-2 hover:text-gov-blue-dark">fabio@thetesseractacademy.com</a>.</p>
         </div>
         <div className="flex flex-col sm:flex-row gap-3">
           <a href={REPO} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-5 py-2.5 bg-gov-blue text-white text-sm font-semibold rounded-lg hover:bg-gov-blue-dark transition-colors whitespace-nowrap">

@@ -28,7 +28,7 @@ export const Industries: React.FC = () => {
         <h1 className="text-5xl font-extrabold text-gov-dark mb-6 tracking-tight leading-tight">
           The sectors we work in
         </h1>
-        <p className="text-xl text-gov-secondary/90 leading-relaxed max-w-4xl">
+        <p className="text-xl text-gov-secondary leading-relaxed max-w-4xl">
           Each sector below carries the engagements we have delivered in it and the open research that
           sits underneath. The research is published in full, with the data and the queries, so you can
           check the method before you commission anything.

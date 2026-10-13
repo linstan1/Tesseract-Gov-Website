@@ -42,7 +42,7 @@ export const ProofCarryingGatekeeper: React.FC = () => {
         <h1 className="text-4xl font-extrabold text-gov-dark mb-6 tracking-tight leading-tight font-serif">
           The gate you can trust
         </h1>
-        <p className="text-xl text-gov-secondary/90 leading-relaxed">
+        <p className="text-xl text-gov-secondary leading-relaxed">
           The idea behind a safeguarded AI is a gatekeeper: an agent may act only if it can present a certificate that its action is safe, and a small trusted component checks that certificate before anything happens. The appeal is obvious. The hard part is building a runtime where the check is small enough to actually trust and fast enough to run on every action. This is a working reference gatekeeper for a multi-agent system, and because the system is bounded we do not sample its safety, we verify all of it.
         </p>
       </header>
@@ -81,7 +81,7 @@ export const ProofCarryingGatekeeper: React.FC = () => {
             The scenario is a small warehouse: two robots on a 3x3 grid, a shared battery budget, and one irreversible hazard cell. The safety specification is three invariants that must hold in every state, the robots never share a cell, neither enters the hazard, and the battery never goes negative. A proposer, which may be untrusted or an ML policy, emits a joint action and a certificate: the state it claims results and its claim that the result is safe. The gatekeeper, the only trusted component, recomputes the successor and checks it matches the certificate (so the proposer cannot lie about the outcome), then checks that successor against the three invariants. It dispatches only if both pass. Generating a safe action may need search; checking one is a handful of comparisons. That asymmetry is the whole design: an arbitrarily capable, untrusted proposer behind a tiny, trustworthy gate.
           </p>
         </div>
-        <div className="overflow-x-auto">
+        <div tabIndex={0} role="region" aria-label="Table, scrolls sideways on small screens" className="overflow-x-auto">
           <table className="w-full text-sm border-collapse">
             <thead>
               <tr className="bg-gov-bg border-b border-gov-border">
@@ -129,7 +129,7 @@ export const ProofCarryingGatekeeper: React.FC = () => {
             <strong>Commons Harvest</strong> (<a href="https://github.com/google-deepmind/meltingpot" target="_blank" rel="noopener noreferrer" className="text-gov-blue underline hover:text-gov-blue-dark">Melting Pot</a>), a faithful reimplementation of the substrate's dynamics: apples regrow only while an apple remains nearby, so eating the last apple in a patch kills it forever, the tragedy of the commons. The safety spec is sustainability, never harvest so as to empty a patch. The gate is verified exhaustively on a bounded instance (<strong>447 of 447</strong> patch-killing harvests blocked, <strong>1,857 of 1,857</strong> safe harvests admitted), and a dynamic episode with four greedy agents shows what it buys:
           </p>
         </div>
-        <div className="overflow-x-auto">
+        <div tabIndex={0} role="region" aria-label="Table, scrolls sideways on small screens" className="overflow-x-auto">
           <table className="w-full text-sm border-collapse">
             <thead>
               <tr className="bg-gov-bg border-b border-gov-border">
@@ -172,7 +172,7 @@ export const ProofCarryingGatekeeper: React.FC = () => {
           <cite className="text-sm text-gov-secondary font-semibold not-italic mt-2 block">Fabio Rovai, Tesseract Academy</cite>
         </blockquote>
 
-        <p className="text-sm text-gov-secondary/90 leading-relaxed">
+        <p className="text-sm text-gov-secondary leading-relaxed">
           An independent, self-initiated study. Every guarantee is exhaustive over a bounded model; scaling to large systems needs symbolic model checking, where the same small checker stays small. This repo verifies the systems exhaustively but does not ship a machine-checked proof of the checker itself, that is the role of the Tardygrada formally-verified runtime, whose C core is the production vehicle for this gate. The Island Navigation map and safety definition are taken verbatim from the official AI Safety Gridworlds repository (its live engine also loads and steps here); Commons Harvest is a faithful reimplementation of the Melting Pot substrate, since that engine's dmlab2d backend does not build in this environment. Full method and reproducible code in the repository.
         </p>
       </section>

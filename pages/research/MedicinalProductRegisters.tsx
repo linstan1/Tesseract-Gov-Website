@@ -110,7 +110,7 @@ export const MedicinalProductRegisters: React.FC = () => (
         Medicinal product registers, measured for joinability
       </h1>
       <p className="text-sm text-gov-secondary">28 August 2026</p>
-      <p className="text-xl text-gov-secondary/90 leading-relaxed">
+      <p className="text-xl text-gov-secondary leading-relaxed">
         ISO IDMP exists so that a medicine, its substance and its holder can be identified the same way
         everywhere. The pharmaceutical industry is spending heavily to comply, and regulators run master data
         services built for the purpose. On 28 August 2026 we measured what the public can actually join today,
@@ -188,7 +188,7 @@ export const MedicinalProductRegisters: React.FC = () => (
         There is no LEI, no SPOR organisation identifier, no company number. For the 392 distinct holder names on
         authorised human medicines, the GLEIF join resolves 102 and fails 290.
       </p>
-      <div className="overflow-x-auto">
+      <div tabIndex={0} role="region" aria-label="Table, scrolls sideways on small screens" className="overflow-x-auto">
         <table className="w-full text-sm border border-gov-border">
           <thead className="bg-gov-bg/60">
             <tr>
@@ -320,7 +320,7 @@ export const MedicinalProductRegisters: React.FC = () => (
       </p>
       <p className="text-gov-dark leading-relaxed">
         Everything is public: the repository at{' '}
-        <a href={REPO} className="text-gov-blue hover:underline">github.com/fabio-rovai/medicinal-product-register-ontology</a>{' '}
+        <a href={REPO} className="text-gov-blue underline underline-offset-2 hover:text-gov-blue-dark">github.com/fabio-rovai/medicinal-product-register-ontology</a>{' '}
         holds the pipeline, ontology, shapes, queries, tests and a build report that includes the errors we made,
         one of which became the mechanism finding. The method transfers to any register pair and has run on UK
         health data linkage, EU health dataset catalogues, fund registers, bank registers and the scholarly
@@ -329,7 +329,7 @@ export const MedicinalProductRegisters: React.FC = () => (
       <p className="text-gov-dark leading-relaxed">
         If your organisation maintains regulatory master data against SPOR, IDMP or an internal RIM and wants
         its holder, substance and code columns to survive these shapes, write to{' '}
-        <a href="mailto:fabio@thetesseractacademy.com" className="text-gov-blue hover:underline">fabio@thetesseractacademy.com</a>.
+        <a href="mailto:fabio@thetesseractacademy.com" className="text-gov-blue underline underline-offset-2 hover:text-gov-blue-dark">fabio@thetesseractacademy.com</a>.
         The first engagement is a fixed-scope review of your dictionaries against external standards, with a
         findings table your data governance board can act on.
       </p>

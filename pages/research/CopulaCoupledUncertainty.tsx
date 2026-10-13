@@ -50,7 +50,7 @@ export const CopulaCoupledUncertainty: React.FC = () => {
         <h1 className="text-4xl font-extrabold text-gov-dark mb-6 tracking-tight leading-tight font-serif">
           Marginal coverage is not joint coverage
         </h1>
-        <p className="text-xl text-gov-secondary/90 leading-relaxed">
+        <p className="text-xl text-gov-secondary leading-relaxed">
           A scientific model rarely predicts one number. It predicts a vector, a material's formation energy, band gap and stability, a protein's per-residue confidences, and those outputs are correlated. Calibrate the uncertainty one output at a time, as conformal prediction usually does, and you get a per-target guarantee that looks right and a joint guarantee that is quietly wrong. Measured on real materials data, a "90%" independent certificate delivers 79% joint coverage. Here is why, and what fixes it.
         </p>
       </header>
@@ -89,7 +89,7 @@ export const CopulaCoupledUncertainty: React.FC = () => {
             We took 1,600 real materials from the <a href="https://oqmd.org/" target="_blank" rel="noopener noreferrer" className="text-gov-blue underline hover:text-gov-blue-dark">Open Quantum Materials Database</a>, three DFT targets, and a gradient-boosted regressor trained once and frozen. Every certificate below is calibrated to a nominal 90% joint coverage on a held-out split, and measured on a test split. The residuals are genuinely correlated (formation energy and stability +0.50), which is exactly why the joint problem is not the marginal problem.
           </p>
         </div>
-        <div className="overflow-x-auto">
+        <div tabIndex={0} role="region" aria-label="Table, scrolls sideways on small screens" className="overflow-x-auto">
           <table className="w-full text-sm border-collapse">
             <thead>
               <tr className="bg-gov-bg border-b border-gov-border">
@@ -141,7 +141,7 @@ export const CopulaCoupledUncertainty: React.FC = () => {
           <cite className="text-sm text-gov-secondary font-semibold not-italic mt-2 block">Fabio Rovai, Tesseract Academy</cite>
         </blockquote>
 
-        <p className="text-sm text-gov-secondary/90 leading-relaxed">
+        <p className="text-sm text-gov-secondary leading-relaxed">
           An independent, self-initiated study on open data and open tools: OQMD's DFT properties under their open licence. The frozen model is a gradient-boosted regressor standing in for a large scientific model; the conformal guarantees are distribution-free, so the coverage result transfers, and running the wrapper on ESM-2 or a Materials Project foundation model is the honest scale-up. The copula is Gaussian, a first tractable dependence model; the region-size comparison is stated precisely in the build report. This is a coverage phenomenon on real data, not a new theorem.
         </p>
       </section>

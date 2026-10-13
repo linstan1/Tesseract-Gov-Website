@@ -58,7 +58,7 @@ export const EvaluationAtlas: React.FC = () => {
         <h1 className="text-4xl font-extrabold text-gov-dark mb-6 tracking-tight leading-tight font-serif">
           What government evaluates, and how openly it says so
         </h1>
-        <p className="text-xl text-gov-secondary/90 leading-relaxed">
+        <p className="text-xl text-gov-secondary leading-relaxed">
           Government publishes a great deal of evaluation, and asks suppliers to build on it. But the published record has never been mapped as a whole: what kinds of evaluation dominate, who commissions them, and how clearly they state their own methods. This is a first pass at that map, built from open data, and one number in it is uncomfortable.
         </p>
       </header>
@@ -125,7 +125,7 @@ export const EvaluationAtlas: React.FC = () => {
           <p className="text-gov-dark leading-relaxed">
             The atlas is the corpus companion to our <Link to="/research/victim-witness-evaluation" className="text-gov-blue underline hover:text-gov-blue-dark">machine-checkable Theory-of-Change method</Link>: one measures how the evaluation estate presents itself, the other shows how a single evaluation's logic can be made auditable. Extended, it supports evidence-gap mapping by policy area and a method-transparency indicator per department, the raw material for a searchable evaluation evidence base.
           </p>
-          <p className="text-sm text-gov-secondary/90 leading-relaxed mt-4">
+          <p className="text-sm text-gov-secondary leading-relaxed mt-4">
             Independent, self-initiated open research. Contains public sector information licensed under the Open Government Licence v3.0. Classification is automated and metadata-based; it describes how publications present themselves, not an audit of their contents.
           </p>
         </div>

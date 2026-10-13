@@ -152,7 +152,7 @@ export const VerifyingExtractionPipelineRdf: React.FC = () => (
       <h1 className="text-4xl font-extrabold text-gov-dark mb-6 tracking-tight leading-tight font-serif">
         Checking the knowledge graph your pipeline just built
       </h1>
-      <p className="text-xl text-gov-secondary/90 leading-relaxed">
+      <p className="text-xl text-gov-secondary leading-relaxed">
         A pipeline that turns documents into RDF is making a claim in a formal language, and it has no way to check its own claim. We ran that check against{' '}
         <a href={SUBJECT} target="_blank" rel="noopener noreferrer" className="text-gov-blue hover:text-gov-blue-dark underline">Semantica</a>, an MIT-licensed Python pipeline with about 9,300 stars, at versions 0.6.5 and 0.6.6, by reading every output back through two independent RDF engines and comparing what each one saw. Seventeen defects came out of it. All seventeen are now fixed and closed upstream: twelve by pull requests from this work and five by other contributors. The failures share a shape worth knowing about before you buy one of these systems: the export succeeds, a lenient reader accepts it, and the graph is wrong or largely absent anyway.
       </p>
@@ -185,7 +185,7 @@ export const VerifyingExtractionPipelineRdf: React.FC = () => (
       <p className="text-gov-dark leading-relaxed">
         At the versions examined, the pipeline’s graph builder defaulted an entity’s identifier to its surface text and its type to whatever label the extractor produced, and nothing validated either before writing it between angle brackets. On the documented path, that produced Turtle like this:
       </p>
-      <pre className="bg-gov-dark text-gray-100 rounded-lg p-4 overflow-x-auto text-sm"><code>{`<Acme Corp> a <ORG> ;
+      <pre tabIndex={0} role="region" aria-label="Code sample" className="bg-gov-dark text-gray-100 rounded-lg p-4 overflow-x-auto text-sm"><code>{`<Acme Corp> a <ORG> ;
     semantica:text "Acme Corp" ;
     semantica:confidence 0.91 .`}</code></pre>
       <p className="text-gov-dark leading-relaxed">
@@ -254,7 +254,7 @@ export const VerifyingExtractionPipelineRdf: React.FC = () => (
       <p className="text-gov-dark leading-relaxed">
         Now run an audit query with a proper bound:
       </p>
-      <pre className="bg-gov-dark text-gray-100 rounded-lg p-4 overflow-x-auto text-sm"><code>{`FILTER(?t < "2026-08-19T00:00:00Z"^^xsd:dateTime)`}</code></pre>
+      <pre tabIndex={0} role="region" aria-label="Code sample" className="bg-gov-dark text-gray-100 rounded-lg p-4 overflow-x-auto text-sm"><code>{`FILTER(?t < "2026-08-19T00:00:00Z"^^xsd:dateTime)`}</code></pre>
       <p className="text-gov-dark leading-relaxed">
         XSD 1.1 makes the comparison between an offset-bearing value and an offset-free one indeterminate, because the offset-free value could fall on either side of the bound by up to fourteen hours. SPARQL raises that as an error, and an error in a filter is not a false. Oxigraph drops the row. The query returns, the shape of the result looks reasonable, and the records it was asked about are the ones missing from it.
       </p>
@@ -265,7 +265,7 @@ export const VerifyingExtractionPipelineRdf: React.FC = () => (
 
     <section className="space-y-4">
       <h2 className="text-2xl font-bold text-gov-dark font-serif">What was measured</h2>
-      <div className="overflow-x-auto">
+      <div tabIndex={0} role="region" aria-label="Table, scrolls sideways on small screens" className="overflow-x-auto">
         <table className="min-w-full text-sm border border-gov-border rounded-lg overflow-hidden">
           <thead className="bg-gov-bg/60">
             <tr>

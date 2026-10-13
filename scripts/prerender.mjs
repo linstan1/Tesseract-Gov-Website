@@ -22,7 +22,7 @@ const PAGE_META = {
   },
   '/industries/government-public-services': {
     title: 'Government and Public Services | Tesseract Academy for the Public Sector',
-    description: 'Delivered for the Welsh Government, the National Digital Twin Programme, Qualifications Wales and Imperial War Museums. Supplier on four Crown Commercial Service dynamic purchasing systems. Open research on public registers, consultations and government evaluation.',
+    description: 'Delivered for the Welsh Government, the National Digital Twin Programme, Qualifications Wales and Imperial War Museums. Supplier on five Crown Commercial Service dynamic purchasing systems. Open research on public registers, consultations and government evaluation.',
   },
   '/industries/financial-services-insurance': {
     title: 'Financial Services and Insurance | Tesseract Academy for the Public Sector',
@@ -50,11 +50,11 @@ const PAGE_META = {
   },
   '/': {
     title: 'Tesseract Academy for the Public Sector - Research, AI & Public Sector Delivery Partner',
-    description: 'Tesseract Academy delivers research-backed AI, data science, public engagement, survey design, and policy advisory services for UK and EU public sector organisations. Crown Commercial Service supplier on RM6200, RM6126, RM6219 and RM6235.',
+    description: 'Tesseract Academy delivers research-backed AI, data science, public engagement, survey design, and policy advisory services for UK and EU public sector organisations. Crown Commercial Service supplier on RM6200, RM6126, RM6219, RM6235 and RM6094 (Spark DPS).',
   },
   '/how-to-buy': {
     title: 'How to Buy - Procurement Routes | Tesseract Academy for the Public Sector',
-    description: 'Commission Tesseract Academy through Crown Commercial Service dynamic purchasing systems RM6200 (AI DPS), RM6126 (Research & Insights DPS), RM6219 (Learning & Training Services DPS) or RM6235 (Space-Enabled & Geospatial Services DPS), or by direct award below the threshold.',
+    description: 'Commission Tesseract Academy through Crown Commercial Service dynamic purchasing systems RM6200 (AI DPS), RM6126 (Research & Insights DPS), RM6219 (Learning & Training Services DPS), RM6235 (Space-Enabled & Geospatial Services DPS) or RM6094 (Spark DPS), or by direct award below the threshold.',
   },
   '/capabilities': {
     title: 'Capabilities: ontology engineering, AI, research, education and survey services | Tesseract Academy for the Public Sector',
@@ -86,7 +86,7 @@ const PAGE_META = {
   },
   '/about': {
     title: 'About Tesseract Academy - Company Credentials | Tesseract Academy for the Public Sector',
-    description: 'Dr Stylianos Kampakis (PhD UCL) and Fabio Rovai MSc. Kampakis and Co Ltd, incorporated 2016. CCS supplier on RM6200, RM6126, RM6219 and RM6235. Cyber Essentials certified. DV-cleared consultant available.',
+    description: 'Dr Stylianos Kampakis (PhD UCL, CStat) and Fabio Rovai MSc. Kampakis and Co Ltd, incorporated 2016. CCS supplier on RM6200, RM6126, RM6219, RM6235 and RM6094 (Spark DPS). Cyber Essentials certified. DV-cleared consultant available.',
   },
   '/research/open-source': {
     title: 'Open source contributions: the data standards we file bugs against | Tesseract Academy for the Public Sector',

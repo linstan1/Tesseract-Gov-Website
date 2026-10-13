@@ -85,7 +85,7 @@ export const DkanPortalCensus: React.FC = () => (
       <h1 className="text-4xl font-extrabold text-gov-dark mb-6 tracking-tight leading-tight font-serif">
         We probed every .gov domain for DKAN and found three portals, all publishing the same wrong identity
       </h1>
-      <p className="text-xl text-gov-secondary/90 leading-relaxed">
+      <p className="text-xl text-gov-secondary leading-relaxed">
         DKAN is the Drupal open data portal, maintained in the open under GPL-2.0 and used by serious federal
         publishers. We wanted a narrow, answerable question about it: which of the defects visible in a DKAN
         catalogue come from the platform&apos;s shipped defaults, rather than from anything the publisher did? That
@@ -151,7 +151,7 @@ export const DkanPortalCensus: React.FC = () => (
       <p className="text-gov-dark leading-relaxed">
         Every one of the three portals publishes this as the catalogue&apos;s own identity:
       </p>
-      <pre className="bg-gov-dark text-gray-100 rounded-lg p-4 overflow-x-auto text-sm"><code>{`$ curl -s https://data.medicaid.gov/data.json | jq -r '."@id"'
+      <pre tabIndex={0} role="region" aria-label="Code sample" className="bg-gov-dark text-gray-100 rounded-lg p-4 overflow-x-auto text-sm"><code>{`$ curl -s https://data.medicaid.gov/data.json | jq -r '."@id"'
 http://dkan/data.json`}</code></pre>
       <p className="text-gov-dark leading-relaxed">
         This is not three publishers making the same mistake. It is line 3 of
@@ -234,7 +234,7 @@ http://dkan/data.json`}</code></pre>
       </a>
       <p className="text-gov-dark leading-relaxed">
         If you operate a DKAN portal, or any DCAT-US catalogue, we will send you the rows that name your
-        deployment and the queries that produced them, at no charge. Write to <a className="text-gov-blue hover:underline" href="mailto:fabio@thetesseractacademy.com">fabio@thetesseractacademy.com</a>.
+        deployment and the queries that produced them, at no charge. Write to <a className="text-gov-blue underline underline-offset-2 hover:text-gov-blue-dark" href="mailto:fabio@thetesseractacademy.com">fabio@thetesseractacademy.com</a>.
       </p>
     </section>
   </article>

@@ -243,7 +243,7 @@ export const RegisterAssurance: React.FC = () => (
       <h1 className="text-4xl font-extrabold text-gov-dark mb-6 tracking-tight leading-tight font-serif">
         Register assurance: why every public register fails at its boundary
       </h1>
-      <p className="text-xl text-gov-secondary/90 leading-relaxed">
+      <p className="text-xl text-gov-secondary leading-relaxed">
         Public registers are the reference layer of the modern economy: who is a bank, who may write insurance, which paper stands retracted, which standard a curriculum aligns to, which guidance is current. The operators of the best registers now assure their own records seriously, and GLEIF is the standing proof that it can be done. But assurance stops at the register boundary. Nothing checks conformance when one register embeds another register&apos;s identifiers, nothing verifies that the embedded identifiers still resolve, and nothing reconciles what two registers claim about the same entity. We measured that boundary with one open method across six domains, and it fails in the same four ways every time. This page names the discipline, states the four defect classes, presents the evidence, and announces the instrument.
       </p>
     </header>
@@ -283,7 +283,7 @@ export const RegisterAssurance: React.FC = () => (
           <div key={d.name} className="border-l-2 border-l-gov-blue pl-6">
             <h3 className="font-semibold text-gov-dark mb-1">{d.name}</h3>
             <p className="text-gov-dark leading-relaxed">{d.def}</p>
-            <p className="text-sm text-gov-secondary/90 leading-relaxed mt-1"><strong>Measured instances:</strong> {d.ev}</p>
+            <p className="text-sm text-gov-secondary leading-relaxed mt-1"><strong>Measured instances:</strong> {d.ev}</p>
           </div>
         ))}
       </div>
@@ -349,7 +349,7 @@ export const RegisterAssurance: React.FC = () => (
       <p className="text-gov-dark leading-relaxed">
         The seven ontologies are one program, not seven projects. They share a design stance: identifiers are reified assertions rather than string attributes, scope is declared as data, lifecycles are nodes, disagreement is recorded rather than adjudicated, and arithmetic is computed in code while policy is enforced in shapes. Five publish their terms under the <code className="text-sm bg-gov-bg px-1.5 py-0.5 rounded">https://gov.tesseract.academy/def/</code> namespace root, and two publish under sibling Tesseract Academy hosts as recorded in their repositories. Each namespace below is taken from the repository&apos;s own Turtle source, not from documentation.
       </p>
-      <div className="overflow-x-auto rounded-lg border border-gov-border">
+      <div tabIndex={0} role="region" aria-label="Table, scrolls sideways on small screens" className="overflow-x-auto rounded-lg border border-gov-border">
         <table className="min-w-full text-sm">
           <thead>
             <tr className="bg-gov-bg text-left">
@@ -379,7 +379,7 @@ export const RegisterAssurance: React.FC = () => (
           </tbody>
         </table>
       </div>
-      <p className="text-sm text-gov-secondary/90 leading-relaxed">
+      <p className="text-sm text-gov-secondary leading-relaxed">
         All seven are open: ontologies and shapes under CC BY 4.0, code under MIT or equivalent, every headline reproducible from public data via the pipelines in each repository.
       </p>
     </section>
@@ -406,7 +406,7 @@ export const RegisterAssurance: React.FC = () => (
           If you run entity data, reference data, or a corpus that embeds identifiers from registers you do not control, a typical first engagement is bounded and diagnostic: we build the identifier fabric over your data as it is, run the four defect classes against it, and return a graded findings report with the queries attached so your team can re-run it. That report is useful whether or not the work continues. Write to <a href="mailto:fabio@thetesseractacademy.com" className="text-gov-blue underline hover:text-gov-blue-dark">fabio@thetesseractacademy.com</a> with a description of the registers your systems depend on, and we will tell you which of the four defect classes we would expect to find, before any commitment.
         </p>
       </div>
-      <p className="text-sm text-gov-secondary/90 leading-relaxed">
+      <p className="text-sm text-gov-secondary leading-relaxed">
         Related work: the methodological foundations are in our <Link to="/research/machine-validated-open-ontologies" className="text-gov-blue underline hover:text-gov-blue-dark">machine-validated open ontologies</Link> study and the <Link to="/research/ontology-correctness-benchmark" className="text-gov-blue underline hover:text-gov-blue-dark">open-world hole benchmark</Link>, which measure when an ontology can actually reject a wrong statement. The training counterpart of this programme is the <a className="text-gov-blue underline hover:text-gov-blue-dark" href="https://tesseract.academy/safe-ai/">Safe AI hub</a> on our academy, where the <a className="text-gov-blue underline hover:text-gov-blue-dark" href="https://tesseract.academy/ai-assurance/">AI assurance guide</a> and the free <a className="text-gov-blue underline hover:text-gov-blue-dark" href="https://tesseract.academy/courses/ai-literacy-training/">AI Literacy Training course</a> apply the same verification-first method for working teams.
       </p>
     </section>

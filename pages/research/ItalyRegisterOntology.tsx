@@ -148,7 +148,7 @@ export const ItalyRegisterOntology: React.FC = () => (
       <h1 className="text-4xl font-extrabold text-gov-dark mb-6 tracking-tight leading-tight font-serif">
         An open ontology for Italian public registers, tested against IPA, ANAC, OpenCUP and ISTAT
       </h1>
-      <p className="text-xl text-gov-secondary/90 leading-relaxed">
+      <p className="text-xl text-gov-secondary leading-relaxed">
         On 1 January 2026 the Sardinian territorial reform recoded 377 Italian municipalities, and two fusions later reduced the register to 7,894 comuni. Seven months on, the operational register of Italian public administrations already uses the new codes everywhere, while the statistical CSV export and the national semantic vocabulary both still publish the old ones. On 17 August 2026 we downloaded Italy&apos;s public register fabric, the IPA register, the ANAC contracts register, the OpenCUP register of 11.9 million public investment projects, both flavours of the ISTAT register of administrative units and the national cities vocabulary, and measured what the public record actually says. This is a case study in register assurance: auditing what a register publishes against the rules its identifiers declare for themselves and against the other registers that carry the same identity. Every headline below is computed two independent ways, and the pipeline fails its own build if the two ever disagree. The findings are also delivered upstream, as the SHACL package the vocabulary&apos;s maintainers themselves asked for.
       </p>
     </header>
@@ -213,7 +213,7 @@ export const ItalyRegisterOntology: React.FC = () => (
 
     <section className="space-y-4">
       <h2 className="text-2xl font-bold text-gov-dark font-serif">The findings, graded</h2>
-      <div className="overflow-x-auto rounded-lg border border-gov-border">
+      <div tabIndex={0} role="region" aria-label="Table, scrolls sideways on small screens" className="overflow-x-auto rounded-lg border border-gov-border">
         <table className="min-w-full text-sm">
           <thead>
             <tr className="bg-gov-bg text-left">
@@ -235,7 +235,7 @@ export const ItalyRegisterOntology: React.FC = () => (
           </tbody>
         </table>
       </div>
-      <p className="text-sm text-gov-secondary/90 leading-relaxed">
+      <p className="text-sm text-gov-secondary leading-relaxed">
         All figures are computed from register surfaces fetched hands-on on 17 August 2026. All are living systems, so a later run produces different totals while the method reproduces exactly. The contract sample covers months 01 and 11 of 2025, drawn with seed 20260817 before any data was read.
       </p>
     </section>
@@ -258,7 +258,7 @@ export const ItalyRegisterOntology: React.FC = () => (
       <p className="text-gov-dark leading-relaxed">
         First, model identity honestly. An identifier in a register is not a property of an entity; it is a dated claim by a named register. Our OWL model reifies every published value as an IdentifierAssertion carrying the value exactly as published, the scheme the field claims, whether the value conforms to the rules that scheme declares for itself, and whether it is current in the scheme&apos;s own authoritative register.
       </p>
-      <Mermaid chart={MODEL} />
+      <Mermaid chart={MODEL} ariaLabel="Ontology model: a register row from IPA, cities.csv or ANAC makes a reified, dated identifier assertion, checked by a SKOS scheme registry for ISTAT, catastale, CF, CIG and CUP codes, and yields reconciliation and coverage observations." />
       <p className="text-gov-dark leading-relaxed">
         Second, make the schemes self-describing. A SKOS registry declares the codice ISTAT, codice catastale, codice fiscale, CIG and CUP rules as data, length, pattern and check-digit algorithm included, so the validator has no hard-coded rules and adding a register means adding data, not code.
       </p>
@@ -314,7 +314,7 @@ export const ItalyRegisterOntology: React.FC = () => (
           Write to <a href="mailto:fabio@thetesseractacademy.com" className="text-gov-blue underline hover:text-gov-blue-dark">fabio@thetesseractacademy.com</a> with the register name.
         </p>
       </div>
-      <p className="text-sm text-gov-secondary/90 leading-relaxed">
+      <p className="text-sm text-gov-secondary leading-relaxed">
         Related work: the same register-boundary discipline measured the SEC&apos;s registers in <Link to="/research/securities-register-ontology" className="text-gov-blue underline hover:text-gov-blue-dark">the US securities entity register</Link>, the FDIC&apos;s in <Link to="/research/bank-register-ontology" className="text-gov-blue underline hover:text-gov-blue-dark">the US bank register</Link>, and the category it belongs to is set out in <Link to="/research/register-assurance" className="text-gov-blue underline hover:text-gov-blue-dark">Register assurance: why every public register fails at its boundary</Link>.
       </p>
     </section>

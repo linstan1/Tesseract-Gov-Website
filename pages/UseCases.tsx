@@ -11,7 +11,7 @@ export const UseCases: React.FC = () => {
     <div className="max-w-6xl mx-auto px-6 lg:px-8 py-20 space-y-16">
       <div>
         <h1 className="text-5xl font-extrabold text-gov-dark mb-6 tracking-tight leading-tight">Use Cases</h1>
-        <p className="text-xl text-gov-secondary/90 leading-relaxed max-w-4xl">
+        <p className="text-xl text-gov-secondary leading-relaxed max-w-4xl">
           Evidence of delivery. Real projects across UK public sector and government-funded programmes.
         </p>
       </div>
@@ -42,7 +42,7 @@ export const UseCases: React.FC = () => {
 
       <aside className="pt-4">
         <p className="text-sm text-gov-secondary">
-          See also: <Link to="/research" className="text-gov-blue hover:underline">Research &amp; publications</Link> · <Link to="/insights" className="text-gov-blue hover:underline">Insights</Link> · <Link to="/services/research-policy" className="text-gov-blue hover:underline">Research &amp; policy advisory</Link>
+          See also: <Link to="/research" className="text-gov-blue underline underline-offset-2 hover:text-gov-blue-dark">Research &amp; publications</Link> · <Link to="/insights" className="text-gov-blue underline underline-offset-2 hover:text-gov-blue-dark">Insights</Link> · <Link to="/services/research-policy" className="text-gov-blue underline underline-offset-2 hover:text-gov-blue-dark">Research &amp; policy advisory</Link>
         </p>
       </aside>
     </div>

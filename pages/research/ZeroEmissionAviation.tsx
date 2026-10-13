@@ -84,7 +84,7 @@ export const ZeroEmissionAviation: React.FC = () => {
         <h1 className="text-4xl font-extrabold text-gov-dark mb-6 tracking-tight leading-tight font-serif">
           Mapping the UK Zero-Emission Flight Ecosystem
         </h1>
-        <p className="text-xl text-gov-secondary/90 leading-relaxed">
+        <p className="text-xl text-gov-secondary leading-relaxed">
           The UK zero-emission-flight sector has strong policy signals and funding, but the data on who is
           building what, who funds whom, and which technologies gate which pathway sits scattered across
           press releases, programme pages and reports. This is a worked, fully open demonstration of the
@@ -161,7 +161,7 @@ export const ZeroEmissionAviation: React.FC = () => {
           the same discipline a real coordination platform needs so its links are provided and validated,
           never guessed.
         </p>
-        <div className="overflow-x-auto">
+        <div tabIndex={0} role="region" aria-label="Table, scrolls sideways on small screens" className="overflow-x-auto">
           <table className="w-full text-sm border-collapse">
             <thead>
               <tr className="bg-gov-bg border-b border-gov-border">
@@ -185,7 +185,7 @@ export const ZeroEmissionAviation: React.FC = () => {
 
       <section className="space-y-6">
         <h2 className="text-2xl font-bold text-gov-dark font-serif">What the graph contains</h2>
-        <div className="overflow-x-auto">
+        <div tabIndex={0} role="region" aria-label="Table, scrolls sideways on small screens" className="overflow-x-auto">
           <table className="w-full text-sm border-collapse">
             <thead>
               <tr className="bg-gov-bg border-b border-gov-border">
@@ -239,7 +239,7 @@ export const ZeroEmissionAviation: React.FC = () => {
           &ldquo;which provenanced quantities does the graph hold, and from which source?&rdquo;, returns the
           funding landscape below, each figure traceable to a primary source.
         </p>
-        <div className="overflow-x-auto">
+        <div tabIndex={0} role="region" aria-label="Table, scrolls sideways on small screens" className="overflow-x-auto">
           <table className="w-full text-sm border-collapse">
             <thead>
               <tr className="bg-gov-bg border-b border-gov-border">

@@ -109,7 +109,7 @@ export const NordicHealthDataCatalogues: React.FC = () => (
         Nordic health dataset catalogues measured against HealthDCAT-AP Release 7
       </h1>
       <p className="text-sm text-gov-secondary">25 August 2026</p>
-      <p className="text-xl text-gov-secondary/90 leading-relaxed">
+      <p className="text-xl text-gov-secondary leading-relaxed">
         The European Health Data Space obliges health data access bodies to publish a machine readable national
         dataset catalogue, and the European Commission publishes HealthDCAT-AP as the profile those descriptions
         should follow. On 25 August 2026 we asked what the Nordic region actually publishes today. Across the
@@ -193,7 +193,7 @@ export const NordicHealthDataCatalogues: React.FC = () => (
         <code className="text-sm bg-gov-bg px-1.5 py-0.5 rounded">dcat:Dataset</code> in its public layer. Here is what the
         Nordic region publishes against them.
       </p>
-      <div className="overflow-x-auto">
+      <div tabIndex={0} role="region" aria-label="Table, scrolls sideways on small screens" className="overflow-x-auto">
         <table className="w-full text-sm border border-gov-border">
           <thead className="bg-gov-bg/60">
             <tr>

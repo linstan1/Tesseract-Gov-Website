@@ -124,7 +124,7 @@ export const IndustrialOntologyCrosswalks: React.FC = () => (
       <h1 className="text-4xl font-extrabold text-gov-dark mb-6 tracking-tight leading-tight font-serif">
         Why industrial data crosswalks fail, measured across seven standards
       </h1>
-      <p className="text-xl text-gov-secondary/90 leading-relaxed">
+      <p className="text-xl text-gov-secondary leading-relaxed">
         Open crosswalks between four pairs of industrial data standards, and the measurement that explains why this kind of work goes wrong. Four of the seven standards examined cannot reject a mis-mapping at all, so the reasoner check most projects rely on could never have failed.
       </p>
     </header>
@@ -161,7 +161,7 @@ export const IndustrialOntologyCrosswalks: React.FC = () => (
 
     <section className="space-y-6">
       <h2 className="text-2xl font-bold text-gov-dark font-serif">What we built</h2>
-      <div className="overflow-x-auto">
+      <div tabIndex={0} role="region" aria-label="Table, scrolls sideways on small screens" className="overflow-x-auto">
         <table className="w-full text-sm border-collapse">
           <thead>
             <tr className="bg-gov-bg border-b border-gov-border">
@@ -188,7 +188,7 @@ export const IndustrialOntologyCrosswalks: React.FC = () => (
           An ontology can only prove a mapping impossible if it contains an axiom capable of producing a contradiction. Count, for each standard, the fraction of class pairs that provably cannot share an instance. That is its <strong>falsifiability rate</strong>: the ceiling on what any automated check of an alignment into it can ever catch.
         </p>
       </div>
-      <div className="overflow-x-auto">
+      <div tabIndex={0} role="region" aria-label="Table, scrolls sideways on small screens" className="overflow-x-auto">
         <table className="w-full text-sm border-collapse">
           <thead>
             <tr className="bg-gov-bg border-b border-gov-border">
@@ -274,7 +274,7 @@ export const IndustrialOntologyCrosswalks: React.FC = () => (
           </div>
         ))}
       </div>
-      <p className="text-sm text-gov-secondary/90 leading-relaxed">
+      <p className="text-sm text-gov-secondary leading-relaxed">
         Each of these is published as a machine-readable asserted non-mapping, so a tool consuming the crosswalk is told not to make the join rather than left to discover the problem in production.
       </p>
     </section>
@@ -300,7 +300,7 @@ export const IndustrialOntologyCrosswalks: React.FC = () => (
           The whole method above is taught as a free course on the Tesseract Academy platform, worked end to end on the same standards and the same measurements. Every figure quoted in the lessons is one produced by the repository, so the course and the crosswalks check each other. Fifteen lessons, each with a structural diagram and a graded quiz.
         </p>
       </div>
-      <div className="overflow-x-auto">
+      <div tabIndex={0} role="region" aria-label="Table, scrolls sideways on small screens" className="overflow-x-auto">
         <table className="w-full text-sm border-collapse">
           <thead>
             <tr className="bg-gov-bg border-b border-gov-border">
@@ -338,7 +338,7 @@ export const IndustrialOntologyCrosswalks: React.FC = () => (
       <a href={REPO} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-gov-blue underline hover:text-gov-blue-dark font-medium">
         industrial-ontology-crosswalks on GitHub <ExternalLink className="w-4 h-4" />
       </a>
-      <p className="text-sm text-gov-secondary/90 leading-relaxed">
+      <p className="text-sm text-gov-secondary leading-relaxed">
         Released CC BY 4.0. The CFIHOS audit examines a third-party ontology by Abad-Navarro, Fernandez-Breis and Garcia-Castro at Universidad de Murcia, and is offered as an independent measurement rather than a competing alignment. Related work: the <Link to="/research/ies-hqdm-defence-interoperability" className="text-gov-blue underline hover:text-gov-blue-dark">IES to HQDM crosswalk</Link> applies the same reasoner-certification method to defence data, and the method itself is taught in the free <a href={COURSE} target="_blank" rel="noopener noreferrer" className="text-gov-blue underline hover:text-gov-blue-dark">Running Open Ontologies</a> course.
       </p>
     </section>

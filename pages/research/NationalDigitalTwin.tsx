@@ -75,7 +75,7 @@ export const NationalDigitalTwin: React.FC = () => {
         <h1 className="text-4xl font-extrabold text-gov-dark mb-6 tracking-tight leading-tight font-serif">
           AI Ontology Extension Generator: National Digital Twin Programme
         </h1>
-        <p className="text-xl text-gov-secondary/90 leading-relaxed">
+        <p className="text-xl text-gov-secondary leading-relaxed">
           Tesseract Academy contributed to a production-ready open-source tool, published under the National-Digital-Twin GitHub organisation (Apache License 2.0), that automates ontology generation for UK infrastructure digital twins.
         </p>
       </header>
@@ -112,7 +112,7 @@ export const NationalDigitalTwin: React.FC = () => {
 
       <section className="space-y-6">
         <h2 className="text-2xl font-bold text-gov-dark font-serif">4-Step Wizard Workflow</h2>
-        <div className="overflow-x-auto">
+        <div tabIndex={0} role="region" aria-label="Table, scrolls sideways on small screens" className="overflow-x-auto">
           <table className="w-full text-sm border-collapse">
             <thead>
               <tr className="bg-gov-bg border-b border-gov-border">
@@ -139,7 +139,7 @@ export const NationalDigitalTwin: React.FC = () => {
 
       <section className="space-y-6">
         <h2 className="text-2xl font-bold text-gov-dark font-serif">Supported Input Formats</h2>
-        <div className="overflow-x-auto">
+        <div tabIndex={0} role="region" aria-label="Table, scrolls sideways on small screens" className="overflow-x-auto">
           <table className="w-full text-sm border-collapse">
             <thead>
               <tr className="bg-gov-bg border-b border-gov-border">

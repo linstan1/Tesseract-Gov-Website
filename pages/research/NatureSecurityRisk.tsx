@@ -55,7 +55,7 @@ export const NatureSecurityRisk: React.FC = () => {
         <h1 className="text-4xl font-extrabold text-gov-dark mb-6 tracking-tight leading-tight font-serif">
           Nature-Related Security Risk: an open evidence base and systems ontology
         </h1>
-        <p className="text-xl text-gov-secondary/90 leading-relaxed">
+        <p className="text-xl text-gov-secondary leading-relaxed">
           In January 2026 the UK Government assessed, with high confidence, that every critical ecosystem is on a pathway to collapse, naming six ecosystems of particular strategic importance to the UK, and that this carries national-security consequences. That assessment is a written document, not a tool. This is Tesseract&apos;s self-initiated, open, machine-readable evidence base and systems ontology that turns documented nature-to-security cascades into something a government can query, monitor and act on, built on real sources with the gaps named honestly.
         </p>
       </header>
@@ -141,7 +141,7 @@ export const NatureSecurityRisk: React.FC = () => {
         <p className="text-gov-secondary leading-relaxed">
           We surveyed the field before building. Nature-related security risk decomposes into four capabilities, and no existing artefact holds all four. The framing and the science are strong; the machine-readable security layer is empty.
         </p>
-        <div className="overflow-x-auto">
+        <div tabIndex={0} role="region" aria-label="Table, scrolls sideways on small screens" className="overflow-x-auto">
           <table className="w-full text-sm border-collapse">
             <thead>
               <tr className="border-b border-gov-border text-left">
@@ -207,20 +207,20 @@ export const NatureSecurityRisk: React.FC = () => {
           {REFERENCES.map((r, i) => (
             <li key={i}>
               {r.t}{' '}
-              <a href={r.u} target="_blank" rel="noopener noreferrer" className="text-gov-blue hover:underline">Link<span className="sr-only"> (opens in new tab)</span></a>
+              <a href={r.u} target="_blank" rel="noopener noreferrer" className="text-gov-blue underline underline-offset-2 hover:text-gov-blue-dark">Link<span className="sr-only"> (opens in new tab)</span></a>
             </li>
           ))}
         </ol>
-        <p className="text-xs text-gov-secondary/80">Method note: every cascade record carries its own source and confidence grade, and contested chains cite both sides. We publish the working, not just the conclusion.</p>
+        <p className="text-xs text-gov-secondary">Method note: every cascade record carries its own source and confidence grade, and contested chains cite both sides. We publish the working, not just the conclusion.</p>
       </section>
 
       <div className="bg-gov-bg border border-gov-border/50 rounded-xl p-8 flex flex-col sm:flex-row gap-4 sm:items-center sm:justify-between">
         <div>
           <p className="font-semibold text-gov-dark">The evidence base is open</p>
-          <p className="text-sm text-gov-secondary mt-1">Dataset, ontology, SKOS taxonomy and SHACL shapes on GitHub under CC-BY-4.0. Contributions and corrections welcome: contact <a href="mailto:fabio@thetesseractacademy.com" className="text-gov-blue hover:underline">fabio@thetesseractacademy.com</a>.</p>
+          <p className="text-sm text-gov-secondary mt-1">Dataset, ontology, SKOS taxonomy and SHACL shapes on GitHub under CC-BY-4.0. Contributions and corrections welcome: contact <a href="mailto:fabio@thetesseractacademy.com" className="text-gov-blue underline underline-offset-2 hover:text-gov-blue-dark">fabio@thetesseractacademy.com</a>.</p>
         </div>
         <div className="flex flex-col sm:flex-row gap-3">
-          <a href={REPO} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-5 py-2.5 bg-gov-blue text-white text-sm font-semibold rounded-lg hover:bg-gov-blue-dark transition-colors whitespace-nowrap">
+          <a href={REPO} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-5 py-2.5 bg-gov-blue text-white text-sm font-semibold rounded-lg hover:bg-gov-blue-dark transition-colors sm:whitespace-nowrap">
             Explore the open evidence base on GitHub
             <ExternalLink className="w-4 h-4" />
           </a>

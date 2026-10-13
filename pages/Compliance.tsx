@@ -17,7 +17,7 @@ export const Compliance: React.FC = () => {
     <div className="max-w-6xl mx-auto px-6 lg:px-8 py-20 space-y-16">
       <header className="border-b border-gov-border/30 pb-10">
         <h1 className="text-5xl font-extrabold text-gov-dark mb-6 tracking-tight leading-tight">Compliance & Policies</h1>
-        <p className="text-xl text-gov-secondary/90 leading-relaxed max-w-4xl">
+        <p className="text-xl text-gov-secondary leading-relaxed max-w-4xl">
           We operate with transparency and strict adherence to UK public sector standards.
         </p>
       </header>

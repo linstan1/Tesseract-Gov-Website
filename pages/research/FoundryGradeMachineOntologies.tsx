@@ -37,7 +37,7 @@ export const FoundryGradeMachineOntologies: React.FC = () => {
         <h1 className="text-4xl font-extrabold text-gov-dark mb-6 tracking-tight leading-tight font-serif">
           Foundry-grade guarantees for machine-authored ontologies
         </h1>
-        <p className="text-xl text-gov-secondary/90 leading-relaxed">
+        <p className="text-xl text-gov-secondary leading-relaxed">
           The OBO Foundry has spent two decades enforcing a discipline that most of computing never adopted: a biomedical term means one thing, is declared in one place, and is identified by a stable opaque id. Now machines are authoring data against those ontologies. If a human curator is held to that standard, a language model should be too, and the tooling to hold it there cannot be the open-world validator we currently trust.
         </p>
       </header>

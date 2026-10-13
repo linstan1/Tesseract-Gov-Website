@@ -29,7 +29,7 @@ export const SurveyDesign: React.FC = () => {
         <h1 className="text-5xl font-extrabold text-gov-dark mb-6 tracking-tight leading-tight">
           Survey Design and Statistical Analysis
         </h1>
-        <p className="text-xl text-gov-secondary/90 leading-relaxed max-w-4xl">
+        <p className="text-xl text-gov-secondary leading-relaxed max-w-4xl">
           We deliver end-to-end survey services for UK public sector bodies — from questionnaire
           design and pilot testing through mixed-mode data collection to statistical analysis and
           policy-ready reporting. Our current live contracts include a three-year monitoring survey
@@ -58,7 +58,7 @@ export const SurveyDesign: React.FC = () => {
           response rates, non-response bias analysis, and power calculations to confirm statistical
           adequacy for the intended analysis. We design for mixed-mode data collection — online,
           telephone, postal, and face-to-face — ensuring accessibility for all participant groups
-          including those with limited digital access, in line with UK GDPR and the <a href="https://www.gov.uk/service-manual/service-standard" target="_blank" rel="noopener noreferrer" className="text-gov-blue hover:underline">GDS Accessibility Standard</a>.
+          including those with limited digital access, in line with UK GDPR and the <a href="https://www.gov.uk/service-manual/service-standard" target="_blank" rel="noopener noreferrer" className="text-gov-blue underline underline-offset-2 hover:text-gov-blue-dark">GDS Accessibility Standard</a>.
         </p>
         <p className="text-gov-dark leading-relaxed text-base">
           Statistical analysis outputs range from descriptive frequencies and cross-tabulations
@@ -69,7 +69,7 @@ export const SurveyDesign: React.FC = () => {
           standardised reporting templates to enable year-on-year comparison. Reports are structured to meet National Audit Office scrutiny standards and HM Treasury value-for-money criteria, ensuring evidence is audit-ready.
         </p>
         <p className="text-gov-dark leading-relaxed text-base">
-          We are a <a href="https://www.crowncommercial.gov.uk/agreements/RM6126" target="_blank" rel="noopener noreferrer" className="text-gov-blue hover:underline">Crown Commercial Service (CCS) RM6126</a> (Research and Insights) appointed supplier, with experience managing
+          We are a <a href="https://www.crowncommercial.gov.uk/agreements/RM6126" target="_blank" rel="noopener noreferrer" className="text-gov-blue underline underline-offset-2 hover:text-gov-blue-dark">Crown Commercial Service (CCS) RM6126</a> (Research and Insights) appointed supplier, with experience managing
           survey programmes under contract for national qualification bodies, devolved government,
           and arm's-length bodies. All survey data is processed under UK GDPR with an Information Commission
           registration (ZB715782) and a documented data retention and destruction schedule. The Department for Science Innovation and Technology (DSIT) and Cabinet Office procurement guidelines inform our contract management approach.
@@ -78,7 +78,7 @@ export const SurveyDesign: React.FC = () => {
 
       <section>
         <h2 className="text-3xl font-bold text-gov-dark mb-8">Service Comparison</h2>
-        <div className="overflow-x-auto rounded-xl border border-gov-border/40">
+        <div tabIndex={0} role="region" aria-label="Table, scrolls sideways on small screens" className="overflow-x-auto rounded-xl border border-gov-border/40">
           <table className="w-full text-sm text-left">
             <thead className="bg-gov-bg border-b border-gov-border/40">
               <tr>

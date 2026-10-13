@@ -95,7 +95,7 @@ export const ChainControlOntology: React.FC = () => (
       <h1 className="text-4xl font-extrabold text-gov-dark mb-6 tracking-tight leading-tight font-serif">
         USDC Has a Different Upgrade Key on Every Chain, and Its Own owner() Names None of Them
       </h1>
-      <p className="text-xl text-gov-secondary/90 leading-relaxed">
+      <p className="text-xl text-gov-secondary leading-relaxed">
         We read the control structure of 6,316 contracts across seven EVM chains and Solana, live from keyless public nodes, with every value confirmed by more than one independent provider. Of the 656 upgradeable contracts whose upgrade authority resolves, 390 report a different account through their own owner() function than the account that can replace their code. For 556 of them the address sitting in the proxy admin slot is not the controller either, because that address is itself owned by something further out. Walking every path to its end, 132 contracts are ultimately controlled by a single private key. This page explains what was measured, why the last hop is unknowable in principle, and why an ontology that admits this is more useful than a product that pretends otherwise.
       </p>
     </header>
@@ -165,7 +165,7 @@ export const ChainControlOntology: React.FC = () => (
       <p className="text-gov-dark leading-relaxed">
         The composition claim becomes concrete on the second largest stablecoin in the world. Native USDC on Ethereum, Base, Arbitrum, Optimism, Polygon and Avalanche has six different upgrade authorities. No signer is reused. All six are externally owned accounts with no code, so no quorum is enforced or visible on any of them. On all six chains, owner() returns an account other than the one that can replace the code.
       </p>
-      <div className="overflow-x-auto">
+      <div tabIndex={0} role="region" aria-label="Table, scrolls sideways on small screens" className="overflow-x-auto">
         <table className="min-w-full text-sm border border-gov-border">
           <thead className="bg-gov-bg/60">
             <tr>

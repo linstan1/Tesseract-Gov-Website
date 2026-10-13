@@ -150,7 +150,7 @@ export const ParametricPayoutAssurance: React.FC = () => (
       <h1 className="text-4xl font-extrabold text-gov-dark mb-6 tracking-tight leading-tight font-serif">
         Can a parametric climate insurance product prove it paid?
       </h1>
-      <p className="text-xl text-gov-secondary/90 leading-relaxed">
+      <p className="text-xl text-gov-secondary leading-relaxed">
         Adaptation finance is arriving in Southeast Asia through parametric cover, which pays on a
         measured index rather than an assessed loss. That makes the promise fast, and it makes it
         checkable in principle. In practice almost none of it is checked. We have published an open
@@ -266,7 +266,7 @@ export const ParametricPayoutAssurance: React.FC = () => (
         it, including a deliberately brochure-grade product encoding that nothing could ever settle or
         dispute.
       </p>
-      <div className="overflow-x-auto">
+      <div tabIndex={0} role="region" aria-label="Table, scrolls sideways on small screens" className="overflow-x-auto">
         <table className="w-full text-sm border-collapse">
           <thead>
             <tr className="bg-gov-bg border-b border-gov-border">
@@ -303,7 +303,7 @@ export const ParametricPayoutAssurance: React.FC = () => (
         Below, two encoded products against five Philippine landfalls. The interesting row is the
         fourth.
       </p>
-      <div className="overflow-x-auto">
+      <div tabIndex={0} role="region" aria-label="Table, scrolls sideways on small screens" className="overflow-x-auto">
         <table className="w-full text-sm border-collapse">
           <thead>
             <tr className="bg-gov-bg border-b border-gov-border">
@@ -444,7 +444,7 @@ export const ParametricPayoutAssurance: React.FC = () => (
         Below are the two encoded products compared field by field. Four fields agree, including the
         headline number a buyer would compare. Two do not, and those two decide everything.
       </p>
-      <div className="overflow-x-auto">
+      <div tabIndex={0} role="region" aria-label="Table, scrolls sideways on small screens" className="overflow-x-auto">
         <table className="w-full text-sm border-collapse">
           <thead>
             <tr className="bg-gov-bg border-b border-gov-border">
@@ -574,7 +574,7 @@ export const ParametricPayoutAssurance: React.FC = () => (
         The mechanism doing most of the work is small: a mandatory enumerated confidence field on every
         product encoding, which a validation rule fails if omitted.
       </p>
-      <div className="overflow-x-auto">
+      <div tabIndex={0} role="region" aria-label="Table, scrolls sideways on small screens" className="overflow-x-auto">
         <table className="w-full text-sm border-collapse">
           <thead>
             <tr className="bg-gov-bg border-b border-gov-border">
@@ -650,7 +650,7 @@ export const ParametricPayoutAssurance: React.FC = () => (
           Work with us on adaptation finance data
         </Link>
       </div>
-      <p className="text-sm text-gov-secondary/90 leading-relaxed">
+      <p className="text-sm text-gov-secondary leading-relaxed">
         Standard released CC BY 4.0, tooling Apache-2.0, because a Creative Commons licence is the wrong
         instrument for code and a third party running the validator without asking us is the entire
         point. If you hold official product terms and want them encoded properly, that is the single
@@ -673,7 +673,7 @@ export const ParametricPayoutAssurance: React.FC = () => (
           </li>
         ))}
       </ol>
-      <p className="text-sm text-gov-secondary/90 leading-relaxed">
+      <p className="text-sm text-gov-secondary leading-relaxed">
         Product and scheme facts are taken from the Willis and Rare announcements of 12 November 2025
         and the Philippine Department of Agriculture announcement of 17 July 2025. Event data carries a
         per-row source, measuring agency and primary-or-secondary marker in the repository. Related

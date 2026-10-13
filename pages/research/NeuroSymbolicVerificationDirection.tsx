@@ -36,7 +36,7 @@ export const NeuroSymbolicVerificationDirection: React.FC = () => {
         <h1 className="text-4xl font-extrabold text-gov-dark mb-6 tracking-tight leading-tight font-serif">
           Neuro-symbolic AI has a direction problem
         </h1>
-        <p className="text-xl text-gov-secondary/90 leading-relaxed">
+        <p className="text-xl text-gov-secondary leading-relaxed">
           Most work under the neuro-symbolic banner points one way: get symbolic knowledge into the neural model, as embeddings, as constraints, as a knowledge graph to attend over. The direction that gets far less attention is the reverse arrow, symbols checking what the neural model produced. For a language model authoring RDF, that reverse arrow is where the guarantee lives, and the cheapest instance of it catches an error no amount of knowledge injection prevents.
         </p>
       </header>

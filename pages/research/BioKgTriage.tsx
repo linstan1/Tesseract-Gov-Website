@@ -54,7 +54,7 @@ export const BioKgTriage: React.FC = () => {
         <h1 className="text-4xl font-extrabold text-gov-dark mb-6 tracking-tight leading-tight font-serif">
           Grounded, not retrieved: a validated biomedical knowledge graph
         </h1>
-        <p className="text-xl text-gov-secondary/90 leading-relaxed">
+        <p className="text-xl text-gov-secondary leading-relaxed">
           Ungrounded retrieval over the literature lets a language model assert edges with nothing checking that the node types and relations are real, so a hallucinated gene or an invented predicate enters the graph and quietly corrupts everything downstream. This case study does the opposite: every edge is typed with the real Biolink Model and passes a closed-world vocabulary gate before it enters the graph. It is the same correctness gate we benchmarked on schema.org and IES4, now on the biomedical vocabulary and on real data.
         </p>
       </header>
@@ -93,7 +93,7 @@ export const BioKgTriage: React.FC = () => {
             A gene-disease knowledge graph assembled from 40 real associations pulled live from the <a href="https://platform.opentargets.org/" target="_blank" rel="noopener noreferrer" className="text-gov-blue underline hover:text-gov-blue-dark">Open Targets Platform</a> for eight well-known human targets (EGFR, TP53, KRAS, BRCA1, PTEN, BRAF, ALK, MYC). Every edge is typed with the <a href="https://github.com/biolink/biolink-model" target="_blank" rel="noopener noreferrer" className="text-gov-blue underline hover:text-gov-blue-dark">Biolink Model</a>: genes as <code className="text-sm bg-gov-bg px-1.5 py-0.5 rounded">biolink:Gene</code>, diseases as <code className="text-sm bg-gov-bg px-1.5 py-0.5 rounded">biolink:Disease</code>, linked by <code className="text-sm bg-gov-bg px-1.5 py-0.5 rounded">biolink:gene_associated_with_condition</code>, with Open Targets provenance on every edge. Then we validated it two ways, and built an ungrounded twin that swaps the one real predicate for a fabricated one to show the difference.
           </p>
         </div>
-        <div className="overflow-x-auto">
+        <div tabIndex={0} role="region" aria-label="Table, scrolls sideways on small screens" className="overflow-x-auto">
           <table className="w-full text-sm border-collapse">
             <thead>
               <tr className="bg-gov-bg border-b border-gov-border">
@@ -129,7 +129,7 @@ export const BioKgTriage: React.FC = () => {
             The gate is not tied to one source or one ontology. We built four layers, each from a different real source, and validated all four the same way. The structured layer above is the first; the second turns raw literature into a KG; the third moves to a different domain and ontology; the fourth links resistance genes to their pathogens and polices three ontologies at once.
           </p>
         </div>
-        <div className="overflow-x-auto">
+        <div tabIndex={0} role="region" aria-label="Table, scrolls sideways on small screens" className="overflow-x-auto">
           <table className="w-full text-sm border-collapse">
             <thead>
               <tr className="bg-gov-bg border-b border-gov-border">
@@ -198,7 +198,7 @@ export const BioKgTriage: React.FC = () => {
             Because every edge is validated and typed, the graph answers a ranked, provenance-carrying query directly. These are the top gene-disease hypotheses by Open Targets association score, each row a validated Biolink triple with a source. The score is Open Targets', not a model we invented; the contribution is that a triage built on this graph cannot rank on a fabricated edge.
           </p>
         </div>
-        <div className="overflow-x-auto">
+        <div tabIndex={0} role="region" aria-label="Table, scrolls sideways on small screens" className="overflow-x-auto">
           <table className="w-full text-sm border-collapse">
             <thead>
               <tr className="bg-gov-bg border-b border-gov-border">
@@ -235,7 +235,7 @@ export const BioKgTriage: React.FC = () => {
           <cite className="text-sm text-gov-secondary font-semibold not-italic mt-2 block">Fabio Rovai, Tesseract Academy</cite>
         </blockquote>
 
-        <p className="text-sm text-gov-secondary/90 leading-relaxed">
+        <p className="text-sm text-gov-secondary leading-relaxed">
           An independent, self-initiated study on open data and open tools: the Biolink Model, the Open Targets Platform, PubTator3, CARD, and the NCBI taxonomy, all used under their open licences. All four layers are built and validated. Honest limits: the resistance-to-drug layer uses a logged 800-edge slice of ARO's relationships, PubTator3's associations are its own machine extraction, and the triage ranks on Open Targets' own score with provenance rather than a new model. The 17 retired taxon ids the pathogen gate flags are a feature, real but deprecated ids CARD still carries. The full method and reproducible code are in the repository.
         </p>
       </section>

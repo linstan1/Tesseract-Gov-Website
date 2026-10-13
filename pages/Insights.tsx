@@ -35,7 +35,7 @@ export const Insights: React.FC = () => {
         <h1 className="text-5xl font-extrabold text-gov-dark mb-6 tracking-tight leading-tight">
           UK Public Sector AI: What We Have Learned Delivering Government Contracts
         </h1>
-        <p className="text-xl text-gov-secondary/90 leading-relaxed max-w-4xl mb-6">
+        <p className="text-xl text-gov-secondary leading-relaxed max-w-4xl mb-6">
           We have delivered AI, research, and data science services to UK public sector bodies including{' '}
           <span className="font-semibold text-gov-dark">Welsh Government</span>,{' '}
           <span className="font-semibold text-gov-dark">Innovate UK</span>, and the{' '}
@@ -64,8 +64,8 @@ export const Insights: React.FC = () => {
         <h2 className="text-3xl font-bold text-gov-dark">Recent Announcements</h2>
         <article className="bg-white border border-gov-border/50 rounded-xl p-8">
           <div className="flex items-center gap-3 mb-2">
-            <span className="text-xs font-semibold uppercase tracking-widest text-gov-blue bg-gov-blue/10 px-2.5 py-1 rounded-full">Event Recap: London Data Week 2026</span>
-            <time className="text-xs text-gov-secondary/70" dateTime="2026-07-08">8 July 2026</time>
+            <span className="text-xs font-semibold uppercase tracking-widest text-gov-blue-dark bg-gov-blue/10 px-2.5 py-1 rounded-full">Event Recap: London Data Week 2026</span>
+            <time className="text-xs text-gov-secondary" dateTime="2026-07-08">8 July 2026</time>
           </div>
           <h3 className="text-lg font-bold text-gov-dark mb-4">
             AI Tools for Everyone: Advancing Disability Inclusion (LSE)
@@ -81,7 +81,7 @@ export const Insights: React.FC = () => {
               decoding="async"
               className="w-full rounded-xl shadow-sm"
             />
-            <figcaption className="text-xs text-gov-secondary/70 mt-2">
+            <figcaption className="text-xs text-gov-secondary mt-2">
               The speaker panel at the Shaw Library, LSE, during London Data Week 2026.
             </figcaption>
           </figure>
@@ -95,7 +95,7 @@ export const Insights: React.FC = () => {
           <p className="text-base text-gov-dark/80 leading-relaxed mb-5">
             A big thank you to all our brilliant speakers: <strong>Owais Niaz</strong>, <strong>Jack Oat</strong>{' '}
             and <strong>Luqmaan Shafique</strong> from Vision Ability CIC; <strong>Dr Tatia Codreanu</strong> from
-            Imperial; our CEO <strong>Dr Stylianos Kampakis</strong>; <strong>Jeremiah Johnson</strong>;{' '}
+            Imperial; our CEO <strong>Dr Stylianos Kampakis</strong>, CStat; <strong>Jeremiah Johnson</strong>;{' '}
             <strong>Rafie Cecilia</strong> from King's College London; and <strong>Hui Gong</strong> from UCL. And a
             special thank you to <strong>Tejasva Gupta</strong> for leading all the communications.
           </p>
@@ -110,24 +110,24 @@ export const Insights: React.FC = () => {
               decoding="async"
               className="w-full rounded-xl shadow-sm"
             />
-            <figcaption className="text-xs text-gov-secondary/70 mt-2">
+            <figcaption className="text-xs text-gov-secondary mt-2">
               Presenting AI tools for visual accessibility to the audience.
             </figcaption>
           </figure>
 
-          <p className="text-sm text-gov-secondary/70">
+          <p className="text-sm text-gov-secondary">
             Wednesday 8 July 2026 · Shaw Library, LSE, Houghton Street, London WC2A 2AE · Part of London Data Week 2026
           </p>
-          <p className="text-xs text-gov-secondary/50 mt-2">
+          <p className="text-xs text-gov-secondary mt-2">
             #LondonDataWeek #DisabilityInclusion #AIforGood #DataScience
           </p>
         </article>
-        <article className="bg-white border border-gov-border/50 rounded-xl p-8 flex gap-6 items-start">
+        <article className="bg-white border border-gov-border/50 rounded-xl p-6 sm:p-8 flex flex-col sm:flex-row gap-6 items-start">
           <img src="/logos/iwm.png" alt="Imperial War Museums" className="h-14 object-contain flex-shrink-0" />
-          <div>
+          <div className="min-w-0">
             <div className="flex items-center gap-3 mb-2">
-              <span className="text-xs font-semibold uppercase tracking-widest text-gov-blue bg-gov-blue/10 px-2.5 py-1 rounded-full">Contract Award</span>
-              <time className="text-xs text-gov-secondary/70" dateTime="2026-06-10">June 2026</time>
+              <span className="text-xs font-semibold uppercase tracking-widest text-gov-blue-dark bg-gov-blue/10 px-2.5 py-1 rounded-full">Contract Award</span>
+              <time className="text-xs text-gov-secondary" dateTime="2026-06-10">June 2026</time>
             </div>
             <h3 className="text-lg font-bold text-gov-dark mb-2">
               Imperial War Museums: Digital Transformation Support Framework (Lot 1: Data Consultancy)
@@ -138,7 +138,7 @@ export const Insights: React.FC = () => {
                 href="https://www.sell2wales.gov.wales/search/show/search_view.aspx?ID=MAY620325"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gov-blue hover:underline"
+                className="text-gov-blue underline underline-offset-2 hover:text-gov-blue-dark"
               >
                 IWM Digital Transformation Support Framework
               </a>{' '}
@@ -146,17 +146,17 @@ export const Insights: React.FC = () => {
               June 2026 to June 2028, with an option to extend to February 2029. IWM is seeking to deliver
               data consultancy, AI, software engineering, and business analysis services across its digital estate.
             </p>
-            <p className="text-sm text-gov-secondary/70">
+            <p className="text-sm text-gov-secondary">
               Contracting authority: Imperial War Museums · Procurement reference: DE3480 · Lot value: £90,000 excl. VAT
             </p>
           </div>
         </article>
-        <article className="bg-white border border-gov-border/50 rounded-xl p-8 flex gap-6 items-start">
+        <article className="bg-white border border-gov-border/50 rounded-xl p-6 sm:p-8 flex flex-col sm:flex-row gap-6 items-start">
           <img src="/logos/wrap.svg" alt="WRAP (Waste and Resources Action Programme)" className="h-14 object-contain flex-shrink-0" />
-          <div>
+          <div className="min-w-0">
             <div className="flex items-center gap-3 mb-2">
-              <span className="text-xs font-semibold uppercase tracking-widest text-gov-blue bg-gov-blue/10 px-2.5 py-1 rounded-full">Contract Award</span>
-              <time className="text-xs text-gov-secondary/70" dateTime="2026-05-01">May 2026</time>
+              <span className="text-xs font-semibold uppercase tracking-widest text-gov-blue-dark bg-gov-blue/10 px-2.5 py-1 rounded-full">Contract Award</span>
+              <time className="text-xs text-gov-secondary" dateTime="2026-05-01">May 2026</time>
             </div>
             <h3 className="text-lg font-bold text-gov-dark mb-2">
               WRAP: Food Loss and Waste Data Taxonomy (PRC228)
@@ -167,7 +167,7 @@ export const Insights: React.FC = () => {
                 href="https://www.wrap.ngo"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gov-blue hover:underline"
+                className="text-gov-blue underline underline-offset-2 hover:text-gov-blue-dark"
               >
                 WRAP
               </a>{' '}
@@ -176,7 +176,7 @@ export const Insights: React.FC = () => {
               JSON-LD schema (84 coded entities) with structural coverage validation. The taxonomy supports consistent
               measurement across the 400+ organisations in the Courtauld Commitment 2030.
             </p>
-            <p className="text-sm text-gov-secondary/70">
+            <p className="text-sm text-gov-secondary">
               Contracting authority: WRAP (Waste and Resources Action Programme) · Procurement reference: PRC228
             </p>
           </div>
@@ -186,7 +186,7 @@ export const Insights: React.FC = () => {
       {/* Key Findings */}
       <section className="space-y-6">
         <h2 className="text-3xl font-bold text-gov-dark">Key Findings</h2>
-        <p className="text-gov-secondary/80 text-base max-w-3xl">
+        <p className="text-gov-secondary text-base max-w-3xl">
           Each finding below is drawn from primary delivery experience and is self-contained for citation purposes.
           All programme data is reported in aggregate or with client permission.
         </p>
@@ -199,13 +199,13 @@ export const Insights: React.FC = () => {
               <span className="flex-shrink-0 w-9 h-9 rounded-full bg-gov-blue text-white text-sm font-bold flex items-center justify-center">1</span>
               <div>
                 <h3 className="text-xl font-bold text-gov-dark">Land Valuation Methodology Comparison: Welsh Government</h3>
-                <p className="text-sm text-gov-secondary/70 mt-1">
+                <p className="text-sm text-gov-secondary mt-1">
                   Source:{' '}
                   <a
                     href="https://www.gov.wales/testing-land-valuation-methods"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-gov-blue hover:underline"
+                    className="text-gov-blue underline underline-offset-2 hover:text-gov-blue-dark"
                   >
                     GOV.WALES, March 2026
                   </a>
@@ -254,7 +254,7 @@ export const Insights: React.FC = () => {
               <span className="flex-shrink-0 w-9 h-9 rounded-full bg-gov-blue text-white text-sm font-bold flex items-center justify-center">2</span>
               <div>
                 <h3 className="text-xl font-bold text-gov-dark">Ontology Automation: National Digital Twin Programme</h3>
-                <p className="text-sm text-gov-secondary/70 mt-1">
+                <p className="text-sm text-gov-secondary mt-1">
                   Source: Tesseract Academy delivery data, 2024–2025. Commissioned by the Department for Business and Trade
                   for the National Digital Twin Programme.
                 </p>
@@ -293,13 +293,13 @@ export const Insights: React.FC = () => {
               <span className="flex-shrink-0 w-9 h-9 rounded-full bg-gov-blue text-white text-sm font-bold flex items-center justify-center">3</span>
               <div>
                 <h3 className="text-xl font-bold text-gov-dark">Public Engagement Registration Demand: BridgeAI Creative Industries</h3>
-                <p className="text-sm text-gov-secondary/70 mt-1">
+                <p className="text-sm text-gov-secondary mt-1">
                   Source: Tesseract Academy delivery data, 2025–2026.{' '}
                   <a
                     href="https://iuk.ktn-uk.org/programme/bridgeai/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-gov-blue hover:underline"
+                    className="text-gov-blue underline underline-offset-2 hover:text-gov-blue-dark"
                   >
                     Innovate UK BridgeAI
                   </a>{' '}
@@ -339,7 +339,7 @@ export const Insights: React.FC = () => {
               <span className="flex-shrink-0 w-9 h-9 rounded-full bg-gov-blue text-white text-sm font-bold flex items-center justify-center">4</span>
               <div>
                 <h3 className="text-xl font-bold text-gov-dark">Financial Vulnerability Signal Accuracy: Kalgera / Fintech Scotland</h3>
-                <p className="text-sm text-gov-secondary/70 mt-1">
+                <p className="text-sm text-gov-secondary mt-1">
                   Source: Tesseract Academy qualitative research, 2023–2024. Ethical framework: Adult Support and
                   Protection (Scotland) Act 2007.
                 </p>
@@ -380,13 +380,13 @@ export const Insights: React.FC = () => {
               <span className="flex-shrink-0 w-9 h-9 rounded-full bg-gov-blue text-white text-sm font-bold flex items-center justify-center">5</span>
               <div>
                 <h3 className="text-xl font-bold text-gov-dark">Procurement Route Effectiveness: Crown Commercial Service Frameworks</h3>
-                <p className="text-sm text-gov-secondary/70 mt-1">
+                <p className="text-sm text-gov-secondary mt-1">
                   Source: Tesseract Academy procurement experience, 2022–2026. Frameworks:{' '}
                   <a
                     href="https://www.crowncommercial.gov.uk/agreements/RM6200"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-gov-blue hover:underline"
+                    className="text-gov-blue underline underline-offset-2 hover:text-gov-blue-dark"
                   >
                     RM6200
                   </a>
@@ -395,7 +395,7 @@ export const Insights: React.FC = () => {
                     href="https://www.crowncommercial.gov.uk/agreements/RM6126"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-gov-blue hover:underline"
+                    className="text-gov-blue underline underline-offset-2 hover:text-gov-blue-dark"
                   >
                     RM6126
                   </a>
@@ -404,7 +404,7 @@ export const Insights: React.FC = () => {
                     href="https://www.crowncommercial.gov.uk/agreements/RM6219"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-gov-blue hover:underline"
+                    className="text-gov-blue underline underline-offset-2 hover:text-gov-blue-dark"
                   >
                     RM6219
                   </a>
@@ -413,9 +413,18 @@ export const Insights: React.FC = () => {
                     href="https://www.crowncommercial.gov.uk/agreements/RM6235"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-gov-blue hover:underline"
+                    className="text-gov-blue underline underline-offset-2 hover:text-gov-blue-dark"
                   >
                     RM6235
+                  </a>
+                  ,{' '}
+                  <a
+                    href="https://www.crowncommercial.gov.uk/agreements/RM6094"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gov-blue underline underline-offset-2 hover:text-gov-blue-dark"
+                  >
+                    RM6094
                   </a>
                   .
                 </p>
@@ -430,7 +439,7 @@ export const Insights: React.FC = () => {
               >
                 Crown Commercial Service
               </a>{' '}
-              dynamic purchasing systems (RM6200, RM6126, RM6219, RM6235) reduce procurement lead times by{' '}
+              dynamic purchasing systems (RM6200, RM6126, RM6219, RM6235, RM6094) reduce procurement lead times by{' '}
               <strong>60–75% compared to full OJEU-equivalent tender processes</strong> for SME-scale AI and research
               contracts. For contracts under the £213,477{' '}
               <a
@@ -470,13 +479,13 @@ export const Insights: React.FC = () => {
               <span className="flex-shrink-0 w-9 h-9 rounded-full bg-gov-blue text-white text-sm font-bold flex items-center justify-center">6</span>
               <div>
                 <h3 className="text-xl font-bold text-gov-dark">AI Governance Adoption Barriers in UK Public Sector</h3>
-                <p className="text-sm text-gov-secondary/70 mt-1">
+                <p className="text-sm text-gov-secondary mt-1">
                   Source: Tesseract Academy advisory experience, 2023–2026. Reference frameworks:{' '}
                   <a
                     href="https://www.gov.uk/guidance/understanding-artificial-intelligence-ethics-and-safety"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-gov-blue hover:underline"
+                    className="text-gov-blue underline underline-offset-2 hover:text-gov-blue-dark"
                   >
                     CDDO AI Ethics guidance
                   </a>
@@ -485,7 +494,7 @@ export const Insights: React.FC = () => {
                     href="https://www.gov.uk/government/publications/ai-safety-institute-overview/introducing-the-ai-safety-institute"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-gov-blue hover:underline"
+                    className="text-gov-blue underline underline-offset-2 hover:text-gov-blue-dark"
                   >
                     UK AI Safety Institute
                   </a>
@@ -625,7 +634,7 @@ export const Insights: React.FC = () => {
 
         <div className="pt-4 border-t border-gov-border/30">
           <h3 className="text-base font-semibold text-gov-dark mb-2">Named entities and organisations referenced in this research</h3>
-          <p className="text-sm text-gov-secondary/80 leading-relaxed">
+          <p className="text-sm text-gov-secondary leading-relaxed">
             ONS, DSIT, GDS, NHS England, Cabinet Office, Crown Commercial Service, NESTA, Alan Turing Institute,
             Skills England, UK AI Safety Institute, Innovate UK, Welsh Government, National Digital Twin Programme,
             Office for Statistics Regulation, HM Treasury.

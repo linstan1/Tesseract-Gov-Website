@@ -40,8 +40,8 @@ export const MachineryKorea: React.FC = () => (
       </Link>
       <h1 className="text-3xl sm:text-4xl font-bold text-gov-blue mb-6">{"An overview of ontology and schema quality issues in machinery data standards, tested against MTConnect and the Asset Administration Shell"}</h1>
       <p className="text-sm text-gov-dark/70 mb-2">Published 17 August 2026. Available in English and Korean.</p>
-      <p className="text-sm mb-8"><a href={REPO} target="_blank" rel="noopener noreferrer" className="text-gov-blue hover:underline">Repository on GitHub<span className="sr-only"> (opens in new tab)</span></a></p>
-      <nav className="mb-10 text-sm"><a href="#english" className="text-gov-blue hover:underline">English</a><span className="mx-2 text-gov-dark/40">|</span><a href="#native" className="text-gov-blue hover:underline">{"기계류 데이터 표준의 온톨로지 및 스키마 품질 문제"}</a></nav>
+      <p className="text-sm mb-8"><a href={REPO} target="_blank" rel="noopener noreferrer" className="text-gov-blue underline underline-offset-2 hover:text-gov-blue-dark">Repository on GitHub<span className="sr-only"> (opens in new tab)</span></a></p>
+      <nav className="mb-10 text-sm"><a href="#english" className="text-gov-blue underline underline-offset-2 hover:text-gov-blue-dark">English</a><span className="mx-2 text-gov-secondary">|</span><a href="#native" className="text-gov-blue underline underline-offset-2 hover:text-gov-blue-dark">{"기계류 데이터 표준의 온톨로지 및 스키마 품질 문제"}</a></nav>
 
       <section id="english" lang="en">
             <p className="text-base text-gov-dark/90 leading-relaxed mb-4">{"The EU Machinery Regulation (EU) 2023/1230 applies from 14 January 2027. On that date Directive 2006/42/EC is repealed. We verified both dates against the EUR-Lex primary text, Article 54, because a number of vendor summaries circulating online give 20 January and are simply wrong. Parts of the Regulation already bite: Articles 26 to 42 have applied since 14 January 2024."}</p>

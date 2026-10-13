@@ -42,14 +42,14 @@ const HBars: React.FC<{ title: string; note?: string; max?: number; rows: BarRow
       <div className="space-y-2">
         {rows.map((r) => (
           <div key={r.label} className="flex items-center gap-3" title={`${r.label}: ${r.display}`}>
-            <span className="w-48 shrink-0 text-right text-xs text-gov-secondary leading-tight">{r.label}</span>
+            <span className="w-48 max-w-[40%] shrink-0 text-right text-xs text-gov-secondary leading-tight">{r.label}</span>
             <div className="flex-1 h-[18px]">
               <div
                 className="h-full rounded-r"
                 style={{ width: `${Math.max((r.value / m) * 100, 0.5)}%`, backgroundColor: r.color ?? CHART.teal }}
               />
             </div>
-            <span className="w-24 shrink-0 text-xs font-semibold text-gov-dark tabular-nums">{r.display}</span>
+            <span className="w-16 sm:w-24 shrink-0 text-xs font-semibold text-gov-dark tabular-nums">{r.display}</span>
           </div>
         ))}
       </div>
@@ -85,7 +85,7 @@ export const TradeRemedyOntology: React.FC = () => (
       </Link>
       <h1 className="text-3xl sm:text-4xl font-bold text-gov-blue mb-6">{"An open ontology for UK trade remedy measures, tested against the TRA case register, the UK Trade Tariff and legislation.gov.uk"}</h1>
       <p className="text-sm text-gov-dark/70 mb-2">Published 28 August 2026.</p>
-      <p className="text-sm mb-8"><a href={REPO} target="_blank" rel="noopener noreferrer" className="text-gov-blue hover:underline">Repository on GitHub<span className="sr-only"> (opens in new tab)</span></a></p>
+      <p className="text-sm mb-8"><a href={REPO} target="_blank" rel="noopener noreferrer" className="text-gov-blue underline underline-offset-2 hover:text-gov-blue-dark">Repository on GitHub<span className="sr-only"> (opens in new tab)</span></a></p>
 
       <section id="english" lang="en">
             <p className="text-base text-gov-dark/90 leading-relaxed mb-4">{"Every anti-dumping and countervailing duty the UK charges runs a chain. The Trade Remedies Authority opens a case, the case names commodity codes, a legal instrument gives the resulting measure force, and the measure assigns a duty rate to a named exporter. By 31 March 2026 the measures in force covered around 20.6 billion pounds of UK imports. We built an open ontology of that chain, censused every link in it, and found that it breaks in twenty-five places. All twenty-five are repaired in the repository."}</p>

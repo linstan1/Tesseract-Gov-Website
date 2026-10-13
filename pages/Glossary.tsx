@@ -344,7 +344,7 @@ export const Glossary: React.FC = () => {
         <h1 className="text-5xl font-extrabold text-gov-dark mb-6 tracking-tight leading-tight">
           Public Sector AI and Procurement Glossary
         </h1>
-        <p className="text-xl text-gov-secondary/90 leading-relaxed max-w-4xl">
+        <p className="text-xl text-gov-secondary leading-relaxed max-w-4xl">
           This glossary defines key terms used across AI, machine learning, UK government procurement,
           AI governance regulation, research methodology, and financial technology. It is intended to
           support commissioning officers, policy teams, and technical leads working on public sector

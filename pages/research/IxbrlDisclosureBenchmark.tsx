@@ -56,7 +56,7 @@ export const IxbrlDisclosureBenchmark: React.FC = () => {
         <h1 className="text-4xl font-extrabold text-gov-dark mb-6 tracking-tight leading-tight font-serif">
           How machine-readable are UK company accounts, really?
         </h1>
-        <p className="text-xl text-gov-secondary/90 leading-relaxed">
+        <p className="text-xl text-gov-secondary leading-relaxed">
           "Structured data beats PDF for AI-driven reporting" is now received wisdom in regulatory circles. It is also rarely measured. This is a small, open benchmark that asks the empirical version of the question: across the accounts that companies actually file, what fraction expose each core figure as a structured fact a machine can read without guessing?
         </p>
       </header>
@@ -97,7 +97,7 @@ export const IxbrlDisclosureBenchmark: React.FC = () => {
             </div>
           ))}
         </div>
-        <p className="text-sm text-gov-secondary/90">Share of the 8,856 parsed filings exposing each core concept as a machine-readable fact.</p>
+        <p className="text-sm text-gov-secondary">Share of the 8,856 parsed filings exposing each core concept as a machine-readable fact.</p>
       </section>
 
       <section className="space-y-4">
@@ -115,7 +115,7 @@ export const IxbrlDisclosureBenchmark: React.FC = () => {
           <p className="text-gov-dark leading-relaxed">
             The same parser scales to the full daily and monthly archives for a longitudinal exposure profile, and extends to value-level extraction and cross-taxonomy comparison. It complements our work on machine-readable public data, from the <Link to="/research/wastewater-effluent-data-quality" className="text-gov-blue underline hover:text-gov-blue-dark">quality of continuous environmental monitoring</Link> to open ontologies: in every case the useful question is not whether data could be structured in principle, but how far it is structured in the records that already exist.
           </p>
-          <p className="text-sm text-gov-secondary/90 leading-relaxed mt-4">
+          <p className="text-sm text-gov-secondary leading-relaxed mt-4">
             Independent, self-initiated open research. Contains public sector information from Companies House licensed under the Open Government Licence v3.0. Not endorsed by Companies House or the FRC.
           </p>
         </div>

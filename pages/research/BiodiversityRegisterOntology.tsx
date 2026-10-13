@@ -566,6 +566,7 @@ export function BiodiversityRegisterOntology() {
 
         <div className="my-8">
           <Mermaid
+            ariaLabel="Ontology model: a register makes identifier assertions and rights assertions about a registered resource; identifier schemes are SKOS data; dated resolution observations and register snapshots are recorded, and snapshots can be held by a mirror register."
             chart={`graph TD
   R[Register] -->|makes| IA[IdentifierAssertion]
   R -->|makes| RA[RightsAssertion]
@@ -627,7 +628,7 @@ export function BiodiversityRegisterOntology() {
           measurement pass on one register is free: write to{' '}
           <a
             href="mailto:fabio@thetesseractacademy.com"
-            className="text-gov-blue hover:underline"
+            className="text-gov-blue underline underline-offset-2 hover:text-gov-blue-dark"
           >
             fabio@thetesseractacademy.com
           </a>{' '}

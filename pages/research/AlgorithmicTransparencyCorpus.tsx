@@ -44,7 +44,7 @@ export const AlgorithmicTransparencyCorpus: React.FC = () => {
         </Link>
         <p className="text-sm font-semibold uppercase tracking-wider text-gov-blue mb-3">Tesseract Foundational Research: AI Governance</p>
         <h1 className="text-4xl font-extrabold text-gov-dark mb-6 tracking-tight leading-tight font-serif">The closest thing to a public register of government AI, as a corpus</h1>
-        <p className="text-xl text-gov-secondary/90 leading-relaxed">
+        <p className="text-xl text-gov-secondary leading-relaxed">
           The UK now asks its public bodies to publish how they use algorithmic and AI tools in decisions that affect people. The result, the Algorithmic Transparency Recording Standard, is the nearest thing to a public register of government AI. It is published one record at a time, which makes the individual disclosures visible but the pattern invisible. This assembles the whole set into one corpus.
         </p>
       </header>
@@ -85,7 +85,7 @@ export const AlgorithmicTransparencyCorpus: React.FC = () => {
             </div>
           ))}
         </div>
-        <p className="text-sm text-gov-secondary/90">Public bodies with the most ATRS disclosures.</p>
+        <p className="text-sm text-gov-secondary">Public bodies with the most ATRS disclosures.</p>
       </section>
 
       <section className="space-y-4">
@@ -94,7 +94,7 @@ export const AlgorithmicTransparencyCorpus: React.FC = () => {
           <p className="text-gov-dark leading-relaxed">
             Captured over time, the corpus becomes a live index of government AI adoption and transparency, the base for a disclosure-growth measure and for classifying tools by risk and function. It is the public-register companion to Tesseract&rsquo;s AI-governance work and to our <a href="https://github.com/fabio-rovai/open-governance" target="_blank" rel="noopener noreferrer" className="text-gov-blue underline hover:text-gov-blue-dark">open AI-governance tooling</a>: transparency is only useful when someone reads the whole of it.
           </p>
-          <p className="text-sm text-gov-secondary/90 leading-relaxed mt-4">
+          <p className="text-sm text-gov-secondary leading-relaxed mt-4">
             Independent, self-initiated open research. Contains public sector information licensed under the Open Government Licence v3.0.
           </p>
         </div>

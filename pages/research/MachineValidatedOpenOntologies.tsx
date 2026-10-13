@@ -64,7 +64,7 @@ export const MachineValidatedOpenOntologies: React.FC = () => {
         <h1 className="text-4xl font-extrabold text-gov-dark mb-6 tracking-tight leading-tight font-serif">
           Publishing machine-validated open data structures for the public sector
         </h1>
-        <p className="text-xl text-gov-secondary/90 leading-relaxed">
+        <p className="text-xl text-gov-secondary leading-relaxed">
           Structured, tagged data is only valuable if its quality is machine-verifiable. Across national skills data,
           heritage archives and an open-source toolkit, we build formally structured data, validate every statement with
           deterministic machine checks, and publish both the data and the validation tooling openly so anyone can re-run
@@ -117,7 +117,7 @@ export const MachineValidatedOpenOntologies: React.FC = () => {
           constraint-validation standard: a formal rulebook stating what a well-formed record must look like, checked by
           machine. Zero violations means every statement in the dataset passed.
         </p>
-        <div className="overflow-x-auto">
+        <div tabIndex={0} role="region" aria-label="Table, scrolls sideways on small screens" className="overflow-x-auto">
           <table className="w-full text-sm border-collapse">
             <thead>
               <tr className="bg-gov-bg border-b border-gov-border">

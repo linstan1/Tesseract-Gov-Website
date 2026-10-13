@@ -41,7 +41,7 @@ export const WrapFoodWaste: React.FC = () => {
         <h1 className="text-4xl font-extrabold text-gov-dark mb-6 tracking-tight leading-tight font-serif">
           WRAP Food Loss and Waste Data Taxonomy
         </h1>
-        <p className="text-xl text-gov-secondary/90 leading-relaxed">
+        <p className="text-xl text-gov-secondary leading-relaxed">
           Tesseract Academy has been commissioned by WRAP to develop a Food Loss and Waste data taxonomy for its Food Programme and global Food Pact Network.
         </p>
       </header>

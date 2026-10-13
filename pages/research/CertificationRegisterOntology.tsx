@@ -101,7 +101,7 @@ export const CertificationRegisterOntology: React.FC = () => (
       <h1 className="text-4xl font-extrabold text-gov-dark mb-6 tracking-tight leading-tight font-serif">
         Nobody Can Check an ISO 27001 Certificate, and the Registers Are Built That Way
       </h1>
-      <p className="text-xl text-gov-secondary/90 leading-relaxed">
+      <p className="text-xl text-gov-secondary leading-relaxed">
         We set out to build an ISO/IEC 27001 ontology that reproduces no ISO text, which turned out to be the easy part. The hard part was discovering that the assurance chain a buyer would use to check a certification claim is broken at every link, and that two of those breaks are deliberate design decisions rather than oversights. This page reports what we measured, publishes the vocabulary and the evidence, and explains the one modelling idea that makes the difference: a register that cannot be asked a question is not the same thing as a register that answers no.
       </p>
     </header>
@@ -334,7 +334,7 @@ export const CertificationRegisterOntology: React.FC = () => (
     <section className="space-y-4">
       <h2 className="text-2xl font-bold text-gov-dark font-serif">The artefact</h2>
       <p className="text-gov-dark leading-relaxed">
-        The repository is at <a className="text-gov-blue hover:underline" href={REPO}>github.com/fabio-rovai/certification-register-ontology</a>. It contains the OWL 2 vocabulary, the SKOS identifier registry in which each scheme declares whether its register can be enumerated at all, three SHACL layers including the copyright layer, resumable harvesters for UKAS and Contracts Finder, the dual computation script, 28 offline known answer tests, and a build report that records every source that could not be obtained, five hypotheses that died, and three bugs we found in our own work. Code MIT, ontology and documentation CC BY 4.0. No API keys are needed to reproduce any of it.
+        The repository is at <a className="text-gov-blue underline underline-offset-2 hover:text-gov-blue-dark" href={REPO}>github.com/fabio-rovai/certification-register-ontology</a>. It contains the OWL 2 vocabulary, the SKOS identifier registry in which each scheme declares whether its register can be enumerated at all, three SHACL layers including the copyright layer, resumable harvesters for UKAS and Contracts Finder, the dual computation script, 28 offline known answer tests, and a build report that records every source that could not be obtained, five hypotheses that died, and three bugs we found in our own work. Code MIT, ontology and documentation CC BY 4.0. No API keys are needed to reproduce any of it.
       </p>
     </section>
 
@@ -348,7 +348,7 @@ export const CertificationRegisterOntology: React.FC = () => (
           If you run one of the registers described here, the specific rows behind any figure above are available and the pipeline is reproducible end to end. Corrections are published on this page rather than applied silently.
         </p>
         <p className="text-gov-dark leading-relaxed">
-          Fabio Rovai, <a className="text-gov-blue hover:underline" href="mailto:fabio@thetesseractacademy.com">fabio@thetesseractacademy.com</a>.
+          Fabio Rovai, <a className="text-gov-blue underline underline-offset-2 hover:text-gov-blue-dark" href="mailto:fabio@thetesseractacademy.com">fabio@thetesseractacademy.com</a>.
         </p>
       </div>
     </section>

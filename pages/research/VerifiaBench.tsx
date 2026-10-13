@@ -53,7 +53,7 @@ export const VerifiaBench: React.FC = () => {
         <h1 className="text-4xl font-extrabold text-gov-dark mb-6 tracking-tight leading-tight font-serif">
           Fluency is saturated. Correctness is not.
         </h1>
-        <p className="text-xl text-gov-secondary/90 leading-relaxed">
+        <p className="text-xl text-gov-secondary leading-relaxed">
           Most benchmarks for LLMs on scientific tasks grade the answer with string match or an LLM judge, and both reward a confident, well-formed answer. So a model that emits a plausible-but-nonexistent gene, ontology class or predicate scores as correct. Grade the same output with a closed-world oracle instead, every term has to actually exist, and the picture inverts: models that look equally fluent turn out to be right anywhere from 0% to 100% of the time.
         </p>
       </header>
@@ -92,7 +92,7 @@ export const VerifiaBench: React.FC = () => {
             30 real gene-disease facts, each asking a model to write Biolink-typed RDF. The oracle parses the output, checks that every Biolink term it emits actually exists in the <a href="https://github.com/biolink/biolink-model" target="_blank" rel="noopener noreferrer" className="text-gov-blue underline hover:text-gov-blue-dark">Biolink Model</a>, and checks the structure (a real gene, a real disease, a real association predicate). Correctness is set-membership plus constraints, computed deterministically, the same <Link to="/research/ontology-correctness-benchmark" className="text-gov-blue underline hover:text-gov-blue-dark">closed-world principle</Link> that catches hallucinated terms in generated knowledge graphs, turned into an evaluation. Nine models, five open checkpoints run locally and Claude Haiku, Sonnet and Opus:
           </p>
         </div>
-        <div className="overflow-x-auto">
+        <div tabIndex={0} role="region" aria-label="Table, scrolls sideways on small screens" className="overflow-x-auto">
           <table className="w-full text-sm border-collapse">
             <thead>
               <tr className="bg-gov-bg border-b border-gov-border">
@@ -145,7 +145,7 @@ export const VerifiaBench: React.FC = () => {
             The benchmark above uses one ontology and one task. That was the easy case, and it let a local model tie the frontier. So we extended it to a second authority, the <a href="https://geneontology.org/" target="_blank" rel="noopener noreferrer" className="text-gov-blue underline hover:text-gov-blue-dark">Gene Ontology</a> (48,329 terms), and three task families: single-hop gene-disease (Biolink), GO annotation (emit a real GO term for a named process), and cross-ontology multi-hop (gene, disease and process, Biolink and GO in one graph). The oracle now checks term existence across both authorities, and multi-hop cannot be gamed by getting one authority right and inventing the other.
           </p>
         </div>
-        <div className="overflow-x-auto">
+        <div tabIndex={0} role="region" aria-label="Table, scrolls sideways on small screens" className="overflow-x-auto">
           <table className="w-full text-sm border-collapse">
             <thead>
               <tr className="bg-gov-bg border-b border-gov-border">
@@ -196,7 +196,7 @@ export const VerifiaBench: React.FC = () => {
           <cite className="text-sm text-gov-secondary font-semibold not-italic mt-2 block">Fabio Rovai, Tesseract Academy</cite>
         </blockquote>
 
-        <p className="text-sm text-gov-secondary/90 leading-relaxed">
+        <p className="text-sm text-gov-secondary leading-relaxed">
           An independent, self-initiated study: the Biolink Model, five locally-run open checkpoints over an OpenAI-compatible endpoint, and Claude Haiku, Sonnet and Opus. Qwen3.6-35B is a reasoning model, scored on its final answer with a large token budget so it can finish reasoning. Two authorities (Biolink and the Gene Ontology) and three task families including cross-ontology multi-hop; ChEBI, Reactome and EDAM extend the same oracle further. The facts are public, so the honest use is relative comparison and a versioned, inspectable oracle, not a secret leaderboard. The Claude models are queried through the claude -p CLI, which loads this machine's configuration, a raw API call would be the cleaner comparison. Full method, per-task outputs and reproducible code in the repository.
         </p>
       </section>

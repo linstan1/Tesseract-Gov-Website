@@ -112,18 +112,18 @@ export const Ontology: React.FC = () => {
         <h1 className="text-5xl font-extrabold text-gov-dark mb-6 tracking-tight leading-tight">
           Safe AI
         </h1>
-        <p className="text-xl text-gov-secondary/90 leading-relaxed max-w-4xl">
+        <p className="text-xl text-gov-secondary leading-relaxed max-w-4xl">
           An AI system is safe enough to deploy when it cannot serve an answer, or take an action, that
           nothing was able to check. That is an engineering property, not a policy one, and it is what we
           build. The evidence sits below: {ONTOLOGY_ASSET_COUNT} open studies across{' '}
           {ONTOLOGY_REPO_COUNT} public repositories, every one reproducible from public data, every headline
           computed at least two independent ways, and the hypotheses that died reported rather than dropped.
           If you are here to commission work rather than read it, the{' '}
-          <Link to="/services/ontology-engineering" className="text-gov-blue hover:underline">
+          <Link to="/services/ontology-engineering" className="text-gov-blue underline underline-offset-2 hover:text-gov-blue-dark">
             ontology engineering service page
           </Link>{' '}
           and the{' '}
-          <Link to="/services/ai-governance" className="text-gov-blue hover:underline">AI governance service page</Link>{' '}
+          <Link to="/services/ai-governance" className="text-gov-blue underline underline-offset-2 hover:text-gov-blue-dark">AI governance service page</Link>{' '}
           are the shorter routes.
         </p>
       </header>
@@ -161,7 +161,7 @@ export const Ontology: React.FC = () => {
             </Link>
             . On the UK Information Exchange Standard, confabulated terms fell from 93.7 per cent of outputs
             to 1.0 per cent and conformance rose from zero to 88.6 per cent. On a{' '}
-            <Link to="/research/neurosymbolic-space-kg" className="text-gov-blue hover:underline">
+            <Link to="/research/neurosymbolic-space-kg" className="text-gov-blue underline underline-offset-2 hover:text-gov-blue-dark">
               space object catalogue
             </Link>
             , hallucinated terms fell from 13.81 per output to 0.06.
@@ -190,12 +190,12 @@ export const Ontology: React.FC = () => {
           Management Framework and ISO/IEC 42001 all require documented risk classification, monitoring and
           oversight, and none of them specifies what a sufficient technical check looks like. That is the gap
           most programmes fail an audit in: the policy exists and the evidence does not. Our{' '}
-          <a href="https://github.com/fabio-rovai/open-governance" target="_blank" rel="noopener noreferrer" className="text-gov-blue hover:underline">
+          <a href="https://github.com/fabio-rovai/open-governance" target="_blank" rel="noopener noreferrer" className="text-gov-blue underline underline-offset-2 hover:text-gov-blue-dark">
             Open Governance server
           </a>{' '}
           is the open-source answer to that half, discovering AI systems, classifying risk against all three
           frameworks and emitting audit-ready compliance matrices through 48 governance tools. The{' '}
-          <Link to="/services/ai-governance" className="text-gov-blue hover:underline">AI governance service</Link>{' '}
+          <Link to="/services/ai-governance" className="text-gov-blue underline underline-offset-2 hover:text-gov-blue-dark">AI governance service</Link>{' '}
           is how it gets applied.
         </p>
       </section>
@@ -206,10 +206,10 @@ export const Ontology: React.FC = () => {
           An ontology is a formal, machine-readable model of a domain: what kinds of thing exist, what
           properties they have, what relationships can hold between them, and what constraints must hold.
           It is normally written in{' '}
-          <a href="https://www.w3.org/TR/owl2-overview/" target="_blank" rel="noopener noreferrer" className="text-gov-blue hover:underline">OWL 2</a>,
-          with <a href="https://www.w3.org/TR/skos-reference/" target="_blank" rel="noopener noreferrer" className="text-gov-blue hover:underline">SKOS</a>{' '}
+          <a href="https://www.w3.org/TR/owl2-overview/" target="_blank" rel="noopener noreferrer" className="text-gov-blue underline underline-offset-2 hover:text-gov-blue-dark">OWL 2</a>,
+          with <a href="https://www.w3.org/TR/skos-reference/" target="_blank" rel="noopener noreferrer" className="text-gov-blue underline underline-offset-2 hover:text-gov-blue-dark">SKOS</a>{' '}
           carrying the controlled vocabulary and{' '}
-          <a href="https://www.w3.org/TR/shacl/" target="_blank" rel="noopener noreferrer" className="text-gov-blue hover:underline">SHACL</a>{' '}
+          <a href="https://www.w3.org/TR/shacl/" target="_blank" rel="noopener noreferrer" className="text-gov-blue underline underline-offset-2 hover:text-gov-blue-dark">SHACL</a>{' '}
           carrying the constraints. Writing it formally buys you one thing that a data dictionary or a
           Confluence page cannot: software can read it and reject a statement that contradicts it.
         </p>
@@ -226,9 +226,9 @@ export const Ontology: React.FC = () => {
           hierarchy of concepts. An ontology adds the relationships and the constraints. A knowledge graph
           is the instance data underneath: the actual entities and the actual claims about them. The
           ontology says what can be said. The graph says what is being claimed. Our{' '}
-          <Link to="/glossary" className="text-gov-blue hover:underline">glossary</Link> covers the rest of
+          <Link to="/glossary" className="text-gov-blue underline underline-offset-2 hover:text-gov-blue-dark">glossary</Link> covers the rest of
           the vocabulary, and the{' '}
-          <a href={COURSE_URL} target="_blank" rel="noopener noreferrer" className="text-gov-blue hover:underline">
+          <a href={COURSE_URL} target="_blank" rel="noopener noreferrer" className="text-gov-blue underline underline-offset-2 hover:text-gov-blue-dark">
             free 15-lesson ontology engineering course
           </a>{' '}
           teaches the modelling itself, from RDF through SPARQL, SHACL and GraphRAG.

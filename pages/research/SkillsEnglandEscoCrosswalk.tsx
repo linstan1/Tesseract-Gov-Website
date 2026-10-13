@@ -46,7 +46,7 @@ export const SkillsEnglandEscoCrosswalk: React.FC = () => {
         <h1 className="text-4xl font-extrabold text-gov-dark mb-6 tracking-tight leading-tight font-serif">
           Where England&rsquo;s occupational standards meet Europe&rsquo;s skills vocabulary
         </h1>
-        <p className="text-xl text-gov-secondary/90 leading-relaxed">
+        <p className="text-xl text-gov-secondary leading-relaxed">
           To read English apprenticeship and skills data against the reference vocabulary the rest of Europe uses, you need a crosswalk, and you need to know how far to trust each link. This is that crosswalk, built openly, stated honestly as a lexical baseline, and published with its gaps rather than around them.
         </p>
       </header>
@@ -74,7 +74,7 @@ export const SkillsEnglandEscoCrosswalk: React.FC = () => {
                 <code className="text-sm font-bold">{b.band}</code>
                 <span className="text-2xl font-bold tabular-nums font-mono">{b.n}</span>
               </div>
-              <p className="text-xs mt-1 opacity-90">{b.def}</p>
+              <p className="text-xs mt-1">{b.def}</p>
             </div>
           ))}
         </div>
@@ -107,7 +107,7 @@ export const SkillsEnglandEscoCrosswalk: React.FC = () => {
           <p className="text-gov-dark leading-relaxed">
             The crosswalk builds directly on our <Link to="/research/skills-england-occupational-maps" className="text-gov-blue underline hover:text-gov-blue-dark">Skills England occupational maps ontology</Link> (the 1,269 standards modelled as a graph with the SOC crosswalk), and pairs with our <a href="https://github.com/fabio-rovai/open-ontologies/blob/main/case-studies/skills-mobility/case-study.md" target="_blank" rel="noopener noreferrer" className="text-gov-blue underline hover:text-gov-blue-dark">open PIAAC skills-mobility research</a>. Together they let English skills data be read against SOC for national statistics and against ESCO for international comparison, from one open, reproducible base.
           </p>
-          <p className="text-sm text-gov-secondary/90 leading-relaxed mt-4">
+          <p className="text-sm text-gov-secondary leading-relaxed mt-4">
             Independent, self-initiated open research. Skills England names under the Open Government Licence v3.0; ESCO &copy; European Union, CC BY 4.0; this crosswalk CC BY 4.0. Endorsed by neither body.
           </p>
         </div>

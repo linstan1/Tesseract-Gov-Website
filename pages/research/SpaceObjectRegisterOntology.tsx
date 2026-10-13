@@ -194,7 +194,7 @@ export const SpaceObjectRegisterOntology: React.FC = () => (
       <h1 className="text-4xl font-extrabold text-gov-dark mb-6 tracking-tight leading-tight font-serif">
         An open ontology for space object catalogues, tested against CelesTrak and the General Catalog of Artificial Space Objects
       </h1>
-      <p className="text-xl text-gov-secondary/90 leading-relaxed">
+      <p className="text-xl text-gov-secondary leading-relaxed">
         Every collision warning, every reentry prediction and every attribution of an object to a state rests on a catalogue entry being about a real thing. Two catalogues of objects in Earth orbit are open and free to download. On 18 August 2026 we took both, reconciled them object by object, and measured what happens where they meet. The answer is not that either is careless. Their identifier hygiene is better than any register we have previously measured. The answer is that a catalogue can be perfectly self-consistent and still be wrong about whether a thing exists, and that only one of the two has any way to say so.
       </p>
     </header>
@@ -353,7 +353,7 @@ export const SpaceObjectRegisterOntology: React.FC = () => (
           Write to <a href="mailto:fabio@thetesseractacademy.com" className="text-gov-blue underline hover:text-gov-blue-dark">fabio@thetesseractacademy.com</a> with the catalogue name.
         </p>
       </div>
-      <p className="text-sm text-gov-secondary/90 leading-relaxed">
+      <p className="text-sm text-gov-secondary leading-relaxed">
         Related work: the same register-boundary discipline found every FDIC LEI truncated in <Link to="/research/bank-register-ontology" className="text-gov-blue underline hover:text-gov-blue-dark">the US bank register</Link>, dangling company numbers in <Link to="/research/uk-register-ontology" className="text-gov-blue underline hover:text-gov-blue-dark">the UK public registers</Link>, and the category all of them belong to is set out in <Link to="/research/register-assurance" className="text-gov-blue underline hover:text-gov-blue-dark">Register assurance: why every public register fails at its boundary</Link>. On space specifically, <Link to="/research/space-metrics-crosswalk" className="text-gov-blue underline hover:text-gov-blue-dark">the space environment metrics crosswalk</Link> measures the same problem one layer up, between debris models rather than between catalogues.
       </p>
     </section>

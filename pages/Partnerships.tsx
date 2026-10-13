@@ -7,7 +7,7 @@ export const Partnerships: React.FC = () => {
     <div className="max-w-6xl mx-auto px-6 lg:px-8 py-20 space-y-16">
       <div>
         <h1 className="text-5xl font-extrabold text-gov-dark mb-6 tracking-tight leading-tight">Consortium Partnerships</h1>
-        <p className="text-xl text-gov-secondary/90 leading-relaxed max-w-4xl">
+        <p className="text-xl text-gov-secondary leading-relaxed max-w-4xl">
           We collaborate with universities, SMEs, and NGOs on Innovate UK and Horizon Europe bids. Join our network.
         </p>
       </div>

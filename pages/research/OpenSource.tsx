@@ -37,7 +37,7 @@ export const OpenSource: React.FC = () => (
       <h1 className="text-5xl font-extrabold text-gov-dark mb-6 tracking-tight leading-tight">
         The standards we file bugs against
       </h1>
-      <p className="text-xl text-gov-secondary/90 leading-relaxed max-w-4xl">
+      <p className="text-xl text-gov-secondary leading-relaxed max-w-4xl">
         Buying data work from us means buying the judgement that finds a defect in a published standard and
         the discipline to report it where the maintainer can act on it. This page is the record of that,
         kept in public and kept current.

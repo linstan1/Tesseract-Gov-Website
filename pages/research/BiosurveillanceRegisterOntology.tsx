@@ -89,7 +89,7 @@ export const BiosurveillanceRegisterOntology: React.FC = () => (
       <h1 className="text-4xl font-extrabold text-gov-dark mb-6 tracking-tight leading-tight font-serif">
         The missing pathogen crosswalk: an open ontology for One Health biosurveillance registers
       </h1>
-      <p className="text-xl text-gov-secondary/90 leading-relaxed">
+      <p className="text-xl text-gov-secondary leading-relaxed">
         One Health is an integration claim. It says that food safety, human health, animal health, plant health and environmental surveillance are one system rather than five. Integration claims can be tested, and the test is not a policy question. It is whether a record in one register can actually be joined to a record in another. On 18 August 2026 we took the Food Standards Agency&apos;s complete open food alert register, all 1,348 alerts published since January 2018, and asked that question of every one of them. This is a case study in register assurance applied to biosurveillance, and everything below is reproducible from public data under the Open Government Licence.
       </p>
     </header>
@@ -140,7 +140,7 @@ export const BiosurveillanceRegisterOntology: React.FC = () => (
       <p className="text-gov-dark leading-relaxed">
         The year table shows this is not a legacy artefact being worked off.
       </p>
-      <div className="overflow-x-auto">
+      <div tabIndex={0} role="region" aria-label="Table, scrolls sideways on small screens" className="overflow-x-auto">
         <table className="min-w-full text-sm border border-gov-border">
           <thead className="bg-gov-bg/60">
             <tr>
@@ -238,7 +238,7 @@ export const BiosurveillanceRegisterOntology: React.FC = () => (
       <p className="text-gov-dark leading-relaxed">
         Criticism without a remedy is not worth publishing. Every organism the register names was resolved to an NCBI Taxonomy identifier twice, once through the EBI Ontology Lookup Service and once through NCBI E-utilities, and a mapping is emitted only where the two agree. All nine resolved, and all nine agreed.
       </p>
-      <div className="overflow-x-auto">
+      <div tabIndex={0} role="region" aria-label="Table, scrolls sideways on small screens" className="overflow-x-auto">
         <table className="min-w-full text-sm border border-gov-border">
           <thead className="bg-gov-bg/60">
             <tr>

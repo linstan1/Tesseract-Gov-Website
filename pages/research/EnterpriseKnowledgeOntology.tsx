@@ -92,14 +92,14 @@ const HBars: React.FC<{ title: string; note?: string; max?: number; rows: BarRow
       <div className="space-y-2">
         {rows.map((r) => (
           <div key={r.label} className="flex items-center gap-3" title={`${r.label}: ${r.display}`}>
-            <span className="w-44 shrink-0 text-right text-xs text-gov-secondary leading-tight">{r.label}</span>
+            <span className="w-44 max-w-[40%] shrink-0 text-right text-xs text-gov-secondary leading-tight">{r.label}</span>
             <div className="flex-1 h-[18px]">
               <div
                 className="h-full rounded-r"
                 style={{ width: `${Math.max((r.value / m) * 100, 0.5)}%`, backgroundColor: r.color ?? CHART.teal }}
               />
             </div>
-            <span className="w-24 shrink-0 text-xs font-semibold text-gov-dark tabular-nums">{r.display}</span>
+            <span className="w-16 sm:w-24 shrink-0 text-xs font-semibold text-gov-dark tabular-nums">{r.display}</span>
           </div>
         ))}
       </div>
@@ -155,7 +155,7 @@ export const EnterpriseKnowledgeOntology: React.FC = () => (
       <h1 className="text-4xl font-extrabold text-gov-dark mb-6 tracking-tight leading-tight font-serif">
         The Corpus Readiness Index: is your knowledge base fit to feed an AI?
       </h1>
-      <p className="text-xl text-gov-secondary/90 leading-relaxed">
+      <p className="text-xl text-gov-secondary leading-relaxed">
         {"We examined 69,306 documents across three public estates: the GOV.UK guidance corpus, the Kubernetes documentation and Microsoft's .NET documentation. None of the 54,222 GOV.UK documents records who is accountable for keeping the content accurate, nor when it was last verified. On the one estate that does publish verification dates, the median document was last verified 9.38 years ago and last edited 1.94 years ago, creating an appearance of currency that does not reflect the underlying status. The instrument behind these figures is open, comprising an ontology of what makes content authoritative, a publish gate that enforces it, and the Corpus Readiness Index, a seven-dimension score computed from a corpus's own metadata and text. Every figure below regenerates from committed code."}
       </p>
     </header>
@@ -198,7 +198,7 @@ export const EnterpriseKnowledgeOntology: React.FC = () => (
         note="Random sample of 499 sitemap URLs: 6.41% withdrawn (95% CI 4.26 to 8.56), 25 of 32 still serving substantive body text, median 5.87 years since withdrawal."
         rows={FUNNEL_ROWS}
       />
-      <div className="overflow-x-auto">
+      <div tabIndex={0} role="region" aria-label="Table, scrolls sideways on small screens" className="overflow-x-auto">
         <table className="w-full text-sm border border-gov-border">
           <tbody className="divide-y divide-gov-border">
             <tr><td className="p-3">URLs advertised in the public sitemap</td><td className="p-3 text-right font-semibold">864,397</td></tr>
@@ -259,7 +259,7 @@ export const EnterpriseKnowledgeOntology: React.FC = () => (
         max={100}
         rows={CRI_ROWS}
       />
-      <div className="overflow-x-auto">
+      <div tabIndex={0} role="region" aria-label="Table, scrolls sideways on small screens" className="overflow-x-auto">
         <table className="w-full text-sm border border-gov-border">
           <thead className="bg-gov-bg/40"><tr><th className="p-3 text-left">Dimension</th><th className="p-3 text-right">Score</th><th className="p-3 text-left">The number that matters</th></tr></thead>
           <tbody className="divide-y divide-gov-border">
@@ -298,7 +298,7 @@ export const EnterpriseKnowledgeOntology: React.FC = () => (
       <p className="text-gov-dark leading-relaxed">
         {"The GOV.UK study left the framework's most important claim as an argument rather than a measurement: that time since last modification flatters a corpus. GOV.UK records no verification date, so the two quantities could not be compared. Docs-as-code estates record both. Microsoft Learn's house style defines the ms.date field as the date an article was last reviewed for accuracy, and git records independently when the file actually changed. So we scanned two further corpora on 16 August 2026: the Kubernetes documentation, comprising 1,672 documents, and the .NET documentation, comprising 13,412 documents."}
       </p>
-      <div className="overflow-x-auto">
+      <div tabIndex={0} role="region" aria-label="Table, scrolls sideways on small screens" className="overflow-x-auto">
         <table className="w-full text-sm border border-gov-border">
           <thead className="bg-gov-bg/40"><tr><th className="p-3 text-left">Corpus</th><th className="p-3 text-right">Declared verification date</th><th className="p-3 text-right">Named owner</th><th className="p-3 text-right">Strict commitment</th></tr></thead>
           <tbody className="divide-y divide-gov-border">

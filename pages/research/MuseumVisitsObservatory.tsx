@@ -277,7 +277,7 @@ export const MuseumVisitsObservatory: React.FC = () => {
         <h1 className="text-4xl font-extrabold text-gov-dark mb-6 tracking-tight leading-tight font-serif">
           The DCMS Museum Visits Observatory
         </h1>
-        <p className="text-xl text-gov-secondary/90 leading-relaxed">
+        <p className="text-xl text-gov-secondary leading-relaxed">
           Every month, DCMS publishes visitor figures for the national museums and galleries it sponsors - and every month those numbers land as a spreadsheet, not a decision tool. We rebuilt the full statistical data set, January 2019 to March 2026, as an interactive observatory: 16 museum groups, site-level detail, pandemic closures marked, and recovery measured against each institution's own 2019 baseline. It is a working demonstration of the difference between reporting and insight, on data every cultural organisation already knows.
         </p>
       </header>
@@ -306,7 +306,7 @@ export const MuseumVisitsObservatory: React.FC = () => {
             id="museum-select"
             value={selected}
             onChange={e => setSelected(e.target.value)}
-            className="text-sm border border-gov-border rounded-lg px-3 py-2 bg-white text-gov-dark focus:outline-none focus:ring-2 focus:ring-gov-blue/40"
+            className="text-sm border border-gov-secondary-light rounded-lg px-3 py-2 bg-white text-gov-dark focus:outline-none focus:ring-2 focus:ring-gov-focus"
           >
             {groupNames.map(g => (
               <option key={g} value={g}>
@@ -316,7 +316,7 @@ export const MuseumVisitsObservatory: React.FC = () => {
           </select>
           {selected === 'Imperial War Museum' && (
             <label className="flex items-center gap-2 text-sm text-gov-secondary cursor-pointer">
-              <input type="checkbox" checked={showSites} onChange={e => setShowSites(e.target.checked)} className="accent-[#12a59c]" />
+              <input type="checkbox" checked={showSites} onChange={e => setShowSites(e.target.checked)} className="accent-[#2c7773]" />
               Break down by site
             </label>
           )}
@@ -349,7 +349,7 @@ export const MuseumVisitsObservatory: React.FC = () => {
         )}
 
         {data && showTable && (
-          <div className="overflow-x-auto max-h-96 overflow-y-auto border border-gov-border/40 rounded-lg">
+          <div tabIndex={0} role="region" aria-label="Table, scrolls sideways on small screens" className="overflow-x-auto max-h-96 overflow-y-auto border border-gov-border/40 rounded-lg">
             <table className="w-full text-xs">
               <thead className="bg-gov-bg sticky top-0">
                 <tr>
@@ -434,7 +434,7 @@ export const MuseumVisitsObservatory: React.FC = () => {
         </a>
       </div>
 
-      <p className="text-sm text-gov-secondary/90 leading-relaxed">
+      <p className="text-sm text-gov-secondary leading-relaxed">
         Independent, self-initiated open research. Source figures &copy; Crown copyright, Department for Culture, Media and Sport, reused under the Open Government Licence v3.0. This observatory is not endorsed by DCMS or any museum shown.
       </p>
 

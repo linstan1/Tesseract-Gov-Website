@@ -79,7 +79,7 @@ export const WelshGovernment: React.FC = () => {
         <h1 className="text-4xl font-extrabold text-gov-dark mb-6 tracking-tight leading-tight font-serif">
           Welsh Government Land Valuation Research
         </h1>
-        <p className="text-xl text-gov-secondary/90 leading-relaxed">
+        <p className="text-xl text-gov-secondary leading-relaxed">
           Published <time dateTime="2026-03">March 2026</time>. Findings directly inform Welsh Government local government finance policy and are cited in a Welsh Government Ministerial Written Statement.
         </p>
       </header>
@@ -119,7 +119,7 @@ export const WelshGovernment: React.FC = () => {
         <p className="text-gov-secondary leading-relaxed">
           The analysis spans 1,912 <strong>Lower Super Output Areas</strong> (LSOAs) with land transactions, the small-area geographic unit defined and maintained by the <strong>Office for National Statistics</strong>, which is around 99% of all Welsh LSOAs, enabling direct, like-for-like comparison consistent with UK-wide subnational data standards.
         </p>
-        <div className="overflow-x-auto">
+        <div tabIndex={0} role="region" aria-label="Table, scrolls sideways on small screens" className="overflow-x-auto">
           <table className="w-full text-sm border-collapse">
             <thead>
               <tr className="bg-gov-bg border-b border-gov-border">

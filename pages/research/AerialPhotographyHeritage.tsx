@@ -69,7 +69,7 @@ export const AerialPhotographyHeritage: React.FC = () => {
         <h1 className="text-4xl font-extrabold text-gov-dark mb-6 tracking-tight leading-tight font-serif">
           From Digitised to Computable: an Open Standard for Aerial Photography Heritage
         </h1>
-        <p className="text-xl text-gov-secondary/90 leading-relaxed">
+        <p className="text-xl text-gov-secondary leading-relaxed">
           Most of the UK's heritage is digitised but not computable. It is scanned, catalogued and on a map, yet a researcher still cannot query it at scale. This is a worked, fully open demonstration of how we close that gap for one collection type done properly, tested against real national archives in the UK, Canada and the United States.
         </p>
       </header>
@@ -115,7 +115,7 @@ export const AerialPhotographyHeritage: React.FC = () => {
             The georeferenced, mapped subset of NCAP already reaches dozens of countries across multiple continents (log scale; densest countries are cluster-capped, so shown as lower bounds). Our 292-record sample is a small, deliberately stratified slice of this index.
           </figcaption>
         </figure>
-        <div className="overflow-x-auto">
+        <div tabIndex={0} role="region" aria-label="Table, scrolls sideways on small screens" className="overflow-x-auto">
           <table className="w-full text-sm border-collapse">
             <thead>
               <tr className="bg-gov-bg border-b border-gov-border">
@@ -173,7 +173,7 @@ export const AerialPhotographyHeritage: React.FC = () => {
             Three national collections, one standard: NCAP (UK), NAPL (Canada) and WHAIFinder (USA), each harvested live from public endpoints and validated against the identical NAPH Baseline at zero SHACL violations.
           </figcaption>
         </figure>
-        <div className="overflow-x-auto">
+        <div tabIndex={0} role="region" aria-label="Table, scrolls sideways on small screens" className="overflow-x-auto">
           <table className="w-full text-sm border-collapse">
             <thead>
               <tr className="bg-gov-bg border-b border-gov-border">

@@ -66,7 +66,7 @@ export const Ies4TurtleLanguageModel: React.FC = () => {
         <h1 className="text-4xl font-extrabold text-gov-dark mb-6 tracking-tight leading-tight font-serif">
           An open language model for IES4 data
         </h1>
-        <p className="text-xl text-gov-secondary/90 leading-relaxed">
+        <p className="text-xl text-gov-secondary leading-relaxed">
           To our knowledge the first openly published language model fine-tuned for the UK Information Exchange Standard (IES), the 4D ontology behind defence and security data. It turns a plain-English scenario into IES-conformant RDF, and it is released as a research prototype with its dataset and evaluation harness so the field can check the work.
         </p>
       </header>
@@ -103,7 +103,7 @@ export const Ies4TurtleLanguageModel: React.FC = () => {
         <p className="text-gov-dark leading-relaxed">
           The core idea is to never trust the model to invent structure. Instead we generate the structure correctly, then teach the model to reproduce it. Every training graph was built programmatically with the <a href="https://github.com/telicent-oss/ies-tool" target="_blank" rel="noopener noreferrer" className="text-gov-blue underline hover:text-gov-blue-dark">telicent-ies-tool</a> and validated twice before training.
         </p>
-        <div className="overflow-x-auto">
+        <div tabIndex={0} role="region" aria-label="Table, scrolls sideways on small screens" className="overflow-x-auto">
           <table className="w-full text-sm border-collapse">
             <thead>
               <tr className="bg-gov-bg border-b border-gov-border">
@@ -130,7 +130,7 @@ export const Ies4TurtleLanguageModel: React.FC = () => {
             Measured on held-out prompts against the untuned base model. The point of the fine-tune is not fluency, which the base model already has, but conformance: using real IES terms, in structurally valid ways.
           </p>
         </div>
-        <div className="overflow-x-auto">
+        <div tabIndex={0} role="region" aria-label="Table, scrolls sideways on small screens" className="overflow-x-auto">
           <table className="w-full text-sm border-collapse">
             <thead>
               <tr className="bg-gov-bg border-b border-gov-border">
@@ -152,7 +152,7 @@ export const Ies4TurtleLanguageModel: React.FC = () => {
             </tbody>
           </table>
         </div>
-        <p className="text-sm text-gov-secondary/90 leading-relaxed">
+        <p className="text-sm text-gov-secondary leading-relaxed">
           Out-of-distribution performance, on rich scenarios taken from the real published IES sample data rather than our training patterns, is markedly lower (term conformance around 30%). We report that openly in the model card rather than hide it: it is the honest edge of what a small on-device fine-tune achieves today, and the reason the model is released as a prototype to draft from, not an oracle to trust blind.
         </p>
       </section>
@@ -164,7 +164,7 @@ export const Ies4TurtleLanguageModel: React.FC = () => {
             The obvious challenge to a fine-tuned model is: why not skip it, and instead wrap a general model in a validate-and-repair loop? Generate the Turtle, check it against the ontology, feed the specific errors back, and ask the model to fix them. We ran that experiment directly. Two models (the untuned base and this fine-tune), each on its own and inside a three-round repair loop, on both the in-distribution and the harder out-of-distribution test sets. The number below is IES4 term conformance.
           </p>
         </div>
-        <div className="overflow-x-auto">
+        <div tabIndex={0} role="region" aria-label="Table, scrolls sideways on small screens" className="overflow-x-auto">
           <table className="w-full text-sm border-collapse">
             <thead>
               <tr className="bg-gov-bg border-b border-gov-border">
@@ -233,7 +233,7 @@ export const Ies4TurtleLanguageModel: React.FC = () => {
             A plain repair loop that only says "that term is invalid" lifts this from 27% to 45%: it fixes the cases where the model can guess the correction, and stalls where it cannot. A <strong>term-suggesting validator</strong> that returns the nearest real IES term ("use <code className="text-sm bg-gov-bg px-1.5 py-0.5 rounded">ies:isParticipantIn</code>") closes most of the rest.
           </p>
         </div>
-        <div className="overflow-x-auto">
+        <div tabIndex={0} role="region" aria-label="Table, scrolls sideways on small screens" className="overflow-x-auto">
           <table className="w-full text-sm border-collapse">
             <thead>
               <tr className="bg-gov-bg border-b border-gov-border">
@@ -279,7 +279,7 @@ export const Ies4TurtleLanguageModel: React.FC = () => {
           <cite className="text-sm text-gov-secondary font-semibold not-italic mt-2 block">Fabio Rovai, Tesseract Academy</cite>
         </blockquote>
 
-        <p className="text-sm text-gov-secondary/90 leading-relaxed">
+        <p className="text-sm text-gov-secondary leading-relaxed">
           This is an independent, self-initiated demonstration built entirely on published open standards and open tools. It is not affiliated with, or endorsed by, the Ministry of Defence, the IES Working Group, Telicent or Dstl. IES4 is Crown Copyright, MIT-licensed; the model weights are MIT; the generalisation data derived from Text2KGBench is attributed under CC-BY-SA-4.0 in the model card.
         </p>
       </section>

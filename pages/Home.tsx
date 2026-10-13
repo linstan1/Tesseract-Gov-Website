@@ -11,16 +11,16 @@ export const Home: React.FC = () => {
       {/* Hero Section */}
       <section className="bg-white px-6 py-24 sm:py-32 lg:px-8">
         <div className="max-w-5xl mx-auto">
-          <div className="inline-block py-1.5 px-3 rounded-full bg-gov-blue/10 text-gov-blue text-sm font-semibold mb-6 uppercase tracking-wide">
+          <div className="inline-block py-1.5 px-3 rounded-full bg-gov-blue/10 text-gov-blue-dark text-sm font-semibold mb-6 uppercase tracking-wide">
             Public Sector Delivery Partner
           </div>
           <h1 className="text-5xl sm:text-6xl font-extrabold text-gov-dark tracking-tight mb-6 leading-tight max-w-4xl">
             Research-backed AI and data services for <span className="text-gov-blue">UK public sector</span>
           </h1>
-          <p className="text-xl text-gov-secondary/90 mb-6 max-w-3xl leading-relaxed">
-            Tesseract Academy delivers AI consulting, research, public engagement, and survey design for UK government bodies. Crown Commercial Service supplier on RM6200 (AI DPS), RM6126 (Research &amp; Insights DPS), RM6219 (Learning &amp; Training Services DPS), and RM6235 (Space-Enabled &amp; Geospatial Services DPS).
+          <p className="text-xl text-gov-secondary mb-6 max-w-3xl leading-relaxed">
+            Tesseract Academy delivers AI consulting, research, public engagement, and survey design for UK government bodies. Crown Commercial Service supplier on RM6200 (AI DPS), RM6126 (Research &amp; Insights DPS), RM6219 (Learning &amp; Training Services DPS), RM6235 (Space-Enabled &amp; Geospatial Services DPS) and RM6094 (Spark DPS, appointed August 2026).
           </p>
-          <p className="text-base text-gov-secondary/80 mb-10 max-w-3xl leading-relaxed">
+          <p className="text-base text-gov-secondary mb-10 max-w-3xl leading-relaxed">
             Delivered for Welsh Government, Innovate UK, National Digital Twin Programme, Qualifications Wales, and Fintech Scotland.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
@@ -40,7 +40,7 @@ export const Home: React.FC = () => {
           {[
             { value: "1,916", label: "Welsh LSOAs analysed", sub: "99% of Welsh geography" },
             { value: "1,100", label: "BridgeAI registrations", sub: "vs 200 capacity target" },
-            { value: "4", label: "CCS frameworks", sub: "RM6200 · RM6126 · RM6219 · RM6235" },
+            { value: "5", label: "CCS frameworks", sub: "RM6200 · RM6126 · RM6219 · RM6235 · RM6094" },
           ].map((m, i) => (
             <div key={i}>
               <div className="text-3xl font-extrabold text-white mb-1 font-mono tabular-nums">{m.value}</div>
@@ -95,7 +95,7 @@ export const Home: React.FC = () => {
                <Shield className="w-6 h-6 text-gov-blue" />
              </div>
              <h3 className="font-semibold text-lg mb-3 text-gov-dark">Compliance First</h3>
-             <p className="text-base text-gov-secondary/90 leading-relaxed">
+             <p className="text-base text-gov-secondary leading-relaxed">
                Cyber Essentials certified and ISO 27001 aligned. Public liability £5M, employer&apos;s liability £10M, professional indemnity £5M. Registered with the Information Commission (ZB715782). <a href="/accessibility" className="text-gov-blue underline hover:text-gov-blue-dark">Accessibility statement</a>.
              </p>
            </div>
@@ -104,7 +104,7 @@ export const Home: React.FC = () => {
                <CheckCircle className="w-6 h-6 text-gov-blue" />
              </div>
              <h3 className="font-semibold text-lg mb-3 text-gov-dark">Delivery Track Record</h3>
-             <p className="text-base text-gov-secondary/90 leading-relaxed">
+             <p className="text-base text-gov-secondary leading-relaxed">
                Delivered for Welsh Government, Innovate UK, NDTP, Qualifications Wales, and Fintech Scotland. Published on GOV.WALES. Cited by Skills England alongside The Alan Turing Institute.
              </p>
            </div>
@@ -113,8 +113,8 @@ export const Home: React.FC = () => {
                <div className="w-8 h-8 flex items-center justify-center font-bold text-gov-blue text-sm border-2 border-gov-blue rounded-md">UK</div>
              </div>
              <h3 className="font-semibold text-lg mb-3 text-gov-dark">UK &amp; EU Ready</h3>
-             <p className="text-base text-gov-secondary/90 leading-relaxed">
-               4 CCS frameworks. Horizon Europe PIC: 880269472. DV-cleared consultant available for classified programmes. DUNS: 222180245. PPON: PWJP-6874-MXDJ.
+             <p className="text-base text-gov-secondary leading-relaxed">
+               5 CCS frameworks. Horizon Europe PIC: 880269472. DV-cleared consultant available for classified programmes. DUNS: 222180245. PPON: PWJP-6874-MXDJ.
              </p>
            </div>
         </div>
@@ -142,7 +142,7 @@ export const Home: React.FC = () => {
                 </div>
                 <div>
                   <h3 className="font-semibold text-gov-dark mb-1">{item.title}</h3>
-                  <p className="text-sm text-gov-secondary/90 leading-relaxed">{item.desc}</p>
+                  <p className="text-sm text-gov-secondary leading-relaxed">{item.desc}</p>
                 </div>
               </div>
             ))}
@@ -246,11 +246,11 @@ export const Home: React.FC = () => {
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-gov-blue flex-shrink-0 mt-0.5" />
-                  <span><strong>London Data Week  - AI Tools for the Visually Impaired</strong>  - Co-organised with <a href="https://www.visionability.org.uk/" target="_blank" rel="noopener noreferrer" className="text-gov-blue hover:underline">Vision Ability CIC</a> a public workshop and demonstration on making AI tools accessible to people with visual impairments, as part of <a href="https://londondataweek.org/ldw25-events/" target="_blank" rel="noopener noreferrer" className="text-gov-blue hover:underline">London Data Week 2025</a>.</span>
+                  <span><strong>London Data Week  - AI Tools for the Visually Impaired</strong>  - Co-organised with <a href="https://www.visionability.org.uk/" target="_blank" rel="noopener noreferrer" className="text-gov-blue underline underline-offset-2 hover:text-gov-blue-dark">Vision Ability CIC</a> a public workshop and demonstration on making AI tools accessible to people with visual impairments, as part of <a href="https://londondataweek.org/ldw25-events/" target="_blank" rel="noopener noreferrer" className="text-gov-blue underline underline-offset-2 hover:text-gov-blue-dark">London Data Week 2025</a>.</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-gov-blue flex-shrink-0 mt-0.5" />
-                  <span><strong>Xenet.ai  - AI Startup Mentorship</strong>  - Mentored <a href="https://xenet.ai/" target="_blank" rel="noopener noreferrer" className="text-gov-blue hover:underline">Xenet.ai</a> from early-stage AI startup through to becoming a Google for Startups mentor, demonstrating our ability to grow ecosystem capacity and develop the next generation of AI leaders.</span>
+                  <span><strong>Xenet.ai  - AI Startup Mentorship</strong>  - Mentored <a href="https://xenet.ai/" target="_blank" rel="noopener noreferrer" className="text-gov-blue underline underline-offset-2 hover:text-gov-blue-dark">Xenet.ai</a> from early-stage AI startup through to becoming a Google for Startups mentor, demonstrating our ability to grow ecosystem capacity and develop the next generation of AI leaders.</span>
                 </li>
               </ul>
             </div>
@@ -266,7 +266,7 @@ export const Home: React.FC = () => {
             <div className="flex-1 text-center md:text-left">
               <h3 className="text-lg font-bold text-gov-dark mb-2">Get Your Free Copy</h3>
               <p className="text-gov-secondary leading-relaxed mb-4">
-                <em>The Decision Maker's Handbook to Data Science</em>  - a practical guide for non-technical executives, managers, and founders navigating AI and data strategy. Written by our MD, Dr Stylianos Kampakis, and published by Apress. Dr Kampakis also serves as Governor at <a href="https://www.nhc.ac.uk/" target="_blank" rel="noopener noreferrer" className="text-gov-blue hover:underline">North Hertfordshire College</a>, bringing governance experience across further and higher education.
+                <em>The Decision Maker's Handbook to Data Science</em>  - a practical guide for non-technical executives, managers, and founders navigating AI and data strategy. Written by our MD, Dr Stylianos Kampakis, and published by Apress. Dr Kampakis also serves as Governor at <a href="https://www.nhc.ac.uk/" target="_blank" rel="noopener noreferrer" className="text-gov-blue underline underline-offset-2 hover:text-gov-blue-dark">North Hertfordshire College</a>, bringing governance experience across further and higher education.
               </p>
               <a href="/papers/decision-makers-handbook-data-science.pdf" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-5 py-2.5 bg-gov-blue text-white font-semibold rounded-lg hover:bg-gov-blue-dark transition-colors text-sm">
                 <Download className="w-4 h-4" /> Download PDF
@@ -278,7 +278,7 @@ export const Home: React.FC = () => {
         {/* Innovation Programmes & Challenges */}
         <div className="py-12 border-t border-gov-border/30">
           <h3 className="text-center text-sm font-semibold text-gov-secondary uppercase tracking-wider mb-2">Selected for international innovation programmes</h3>
-          <p className="text-center text-xs text-gov-secondary/70 mb-8 max-w-2xl mx-auto">Competitively selected onto regulator-run and university-backed innovation programmes in financial services and digital trust.</p>
+          <p className="text-center text-xs text-gov-secondary mb-8 max-w-2xl mx-auto">Competitively selected onto regulator-run and university-backed innovation programmes in financial services and digital trust.</p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
 
             <div className="flex flex-col items-center text-center gap-5 bg-white border border-gov-border/50 rounded-xl p-6">
@@ -300,13 +300,13 @@ export const Home: React.FC = () => {
               <div>
                 <p className="text-sm font-bold text-gov-dark">2nd Future Payments Innovation Challenge - finalist</p>
                 <p className="text-xs text-gov-secondary leading-relaxed mt-2">
-                  Run by the Scottish Centre of Excellence in Digital Trust and DLT, hosted at Edinburgh Napier University with the University of Edinburgh and the University of Glasgow. Our entry, the <a href="https://github.com/fabio-rovai/edinburgh-protocol" target="_blank" rel="noopener noreferrer" className="text-gov-blue hover:underline">Edinburgh Protocol</a>, is open-source payment-commitment infrastructure against late payment to Scottish SMEs. Shortlisted and pitched in Edinburgh, May 2026.
+                  Run by the Scottish Centre of Excellence in Digital Trust and DLT, hosted at Edinburgh Napier University with the University of Edinburgh and the University of Glasgow. Our entry, the <a href="https://github.com/fabio-rovai/edinburgh-protocol" target="_blank" rel="noopener noreferrer" className="text-gov-blue underline underline-offset-2 hover:text-gov-blue-dark">Edinburgh Protocol</a>, is open-source payment-commitment infrastructure against late payment to Scottish SMEs. Shortlisted and pitched in Edinburgh, May 2026.
                 </p>
               </div>
             </div>
 
           </div>
-          <p className="text-center text-[11px] text-gov-secondary/60 mt-6 max-w-3xl mx-auto">Selection for, or participation in, these programmes does not constitute endorsement of Tesseract Academy by IOSCO, the Financial Conduct Authority, or the Scottish Centre of Excellence in Digital Trust and DLT.</p>
+          <p className="text-center text-[11px] text-gov-secondary mt-6 max-w-3xl mx-auto">Selection for, or participation in, these programmes does not constitute endorsement of Tesseract Academy by IOSCO, the Financial Conduct Authority, or the Scottish Centre of Excellence in Digital Trust and DLT.</p>
         </div>
 
         {/* Partner Logos */}
@@ -340,7 +340,7 @@ export const Home: React.FC = () => {
             <img src="/logos/london-data-week.png" alt="London Data Week" className="h-12 object-contain grayscale hover:grayscale-0 transition-all" />
             <img src="/logos/pwc.svg" alt="PwC" className="h-14 object-contain grayscale hover:grayscale-0 transition-all" />
           </div>
-          <p className="text-center text-xs text-gov-secondary/70 mt-6 max-w-2xl mx-auto">We co-host and co-deliver public events with leading universities and industry, including London Data Week at the LSE and the Innovate UK BridgeAI creative-industries launch with PwC.</p>
+          <p className="text-center text-xs text-gov-secondary mt-6 max-w-2xl mx-auto">We co-host and co-deliver public events with leading universities and industry, including London Data Week at the LSE and the Innovate UK BridgeAI creative-industries launch with PwC.</p>
         </div>
 
         {/* Accreditations & Frameworks */}

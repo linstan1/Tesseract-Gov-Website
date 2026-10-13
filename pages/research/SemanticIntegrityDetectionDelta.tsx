@@ -62,7 +62,7 @@ export const SemanticIntegrityDetectionDelta: React.FC = () => {
         <h1 className="text-4xl font-extrabold text-gov-dark mb-6 tracking-tight leading-tight font-serif">
           Semantic-Integrity Defects Evade Static Analysis and Shape Validation: A Cross-Library Detection Study
         </h1>
-        <p className="text-xl text-gov-secondary/90 leading-relaxed">
+        <p className="text-xl text-gov-secondary leading-relaxed">
           Detecting semantic-integrity defects across four knowledge-graph libraries. A controlled study of four real defects in popular open-source knowledge-graph libraries, and whether mainstream static analysis and SHACL validation catch them. They do not. A semantic verifier does.
         </p>
       </header>
@@ -108,7 +108,7 @@ export const SemanticIntegrityDetectionDelta: React.FC = () => {
 
       <section className="space-y-4">
         <h2 className="text-2xl font-bold text-gov-dark font-serif">Results</h2>
-        <div className="overflow-x-auto rounded-lg border border-gov-border">
+        <div tabIndex={0} role="region" aria-label="Table, scrolls sideways on small screens" className="overflow-x-auto rounded-lg border border-gov-border">
           <table className="min-w-full text-sm">
             <thead>
               <tr className="bg-gov-bg text-left">
@@ -130,7 +130,7 @@ export const SemanticIntegrityDetectionDelta: React.FC = () => {
             </tbody>
           </table>
         </div>
-        <p className="text-sm text-gov-secondary/90 leading-relaxed">
+        <p className="text-sm text-gov-secondary leading-relaxed">
           The pattern-based analyzer ran 694 security rules including an OWASP pack. The dataflow analyzer ran its full security-extended suites, 50 and 103 queries with interprocedural taint analysis, and still passed the injection, which is precisely the class it advertises.
         </p>
       </section>

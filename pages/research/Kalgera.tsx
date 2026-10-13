@@ -93,7 +93,7 @@ export const Kalgera: React.FC = () => {
         <h1 className="text-4xl font-extrabold text-gov-dark mb-6 tracking-tight leading-tight font-serif">
           Financial Vulnerability Research: Kalgera / Fintech Scotland
         </h1>
-        <p className="text-xl text-gov-secondary/90 leading-relaxed">
+        <p className="text-xl text-gov-secondary leading-relaxed">
           End-to-end qualitative user research validating AI-driven early warning signals for financially vulnerable adults in Scotland. Three structured outputs delivered: signal validation, acceptability framework, and Finance and Health Lab summary.
         </p>
       </header>
@@ -130,7 +130,7 @@ export const Kalgera: React.FC = () => {
 
       <section className="space-y-6">
         <h2 className="text-2xl font-bold text-gov-dark font-serif">Research Programme: Three Stages</h2>
-        <div className="overflow-x-auto">
+        <div tabIndex={0} role="region" aria-label="Table, scrolls sideways on small screens" className="overflow-x-auto">
           <table className="w-full text-sm border-collapse">
             <thead>
               <tr className="bg-gov-bg border-b border-gov-border">
@@ -160,7 +160,7 @@ export const Kalgera: React.FC = () => {
         <p className="text-gov-secondary leading-relaxed text-sm">
           Each interview was structured around all eight of Kalgera's signal categories. Participants were asked to describe experiences relevant to each category in their own words.
         </p>
-        <div className="overflow-x-auto">
+        <div tabIndex={0} role="region" aria-label="Table, scrolls sideways on small screens" className="overflow-x-auto">
           <table className="w-full text-sm border-collapse">
             <thead>
               <tr className="bg-gov-bg border-b border-gov-border">

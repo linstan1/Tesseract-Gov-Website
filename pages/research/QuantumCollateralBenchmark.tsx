@@ -102,7 +102,7 @@ export const QuantumCollateralBenchmark: React.FC = () => (
       </Link>
       <h1 className="text-3xl sm:text-4xl font-bold text-gov-blue mb-6">{"An open, ontology-grounded benchmark for quantum collateral optimisation, with every allocation certified twice"}</h1>
       <p className="text-sm text-gov-dark/70 mb-2">Published 29 August 2026.</p>
-      <p className="text-sm mb-8"><a href={REPO} target="_blank" rel="noopener noreferrer" className="text-gov-blue hover:underline">Repository on GitHub<span className="sr-only"> (opens in new tab)</span></a></p>
+      <p className="text-sm mb-8"><a href={REPO} target="_blank" rel="noopener noreferrer" className="text-gov-blue underline underline-offset-2 hover:text-gov-blue-dark">Repository on GitHub<span className="sr-only"> (opens in new tab)</span></a></p>
 
       <section id="english" lang="en">
         <p className="text-base text-gov-dark/90 leading-relaxed mb-4">{"Banks and other financial institutions satisfy their margin, settlement and funding commitments by posting assets that vary across class, currency, issuer and liquidity. Deciding which piece of collateral should back which commitment, subject to eligibility schedules, no-reuse controls, exact coverage requirements and issuer concentration limits, is a combinatorial problem that arises again and again, and it ranks among the workloads most frequently put forward for near-term quantum optimisation. We created Qollateral, an open benchmark that places the rule book at the heart of that proposal instead of treating it as an afterthought, and we released every number it generates alongside the machinery needed to recompute them."}</p>

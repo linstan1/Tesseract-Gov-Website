@@ -205,7 +205,7 @@ export const InsuranceRegisterOntology: React.FC = () => (
       <h1 className="text-4xl font-extrabold text-gov-dark mb-6 tracking-tight leading-tight font-serif">
         An open ontology for insurance and reinsurance, tested against every insurer in Europe
       </h1>
-      <p className="text-xl text-gov-secondary/90 leading-relaxed">
+      <p className="text-xl text-gov-secondary leading-relaxed">
         There was no open, usable ontology for insurance and reinsurance entity data, so we built one and proved it on the hardest available evidence: the European Union&apos;s own register of every authorised insurer and reinsurer, joined to the global identifier system that is supposed to name them, and cross-checked against a national regulator&apos;s separate register. The result is 276,683 triples of public data and eight findings that no single source could see. One in five active European insurers has no global identifier. Four of the identifiers that are filed cannot exist. Two different SCOR reinsurance companies share one. This page explains what we built, how, what it found, and how the same method applies to your own entity data.
       </p>
     </header>
@@ -244,7 +244,7 @@ export const InsuranceRegisterOntology: React.FC = () => (
       <p className="text-gov-dark leading-relaxed">
         The model is deliberately small, because a large model that nobody validates is decoration. Four commitments carry all the weight.
       </p>
-      <Mermaid chart={MODEL} />
+      <Mermaid chart={MODEL} ariaLabel="Ontology model: an insurance undertaking has a home registration with its national supervisory authority and cross-border operations, each with one host country and one operation mode; LEI assertions are entity-scoped and national code assertions are authority-scoped." />
       <p className="text-gov-dark leading-relaxed">
         <strong>Authorisation is a lifecycle, not an edge.</strong> An undertaking&apos;s home registration is a node carrying its own start date, end date and issuing authority. So is each cross-border operation. Modelling them as nodes is what allows the rule &quot;an open passport must not outlive the authorisation it derives from&quot; to exist as an executable constraint. Model the same facts as edges between companies and countries and that rule cannot be written at all, which is why in practice it becomes a spreadsheet somebody rebuilds each quarter.
       </p>
@@ -257,7 +257,7 @@ export const InsuranceRegisterOntology: React.FC = () => (
       <p className="text-gov-dark leading-relaxed">
         <strong>Operation modes come from law, not from a dropdown.</strong> The five modes in the register vocabulary are given definitions grounded in Directive 2009/138/EC: freedom to provide services under Articles 147 to 149, establishment through a branch under Articles 145 and 146, and third-country branches under Article 162. A vocabulary whose concepts cite the legal instrument that creates them can be argued about with a regulator. A dropdown cannot.
       </p>
-      <p className="text-sm text-gov-secondary/90 leading-relaxed">
+      <p className="text-sm text-gov-secondary leading-relaxed">
         The same design was first proved on the United States fund universe in our <Link to="/research/investment-fund-ontology" className="text-gov-blue underline hover:text-gov-blue-dark">Investment Fund Ontology</Link>. Insurance is its second instantiation, which is itself a finding: the discipline transfers across regulated register fabrics without redesign.
       </p>
     </section>
@@ -267,7 +267,7 @@ export const InsuranceRegisterOntology: React.FC = () => (
       <p className="text-gov-dark leading-relaxed">
         The EIOPA register has no stable export URL. Its export button is an ASP.NET postback inside a SharePoint application, so the pipeline fetches the page, lifts the view-state and event-validation fields, and replays the postback to obtain an 11 megabyte semicolon-delimited file. That is a fair summary of the state of insurance data infrastructure in 2026: the European Union&apos;s complete register of insurers is public, and reaching it programmatically requires emulating a button click. The identifier harvest then runs against the free GLEIF API in batches of fifty at unauthenticated rate limits, taking about ten minutes for 3,630 identifiers, with a resumable cache so an interrupted run costs nothing.
       </p>
-      <Mermaid chart={LAYERS} />
+      <Mermaid chart={LAYERS} ariaLabel="Method: the public register of 33,924 rows goes through two-pass entity resolution into a graph of 276,683 triples, which is checked in three layers (syntax and format, structure and cardinality, cross-source rules) to give graded findings, Violation or Warning." />
       <p className="text-gov-dark leading-relaxed">
         Two problems in the source data would have silently corrupted every number on this page, and both are the kind of thing that survives into production systems unnoticed.
       </p>
@@ -281,7 +281,7 @@ export const InsuranceRegisterOntology: React.FC = () => (
 
     <section className="space-y-4">
       <h2 className="text-2xl font-bold text-gov-dark font-serif">Eight findings, and what each one costs</h2>
-      <div className="overflow-x-auto rounded-lg border border-gov-border">
+      <div tabIndex={0} role="region" aria-label="Table, scrolls sideways on small screens" className="overflow-x-auto rounded-lg border border-gov-border">
         <table className="min-w-full text-sm">
           <thead>
             <tr className="bg-gov-bg text-left">
@@ -315,7 +315,7 @@ export const InsuranceRegisterOntology: React.FC = () => (
           { label: 'Absent from GLEIF', value: 4, display: '4', color: CHART.amber },
         ]}
       />
-      <p className="text-sm text-gov-secondary/90 leading-relaxed">
+      <p className="text-sm text-gov-secondary leading-relaxed">
         All figures are computed from the 14 August 2026 export and same-day harvest. Both sources are live systems, so a later run produces different totals while the method reproduces exactly.
       </p>
     </section>
@@ -423,7 +423,7 @@ export const InsuranceRegisterOntology: React.FC = () => (
           If you run insurance entity data, register reconciliation, Solvency II reporting plumbing, or treaty counterparty resolution, write to <a href="mailto:fabio@thetesseractacademy.com" className="text-gov-blue underline hover:text-gov-blue-dark">fabio@thetesseractacademy.com</a>. Send a description of the sources that disagree and we will tell you which of the defect classes on this page we would expect to find, before any commitment.
         </p>
       </div>
-      <p className="text-sm text-gov-secondary/90 leading-relaxed">
+      <p className="text-sm text-gov-secondary leading-relaxed">
         Related work: the <Link to="/research/investment-fund-ontology" className="text-gov-blue underline hover:text-gov-blue-dark">Investment Fund Ontology</Link> applies the same identifier discipline to the United States fund universe, and our <Link to="/research/machine-validated-open-ontologies" className="text-gov-blue underline hover:text-gov-blue-dark">machine-validated ontologies</Link> study measures when an ontology can actually reject a wrong statement.
       </p>
     </section>

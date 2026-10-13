@@ -29,7 +29,7 @@ export const PublicEngagement: React.FC = () => {
         <h1 className="text-5xl font-extrabold text-gov-dark mb-6 tracking-tight leading-tight">
           Public Engagement and Participatory Research
         </h1>
-        <p className="text-xl text-gov-secondary/90 leading-relaxed max-w-4xl">
+        <p className="text-xl text-gov-secondary leading-relaxed max-w-4xl">
           We design and deliver deliberative workshops, citizen panels, inclusive co-design processes,
           and participatory action research for public sector commissioners. Our approach centres
           the lived experience of affected communities and produces evidence that holds up to ethical
@@ -50,7 +50,7 @@ export const PublicEngagement: React.FC = () => {
           process that generates legitimate, reproducible evidence about public needs and values.
           Tesseract Academy designs engagement programmes grounded in deliberative research methods:
           we give participants sufficient time, information, and facilitated space to form considered
-          views on complex policy questions, rather than capturing initial reactions. Our methodology aligns with Cabinet Office engagement guidelines and the <a href="https://www.legislation.gov.uk/ukpga/2012/3/contents" target="_blank" rel="noopener noreferrer" className="text-gov-blue hover:underline">Social Value Act 2012</a>, ensuring that participation yields measurable community benefit alongside evidence generation.
+          views on complex policy questions, rather than capturing initial reactions. Our methodology aligns with Cabinet Office engagement guidelines and the <a href="https://www.legislation.gov.uk/ukpga/2012/3/contents" target="_blank" rel="noopener noreferrer" className="text-gov-blue underline underline-offset-2 hover:text-gov-blue-dark">Social Value Act 2012</a>, ensuring that participation yields measurable community benefit alongside evidence generation.
         </p>
         <p className="text-gov-dark leading-relaxed text-base">
           Our participatory action research (PAR) approach treats communities as active co-investigators
@@ -71,13 +71,13 @@ export const PublicEngagement: React.FC = () => {
           We are registered with the Information Commission (ZB715782) and process personal data collected during
           engagement activities under UK GDPR Article 6(1)(e) (public task) or Article 9(2)(j)
           (research purposes), with all processing documented in a Data Protection Impact Assessment
-          (DPIA) before fieldwork begins. Services are available via <a href="https://www.crowncommercial.gov.uk/agreements/RM6126" target="_blank" rel="noopener noreferrer" className="text-gov-blue hover:underline">Crown Commercial Service (CCS) RM6126</a>, and our social value commitments are aligned with the <a href="https://www.legislation.gov.uk/ukpga/2012/3/contents" target="_blank" rel="noopener noreferrer" className="text-gov-blue hover:underline">Social Value Act 2012</a> requirements applied by the UK AI Safety Institute and DSIT-funded programmes.
+          (DPIA) before fieldwork begins. Services are available via <a href="https://www.crowncommercial.gov.uk/agreements/RM6126" target="_blank" rel="noopener noreferrer" className="text-gov-blue underline underline-offset-2 hover:text-gov-blue-dark">Crown Commercial Service (CCS) RM6126</a>, and our social value commitments are aligned with the <a href="https://www.legislation.gov.uk/ukpga/2012/3/contents" target="_blank" rel="noopener noreferrer" className="text-gov-blue underline underline-offset-2 hover:text-gov-blue-dark">Social Value Act 2012</a> requirements applied by the UK AI Safety Institute and DSIT-funded programmes.
         </p>
       </section>
 
       <section>
         <h2 className="text-3xl font-bold text-gov-dark mb-8">Service Comparison</h2>
-        <div className="overflow-x-auto rounded-xl border border-gov-border/40">
+        <div tabIndex={0} role="region" aria-label="Table, scrolls sideways on small screens" className="overflow-x-auto rounded-xl border border-gov-border/40">
           <table className="w-full text-sm text-left">
             <thead className="bg-gov-bg border-b border-gov-border/40">
               <tr>
@@ -209,7 +209,7 @@ export const PublicEngagement: React.FC = () => {
             impairments. Held at Chabad Islington Community Centre, the event combined inclusive
             co-design principles with practical AI tool demonstrations. Participants contributed to
             a lived-experience evidence base on barriers to AI accessibility, informing subsequent
-            policy recommendations to the <a href="https://www.gov.uk/service-manual/service-standard" target="_blank" rel="noopener noreferrer" className="text-gov-blue hover:underline">Government Digital Service (GDS)</a> Accessibility Team. <a href="https://www.gov.uk/government/organisations/skills-england" target="_blank" rel="noopener noreferrer" className="text-gov-blue hover:underline">Skills England</a> has identified AI accessibility for underserved communities as a priority skills gap in the public sector digital literacy agenda.
+            policy recommendations to the <a href="https://www.gov.uk/service-manual/service-standard" target="_blank" rel="noopener noreferrer" className="text-gov-blue underline underline-offset-2 hover:text-gov-blue-dark">Government Digital Service (GDS)</a> Accessibility Team. <a href="https://www.gov.uk/government/organisations/skills-england" target="_blank" rel="noopener noreferrer" className="text-gov-blue underline underline-offset-2 hover:text-gov-blue-dark">Skills England</a> has identified AI accessibility for underserved communities as a priority skills gap in the public sector digital literacy agenda.
           </p>
           <div className="grid grid-cols-3 gap-4 mt-6">
             <div className="text-center p-4 bg-white rounded-lg border border-gov-border/30">

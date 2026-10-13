@@ -45,7 +45,7 @@ export const AesHeritage: React.FC = () => {
         <h1 className="text-4xl font-extrabold text-gov-dark mb-6 tracking-tight leading-tight font-serif">
           The Value of Agri-Environment Heritage Actions
         </h1>
-        <p className="text-xl text-gov-secondary/90 leading-relaxed">
+        <p className="text-xl text-gov-secondary leading-relaxed">
           Agri-environment schemes are the largest source of government funding for the rural historic environment. This is a self-initiated, open review of what the published evidence actually says about their wider co-benefits, for nature and for people, built on real public data. It maps where the evidence is strong, and where it is honestly thin.
         </p>
       </header>
@@ -142,11 +142,11 @@ export const AesHeritage: React.FC = () => {
           {REFERENCES.map((r, i) => (
             <li key={i}>
               {r.t}{' '}
-              <a href={r.u} target="_blank" rel="noopener noreferrer" className="text-gov-blue hover:underline">Link<span className="sr-only"> (opens in new tab)</span></a>
+              <a href={r.u} target="_blank" rel="noopener noreferrer" className="text-gov-blue underline underline-offset-2 hover:text-gov-blue-dark">Link<span className="sr-only"> (opens in new tab)</span></a>
             </li>
           ))}
         </ol>
-        <p className="text-xs text-gov-secondary/80">Method and full protocol: our pre-specified scoping-review protocol sets out the search strategy, eligibility criteria and charting framework in full.</p>
+        <p className="text-xs text-gov-secondary">Method and full protocol: our pre-specified scoping-review protocol sets out the search strategy, eligibility criteria and charting framework in full.</p>
       </section>
 
       <div className="bg-gov-bg border border-gov-border/50 rounded-xl p-8 flex flex-col sm:flex-row gap-4 sm:items-center sm:justify-between">

@@ -29,7 +29,7 @@ export const EducationUpskilling: React.FC = () => {
         <h1 className="text-5xl font-extrabold text-gov-dark mb-6 tracking-tight leading-tight">
           AI Literacy and Data Science Training
         </h1>
-        <p className="text-xl text-gov-secondary/90 leading-relaxed max-w-4xl">
+        <p className="text-xl text-gov-secondary leading-relaxed max-w-4xl">
           We design and deliver AI literacy, data science, and executive leadership training for UK
           public sector and government-funded programmes. Our work combines academic depth with
           practical application — including six official UK Government Business Academy webinars
@@ -53,12 +53,12 @@ export const EducationUpskilling: React.FC = () => {
           curriculum design methodology begins with a skills-gap analysis and competency mapping,
           ensuring training is targeted at genuine capability deficits rather than generic content.
           We apply the OCT (Objectives-Capabilities-Tools) framework to help organisations identify
-          what AI capabilities they actually need before selecting training interventions. Our programmes are designed to complement the <a href="https://www.gov.uk/government/organisations/skills-england" target="_blank" rel="noopener noreferrer" className="text-gov-blue hover:underline">Skills England</a> AI skills strategy and the Department for Science Innovation and Technology (DSIT) digital skills agenda, with outcomes mapped to Government Digital Service (GDS) capability frameworks.
+          what AI capabilities they actually need before selecting training interventions. Our programmes are designed to complement the <a href="https://www.gov.uk/government/organisations/skills-england" target="_blank" rel="noopener noreferrer" className="text-gov-blue underline underline-offset-2 hover:text-gov-blue-dark">Skills England</a> AI skills strategy and the Department for Science Innovation and Technology (DSIT) digital skills agenda, with outcomes mapped to Government Digital Service (GDS) capability frameworks.
         </p>
         <p className="text-gov-dark leading-relaxed text-base">
           Executive leadership programmes focus on strategic AI literacy: understanding AI risk and
           governance frameworks, making informed commissioning decisions, and evaluating AI supplier
-          claims in line with the <a href="https://www.gov.uk/government/publications/ai-regulation-a-pro-innovation-approach" target="_blank" rel="noopener noreferrer" className="text-gov-blue hover:underline">UK AI Framework</a>. These programmes have been delivered for the US Navy (40+ senior participants),
+          claims in line with the <a href="https://www.gov.uk/government/publications/ai-regulation-a-pro-innovation-approach" target="_blank" rel="noopener noreferrer" className="text-gov-blue underline underline-offset-2 hover:text-gov-blue-dark">UK AI Framework</a>. These programmes have been delivered for the US Navy (40+ senior participants),
           Vodafone Egypt, Philips, and through the UK Government Business Academy, where Dr Stylianos
           Kampakis delivered six official webinars in 2025 and 2026 on AI roadmap design, AI tool selection,
           and building internal AI capability. The Alan Turing Institute and the UK AI Safety Institute have both identified these capability gaps as priorities for the public sector.
@@ -66,12 +66,12 @@ export const EducationUpskilling: React.FC = () => {
         <p className="text-gov-dark leading-relaxed text-base">
           Technical training programmes cover the full data science stack — statistical foundations,
           machine learning concepts, NLP, large language models, and AI governance obligations under
-          the <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689" target="_blank" rel="noopener noreferrer" className="text-gov-blue hover:underline">EU AI Act</a> and <a href="https://www.nist.gov/system/files/documents/2023/01/26/AI%20RMF%201.0.pdf" target="_blank" rel="noopener noreferrer" className="text-gov-blue hover:underline">NIST AI RMF</a>. All technical programmes include hands-on exercises with
+          the <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689" target="_blank" rel="noopener noreferrer" className="text-gov-blue underline underline-offset-2 hover:text-gov-blue-dark">EU AI Act</a> and <a href="https://www.nist.gov/system/files/documents/2023/01/26/AI%20RMF%201.0.pdf" target="_blank" rel="noopener noreferrer" className="text-gov-blue underline underline-offset-2 hover:text-gov-blue-dark">NIST AI RMF</a>. All technical programmes include hands-on exercises with
           real or synthetic datasets, and participants receive documented competency outcomes suitable
           for CPD records and organisational capability reporting.
         </p>
         <p className="text-gov-dark leading-relaxed text-base">
-          Our BridgeAI partnership with <a href="https://www.gov.uk/government/organisations/innovate-uk" target="_blank" rel="noopener noreferrer" className="text-gov-blue hover:underline">Innovate UK</a> achieved 1,100 registrations across sector-specific
+          Our BridgeAI partnership with <a href="https://www.gov.uk/government/organisations/innovate-uk" target="_blank" rel="noopener noreferrer" className="text-gov-blue underline underline-offset-2 hover:text-gov-blue-dark">Innovate UK</a> achieved 1,100 registrations across sector-specific
           AI adoption workshops targeting creative industries, construction, and transport sectors —
           a 450% oversubscription against the 200-place capacity target. The National Audit Office has identified AI upskilling as a critical value-for-money factor in public sector digital transformation, particularly when training is contextualised to specific government functions rather than delivered as generic AI literacy content.
         </p>
@@ -79,7 +79,7 @@ export const EducationUpskilling: React.FC = () => {
 
       <section>
         <h2 className="text-3xl font-bold text-gov-dark mb-8">Service Comparison</h2>
-        <div className="overflow-x-auto rounded-xl border border-gov-border/40">
+        <div tabIndex={0} role="region" aria-label="Table, scrolls sideways on small screens" className="overflow-x-auto rounded-xl border border-gov-border/40">
           <table className="w-full text-sm text-left">
             <thead className="bg-gov-bg border-b border-gov-border/40">
               <tr>
@@ -216,7 +216,7 @@ export const EducationUpskilling: React.FC = () => {
               1
             </span>
             <div>
-              <p className="font-semibold text-gov-dark">CCS RM6200 — Management Consultancy Three</p>
+              <p className="font-semibold text-gov-dark">CCS RM6200, Artificial Intelligence DPS</p>
               <p className="text-gov-secondary text-sm mt-1">
                 Suitable for embedded training programmes linked to wider AI advisory or
                 transformation engagements. Covers training design, delivery, and evaluation.

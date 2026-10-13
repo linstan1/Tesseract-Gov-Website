@@ -36,7 +36,7 @@ export const CertifiedDenotation: React.FC = () => {
         <h1 className="text-4xl font-extrabold text-gov-dark mb-6 tracking-tight leading-tight font-serif">
           Beyond existence: certified denotation
         </h1>
-        <p className="text-xl text-gov-secondary/90 leading-relaxed">
+        <p className="text-xl text-gov-secondary leading-relaxed">
           The <Link to="/research/ontology-correctness-benchmark" className="text-gov-blue underline hover:text-gov-blue-dark">closed-world vocabulary gate</Link> guarantees one thing: every term a model emits exists in the ontology. That is necessary, and it is not sufficient. A model can use only real terms and still be wrong, by putting a real property on the wrong kind of thing. Catching that is the next gate, and it is harder. This is a roadmap, stated as one: what certified denotation is, why it is more than the existence check, and how far the honest work has and has not gone.
         </p>
       </header>
