@@ -680,7 +680,7 @@ export const Research: React.FC = () => {
              <p className="text-sm text-gov-secondary mb-3 font-medium">Commissioned by Welsh Government, 2025–2026</p>
              <p className="text-base text-gov-dark/90 leading-relaxed">Independent research into the feasibility of land value tax models for Wales. Combined statistical analysis of land registry data with international comparator evidence and stakeholder interviews across Welsh local authorities. Findings presented to Welsh Government officials and cited in Senedd committee proceedings.</p>
              <div className="mt-3 flex flex-wrap gap-3 items-center">
-               <a href="/papers/testing-land-valuation-methods-tesseract-academy-report.pdf" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">Read the full report (PDF)<span className="sr-only"> (opens in new tab)</span></a>
+               <a href="https://www.gov.wales/testing-land-valuation-methods" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors">Read the full report (PDF)<span className="sr-only"> (opens in new tab)</span></a>
              </div>
            </li>
            <li className="pb-8 border-b border-gov-border/50 last:border-0 last:pb-0">

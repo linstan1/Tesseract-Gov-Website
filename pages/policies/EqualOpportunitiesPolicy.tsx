@@ -52,7 +52,7 @@ export const EqualOpportunitiesPolicy: React.FC = () => (
       <li>Recruitment and selection based solely on merit and objective criteria, with reasonable adjustments provided for disabled applicants and staff.</li>
       <li>Fair treatment in development, reward, engagement and progression, free from bias.</li>
       <li>An inclusive working environment in which harassment, bullying and victimisation are not tolerated and are addressed promptly.</li>
-      <li>Accessible delivery: our digital services are developed to WCAG 2.2 AA, audited with Vision Ability CIC, so the people who use them are not excluded.</li>
+      <li>Accessible delivery: our digital services are developed and tested to WCAG 2.2 AA, so the people who use them are not excluded.</li>
       <li>Inclusive solution design: we test AI solutions for bias and representativeness across protected characteristics so they do not embed or widen inequalities.</li>
       <li>Public engagement that centres under-represented and minoritised communities in the work we deliver.</li>
     </ul>

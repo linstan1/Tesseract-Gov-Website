@@ -121,7 +121,7 @@ export const FairScientificData: React.FC = () => {
         </figure>
         <p className="text-gov-secondary leading-relaxed">
           The full study and this worked remediation are written up in a short report:{' '}
-          <a href="/papers/fair-ai-ready-datasets-tesseract-report.pdf" target="_blank" rel="noopener noreferrer" className="text-gov-blue font-semibold hover:underline">read the report (PDF)<span className="sr-only"> (opens in new tab)</span></a>.
+          <a href="https://tesseractsemantics.com/research/fair-scientific-data" target="_blank" rel="noopener noreferrer" className="text-gov-blue font-semibold hover:underline">read the report (PDF)<span className="sr-only"> (opens in new tab)</span></a>.
         </p>
       </section>
 

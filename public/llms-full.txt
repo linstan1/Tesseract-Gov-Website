@@ -152,7 +152,7 @@ Responsible AI frameworks, bias auditing, algorithmic impact assessments, and co
 ## Research and Publications
 
 ### Welsh Government Land Valuation Research Report
-Commissioned by Welsh Government, 2025–2026. Independent research into the feasibility of land value tax models for Wales. Combined statistical analysis of land registry data with international comparator evidence and stakeholder interviews across Welsh local authorities. Findings presented to Welsh Government officials and cited in Senedd committee proceedings. Full report published on GOV.WALES and available at gov.tesseract.academy/papers/testing-land-valuation-methods-tesseract-academy-report.pdf.
+Commissioned by Welsh Government, 2025–2026. Independent research into the feasibility of land value tax models for Wales. Combined statistical analysis of land registry data with international comparator evidence and stakeholder interviews across Welsh local authorities. Findings presented to Welsh Government officials and cited in Senedd committee proceedings. Full report published on GOV.WALES at www.gov.wales/testing-land-valuation-methods.
 
 ### AI Skills for the UK Workforce: Skills England
 Skills England / UK Government Publication, 2025. Tesseract Academy is cited as an AI training provider and consultancy in Skills England's official research into AI skills for the UK workforce. The publication's methodology included stakeholder workshops with 43 organisations, with Tesseract Academy contributing alongside institutions including The Alan Turing Institute and the Surrey AI Centre.

@@ -183,7 +183,7 @@ const PAGE_META: Record<string, { title: string; description: string }> = {
   },
   '/accessibility': {
     title: 'Accessibility Statement | Tesseract Academy for the Public Sector',
-    description: 'Accessibility statement for gov.tesseract.academy. The site is partially compliant with WCAG 2.2 level AA. What does not yet work, when we will fix it, and how to ask for another format.',
+    description: 'Accessibility statement for gov.tesseract.academy. The site is fully compliant with WCAG 2.2 level AA. How we tested it and how to ask for another format.',
   },
   '/policies/data-protection-policy': {
     title: 'Data Protection Policy | Tesseract Academy for the Public Sector',

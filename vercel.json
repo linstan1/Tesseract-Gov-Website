@@ -62,6 +62,21 @@
       "permanent": true
     },
     {
+      "source": "/papers/testing-land-valuation-methods-tesseract-academy-report.pdf",
+      "destination": "https://www.gov.wales/testing-land-valuation-methods",
+      "permanent": true
+    },
+    {
+      "source": "/papers/fair-ai-ready-datasets-tesseract-report.pdf",
+      "destination": "https://tesseractsemantics.com/research/fair-scientific-data",
+      "permanent": true
+    },
+    {
+      "source": "/papers/aes-heritage-cobenefits-scoping-protocol.pdf",
+      "destination": "https://tesseractsemantics.com/research/agri-environment-heritage-value",
+      "permanent": true
+    },
+    {
       "source": "/ns/seom",
       "destination": "/data/skills-england/ontology/seom-vocabulary.ttl",
       "permanent": false

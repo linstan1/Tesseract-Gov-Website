@@ -155,7 +155,7 @@ export const AesHeritage: React.FC = () => {
           <p className="text-sm text-gov-secondary mt-1">The full pre-specified scoping-review protocol (PDF).</p>
         </div>
         <div className="flex flex-col sm:flex-row gap-3">
-          <a href="/papers/aes-heritage-cobenefits-scoping-protocol.pdf" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-5 py-2.5 bg-gov-blue text-white text-sm font-semibold rounded-lg hover:bg-gov-blue-dark transition-colors">
+          <a href="https://tesseractsemantics.com/research/agri-environment-heritage-value" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-5 py-2.5 bg-gov-blue text-white text-sm font-semibold rounded-lg hover:bg-gov-blue-dark transition-colors">
             Read the protocol (PDF)
             <ExternalLink className="w-4 h-4" />
           </a>

@@ -49,7 +49,7 @@ export const Compliance: React.FC = () => {
         <aside className="bg-gov-bg border border-gov-border/50 p-6 rounded-lg">
           <h3 className="text-sm font-bold text-gov-dark mb-3">Accessibility</h3>
           <p className="text-xs text-gov-dark/80 leading-relaxed mb-3">
-            We test our websites and every learning package we produce against WCAG 2.2 level AA. Our websites are partially compliant today. Our accessibility statements list what fails, what we are fixing and by when:
+            We test our websites and every learning package we produce against WCAG 2.2 level AA. Our accessibility statements say how each website was tested and list anything that does not yet meet the standard:
           </p>
           <ul className="space-y-2 text-xs text-gov-dark/80">
             <li className="flex items-start gap-2">

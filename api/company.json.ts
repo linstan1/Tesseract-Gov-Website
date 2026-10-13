@@ -187,7 +187,7 @@ const COMPANY_DATA = {
       "type": "GovernmentReport",
       "client": "Welsh Government",
       "year": 2026,
-      "url": "https://gov.tesseract.academy/papers/testing-land-valuation-methods-tesseract-academy-report.pdf"
+      "url": "https://www.gov.wales/testing-land-valuation-methods"
     },
     {
       "title": "Proving the Utility of Large Language Models in Cybersecurity Simulations: A Comprehensive Examination",

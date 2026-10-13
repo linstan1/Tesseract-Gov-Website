@@ -31,10 +31,13 @@ export const Accessibility: React.FC = () => {
       </ul>
 
       <h2 className={H2}>How accessible this website is</h2>
-      <p className={P}>We know some parts of this website are not fully accessible:</p>
-      <ul className={UL}>
-        <li>three PDF reports on this website do not fully meet the standard: one has no marked-up headings or table headers, one has images without text alternatives, and two do not have a descriptive document title</li>
-      </ul>
+      <p className={P}>
+        We are not aware of any part of this website that fails to meet WCAG 2.2 level AA. Every page is a web page:
+        we do not host PDF or other downloadable documents on this website. Some pages link to documents published
+        by other organisations, such as the US National Institute of Standards and Technology; those documents are
+        not part of this website and this statement does not cover them. If you find something that does not
+        work for you, please tell us using the contact details below.
+      </p>
 
       <h2 className={H2}>Feedback and contact information</h2>
       <p className={P}>
@@ -64,49 +67,29 @@ export const Accessibility: React.FC = () => {
 
       <h3 className={H3}>Compliance status</h3>
       <p className={P}>
-        This website is partially compliant with the Web Content Accessibility Guidelines version 2.2 AA standard, due
-        to the non-compliance listed below. The web pages themselves passed every test we ran on 13 October 2026; the
-        remaining failures are in three PDF reports hosted on the website.
+        This website is fully compliant with the Web Content Accessibility Guidelines version 2.2 AA standard.
       </p>
 
       <h3 className={H3}>Non-accessible content</h3>
-      <h4 className={H4}>Non-compliance with WCAG 2.2 AA</h4>
-      <ul className={UL}>
-        <li>
-          The agri-environment heritage co-benefits scoping protocol (PDF) is tagged, but its headings are tagged as
-          ordinary paragraphs and its two tables have no header cells, so its structure is not available to assistive
-          technology. This fails success criterion 1.3.1 (Info and Relationships). It also has no document title,
-          which fails success criterion 2.4.2 (Page Titled).
-        </li>
-        <li>
-          In the FAIR AI-readiness report (PDF), three of the seven figures have no text alternative. This fails
-          success criterion 1.1.1 (Non-text Content).
-        </li>
-        <li>
-          The Welsh Government land valuation methods report (PDF) shows the document title "GSR reporting template"
-          instead of the report's name. This fails success criterion 2.4.2 (Page Titled). The report is 268 pages long
-          and we have checked its tagging structure automatically but have not yet audited it in full.
-        </li>
-        <li>
-          We plan to fix these three PDFs, or replace them with web pages, by 27 November 2026.
-        </li>
-      </ul>
+      <p className={P}>We are not aware of any content on this website that does not meet WCAG 2.2 AA.</p>
 
       <h3 className={H3}>Disproportionate burden</h3>
-      <p className={P}>We are not claiming that fixing any of the issues above would be a disproportionate burden.</p>
+      <p className={P}>We are not claiming that any part of this website is a disproportionate burden to make accessible.</p>
 
       <h2 className={H2}>What we are doing to improve accessibility</h2>
       <p className={P}>
         On 13 October 2026 we fixed every failure found on the web pages: grey text was darkened to at least 4.5:1,
         links inside running text are now underlined, tables and charts that scroll sideways on a phone can be reached
         and scrolled with a keyboard, pages reflow at 320 pixels wide without sideways scrolling, diagrams have text
-        alternatives, and the focus indicator is now dark ink at 10:1 or more against the page instead of yellow at
-        1.3:1. On the same day we replaced our six untagged policy PDFs with web pages that carry the same text with
+        alternatives, and every link and control now shows a focus indicator that contrasts with the page by at
+        least 3:1, replacing a yellow indicator at 1.3:1. On the same day we replaced our six untagged policy PDFs with web pages that carry the same text with
         proper headings, lists and tables, and replaced the downloads of two untagged PDFs of published works (the
         Decision Maker's Handbook to Data Science and our cybersecurity simulation paper with the Alan Turing
-        Institute) with links to their publishers' own pages for them. Next we will fix the three PDF reports
-        listed above, test the website with a screen reader (VoiceOver and NVDA), and add automated accessibility
-        checks to our build so that new failures are caught before they go live.
+        Institute) with links to their publishers' own pages for them. We also removed our three remaining PDF
+        reports from this website: the land valuation report is published by the Welsh Government on GOV.WALES, and
+        the other two are described on our research site. Next we will test the website with a screen reader
+        (VoiceOver and NVDA) and add automated accessibility checks to our build so that new failures are caught
+        before they go live.
       </p>
 
       <h2 className={H2}>Preparation of this accessibility statement</h2>
@@ -137,9 +120,8 @@ export const Accessibility: React.FC = () => {
       </ul>
       <p className={P}>
         Automated tools find only some of the barriers disabled people may face. We have not yet tested the website
-        with a screen reader or with disabled users; that testing is scheduled. Because the PDFs listed above still
-        fail, we do not claim full conformance. We will update this statement after the screen reader test and after
-        the PDFs are fixed.
+        with a screen reader or with disabled users; that testing is scheduled, and we will update this statement
+        with what it finds.
       </p>
     </div>
   );

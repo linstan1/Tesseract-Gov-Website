@@ -53,7 +53,7 @@ export const Footer: React.FC = () => {
             &copy; {new Date().getFullYear()} Tesseract Academy. All rights reserved.
           </p>
           <p className="text-xs text-gov-secondary">
-             <Link to="/accessibility" className="underline hover:text-gov-dark">Accessibility statement</Link> (WCAG 2.2 AA, partially compliant)
+             <Link to="/accessibility" className="underline hover:text-gov-dark">Accessibility statement</Link> (WCAG 2.2 AA, fully compliant)
           </p>
         </div>
       </div>

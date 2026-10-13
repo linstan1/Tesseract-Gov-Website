@@ -197,7 +197,7 @@ export const WelshGovernment: React.FC = () => {
             <ExternalLink className="w-4 h-4" />
           </a>
           <a
-            href="/papers/testing-land-valuation-methods-tesseract-academy-report.pdf"
+            href="https://www.gov.wales/testing-land-valuation-methods"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-5 py-2.5 border border-gov-blue text-gov-blue text-sm font-semibold rounded-lg hover:bg-gov-blue/5 transition-colors"

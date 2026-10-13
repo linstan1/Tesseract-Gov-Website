@@ -30,7 +30,7 @@ Key measured results in this area: open-world SHACL accepted all 300 data graphs
 
 ## Published documents
 
-- [Welsh Government Land Valuation Report (PDF)](https://gov.tesseract.academy/papers/testing-land-valuation-methods-tesseract-academy-report.pdf): Commissioned research testing five valuation methodologies across 1,916 Welsh LSOAs. Published March 2026.
+- [Welsh Government Land Valuation Report](https://www.gov.wales/testing-land-valuation-methods): Commissioned research testing five valuation methodologies across 1,916 Welsh LSOAs. Published March 2026.
 - [Proving the Utility of Large Language Models in Cybersecurity Simulations (arXiv preprint)](https://arxiv.org/abs/2608.16422): Research on LLM utility in cybersecurity simulations, co-authored with Turing Institute researchers.
 - [The Decision Maker's Handbook to Data Science (Apress, 2020)](https://doi.org/10.1007/978-1-4842-5494-3): Practical guide for public sector leaders implementing AI.
 
