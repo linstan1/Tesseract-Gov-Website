@@ -15,7 +15,7 @@ The company is an SME/micro enterprise delivering research-backed AI, data scien
 - RM6126: Research and Insights Dynamic Purchasing System
 - RM6219: Learning and Training Services Dynamic Purchasing System
 - RM6235: Space-Enabled and Geospatial Services Dynamic Purchasing System
-- RM6094: Spark Dynamic Purchasing System (Spark DPS), appointed August 2026
+- RM6094: Spark Dynamic Purchasing System (Spark DPS)
 
 **Certifications and compliance:**
 - Cyber Essentials certified
@@ -54,7 +54,7 @@ Tesseract Academy is a supplier on these CCS dynamic purchasing systems:
 - RM6126 Research and Insights DPS: survey design, public engagement, qualitative research
 - RM6219 Learning and Training Services DPS: off-the-shelf and bespoke training, learning technologies, education services
 - RM6235 Space-Enabled and Geospatial Services DPS: geospatial, remote sensing and PNT, satellite communication, unmanned autonomous vehicles, upstream professional services
-- RM6094 Spark DPS (appointed August 2026): emerging technology, including AI and automation, data and the Internet of Things
+- RM6094 Spark DPS: emerging technology, including AI and automation, data and the Internet of Things
 
 A Dynamic Purchasing System (DPS) lets new suppliers join at any time during its life, unlike a framework agreement, whose supplier list is fixed at the start. Every DPS contract is awarded through a competition open to the admitted suppliers in the relevant category: the buyer issues the competition, evaluates the responses and awards.
 
@@ -161,7 +161,7 @@ Skills England / UK Government Publication, 2025. Tesseract Academy is cited as 
 Collaboration with NDTP (Department for Business and Trade), 2024–2025. Contributed to the development of an open-source AI-powered tool that automates ontology generation and extension for the National Digital Twin Programme. The tool combines data profiling, Named Entity Recognition, and large language models.
 
 ### Proving the Utility of Large Language Models in Cybersecurity Simulations
-Collaboration with The Alan Turing Institute, 2025. Research paper exploring how Large Language Models can bolster cybersecurity simulations by automating the creation of synthetic environments and identifying latent vulnerabilities. Co-authored with researchers from The Alan Turing Institute. Available at gov.tesseract.academy/papers/alan-turing-ontology-paper.pdf.
+Collaboration with The Alan Turing Institute, 2025. Research paper exploring how Large Language Models can bolster cybersecurity simulations by automating the creation of synthetic environments and identifying latent vulnerabilities. Co-authored with researchers from The Alan Turing Institute. Available as a preprint at arxiv.org/abs/2608.16422.
 
 ### BridgeAI Skills Hub Launch and PwC Sector Workshop
 Innovate UK / BridgeAI Programme, 2025–2026. Designed and delivered AI adoption workshops for underserved UK sectors as part of the Innovate UK-funded BridgeAI programme. Led the Skills Hub launch event at Ona Studios, London, and co-delivered sector-specific AI readiness sessions with PwC targeting construction, creative industries, and transport.

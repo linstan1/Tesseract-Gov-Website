@@ -21,8 +21,8 @@ export const Footer: React.FC = () => {
             <h4 className="text-xs font-bold uppercase tracking-widest text-gov-dark mb-4">Compliance</h4>
             <ul className="space-y-2.5 text-sm text-gov-secondary">
               <li><Link to="/accessibility" className="hover:text-gov-dark transition-colors">Accessibility Statement</Link></li>
-              <li><a href="/policies/data-protection-policy.pdf" className="hover:text-gov-dark transition-colors">Privacy Notice</a></li>
-              <li><a href="/policies/modern-slavery-statement.pdf" className="hover:text-gov-dark transition-colors">Modern Slavery Statement</a></li>
+              <li><Link to="/policies/data-protection-policy" className="hover:text-gov-dark transition-colors">Privacy Notice</Link></li>
+              <li><Link to="/policies/modern-slavery-statement" className="hover:text-gov-dark transition-colors">Modern Slavery Statement</Link></li>
               <li><Link to="/compliance" className="hover:text-gov-dark transition-colors">All Policies</Link></li>
             </ul>
           </div>

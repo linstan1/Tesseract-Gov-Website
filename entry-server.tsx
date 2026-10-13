@@ -20,6 +20,12 @@ import { IndustryPage } from './pages/industries/IndustryPage';
 import { Partnerships } from './pages/Partnerships';
 import { Compliance } from './pages/Compliance';
 import { Accessibility } from './pages/Accessibility';
+import { DataProtectionPolicy } from './pages/policies/DataProtectionPolicy';
+import { InformationSecurityPolicy } from './pages/policies/InformationSecurityPolicy';
+import { ModernSlaveryStatement } from './pages/policies/ModernSlaveryStatement';
+import { CarbonReductionPlan } from './pages/policies/CarbonReductionPlan';
+import { BusinessContinuityPlan } from './pages/policies/BusinessContinuityPlan';
+import { EqualOpportunitiesPolicy } from './pages/policies/EqualOpportunitiesPolicy';
 import { Feedback } from './pages/Feedback';
 import { About } from './pages/About';
 import { OpenSource } from './pages/research/OpenSource';
@@ -147,6 +153,12 @@ const SSRApp: React.FC = () => (
         <Route path="/partnerships" element={<Partnerships />} />
         <Route path="/compliance" element={<Compliance />} />
         <Route path="/accessibility" element={<Accessibility />} />
+        <Route path="/policies/data-protection-policy" element={<DataProtectionPolicy />} />
+        <Route path="/policies/information-security-policy" element={<InformationSecurityPolicy />} />
+        <Route path="/policies/modern-slavery-statement" element={<ModernSlaveryStatement />} />
+        <Route path="/policies/carbon-reduction-plan" element={<CarbonReductionPlan />} />
+        <Route path="/policies/business-continuity-plan" element={<BusinessContinuityPlan />} />
+        <Route path="/policies/equal-opportunities-policy" element={<EqualOpportunitiesPolicy />} />
         <Route path="/testimonials" element={<Feedback />} />
         <Route path="/about" element={<About />} />
         <Route path="/research/open-source" element={<OpenSource />} />

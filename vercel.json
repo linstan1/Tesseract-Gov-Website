@@ -17,6 +17,51 @@
       "permanent": true
     },
     {
+      "source": "/policies/data-protection-policy.pdf",
+      "destination": "/policies/data-protection-policy",
+      "permanent": true
+    },
+    {
+      "source": "/policies/information-security-policy.pdf",
+      "destination": "/policies/information-security-policy",
+      "permanent": true
+    },
+    {
+      "source": "/policies/modern-slavery-statement.pdf",
+      "destination": "/policies/modern-slavery-statement",
+      "permanent": true
+    },
+    {
+      "source": "/policies/carbon-reduction-plan.pdf",
+      "destination": "/policies/carbon-reduction-plan",
+      "permanent": true
+    },
+    {
+      "source": "/policies/business-continuity-plan.pdf",
+      "destination": "/policies/business-continuity-plan",
+      "permanent": true
+    },
+    {
+      "source": "/policies/equal-opportunities-policy.pdf",
+      "destination": "/policies/equal-opportunities-policy",
+      "permanent": true
+    },
+    {
+      "source": "/papers/decision-makers-handbook-data-science.pdf",
+      "destination": "https://doi.org/10.1007/978-1-4842-5494-3",
+      "permanent": true
+    },
+    {
+      "source": "/papers/decision-makers-handbook.pdf",
+      "destination": "https://doi.org/10.1007/978-1-4842-5494-3",
+      "permanent": true
+    },
+    {
+      "source": "/papers/alan-turing-ontology-paper.pdf",
+      "destination": "https://arxiv.org/abs/2608.16422",
+      "permanent": true
+    },
+    {
       "source": "/ns/seom",
       "destination": "/data/skills-england/ontology/seom-vocabulary.ttl",
       "permanent": false

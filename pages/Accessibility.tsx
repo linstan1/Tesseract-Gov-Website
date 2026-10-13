@@ -33,7 +33,7 @@ export const Accessibility: React.FC = () => {
       <h2 className={H2}>How accessible this website is</h2>
       <p className={P}>We know some parts of this website are not fully accessible:</p>
       <ul className={UL}>
-        <li>our policy documents and some older reports are PDFs that are not tagged, so screen readers may not read their headings and tables in order</li>
+        <li>three PDF reports on this website do not fully meet the standard: one has no marked-up headings or table headers, one has images without text alternatives, and two do not have a descriptive document title</li>
       </ul>
 
       <h2 className={H2}>Feedback and contact information</h2>
@@ -66,18 +66,29 @@ export const Accessibility: React.FC = () => {
       <p className={P}>
         This website is partially compliant with the Web Content Accessibility Guidelines version 2.2 AA standard, due
         to the non-compliance listed below. The web pages themselves passed every test we ran on 13 October 2026; the
-        remaining failure is in PDF documents linked from them.
+        remaining failures are in three PDF reports hosted on the website.
       </p>
 
       <h3 className={H3}>Non-accessible content</h3>
       <h4 className={H4}>Non-compliance with WCAG 2.2 AA</h4>
       <ul className={UL}>
         <li>
-          Our six policy documents on the compliance page (for example the data protection policy), the Decision
-          Maker's Handbook to Data Science linked from the home page and the Alan Turing Institute cybersecurity paper
-          are untagged PDFs, so their structure is not available to assistive technology. This fails success criterion
-          1.3.1 (Info and Relationships). We plan to replace them with tagged PDFs or web pages by 27 November 2026.
-          The three tagged PDF reports on this site have not yet been audited in full.
+          The agri-environment heritage co-benefits scoping protocol (PDF) is tagged, but its headings are tagged as
+          ordinary paragraphs and its two tables have no header cells, so its structure is not available to assistive
+          technology. This fails success criterion 1.3.1 (Info and Relationships). It also has no document title,
+          which fails success criterion 2.4.2 (Page Titled).
+        </li>
+        <li>
+          In the FAIR AI-readiness report (PDF), three of the seven figures have no text alternative. This fails
+          success criterion 1.1.1 (Non-text Content).
+        </li>
+        <li>
+          The Welsh Government land valuation methods report (PDF) shows the document title "GSR reporting template"
+          instead of the report's name. This fails success criterion 2.4.2 (Page Titled). The report is 268 pages long
+          and we have checked its tagging structure automatically but have not yet audited it in full.
+        </li>
+        <li>
+          We plan to fix these three PDFs, or replace them with web pages, by 27 November 2026.
         </li>
       </ul>
 
@@ -90,8 +101,12 @@ export const Accessibility: React.FC = () => {
         links inside running text are now underlined, tables and charts that scroll sideways on a phone can be reached
         and scrolled with a keyboard, pages reflow at 320 pixels wide without sideways scrolling, diagrams have text
         alternatives, and the focus indicator is now dark ink at 10:1 or more against the page instead of yellow at
-        1.3:1. Next we will replace the untagged PDFs, test the website with a screen reader (VoiceOver and NVDA), and
-        add automated accessibility checks to our build so that new failures are caught before they go live.
+        1.3:1. On the same day we replaced our six untagged policy PDFs with web pages that carry the same text with
+        proper headings, lists and tables, and replaced the downloads of two untagged PDFs of published works (the
+        Decision Maker's Handbook to Data Science and our cybersecurity simulation paper with the Alan Turing
+        Institute) with links to their publishers' own pages for them. Next we will fix the three PDF reports
+        listed above, test the website with a screen reader (VoiceOver and NVDA), and add automated accessibility
+        checks to our build so that new failures are caught before they go live.
       </p>
 
       <h2 className={H2}>Preparation of this accessibility statement</h2>
@@ -105,24 +120,26 @@ export const Accessibility: React.FC = () => {
       <ul className={UL}>
         <li>
           Automated testing with axe-core 4.14.0, using its WCAG 2.0, 2.1 and 2.2 level A and AA rules, on every web
-          page of the site (120 pages, including every page in our sitemap) at a desktop width of 1280 pixels and a
+          page of the site (126 pages, including every page in our sitemap) at a desktop width of 1280 pixels and a
           phone width of 412 pixels. No violations were found.
         </li>
         <li>
-          Reflow at 320 pixels wide on all 120 pages: no page scrolls sideways; wide tables and charts scroll inside
+          Reflow at 320 pixels wide on all 126 pages: no page scrolls sideways; wide tables and charts scroll inside
           their own keyboard-reachable box.
         </li>
         <li>
-          Keyboard testing on 12 main pages (home, how to buy, about, compliance, accessibility, capabilities,
-          insights, a service page, the industries index, an industry page, glossary and partnerships) at both widths:
+          Keyboard testing on 18 pages (home, how to buy, about, compliance, accessibility, capabilities, insights, a
+          service page, the industries index, an industry page, glossary, partnerships and our six policy pages) at
+          both widths:
           every link and control can be reached with the Tab key, shows a focus indicator and is not hidden behind
           other content when focused. We checked the focus indicators by eye on screenshots.
         </li>
       </ul>
       <p className={P}>
         Automated tools find only some of the barriers disabled people may face. We have not yet tested the website
-        with a screen reader or with disabled users, and the PDFs listed above still fail, so we do not claim full
-        conformance. We will update this statement after the screen reader test and after the PDFs are replaced.
+        with a screen reader or with disabled users; that testing is scheduled. Because the PDFs listed above still
+        fail, we do not claim full conformance. We will update this statement after the screen reader test and after
+        the PDFs are fixed.
       </p>
     </div>
   );

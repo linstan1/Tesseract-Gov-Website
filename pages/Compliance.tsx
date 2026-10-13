@@ -1,14 +1,14 @@
 import React from 'react';
 import { FileText } from 'lucide-react';
-import { Button } from '../components/ui/Button';
+import { Link } from 'react-router-dom';
 
 const POLICIES = [
-  { title: 'Data Protection Policy', version: 'v2.1', date: 'Jan 2025', size: '11KB', href: '/policies/data-protection-policy.pdf' },
-  { title: 'Information Security Policy (Summary)', version: 'v1.5', date: 'Dec 2025', size: '11KB', href: '/policies/information-security-policy.pdf' },
-  { title: 'Modern Slavery Statement', version: 'v1.0', date: 'Jan 2025', size: '8KB', href: '/policies/modern-slavery-statement.pdf' },
-  { title: 'Carbon Reduction Plan', version: 'v1.2', date: 'Feb 2025', size: '10KB', href: '/policies/carbon-reduction-plan.pdf' },
-  { title: 'Business Continuity Plan', version: 'v1.0', date: 'Jun 2026', size: '58KB', href: '/policies/business-continuity-plan.pdf' },
-  { title: 'Equal Opportunities and Diversity Policy', version: 'v1.0', date: 'Jun 2026', size: '57KB', href: '/policies/equal-opportunities-policy.pdf' },
+  { title: 'Data Protection Policy', version: 'v2.1', date: 'Jan 2025', size: 'Web page', href: '/policies/data-protection-policy' },
+  { title: 'Information Security Policy (Summary)', version: 'v1.5', date: 'Dec 2025', size: 'Web page', href: '/policies/information-security-policy' },
+  { title: 'Modern Slavery Statement', version: 'v1.0', date: 'Jan 2025', size: 'Web page', href: '/policies/modern-slavery-statement' },
+  { title: 'Carbon Reduction Plan', version: 'v1.2', date: 'Feb 2025', size: 'Web page', href: '/policies/carbon-reduction-plan' },
+  { title: 'Business Continuity Plan', version: 'v1.0', date: 'Jun 2026', size: 'Web page', href: '/policies/business-continuity-plan' },
+  { title: 'Equal Opportunities and Diversity Policy', version: 'v1.0', date: 'Jun 2026', size: 'Web page', href: '/policies/equal-opportunities-policy' },
   { title: 'Accessibility Statement', version: 'v2.0', date: 'Oct 2026', size: 'Web page', href: '/accessibility' },
 ];
 
@@ -26,19 +26,19 @@ export const Compliance: React.FC = () => {
         <h2 className="text-3xl font-bold text-gov-dark mb-8">Policy Library</h2>
         <div className="bg-white border border-gov-border rounded-lg divide-y divide-gov-border shadow-soft overflow-hidden">
           {POLICIES.map((p) => (
-            <div key={p.title} className="p-6 flex items-center justify-between hover:bg-gov-bg transition-colors duration-200 group">
-              <div className="flex items-center gap-4">
-                 <div className="w-10 h-10 rounded-md bg-gov-blue/8 flex items-center justify-center group-hover:bg-gov-blue/12 transition-colors">
+            <div key={p.title} className="p-6 flex flex-col items-start sm:flex-row sm:items-center sm:justify-between gap-4 hover:bg-gov-bg transition-colors duration-200 group">
+              <div className="flex items-center gap-4 min-w-0">
+                 <div className="w-10 h-10 flex-shrink-0 rounded-md bg-gov-blue/8 flex items-center justify-center group-hover:bg-gov-blue/12 transition-colors">
                    <FileText className="w-5 h-5 text-gov-blue" />
                  </div>
                  <div>
-                   <h4 className="font-semibold text-gov-text mb-1">{p.title}</h4>
+                   <h3 className="font-semibold text-gov-text mb-1" style={{ fontSize: "1rem", lineHeight: 1.5 }}>{p.title}</h3>
                    <p className="text-xs text-gov-secondary">Updated: {p.date} • {p.version} • {p.size}</p>
                  </div>
               </div>
-              <a href={p.href} {...(p.href.endsWith('.pdf') ? { target: '_blank', rel: 'noopener noreferrer' } : {})}>
-                <Button variant="outline" className="text-sm py-2 px-4 hover:scale-100">{p.href.endsWith('.pdf') ? 'Download' : 'View'}{p.href.endsWith('.pdf') ? <span className="sr-only"> (opens in new tab)</span> : null}</Button>
-              </a>
+              <Link to={p.href} className="inline-flex items-center justify-center flex-shrink-0 px-4 py-2 text-sm font-semibold rounded-lg text-gov-dark bg-transparent border border-gov-border hover:bg-gov-bg transition-colors">
+                View<span className="sr-only"> {p.title}</span>
+              </Link>
             </div>
           ))}
         </div>

@@ -15,6 +15,12 @@ const Compliance = lazy(() => import('./pages/Compliance').then(m => ({ default:
 const Feedback = lazy(() => import('./pages/Feedback').then(m => ({ default: m.Feedback })));
 const About = lazy(() => import('./pages/About').then(m => ({ default: m.About })));
 const Accessibility = lazy(() => import('./pages/Accessibility').then(m => ({ default: m.Accessibility })));
+const DataProtectionPolicy = lazy(() => import('./pages/policies/DataProtectionPolicy').then(m => ({ default: m.DataProtectionPolicy })));
+const InformationSecurityPolicy = lazy(() => import('./pages/policies/InformationSecurityPolicy').then(m => ({ default: m.InformationSecurityPolicy })));
+const ModernSlaveryStatement = lazy(() => import('./pages/policies/ModernSlaveryStatement').then(m => ({ default: m.ModernSlaveryStatement })));
+const CarbonReductionPlan = lazy(() => import('./pages/policies/CarbonReductionPlan').then(m => ({ default: m.CarbonReductionPlan })));
+const BusinessContinuityPlan = lazy(() => import('./pages/policies/BusinessContinuityPlan').then(m => ({ default: m.BusinessContinuityPlan })));
+const EqualOpportunitiesPolicy = lazy(() => import('./pages/policies/EqualOpportunitiesPolicy').then(m => ({ default: m.EqualOpportunitiesPolicy })));
 const OpenSource = lazy(() => import('./pages/research/OpenSource').then(m => ({ default: m.OpenSource })));
 const WelshGovernment = lazy(() => import('./pages/research/WelshGovernment').then(m => ({ default: m.WelshGovernment })));
 const NationalDigitalTwin = lazy(() => import('./pages/research/NationalDigitalTwin').then(m => ({ default: m.NationalDigitalTwin })));
@@ -178,6 +184,30 @@ const PAGE_META: Record<string, { title: string; description: string }> = {
   '/accessibility': {
     title: 'Accessibility Statement | Tesseract Academy for the Public Sector',
     description: 'Accessibility statement for gov.tesseract.academy. The site is partially compliant with WCAG 2.2 level AA. What does not yet work, when we will fix it, and how to ask for another format.',
+  },
+  '/policies/data-protection-policy': {
+    title: 'Data Protection Policy | Tesseract Academy for the Public Sector',
+    description: 'Data Protection Policy v2.1 (January 2025) of Kampakis and Co Ltd, trading as The Tesseract Academy: UK GDPR principles, lawful bases, data subject rights, retention periods, breach procedures, international transfers and DPIAs. Information Commission registration ZB715782.',
+  },
+  '/policies/information-security-policy': {
+    title: 'Information Security Policy | Tesseract Academy for the Public Sector',
+    description: 'Information Security Policy v1.5 (December 2025) of Kampakis and Co Ltd, trading as The Tesseract Academy: access control, authentication, incident response, acceptable use, remote working, encryption, physical security and backup.',
+  },
+  '/policies/modern-slavery-statement': {
+    title: 'Modern Slavery Statement | Tesseract Academy for the Public Sector',
+    description: 'Modern Slavery Statement v1.0 (January 2025) of Kampakis and Co Ltd, trading as The Tesseract Academy, for the financial year ending March 2025: supply chains, policies, due diligence, risk assessment, training and performance indicators.',
+  },
+  '/policies/carbon-reduction-plan': {
+    title: 'Carbon Reduction Plan | Tesseract Academy for the Public Sector',
+    description: 'Carbon Reduction Plan v1.2 (February 2025) of Kampakis and Co Ltd, trading as The Tesseract Academy, prepared in accordance with PPN 06/21: baseline and current emissions, reduction measures and targets to Net Zero by 2050.',
+  },
+  '/policies/business-continuity-plan': {
+    title: 'Business Continuity Plan | Tesseract Academy for the Public Sector',
+    description: 'Business Continuity Plan v1.0 (June 2026) of Kampakis and Co Ltd, trading as The Tesseract Academy: recovery objectives, risk scenarios and responses, data backup and recovery, communications and testing.',
+  },
+  '/policies/equal-opportunities-policy': {
+    title: 'Equal Opportunities and Diversity Policy | Tesseract Academy for the Public Sector',
+    description: 'Equal Opportunities and Diversity Policy v1.0 (June 2026) of Kampakis and Co Ltd, trading as The Tesseract Academy: commitment under the Equality Act 2010, protected characteristics, commitments in practice, responsibilities and review.',
   },
   '/compliance': {
     title: 'Compliance & Policies | Tesseract Academy for the Public Sector',
@@ -664,6 +694,12 @@ const App: React.FC = () => {
               <Route path="/partnerships" element={<Partnerships />} />
               <Route path="/compliance" element={<Compliance />} />
               <Route path="/accessibility" element={<Accessibility />} />
+              <Route path="/policies/data-protection-policy" element={<DataProtectionPolicy />} />
+              <Route path="/policies/information-security-policy" element={<InformationSecurityPolicy />} />
+              <Route path="/policies/modern-slavery-statement" element={<ModernSlaveryStatement />} />
+              <Route path="/policies/carbon-reduction-plan" element={<CarbonReductionPlan />} />
+              <Route path="/policies/business-continuity-plan" element={<BusinessContinuityPlan />} />
+              <Route path="/policies/equal-opportunities-policy" element={<EqualOpportunitiesPolicy />} />
               <Route path="/testimonials" element={<Feedback />} />
               <Route path="/about" element={<About />} />
               <Route path="/research/open-source" element={<OpenSource />} />

@@ -76,6 +76,30 @@ const PAGE_META = {
     title: 'Accessibility Statement | Tesseract Academy for the Public Sector',
     description: 'Accessibility statement for gov.tesseract.academy. The site is partially compliant with WCAG 2.2 level AA. What does not yet work, when we will fix it, and how to ask for another format.',
   },
+  '/policies/data-protection-policy': {
+    title: 'Data Protection Policy | Tesseract Academy for the Public Sector',
+    description: 'Data Protection Policy v2.1 (January 2025) of Kampakis and Co Ltd, trading as The Tesseract Academy: UK GDPR principles, lawful bases, data subject rights, retention periods, breach procedures, international transfers and DPIAs. Information Commission registration ZB715782.',
+  },
+  '/policies/information-security-policy': {
+    title: 'Information Security Policy | Tesseract Academy for the Public Sector',
+    description: 'Information Security Policy v1.5 (December 2025) of Kampakis and Co Ltd, trading as The Tesseract Academy: access control, authentication, incident response, acceptable use, remote working, encryption, physical security and backup.',
+  },
+  '/policies/modern-slavery-statement': {
+    title: 'Modern Slavery Statement | Tesseract Academy for the Public Sector',
+    description: 'Modern Slavery Statement v1.0 (January 2025) of Kampakis and Co Ltd, trading as The Tesseract Academy, for the financial year ending March 2025: supply chains, policies, due diligence, risk assessment, training and performance indicators.',
+  },
+  '/policies/carbon-reduction-plan': {
+    title: 'Carbon Reduction Plan | Tesseract Academy for the Public Sector',
+    description: 'Carbon Reduction Plan v1.2 (February 2025) of Kampakis and Co Ltd, trading as The Tesseract Academy, prepared in accordance with PPN 06/21: baseline and current emissions, reduction measures and targets to Net Zero by 2050.',
+  },
+  '/policies/business-continuity-plan': {
+    title: 'Business Continuity Plan | Tesseract Academy for the Public Sector',
+    description: 'Business Continuity Plan v1.0 (June 2026) of Kampakis and Co Ltd, trading as The Tesseract Academy: recovery objectives, risk scenarios and responses, data backup and recovery, communications and testing.',
+  },
+  '/policies/equal-opportunities-policy': {
+    title: 'Equal Opportunities and Diversity Policy | Tesseract Academy for the Public Sector',
+    description: 'Equal Opportunities and Diversity Policy v1.0 (June 2026) of Kampakis and Co Ltd, trading as The Tesseract Academy: commitment under the Equality Act 2010, protected characteristics, commitments in practice, responsibilities and review.',
+  },
   '/compliance': {
     title: 'Compliance & Policies | Tesseract Academy for the Public Sector',
     description: 'Cyber Essentials certified, ISO 27001 aligned. Public liability £5M, employer\'s liability £10M, professional indemnity £5M. Information Commission ZB715782. DUNS 222180245. PPON PWJP-6874-MXDJ. Policy documents.',

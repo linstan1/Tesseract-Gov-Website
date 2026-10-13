@@ -84,8 +84,7 @@ const COMPANY_DATA = {
       "id": "RM6094",
       "name": "Spark Dynamic Purchasing System",
       "shortName": "Spark DPS",
-      "scope": "Emerging technology: AI and automation, data, Internet of Things",
-      "appointed": "2026-08"
+      "scope": "Emerging technology: AI and automation, data, Internet of Things"
     }
   ],
   "certifications": [

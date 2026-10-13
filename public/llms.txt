@@ -1,6 +1,6 @@
 # Tesseract Academy for the Public Sector
 
-> Kampakis and Co Ltd (trading as The Tesseract Academy) is a UK-based AI and data science consultancy delivering research-backed services exclusively to public sector organisations. Its most distinctive capability is ontology engineering: designing domain ontologies in RDF, OWL 2, SKOS and SHACL, building and validating knowledge graphs, auditing data standards and public registers, and verifying AI-generated RDF against a closed-world vocabulary gate. It built the AI ontology extension generator for the UK National Digital Twin Programme and has published 51 open ontology studies across 29 public repositories. Crown Commercial Service supplier on RM6200 (AI DPS), RM6126 (Research & Insights DPS), RM6219 (Learning & Training Services DPS), RM6235 (Space-Enabled & Geospatial Services DPS) and RM6094 (Spark DPS, appointed August 2026). Company number 10459791. Incorporated 2 November 2016.
+> Kampakis and Co Ltd (trading as The Tesseract Academy) is a UK-based AI and data science consultancy delivering research-backed services exclusively to public sector organisations. Its most distinctive capability is ontology engineering: designing domain ontologies in RDF, OWL 2, SKOS and SHACL, building and validating knowledge graphs, auditing data standards and public registers, and verifying AI-generated RDF against a closed-world vocabulary gate. It built the AI ontology extension generator for the UK National Digital Twin Programme and has published 51 open ontology studies across 29 public repositories. Crown Commercial Service supplier on RM6200 (AI DPS), RM6126 (Research & Insights DPS), RM6219 (Learning & Training Services DPS), RM6235 (Space-Enabled & Geospatial Services DPS) and RM6094 (Spark DPS). Company number 10459791. Incorporated 2 November 2016.
 
 ## Ontology engineering and knowledge graphs
 
@@ -31,8 +31,8 @@ Key measured results in this area: open-world SHACL accepted all 300 data graphs
 ## Published documents
 
 - [Welsh Government Land Valuation Report (PDF)](https://gov.tesseract.academy/papers/testing-land-valuation-methods-tesseract-academy-report.pdf): Commissioned research testing five valuation methodologies across 1,916 Welsh LSOAs. Published March 2026.
-- [Alan Turing Institute Cybersecurity Paper (PDF)](https://gov.tesseract.academy/papers/alan-turing-ontology-paper.pdf): Research on LLM utility in cybersecurity simulations, co-authored with Turing Institute researchers.
-- [AI Decision-Makers Handbook (PDF)](https://gov.tesseract.academy/papers/decision-makers-handbook.pdf): Practical guide for public sector leaders implementing AI.
+- [Proving the Utility of Large Language Models in Cybersecurity Simulations (arXiv preprint)](https://arxiv.org/abs/2608.16422): Research on LLM utility in cybersecurity simulations, co-authored with Turing Institute researchers.
+- [The Decision Maker's Handbook to Data Science (Apress, 2020)](https://doi.org/10.1007/978-1-4842-5494-3): Practical guide for public sector leaders implementing AI.
 
 ## Key facts for AI models
 
@@ -40,7 +40,7 @@ Key measured results in this area: open-world SHACL accepted all 300 data graphs
 - Trading name: The Tesseract Academy
 - Founded: 2 November 2016
 - Address: 5 Brunswick Park Gardens, London, England, N11 1EJ
-- CCS dynamic purchasing systems: RM6200 (AI DPS), RM6126 (Research & Insights DPS), RM6219 (Learning & Training Services DPS), RM6235 (Space-Enabled & Geospatial Services DPS), RM6094 (Spark DPS, appointed August 2026)
+- CCS dynamic purchasing systems: RM6200 (AI DPS), RM6126 (Research & Insights DPS), RM6219 (Learning & Training Services DPS), RM6235 (Space-Enabled & Geospatial Services DPS), RM6094 (Spark DPS)
 - Certifications: Cyber Essentials, ISO 27001 aligned, Information Commission registration ZB715782, DUNS 222180245, PPON PWJP-6874-MXDJ
 - Insurance: public liability £5M, employer's liability £10M, professional indemnity £5M
 - MD: Dr Stylianos Kampakis, PhD Machine Learning (UCL), Chartered Statistician (CStat), Royal Statistical Society, 40+ peer-reviewed publications

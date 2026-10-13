@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { ArrowRight, CheckCircle, Shield, Download, Star, Quote, Brain, FlaskConical, GraduationCap, ClipboardList, Scale, BarChart3, Users, MessageCircle, Award } from 'lucide-react';
+import { ArrowRight, CheckCircle, Shield, Star, Quote, Brain, FlaskConical, GraduationCap, ClipboardList, Scale, BarChart3, Users, MessageCircle, Award } from 'lucide-react';
 import { Button } from '../components/ui/Button';
 
 export const Home: React.FC = () => {
@@ -18,7 +18,7 @@ export const Home: React.FC = () => {
             Research-backed AI and data services for <span className="text-gov-blue">UK public sector</span>
           </h1>
           <p className="text-xl text-gov-secondary mb-6 max-w-3xl leading-relaxed">
-            Tesseract Academy delivers AI consulting, research, public engagement, and survey design for UK government bodies. Crown Commercial Service supplier on RM6200 (AI DPS), RM6126 (Research &amp; Insights DPS), RM6219 (Learning &amp; Training Services DPS), RM6235 (Space-Enabled &amp; Geospatial Services DPS) and RM6094 (Spark DPS, appointed August 2026).
+            Tesseract Academy delivers AI consulting, research, public engagement, and survey design for UK government bodies. Crown Commercial Service supplier on RM6200 (AI DPS), RM6126 (Research &amp; Insights DPS), RM6219 (Learning &amp; Training Services DPS), RM6235 (Space-Enabled &amp; Geospatial Services DPS) and RM6094 (Spark DPS).
           </p>
           <p className="text-base text-gov-secondary mb-10 max-w-3xl leading-relaxed">
             Delivered for Welsh Government, Innovate UK, National Digital Twin Programme, Qualifications Wales, and Fintech Scotland.
@@ -264,12 +264,12 @@ export const Home: React.FC = () => {
               <img src="/book-cover.png" alt="The Decision Maker's Handbook to Data Science book cover" width="1221" height="1851" loading="lazy" decoding="async" className="w-40 rounded-lg shadow-md" />
             </div>
             <div className="flex-1 text-center md:text-left">
-              <h3 className="text-lg font-bold text-gov-dark mb-2">Get Your Free Copy</h3>
+              <h3 className="text-lg font-bold text-gov-dark mb-2">The Decision Maker's Handbook to Data Science</h3>
               <p className="text-gov-secondary leading-relaxed mb-4">
                 <em>The Decision Maker's Handbook to Data Science</em>  - a practical guide for non-technical executives, managers, and founders navigating AI and data strategy. Written by our MD, Dr Stylianos Kampakis, and published by Apress. Dr Kampakis also serves as Governor at <a href="https://www.nhc.ac.uk/" target="_blank" rel="noopener noreferrer" className="text-gov-blue underline underline-offset-2 hover:text-gov-blue-dark">North Hertfordshire College</a>, bringing governance experience across further and higher education.
               </p>
-              <a href="/papers/decision-makers-handbook-data-science.pdf" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-5 py-2.5 bg-gov-blue text-white font-semibold rounded-lg hover:bg-gov-blue-dark transition-colors text-sm">
-                <Download className="w-4 h-4" /> Download PDF
+              <a href="https://doi.org/10.1007/978-1-4842-5494-3" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-5 py-2.5 bg-gov-blue text-white font-semibold rounded-lg hover:bg-gov-blue-dark transition-colors text-sm">
+                <ArrowRight className="w-4 h-4" aria-hidden="true" /> View the book on the publisher's site<span className="sr-only"> (opens in new tab)</span>
               </a>
             </div>
           </div>

@@ -114,7 +114,7 @@ export const About: React.FC = () => {
               </tr>
               <tr className="bg-white hover:bg-gov-bg/50 transition-colors">
                 <td className="px-6 py-4 font-medium text-gov-dark">CCS Framework: Emerging Technology</td>
-                <td className="px-6 py-4 text-gov-dark">RM6094 — Spark Dynamic Purchasing System (appointed August 2026)</td>
+                <td className="px-6 py-4 text-gov-dark">RM6094 — Spark Dynamic Purchasing System</td>
                 <td className="px-6 py-4 text-gov-dark">Crown Commercial Service</td>
               </tr>
               <tr className="bg-white hover:bg-gov-bg/50 transition-colors">
