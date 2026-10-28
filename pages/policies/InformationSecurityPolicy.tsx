@@ -7,10 +7,10 @@ export const InformationSecurityPolicy: React.FC = () => (
     subtitle="Kampakis and Co Ltd (trading as The Tesseract Academy)"
     meta={{
       version: '1.5',
-      date: 'December 2025',
+      date: 'January 2026',
       owner: 'Fabio Rovai, Operations Lead',
       approvedBy: 'Dr Stylianos Kampakis',
-      nextReview: 'December 2026',
+      nextReview: 'January 2027',
     }}
   >
     <h2 className={H2}>1. Purpose and Scope</h2>
@@ -146,12 +146,12 @@ export const InformationSecurityPolicy: React.FC = () => (
     <h2 className={H2}>12. Review Schedule</h2>
     <p className={P}>
       This policy is reviewed annually or following a significant security incident, organisational change, or change
-      in the threat landscape. The next scheduled review is December 2026.
+      in the threat landscape. The next scheduled review is January 2027.
     </p>
     <Lines
       lines={[
         ['Approved by', 'Dr Stylianos Kampakis, Managing Director'],
-        ['Date', 'December 2025'],
+        ['Date', 'January 2026'],
       ]}
     />
   </PolicyDocument>

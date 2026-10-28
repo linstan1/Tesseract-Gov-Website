@@ -78,19 +78,19 @@ const PAGE_META = {
   },
   '/policies/data-protection-policy': {
     title: 'Data Protection Policy | Tesseract Academy for the Public Sector',
-    description: 'Data Protection Policy v2.1 (January 2026) of Kampakis and Co Ltd, trading as The Tesseract Academy: UK GDPR principles, lawful bases, data subject rights, retention periods, breach procedures, international transfers and DPIAs. Information Commission registration ZB715782.',
+    description: 'Data Protection Policy v2.2 (January 2026) of Kampakis and Co Ltd, trading as The Tesseract Academy, under the UK GDPR as amended by the Data (Use and Access) Act 2025: principles, lawful bases including recognised legitimate interests, data subject rights, automated decision-making safeguards, complaints handling, retention periods, breach procedures, international transfers, DPIAs and research safeguards. Information Commission registration ZB715782.',
   },
   '/policies/information-security-policy': {
     title: 'Information Security Policy | Tesseract Academy for the Public Sector',
-    description: 'Information Security Policy v1.5 (December 2025) of Kampakis and Co Ltd, trading as The Tesseract Academy: access control, authentication, incident response, acceptable use, remote working, encryption, physical security and backup.',
+    description: 'Information Security Policy v1.5 (January 2026) of Kampakis and Co Ltd, trading as The Tesseract Academy: access control, authentication, incident response, acceptable use, remote working, encryption, physical security and backup.',
   },
   '/policies/modern-slavery-statement': {
     title: 'Modern Slavery Statement | Tesseract Academy for the Public Sector',
-    description: 'Modern Slavery Statement v1.0 (January 2025) of Kampakis and Co Ltd, trading as The Tesseract Academy, for the financial year ending March 2025: supply chains, policies, due diligence, risk assessment, training and performance indicators.',
+    description: 'Modern Slavery Statement v2.0 (January 2026) of Kampakis and Co Ltd, trading as The Tesseract Academy, for the financial year ending 30 November 2025, following the March 2025 Home Office guidance: supply chains, policies, due diligence, risk assessment, PPN 009 and Procurement Act 2023 support, remediation, training and performance indicators.',
   },
   '/policies/carbon-reduction-plan': {
     title: 'Carbon Reduction Plan | Tesseract Academy for the Public Sector',
-    description: 'Carbon Reduction Plan v1.2 (February 2025) of Kampakis and Co Ltd, trading as The Tesseract Academy, prepared in accordance with PPN 06/21: baseline and current emissions, reduction measures and targets to Net Zero by 2050.',
+    description: 'Carbon Reduction Plan v1.2 (January 2026) of Kampakis and Co Ltd, trading as The Tesseract Academy, prepared in accordance with PPN 06/21: baseline and current emissions, reduction measures and targets to Net Zero by 2050.',
   },
   '/policies/business-continuity-plan': {
     title: 'Business Continuity Plan | Tesseract Academy for the Public Sector',

@@ -7,10 +7,10 @@ export const CarbonReductionPlan: React.FC = () => (
     subtitle="In accordance with PPN 06/21"
     meta={{
       version: '1.2',
-      date: 'February 2025',
+      date: 'January 2026',
       owner: 'Fabio Rovai, Operations Lead',
       approvedBy: 'Dr Stylianos Kampakis',
-      nextReview: 'February 2026',
+      nextReview: 'January 2027',
     }}
   >
     <h2 className={H2}>1. Commitment to Net Zero</h2>
@@ -141,7 +141,7 @@ export const CarbonReductionPlan: React.FC = () => (
       lines={[
         ['Signed', 'Dr Stylianos Kampakis'],
         ['Title', 'Managing Director'],
-        ['Date', 'February 2025'],
+        ['Date', 'January 2026'],
       ]}
     />
     <p className={P}>

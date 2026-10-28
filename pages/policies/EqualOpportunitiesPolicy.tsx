@@ -10,7 +10,7 @@ export const EqualOpportunitiesPolicy: React.FC = () => (
       date: 'June 2026',
       owner: 'Fabio Rovai, Operations Lead',
       approvedBy: 'Dr Stylianos Kampakis',
-      nextReview: 'June 2027',
+      nextReview: 'January 2027',
     }}
   >
     <h2 className={H2}>1. Policy statement and commitment</h2>
