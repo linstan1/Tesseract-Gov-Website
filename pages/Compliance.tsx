@@ -3,7 +3,7 @@ import { FileText } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const POLICIES = [
-  { title: 'Data Protection Policy', version: 'v2.1', date: 'Jan 2025', size: 'Web page', href: '/policies/data-protection-policy' },
+  { title: 'Data Protection Policy', version: 'v2.1', date: 'Jan 2026', size: 'Web page', href: '/policies/data-protection-policy' },
   { title: 'Information Security Policy (Summary)', version: 'v1.5', date: 'Dec 2025', size: 'Web page', href: '/policies/information-security-policy' },
   { title: 'Modern Slavery Statement', version: 'v1.0', date: 'Jan 2025', size: 'Web page', href: '/policies/modern-slavery-statement' },
   { title: 'Carbon Reduction Plan', version: 'v1.2', date: 'Feb 2025', size: 'Web page', href: '/policies/carbon-reduction-plan' },

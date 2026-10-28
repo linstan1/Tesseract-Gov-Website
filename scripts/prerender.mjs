@@ -78,7 +78,7 @@ const PAGE_META = {
   },
   '/policies/data-protection-policy': {
     title: 'Data Protection Policy | Tesseract Academy for the Public Sector',
-    description: 'Data Protection Policy v2.1 (January 2025) of Kampakis and Co Ltd, trading as The Tesseract Academy: UK GDPR principles, lawful bases, data subject rights, retention periods, breach procedures, international transfers and DPIAs. Information Commission registration ZB715782.',
+    description: 'Data Protection Policy v2.1 (January 2026) of Kampakis and Co Ltd, trading as The Tesseract Academy: UK GDPR principles, lawful bases, data subject rights, retention periods, breach procedures, international transfers and DPIAs. Information Commission registration ZB715782.',
   },
   '/policies/information-security-policy': {
     title: 'Information Security Policy | Tesseract Academy for the Public Sector',

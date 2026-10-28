@@ -7,10 +7,10 @@ export const DataProtectionPolicy: React.FC = () => (
     subtitle="Kampakis and Co Ltd (trading as The Tesseract Academy)"
     meta={{
       version: '2.1',
-      date: 'January 2025',
+      date: 'January 2026',
       owner: 'Fabio Rovai, Data Protection Lead',
       approvedBy: 'Dr Stylianos Kampakis',
-      nextReview: 'January 2026',
+      nextReview: 'January 2027',
     }}
   >
     <h2 className={H2}>1. Introduction and Purpose</h2>
@@ -157,7 +157,7 @@ export const DataProtectionPolicy: React.FC = () => (
     <h2 className={H2}>12. Policy Review</h2>
     <p className={P}>
       This policy is reviewed annually or following any significant changes to our processing activities, relevant
-      legislation, or organisational structure. The next scheduled review is January 2026.
+      legislation, or organisational structure. The next scheduled review is January 2027.
     </p>
   </PolicyDocument>
 );
