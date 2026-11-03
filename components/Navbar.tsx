@@ -31,7 +31,7 @@ const NAV_ENTRIES: NavEntry[] = [
   {
     label: 'About',
     items: [
-      { label: 'About us', path: '/about', blurb: 'The team, credentials and CCS frameworks' },
+      { label: 'About us', path: '/about', blurb: 'The team, credentials and GCA frameworks' },
       { label: 'Partnerships', path: '/partnerships', blurb: 'Innovate UK and Horizon Europe consortia' },
       { label: 'Compliance', path: '/compliance', blurb: 'Cyber Essentials, policies and certificates' },
     ],

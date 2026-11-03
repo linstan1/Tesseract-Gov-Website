@@ -71,7 +71,7 @@ export const PublicEngagement: React.FC = () => {
           We are registered with the Information Commission (ZB715782) and process personal data collected during
           engagement activities under UK GDPR Article 6(1)(e) (public task) or Article 9(2)(j)
           (research purposes), with all processing documented in a Data Protection Impact Assessment
-          (DPIA) before fieldwork begins. Services are available via <a href="https://www.crowncommercial.gov.uk/agreements/RM6126" target="_blank" rel="noopener noreferrer" className="text-gov-blue underline underline-offset-2 hover:text-gov-blue-dark">Crown Commercial Service (CCS) RM6126</a>, and our social value commitments are aligned with the <a href="https://www.legislation.gov.uk/ukpga/2012/3/contents" target="_blank" rel="noopener noreferrer" className="text-gov-blue underline underline-offset-2 hover:text-gov-blue-dark">Social Value Act 2012</a> requirements applied by the UK AI Safety Institute and DSIT-funded programmes.
+          (DPIA) before fieldwork begins. Services are available via <a href="https://www.gca.gov.uk/agreements/RM6126" target="_blank" rel="noopener noreferrer" className="text-gov-blue underline underline-offset-2 hover:text-gov-blue-dark">Government Commercial Agency (GCA) RM6126</a>, and our social value commitments are aligned with the <a href="https://www.legislation.gov.uk/ukpga/2012/3/contents" target="_blank" rel="noopener noreferrer" className="text-gov-blue underline underline-offset-2 hover:text-gov-blue-dark">Social Value Act 2012</a> requirements applied by the UK AI Safety Institute and DSIT-funded programmes.
         </p>
       </section>
 
@@ -239,7 +239,7 @@ export const PublicEngagement: React.FC = () => {
               1
             </span>
             <div>
-              <p className="font-semibold text-gov-dark">CCS RM6126, Research and Insights DPS</p>
+              <p className="font-semibold text-gov-dark">GCA RM6126, Research and Insights DPS</p>
               <p className="text-gov-secondary text-sm mt-1">
                 The primary route for public engagement, citizen panel delivery, deliberative research,
                 and participatory action research. Covers all aspects of community consultation and
@@ -252,7 +252,7 @@ export const PublicEngagement: React.FC = () => {
               2
             </span>
             <div>
-              <p className="font-semibold text-gov-dark">CCS RM6200, Artificial Intelligence DPS</p>
+              <p className="font-semibold text-gov-dark">GCA RM6200, Artificial Intelligence DPS</p>
               <p className="text-gov-secondary text-sm mt-1">
                 Suitable for engagement work embedded within wider policy advisory or digital
                 transformation projects.

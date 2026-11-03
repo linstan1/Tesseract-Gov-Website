@@ -131,7 +131,7 @@ const PAGE_META: Record<string, { title: string; description: string }> = {
   },
   '/industries/government-public-services': {
     title: 'Government and Public Services | Tesseract Academy for the Public Sector',
-    description: 'Delivered for the Welsh Government, the National Digital Twin Programme, Qualifications Wales and Imperial War Museums. Supplier on five Crown Commercial Service dynamic purchasing systems. Open research on public registers, consultations and government evaluation.',
+    description: 'Delivered for the Welsh Government, the National Digital Twin Programme, Qualifications Wales and Imperial War Museums. Supplier on five Government Commercial Agency dynamic purchasing systems. Open research on public registers, consultations and government evaluation.',
   },
   '/industries/financial-services-insurance': {
     title: 'Financial Services and Insurance | Tesseract Academy for the Public Sector',
@@ -159,11 +159,11 @@ const PAGE_META: Record<string, { title: string; description: string }> = {
   },
   '/': {
     title: 'Tesseract Academy for the Public Sector - Research, AI & Public Sector Delivery Partner',
-    description: 'Tesseract Academy delivers research-backed AI, data science, public engagement, survey design, and policy advisory services for UK and EU public sector organisations. Crown Commercial Service appointed supplier.',
+    description: 'Tesseract Academy delivers research-backed AI, data science, public engagement, survey design, and policy advisory services for UK and EU public sector organisations. Government Commercial Agency appointed supplier.',
   },
   '/how-to-buy': {
     title: 'How to Buy - Procurement Routes | Tesseract Academy for the Public Sector',
-    description: 'Commission Tesseract Academy through Crown Commercial Service dynamic purchasing systems RM6200 (AI DPS), RM6126 (Research & Insights DPS), RM6219 (Learning & Training Services DPS), RM6235 (Space-Enabled & Geospatial Services DPS) or RM6094 (Spark DPS), the Metropolitan Police Precise Policing Dynamic Market, or by direct award below the threshold.',
+    description: 'Commission Tesseract Academy through Government Commercial Agency dynamic purchasing systems RM6200 (AI DPS), RM6126 (Research & Insights DPS), RM6219 (Learning & Training Services DPS), RM6235 (Space-Enabled & Geospatial Services DPS) or RM6094 (Spark DPS), the Metropolitan Police Precise Policing Dynamic Market, or by direct award below the threshold.',
   },
   '/capabilities': {
     title: 'Capabilities: ontology engineering, AI, research, education and survey services | Tesseract Academy for the Public Sector',
@@ -219,7 +219,7 @@ const PAGE_META: Record<string, { title: string; description: string }> = {
   },
   '/about': {
     title: 'About Tesseract Academy - Company Credentials | Tesseract Academy for the Public Sector',
-    description: 'Dr Stylianos Kampakis (PhD UCL, CStat) and Fabio Rovai MSc. Kampakis and Co Ltd, incorporated 2016. CCS supplier on RM6200, RM6126, RM6219, RM6235 and RM6094 (Spark DPS). Cyber Essentials certified. DV-cleared consultant available.',
+    description: 'Dr Stylianos Kampakis (PhD UCL, CStat) and Fabio Rovai MSc. Kampakis and Co Ltd, incorporated 2016. GCA supplier on RM6200, RM6126, RM6219, RM6235 and RM6094 (Spark DPS). Cyber Essentials certified. DV-cleared consultant available.',
   },
   '/research/open-source': {
     title: 'Open source contributions: the data standards we file bugs against | Tesseract Academy for the Public Sector',
@@ -587,7 +587,7 @@ const PAGE_META: Record<string, { title: string; description: string }> = {
   },
   '/services/ai-consulting': {
     title: 'AI Consulting for UK Public Sector | Tesseract Academy for the Public Sector',
-    description: 'Custom AI model development, NLP, machine learning pipelines, and predictive analytics for UK public sector. CCS RM6200 appointed supplier. Aligned with GDS Service Standard.',
+    description: 'Custom AI model development, NLP, machine learning pipelines, and predictive analytics for UK public sector. GCA RM6200 appointed supplier. Aligned with GDS Service Standard.',
   },
   '/services/research-policy': {
     title: 'Research & Policy Advisory | Tesseract Academy for the Public Sector',
@@ -595,15 +595,15 @@ const PAGE_META: Record<string, { title: string; description: string }> = {
   },
   '/services/public-engagement': {
     title: 'Public Engagement & Participatory Research | Tesseract Academy for the Public Sector',
-    description: 'Deliberative workshops, citizen panels, inclusive co-design, and participatory research with diverse communities. Full ethical framework. CCS RM6126 appointed supplier.',
+    description: 'Deliberative workshops, citizen panels, inclusive co-design, and participatory research with diverse communities. Full ethical framework. GCA RM6126 appointed supplier.',
   },
   '/services/survey-design': {
     title: 'Survey design and delivery for the public sector | Tesseract Academy for the Public Sector',
-    description: 'End-to-end survey methodology, questionnaire design, mixed-mode data collection, and statistical analysis. Qualifications Wales 3-year contract (2026-2029). CCS RM6126.',
+    description: 'End-to-end survey methodology, questionnaire design, mixed-mode data collection, and statistical analysis. Qualifications Wales 3-year contract (2026-2029). GCA RM6126.',
   },
   '/services/digital-analytics': {
     title: 'Digital Analytics & Audience Measurement | Tesseract Academy for the Public Sector',
-    description: 'GA4 and Google Tag Manager implementation and audit, consent-aware measurement, Power BI and Looker Studio dashboards, KPI frameworks, test-and-learn support, and analytics capability building for UK public sector and cultural organisations. CCS RM6126 appointed supplier.',
+    description: 'GA4 and Google Tag Manager implementation and audit, consent-aware measurement, Power BI and Looker Studio dashboards, KPI frameworks, test-and-learn support, and analytics capability building for UK public sector and cultural organisations. GCA RM6126 appointed supplier.',
   },
   '/research/museum-visits-observatory': {
     title: 'DCMS museum visits observatory: 16 museum groups, 87 months of open data | Tesseract Academy for the Public Sector',
@@ -619,7 +619,7 @@ const PAGE_META: Record<string, { title: string; description: string }> = {
   },
   '/services/ontology-engineering': {
     title: 'Ontology engineering consultancy: RDF, OWL 2 and SHACL | Tesseract Academy for the Public Sector',
-    description: 'Ontology engineering, knowledge graph design and semantic data assurance for UK government and regulated industry. Domain ontologies in OWL 2, SKOS and SHACL, standards crosswalks, register assurance, and closed-world verification of AI-generated RDF. Delivered the ontology extension tool for the National Digital Twin Programme. Procurable through CCS RM6200, RM6126 and RM6219.',
+    description: 'Ontology engineering, knowledge graph design and semantic data assurance for UK government and regulated industry. Domain ontologies in OWL 2, SKOS and SHACL, standards crosswalks, register assurance, and closed-world verification of AI-generated RDF. Delivered the ontology extension tool for the National Digital Twin Programme. Procurable through GCA RM6200, RM6126 and RM6219.',
   },
   '/ontology': {
     title: 'Safe AI: building AI systems that can be checked | Tesseract Academy for the Public Sector',

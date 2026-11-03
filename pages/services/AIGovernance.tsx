@@ -70,12 +70,12 @@ export const AIGovernance: React.FC = () => {
           Act, NIST AI RMF, and ISO 42001, bias and hallucination monitoring, policy enforcement
           gates, and audit-ready reporting. The platform is designed for public sector use and can be
           self-hosted to avoid data leaving organisational boundaries — an important consideration for
-          systems handling personal or classified information. The Alan Turing Institute and NESTA have both called for open, auditable governance tooling of precisely this kind; our platform directly responds to those recommendations. Crown Commercial Service (CCS) and Cabinet Office procurement teams have engaged with this tooling as a reference implementation for algorithmic transparency.
+          systems handling personal or classified information. The Alan Turing Institute and NESTA have both called for open, auditable governance tooling of precisely this kind; our platform directly responds to those recommendations. Crown Commercial Service (now the Government Commercial Agency) and Cabinet Office procurement teams have engaged with this tooling as a reference implementation for algorithmic transparency.
         </p>
         <p className="text-gov-dark leading-relaxed text-base">
           We are Cyber Essentials certified and operate
           ISO 27001-aligned information security controls, meeting the security baseline required
-          for contracts involving personal data or government OFFICIAL classification. Our services are procurable via <a href="https://www.crowncommercial.gov.uk/agreements/RM6200" target="_blank" rel="noopener noreferrer" className="text-gov-blue underline underline-offset-2 hover:text-gov-blue-dark">Crown Commercial Service (CCS) RM6200</a>, and NHS England, HM Treasury, and Office for National Statistics (ONS) clients can access our governance services through standard framework routes.
+          for contracts involving personal data or government OFFICIAL classification. Our services are procurable via <a href="https://www.gca.gov.uk/agreements/RM6200" target="_blank" rel="noopener noreferrer" className="text-gov-blue underline underline-offset-2 hover:text-gov-blue-dark">Government Commercial Agency (GCA) RM6200</a>, and NHS England, HM Treasury, and Office for National Statistics (ONS) clients can access our governance services through standard framework routes.
         </p>
       </section>
 
@@ -229,7 +229,7 @@ export const AIGovernance: React.FC = () => {
               1
             </span>
             <div>
-              <p className="font-semibold text-gov-dark">CCS RM6200, Artificial Intelligence DPS</p>
+              <p className="font-semibold text-gov-dark">GCA RM6200, Artificial Intelligence DPS</p>
               <p className="text-gov-secondary text-sm mt-1">
                 The primary route for AI governance strategy, compliance programme design, and
                 regulatory advisory. Covers EU AI Act compliance assessments, NIST AI RMF

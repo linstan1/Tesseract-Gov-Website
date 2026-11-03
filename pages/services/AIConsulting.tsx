@@ -11,7 +11,7 @@ const SCHEMA = {
   },
   serviceType: 'AI Consulting',
   description:
-    'Custom machine learning models, NLP pipelines, and AI strategy for UK central government, devolved administrations, and arm\'s-length bodies. Available via CCS RM6200.',
+    'Custom machine learning models, NLP pipelines, and AI strategy for UK central government, devolved administrations, and arm\'s-length bodies. Available via GCA RM6200.',
   url: 'https://gov.tesseract.academy/services/ai-consulting',
   areaServed: 'GB',
   datePublished: '2026-04-29',
@@ -30,7 +30,7 @@ const SCHEMA = {
     '@type': 'HowTo',
     name: 'How to Commission AI Consulting Services from Tesseract Academy',
     step: [
-      { '@type': 'HowToStep', position: 1, name: 'Identify the correct CCS framework', text: 'AI consulting can be commissioned through CCS RM6200 (Artificial Intelligence DPS) or directly for contracts below £10,000.' },
+      { '@type': 'HowToStep', position: 1, name: 'Identify the correct GCA framework', text: 'AI consulting can be commissioned through GCA RM6200 (Artificial Intelligence DPS) or directly for contracts below £10,000.' },
       { '@type': 'HowToStep', position: 2, name: 'Issue a Statement of Requirements', text: 'Prepare a Statement of Requirements or Invitation to Tender detailing the problem, data environment, and expected outputs.' },
       { '@type': 'HowToStep', position: 3, name: 'Run a further competition or direct award', text: 'For contracts above £10,000, run a further competition among framework suppliers. For contracts below threshold, a direct award is permitted.' },
       { '@type': 'HowToStep', position: 4, name: 'Evaluate quality and price', text: 'Evaluate submissions on a quality-price ratio, typically 60/40 or 70/30 in favour of quality for AI services.' },
@@ -53,7 +53,7 @@ export const AIConsulting: React.FC = () => {
         <p className="text-xl text-gov-secondary leading-relaxed max-w-4xl">
           We design, build, and validate AI systems for UK central government, devolved administrations,
           and arm's-length bodies. Our delivery teams combine academic rigour with production-grade
-          engineering — all aligned to <a href="https://www.gov.uk/service-manual/service-standard" target="_blank" rel="noopener noreferrer" className="text-gov-blue underline underline-offset-2 hover:text-gov-blue-dark">GDS Service Standard</a> and available via <a href="https://www.crowncommercial.gov.uk/agreements/RM6200" target="_blank" rel="noopener noreferrer" className="text-gov-blue underline underline-offset-2 hover:text-gov-blue-dark">Crown Commercial Service framework RM6200</a>.
+          engineering — all aligned to <a href="https://www.gov.uk/service-manual/service-standard" target="_blank" rel="noopener noreferrer" className="text-gov-blue underline underline-offset-2 hover:text-gov-blue-dark">GDS Service Standard</a> and available via <a href="https://www.gca.gov.uk/agreements/RM6200" target="_blank" rel="noopener noreferrer" className="text-gov-blue underline underline-offset-2 hover:text-gov-blue-dark">Government Commercial Agency framework RM6200</a>.
         </p>
       </header>
 
@@ -89,7 +89,7 @@ export const AIConsulting: React.FC = () => {
         <p className="text-gov-dark leading-relaxed text-base">
           We are a Cyber Essentials certified micro-enterprise with public liability insurance of
           £2 million, employers' liability of £10 million, and professional indemnity of £5 million.
-          Our PPON is PWJP-6874-MXDJ. We operate as an SME under <a href="https://www.crowncommercial.gov.uk/agreements/RM6200" target="_blank" rel="noopener noreferrer" className="text-gov-blue underline underline-offset-2 hover:text-gov-blue-dark">Crown Commercial Service (CCS) RM6200</a> (Management
+          Our PPON is PWJP-6874-MXDJ. We operate as an SME under <a href="https://www.gca.gov.uk/agreements/RM6200" target="_blank" rel="noopener noreferrer" className="text-gov-blue underline underline-offset-2 hover:text-gov-blue-dark">Government Commercial Agency (GCA) RM6200</a> (Management
           Consultancy Three) and are eligible for direct award for contracts below £10,000. Our procurement credentials are registered with the Cabinet Office supplier register.
         </p>
       </section>
@@ -132,7 +132,7 @@ export const AIConsulting: React.FC = () => {
                 <td className="px-6 py-4 text-gov-secondary">Fixed headcount cost</td>
               </tr>
               <tr className="hover:bg-gov-bg/60 transition-colors">
-                <td className="px-6 py-4 text-gov-dark font-medium">CCS framework availability</td>
+                <td className="px-6 py-4 text-gov-dark font-medium">GCA framework availability</td>
                 <td className="px-6 py-4 text-gov-dark">RM6200</td>
                 <td className="px-6 py-4 text-gov-secondary">Multiple frameworks</td>
                 <td className="px-6 py-4 text-gov-secondary">Not applicable</td>
@@ -225,7 +225,7 @@ export const AIConsulting: React.FC = () => {
               1
             </span>
             <div>
-              <p className="font-semibold text-gov-dark">CCS RM6200, Artificial Intelligence DPS</p>
+              <p className="font-semibold text-gov-dark">GCA RM6200, Artificial Intelligence DPS</p>
               <p className="text-gov-secondary text-sm mt-1">
                 The primary route for AI strategy, model development, and technical assurance. Suitable
                 for engagements from Discovery through to Live phase. Further competition required for

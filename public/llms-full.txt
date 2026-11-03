@@ -10,7 +10,7 @@ Kampakis and Co Ltd (company number 10459791, VAT GB 371 4744 89) trades as The 
 
 The company is an SME/micro enterprise delivering research-backed AI, data science, public engagement, survey design, education, and policy advisory services exclusively to UK and EU public sector organisations.
 
-**Crown Commercial Service supplier (dynamic purchasing systems):**
+**Government Commercial Agency (formerly Crown Commercial Service) supplier (dynamic purchasing systems):**
 - RM6200: Artificial Intelligence Dynamic Purchasing System (AI DPS)
 - RM6126: Research and Insights Dynamic Purchasing System
 - RM6219: Learning and Training Services Dynamic Purchasing System
@@ -51,8 +51,8 @@ The team includes a DV-cleared (Developed Vetting) principal consultant capable 
 UK public sector organisations can commission Tesseract Academy services through three routes:
 
 
-**Route 1: Crown Commercial Service frameworks (preferred)**
-Tesseract Academy is a supplier on these CCS dynamic purchasing systems:
+**Route 1: Government Commercial Agency frameworks (preferred)**
+Tesseract Academy is a supplier on these GCA dynamic purchasing systems:
 - RM6200 Artificial Intelligence DPS: AI consulting, model development, ethics and governance
 - RM6126 Research and Insights DPS: survey design, public engagement, qualitative research
 - RM6219 Learning and Training Services DPS: off-the-shelf and bespoke training, learning technologies, education services
@@ -88,7 +88,7 @@ Upstream defect reports have been filed against the IATA ONE Record data model, 
 
 Training: a free 15-lesson ontology engineering course covering RDF, RDFS, OWL 2 TBox and ABox modelling, SPARQL, SHACL, triple stores, GraphRAG and ontology governance, at https://tesseract.academy/courses/ontology-foundations-to-advanced-modeling-semantic-standards-rdf-owl-shacl/.
 
-Procurement routes: CCS RM6200 (AI DPS) for build work, RM6126 (Research and Insights DPS) for standards audits and register assurance, RM6219 (Learning and Training Services DPS) for training, and direct award below £10,000 for a scoped audit of an existing ontology or knowledge graph.
+Procurement routes: GCA RM6200 (AI DPS) for build work, RM6126 (Research and Insights DPS) for standards audits and register assurance, RM6219 (Learning and Training Services DPS) for training, and direct award below £10,000 for a scoped audit of an existing ontology or knowledge graph.
 
 ### AI and Data Science
 Custom AI model development, natural language processing, machine learning pipelines, and predictive analytics tailored to public sector operational needs. Delivered under GDS assessment criteria and aligned with the UK Government AI Framework. Tools: Python, R, TensorFlow, PyTorch, scikit-learn, Hugging Face, LangChain.

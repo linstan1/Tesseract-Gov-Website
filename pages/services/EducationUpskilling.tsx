@@ -104,7 +104,7 @@ export const EducationUpskilling: React.FC = () => {
               </tr>
               <tr className="hover:bg-gov-bg/60 transition-colors">
                 <td className="px-6 py-4 text-gov-dark font-medium">Government framework availability</td>
-                <td className="px-6 py-4 text-gov-dark">CCS frameworks available</td>
+                <td className="px-6 py-4 text-gov-dark">GCA frameworks available</td>
                 <td className="px-6 py-4 text-gov-secondary">Typically outside frameworks</td>
                 <td className="px-6 py-4 text-gov-secondary">Direct procurement — complex</td>
               </tr>
@@ -216,7 +216,7 @@ export const EducationUpskilling: React.FC = () => {
               1
             </span>
             <div>
-              <p className="font-semibold text-gov-dark">CCS RM6200, Artificial Intelligence DPS</p>
+              <p className="font-semibold text-gov-dark">GCA RM6200, Artificial Intelligence DPS</p>
               <p className="text-gov-secondary text-sm mt-1">
                 Suitable for embedded training programmes linked to wider AI advisory or
                 transformation engagements. Covers training design, delivery, and evaluation.

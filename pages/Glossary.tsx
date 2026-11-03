@@ -49,7 +49,7 @@ const TERMS: GlossaryTerm[] = [
   {
     term: 'Crown Commercial Service (CCS)',
     definition:
-      'The UK government\'s central purchasing authority, operating commercial frameworks for public sector buyers.',
+      'Former name of the Government Commercial Agency (GCA). CCS closed on 31 March 2026 and its frameworks and dynamic purchasing systems continue under the GCA.',
   },
   {
     term: 'Cyber Essentials',
@@ -125,6 +125,11 @@ const TERMS: GlossaryTerm[] = [
     term: 'Framework Agreement',
     definition:
       'A pre-competed agreement between a buyer and one or more suppliers setting out terms for future call-off contracts.',
+  },
+  {
+    term: 'Government Commercial Agency (GCA)',
+    definition:
+      'The UK government\'s central purchasing authority, operating commercial frameworks and dynamic purchasing systems for public sector buyers. It replaced the Crown Commercial Service (CCS) on 1 April 2026.',
   },
   {
     term: 'GDS (Government Digital Service)',

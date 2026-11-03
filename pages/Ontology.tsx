@@ -50,7 +50,7 @@ const FAQ = [
   },
   {
     q: 'How long does an ontology project take, and what does it cost?',
-    a: 'A scoped audit of an ontology or knowledge graph you already have takes about two weeks and sits below the £10,000 direct award threshold for public bodies. A domain ontology with a validated instance graph over real source data is typically six to twelve weeks depending on how many source registers have to be reconciled. Public sector buyers can commission through CCS RM6200 for build work or RM6126 for research and audit work.',
+    a: 'A scoped audit of an ontology or knowledge graph you already have takes about two weeks and sits below the £10,000 direct award threshold for public bodies. A domain ontology with a validated instance graph over real source data is typically six to twelve weeks depending on how many source registers have to be reconciled. Public sector buyers can commission through GCA RM6200 for build work or RM6126 for research and audit work.',
   },
   {
     q: 'Who builds ontologies in the UK?',

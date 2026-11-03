@@ -18,6 +18,7 @@ const SCHEMA = {
     'UK Public Sector AI',
     'Government Digital Transformation',
     'AI Governance',
+    'Government Commercial Agency',
     'Crown Commercial Service',
   ],
 };
@@ -379,11 +380,11 @@ export const Insights: React.FC = () => {
             <div className="flex items-start gap-4 mb-4">
               <span className="flex-shrink-0 w-9 h-9 rounded-full bg-gov-blue text-white text-sm font-bold flex items-center justify-center">5</span>
               <div>
-                <h3 className="text-xl font-bold text-gov-dark">Procurement Route Effectiveness: Crown Commercial Service Frameworks</h3>
+                <h3 className="text-xl font-bold text-gov-dark">Procurement Route Effectiveness: Government Commercial Agency Frameworks</h3>
                 <p className="text-sm text-gov-secondary mt-1">
                   Source: Tesseract Academy procurement experience, 2022–2026. Frameworks:{' '}
                   <a
-                    href="https://www.crowncommercial.gov.uk/agreements/RM6200"
+                    href="https://www.gca.gov.uk/agreements/RM6200"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-gov-blue underline underline-offset-2 hover:text-gov-blue-dark"
@@ -392,7 +393,7 @@ export const Insights: React.FC = () => {
                   </a>
                   ,{' '}
                   <a
-                    href="https://www.crowncommercial.gov.uk/agreements/RM6126"
+                    href="https://www.gca.gov.uk/agreements/RM6126"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-gov-blue underline underline-offset-2 hover:text-gov-blue-dark"
@@ -401,7 +402,7 @@ export const Insights: React.FC = () => {
                   </a>
                   ,{' '}
                   <a
-                    href="https://www.crowncommercial.gov.uk/agreements/RM6219"
+                    href="https://www.gca.gov.uk/agreements/RM6219"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-gov-blue underline underline-offset-2 hover:text-gov-blue-dark"
@@ -410,7 +411,7 @@ export const Insights: React.FC = () => {
                   </a>
                   ,{' '}
                   <a
-                    href="https://www.crowncommercial.gov.uk/agreements/RM6235"
+                    href="https://www.gca.gov.uk/agreements/RM6235"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-gov-blue underline underline-offset-2 hover:text-gov-blue-dark"
@@ -419,7 +420,7 @@ export const Insights: React.FC = () => {
                   </a>
                   ,{' '}
                   <a
-                    href="https://www.crowncommercial.gov.uk/agreements/RM6094"
+                    href="https://www.gca.gov.uk/agreements/RM6094"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-gov-blue underline underline-offset-2 hover:text-gov-blue-dark"
@@ -432,13 +433,13 @@ export const Insights: React.FC = () => {
             </div>
             <p className="text-base text-gov-dark/90 leading-relaxed">
               <a
-                href="https://www.crowncommercial.gov.uk/"
+                href="https://www.gca.gov.uk/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors"
               >
-                Crown Commercial Service
-              </a>{' '}
+                Government Commercial Agency (formerly Crown Commercial Service)
+              </a> 
               dynamic purchasing systems (RM6200, RM6126, RM6219, RM6235, RM6094) reduce procurement lead times by{' '}
               <strong>60–75% compared to full OJEU-equivalent tender processes</strong> for SME-scale AI and research
               contracts. For contracts under the £213,477{' '}
@@ -622,12 +623,12 @@ export const Insights: React.FC = () => {
           code of practice. Qualitative research followed the ethical frameworks of the relevant commissioning
           bodies. Procurement data is drawn from Tesseract Academy's experience across{' '}
           <a
-            href="https://www.crowncommercial.gov.uk/"
+            href="https://www.gca.gov.uk/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-gov-blue hover:text-gov-blue-dark hover:underline transition-colors"
           >
-            Crown Commercial Service
+            Crown Commercial Service (now the Government Commercial Agency)
           </a>{' '}
           frameworks and open competition processes from 2022 to 2026.
         </p>
@@ -635,7 +636,7 @@ export const Insights: React.FC = () => {
         <div className="pt-4 border-t border-gov-border/30">
           <h3 className="text-base font-semibold text-gov-dark mb-2">Named entities and organisations referenced in this research</h3>
           <p className="text-sm text-gov-secondary leading-relaxed">
-            ONS, DSIT, GDS, NHS England, Cabinet Office, Crown Commercial Service, NESTA, Alan Turing Institute,
+            ONS, DSIT, GDS, NHS England, Cabinet Office, Crown Commercial Service (now Government Commercial Agency), NESTA, Alan Turing Institute,
             Skills England, UK AI Safety Institute, Innovate UK, Welsh Government, National Digital Twin Programme,
             Office for Statistics Regulation, HM Treasury.
           </p>

@@ -23,7 +23,7 @@ export const INDUSTRIES: Industry[] = [
     slug: 'government-public-services',
     name: 'Government and public services',
     metaTitle: 'Government and Public Services | Tesseract Academy for the Public Sector',
-    metaDesc: 'Delivered for the Welsh Government, the National Digital Twin Programme, Qualifications Wales and Imperial War Museums. Supplier on five Crown Commercial Service dynamic purchasing systems. Open research on public registers, consultations and government evaluation.',
+    metaDesc: 'Delivered for the Welsh Government, the National Digital Twin Programme, Qualifications Wales and Imperial War Museums. Supplier on five Government Commercial Agency dynamic purchasing systems. Open research on public registers, consultations and government evaluation.',
     lede: 'The Welsh Government commissioned us to test five land valuation methods across 1,916 LSOAs, covering 99 per cent of Welsh geography. The report was published on GOV.WALES in March 2026.',
     body: 'Public sector work reaches us when a register, a standard or an evaluation has to survive scrutiny. That means figures that reconcile, methods a reviewer can re-run without asking us for anything, and findings that report the dissenting view instead of a tidied consensus. A public body can commission us through RM6200, RM6126, RM6219, RM6235 or RM6094, or by direct award below the Procurement Act 2023 threshold.',
     delivered: [

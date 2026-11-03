@@ -115,7 +115,7 @@ export const OntologyEngineering: React.FC = () => {
           We also train teams to do this themselves. Our ontology engineering course covers RDF, RDFS,
           OWL 2 TBox and ABox modelling, SPARQL, SHACL, triple stores, GraphRAG and ontology governance
           across 15 lessons, and it is free. Public sector training is procurable through{' '}
-          <a href="https://www.crowncommercial.gov.uk/agreements/RM6219" target="_blank" rel="noopener noreferrer" className="text-gov-blue underline underline-offset-2 hover:text-gov-blue-dark">CCS RM6219</a>.
+          <a href="https://www.gca.gov.uk/agreements/RM6219" target="_blank" rel="noopener noreferrer" className="text-gov-blue underline underline-offset-2 hover:text-gov-blue-dark">GCA RM6219</a>.
         </p>
       </section>
 
@@ -164,7 +164,7 @@ export const OntologyEngineering: React.FC = () => {
               </tr>
               <tr className="hover:bg-gov-bg/60 transition-colors">
                 <td className="px-6 py-4 text-gov-dark font-medium">Public sector procurement</td>
-                <td className="px-6 py-4 text-gov-dark">CCS RM6200, RM6126, RM6219, RM6235 and RM6094</td>
+                <td className="px-6 py-4 text-gov-dark">GCA RM6200, RM6126, RM6219, RM6235 and RM6094</td>
                 <td className="px-6 py-4 text-gov-secondary">Varies</td>
                 <td className="px-6 py-4 text-gov-secondary">Software licence, not a service route</td>
               </tr>
@@ -329,7 +329,7 @@ export const OntologyEngineering: React.FC = () => {
           <li className="flex gap-4">
             <span className="flex-shrink-0 w-8 h-8 rounded-full bg-gov-blue text-white text-sm font-bold flex items-center justify-center">1</span>
             <div>
-              <p className="font-semibold text-gov-dark">CCS RM6200, Artificial Intelligence DPS</p>
+              <p className="font-semibold text-gov-dark">GCA RM6200, Artificial Intelligence DPS</p>
               <p className="text-gov-secondary text-sm mt-1">
                 The main route for ontology design, knowledge graph delivery and verification work inside
                 an AI programme.
@@ -339,7 +339,7 @@ export const OntologyEngineering: React.FC = () => {
           <li className="flex gap-4">
             <span className="flex-shrink-0 w-8 h-8 rounded-full bg-gov-blue text-white text-sm font-bold flex items-center justify-center">2</span>
             <div>
-              <p className="font-semibold text-gov-dark">CCS RM6126, Research and Insights DPS</p>
+              <p className="font-semibold text-gov-dark">GCA RM6126, Research and Insights DPS</p>
               <p className="text-gov-secondary text-sm mt-1">
                 For standards audits, crosswalk studies and register assurance commissioned as research
                 rather than as build work.

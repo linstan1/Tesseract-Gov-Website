@@ -11,7 +11,7 @@ const SCHEMA = {
   },
   serviceType: 'Survey Design and Statistical Analysis',
   description:
-    'End-to-end survey methodology, questionnaire design, mixed-mode data collection, and statistical analysis for UK public sector. Qualifications Wales 3-year contract (2026-2029). Available via CCS RM6126.',
+    'End-to-end survey methodology, questionnaire design, mixed-mode data collection, and statistical analysis for UK public sector. Qualifications Wales 3-year contract (2026-2029). Available via GCA RM6126.',
   url: 'https://gov.tesseract.academy/services/survey-design',
   areaServed: 'GB',
   datePublished: '2026-04-29',
@@ -69,7 +69,7 @@ export const SurveyDesign: React.FC = () => {
           standardised reporting templates to enable year-on-year comparison. Reports are structured to meet National Audit Office scrutiny standards and HM Treasury value-for-money criteria, ensuring evidence is audit-ready.
         </p>
         <p className="text-gov-dark leading-relaxed text-base">
-          We are a <a href="https://www.crowncommercial.gov.uk/agreements/RM6126" target="_blank" rel="noopener noreferrer" className="text-gov-blue underline underline-offset-2 hover:text-gov-blue-dark">Crown Commercial Service (CCS) RM6126</a> (Research and Insights) appointed supplier, with experience managing
+          We are a <a href="https://www.gca.gov.uk/agreements/RM6126" target="_blank" rel="noopener noreferrer" className="text-gov-blue underline underline-offset-2 hover:text-gov-blue-dark">Government Commercial Agency (GCA) RM6126</a> (Research and Insights) appointed supplier, with experience managing
           survey programmes under contract for national qualification bodies, devolved government,
           and arm's-length bodies. All survey data is processed under UK GDPR with an Information Commission
           registration (ZB715782) and a documented data retention and destruction schedule. The Department for Science Innovation and Technology (DSIT) and Cabinet Office procurement guidelines inform our contract management approach.
@@ -108,7 +108,7 @@ export const SurveyDesign: React.FC = () => {
                 <td className="px-6 py-4 text-gov-secondary">Online only typically</td>
               </tr>
               <tr className="hover:bg-gov-bg/60 transition-colors">
-                <td className="px-6 py-4 text-gov-dark font-medium">CCS framework availability</td>
+                <td className="px-6 py-4 text-gov-dark font-medium">GCA framework availability</td>
                 <td className="px-6 py-4 text-gov-dark">RM6126 — direct access</td>
                 <td className="px-6 py-4 text-gov-secondary">RM6126 — typically more expensive</td>
                 <td className="px-6 py-4 text-gov-secondary">Not applicable</td>
@@ -209,7 +209,7 @@ export const SurveyDesign: React.FC = () => {
               1
             </span>
             <div>
-              <p className="font-semibold text-gov-dark">CCS RM6126 — Research and Insights</p>
+              <p className="font-semibold text-gov-dark">GCA RM6126 — Research and Insights</p>
               <p className="text-gov-secondary text-sm mt-1">
                 The primary route for survey design, fieldwork management, data analysis, and
                 reporting. Covers all phases from questionnaire development to final report delivery.

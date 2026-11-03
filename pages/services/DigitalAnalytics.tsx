@@ -91,7 +91,7 @@ export const DigitalAnalytics: React.FC = () => {
         <p className="text-gov-dark leading-relaxed text-base">
           We work under UK GDPR with Information Commission registration (ZB715782), hold Cyber Essentials
           certification, and are an appointed supplier on{' '}
-          <a href="https://www.crowncommercial.gov.uk/agreements/RM6126" target="_blank" rel="noopener noreferrer" className="text-gov-blue underline underline-offset-2 hover:text-gov-blue-dark">CCS RM6126</a>{' '}
+          <a href="https://www.gca.gov.uk/agreements/RM6126" target="_blank" rel="noopener noreferrer" className="text-gov-blue underline underline-offset-2 hover:text-gov-blue-dark">GCA RM6126</a>{' '}
           (Research and Insights) and the Imperial War Museums Digital Transformation Support
           Framework (Lot 1 - Data Consultancy).
         </p>
@@ -223,7 +223,7 @@ export const DigitalAnalytics: React.FC = () => {
           <li className="flex gap-4">
             <span className="flex-shrink-0 w-8 h-8 rounded-full bg-gov-blue text-white text-sm font-bold flex items-center justify-center">1</span>
             <div>
-              <p className="font-semibold text-gov-dark">CCS RM6126 - Research and Insights</p>
+              <p className="font-semibold text-gov-dark">GCA RM6126 - Research and Insights</p>
               <p className="text-gov-secondary text-sm mt-1">
                 Audience measurement, analytics and insight work can be called off directly.
                 Tesseract Academy is an appointed supplier on this framework.

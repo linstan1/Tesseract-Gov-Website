@@ -69,7 +69,7 @@ export const ResearchPolicy: React.FC = () => {
           Our research team holds professional indemnity insurance of £5 million and operates under
           a robust data governance framework compliant with UK GDPR and the Data Protection Act 2018.
           We hold an Information Commission registration (ZB715782) and are experienced in processing sensitive and
-          special category research data under appropriate legal bases. Procurement is available through the <a href="https://www.crowncommercial.gov.uk/agreements/RM6200" target="_blank" rel="noopener noreferrer" className="text-gov-blue underline underline-offset-2 hover:text-gov-blue-dark">Crown Commercial Service (CCS) RM6200</a> framework, with the National Audit Office's value-for-money criteria informing our cost-effectiveness reporting.
+          special category research data under appropriate legal bases. Procurement is available through the <a href="https://www.gca.gov.uk/agreements/RM6200" target="_blank" rel="noopener noreferrer" className="text-gov-blue underline underline-offset-2 hover:text-gov-blue-dark">Government Commercial Agency (GCA) RM6200</a> framework, with the National Audit Office's value-for-money criteria informing our cost-effectiveness reporting.
         </p>
       </section>
 
@@ -202,7 +202,7 @@ export const ResearchPolicy: React.FC = () => {
               1
             </span>
             <div>
-              <p className="font-semibold text-gov-dark">CCS RM6200, Artificial Intelligence DPS</p>
+              <p className="font-semibold text-gov-dark">GCA RM6200, Artificial Intelligence DPS</p>
               <p className="text-gov-secondary text-sm mt-1">
                 The recommended route for research and policy analysis engagements. Covers systematic
                 reviews, feasibility studies, policy evaluation, and regulatory consultation input.
@@ -214,7 +214,7 @@ export const ResearchPolicy: React.FC = () => {
               2
             </span>
             <div>
-              <p className="font-semibold text-gov-dark">CCS RM6126, Research and Insights DPS</p>
+              <p className="font-semibold text-gov-dark">GCA RM6126, Research and Insights DPS</p>
               <p className="text-gov-secondary text-sm mt-1">
                 Suitable for primary research, survey-led evidence gathering, and stakeholder
                 consultation projects. Includes market research and user insight services.
