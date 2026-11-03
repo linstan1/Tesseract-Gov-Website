@@ -320,7 +320,7 @@ export const Home: React.FC = () => {
             <img src="/logos/durham-county-council.png" alt="Durham County Council" className="h-16 object-contain grayscale hover:grayscale-0 transition-all" />
             <img src="/logos/logo5.png" alt="National Digital Twin Programme" className="h-16 object-contain grayscale hover:grayscale-0 transition-all" />
             <img src="/logos/logo6.png" alt="UK Export Academy" className="h-16 object-contain grayscale hover:grayscale-0 transition-all" />
-            <img src="/logos/dbt.svg" alt="Department for Business and Trade" className="h-16 object-contain grayscale hover:grayscale-0 transition-all" />
+            <img src="/logos/bist.svg" alt="Department for Business, Innovation, Science and Trade (formerly Department for Business and Trade)" className="h-16 object-contain grayscale hover:grayscale-0 transition-all" />
             <img src="/logos/logo9.png" alt="The Alan Turing Institute" className="h-16 object-contain grayscale hover:grayscale-0 transition-all" />
             <img src="/logos/logo10.png" alt="The Growth Company" className="h-16 object-contain grayscale hover:grayscale-0 transition-all" />
             <img src="/logos/fintech-scotland.png" alt="Fintech Scotland" className="h-16 object-contain grayscale hover:grayscale-0 transition-all" />
