@@ -87,6 +87,15 @@ const COMPANY_DATA = {
       "scope": "Emerging technology: AI and automation, data, Internet of Things"
     }
   ],
+  "otherProcurementRoutes": [
+    {
+      "id": "ocds-h6vhtk-05cf48",
+      "name": "Precise Policing Phase 2 Dynamic Market",
+      "authority": "Mayor's Office for Policing and Crime (Metropolitan Police Service)",
+      "admitted": "2026-11",
+      "url": "https://www.find-tender.service.gov.uk/Procurement/ocds-h6vhtk-05cf48"
+    }
+  ],
   "certifications": [
     { "name": "Cyber Essentials", "status": "certified" },
     { "name": "ISO 27001", "status": "aligned" },

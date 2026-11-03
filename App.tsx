@@ -163,7 +163,7 @@ const PAGE_META: Record<string, { title: string; description: string }> = {
   },
   '/how-to-buy': {
     title: 'How to Buy - Procurement Routes | Tesseract Academy for the Public Sector',
-    description: 'Commission Tesseract Academy through Crown Commercial Service dynamic purchasing systems RM6200 (AI DPS), RM6126 (Research & Insights DPS), RM6219 (Learning & Training Services DPS), RM6235 (Space-Enabled & Geospatial Services DPS) or RM6094 (Spark DPS), or by direct award below the threshold.',
+    description: 'Commission Tesseract Academy through Crown Commercial Service dynamic purchasing systems RM6200 (AI DPS), RM6126 (Research & Insights DPS), RM6219 (Learning & Training Services DPS), RM6235 (Space-Enabled & Geospatial Services DPS) or RM6094 (Spark DPS), the Metropolitan Police Precise Policing Dynamic Market, or by direct award below the threshold.',
   },
   '/capabilities': {
     title: 'Capabilities: ontology engineering, AI, research, education and survey services | Tesseract Academy for the Public Sector',

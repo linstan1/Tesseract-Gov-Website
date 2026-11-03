@@ -18,7 +18,7 @@ export const Home: React.FC = () => {
             Research-backed AI and data services for <span className="text-gov-blue">UK public sector</span>
           </h1>
           <p className="text-xl text-gov-secondary mb-6 max-w-3xl leading-relaxed">
-            Tesseract Academy delivers AI consulting, research, public engagement, and survey design for UK government bodies. Crown Commercial Service supplier on RM6200 (AI DPS), RM6126 (Research &amp; Insights DPS), RM6219 (Learning &amp; Training Services DPS), RM6235 (Space-Enabled &amp; Geospatial Services DPS) and RM6094 (Spark DPS).
+            Tesseract Academy delivers AI consulting, research, public engagement, and survey design for UK government bodies. Crown Commercial Service supplier on RM6200 (AI DPS), RM6126 (Research &amp; Insights DPS), RM6219 (Learning &amp; Training Services DPS), RM6235 (Space-Enabled &amp; Geospatial Services DPS) and RM6094 (Spark DPS). Member of the Metropolitan Police Precise Policing Dynamic Market.
           </p>
           <p className="text-base text-gov-secondary mb-10 max-w-3xl leading-relaxed">
             Delivered for Welsh Government, Innovate UK, National Digital Twin Programme, Qualifications Wales, and Fintech Scotland.
@@ -114,7 +114,7 @@ export const Home: React.FC = () => {
              </div>
              <h3 className="font-semibold text-lg mb-3 text-gov-dark">UK &amp; EU Ready</h3>
              <p className="text-base text-gov-secondary leading-relaxed">
-               5 CCS frameworks. Horizon Europe PIC: 880269472. DV-cleared consultant available for classified programmes. DUNS: 222180245. PPON: PWJP-6874-MXDJ.
+               5 CCS frameworks and the Metropolitan Police Precise Policing Dynamic Market. Horizon Europe PIC: 880269472. DV-cleared consultant available for classified programmes. DUNS: 222180245. PPON: PWJP-6874-MXDJ.
              </p>
            </div>
         </div>

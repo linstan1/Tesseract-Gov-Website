@@ -9,6 +9,7 @@ const FRAMEWORKS = [
   { name: 'Learning & Training Services DPS', ref: 'RM6219', lots: ['Standard Off-the-Shelf Training', 'Bespoke Training', 'Learning Technologies', 'Education Services'], status: 'Live', url: 'https://www.crowncommercial.gov.uk/agreements/RM6219' },
   { name: 'Space-Enabled & Geospatial Services DPS', ref: 'RM6235', lots: ['Satellite Communication & Broadcasting', 'Geospatial, Remote Sensing & PNT', 'Unmanned Autonomous Vehicles', 'Upstream Professional Services'], status: 'Live', url: 'https://www.crowncommercial.gov.uk/agreements/RM6235' },
   { name: 'Spark DPS', ref: 'RM6094', lots: ['AI & Automation', 'Data', 'Internet of Things (IoT)'], status: 'Live', url: 'https://www.crowncommercial.gov.uk/agreements/RM6094' },
+  { name: 'Precise Policing Dynamic Market (Metropolitan Police)', ref: 'ocds-h6vhtk-05cf48', lots: ['Digital, Data & Technology Call-offs'], status: 'Live', url: 'https://www.find-tender.service.gov.uk/Procurement/ocds-h6vhtk-05cf48' },
 ];
 
 export const HowToBuy: React.FC = () => {

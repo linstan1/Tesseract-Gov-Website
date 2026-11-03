@@ -52,7 +52,7 @@ export const About: React.FC = () => {
       <header className="border-b border-gov-border/30 pb-10">
         <h1 className="text-5xl font-extrabold text-gov-dark mb-6 tracking-tight leading-tight">About Tesseract Academy</h1>
         <p className="text-xl text-gov-secondary leading-relaxed max-w-4xl">
-          Kampakis and Co Ltd (trading as Tesseract Academy) is a research-backed AI and data science consultancy incorporated in <time dateTime="2016-11">November 2016</time>. We deliver evidence-based AI governance, public sector analytics, and procurement-ready advisory services to UK central government, devolved administrations, and Horizon Europe consortia. We are a supplier on five Crown Commercial Service (CCS) dynamic purchasing systems, and our work is published in peer-reviewed journals cited by UK government policy.
+          Kampakis and Co Ltd (trading as Tesseract Academy) is a research-backed AI and data science consultancy incorporated in <time dateTime="2016-11">November 2016</time>. We deliver evidence-based AI governance, public sector analytics, and procurement-ready advisory services to UK central government, devolved administrations, and Horizon Europe consortia. We are a supplier on five Crown Commercial Service (CCS) dynamic purchasing systems and the Metropolitan Police Precise Policing Dynamic Market, and our work is published in peer-reviewed journals cited by UK government policy.
         </p>
       </header>
 
@@ -69,7 +69,7 @@ export const About: React.FC = () => {
       <section className="space-y-6">
         <h2 className="text-3xl font-bold text-gov-dark">Company Credentials</h2>
         <p className="text-gov-dark leading-relaxed text-base max-w-4xl">
-          Kampakis and Co Ltd is a registered UK company (company number 10459791), incorporated on 2 November 2016 and registered for VAT (GB 371 4744 89). We are a supplier on five Crown Commercial Service dynamic purchasing systems, listed below. Public bodies buy through a competition among the suppliers admitted to each system, or by direct award where the value is below the threshold. All credentials below are verifiable through the named public registries.
+          Kampakis and Co Ltd is a registered UK company (company number 10459791), incorporated on 2 November 2016 and registered for VAT (GB 371 4744 89). We are a supplier on five Crown Commercial Service dynamic purchasing systems and a member of the Metropolitan Police Service's Precise Policing Dynamic Market, all listed below. Public bodies buy through a competition among the suppliers admitted to each system, or by direct award where the value is below the threshold. All credentials below are verifiable through the named public registries.
         </p>
 
         <div tabIndex={0} role="region" aria-label="Table, scrolls sideways on small screens" className="overflow-x-auto rounded-xl border border-gov-border/50">
@@ -116,6 +116,11 @@ export const About: React.FC = () => {
                 <td className="px-6 py-4 font-medium text-gov-dark">CCS Framework: Emerging Technology</td>
                 <td className="px-6 py-4 text-gov-dark">RM6094 — Spark Dynamic Purchasing System</td>
                 <td className="px-6 py-4 text-gov-dark">Crown Commercial Service</td>
+              </tr>
+              <tr className="bg-white hover:bg-gov-bg/50 transition-colors">
+                <td className="px-6 py-4 font-medium text-gov-dark">Dynamic Market: Policing</td>
+                <td className="px-6 py-4 text-gov-dark">Precise Policing Phase 2 Dynamic Market, Metropolitan Police Service (admitted November 2026)</td>
+                <td className="px-6 py-4 text-gov-dark">Mayor's Office for Policing and Crime; <a href="https://www.find-tender.service.gov.uk/Procurement/ocds-h6vhtk-05cf48" target="_blank" rel="noopener noreferrer" className="text-gov-blue hover:text-gov-blue-dark underline">Find a Tender ocds-h6vhtk-05cf48<span className="sr-only"> (opens in new tab)</span></a></td>
               </tr>
               <tr className="bg-white hover:bg-gov-bg/50 transition-colors">
                 <td className="px-6 py-4 font-medium text-gov-dark">Cyber Security</td>
